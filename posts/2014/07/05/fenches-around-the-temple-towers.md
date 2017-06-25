@@ -1,0 +1,1 @@
+<html><body><a href="/2014/07/2014-07-04_00-49-39.png"><img class="aligncenter size-large wp-image-1514" src="http://xtoinf.files.wordpress.com/2014/07/2014-07-04_00-49-39.png?w=676" alt="Fences around the temple are coming up well." width="676" height="400"></a></body></html>

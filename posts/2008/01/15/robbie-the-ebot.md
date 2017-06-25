@@ -1,0 +1,1 @@
+<html><body><p>This video shows "Robbie, the eBot" doing the grab and the drop action.</p></body></html>

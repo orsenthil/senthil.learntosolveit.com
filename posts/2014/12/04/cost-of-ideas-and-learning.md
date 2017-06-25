@@ -1,0 +1,3 @@
+<html><body><blockquote>You won’t live long enough to learn more than a tiny fraction of all there is to know. Ideas have costs in the time it takes to learn them, the amount of maintenance required to remember them and the amount of effort it takes to apply them. Prefer ideas that have a high power-to-cost ratio.</blockquote>
+
+Excellent thought at this blog - <a href="http://scattered-thoughts.net/blog/2014/11/15/humans-should-learn-maths/">Humans Should learn Maths.</a></body></html>

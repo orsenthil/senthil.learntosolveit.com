@@ -1,0 +1,1 @@
+<html><body><p>Peter Norvig has written a very interesting article on Spell Correction and <a href="http://norvig.com/spell-correct.html">20 line Spellchecker in python</a>, which is way just cool.</p></body></html>

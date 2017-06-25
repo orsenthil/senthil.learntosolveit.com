@@ -1,0 +1,874 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Senthil Kumaran's thoughts. (Posts about mathjax)</title><link>http://www.xtoinfinity.com/</link><description></description><atom:link href="http://www.xtoinfinity.com/categories/mathjax.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><lastBuildDate>Tue, 21 Mar 2017 14:11:30 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Leslie Lamport on Teaching Concurrency</title><link>http://www.xtoinfinity.com/posts/leslie-lamport-on-teaching-concurrency.html</link><dc:creator>Senthil Kumaran</dc:creator><description>&lt;div&gt;&lt;p&gt;This post is a short discussion on the &lt;a class="reference external" href="https://en.wikipedia.org/wiki/Leslie_Lamport"&gt;Leslie Lamport&lt;/a&gt; 's paper "&lt;a class="reference external" href="http://research.microsoft.com/en-us/um/people/lamport/pubs/teaching-concurrency.pdf"&gt;Teaching Concurrency&lt;/a&gt;".&lt;/p&gt;
+&lt;p&gt;Lamport's basic premise is that understanding the system the most important part, and engineers often muddy their
+understanding with implementation details as soon as they start talking about programming languages suitable for
+concurrency.&lt;/p&gt;
+&lt;p&gt;He even challenges engineers to come up with the solution for concurrency problems without using "&lt;a class="reference external" href="https://en.wikipedia.org/wiki/Semaphore_(programming)"&gt;semaphores&lt;/a&gt;",
+"&lt;a class="reference external" href="https://en.wikipedia.org/wiki/Monitor_(synchronization)"&gt;monitors&lt;/a&gt;", or any other construct that were invented and provided as a tool. Using those, he says, is like using the
+'sort' to routine the language to implement a sorting algorithm.&lt;/p&gt;
+&lt;blockquote&gt;
+The modern field of concurrency started with Dijkstra’s 1965 paper on the mutual exclusion problem. For most of the
+1970s, one “solved” the mutual exclusion problem by using semaphores or monitors or conditional critical regions or
+some other language construct. This is like solving the sorting problem by using a programming language with a sort
+command. Most of your colleagues can explain how to implement mutual exclusion using a semaphore. How many of them
+can answer the following question: Can one implement mutual exclusion without using lower-level constructs that,
+like semaphores, assume mutually exclusive access to a resource?&lt;/blockquote&gt;
+&lt;p&gt;Lamport's approach to problem solving suggests, we need to think of computing problem as series of states instead of
+series of steps. I think, series of steps tend to give some linearity the approach, while series of states tend to
+indicate that sub-parts of the system can have multiple states and the next state each sub-part can take only depends
+upon the current state and action that leads the state transition to the next state.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;It is more useful to think about states than sequences of steps because what a computing device does next depends on
+its current state, not on what steps it took in the past.&lt;/p&gt;
+&lt;p&gt;To describe a computation we need to describe a sequence of states. More often, we need to describe the set of
+computations that can be produced by some particular computing device, such as an algorithm. There is one method that
+works in practice: describing a set of computations by&lt;/p&gt;
+&lt;ol class="arabic simple"&gt;
+&lt;li&gt;the set of all initial initial states and&lt;/li&gt;
+&lt;li&gt;A next-state relation that describes, for every state, the possible next states that is, the set of states
+reachable from that state by a single step.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;On computational thinking.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;How should we describe computations?&lt;/p&gt;
+&lt;p&gt;Most computer scientists would probably interpret this question to mean, what language should we use? Imagine an
+art historian answering “how would you describe impressionist painting?” by saying “in French”.&lt;/p&gt;
+&lt;p&gt;Programming and hardware-design languages don’t help an engineer understand what problem a system should solve.
+Thinking of computations as sequences of states, rather than as something described by a language, is the first
+step towards such understanding.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Lamport also describes in great details about importance of problem specification. Sometimes, when the problem is
+specified clearly and understood problem, the solution becomes easy.  Most of our struggles seems to be with coming to
+grasp the problem specification.&lt;/p&gt;
+&lt;blockquote&gt;
+The great contribution of Dijkstra’s paper on mutual exclusion was not his solution; it was stating the problem.
+(It is remarkable that, in this first paper on the subject, Dijkstra stated all the requirements that distinguish
+mutual exclusion from fundamentally simpler and less interesting problems.)&lt;/blockquote&gt;
+&lt;p&gt;&lt;em&gt;On concurrency, itself&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;He gives an example of concurrency problem  that according to him is "trivial". It took me some reading to understand
+the problem. &lt;a class="reference external" href="http://stackoverflow.com/questions/24989756/what-is-the-inductive-invariant-of-the-simple-concurrent-program"&gt;StackOverflow.com&lt;/a&gt; certainly helped.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Once an engineer understands what a computation is and how it is described, she can understand the most important
+concept in concurrency: invariance. A computing device does the correct thing only because it maintains a correct
+state. Correctness of the state is expressed by an invariant—a predicate that is true in every state of every
+computation.&lt;/p&gt;
+&lt;p&gt;Invariance is the key to understanding concurrent systems, but few engineers or computer scientists have learned to
+think in terms of invariants. Here is a simple example.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;strong&gt;Now, the problem&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Consider N processes numbered from 0 through N − 1 in which each process i executes&lt;/p&gt;
+&lt;div class="math"&gt;
+\begin{equation*}
+x[i] :=1;
+\end{equation*}
+&lt;/div&gt;
+&lt;div class="math"&gt;
+\begin{equation*}
+
+y[i] := x[(i-1)modN]
+\end{equation*}
+&lt;/div&gt;
+&lt;p&gt;and stops, where each &lt;span class="math"&gt;\(x[i]\)&lt;/span&gt; initially equals 0. (The reads and writes of each &lt;span class="math"&gt;\(x[i]\)&lt;/span&gt; are assumed to be
+atomic.)&lt;/p&gt;
+&lt;p&gt;This algorithm satisfies the following property: after every process has stopped, &lt;span class="math"&gt;\(y[i]\)&lt;/span&gt; equals 1 for at least
+one process &lt;span class="math"&gt;\(i\)&lt;/span&gt; .&lt;/p&gt;
+&lt;p&gt;It is easy to see that the algorithm satisfies this property; the last process &lt;span class="math"&gt;\(i\)&lt;/span&gt; to write &lt;span class="math"&gt;\(y[i]\)&lt;/span&gt; must set
+it to 1. But that process doesnt set &lt;span class="math"&gt;\(y[i]\)&lt;/span&gt; to 1 because it was the last process to write y.&lt;/p&gt;
+&lt;p&gt;What a process does depends only on the current state, not on what processes wrote before it. The algorithm satisfies
+this property because it maintains an inductive invariant.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Explanation&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;The explanation on how &lt;span class="math"&gt;\(y[i]\)&lt;/span&gt; equals for 1 at least one process &lt;span class="math"&gt;\(i\)&lt;/span&gt; goes like this.&lt;/p&gt;
+&lt;ol class="arabic simple"&gt;
+&lt;li&gt;The &lt;span class="math"&gt;\(x_s\)&lt;/span&gt; model the following behavior: &lt;span class="math"&gt;\(x[i]\)&lt;/span&gt; is 1 if and only if the process &lt;span class="math"&gt;\(i\)&lt;/span&gt; has already run.&lt;/li&gt;
+&lt;li&gt;After all processes have completed, all &lt;span class="math"&gt;\(x_s\)&lt;/span&gt; are thus set to 1.&lt;/li&gt;
+&lt;li&gt;The &lt;span class="math"&gt;\(y_s\)&lt;/span&gt; are a bit trickier: &lt;span class="math"&gt;\(y[i]\)&lt;/span&gt; is set if &lt;span class="math"&gt;\(x[i-1]\)&lt;/span&gt; was set, that is, &lt;span class="math"&gt;\(y[i]\)&lt;/span&gt; is 1 if and
+only if the predecessor of &lt;span class="math"&gt;\(i\)&lt;/span&gt; had already run when &lt;span class="math"&gt;\(i\)&lt;/span&gt; was doing its write to &lt;span class="math"&gt;\(y\)&lt;/span&gt;.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;I essentially to had resort to &lt;a class="reference external" href="http://stackoverflow.com/questions/24989756/what-is-the-inductive-invariant-of-the-simple-concurrent-program"&gt;StackOverflow.com&lt;/a&gt; post author's explanation to completely understand this.&lt;/p&gt;
+&lt;p&gt;The program invariant is:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;If a process has set &lt;span class="math"&gt;\(y[i]\)&lt;/span&gt;, it must already have set &lt;span class="math"&gt;\(x[i]\)&lt;/span&gt; to 1.
+This is true regardless whether &lt;span class="math"&gt;\(y[i]\)&lt;/span&gt; is set to 0 or 1.&lt;/p&gt;
+&lt;p&gt;Proving this invariant is quite easy: In the beginning, none of the &lt;span class="math"&gt;\(y_s\)&lt;/span&gt; is set, so it holds trivially.
+During program execution, each write to &lt;span class="math"&gt;\(y[i]\)&lt;/span&gt; is &lt;a class="reference external" href="https://en.wikipedia.org/wiki/Sequence_point"&gt;sequenced after&lt;/a&gt; a write to &lt;span class="math"&gt;\(x[i]\)&lt;/span&gt;. Therefore
+the invariant also holds for every step of the program afterwards.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;The further reasoning goes like this.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;The last process to finish sets &lt;span class="math"&gt;\(y[i]\)&lt;/span&gt; to 1 because, by definition of being the last process, its
+predecessor must have already finished execution at that point (ie. its y value is already set).&lt;/p&gt;
+&lt;p&gt;Which means, because of the invariant, its &lt;span class="math"&gt;\(x\)&lt;/span&gt; value (which determines the last process' &lt;span class="math"&gt;\(y\)&lt;/span&gt; value)
+has to be 1.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;The alternate way to look at this problem can give some intuitive understanding too.&lt;/p&gt;
+&lt;blockquote&gt;
+You cannot find an execution order in which all &lt;span class="math"&gt;\(y_s\)&lt;/span&gt; are set to 0. Doing so would require all processes to
+execute before their predecessor. However, since our processes are arranged in a ring (that is, if I follow the
+predecessor chain I will eventually end up at my starting point again), this leads to the contradiction that at
+least one process must have finished executing before it wrote to &lt;span class="math"&gt;\(y\)&lt;/span&gt;.&lt;/blockquote&gt;
+&lt;p&gt;To understand this concurrency problem, it requires some notion of syntax, a prior understanding of proving hypothesis,
+and possibly discussing the problem and solution.&lt;/p&gt;
+&lt;p&gt;Trying to understand itself, I guess, is a progress.&lt;/p&gt;&lt;/div&gt;</description><category>mathjax</category><guid>http://www.xtoinfinity.com/posts/leslie-lamport-on-teaching-concurrency.html</guid><pubDate>Wed, 21 Dec 2016 03:17:54 GMT</pubDate></item><item><title>Abstract Factory - Design Pattern Explanation</title><link>http://www.xtoinfinity.com/posts/abstract-factory-design-pattern-explanation.html</link><dc:creator>Senthil Kumaran</dc:creator><description>&lt;div&gt;&lt;p&gt;Design patterns like "Decorator", "Singleton" are common and be easily
+recognized. The "Builder" pattern is also recognizable whenever you use Java's
+&lt;cite&gt;StringBuilder&lt;/cite&gt; class.&lt;/p&gt;
+&lt;p&gt;Some patterns which are commonly used by frameworks are not easily recognizable
+unless you are a framework author.  Recently, I spent time trying to recognize
+and understand &lt;em&gt;Abstract Factory&lt;/em&gt; design pattern.&lt;/p&gt;
+&lt;p&gt;In this post, we will look at "Abstract Factory" and explain it with an
+example. I consulted multiple resources, and ultimately to gain confidence, I
+had to rely upon &lt;a class="reference external" href="https://en.wikipedia.org/wiki/Design_Patterns"&gt;The Gang of Four&lt;/a&gt; &lt;a class="footnote-reference" href="http://www.xtoinfinity.com/posts/abstract-factory-design-pattern-explanation.html#id1" id="id2"&gt;[1]&lt;/a&gt; design patterns book.&lt;/p&gt;
+&lt;p&gt;This post is intended as refresher for a reader who has read the &lt;strong&gt;Gang of
+Four&lt;/strong&gt; chapter on Abstract Factory. This post presents an example which the
+reader can relate to in the modern world.&lt;/p&gt;
+&lt;p&gt;Abstract Factory is a Factory for Factories. To understand this, you will first
+have to understand the Factory Design pattern, which encapsulates creation of
+objects. Factory pattern is recognized when instead of using &lt;cite&gt;new SomeClass()&lt;/cite&gt;
+we call &lt;cite&gt;SomeClass.createObject()&lt;/cite&gt; static method. The advantage is &lt;cite&gt;SomeClass&lt;/cite&gt;
+is independent of your code, it could be supplied as a dependency from someone
+else and you simply use the factory. The person controlling the factory can
+modify the object creation process.&lt;/p&gt;
+&lt;p&gt;For example, &lt;cite&gt;SomeClass.createObject()&lt;/cite&gt; in version1, can be return &lt;cite&gt;new
+SomeClass(arg1)&lt;/cite&gt; and in version2, it can change to &lt;cite&gt;return new SomeClass(arg1,
+arg2)&lt;/cite&gt; with you as the caller, invoking the object creation entirely as
+&lt;cite&gt;SomeClass.createObject()&lt;/cite&gt; unaffected by the change made by the creator of
+SomeClass.&lt;/p&gt;
+&lt;p&gt;Factory pattern is easy to understand. The next step comes in dealing with
+Abstract Factory.&lt;/p&gt;
+&lt;div class="section" id="intent"&gt;
+&lt;h2&gt;Intent&lt;/h2&gt;
+&lt;p&gt;Abstract Factory provides an interface for creating families of related or
+dependent objects without specifying the concrete classes.&lt;/p&gt;
+&lt;div class="section" id="canonical-design"&gt;
+&lt;h3&gt;Canonical Design&lt;/h3&gt;
+&lt;img alt="https://dl.dropbox.com/s/3o1opat3zd7c569/Screenshot%202016-07-11%2023.04.02.png" src="https://dl.dropbox.com/s/3o1opat3zd7c569/Screenshot%202016-07-11%2023.04.02.png"&gt;
+&lt;p&gt;Factory is a class that defers the instantiation of the object to the
+subclass.Factory encapsulates the decision-making that figures out which
+specific subclass to instantiate. There are three different kinds of Factory
+patterns observable with respect to object instantiation.&lt;/p&gt;
+&lt;dl class="docutils"&gt;
+&lt;dt&gt;&lt;strong&gt;Simple Factory.&lt;/strong&gt;&lt;/dt&gt;
+&lt;dd&gt;The client directly uses a static method of a subclass, to instantiate an object.&lt;/dd&gt;
+&lt;dt&gt;&lt;strong&gt;Factory Pattern&lt;/strong&gt;&lt;/dt&gt;
+&lt;dd&gt;The client uses a Factory class to create an object. A Factory, is a class that defers the instantiation of an
+object to the subclasses.Factory method creates only one product&lt;/dd&gt;
+&lt;dt&gt;&lt;strong&gt;Abstract Factory&lt;/strong&gt;&lt;/dt&gt;
+&lt;dd&gt;Abstract Factory is a constructional design pattern that is used to create a family of related products.&lt;/dd&gt;
+&lt;/dl&gt;
+&lt;p&gt;Abstract Factory is applicable when the&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;System should be configured with one of multiple families of Products.&lt;/li&gt;
+&lt;li&gt;The family of related product objects is designed to to used together and we need to enforce this constraint.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="section" id="design-problem"&gt;
+&lt;h2&gt;Design Problem&lt;/h2&gt;
+&lt;p&gt;In this problem, we are trying to design a "Operating System Installer" for
+Unix family of Operating Systems. We know there are two popular variants of
+&lt;strong&gt;Unix&lt;/strong&gt;, there popular operating system with &lt;strong&gt;Linux kernel&lt;/strong&gt; and related
+application stack, and there is &lt;strong&gt;BSD&lt;/strong&gt; systems.&lt;/p&gt;
+&lt;p&gt;Each Operating System will consists of components like&lt;/p&gt;
+&lt;ol class="arabic simple"&gt;
+&lt;li&gt;Bootloader&lt;/li&gt;
+&lt;li&gt;Kernel&lt;/li&gt;
+&lt;li&gt;Shell&lt;/li&gt;
+&lt;li&gt;DisplayManager&lt;/li&gt;
+&lt;li&gt;WindowManager&lt;/li&gt;
+&lt;li&gt;Applications&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;The installer will have to abstract those components and help the client create an &lt;strong&gt;Unix&lt;/strong&gt; operating system choice.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Correspondence with Canonical Design&lt;/strong&gt;&lt;/p&gt;
+&lt;img alt="https://dl.dropbox.com/s/wmnawrv6h3rxx4u/Screenshot%202016-07-12%2002.15.48.png" src="https://dl.dropbox.com/s/wmnawrv6h3rxx4u/Screenshot%202016-07-12%2002.15.48.png"&gt;
+&lt;p&gt;Let's look at each of these in some detail.&lt;/p&gt;
+&lt;div class="section" id="product-interfaces"&gt;
+&lt;h3&gt;Product Interfaces&lt;/h3&gt;
+&lt;p&gt;Starting with products, these are:&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;Bootloader&lt;/li&gt;
+&lt;li&gt;Kernel&lt;/li&gt;
+&lt;li&gt;Shell&lt;/li&gt;
+&lt;li&gt;DisplayManager&lt;/li&gt;
+&lt;li&gt;WindowManager&lt;/li&gt;
+&lt;li&gt;BaseApplications&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;We will have &lt;strong&gt;Interfaces&lt;/strong&gt; for the products.&lt;/p&gt;
+&lt;p&gt;&lt;a class="reference external" href="http://www.xtoinfinity.com/listings/java/abstractfactory/IBootLoader.java.html"&gt;java/abstractfactory/IBootLoader.java&lt;/a&gt;  &lt;a class="reference external" href="http://www.xtoinfinity.com/listings/java/abstractfactory/IBootLoader.java"&gt;(Source)&lt;/a&gt;&lt;/p&gt;
+&lt;pre class="code java"&gt;&lt;a name="rest_code_7e052eed70e74992855e08b7e4bfbebe-1"&gt;&lt;/a&gt;&lt;span class="kd"&gt;public&lt;/span&gt; &lt;span class="kd"&gt;interface&lt;/span&gt; &lt;span class="nc"&gt;IBootLoader&lt;/span&gt; &lt;span class="o"&gt;{&lt;/span&gt;
+&lt;a name="rest_code_7e052eed70e74992855e08b7e4bfbebe-2"&gt;&lt;/a&gt;    &lt;span class="cm"&gt;/**&lt;/span&gt;
+&lt;a name="rest_code_7e052eed70e74992855e08b7e4bfbebe-3"&gt;&lt;/a&gt;&lt;span class="cm"&gt;     * Boot up the System Image.&lt;/span&gt;
+&lt;a name="rest_code_7e052eed70e74992855e08b7e4bfbebe-4"&gt;&lt;/a&gt;&lt;span class="cm"&gt;     */&lt;/span&gt;
+&lt;a name="rest_code_7e052eed70e74992855e08b7e4bfbebe-5"&gt;&lt;/a&gt;    &lt;span class="kt"&gt;void&lt;/span&gt; &lt;span class="nf"&gt;bootUp&lt;/span&gt;&lt;span class="o"&gt;();&lt;/span&gt;
+&lt;a name="rest_code_7e052eed70e74992855e08b7e4bfbebe-6"&gt;&lt;/a&gt;&lt;span class="o"&gt;}&lt;/span&gt;
+&lt;/pre&gt;&lt;p&gt;&lt;a class="reference external" href="http://www.xtoinfinity.com/listings/java/abstractfactory/IKernel.java.html"&gt;java/abstractfactory/IKernel.java&lt;/a&gt;  &lt;a class="reference external" href="http://www.xtoinfinity.com/listings/java/abstractfactory/IKernel.java"&gt;(Source)&lt;/a&gt;&lt;/p&gt;
+&lt;pre class="code java"&gt;&lt;a name="rest_code_810a026dd7914657adcb53ae63159de4-1"&gt;&lt;/a&gt;&lt;span class="kd"&gt;public&lt;/span&gt; &lt;span class="kd"&gt;interface&lt;/span&gt; &lt;span class="nc"&gt;IKernel&lt;/span&gt; &lt;span class="o"&gt;{&lt;/span&gt;
+&lt;a name="rest_code_810a026dd7914657adcb53ae63159de4-2"&gt;&lt;/a&gt;
+&lt;a name="rest_code_810a026dd7914657adcb53ae63159de4-3"&gt;&lt;/a&gt;    &lt;span class="cm"&gt;/**&lt;/span&gt;
+&lt;a name="rest_code_810a026dd7914657adcb53ae63159de4-4"&gt;&lt;/a&gt;&lt;span class="cm"&gt;     * Load the kernel on top of the system image.&lt;/span&gt;
+&lt;a name="rest_code_810a026dd7914657adcb53ae63159de4-5"&gt;&lt;/a&gt;&lt;span class="cm"&gt;     */&lt;/span&gt;
+&lt;a name="rest_code_810a026dd7914657adcb53ae63159de4-6"&gt;&lt;/a&gt;    &lt;span class="kt"&gt;void&lt;/span&gt; &lt;span class="nf"&gt;loadKernel&lt;/span&gt;&lt;span class="o"&gt;();&lt;/span&gt;
+&lt;a name="rest_code_810a026dd7914657adcb53ae63159de4-7"&gt;&lt;/a&gt;&lt;span class="o"&gt;}&lt;/span&gt;
+&lt;/pre&gt;&lt;p&gt;&lt;a class="reference external" href="http://www.xtoinfinity.com/listings/java/abstractfactory/IShell.java.html"&gt;java/abstractfactory/IShell.java&lt;/a&gt;  &lt;a class="reference external" href="http://www.xtoinfinity.com/listings/java/abstractfactory/IShell.java"&gt;(Source)&lt;/a&gt;&lt;/p&gt;
+&lt;pre class="code java"&gt;&lt;a name="rest_code_3770667e03d943fe9296abe18ffcf21a-1"&gt;&lt;/a&gt;&lt;span class="kd"&gt;public&lt;/span&gt; &lt;span class="kd"&gt;interface&lt;/span&gt; &lt;span class="nc"&gt;IShell&lt;/span&gt; &lt;span class="o"&gt;{&lt;/span&gt;
+&lt;a name="rest_code_3770667e03d943fe9296abe18ffcf21a-2"&gt;&lt;/a&gt;    &lt;span class="kt"&gt;void&lt;/span&gt; &lt;span class="nf"&gt;loadShell&lt;/span&gt;&lt;span class="o"&gt;();&lt;/span&gt;
+&lt;a name="rest_code_3770667e03d943fe9296abe18ffcf21a-3"&gt;&lt;/a&gt;&lt;span class="o"&gt;}&lt;/span&gt;
+&lt;/pre&gt;&lt;p&gt;&lt;a class="reference external" href="http://www.xtoinfinity.com/listings/java/abstractfactory/IDisplayManager.java.html"&gt;java/abstractfactory/IDisplayManager.java&lt;/a&gt;  &lt;a class="reference external" href="http://www.xtoinfinity.com/listings/java/abstractfactory/IDisplayManager.java"&gt;(Source)&lt;/a&gt;&lt;/p&gt;
+&lt;pre class="code java"&gt;&lt;a name="rest_code_1de8da8a5e684a7d809573fa4b5514ee-1"&gt;&lt;/a&gt;&lt;span class="kd"&gt;public&lt;/span&gt; &lt;span class="kd"&gt;interface&lt;/span&gt; &lt;span class="nc"&gt;IDisplayManager&lt;/span&gt; &lt;span class="o"&gt;{&lt;/span&gt;
+&lt;a name="rest_code_1de8da8a5e684a7d809573fa4b5514ee-2"&gt;&lt;/a&gt;    &lt;span class="kt"&gt;void&lt;/span&gt; &lt;span class="nf"&gt;installDisplayManager&lt;/span&gt;&lt;span class="o"&gt;();&lt;/span&gt;
+&lt;a name="rest_code_1de8da8a5e684a7d809573fa4b5514ee-3"&gt;&lt;/a&gt;&lt;span class="o"&gt;}&lt;/span&gt;
+&lt;/pre&gt;&lt;p&gt;&lt;a class="reference external" href="http://www.xtoinfinity.com/listings/java/abstractfactory/IWindowManager.java.html"&gt;java/abstractfactory/IWindowManager.java&lt;/a&gt;  &lt;a class="reference external" href="http://www.xtoinfinity.com/listings/java/abstractfactory/IWindowManager.java"&gt;(Source)&lt;/a&gt;&lt;/p&gt;
+&lt;pre class="code java"&gt;&lt;a name="rest_code_188384b1bbd2481b989346ac3089f669-1"&gt;&lt;/a&gt;&lt;span class="kd"&gt;public&lt;/span&gt; &lt;span class="kd"&gt;interface&lt;/span&gt; &lt;span class="nc"&gt;IWindowManager&lt;/span&gt; &lt;span class="o"&gt;{&lt;/span&gt;
+&lt;a name="rest_code_188384b1bbd2481b989346ac3089f669-2"&gt;&lt;/a&gt;    &lt;span class="kt"&gt;void&lt;/span&gt; &lt;span class="nf"&gt;installWindowManager&lt;/span&gt;&lt;span class="o"&gt;();&lt;/span&gt;
+&lt;a name="rest_code_188384b1bbd2481b989346ac3089f669-3"&gt;&lt;/a&gt;&lt;span class="o"&gt;}&lt;/span&gt;
+&lt;/pre&gt;&lt;p&gt;&lt;a class="reference external" href="http://www.xtoinfinity.com/listings/java/abstractfactory/IBaseApplications.java.html"&gt;java/abstractfactory/IBaseApplications.java&lt;/a&gt;  &lt;a class="reference external" href="http://www.xtoinfinity.com/listings/java/abstractfactory/IBaseApplications.java"&gt;(Source)&lt;/a&gt;&lt;/p&gt;
+&lt;pre class="code java"&gt;&lt;a name="rest_code_59e7d008ff634bdeaefb25c53c680025-1"&gt;&lt;/a&gt;&lt;span class="kd"&gt;public&lt;/span&gt; &lt;span class="kd"&gt;interface&lt;/span&gt; &lt;span class="nc"&gt;IBaseApplications&lt;/span&gt; &lt;span class="o"&gt;{&lt;/span&gt;
+&lt;a name="rest_code_59e7d008ff634bdeaefb25c53c680025-2"&gt;&lt;/a&gt;    &lt;span class="kt"&gt;void&lt;/span&gt; &lt;span class="nf"&gt;installApplications&lt;/span&gt;&lt;span class="o"&gt;();&lt;/span&gt;
+&lt;a name="rest_code_59e7d008ff634bdeaefb25c53c680025-3"&gt;&lt;/a&gt;&lt;span class="o"&gt;}&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;div class="section" id="concrete-products"&gt;
+&lt;h3&gt;Concrete Products&lt;/h3&gt;
+&lt;p&gt;Each of these can create many difference concrete products. For the different
+concrete products like&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;Bootloader&lt;ul&gt;
+&lt;li&gt;BSDBootLoader&lt;/li&gt;
+&lt;li&gt;LinuxBootLoader&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Kernel&lt;ul&gt;
+&lt;li&gt;BSDKernel&lt;/li&gt;
+&lt;li&gt;Linux&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Shell&lt;ul&gt;
+&lt;li&gt;BASH&lt;/li&gt;
+&lt;li&gt;CShell&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;DisplayManager&lt;ul&gt;
+&lt;li&gt;X11&lt;/li&gt;
+&lt;li&gt;WayLand&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;WindowManager&lt;ul&gt;
+&lt;li&gt;Gnome&lt;/li&gt;
+&lt;li&gt;KDE&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;BaseApplications&lt;ul&gt;
+&lt;li&gt;SystemVUnix&lt;/li&gt;
+&lt;li&gt;GNUApplications&lt;/li&gt;
+&lt;li&gt;ProprietaryApps&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Let's denote these concrete products in code that can be instantiated.&lt;/p&gt;
+&lt;p&gt;&lt;a class="reference external" href="http://www.xtoinfinity.com/listings/java/abstractfactory/BSDBootLoader.java.html"&gt;java/abstractfactory/BSDBootLoader.java&lt;/a&gt;  &lt;a class="reference external" href="http://www.xtoinfinity.com/listings/java/abstractfactory/BSDBootLoader.java"&gt;(Source)&lt;/a&gt;&lt;/p&gt;
+&lt;pre class="code java"&gt;&lt;a name="rest_code_c081e0e9d1644d68a1846bd3349f81ac-1"&gt;&lt;/a&gt;&lt;span class="kd"&gt;public&lt;/span&gt; &lt;span class="kd"&gt;class&lt;/span&gt; &lt;span class="nc"&gt;BSDBootLoader&lt;/span&gt; &lt;span class="kd"&gt;implements&lt;/span&gt; &lt;span class="n"&gt;IBootLoader&lt;/span&gt;&lt;span class="o"&gt;{&lt;/span&gt;
+&lt;a name="rest_code_c081e0e9d1644d68a1846bd3349f81ac-2"&gt;&lt;/a&gt;    &lt;span class="cm"&gt;/**&lt;/span&gt;
+&lt;a name="rest_code_c081e0e9d1644d68a1846bd3349f81ac-3"&gt;&lt;/a&gt;&lt;span class="cm"&gt;     * Boot up the System Image.&lt;/span&gt;
+&lt;a name="rest_code_c081e0e9d1644d68a1846bd3349f81ac-4"&gt;&lt;/a&gt;&lt;span class="cm"&gt;     */&lt;/span&gt;
+&lt;a name="rest_code_c081e0e9d1644d68a1846bd3349f81ac-5"&gt;&lt;/a&gt;    &lt;span class="nd"&gt;@Override&lt;/span&gt;
+&lt;a name="rest_code_c081e0e9d1644d68a1846bd3349f81ac-6"&gt;&lt;/a&gt;    &lt;span class="kd"&gt;public&lt;/span&gt; &lt;span class="kt"&gt;void&lt;/span&gt; &lt;span class="nf"&gt;bootUp&lt;/span&gt;&lt;span class="o"&gt;()&lt;/span&gt; &lt;span class="o"&gt;{&lt;/span&gt;
+&lt;a name="rest_code_c081e0e9d1644d68a1846bd3349f81ac-7"&gt;&lt;/a&gt;        &lt;span class="n"&gt;System&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="na"&gt;out&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="na"&gt;println&lt;/span&gt;&lt;span class="o"&gt;(&lt;/span&gt;&lt;span class="s"&gt;"Booting: "&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt; &lt;span class="k"&gt;this&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="na"&gt;getClass&lt;/span&gt;&lt;span class="o"&gt;().&lt;/span&gt;&lt;span class="na"&gt;getSimpleName&lt;/span&gt;&lt;span class="o"&gt;());&lt;/span&gt;
+&lt;a name="rest_code_c081e0e9d1644d68a1846bd3349f81ac-8"&gt;&lt;/a&gt;
+&lt;a name="rest_code_c081e0e9d1644d68a1846bd3349f81ac-9"&gt;&lt;/a&gt;    &lt;span class="o"&gt;}&lt;/span&gt;
+&lt;a name="rest_code_c081e0e9d1644d68a1846bd3349f81ac-10"&gt;&lt;/a&gt;&lt;span class="o"&gt;}&lt;/span&gt;
+&lt;/pre&gt;&lt;p&gt;&lt;a class="reference external" href="http://www.xtoinfinity.com/listings/java/abstractfactory/BSDKernel.java.html"&gt;java/abstractfactory/BSDKernel.java&lt;/a&gt;  &lt;a class="reference external" href="http://www.xtoinfinity.com/listings/java/abstractfactory/BSDKernel.java"&gt;(Source)&lt;/a&gt;&lt;/p&gt;
+&lt;pre class="code java"&gt;&lt;a name="rest_code_0974f170d6e246ea87b91402b94efbb8-1"&gt;&lt;/a&gt;&lt;span class="kd"&gt;public&lt;/span&gt; &lt;span class="kd"&gt;class&lt;/span&gt; &lt;span class="nc"&gt;BSDKernel&lt;/span&gt; &lt;span class="kd"&gt;implements&lt;/span&gt; &lt;span class="n"&gt;IKernel&lt;/span&gt; &lt;span class="o"&gt;{&lt;/span&gt;
+&lt;a name="rest_code_0974f170d6e246ea87b91402b94efbb8-2"&gt;&lt;/a&gt;    &lt;span class="cm"&gt;/**&lt;/span&gt;
+&lt;a name="rest_code_0974f170d6e246ea87b91402b94efbb8-3"&gt;&lt;/a&gt;&lt;span class="cm"&gt;     * Load the kernel on top of the system image.&lt;/span&gt;
+&lt;a name="rest_code_0974f170d6e246ea87b91402b94efbb8-4"&gt;&lt;/a&gt;&lt;span class="cm"&gt;     */&lt;/span&gt;
+&lt;a name="rest_code_0974f170d6e246ea87b91402b94efbb8-5"&gt;&lt;/a&gt;    &lt;span class="nd"&gt;@Override&lt;/span&gt;
+&lt;a name="rest_code_0974f170d6e246ea87b91402b94efbb8-6"&gt;&lt;/a&gt;    &lt;span class="kd"&gt;public&lt;/span&gt; &lt;span class="kt"&gt;void&lt;/span&gt; &lt;span class="nf"&gt;loadKernel&lt;/span&gt;&lt;span class="o"&gt;()&lt;/span&gt; &lt;span class="o"&gt;{&lt;/span&gt;
+&lt;a name="rest_code_0974f170d6e246ea87b91402b94efbb8-7"&gt;&lt;/a&gt;        &lt;span class="n"&gt;System&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="na"&gt;out&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="na"&gt;println&lt;/span&gt;&lt;span class="o"&gt;(&lt;/span&gt;&lt;span class="s"&gt;"Loading: "&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt; &lt;span class="k"&gt;this&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="na"&gt;getClass&lt;/span&gt;&lt;span class="o"&gt;().&lt;/span&gt;&lt;span class="na"&gt;getSimpleName&lt;/span&gt;&lt;span class="o"&gt;());&lt;/span&gt;
+&lt;a name="rest_code_0974f170d6e246ea87b91402b94efbb8-8"&gt;&lt;/a&gt;
+&lt;a name="rest_code_0974f170d6e246ea87b91402b94efbb8-9"&gt;&lt;/a&gt;    &lt;span class="o"&gt;}&lt;/span&gt;
+&lt;a name="rest_code_0974f170d6e246ea87b91402b94efbb8-10"&gt;&lt;/a&gt;&lt;span class="o"&gt;}&lt;/span&gt;
+&lt;/pre&gt;&lt;p&gt;&lt;a class="reference external" href="http://www.xtoinfinity.com/listings/java/abstractfactory/Bash.java.html"&gt;java/abstractfactory/Bash.java&lt;/a&gt;  &lt;a class="reference external" href="http://www.xtoinfinity.com/listings/java/abstractfactory/Bash.java"&gt;(Source)&lt;/a&gt;&lt;/p&gt;
+&lt;pre class="code java"&gt;&lt;a name="rest_code_cdbfaf100e524e648e9cd148db68967b-1"&gt;&lt;/a&gt;&lt;span class="kd"&gt;public&lt;/span&gt; &lt;span class="kd"&gt;class&lt;/span&gt; &lt;span class="nc"&gt;Bash&lt;/span&gt; &lt;span class="kd"&gt;implements&lt;/span&gt; &lt;span class="n"&gt;IShell&lt;/span&gt; &lt;span class="o"&gt;{&lt;/span&gt;
+&lt;a name="rest_code_cdbfaf100e524e648e9cd148db68967b-2"&gt;&lt;/a&gt;
+&lt;a name="rest_code_cdbfaf100e524e648e9cd148db68967b-3"&gt;&lt;/a&gt;    &lt;span class="nd"&gt;@Override&lt;/span&gt;
+&lt;a name="rest_code_cdbfaf100e524e648e9cd148db68967b-4"&gt;&lt;/a&gt;    &lt;span class="kd"&gt;public&lt;/span&gt; &lt;span class="kt"&gt;void&lt;/span&gt; &lt;span class="nf"&gt;loadShell&lt;/span&gt;&lt;span class="o"&gt;()&lt;/span&gt; &lt;span class="o"&gt;{&lt;/span&gt;
+&lt;a name="rest_code_cdbfaf100e524e648e9cd148db68967b-5"&gt;&lt;/a&gt;        &lt;span class="n"&gt;System&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="na"&gt;out&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="na"&gt;println&lt;/span&gt;&lt;span class="o"&gt;(&lt;/span&gt;&lt;span class="s"&gt;"Loading: "&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt; &lt;span class="k"&gt;this&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="na"&gt;getClass&lt;/span&gt;&lt;span class="o"&gt;().&lt;/span&gt;&lt;span class="na"&gt;getSimpleName&lt;/span&gt;&lt;span class="o"&gt;());&lt;/span&gt;
+&lt;a name="rest_code_cdbfaf100e524e648e9cd148db68967b-6"&gt;&lt;/a&gt;
+&lt;a name="rest_code_cdbfaf100e524e648e9cd148db68967b-7"&gt;&lt;/a&gt;    &lt;span class="o"&gt;}&lt;/span&gt;
+&lt;a name="rest_code_cdbfaf100e524e648e9cd148db68967b-8"&gt;&lt;/a&gt;&lt;span class="o"&gt;}&lt;/span&gt;
+&lt;/pre&gt;&lt;p&gt;&lt;a class="reference external" href="http://www.xtoinfinity.com/listings/java/abstractfactory/CShell.java.html"&gt;java/abstractfactory/CShell.java&lt;/a&gt;  &lt;a class="reference external" href="http://www.xtoinfinity.com/listings/java/abstractfactory/CShell.java"&gt;(Source)&lt;/a&gt;&lt;/p&gt;
+&lt;pre class="code java"&gt;&lt;a name="rest_code_c5472ddd7f4e4b36a222123e43596113-1"&gt;&lt;/a&gt;&lt;span class="kd"&gt;public&lt;/span&gt; &lt;span class="kd"&gt;class&lt;/span&gt; &lt;span class="nc"&gt;CShell&lt;/span&gt; &lt;span class="kd"&gt;implements&lt;/span&gt; &lt;span class="n"&gt;IShell&lt;/span&gt; &lt;span class="o"&gt;{&lt;/span&gt;
+&lt;a name="rest_code_c5472ddd7f4e4b36a222123e43596113-2"&gt;&lt;/a&gt;    &lt;span class="nd"&gt;@Override&lt;/span&gt;
+&lt;a name="rest_code_c5472ddd7f4e4b36a222123e43596113-3"&gt;&lt;/a&gt;    &lt;span class="kd"&gt;public&lt;/span&gt; &lt;span class="kt"&gt;void&lt;/span&gt; &lt;span class="nf"&gt;loadShell&lt;/span&gt;&lt;span class="o"&gt;()&lt;/span&gt; &lt;span class="o"&gt;{&lt;/span&gt;
+&lt;a name="rest_code_c5472ddd7f4e4b36a222123e43596113-4"&gt;&lt;/a&gt;        &lt;span class="n"&gt;System&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="na"&gt;out&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="na"&gt;println&lt;/span&gt;&lt;span class="o"&gt;(&lt;/span&gt;&lt;span class="s"&gt;"Loading: "&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt; &lt;span class="k"&gt;this&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="na"&gt;getClass&lt;/span&gt;&lt;span class="o"&gt;().&lt;/span&gt;&lt;span class="na"&gt;getSimpleName&lt;/span&gt;&lt;span class="o"&gt;());&lt;/span&gt;
+&lt;a name="rest_code_c5472ddd7f4e4b36a222123e43596113-5"&gt;&lt;/a&gt;
+&lt;a name="rest_code_c5472ddd7f4e4b36a222123e43596113-6"&gt;&lt;/a&gt;    &lt;span class="o"&gt;}&lt;/span&gt;
+&lt;a name="rest_code_c5472ddd7f4e4b36a222123e43596113-7"&gt;&lt;/a&gt;&lt;span class="o"&gt;}&lt;/span&gt;
+&lt;/pre&gt;&lt;p&gt;&lt;a class="reference external" href="http://www.xtoinfinity.com/listings/java/abstractfactory/GNUApplications.java.html"&gt;java/abstractfactory/GNUApplications.java&lt;/a&gt;  &lt;a class="reference external" href="http://www.xtoinfinity.com/listings/java/abstractfactory/GNUApplications.java"&gt;(Source)&lt;/a&gt;&lt;/p&gt;
+&lt;pre class="code java"&gt;&lt;a name="rest_code_5fdbac6151ff4e9693ae3cfea3f30a30-1"&gt;&lt;/a&gt;&lt;span class="kd"&gt;public&lt;/span&gt; &lt;span class="kd"&gt;class&lt;/span&gt; &lt;span class="nc"&gt;GNUApplications&lt;/span&gt; &lt;span class="kd"&gt;implements&lt;/span&gt; &lt;span class="n"&gt;IBaseApplications&lt;/span&gt;&lt;span class="o"&gt;{&lt;/span&gt;
+&lt;a name="rest_code_5fdbac6151ff4e9693ae3cfea3f30a30-2"&gt;&lt;/a&gt;    &lt;span class="nd"&gt;@Override&lt;/span&gt;
+&lt;a name="rest_code_5fdbac6151ff4e9693ae3cfea3f30a30-3"&gt;&lt;/a&gt;    &lt;span class="kd"&gt;public&lt;/span&gt; &lt;span class="kt"&gt;void&lt;/span&gt; &lt;span class="nf"&gt;installApplications&lt;/span&gt;&lt;span class="o"&gt;()&lt;/span&gt; &lt;span class="o"&gt;{&lt;/span&gt;
+&lt;a name="rest_code_5fdbac6151ff4e9693ae3cfea3f30a30-4"&gt;&lt;/a&gt;        &lt;span class="n"&gt;System&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="na"&gt;out&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="na"&gt;println&lt;/span&gt;&lt;span class="o"&gt;(&lt;/span&gt;&lt;span class="s"&gt;"Installing: "&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt; &lt;span class="k"&gt;this&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="na"&gt;getClass&lt;/span&gt;&lt;span class="o"&gt;().&lt;/span&gt;&lt;span class="na"&gt;getSimpleName&lt;/span&gt;&lt;span class="o"&gt;());&lt;/span&gt;
+&lt;a name="rest_code_5fdbac6151ff4e9693ae3cfea3f30a30-5"&gt;&lt;/a&gt;    &lt;span class="o"&gt;}&lt;/span&gt;
+&lt;a name="rest_code_5fdbac6151ff4e9693ae3cfea3f30a30-6"&gt;&lt;/a&gt;&lt;span class="o"&gt;}&lt;/span&gt;
+&lt;/pre&gt;&lt;p&gt;&lt;a class="reference external" href="http://www.xtoinfinity.com/listings/java/abstractfactory/Gnome.java.html"&gt;java/abstractfactory/Gnome.java&lt;/a&gt;  &lt;a class="reference external" href="http://www.xtoinfinity.com/listings/java/abstractfactory/Gnome.java"&gt;(Source)&lt;/a&gt;&lt;/p&gt;
+&lt;pre class="code java"&gt;&lt;a name="rest_code_08f0fe6dadb54de0bd3080d8affb1ba9-1"&gt;&lt;/a&gt;&lt;span class="kd"&gt;public&lt;/span&gt; &lt;span class="kd"&gt;class&lt;/span&gt; &lt;span class="nc"&gt;Gnome&lt;/span&gt; &lt;span class="kd"&gt;implements&lt;/span&gt; &lt;span class="n"&gt;IWindowManager&lt;/span&gt; &lt;span class="o"&gt;{&lt;/span&gt;
+&lt;a name="rest_code_08f0fe6dadb54de0bd3080d8affb1ba9-2"&gt;&lt;/a&gt;    &lt;span class="nd"&gt;@Override&lt;/span&gt;
+&lt;a name="rest_code_08f0fe6dadb54de0bd3080d8affb1ba9-3"&gt;&lt;/a&gt;    &lt;span class="kd"&gt;public&lt;/span&gt; &lt;span class="kt"&gt;void&lt;/span&gt; &lt;span class="nf"&gt;installWindowManager&lt;/span&gt;&lt;span class="o"&gt;()&lt;/span&gt; &lt;span class="o"&gt;{&lt;/span&gt;
+&lt;a name="rest_code_08f0fe6dadb54de0bd3080d8affb1ba9-4"&gt;&lt;/a&gt;        &lt;span class="n"&gt;System&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="na"&gt;out&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="na"&gt;println&lt;/span&gt;&lt;span class="o"&gt;(&lt;/span&gt;&lt;span class="s"&gt;"Installing: "&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt; &lt;span class="k"&gt;this&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="na"&gt;getClass&lt;/span&gt;&lt;span class="o"&gt;().&lt;/span&gt;&lt;span class="na"&gt;getSimpleName&lt;/span&gt;&lt;span class="o"&gt;());&lt;/span&gt;
+&lt;a name="rest_code_08f0fe6dadb54de0bd3080d8affb1ba9-5"&gt;&lt;/a&gt;
+&lt;a name="rest_code_08f0fe6dadb54de0bd3080d8affb1ba9-6"&gt;&lt;/a&gt;    &lt;span class="o"&gt;}&lt;/span&gt;
+&lt;a name="rest_code_08f0fe6dadb54de0bd3080d8affb1ba9-7"&gt;&lt;/a&gt;&lt;span class="o"&gt;}&lt;/span&gt;
+&lt;/pre&gt;&lt;p&gt;&lt;a class="reference external" href="http://www.xtoinfinity.com/listings/java/abstractfactory/KDE.java.html"&gt;java/abstractfactory/KDE.java&lt;/a&gt;  &lt;a class="reference external" href="http://www.xtoinfinity.com/listings/java/abstractfactory/KDE.java"&gt;(Source)&lt;/a&gt;&lt;/p&gt;
+&lt;pre class="code java"&gt;&lt;a name="rest_code_6d7890ea44f8459ca711ef87f3827e70-1"&gt;&lt;/a&gt;&lt;span class="kd"&gt;public&lt;/span&gt; &lt;span class="kd"&gt;class&lt;/span&gt; &lt;span class="nc"&gt;KDE&lt;/span&gt; &lt;span class="kd"&gt;implements&lt;/span&gt; &lt;span class="n"&gt;IWindowManager&lt;/span&gt; &lt;span class="o"&gt;{&lt;/span&gt;
+&lt;a name="rest_code_6d7890ea44f8459ca711ef87f3827e70-2"&gt;&lt;/a&gt;    &lt;span class="nd"&gt;@Override&lt;/span&gt;
+&lt;a name="rest_code_6d7890ea44f8459ca711ef87f3827e70-3"&gt;&lt;/a&gt;    &lt;span class="kd"&gt;public&lt;/span&gt; &lt;span class="kt"&gt;void&lt;/span&gt; &lt;span class="nf"&gt;installWindowManager&lt;/span&gt;&lt;span class="o"&gt;()&lt;/span&gt; &lt;span class="o"&gt;{&lt;/span&gt;
+&lt;a name="rest_code_6d7890ea44f8459ca711ef87f3827e70-4"&gt;&lt;/a&gt;        &lt;span class="n"&gt;System&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="na"&gt;out&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="na"&gt;println&lt;/span&gt;&lt;span class="o"&gt;(&lt;/span&gt;&lt;span class="s"&gt;"Installing: "&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt; &lt;span class="k"&gt;this&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="na"&gt;getClass&lt;/span&gt;&lt;span class="o"&gt;().&lt;/span&gt;&lt;span class="na"&gt;getSimpleName&lt;/span&gt;&lt;span class="o"&gt;());&lt;/span&gt;
+&lt;a name="rest_code_6d7890ea44f8459ca711ef87f3827e70-5"&gt;&lt;/a&gt;    &lt;span class="o"&gt;}&lt;/span&gt;
+&lt;a name="rest_code_6d7890ea44f8459ca711ef87f3827e70-6"&gt;&lt;/a&gt;&lt;span class="o"&gt;}&lt;/span&gt;
+&lt;/pre&gt;&lt;p&gt;&lt;a class="reference external" href="http://www.xtoinfinity.com/listings/java/abstractfactory/Linux.java.html"&gt;java/abstractfactory/Linux.java&lt;/a&gt;  &lt;a class="reference external" href="http://www.xtoinfinity.com/listings/java/abstractfactory/Linux.java"&gt;(Source)&lt;/a&gt;&lt;/p&gt;
+&lt;pre class="code java"&gt;&lt;a name="rest_code_c0d39b450c8440b785161590b3231c00-1"&gt;&lt;/a&gt;&lt;span class="kd"&gt;public&lt;/span&gt; &lt;span class="kd"&gt;class&lt;/span&gt; &lt;span class="nc"&gt;Linux&lt;/span&gt; &lt;span class="kd"&gt;implements&lt;/span&gt; &lt;span class="n"&gt;IKernel&lt;/span&gt;&lt;span class="o"&gt;{&lt;/span&gt;
+&lt;a name="rest_code_c0d39b450c8440b785161590b3231c00-2"&gt;&lt;/a&gt;    &lt;span class="cm"&gt;/**&lt;/span&gt;
+&lt;a name="rest_code_c0d39b450c8440b785161590b3231c00-3"&gt;&lt;/a&gt;&lt;span class="cm"&gt;     * Load the kernel on top of the system image.&lt;/span&gt;
+&lt;a name="rest_code_c0d39b450c8440b785161590b3231c00-4"&gt;&lt;/a&gt;&lt;span class="cm"&gt;     */&lt;/span&gt;
+&lt;a name="rest_code_c0d39b450c8440b785161590b3231c00-5"&gt;&lt;/a&gt;    &lt;span class="nd"&gt;@Override&lt;/span&gt;
+&lt;a name="rest_code_c0d39b450c8440b785161590b3231c00-6"&gt;&lt;/a&gt;    &lt;span class="kd"&gt;public&lt;/span&gt; &lt;span class="kt"&gt;void&lt;/span&gt; &lt;span class="nf"&gt;loadKernel&lt;/span&gt;&lt;span class="o"&gt;()&lt;/span&gt; &lt;span class="o"&gt;{&lt;/span&gt;
+&lt;a name="rest_code_c0d39b450c8440b785161590b3231c00-7"&gt;&lt;/a&gt;        &lt;span class="n"&gt;System&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="na"&gt;out&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="na"&gt;println&lt;/span&gt;&lt;span class="o"&gt;(&lt;/span&gt;&lt;span class="s"&gt;"Loading: "&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt; &lt;span class="k"&gt;this&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="na"&gt;getClass&lt;/span&gt;&lt;span class="o"&gt;().&lt;/span&gt;&lt;span class="na"&gt;getSimpleName&lt;/span&gt;&lt;span class="o"&gt;());&lt;/span&gt;
+&lt;a name="rest_code_c0d39b450c8440b785161590b3231c00-8"&gt;&lt;/a&gt;
+&lt;a name="rest_code_c0d39b450c8440b785161590b3231c00-9"&gt;&lt;/a&gt;    &lt;span class="o"&gt;}&lt;/span&gt;
+&lt;a name="rest_code_c0d39b450c8440b785161590b3231c00-10"&gt;&lt;/a&gt;&lt;span class="o"&gt;}&lt;/span&gt;
+&lt;/pre&gt;&lt;p&gt;&lt;a class="reference external" href="http://www.xtoinfinity.com/listings/java/abstractfactory/LinuxBootLoader.java.html"&gt;java/abstractfactory/LinuxBootLoader.java&lt;/a&gt;  &lt;a class="reference external" href="http://www.xtoinfinity.com/listings/java/abstractfactory/LinuxBootLoader.java"&gt;(Source)&lt;/a&gt;&lt;/p&gt;
+&lt;pre class="code java"&gt;&lt;a name="rest_code_aab846feac394ee69b47e31b6da46c68-1"&gt;&lt;/a&gt;&lt;span class="kd"&gt;public&lt;/span&gt; &lt;span class="kd"&gt;class&lt;/span&gt; &lt;span class="nc"&gt;LinuxBootLoader&lt;/span&gt; &lt;span class="kd"&gt;implements&lt;/span&gt; &lt;span class="n"&gt;IBootLoader&lt;/span&gt; &lt;span class="o"&gt;{&lt;/span&gt;
+&lt;a name="rest_code_aab846feac394ee69b47e31b6da46c68-2"&gt;&lt;/a&gt;    &lt;span class="nd"&gt;@Override&lt;/span&gt;
+&lt;a name="rest_code_aab846feac394ee69b47e31b6da46c68-3"&gt;&lt;/a&gt;    &lt;span class="kd"&gt;public&lt;/span&gt; &lt;span class="kt"&gt;void&lt;/span&gt; &lt;span class="nf"&gt;bootUp&lt;/span&gt;&lt;span class="o"&gt;()&lt;/span&gt; &lt;span class="o"&gt;{&lt;/span&gt;
+&lt;a name="rest_code_aab846feac394ee69b47e31b6da46c68-4"&gt;&lt;/a&gt;        &lt;span class="n"&gt;System&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="na"&gt;out&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="na"&gt;println&lt;/span&gt;&lt;span class="o"&gt;(&lt;/span&gt;&lt;span class="s"&gt;"Booting: "&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt; &lt;span class="k"&gt;this&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="na"&gt;getClass&lt;/span&gt;&lt;span class="o"&gt;().&lt;/span&gt;&lt;span class="na"&gt;getSimpleName&lt;/span&gt;&lt;span class="o"&gt;());&lt;/span&gt;
+&lt;a name="rest_code_aab846feac394ee69b47e31b6da46c68-5"&gt;&lt;/a&gt;    &lt;span class="o"&gt;}&lt;/span&gt;
+&lt;a name="rest_code_aab846feac394ee69b47e31b6da46c68-6"&gt;&lt;/a&gt;&lt;span class="o"&gt;}&lt;/span&gt;
+&lt;/pre&gt;&lt;p&gt;&lt;a class="reference external" href="http://www.xtoinfinity.com/listings/java/abstractfactory/ProprietaryApps.java.html"&gt;java/abstractfactory/ProprietaryApps.java&lt;/a&gt;  &lt;a class="reference external" href="http://www.xtoinfinity.com/listings/java/abstractfactory/ProprietaryApps.java"&gt;(Source)&lt;/a&gt;&lt;/p&gt;
+&lt;pre class="code java"&gt;&lt;a name="rest_code_b5fe9cd011c24c81b50aa22fe68063b8-1"&gt;&lt;/a&gt;&lt;span class="kd"&gt;public&lt;/span&gt; &lt;span class="kd"&gt;class&lt;/span&gt; &lt;span class="nc"&gt;ProprietaryApps&lt;/span&gt; &lt;span class="kd"&gt;implements&lt;/span&gt; &lt;span class="n"&gt;IBaseApplications&lt;/span&gt;&lt;span class="o"&gt;{&lt;/span&gt;
+&lt;a name="rest_code_b5fe9cd011c24c81b50aa22fe68063b8-2"&gt;&lt;/a&gt;    &lt;span class="nd"&gt;@Override&lt;/span&gt;
+&lt;a name="rest_code_b5fe9cd011c24c81b50aa22fe68063b8-3"&gt;&lt;/a&gt;    &lt;span class="kd"&gt;public&lt;/span&gt; &lt;span class="kt"&gt;void&lt;/span&gt; &lt;span class="nf"&gt;installApplications&lt;/span&gt;&lt;span class="o"&gt;()&lt;/span&gt; &lt;span class="o"&gt;{&lt;/span&gt;
+&lt;a name="rest_code_b5fe9cd011c24c81b50aa22fe68063b8-4"&gt;&lt;/a&gt;        &lt;span class="n"&gt;System&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="na"&gt;out&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="na"&gt;println&lt;/span&gt;&lt;span class="o"&gt;(&lt;/span&gt;&lt;span class="s"&gt;"Installing: "&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt; &lt;span class="k"&gt;this&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="na"&gt;getClass&lt;/span&gt;&lt;span class="o"&gt;().&lt;/span&gt;&lt;span class="na"&gt;getSimpleName&lt;/span&gt;&lt;span class="o"&gt;());&lt;/span&gt;
+&lt;a name="rest_code_b5fe9cd011c24c81b50aa22fe68063b8-5"&gt;&lt;/a&gt;    &lt;span class="o"&gt;}&lt;/span&gt;
+&lt;a name="rest_code_b5fe9cd011c24c81b50aa22fe68063b8-6"&gt;&lt;/a&gt;&lt;span class="o"&gt;}&lt;/span&gt;
+&lt;/pre&gt;&lt;p&gt;&lt;a class="reference external" href="http://www.xtoinfinity.com/listings/java/abstractfactory/SystemVUnix.java.html"&gt;java/abstractfactory/SystemVUnix.java&lt;/a&gt;  &lt;a class="reference external" href="http://www.xtoinfinity.com/listings/java/abstractfactory/SystemVUnix.java"&gt;(Source)&lt;/a&gt;&lt;/p&gt;
+&lt;pre class="code java"&gt;&lt;a name="rest_code_84e3b1f4901b464aa4682b54e7fbd454-1"&gt;&lt;/a&gt;&lt;span class="kd"&gt;public&lt;/span&gt; &lt;span class="kd"&gt;class&lt;/span&gt; &lt;span class="nc"&gt;SystemVUnix&lt;/span&gt; &lt;span class="kd"&gt;implements&lt;/span&gt; &lt;span class="n"&gt;IBaseApplications&lt;/span&gt;&lt;span class="o"&gt;{&lt;/span&gt;
+&lt;a name="rest_code_84e3b1f4901b464aa4682b54e7fbd454-2"&gt;&lt;/a&gt;    &lt;span class="nd"&gt;@Override&lt;/span&gt;
+&lt;a name="rest_code_84e3b1f4901b464aa4682b54e7fbd454-3"&gt;&lt;/a&gt;    &lt;span class="kd"&gt;public&lt;/span&gt; &lt;span class="kt"&gt;void&lt;/span&gt; &lt;span class="nf"&gt;installApplications&lt;/span&gt;&lt;span class="o"&gt;()&lt;/span&gt; &lt;span class="o"&gt;{&lt;/span&gt;
+&lt;a name="rest_code_84e3b1f4901b464aa4682b54e7fbd454-4"&gt;&lt;/a&gt;        &lt;span class="n"&gt;System&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="na"&gt;out&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="na"&gt;println&lt;/span&gt;&lt;span class="o"&gt;(&lt;/span&gt;&lt;span class="s"&gt;"Installing: "&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt; &lt;span class="k"&gt;this&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="na"&gt;getClass&lt;/span&gt;&lt;span class="o"&gt;().&lt;/span&gt;&lt;span class="na"&gt;getSimpleName&lt;/span&gt;&lt;span class="o"&gt;());&lt;/span&gt;
+&lt;a name="rest_code_84e3b1f4901b464aa4682b54e7fbd454-5"&gt;&lt;/a&gt;    &lt;span class="o"&gt;}&lt;/span&gt;
+&lt;a name="rest_code_84e3b1f4901b464aa4682b54e7fbd454-6"&gt;&lt;/a&gt;&lt;span class="o"&gt;}&lt;/span&gt;
+&lt;/pre&gt;&lt;p&gt;&lt;a class="reference external" href="http://www.xtoinfinity.com/listings/java/abstractfactory/WayLand.java.html"&gt;java/abstractfactory/WayLand.java&lt;/a&gt;  &lt;a class="reference external" href="http://www.xtoinfinity.com/listings/java/abstractfactory/WayLand.java"&gt;(Source)&lt;/a&gt;&lt;/p&gt;
+&lt;pre class="code java"&gt;&lt;a name="rest_code_0def9c9913714f79ac999cd11cfd5753-1"&gt;&lt;/a&gt;&lt;span class="kd"&gt;public&lt;/span&gt; &lt;span class="kd"&gt;class&lt;/span&gt; &lt;span class="nc"&gt;WayLand&lt;/span&gt; &lt;span class="kd"&gt;implements&lt;/span&gt; &lt;span class="n"&gt;IDisplayManager&lt;/span&gt;&lt;span class="o"&gt;{&lt;/span&gt;
+&lt;a name="rest_code_0def9c9913714f79ac999cd11cfd5753-2"&gt;&lt;/a&gt;
+&lt;a name="rest_code_0def9c9913714f79ac999cd11cfd5753-3"&gt;&lt;/a&gt;    &lt;span class="nd"&gt;@Override&lt;/span&gt;
+&lt;a name="rest_code_0def9c9913714f79ac999cd11cfd5753-4"&gt;&lt;/a&gt;    &lt;span class="kd"&gt;public&lt;/span&gt; &lt;span class="kt"&gt;void&lt;/span&gt; &lt;span class="nf"&gt;installDisplayManager&lt;/span&gt;&lt;span class="o"&gt;()&lt;/span&gt; &lt;span class="o"&gt;{&lt;/span&gt;
+&lt;a name="rest_code_0def9c9913714f79ac999cd11cfd5753-5"&gt;&lt;/a&gt;        &lt;span class="n"&gt;System&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="na"&gt;out&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="na"&gt;println&lt;/span&gt;&lt;span class="o"&gt;(&lt;/span&gt;&lt;span class="s"&gt;"Installing: "&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt; &lt;span class="k"&gt;this&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="na"&gt;getClass&lt;/span&gt;&lt;span class="o"&gt;().&lt;/span&gt;&lt;span class="na"&gt;getSimpleName&lt;/span&gt;&lt;span class="o"&gt;());&lt;/span&gt;
+&lt;a name="rest_code_0def9c9913714f79ac999cd11cfd5753-6"&gt;&lt;/a&gt;    &lt;span class="o"&gt;}&lt;/span&gt;
+&lt;a name="rest_code_0def9c9913714f79ac999cd11cfd5753-7"&gt;&lt;/a&gt;
+&lt;a name="rest_code_0def9c9913714f79ac999cd11cfd5753-8"&gt;&lt;/a&gt;&lt;span class="o"&gt;}&lt;/span&gt;
+&lt;/pre&gt;&lt;p&gt;&lt;a class="reference external" href="http://www.xtoinfinity.com/listings/java/abstractfactory/X11.java.html"&gt;java/abstractfactory/X11.java&lt;/a&gt;  &lt;a class="reference external" href="http://www.xtoinfinity.com/listings/java/abstractfactory/X11.java"&gt;(Source)&lt;/a&gt;&lt;/p&gt;
+&lt;pre class="code java"&gt;&lt;a name="rest_code_9074e3cbfa924dba89755c4821b621e6-1"&gt;&lt;/a&gt;&lt;span class="kd"&gt;public&lt;/span&gt; &lt;span class="kd"&gt;class&lt;/span&gt; &lt;span class="nc"&gt;X11&lt;/span&gt; &lt;span class="kd"&gt;implements&lt;/span&gt; &lt;span class="n"&gt;IDisplayManager&lt;/span&gt;&lt;span class="o"&gt;{&lt;/span&gt;
+&lt;a name="rest_code_9074e3cbfa924dba89755c4821b621e6-2"&gt;&lt;/a&gt;    &lt;span class="nd"&gt;@Override&lt;/span&gt;
+&lt;a name="rest_code_9074e3cbfa924dba89755c4821b621e6-3"&gt;&lt;/a&gt;    &lt;span class="kd"&gt;public&lt;/span&gt; &lt;span class="kt"&gt;void&lt;/span&gt; &lt;span class="nf"&gt;installDisplayManager&lt;/span&gt;&lt;span class="o"&gt;()&lt;/span&gt; &lt;span class="o"&gt;{&lt;/span&gt;
+&lt;a name="rest_code_9074e3cbfa924dba89755c4821b621e6-4"&gt;&lt;/a&gt;        &lt;span class="n"&gt;System&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="na"&gt;out&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="na"&gt;println&lt;/span&gt;&lt;span class="o"&gt;(&lt;/span&gt;&lt;span class="s"&gt;"Installing: "&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt; &lt;span class="k"&gt;this&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="na"&gt;getClass&lt;/span&gt;&lt;span class="o"&gt;().&lt;/span&gt;&lt;span class="na"&gt;getSimpleName&lt;/span&gt;&lt;span class="o"&gt;());&lt;/span&gt;
+&lt;a name="rest_code_9074e3cbfa924dba89755c4821b621e6-5"&gt;&lt;/a&gt;    &lt;span class="o"&gt;}&lt;/span&gt;
+&lt;a name="rest_code_9074e3cbfa924dba89755c4821b621e6-6"&gt;&lt;/a&gt;&lt;span class="o"&gt;}&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;div class="section" id="factories"&gt;
+&lt;h3&gt;Factories&lt;/h3&gt;
+&lt;p&gt;The products are created by &lt;strong&gt;Factories&lt;/strong&gt;&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;BSDFactory&lt;/li&gt;
+&lt;li&gt;LinuxFactory&lt;/li&gt;
+&lt;li&gt;UbuntuFactory&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;a class="reference external" href="http://www.xtoinfinity.com/listings/java/abstractfactory/BSDFactory.java.html"&gt;java/abstractfactory/BSDFactory.java&lt;/a&gt;  &lt;a class="reference external" href="http://www.xtoinfinity.com/listings/java/abstractfactory/BSDFactory.java"&gt;(Source)&lt;/a&gt;&lt;/p&gt;
+&lt;pre class="code java"&gt;&lt;a name="rest_code_858d62cae374414ab62fa43f93bbd44b-1"&gt;&lt;/a&gt;&lt;span class="kd"&gt;public&lt;/span&gt; &lt;span class="kd"&gt;class&lt;/span&gt; &lt;span class="nc"&gt;BSDFactory&lt;/span&gt; &lt;span class="kd"&gt;implements&lt;/span&gt; &lt;span class="n"&gt;IUnixFactory&lt;/span&gt; &lt;span class="o"&gt;{&lt;/span&gt;
+&lt;a name="rest_code_858d62cae374414ab62fa43f93bbd44b-2"&gt;&lt;/a&gt;    &lt;span class="nd"&gt;@Override&lt;/span&gt;
+&lt;a name="rest_code_858d62cae374414ab62fa43f93bbd44b-3"&gt;&lt;/a&gt;    &lt;span class="kd"&gt;public&lt;/span&gt; &lt;span class="n"&gt;IBootLoader&lt;/span&gt; &lt;span class="nf"&gt;installBootLoader&lt;/span&gt;&lt;span class="o"&gt;()&lt;/span&gt; &lt;span class="o"&gt;{&lt;/span&gt;
+&lt;a name="rest_code_858d62cae374414ab62fa43f93bbd44b-4"&gt;&lt;/a&gt;        &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="k"&gt;new&lt;/span&gt; &lt;span class="n"&gt;BSDBootLoader&lt;/span&gt;&lt;span class="o"&gt;();&lt;/span&gt;
+&lt;a name="rest_code_858d62cae374414ab62fa43f93bbd44b-5"&gt;&lt;/a&gt;    &lt;span class="o"&gt;}&lt;/span&gt;
+&lt;a name="rest_code_858d62cae374414ab62fa43f93bbd44b-6"&gt;&lt;/a&gt;
+&lt;a name="rest_code_858d62cae374414ab62fa43f93bbd44b-7"&gt;&lt;/a&gt;    &lt;span class="nd"&gt;@Override&lt;/span&gt;
+&lt;a name="rest_code_858d62cae374414ab62fa43f93bbd44b-8"&gt;&lt;/a&gt;    &lt;span class="kd"&gt;public&lt;/span&gt; &lt;span class="n"&gt;IKernel&lt;/span&gt; &lt;span class="nf"&gt;installKernel&lt;/span&gt;&lt;span class="o"&gt;()&lt;/span&gt; &lt;span class="o"&gt;{&lt;/span&gt;
+&lt;a name="rest_code_858d62cae374414ab62fa43f93bbd44b-9"&gt;&lt;/a&gt;        &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="k"&gt;new&lt;/span&gt; &lt;span class="n"&gt;BSDKernel&lt;/span&gt;&lt;span class="o"&gt;();&lt;/span&gt;
+&lt;a name="rest_code_858d62cae374414ab62fa43f93bbd44b-10"&gt;&lt;/a&gt;    &lt;span class="o"&gt;}&lt;/span&gt;
+&lt;a name="rest_code_858d62cae374414ab62fa43f93bbd44b-11"&gt;&lt;/a&gt;
+&lt;a name="rest_code_858d62cae374414ab62fa43f93bbd44b-12"&gt;&lt;/a&gt;    &lt;span class="nd"&gt;@Override&lt;/span&gt;
+&lt;a name="rest_code_858d62cae374414ab62fa43f93bbd44b-13"&gt;&lt;/a&gt;    &lt;span class="kd"&gt;public&lt;/span&gt; &lt;span class="n"&gt;IShell&lt;/span&gt; &lt;span class="nf"&gt;installShell&lt;/span&gt;&lt;span class="o"&gt;()&lt;/span&gt; &lt;span class="o"&gt;{&lt;/span&gt;
+&lt;a name="rest_code_858d62cae374414ab62fa43f93bbd44b-14"&gt;&lt;/a&gt;        &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="k"&gt;new&lt;/span&gt; &lt;span class="n"&gt;CShell&lt;/span&gt;&lt;span class="o"&gt;();&lt;/span&gt;
+&lt;a name="rest_code_858d62cae374414ab62fa43f93bbd44b-15"&gt;&lt;/a&gt;    &lt;span class="o"&gt;}&lt;/span&gt;
+&lt;a name="rest_code_858d62cae374414ab62fa43f93bbd44b-16"&gt;&lt;/a&gt;
+&lt;a name="rest_code_858d62cae374414ab62fa43f93bbd44b-17"&gt;&lt;/a&gt;    &lt;span class="nd"&gt;@Override&lt;/span&gt;
+&lt;a name="rest_code_858d62cae374414ab62fa43f93bbd44b-18"&gt;&lt;/a&gt;    &lt;span class="kd"&gt;public&lt;/span&gt; &lt;span class="n"&gt;IDisplayManager&lt;/span&gt; &lt;span class="nf"&gt;installDisplayManager&lt;/span&gt;&lt;span class="o"&gt;()&lt;/span&gt; &lt;span class="o"&gt;{&lt;/span&gt;
+&lt;a name="rest_code_858d62cae374414ab62fa43f93bbd44b-19"&gt;&lt;/a&gt;        &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="k"&gt;new&lt;/span&gt; &lt;span class="n"&gt;X11&lt;/span&gt;&lt;span class="o"&gt;();&lt;/span&gt;
+&lt;a name="rest_code_858d62cae374414ab62fa43f93bbd44b-20"&gt;&lt;/a&gt;    &lt;span class="o"&gt;}&lt;/span&gt;
+&lt;a name="rest_code_858d62cae374414ab62fa43f93bbd44b-21"&gt;&lt;/a&gt;
+&lt;a name="rest_code_858d62cae374414ab62fa43f93bbd44b-22"&gt;&lt;/a&gt;    &lt;span class="nd"&gt;@Override&lt;/span&gt;
+&lt;a name="rest_code_858d62cae374414ab62fa43f93bbd44b-23"&gt;&lt;/a&gt;    &lt;span class="kd"&gt;public&lt;/span&gt; &lt;span class="n"&gt;IWindowManager&lt;/span&gt; &lt;span class="nf"&gt;installWindowManager&lt;/span&gt;&lt;span class="o"&gt;()&lt;/span&gt; &lt;span class="o"&gt;{&lt;/span&gt;
+&lt;a name="rest_code_858d62cae374414ab62fa43f93bbd44b-24"&gt;&lt;/a&gt;        &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="k"&gt;new&lt;/span&gt; &lt;span class="n"&gt;KDE&lt;/span&gt;&lt;span class="o"&gt;();&lt;/span&gt;
+&lt;a name="rest_code_858d62cae374414ab62fa43f93bbd44b-25"&gt;&lt;/a&gt;    &lt;span class="o"&gt;}&lt;/span&gt;
+&lt;a name="rest_code_858d62cae374414ab62fa43f93bbd44b-26"&gt;&lt;/a&gt;
+&lt;a name="rest_code_858d62cae374414ab62fa43f93bbd44b-27"&gt;&lt;/a&gt;    &lt;span class="nd"&gt;@Override&lt;/span&gt;
+&lt;a name="rest_code_858d62cae374414ab62fa43f93bbd44b-28"&gt;&lt;/a&gt;    &lt;span class="kd"&gt;public&lt;/span&gt; &lt;span class="n"&gt;IBaseApplications&lt;/span&gt; &lt;span class="nf"&gt;installApps&lt;/span&gt;&lt;span class="o"&gt;()&lt;/span&gt; &lt;span class="o"&gt;{&lt;/span&gt;
+&lt;a name="rest_code_858d62cae374414ab62fa43f93bbd44b-29"&gt;&lt;/a&gt;        &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="k"&gt;new&lt;/span&gt; &lt;span class="n"&gt;SystemVUnix&lt;/span&gt;&lt;span class="o"&gt;();&lt;/span&gt;
+&lt;a name="rest_code_858d62cae374414ab62fa43f93bbd44b-30"&gt;&lt;/a&gt;    &lt;span class="o"&gt;}&lt;/span&gt;
+&lt;a name="rest_code_858d62cae374414ab62fa43f93bbd44b-31"&gt;&lt;/a&gt;&lt;span class="o"&gt;}&lt;/span&gt;
+&lt;/pre&gt;&lt;p&gt;&lt;a class="reference external" href="http://www.xtoinfinity.com/listings/java/abstractfactory/LinuxFactory.java.html"&gt;java/abstractfactory/LinuxFactory.java&lt;/a&gt;  &lt;a class="reference external" href="http://www.xtoinfinity.com/listings/java/abstractfactory/LinuxFactory.java"&gt;(Source)&lt;/a&gt;&lt;/p&gt;
+&lt;pre class="code java"&gt;&lt;a name="rest_code_9c0910f78a0b47e3ad9d3d826bec4207-1"&gt;&lt;/a&gt;&lt;span class="kd"&gt;public&lt;/span&gt; &lt;span class="kd"&gt;class&lt;/span&gt; &lt;span class="nc"&gt;LinuxFactory&lt;/span&gt; &lt;span class="kd"&gt;implements&lt;/span&gt; &lt;span class="n"&gt;IUnixFactory&lt;/span&gt; &lt;span class="o"&gt;{&lt;/span&gt;
+&lt;a name="rest_code_9c0910f78a0b47e3ad9d3d826bec4207-2"&gt;&lt;/a&gt;    &lt;span class="nd"&gt;@Override&lt;/span&gt;
+&lt;a name="rest_code_9c0910f78a0b47e3ad9d3d826bec4207-3"&gt;&lt;/a&gt;    &lt;span class="kd"&gt;public&lt;/span&gt; &lt;span class="n"&gt;IBootLoader&lt;/span&gt; &lt;span class="nf"&gt;installBootLoader&lt;/span&gt;&lt;span class="o"&gt;()&lt;/span&gt; &lt;span class="o"&gt;{&lt;/span&gt;
+&lt;a name="rest_code_9c0910f78a0b47e3ad9d3d826bec4207-4"&gt;&lt;/a&gt;        &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="k"&gt;new&lt;/span&gt; &lt;span class="n"&gt;LinuxBootLoader&lt;/span&gt;&lt;span class="o"&gt;();&lt;/span&gt;
+&lt;a name="rest_code_9c0910f78a0b47e3ad9d3d826bec4207-5"&gt;&lt;/a&gt;    &lt;span class="o"&gt;}&lt;/span&gt;
+&lt;a name="rest_code_9c0910f78a0b47e3ad9d3d826bec4207-6"&gt;&lt;/a&gt;
+&lt;a name="rest_code_9c0910f78a0b47e3ad9d3d826bec4207-7"&gt;&lt;/a&gt;    &lt;span class="nd"&gt;@Override&lt;/span&gt;
+&lt;a name="rest_code_9c0910f78a0b47e3ad9d3d826bec4207-8"&gt;&lt;/a&gt;    &lt;span class="kd"&gt;public&lt;/span&gt; &lt;span class="n"&gt;IKernel&lt;/span&gt; &lt;span class="nf"&gt;installKernel&lt;/span&gt;&lt;span class="o"&gt;()&lt;/span&gt; &lt;span class="o"&gt;{&lt;/span&gt;
+&lt;a name="rest_code_9c0910f78a0b47e3ad9d3d826bec4207-9"&gt;&lt;/a&gt;        &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="k"&gt;new&lt;/span&gt; &lt;span class="n"&gt;Linux&lt;/span&gt;&lt;span class="o"&gt;();&lt;/span&gt;
+&lt;a name="rest_code_9c0910f78a0b47e3ad9d3d826bec4207-10"&gt;&lt;/a&gt;    &lt;span class="o"&gt;}&lt;/span&gt;
+&lt;a name="rest_code_9c0910f78a0b47e3ad9d3d826bec4207-11"&gt;&lt;/a&gt;
+&lt;a name="rest_code_9c0910f78a0b47e3ad9d3d826bec4207-12"&gt;&lt;/a&gt;    &lt;span class="nd"&gt;@Override&lt;/span&gt;
+&lt;a name="rest_code_9c0910f78a0b47e3ad9d3d826bec4207-13"&gt;&lt;/a&gt;    &lt;span class="kd"&gt;public&lt;/span&gt; &lt;span class="n"&gt;IShell&lt;/span&gt; &lt;span class="nf"&gt;installShell&lt;/span&gt;&lt;span class="o"&gt;()&lt;/span&gt; &lt;span class="o"&gt;{&lt;/span&gt;
+&lt;a name="rest_code_9c0910f78a0b47e3ad9d3d826bec4207-14"&gt;&lt;/a&gt;        &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="k"&gt;new&lt;/span&gt; &lt;span class="n"&gt;Bash&lt;/span&gt;&lt;span class="o"&gt;();&lt;/span&gt;
+&lt;a name="rest_code_9c0910f78a0b47e3ad9d3d826bec4207-15"&gt;&lt;/a&gt;    &lt;span class="o"&gt;}&lt;/span&gt;
+&lt;a name="rest_code_9c0910f78a0b47e3ad9d3d826bec4207-16"&gt;&lt;/a&gt;
+&lt;a name="rest_code_9c0910f78a0b47e3ad9d3d826bec4207-17"&gt;&lt;/a&gt;    &lt;span class="nd"&gt;@Override&lt;/span&gt;
+&lt;a name="rest_code_9c0910f78a0b47e3ad9d3d826bec4207-18"&gt;&lt;/a&gt;    &lt;span class="kd"&gt;public&lt;/span&gt; &lt;span class="n"&gt;IDisplayManager&lt;/span&gt; &lt;span class="nf"&gt;installDisplayManager&lt;/span&gt;&lt;span class="o"&gt;()&lt;/span&gt; &lt;span class="o"&gt;{&lt;/span&gt;
+&lt;a name="rest_code_9c0910f78a0b47e3ad9d3d826bec4207-19"&gt;&lt;/a&gt;        &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="k"&gt;new&lt;/span&gt; &lt;span class="n"&gt;X11&lt;/span&gt;&lt;span class="o"&gt;();&lt;/span&gt;
+&lt;a name="rest_code_9c0910f78a0b47e3ad9d3d826bec4207-20"&gt;&lt;/a&gt;    &lt;span class="o"&gt;}&lt;/span&gt;
+&lt;a name="rest_code_9c0910f78a0b47e3ad9d3d826bec4207-21"&gt;&lt;/a&gt;
+&lt;a name="rest_code_9c0910f78a0b47e3ad9d3d826bec4207-22"&gt;&lt;/a&gt;    &lt;span class="nd"&gt;@Override&lt;/span&gt;
+&lt;a name="rest_code_9c0910f78a0b47e3ad9d3d826bec4207-23"&gt;&lt;/a&gt;    &lt;span class="kd"&gt;public&lt;/span&gt; &lt;span class="n"&gt;IWindowManager&lt;/span&gt; &lt;span class="nf"&gt;installWindowManager&lt;/span&gt;&lt;span class="o"&gt;()&lt;/span&gt; &lt;span class="o"&gt;{&lt;/span&gt;
+&lt;a name="rest_code_9c0910f78a0b47e3ad9d3d826bec4207-24"&gt;&lt;/a&gt;        &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="k"&gt;new&lt;/span&gt; &lt;span class="n"&gt;Gnome&lt;/span&gt;&lt;span class="o"&gt;();&lt;/span&gt;
+&lt;a name="rest_code_9c0910f78a0b47e3ad9d3d826bec4207-25"&gt;&lt;/a&gt;    &lt;span class="o"&gt;}&lt;/span&gt;
+&lt;a name="rest_code_9c0910f78a0b47e3ad9d3d826bec4207-26"&gt;&lt;/a&gt;
+&lt;a name="rest_code_9c0910f78a0b47e3ad9d3d826bec4207-27"&gt;&lt;/a&gt;    &lt;span class="nd"&gt;@Override&lt;/span&gt;
+&lt;a name="rest_code_9c0910f78a0b47e3ad9d3d826bec4207-28"&gt;&lt;/a&gt;    &lt;span class="kd"&gt;public&lt;/span&gt; &lt;span class="n"&gt;IBaseApplications&lt;/span&gt; &lt;span class="nf"&gt;installApps&lt;/span&gt;&lt;span class="o"&gt;()&lt;/span&gt; &lt;span class="o"&gt;{&lt;/span&gt;
+&lt;a name="rest_code_9c0910f78a0b47e3ad9d3d826bec4207-29"&gt;&lt;/a&gt;        &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="k"&gt;new&lt;/span&gt; &lt;span class="n"&gt;GNUApplications&lt;/span&gt;&lt;span class="o"&gt;();&lt;/span&gt;
+&lt;a name="rest_code_9c0910f78a0b47e3ad9d3d826bec4207-30"&gt;&lt;/a&gt;    &lt;span class="o"&gt;}&lt;/span&gt;
+&lt;a name="rest_code_9c0910f78a0b47e3ad9d3d826bec4207-31"&gt;&lt;/a&gt;&lt;span class="o"&gt;}&lt;/span&gt;
+&lt;/pre&gt;&lt;p&gt;&lt;a class="reference external" href="http://www.xtoinfinity.com/listings/java/abstractfactory/UbuntuFactory.java.html"&gt;java/abstractfactory/UbuntuFactory.java&lt;/a&gt;  &lt;a class="reference external" href="http://www.xtoinfinity.com/listings/java/abstractfactory/UbuntuFactory.java"&gt;(Source)&lt;/a&gt;&lt;/p&gt;
+&lt;pre class="code java"&gt;&lt;a name="rest_code_8b968807598f44338b098c04c881936d-1"&gt;&lt;/a&gt;&lt;span class="kd"&gt;public&lt;/span&gt; &lt;span class="kd"&gt;class&lt;/span&gt; &lt;span class="nc"&gt;UbuntuFactory&lt;/span&gt; &lt;span class="kd"&gt;extends&lt;/span&gt; &lt;span class="n"&gt;LinuxFactory&lt;/span&gt; &lt;span class="o"&gt;{&lt;/span&gt;
+&lt;a name="rest_code_8b968807598f44338b098c04c881936d-2"&gt;&lt;/a&gt;    &lt;span class="nd"&gt;@Override&lt;/span&gt;
+&lt;a name="rest_code_8b968807598f44338b098c04c881936d-3"&gt;&lt;/a&gt;    &lt;span class="kd"&gt;public&lt;/span&gt; &lt;span class="n"&gt;IDisplayManager&lt;/span&gt; &lt;span class="nf"&gt;installDisplayManager&lt;/span&gt;&lt;span class="o"&gt;()&lt;/span&gt; &lt;span class="o"&gt;{&lt;/span&gt;
+&lt;a name="rest_code_8b968807598f44338b098c04c881936d-4"&gt;&lt;/a&gt;        &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="k"&gt;new&lt;/span&gt; &lt;span class="n"&gt;X11&lt;/span&gt;&lt;span class="o"&gt;();&lt;/span&gt;
+&lt;a name="rest_code_8b968807598f44338b098c04c881936d-5"&gt;&lt;/a&gt;    &lt;span class="o"&gt;}&lt;/span&gt;
+&lt;a name="rest_code_8b968807598f44338b098c04c881936d-6"&gt;&lt;/a&gt;
+&lt;a name="rest_code_8b968807598f44338b098c04c881936d-7"&gt;&lt;/a&gt;    &lt;span class="nd"&gt;@Override&lt;/span&gt;
+&lt;a name="rest_code_8b968807598f44338b098c04c881936d-8"&gt;&lt;/a&gt;    &lt;span class="kd"&gt;public&lt;/span&gt; &lt;span class="n"&gt;IBaseApplications&lt;/span&gt; &lt;span class="nf"&gt;installApps&lt;/span&gt;&lt;span class="o"&gt;()&lt;/span&gt; &lt;span class="o"&gt;{&lt;/span&gt;
+&lt;a name="rest_code_8b968807598f44338b098c04c881936d-9"&gt;&lt;/a&gt;        &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="k"&gt;new&lt;/span&gt; &lt;span class="n"&gt;ProprietaryApps&lt;/span&gt;&lt;span class="o"&gt;();&lt;/span&gt;
+&lt;a name="rest_code_8b968807598f44338b098c04c881936d-10"&gt;&lt;/a&gt;    &lt;span class="o"&gt;}&lt;/span&gt;
+&lt;a name="rest_code_8b968807598f44338b098c04c881936d-11"&gt;&lt;/a&gt;&lt;span class="o"&gt;}&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;div class="section" id="abstract-factory"&gt;
+&lt;h3&gt;Abstract Factory&lt;/h3&gt;
+&lt;p&gt;The factories will implement an &lt;strong&gt;abstraction&lt;/strong&gt; provided by the &lt;strong&gt;Abstract Factory&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a class="reference external" href="http://www.xtoinfinity.com/listings/java/abstractfactory/IUnixFactory.java.html"&gt;java/abstractfactory/IUnixFactory.java&lt;/a&gt;  &lt;a class="reference external" href="http://www.xtoinfinity.com/listings/java/abstractfactory/IUnixFactory.java"&gt;(Source)&lt;/a&gt;&lt;/p&gt;
+&lt;pre class="code java"&gt;&lt;a name="rest_code_30ca6334f4ba47c68f69d00deb76c470-1"&gt;&lt;/a&gt;&lt;span class="kd"&gt;public&lt;/span&gt; &lt;span class="kd"&gt;interface&lt;/span&gt; &lt;span class="nc"&gt;IUnixFactory&lt;/span&gt; &lt;span class="o"&gt;{&lt;/span&gt;
+&lt;a name="rest_code_30ca6334f4ba47c68f69d00deb76c470-2"&gt;&lt;/a&gt;    &lt;span class="n"&gt;IBootLoader&lt;/span&gt; &lt;span class="nf"&gt;installBootLoader&lt;/span&gt;&lt;span class="o"&gt;();&lt;/span&gt;
+&lt;a name="rest_code_30ca6334f4ba47c68f69d00deb76c470-3"&gt;&lt;/a&gt;    &lt;span class="n"&gt;IKernel&lt;/span&gt; &lt;span class="nf"&gt;installKernel&lt;/span&gt;&lt;span class="o"&gt;();&lt;/span&gt;
+&lt;a name="rest_code_30ca6334f4ba47c68f69d00deb76c470-4"&gt;&lt;/a&gt;    &lt;span class="n"&gt;IShell&lt;/span&gt; &lt;span class="nf"&gt;installShell&lt;/span&gt;&lt;span class="o"&gt;();&lt;/span&gt;
+&lt;a name="rest_code_30ca6334f4ba47c68f69d00deb76c470-5"&gt;&lt;/a&gt;    &lt;span class="n"&gt;IDisplayManager&lt;/span&gt;  &lt;span class="nf"&gt;installDisplayManager&lt;/span&gt;&lt;span class="o"&gt;();&lt;/span&gt;
+&lt;a name="rest_code_30ca6334f4ba47c68f69d00deb76c470-6"&gt;&lt;/a&gt;    &lt;span class="n"&gt;IWindowManager&lt;/span&gt; &lt;span class="nf"&gt;installWindowManager&lt;/span&gt;&lt;span class="o"&gt;();&lt;/span&gt;
+&lt;a name="rest_code_30ca6334f4ba47c68f69d00deb76c470-7"&gt;&lt;/a&gt;    &lt;span class="n"&gt;IBaseApplications&lt;/span&gt; &lt;span class="nf"&gt;installApps&lt;/span&gt;&lt;span class="o"&gt;();&lt;/span&gt;
+&lt;a name="rest_code_30ca6334f4ba47c68f69d00deb76c470-8"&gt;&lt;/a&gt;&lt;span class="o"&gt;}&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;div class="section" id="client"&gt;
+&lt;h3&gt;Client&lt;/h3&gt;
+&lt;p&gt;The design is best understood from the view of the client  which uses the
+&lt;strong&gt;Abstract Factory&lt;/strong&gt;  to the create the products.&lt;/p&gt;
+&lt;p&gt;&lt;a class="reference external" href="http://www.xtoinfinity.com/listings/java/abstractfactory/OperatingSystem.java.html"&gt;java/abstractfactory/OperatingSystem.java&lt;/a&gt;  &lt;a class="reference external" href="http://www.xtoinfinity.com/listings/java/abstractfactory/OperatingSystem.java"&gt;(Source)&lt;/a&gt;&lt;/p&gt;
+&lt;pre class="code java"&gt;&lt;a name="rest_code_666ff34622a446fba8c8bec5412fbfa4-1"&gt;&lt;/a&gt;&lt;span class="kd"&gt;public&lt;/span&gt; &lt;span class="kd"&gt;class&lt;/span&gt; &lt;span class="nc"&gt;OperatingSystem&lt;/span&gt; &lt;span class="o"&gt;{&lt;/span&gt;
+&lt;a name="rest_code_666ff34622a446fba8c8bec5412fbfa4-2"&gt;&lt;/a&gt;    &lt;span class="n"&gt;IUnixFactory&lt;/span&gt; &lt;span class="n"&gt;unixFactory&lt;/span&gt;&lt;span class="o"&gt;;&lt;/span&gt;
+&lt;a name="rest_code_666ff34622a446fba8c8bec5412fbfa4-3"&gt;&lt;/a&gt;
+&lt;a name="rest_code_666ff34622a446fba8c8bec5412fbfa4-4"&gt;&lt;/a&gt;    &lt;span class="kd"&gt;public&lt;/span&gt; &lt;span class="nf"&gt;OperatingSystem&lt;/span&gt;&lt;span class="o"&gt;(&lt;/span&gt;&lt;span class="n"&gt;IUnixFactory&lt;/span&gt; &lt;span class="n"&gt;unixFactory&lt;/span&gt;&lt;span class="o"&gt;)&lt;/span&gt; &lt;span class="o"&gt;{&lt;/span&gt;
+&lt;a name="rest_code_666ff34622a446fba8c8bec5412fbfa4-5"&gt;&lt;/a&gt;        &lt;span class="k"&gt;this&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="na"&gt;unixFactory&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;unixFactory&lt;/span&gt;&lt;span class="o"&gt;;&lt;/span&gt;
+&lt;a name="rest_code_666ff34622a446fba8c8bec5412fbfa4-6"&gt;&lt;/a&gt;    &lt;span class="o"&gt;}&lt;/span&gt;
+&lt;a name="rest_code_666ff34622a446fba8c8bec5412fbfa4-7"&gt;&lt;/a&gt;
+&lt;a name="rest_code_666ff34622a446fba8c8bec5412fbfa4-8"&gt;&lt;/a&gt;    &lt;span class="cm"&gt;/**&lt;/span&gt;
+&lt;a name="rest_code_666ff34622a446fba8c8bec5412fbfa4-9"&gt;&lt;/a&gt;&lt;span class="cm"&gt;     * installerClient uses only the interfaces declared by AbstractFactory (IUnixFactory) and AbstractProduct&lt;/span&gt;
+&lt;a name="rest_code_666ff34622a446fba8c8bec5412fbfa4-10"&gt;&lt;/a&gt;&lt;span class="cm"&gt;     * (IBootLoader, IKernel, IShell, IDisplayManager, IWindowManager, IBaseApplications) classes.&lt;/span&gt;
+&lt;a name="rest_code_666ff34622a446fba8c8bec5412fbfa4-11"&gt;&lt;/a&gt;&lt;span class="cm"&gt;     */&lt;/span&gt;
+&lt;a name="rest_code_666ff34622a446fba8c8bec5412fbfa4-12"&gt;&lt;/a&gt;    &lt;span class="kd"&gt;public&lt;/span&gt; &lt;span class="kt"&gt;void&lt;/span&gt; &lt;span class="nf"&gt;installerClient&lt;/span&gt;&lt;span class="o"&gt;()&lt;/span&gt; &lt;span class="o"&gt;{&lt;/span&gt;
+&lt;a name="rest_code_666ff34622a446fba8c8bec5412fbfa4-13"&gt;&lt;/a&gt;
+&lt;a name="rest_code_666ff34622a446fba8c8bec5412fbfa4-14"&gt;&lt;/a&gt;
+&lt;a name="rest_code_666ff34622a446fba8c8bec5412fbfa4-15"&gt;&lt;/a&gt;        &lt;span class="n"&gt;IBootLoader&lt;/span&gt; &lt;span class="n"&gt;bootLoader&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;unixFactory&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="na"&gt;installBootLoader&lt;/span&gt;&lt;span class="o"&gt;();&lt;/span&gt;
+&lt;a name="rest_code_666ff34622a446fba8c8bec5412fbfa4-16"&gt;&lt;/a&gt;        &lt;span class="n"&gt;IKernel&lt;/span&gt; &lt;span class="n"&gt;kernel&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;unixFactory&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="na"&gt;installKernel&lt;/span&gt;&lt;span class="o"&gt;();&lt;/span&gt;
+&lt;a name="rest_code_666ff34622a446fba8c8bec5412fbfa4-17"&gt;&lt;/a&gt;        &lt;span class="n"&gt;IShell&lt;/span&gt; &lt;span class="n"&gt;shell&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;unixFactory&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="na"&gt;installShell&lt;/span&gt;&lt;span class="o"&gt;();&lt;/span&gt;
+&lt;a name="rest_code_666ff34622a446fba8c8bec5412fbfa4-18"&gt;&lt;/a&gt;        &lt;span class="n"&gt;IDisplayManager&lt;/span&gt; &lt;span class="n"&gt;displayManager&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;unixFactory&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="na"&gt;installDisplayManager&lt;/span&gt;&lt;span class="o"&gt;();&lt;/span&gt;
+&lt;a name="rest_code_666ff34622a446fba8c8bec5412fbfa4-19"&gt;&lt;/a&gt;        &lt;span class="n"&gt;IWindowManager&lt;/span&gt; &lt;span class="n"&gt;windowManager&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;unixFactory&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="na"&gt;installWindowManager&lt;/span&gt;&lt;span class="o"&gt;();&lt;/span&gt;
+&lt;a name="rest_code_666ff34622a446fba8c8bec5412fbfa4-20"&gt;&lt;/a&gt;        &lt;span class="n"&gt;IBaseApplications&lt;/span&gt; &lt;span class="n"&gt;applications&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;unixFactory&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="na"&gt;installApps&lt;/span&gt;&lt;span class="o"&gt;();&lt;/span&gt;
+&lt;a name="rest_code_666ff34622a446fba8c8bec5412fbfa4-21"&gt;&lt;/a&gt;
+&lt;a name="rest_code_666ff34622a446fba8c8bec5412fbfa4-22"&gt;&lt;/a&gt;        &lt;span class="n"&gt;bootLoader&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="na"&gt;bootUp&lt;/span&gt;&lt;span class="o"&gt;();&lt;/span&gt;
+&lt;a name="rest_code_666ff34622a446fba8c8bec5412fbfa4-23"&gt;&lt;/a&gt;        &lt;span class="n"&gt;kernel&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="na"&gt;loadKernel&lt;/span&gt;&lt;span class="o"&gt;();&lt;/span&gt;
+&lt;a name="rest_code_666ff34622a446fba8c8bec5412fbfa4-24"&gt;&lt;/a&gt;        &lt;span class="n"&gt;shell&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="na"&gt;loadShell&lt;/span&gt;&lt;span class="o"&gt;();&lt;/span&gt;
+&lt;a name="rest_code_666ff34622a446fba8c8bec5412fbfa4-25"&gt;&lt;/a&gt;        &lt;span class="n"&gt;displayManager&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="na"&gt;installDisplayManager&lt;/span&gt;&lt;span class="o"&gt;();&lt;/span&gt;
+&lt;a name="rest_code_666ff34622a446fba8c8bec5412fbfa4-26"&gt;&lt;/a&gt;        &lt;span class="n"&gt;windowManager&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="na"&gt;installWindowManager&lt;/span&gt;&lt;span class="o"&gt;();&lt;/span&gt;
+&lt;a name="rest_code_666ff34622a446fba8c8bec5412fbfa4-27"&gt;&lt;/a&gt;        &lt;span class="n"&gt;applications&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="na"&gt;installApplications&lt;/span&gt;&lt;span class="o"&gt;();&lt;/span&gt;
+&lt;a name="rest_code_666ff34622a446fba8c8bec5412fbfa4-28"&gt;&lt;/a&gt;
+&lt;a name="rest_code_666ff34622a446fba8c8bec5412fbfa4-29"&gt;&lt;/a&gt;    &lt;span class="o"&gt;}&lt;/span&gt;
+&lt;a name="rest_code_666ff34622a446fba8c8bec5412fbfa4-30"&gt;&lt;/a&gt;
+&lt;a name="rest_code_666ff34622a446fba8c8bec5412fbfa4-31"&gt;&lt;/a&gt;    &lt;span class="cm"&gt;/**&lt;/span&gt;
+&lt;a name="rest_code_666ff34622a446fba8c8bec5412fbfa4-32"&gt;&lt;/a&gt;&lt;span class="cm"&gt;     * client will not know the&lt;/span&gt;
+&lt;a name="rest_code_666ff34622a446fba8c8bec5412fbfa4-33"&gt;&lt;/a&gt;&lt;span class="cm"&gt;     * products the type of bootloader, kernel, shell, display, window manager or applications.&lt;/span&gt;
+&lt;a name="rest_code_666ff34622a446fba8c8bec5412fbfa4-34"&gt;&lt;/a&gt;&lt;span class="cm"&gt;     * That is encapsulated in factory used by the client.&lt;/span&gt;
+&lt;a name="rest_code_666ff34622a446fba8c8bec5412fbfa4-35"&gt;&lt;/a&gt;&lt;span class="cm"&gt;     *&lt;/span&gt;
+&lt;a name="rest_code_666ff34622a446fba8c8bec5412fbfa4-36"&gt;&lt;/a&gt;&lt;span class="cm"&gt;     */&lt;/span&gt;
+&lt;a name="rest_code_666ff34622a446fba8c8bec5412fbfa4-37"&gt;&lt;/a&gt;    &lt;span class="kd"&gt;private&lt;/span&gt; &lt;span class="kd"&gt;static&lt;/span&gt; &lt;span class="kt"&gt;void&lt;/span&gt; &lt;span class="nf"&gt;factoryClient&lt;/span&gt;&lt;span class="o"&gt;(&lt;/span&gt;&lt;span class="n"&gt;IUnixFactory&lt;/span&gt; &lt;span class="n"&gt;factory&lt;/span&gt;&lt;span class="o"&gt;)&lt;/span&gt; &lt;span class="o"&gt;{&lt;/span&gt;
+&lt;a name="rest_code_666ff34622a446fba8c8bec5412fbfa4-38"&gt;&lt;/a&gt;        &lt;span class="n"&gt;OperatingSystem&lt;/span&gt; &lt;span class="n"&gt;operatingSystem&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="k"&gt;new&lt;/span&gt; &lt;span class="n"&gt;OperatingSystem&lt;/span&gt;&lt;span class="o"&gt;(&lt;/span&gt;&lt;span class="n"&gt;factory&lt;/span&gt;&lt;span class="o"&gt;);&lt;/span&gt;
+&lt;a name="rest_code_666ff34622a446fba8c8bec5412fbfa4-39"&gt;&lt;/a&gt;        &lt;span class="n"&gt;operatingSystem&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="na"&gt;installerClient&lt;/span&gt;&lt;span class="o"&gt;();&lt;/span&gt;
+&lt;a name="rest_code_666ff34622a446fba8c8bec5412fbfa4-40"&gt;&lt;/a&gt;    &lt;span class="o"&gt;}&lt;/span&gt;
+&lt;a name="rest_code_666ff34622a446fba8c8bec5412fbfa4-41"&gt;&lt;/a&gt;
+&lt;a name="rest_code_666ff34622a446fba8c8bec5412fbfa4-42"&gt;&lt;/a&gt;    &lt;span class="kd"&gt;public&lt;/span&gt; &lt;span class="kd"&gt;static&lt;/span&gt; &lt;span class="kt"&gt;void&lt;/span&gt; &lt;span class="nf"&gt;main&lt;/span&gt;&lt;span class="o"&gt;(&lt;/span&gt;&lt;span class="n"&gt;String&lt;/span&gt;&lt;span class="o"&gt;[]&lt;/span&gt; &lt;span class="n"&gt;args&lt;/span&gt;&lt;span class="o"&gt;)&lt;/span&gt; &lt;span class="o"&gt;{&lt;/span&gt;
+&lt;a name="rest_code_666ff34622a446fba8c8bec5412fbfa4-43"&gt;&lt;/a&gt;        &lt;span class="n"&gt;IUnixFactory&lt;/span&gt; &lt;span class="n"&gt;factory&lt;/span&gt;&lt;span class="o"&gt;;&lt;/span&gt;
+&lt;a name="rest_code_666ff34622a446fba8c8bec5412fbfa4-44"&gt;&lt;/a&gt;
+&lt;a name="rest_code_666ff34622a446fba8c8bec5412fbfa4-45"&gt;&lt;/a&gt;        &lt;span class="n"&gt;factory&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="k"&gt;new&lt;/span&gt; &lt;span class="n"&gt;LinuxFactory&lt;/span&gt;&lt;span class="o"&gt;();&lt;/span&gt;
+&lt;a name="rest_code_666ff34622a446fba8c8bec5412fbfa4-46"&gt;&lt;/a&gt;        &lt;span class="n"&gt;factoryClient&lt;/span&gt;&lt;span class="o"&gt;(&lt;/span&gt;&lt;span class="n"&gt;factory&lt;/span&gt;&lt;span class="o"&gt;);&lt;/span&gt;
+&lt;a name="rest_code_666ff34622a446fba8c8bec5412fbfa4-47"&gt;&lt;/a&gt;
+&lt;a name="rest_code_666ff34622a446fba8c8bec5412fbfa4-48"&gt;&lt;/a&gt;        &lt;span class="n"&gt;factory&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="k"&gt;new&lt;/span&gt; &lt;span class="n"&gt;BSDFactory&lt;/span&gt;&lt;span class="o"&gt;();&lt;/span&gt;
+&lt;a name="rest_code_666ff34622a446fba8c8bec5412fbfa4-49"&gt;&lt;/a&gt;        &lt;span class="n"&gt;factoryClient&lt;/span&gt;&lt;span class="o"&gt;(&lt;/span&gt;&lt;span class="n"&gt;factory&lt;/span&gt;&lt;span class="o"&gt;);&lt;/span&gt;
+&lt;a name="rest_code_666ff34622a446fba8c8bec5412fbfa4-50"&gt;&lt;/a&gt;
+&lt;a name="rest_code_666ff34622a446fba8c8bec5412fbfa4-51"&gt;&lt;/a&gt;        &lt;span class="n"&gt;factory&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="k"&gt;new&lt;/span&gt; &lt;span class="n"&gt;UbuntuFactory&lt;/span&gt;&lt;span class="o"&gt;();&lt;/span&gt;
+&lt;a name="rest_code_666ff34622a446fba8c8bec5412fbfa4-52"&gt;&lt;/a&gt;        &lt;span class="n"&gt;factoryClient&lt;/span&gt;&lt;span class="o"&gt;(&lt;/span&gt;&lt;span class="n"&gt;factory&lt;/span&gt;&lt;span class="o"&gt;);&lt;/span&gt;
+&lt;a name="rest_code_666ff34622a446fba8c8bec5412fbfa4-53"&gt;&lt;/a&gt;    &lt;span class="o"&gt;}&lt;/span&gt;
+&lt;a name="rest_code_666ff34622a446fba8c8bec5412fbfa4-54"&gt;&lt;/a&gt;
+&lt;a name="rest_code_666ff34622a446fba8c8bec5412fbfa4-55"&gt;&lt;/a&gt;&lt;span class="o"&gt;}&lt;/span&gt;
+&lt;/pre&gt;&lt;p&gt;The execution looks like this.&lt;/p&gt;
+&lt;pre class="code text"&gt;&lt;a name="rest_code_b5f3a838890f40c695ceac759bd9f71e-1"&gt;&lt;/a&gt;Booting: LinuxBootLoader
+&lt;a name="rest_code_b5f3a838890f40c695ceac759bd9f71e-2"&gt;&lt;/a&gt;Loading: Linux
+&lt;a name="rest_code_b5f3a838890f40c695ceac759bd9f71e-3"&gt;&lt;/a&gt;Loading: Bash
+&lt;a name="rest_code_b5f3a838890f40c695ceac759bd9f71e-4"&gt;&lt;/a&gt;Installing: X11
+&lt;a name="rest_code_b5f3a838890f40c695ceac759bd9f71e-5"&gt;&lt;/a&gt;Installing: Gnome
+&lt;a name="rest_code_b5f3a838890f40c695ceac759bd9f71e-6"&gt;&lt;/a&gt;Installing: GNUApplications
+&lt;a name="rest_code_b5f3a838890f40c695ceac759bd9f71e-7"&gt;&lt;/a&gt;
+&lt;a name="rest_code_b5f3a838890f40c695ceac759bd9f71e-8"&gt;&lt;/a&gt;Booting: BSDBootLoader
+&lt;a name="rest_code_b5f3a838890f40c695ceac759bd9f71e-9"&gt;&lt;/a&gt;Loading: BSDKernel
+&lt;a name="rest_code_b5f3a838890f40c695ceac759bd9f71e-10"&gt;&lt;/a&gt;Loading: CShell
+&lt;a name="rest_code_b5f3a838890f40c695ceac759bd9f71e-11"&gt;&lt;/a&gt;Installing: X11
+&lt;a name="rest_code_b5f3a838890f40c695ceac759bd9f71e-12"&gt;&lt;/a&gt;Installing: KDE
+&lt;a name="rest_code_b5f3a838890f40c695ceac759bd9f71e-13"&gt;&lt;/a&gt;Installing: SystemVUnix
+&lt;a name="rest_code_b5f3a838890f40c695ceac759bd9f71e-14"&gt;&lt;/a&gt;
+&lt;a name="rest_code_b5f3a838890f40c695ceac759bd9f71e-15"&gt;&lt;/a&gt;Booting: LinuxBootLoader
+&lt;a name="rest_code_b5f3a838890f40c695ceac759bd9f71e-16"&gt;&lt;/a&gt;Loading: Linux
+&lt;a name="rest_code_b5f3a838890f40c695ceac759bd9f71e-17"&gt;&lt;/a&gt;Loading: Bash
+&lt;a name="rest_code_b5f3a838890f40c695ceac759bd9f71e-18"&gt;&lt;/a&gt;Installing: X11
+&lt;a name="rest_code_b5f3a838890f40c695ceac759bd9f71e-19"&gt;&lt;/a&gt;Installing: Gnome
+&lt;a name="rest_code_b5f3a838890f40c695ceac759bd9f71e-20"&gt;&lt;/a&gt;Installing: ProprietaryApps
+&lt;/pre&gt;&lt;/div&gt;
+&lt;div class="section" id="tabulated-correspondence"&gt;
+&lt;h3&gt;Tabulated Correspondence&lt;/h3&gt;
+&lt;p&gt;Mapping of the code with various elements in the design helps us to appreciate this pattern.&lt;/p&gt;
+&lt;img alt="https://dl.dropbox.com/s/ahu9pj89qtt7pos/Screenshot%202016-07-27%2008.57.29.png" src="https://dl.dropbox.com/s/ahu9pj89qtt7pos/Screenshot%202016-07-27%2008.57.29.png"&gt;
+&lt;p&gt;Hope this was useful. If you have any comments on this article, please add your
+thoughts in the comments section of this article.&lt;/p&gt;
+&lt;p&gt;Thank you for reading!&lt;/p&gt;
+&lt;table class="docutils footnote" frame="void" id="id1" rules="none"&gt;
+&lt;colgroup&gt;&lt;col class="label"&gt;&lt;col&gt;&lt;/colgroup&gt;
+&lt;tbody valign="top"&gt;
+&lt;tr&gt;&lt;td class="label"&gt;&lt;a class="fn-backref" href="http://www.xtoinfinity.com/posts/abstract-factory-design-pattern-explanation.html#id2"&gt;[1]&lt;/a&gt;&lt;/td&gt;&lt;td&gt;&lt;a class="reference external" href="https://en.wikipedia.org/wiki/Design_Patterns"&gt;https://en.wikipedia.org/wiki/Design_Patterns&lt;/a&gt;&lt;/td&gt;&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;/div&gt;</description><category>java</category><category>mathjax</category><guid>http://www.xtoinfinity.com/posts/abstract-factory-design-pattern-explanation.html</guid><pubDate>Fri, 15 Jul 2016 16:28:06 GMT</pubDate></item><item><title>The Man Who Knew Infinity</title><link>http://www.xtoinfinity.com/posts/the-man-who-knew-infinity.html</link><dc:creator>Senthil Kumaran</dc:creator><description>&lt;div&gt;&lt;blockquote&gt;
+"An equation for me has no meaning, unless it represents a thought of God." - Srinivasa Ramanujan&lt;/blockquote&gt;
+&lt;p&gt;"The man who knew infinity" is the story of &lt;a class="reference external" href="https://en.wikipedia.org/wiki/Srinivasa_Ramanujan"&gt;Srinivasa Ramanujan&lt;/a&gt;. This phrase, associated with Ramanujan should be
+familiar to many due to a &lt;a class="reference external" href="http://www.amazon.com/Man-Who-Knew-Infinity-Ramanujan/dp/B00C7F17OE/"&gt;very popular book&lt;/a&gt; with the same title. There is a motion picture directed by Matt Brown
+based upon this book.&lt;/p&gt;
+&lt;p&gt;I watched his movie on a Saturday at Berkeley. I was excited to listen to the QA with the director, and Mathematicians
+such as &lt;a class="reference external" href="https://en.wikipedia.org/wiki/Richard_Borcherds"&gt;Richard Borcheds&lt;/a&gt; , &lt;a class="reference external" href="http://www.cs.berkeley.edu/~oholtz/"&gt;Olga Holz&lt;/a&gt; and &lt;a class="reference external" href="https://math.berkeley.edu/~ribet/"&gt;Ken Ribet&lt;/a&gt; following the screening.&lt;/p&gt;
+&lt;p&gt;In India, we have been exposed to Ramanujan quite early in our lives. I had stories in school book about great Indian
+mathematicians like Aryabhata, Brahmangupta, and Bhaskaracharya. Indian Satellites to Space launched by ISRO bear their
+names too. Along with those personalities, we have Srinivasa Ramanujan and whom we know for his invention of &lt;a class="reference external" href="https://nrich.maths.org/1380"&gt;Magic
+Squares&lt;/a&gt;, and &lt;strong&gt;Ramanujan Number&lt;/strong&gt;, &lt;strong&gt;the smallest number expressible as sum of two cubes.&lt;/strong&gt;&lt;/p&gt;
+&lt;div class="math"&gt;
+\begin{equation*}
+1729 = 1^3 + {12}^3 = 9^3 + 10^3
+\end{equation*}
+&lt;/div&gt;
+&lt;p&gt;Beyond that, I had not known much about the significance of this number or Ramanujan's work.&lt;/p&gt;
+&lt;p&gt;Years later, when taking &lt;a class="reference external" href="https://youtu.be/h_9WjWENWV8?t=14m48s"&gt;online courses&lt;/a&gt;, I had come to know about Hardy and Ramanujan's research in Number Theory
+being at the core of secure communication and cryptography. Do you use Credit Cards online and feel confident that
+someone will not maliciously take your money? All this is was because of the research in number theory.&lt;/p&gt;
+&lt;p&gt;There is also famous anecdote associated with Ramanujan, known to many from South India, Ramanujan prayed to a goddess,
+and she gave inspiration for his work.  He mentions that his theorems had come up like a dream, a boon granted by the
+Goddess, and he would write formulae in his book. That's how he invented those theorems.&lt;/p&gt;
+&lt;p&gt;If it happened like that, imagine how excited young students from Madurai will be, where there a temple every
+hundred feet. :)&lt;/p&gt;
+&lt;p&gt;It needs to be clarified that, Ramanujan was a genius and he also worked very hard on his subjects.&lt;/p&gt;
+&lt;p&gt;All these are portrayed well in this movie. The relationship between Hardy and Ramanujan, the scientific culture at
+Trinity College, London revealed in real detail. The movie has a significant portion dealing with how Hardy mentors
+Ramanujan, and strives to bring his work to the modern world.&lt;/p&gt;
+&lt;p&gt;In the question and answer session that followed, two questions were of interest to me.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;How do mathematicians study Ramanujan's work when he has not left many formula proofs with his equation?&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a class="reference external" href="https://en.wikipedia.org/wiki/Richard_Borcherds"&gt;Richard Borcheds&lt;/a&gt;, who is an accomplished mathematician, replied that Ramanujan's work was published in the form of
+series of &lt;a class="reference external" href="http://www.amazon.com/Ramanujans-Notebooks-Bruce-C-Berndt/dp/1461270073/"&gt;notebooks&lt;/a&gt;. He left behind three notebooks containing almost 3000 theorems, virtually all without proof. The
+reason he could have done that is perhaps he grew up in a time when the paper was very expensive for him and he wanted
+to be economical.&lt;/p&gt;
+&lt;p&gt;(It did not answer the question, but provided a good perspective).&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Question 2: In the movie, Ramanujan is shown to be desisting writing formal proofs. Is that true?&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Richard Borcheds shared that, it is bit exaggerated in the movie. Ramanujan always knew the proof of his work and
+could state it if he wanted to. But he usually did not.&lt;/p&gt;
+&lt;p&gt;I enjoyed watching this movie and listening to the perspectives associated with the genius from kumbakonam.&lt;/p&gt;&lt;/div&gt;</description><category>mathjax</category><guid>http://www.xtoinfinity.com/posts/the-man-who-knew-infinity.html</guid><pubDate>Mon, 27 Jun 2016 04:12:17 GMT</pubDate></item><item><title>Comma Free Codes</title><link>http://www.xtoinfinity.com/posts/comma-free-codes.html</link><dc:creator>Senthil Kumaran</dc:creator><description>&lt;div&gt;&lt;p&gt;We awe at Donald Knuth. I wondered, if I can understand a subject taught by Knuth and derive satisfaction of learning
+something directly from the master. I attended his most recent lecture on "comma free codes", felt that it was
+accessible and could be understood by putting some effort. This is my attempt to grasp the topic of "comma free codes",
+taught by Knuth for his 21st annual christmas tree lecture on Dec 2015. We will use some definitions directly from
+Williard Eastman's paper, reference the topics in wikipedia, look at Knuth's explanation.&lt;/p&gt;
+&lt;p&gt;We talk of codes in the context of information theory. A code is a system of rules to convert information—such as a
+letter, word, sound, image, or gesture—into another form or representation. A sequence of symbols, like a sequence of
+binary symbols, sequence of base-10 decimals or a sequence of English language alphabets can all be termed as "code". A
+block code is a set of codes having the same length.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Comma Free Block Code&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Comma free code is a code that can be easily synchronized without any external unit like comma or space,
+"&lt;strong&gt;likethis&lt;/strong&gt;". Comma free block code is set of same length codes having the comma free property.&lt;/p&gt;
+&lt;p&gt;The four letter words in "&lt;strong&gt;goodgame&lt;/strong&gt;" is recognizable, it easy to derive those as "&lt;strong&gt;good&lt;/strong&gt;" and "&lt;strong&gt;game&lt;/strong&gt;".
+Other possible substring four letter words in that phrase "&lt;strong&gt;oodg&lt;/strong&gt;", "&lt;strong&gt;odga&lt;/strong&gt;", "&lt;strong&gt;dgga&lt;/strong&gt;" are invalid words in
+english (or non code-words) and thus we did not have any problem separating the codewords when they were not
+separated by delimiters like space or comma. Anecdotally, Chinese and Thai languages do not use space between words.&lt;/p&gt;
+&lt;p&gt;Take an alternate example, "&lt;strong&gt;fujiverb&lt;/strong&gt;". Can you say deterministically if the word "&lt;strong&gt;jive&lt;/strong&gt;" is my code word? Or my
+code words consists only of "&lt;strong&gt;fuji&lt;/strong&gt;" and "&lt;strong&gt;verb&lt;/strong&gt;". You cannot determine it from this message and thus, "fuji" and
+"verb" do not form valid a "comma free block codes".&lt;/p&gt;
+&lt;p&gt;The same applies to a periodic code word like "&lt;strong&gt;gaga&lt;/strong&gt;". If a message "&lt;strong&gt;gagagaga&lt;/strong&gt;" occurs, then the middle word
+"&lt;strong&gt;gaga&lt;/strong&gt;" will be ambiguous as it is composed of 2-letter suffix and a 2-prefix of our code word and we wont be able to
+differentiate it.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Mathematical definition&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Comma free code words are defined like this.&lt;/p&gt;
+&lt;blockquote&gt;
+A block code, &lt;strong&gt;C&lt;/strong&gt; containing words of length &lt;strong&gt;n&lt;/strong&gt; is called comma free if, and only if, for any words
+&lt;span class="math"&gt;\(w = w_1, w_2 ... w_n. \: and \: x = x_1, x_2 ... x_n\)&lt;/span&gt; belonging to &lt;strong&gt;C&lt;/strong&gt;, the &lt;strong&gt;n&lt;/strong&gt; letter overlaps
+&lt;span class="math"&gt;\(w_k ... w_nx_1 .... x_{k-1} (k = 2, ... n)\)&lt;/span&gt; are not words in the code.&lt;/blockquote&gt;
+&lt;p&gt;This simply means that if two code words are joined together, than in that joined word, any substring from second letter
+to the last of the block code length should not be a code word.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;How to find them?&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Backtracking.&lt;/p&gt;
+&lt;p&gt;The general idea to find comma free block codes is use a backtracking solution and for every word that we want to add to
+the list, prune through through already added words and find if the new word can be a substring of two words joined
+together from the existing list. Knuth gave a demo of finding the maximum comma free subset of the four letter words.&lt;/p&gt;
+&lt;p&gt;&lt;a class="reference external" href="http://www.xtoinfinity.com/listings/commafree_check.py.html"&gt;commafree_check.py&lt;/a&gt;  &lt;a class="reference external" href="http://www.xtoinfinity.com/listings/commafree_check.py"&gt;(Source)&lt;/a&gt;&lt;/p&gt;
+&lt;pre class="code python"&gt;&lt;a name="rest_code_d19b769e30da4297a6780aecb5bae873-1"&gt;&lt;/a&gt;&lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;check_comma_free&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;input_string&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
+&lt;a name="rest_code_d19b769e30da4297a6780aecb5bae873-2"&gt;&lt;/a&gt;  &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="n"&gt;check_periodic&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;input_string&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
+&lt;a name="rest_code_d19b769e30da4297a6780aecb5bae873-3"&gt;&lt;/a&gt;    &lt;span class="k"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;"input string is periodic, it cannot be commafree."&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;a name="rest_code_d19b769e30da4297a6780aecb5bae873-4"&gt;&lt;/a&gt;    &lt;span class="k"&gt;return&lt;/span&gt;
+&lt;a name="rest_code_d19b769e30da4297a6780aecb5bae873-5"&gt;&lt;/a&gt;  &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="nb"&gt;len&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;comma_free_words&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="o"&gt;==&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+&lt;a name="rest_code_d19b769e30da4297a6780aecb5bae873-6"&gt;&lt;/a&gt;    &lt;span class="n"&gt;comma_free_words&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;append&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;input_string&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;a name="rest_code_d19b769e30da4297a6780aecb5bae873-7"&gt;&lt;/a&gt;  &lt;span class="k"&gt;else&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+&lt;a name="rest_code_d19b769e30da4297a6780aecb5bae873-8"&gt;&lt;/a&gt;    &lt;span class="n"&gt;parts&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;get_parts&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;input_string&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;a name="rest_code_d19b769e30da4297a6780aecb5bae873-9"&gt;&lt;/a&gt;    &lt;span class="k"&gt;for&lt;/span&gt; &lt;span class="n"&gt;head&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;tail&lt;/span&gt; &lt;span class="ow"&gt;in&lt;/span&gt; &lt;span class="n"&gt;parts&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+&lt;a name="rest_code_d19b769e30da4297a6780aecb5bae873-10"&gt;&lt;/a&gt;      &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;any_starts_with&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;head&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="ow"&gt;and&lt;/span&gt; &lt;span class="n"&gt;any_ends_with&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;tail&lt;/span&gt;&lt;span class="p"&gt;))&lt;/span&gt; &lt;span class="ow"&gt;or&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;any_starts_with&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;tail&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="ow"&gt;and&lt;/span&gt; &lt;span class="n"&gt;any_ends_with&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;head&lt;/span&gt;&lt;span class="p"&gt;)):&lt;/span&gt;
+&lt;a name="rest_code_d19b769e30da4297a6780aecb5bae873-11"&gt;&lt;/a&gt;        &lt;span class="k"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;"&lt;/span&gt;&lt;span class="si"&gt;%s&lt;/span&gt;&lt;span class="s2"&gt;|&lt;/span&gt;&lt;span class="si"&gt;%s&lt;/span&gt;&lt;span class="s2"&gt; are part of the previous words."&lt;/span&gt; &lt;span class="o"&gt;%&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;head&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;tail&lt;/span&gt;&lt;span class="p"&gt;))&lt;/span&gt;
+&lt;a name="rest_code_d19b769e30da4297a6780aecb5bae873-12"&gt;&lt;/a&gt;        &lt;span class="k"&gt;return&lt;/span&gt;
+&lt;a name="rest_code_d19b769e30da4297a6780aecb5bae873-13"&gt;&lt;/a&gt;    &lt;span class="n"&gt;comma_free_words&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;append&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;input_string&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;/pre&gt;&lt;p&gt;This logic is dependent on the order in which comma free block codes are analyzed. For finding a maximal set in a given
+alphabet size in any order a proper backtracking based solution should be devised, which considers all the cases of
+insertions.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;How many are there?&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Backtracking based solution requires us to intelligently prune the search space. Finding effective strategies for
+pruning the search space becomes our the next problem in finding the comma free codes. We will have to determine how
+many comma free block codes are possible for a given alphabet size and for a given length.&lt;/p&gt;
+&lt;p&gt;For 4 letter words, (n = 4) of the alphabet size &lt;strong&gt;m&lt;/strong&gt;, we know that there are &lt;span class="math"&gt;\(m^4\)&lt;/span&gt; possible words (permutation
+with repetition). But we're restricted to aperiodic words of length 4, of which there are &lt;span class="math"&gt;\(m^4 - m^2\)&lt;/span&gt;. Notice
+further that if word, &lt;strong&gt;item&lt;/strong&gt; has been chosen, we aren't allowed to include any of its cyclic shifts &lt;strong&gt;temi&lt;/strong&gt;, &lt;em&gt;emit*&lt;/em&gt;,
+or &lt;strong&gt;mite&lt;/strong&gt;, because they all appear within &lt;strong&gt;itemitem&lt;/strong&gt;. Hence the maximum number of codewords in our commafree code
+cannot exceed &lt;span class="math"&gt;\((m^4 - m^2)/4\)&lt;/span&gt;.&lt;/p&gt;
+&lt;p&gt;Let us consider the binary case, m = 2 and length n = 4, &lt;strong&gt;C(2, 4)&lt;/strong&gt;. We can choose four-bit "words" like this.&lt;/p&gt;
+&lt;p&gt;[0001] = {0001, 0010, 0100, 1000},&lt;/p&gt;
+&lt;p&gt;[0011] = {0011, 0110, 1100, 1001},&lt;/p&gt;
+&lt;p&gt;[0111] = {0111, 1100, 1101, 1011},&lt;/p&gt;
+&lt;p&gt;The maximum number of code words from our formula will be &lt;span class="math"&gt;\(2^4 - 2^2/4 \: = \: 3\)&lt;/span&gt;.  Can we choose three
+four-bit "words" from the above cyclic classes? Yes and choosing the lowest in each cyclic class will simply do. But
+choosing the lowest will not work for all n and m.&lt;/p&gt;
+&lt;p&gt;In the class taught by Knuth, we analyzed the choosing codes when m = 3 {0, 1, 2} and for n = 3, &lt;strong&gt;C(3, 3)&lt;/strong&gt;. The words
+in the category were&lt;/p&gt;
+&lt;p&gt;000  111  222     # Invalid since they are periodic&lt;/p&gt;
+&lt;p&gt;001  010  100     # A set of cyclic shifts, only one can taken as a valid code word.&lt;/p&gt;
+&lt;p&gt;002  020  200&lt;/p&gt;
+&lt;p&gt;011  110  101&lt;/p&gt;
+&lt;p&gt;012  120  201&lt;/p&gt;
+&lt;p&gt;021  210  102&lt;/p&gt;
+&lt;p&gt;112  121  211&lt;/p&gt;
+&lt;p&gt;220  202  022&lt;/p&gt;
+&lt;p&gt;221  212  122&lt;/p&gt;
+&lt;p&gt;The number 3-alphabet code words of length 3 is 27 ( = &lt;span class="math"&gt;\(3^3\)&lt;/span&gt;). The set of valid code words in this will be
+&lt;span class="math"&gt;\((3^3-3) / 3 = 8\)&lt;/span&gt;.&lt;/p&gt;
+&lt;p&gt;Choosing the lowest index will not work here for e.g, if we choose 021 and 220, and we send the word 220021 the word 002
+is conflicting as it is part of our code word. With any back-tracking based solution, we will have to determine the
+correct non-cyclic words to choose in each set to form our maximal set of 8 code words.&lt;/p&gt;
+&lt;p&gt;The problem of finding comma free code words increases exponentially to the size of the length of the code word and on
+the code word size. For e.g, The task of finding all four-letter comma free codes is not difficult when m = 3, and only
+18 cycle classes are involved. But it already becomes challenging when m = 4, because we must then deal with &lt;span class="math"&gt;\((4^4
+- 4^2) / 4 = 60\)&lt;/span&gt; classes. Therefore we'll want to give it some careful thought as we try to set it up for backtracking.&lt;/p&gt;
+&lt;p&gt;Willard Eastman came up with clever solution to find a code word for any odd word length n over an infinite alphabet
+size. Eastman proposed a solution wherein if we give a n letter word (n should be odd), the algorithm will output the
+correct shift required to make the n letter word a code word.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Eastman's Algorithm&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Construction of Comma Free Codes&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;The following elegant construction yields a comma free code of maximum size for any odd block length n, over any
+alphabet.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Given a sequence of &lt;span class="math"&gt;\(x =x_0x_1...x_{n-1}\)&lt;/span&gt; of nonnegative integers, where x differs from each of its
+other cyclic shifts &lt;span class="math"&gt;\(x_k...x_{n-1}x_0..x_{k-1}\)&lt;/span&gt; for 0 &amp;lt; k &amp;lt; n, the procedure outputs a cyclic shift
+&lt;span class="math"&gt;\(\sigma x\)&lt;/span&gt; with the property that the set of all such &lt;span class="math"&gt;\(\sigma x\)&lt;/span&gt; is a commafree.&lt;/p&gt;
+&lt;p&gt;We regard x as an infinite periodic sequence &lt;span class="math"&gt;\(&amp;lt;x_n&amp;gt;\)&lt;/span&gt; with &lt;span class="math"&gt;\(x_k = x_{k-n}\)&lt;/span&gt; for all &lt;span class="math"&gt;\(k \ge n\)&lt;/span&gt;. Each
+cyclic shift then has the form &lt;span class="math"&gt;\(x_kx_{k+1}...x_{k+n-1}\)&lt;/span&gt;. The simplest nontrivial example occurs when n = 3,
+where &lt;span class="math"&gt;\(x=x_0 x_1 x_2 x_0 x_1 x_2 x_0 ...\)&lt;/span&gt; and we don't have &lt;span class="math"&gt;\(x_0 = x_1 = x_2\)&lt;/span&gt;. In this case, the algorithm
+outputs &lt;span class="math"&gt;\(x_kx_{k+1}x_{k+2}\)&lt;/span&gt; where &lt;span class="math"&gt;\(x_k &amp;gt; x_{k+1} \le x_{k+2}\)&lt;/span&gt;; and the set of all such triples clearly
+satisfies the commafree condition.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;The idea expressed is to choose a triplet (a, b, c) of the form.&lt;/p&gt;
+&lt;div class="math"&gt;
+\begin{equation*}
+a \: \gt b \: \le c
+\end{equation*}
+&lt;/div&gt;
+&lt;p&gt;&lt;strong&gt;Why does this work?&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;If we take two words, xyz and abc following this property, combining them we have,&lt;/p&gt;
+&lt;div class="math"&gt;
+\begin{equation*}
+x \: \gt y \: \le z \quad a \: \gt b \: \le c
+\end{equation*}
+&lt;/div&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;yza cannot be a word because z cannot be &amp;gt; than y.&lt;/li&gt;
+&lt;li&gt;zab cannot be a word because a cannot be &amp;lt; than b.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;There by none of the substrings will be a code word and we can satisfy the comma free property.&lt;/p&gt;
+&lt;p&gt;And if we use this condition to determine the code words in our &lt;strong&gt;C(3,3)&lt;/strong&gt; set, we will come up with the following
+codes which can form valid code words.&lt;/p&gt;
+&lt;strike&gt;000  111  222&lt;/strike&gt; &lt;br&gt;
+
+001  010  &lt;strong&gt;100&lt;/strong&gt; &lt;br&gt;
+
+002  020  &lt;strong&gt;200&lt;/strong&gt; &lt;br&gt;
+
+011  110  &lt;strong&gt;101&lt;/strong&gt; &lt;br&gt;
+
+012  120  &lt;strong&gt;201&lt;/strong&gt; &lt;br&gt;
+
+021  210  &lt;strong&gt;102&lt;/strong&gt; &lt;br&gt;
+
+112  121  &lt;strong&gt;211&lt;/strong&gt; &lt;br&gt;
+
+220  &lt;strong&gt;202&lt;/strong&gt;  022 &lt;br&gt;
+
+221  &lt;strong&gt;212&lt;/strong&gt;  122 &lt;br&gt;&lt;p&gt;The highlighted words will form valid code words and all of these satisfy the criteria, &lt;span class="math"&gt;\(a \: \gt b \: \le c\)&lt;/span&gt;
+Now, if you are given a word like &lt;strong&gt;211201212&lt;/strong&gt;, you know for sure that they are composed of &lt;strong&gt;211&lt;/strong&gt;, &lt;strong&gt;201&lt;/strong&gt; and
+&lt;strong&gt;212&lt;/strong&gt; as none of other intermediaries like (112, 120, 201, 012, 121) occur in our set.&lt;/p&gt;
+&lt;p&gt;Eastman's algorithm helps in finding the correct shift required to make any word a code word.&lt;/p&gt;
+&lt;p&gt;For e.g,&lt;/p&gt;
+&lt;p&gt;Input: 001
+Output: Shift by 2, thus producing 100&lt;/p&gt;
+&lt;p&gt;Input: 221
+Output: Shift by 1, thus producing 212&lt;/p&gt;
+&lt;p&gt;And the beauty is, it is not just for words of length 3, but for &lt;strong&gt;any odd word length n&lt;/strong&gt;.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;The key idea is to think of &lt;strong&gt;x&lt;/strong&gt; as partitioned into &lt;strong&gt;t&lt;/strong&gt; substrings by boundary marked by &lt;span class="math"&gt;\(b_j\)&lt;/span&gt; where
+&lt;span class="math"&gt;\(0 \le b_0 \lt b_1 \lt ... \lt b_{t-1} &amp;lt; n\)&lt;/span&gt; and &lt;span class="math"&gt;\(b_j = b_{j-t} + n\)&lt;/span&gt; for &lt;span class="math"&gt;\(j \ge t\)&lt;/span&gt;. Then substring
+&lt;span class="math"&gt;\(y_j\)&lt;/span&gt; is &lt;span class="math"&gt;\(x_{b_j} x_{b_{j+1}-1}\)&lt;/span&gt;. The number &lt;strong&gt;t&lt;/strong&gt; of substrings is always odd. Initially, t = n and
+&lt;span class="math"&gt;\(b_j = j\)&lt;/span&gt; for all j; ultimately t = 1 and &lt;span class="math"&gt;\(\sigma x = y0\)&lt;/span&gt; is the desired output.&lt;/p&gt;
+&lt;p&gt;Eastman's algorithm is based on comparison of adjacent substrings &lt;span class="math"&gt;\(y_{j-1} and y_j\)&lt;/span&gt;. If those substring have
+the same length, we use lexicographic comparison; otherwise we declare that the longer string is bigger.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;The number of &lt;strong&gt;t&lt;/strong&gt; substring is always odd because we went with an odd string length (n).&lt;/p&gt;
+&lt;p&gt;The comparison of adjacent substring form the recursive nature of the algorithm, we start with small substring of
+length 1 adjacent to each other and then we find compare higher length substring, whose markers have been found by
+the previous step. This will become clear as we look the hand demo.&lt;/p&gt;
+&lt;a class="reference external image-reference" href="http://www.amazon.com/gp/product/B005J52SRE"&gt;&lt;img alt="http://ecx.images-amazon.com/images/I/41KZVIUGswL._SX332_BO1,204,203,200_.jpg" class="align-right" src="http://ecx.images-amazon.com/images/I/41KZVIUGswL._SX332_BO1,204,203,200_.jpg" style="width: 160px; height: 200px;"&gt;&lt;/a&gt;
+&lt;p&gt;&lt;strong&gt;Basin and Ranges&lt;/strong&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+It's convenient to describe the algorithm using the terminology based on the topograph of Nevada. Say that i is a
+basin if the substrings satisfy &lt;span class="math"&gt;\(y_{i-1} \gt y_i \le y_{i+1}\)&lt;/span&gt;. There must be at least one basin; otherwise all
+the &lt;span class="math"&gt;\(y_i\)&lt;/span&gt; would be equal, and x would equal one of its cyclic shifts. We look at consecutive basins, i and j;
+this means that i &amp;lt; j and that i and j are basins, and that i+1 through j - 1 are not basins. If there's only one
+basin we have &lt;span class="math"&gt;\(j = i + t\)&lt;/span&gt;. The indices between consecutive basins are called ranges.&lt;/blockquote&gt;
+&lt;p&gt;The basin and ranges is Knuth's terminology, taken from the book Basin and Ranges by John McPhee which describes the
+topology of Nevada. It is easier to imagine the construct we are looking for if we start to think in terms of basin and
+ranges.&lt;/p&gt;
+&lt;blockquote&gt;
+Since t is odd, there is an odd number of consecutive basins for which &lt;span class="math"&gt;\(j - i\)&lt;/span&gt; is odd. Each round of Eastman's
+algorithm retains exactly one boundary point in the range between such basins and deletes all the others. The
+retained point is the smallest &lt;span class="math"&gt;\(k = i + 2l\)&lt;/span&gt; such that &lt;span class="math"&gt;\(y_k \gt y_{k+1}\)&lt;/span&gt;. At the end of a round, we reset
+t to the number of retained boundary points, and we begin another round if t &amp;gt; 1.&lt;/blockquote&gt;
+&lt;p&gt;&lt;strong&gt;Word of length 19&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Let's work through the algorithm by hand when n = 19 and x = 3141592653589793238&lt;/p&gt;
+&lt;p&gt;Phase 1&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;First markers differentiate each character.&lt;/li&gt;
+&lt;li&gt;We use . to denote the cyclic repetition of the 19 letter word.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre class="literal-block"&gt;
+3 | 1 | 4 |  1 | 5 | 9 | 2 | 6 | 5 | 3 | 5 | 8 | 9 | 7 | 9 | 3 | 2 | 3 | 8 . 3 | 1 | 4 | 1 | 5
+&lt;/pre&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;Next we go about identifying basins. We identify the basins where for any 3 numbers (a, b, c), &lt;span class="math"&gt;\(a \: \gt b
+\le c\)&lt;/span&gt; and put the markers below them&lt;/li&gt;
+&lt;li&gt;After the cyclic repetition we see the repetition of the basin. Like the last line below 1 is same as the first
+line. It is the basin that is repeated.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre class="literal-block"&gt;
+3  1  4  1  5  9  2  6  5  3  5  8  9  7  9  3  2  3  8  3  1  4  1 5
+
+   |     |        |        |           |        |        .  |
+&lt;/pre&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;We mark the ranges as odd length or even length ones.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre class="literal-block"&gt;
+3  1  4  1  5  9  2  6  5  3  5  8  9  7  9  3  2  3  8  3  1  4  1 5
+
+---|--e--|---o----|---o----|-----e-----|---o----|-----e--.--|--------
+&lt;/pre&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;Next, take all the odd length basin markers, go by steps of 2, 4, 6 so on and identify the first greater than
+number and place the new basin markers before them.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;For e.g, in 1-5-9-2. The 2 length path is "1-5-9" and first higher will be 9 and we have to place the marker ahead of
+it. So, the phase 0 of eastman algorithm will output, 5, 8 and 15. denoting the indices where our basins are after the
+first phase.&lt;/p&gt;
+&lt;p&gt;If you are watching the video with Knuth giving a demo, there is a mistake in the video that second basin identifier
+is placed after 5, instead of before 5 (We should go by steps of 2 and place it before the first greater than number).&lt;/p&gt;
+&lt;pre class="literal-block"&gt;
+3  1  4  1  5  | 9  2  6  |  5  3  5  8  9  7  9  | 3  2  3  8  . 3  1  4 1  5
+&lt;/pre&gt;
+&lt;p&gt;Phase 2&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;In the second phase, we use the basin markers of the previous phase and compare the sub strings denoted by the basin.&lt;/li&gt;
+&lt;li&gt;We take the substring of length 19, but now denoted by basins. The repetition of the string in the previous steps
+helped us here.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre class="literal-block"&gt;
+9  2  6  |  5  3  5  8  9  7  9  | 3  2  3  8  3  1  4 1  5
+&lt;/pre&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;We apply the algorithm recursively on the strings 926, 5358979 and 323831415. We find that the string 323831415 is
+greater than the rest, so we can keep the basin marker ahead of it.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre class="literal-block"&gt;
+9  2  6  5  3  5  8  9  7  9  | 3  2  3  8  3  1  4 1  5
+&lt;/pre&gt;
+&lt;p&gt;At the end of Phase 2, the algorithm outputs index 15, as the shift required to create the code word out of 19 word
+string. And thus our code word found by the eastman's algorithm is&lt;/p&gt;
+&lt;pre class="literal-block"&gt;
+3  2  3  8  3  1  4 1  5  9  2  6  5  3  5  8  9  7  9
+&lt;/pre&gt;
+&lt;p&gt;Knuth's gave a demo with his implementation in CWEB. He shared a thought that even though algorithm is expressed
+recursively, the iterative implementation was straight forward. For the rest of the lecture he explores the
+algorithm on a binary string of PI of n = 19 and finds the shift required. Also, gives the probability of Eastman's
+algorithm finishing in one round, that is, just the phase 1.&lt;/p&gt;
+&lt;p&gt;All these are covered as exercises and answers in the pre-fascicle 5B of his volume 5 of The Art of Computer
+Programming, which can be explored in further depth.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Video&lt;/strong&gt;&lt;/p&gt;
+&lt;iframe width="560" height="315" src="https://www.youtube.com/embed/48iJx8FVuis" frameborder="0" allowfullscreen&gt;&lt;/iframe&gt;&lt;p&gt;&lt;strong&gt;References&lt;/strong&gt;&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;Pre-Fascicle 5B, Volume 4 of The Art of Computer Programming, Introduction to Backtracking.
+&lt;a class="reference external" href="http://www-cs-faculty.stanford.edu/~uno/taocp.html"&gt;http://www-cs-faculty.stanford.edu/~uno/taocp.html&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;On the construction of comma free codes &lt;a class="reference external" href="http://ieeexplore.ieee.org/xpl/articleDetails.jsp?reload=true&amp;amp;arnumber=1053766"&gt;http://ieeexplore.ieee.org/xpl/articleDetails.jsp?reload=true&amp;amp;arnumber=1053766&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;COMMAFREE-EASTMAN.w &lt;a class="reference external" href="http://www-cs-faculty.stanford.edu/~uno/programs/commafree-eastman.w"&gt;http://www-cs-faculty.stanford.edu/~uno/programs/commafree-eastman.w&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Tidbits&lt;/strong&gt;&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;Eastman had worked on Travelling Salesman problem in 1950s before Gomory had come up with integer
+programming. &lt;a class="reference external" href="https://en.wikipedia.org/wiki/Ralph_E._Gomory"&gt;https://en.wikipedia.org/wiki/Ralph_E._Gomory&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Chinese language do not use space between words. &lt;a class="reference external" href="https://3000hanzi.com/blog/should_chinese_add_spaces_between_words/"&gt;https://3000hanzi.com/blog/should_chinese_add_spaces_between_words/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Thai language does not use spaces between words.
+&lt;a class="reference external" href="https://www.quora.com/Why-doesnt-the-Thai-language-use-spaces-between-words"&gt;https://www.quora.com/Why-doesnt-the-Thai-language-use-spaces-between-words&lt;/a&gt;
+&lt;a class="reference external" href="http://www.thai-language.com/ref/breaking-words"&gt;http://www.thai-language.com/ref/breaking-words&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Mobius Function: &lt;a class="reference external" href="http://mathworld.wolfram.com/MoebiusFunction.html"&gt;http://mathworld.wolfram.com/MoebiusFunction.html&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Comma Free Code: &lt;a class="reference external" href="http://cms.math.ca/openaccess/cjm/v10/cjm1958v10.0202-0209.pdf"&gt;http://cms.math.ca/openaccess/cjm/v10/cjm1958v10.0202-0209.pdf&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/div&gt;</description><category>algorithms</category><category>knuth</category><category>mathjax</category><category>v1</category><guid>http://www.xtoinfinity.com/posts/comma-free-codes.html</guid><pubDate>Wed, 16 Dec 2015 16:40:37 GMT</pubDate></item></channel></rss>

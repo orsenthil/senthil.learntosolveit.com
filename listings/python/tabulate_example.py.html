@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html prefix="og: http://ogp.me/ns# article: http://ogp.me/ns/article# " lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="description" content="tabulate_example.py">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>tabulate_example.py | Senthil Kumaran's thoughts.</title>
+<link href="../../assets/css/all-nocdn.css" rel="stylesheet" type="text/css">
+<meta name="theme-color" content="#5670d4">
+<meta name="generator" content="Nikola (getnikola.com)">
+<link rel="alternate" type="application/rss+xml" title="RSS" href="../../rss.xml">
+<link rel="canonical" href="http://www.xtoinfinity.com/listings/python/tabulate_example.py.html">
+<!--[if lt IE 9]><script src="../../assets/js/html5.js"></script><![endif]-->
+</head>
+<body>
+<a href="#content" class="sr-only sr-only-focusable">Skip to main content</a>
+
+<!-- Menubar -->
+
+<nav class="navbar navbar-inverse navbar-static-top"><div class="container">
+<!-- This keeps the margins nice -->
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-navbar" aria-controls="bs-navbar" aria-expanded="false">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="http://www.xtoinfinity.com/">
+
+                <span id="blog-title">Senthil Kumaran's thoughts.</span>
+            </a>
+        </div>
+<!-- /.navbar-header -->
+        <div class="collapse navbar-collapse" id="bs-navbar" aria-expanded="false">
+            <ul class="nav navbar-nav">
+<li>
+<a href="../../archive.html">Archives</a>
+                </li>
+<li>
+<a href="../../categories/index.html">Tags</a>
+                </li>
+<li>
+<a href="../../rss.xml">RSS feed</a>
+
+                
+            </li>
+</ul>
+<ul class="nav navbar-nav navbar-right">
+<li>
+    <a href="tabulate_example.py" id="sourcelink">Source</a>
+    </li>
+
+                
+            </ul>
+</div>
+<!-- /.navbar-collapse -->
+    </div>
+<!-- /.container -->
+</nav><!-- End of Menubar --><div class="container" id="content" role="main">
+    <div class="body-content">
+        <!--Body content-->
+        <div class="row">
+            
+            
+
+<nav class="breadcrumbs"><ul class="breadcrumb">
+<li><a href="../">listings</a></li>
+                <li><a href=".">python</a></li>
+                <li>tabulate_example.py</li>
+</ul></nav><h1>tabulate_example.py
+        <small><a href="tabulate_example.py">(Source)</a></small>
+    </h1>
+    <table class="codetable"><tr>
+<td class="linenos"><div class="linenodiv"><pre><a href="#listingspythontabulate_examplepy-1"> 1</a>
+<a href="#listingspythontabulate_examplepy-2"> 2</a>
+<a href="#listingspythontabulate_examplepy-3"> 3</a>
+<a href="#listingspythontabulate_examplepy-4"> 4</a>
+<a href="#listingspythontabulate_examplepy-5"> 5</a>
+<a href="#listingspythontabulate_examplepy-6"> 6</a>
+<a href="#listingspythontabulate_examplepy-7"> 7</a>
+<a href="#listingspythontabulate_examplepy-8"> 8</a>
+<a href="#listingspythontabulate_examplepy-9"> 9</a>
+<a href="#listingspythontabulate_examplepy-10">10</a>
+<a href="#listingspythontabulate_examplepy-11">11</a>
+<a href="#listingspythontabulate_examplepy-12">12</a>
+<a href="#listingspythontabulate_examplepy-13">13</a>
+<a href="#listingspythontabulate_examplepy-14">14</a>
+<a href="#listingspythontabulate_examplepy-15">15</a>
+<a href="#listingspythontabulate_examplepy-16">16</a>
+<a href="#listingspythontabulate_examplepy-17">17</a>
+<a href="#listingspythontabulate_examplepy-18">18</a></pre></div></td>
+<td class="code"><pre class="code literal-block"><a name="listingspythontabulate_examplepy-1"></a><span class="kn">from</span> <span class="nn">tabulate</span> <span class="kn">import</span> <span class="n">tabulate</span>
+<a name="listingspythontabulate_examplepy-2"></a>
+<a name="listingspythontabulate_examplepy-3"></a><span class="n">table_header</span> <span class="o">=</span> <span class="p">[</span><span class="s2">"graph"</span><span class="p">,</span> <span class="s2">"vertex"</span><span class="p">,</span> <span class="s2">"edge"</span><span class="p">]</span>
+<a name="listingspythontabulate_examplepy-4"></a>
+<a name="listingspythontabulate_examplepy-5"></a><span class="n">items</span> <span class="o">=</span> <span class="p">[</span>
+<a name="listingspythontabulate_examplepy-6"></a>    <span class="p">[</span><span class="s2">"communication"</span><span class="p">,</span> <span class="s2">"telephone, computer"</span><span class="p">,</span> <span class="s2">"fiber optic cable"</span><span class="p">],</span>
+<a name="listingspythontabulate_examplepy-7"></a>    <span class="p">[</span><span class="s2">"circuit"</span><span class="p">,</span> <span class="s2">"gate, register, processor"</span><span class="p">,</span> <span class="s2">"wire"</span><span class="p">],</span>
+<a name="listingspythontabulate_examplepy-8"></a>    <span class="p">[</span><span class="s2">"mechanical"</span><span class="p">,</span> <span class="s2">"joint"</span><span class="p">,</span> <span class="s2">"rod, beam, spring"</span><span class="p">],</span>
+<a name="listingspythontabulate_examplepy-9"></a>    <span class="p">[</span><span class="s2">"financial"</span><span class="p">,</span> <span class="s2">"stock, currency"</span><span class="p">,</span> <span class="s2">"transactions"</span><span class="p">],</span>
+<a name="listingspythontabulate_examplepy-10"></a>    <span class="p">[</span><span class="s2">"transportation"</span><span class="p">,</span> <span class="s2">"street intersection, airport"</span><span class="p">,</span> <span class="s2">"highway, airway route"</span><span class="p">],</span>
+<a name="listingspythontabulate_examplepy-11"></a>    <span class="p">[</span><span class="s2">"internet"</span><span class="p">,</span> <span class="s2">"class C network"</span><span class="p">,</span> <span class="s2">"connection"</span><span class="p">],</span>
+<a name="listingspythontabulate_examplepy-12"></a>    <span class="p">[</span><span class="s2">"game"</span><span class="p">,</span> <span class="s2">"board position"</span><span class="p">,</span> <span class="s2">"legal move"</span><span class="p">],</span>
+<a name="listingspythontabulate_examplepy-13"></a>    <span class="p">[</span><span class="s2">"social relationship"</span><span class="p">,</span> <span class="s2">"person, actor"</span><span class="p">,</span> <span class="s2">"friendship, movie cast"</span><span class="p">],</span>
+<a name="listingspythontabulate_examplepy-14"></a>    <span class="p">[</span><span class="s2">"neural network"</span><span class="p">,</span> <span class="s2">"neuron"</span><span class="p">,</span> <span class="s2">"synapse"</span><span class="p">],</span>
+<a name="listingspythontabulate_examplepy-15"></a>    <span class="p">[</span><span class="s2">"protein network"</span><span class="p">,</span> <span class="s2">"protein"</span><span class="p">,</span> <span class="s2">"protein-protein interaction"</span><span class="p">],</span>
+<a name="listingspythontabulate_examplepy-16"></a>    <span class="p">[</span><span class="s2">"molecule"</span><span class="p">,</span> <span class="s2">"atom"</span><span class="p">,</span> <span class="s2">"bond"</span><span class="p">]]</span>
+<a name="listingspythontabulate_examplepy-17"></a>
+<a name="listingspythontabulate_examplepy-18"></a><span class="k">print</span><span class="p">(</span><span class="n">tabulate</span><span class="p">(</span><span class="n">items</span><span class="p">,</span> <span class="n">headers</span><span class="o">=</span><span class="n">table_header</span><span class="p">,</span> <span class="n">tablefmt</span><span class="o">=</span><span class="s2">"rst"</span><span class="p">))</span>
+</pre></td>
+</tr></table>
+</div>
+        <!--End of body content-->
+
+        <footer id="footer">
+            Contents © 2017         <a href="mailto:orsenthil@gmail.com">Senthil Kumaran</a> - Powered by         <a href="https://getnikola.com" rel="nofollow">Nikola</a>         
+            
+        </footer>
+</div>
+</div>
+
+
+            <script src="../../assets/js/all-nocdn.js"></script><script>$('a.image-reference:not(.islink) img:not(.islink)').parent().colorbox({rel:"gal",maxWidth:"100%",maxHeight:"100%",scalePhotos:true});</script><!-- fancy dates --><script>
+    moment.locale("en");
+    fancydates(0, "YYYY-MM-DD HH:mm");
+    </script><!-- end fancy dates --><script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-71599453-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+</body>
+</html>

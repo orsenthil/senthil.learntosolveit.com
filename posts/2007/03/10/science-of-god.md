@@ -1,0 +1,5 @@
+<html><body><p>Some time back, there was a story in Slashdot science section which dealt with "Human beings believing in God was neccessary for adaptation, survival and reproduction". This was study of genetic theory as how humans came to believe in God. One of the scientist got curious at the fact that ( me too is surprised) "<b>started looking at history, and I wondered why no society ever survived more than three generations without a religious foundation as its raison d’être,"&gt;</b>
+
+The article gives a a detail that Humans are <a href="http://www.nytimes.com/2007/03/04/magazine/04evolution.t.html?pagewanted=1&amp;ei=5088&amp;en=a43cfb7b24423cc6&amp;ex=1330664400&amp;partner=rssnyt&amp;emc=rss">hardwired to believe in god</a>, it has supported its survival of the race and various different theories of existence and normal human understanding.It also gives account of how Atheists view the fact and they have to work hard to get the details than just to leave it. 
+
+<a href="http://science.slashdot.org/article.pl?sid=07/03/04/1925246">slashdot story </a> as usual was interesting.</p></body></html>

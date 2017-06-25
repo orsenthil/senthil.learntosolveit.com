@@ -1,0 +1,1 @@
+<html><body><img src="http://photos16.flickr.com/23479830_0f28b379ad.jpg" alt="wotw" height="500" width="404"><br><br><br><span style="font-size:85%;">Was thinking all the while ( in a vim style)<br><br></span><span style="font-weight:bold;font-size:85%;">:s/Steven\ Spielberg/Manoj\.N\.Shyamalan</span></body></html>

@@ -1,0 +1,1 @@
+<html><body><a href="/2014/07/2014-07-06_16-58-26.png"><img class="aligncenter size-large wp-image-1517" src="http://xtoinf.files.wordpress.com/2014/07/2014-07-06_16-58-26.png?w=676" alt="Tower with walls on side" width="676" height="400"></a></body></html>

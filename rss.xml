@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/xsl" href="assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Senthil Kumaran's thoughts.</title><link>http://www.xtoinfinity.com/</link><description>Senthil Kumaran's thoughts.</description><atom:link href="http://www.xtoinfinity.com/rss.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><lastBuildDate>Fri, 16 Jun 2017 14:31:16 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Intelligent Machines won't make us obsolete ...</title><link>http://www.xtoinfinity.com/posts/2017/06/16/intelligent-machines-wont-make-us-obsolete.html</link><dc:creator>Senthil Kumaran</dc:creator><description>&lt;div&gt;&lt;p&gt;Intelligent Machines won't make us obsolete, &lt;strong&gt;but our complacency might.&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;That's what &lt;a class="reference external" href="http://www.bbc.com/future/story/20170616-garry-kasparov-why-the-world-should-embrace-ai"&gt;Garry Kasporov&lt;/a&gt; has to say about embracing AI.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Our complacency might make us obsolete&lt;/strong&gt; may be applicable well beyond AI. It has been the death knell for kings,
+empires, tribes and people. AI seems to be adding only another parameter to death by complacency.&lt;/p&gt;&lt;/div&gt;</description><category>ai</category><guid>http://www.xtoinfinity.com/posts/2017/06/16/intelligent-machines-wont-make-us-obsolete.html</guid><pubDate>Fri, 16 Jun 2017 14:26:04 GMT</pubDate></item><item><title>IntelliJ now warns on co-routines types.</title><link>http://www.xtoinfinity.com/posts/2017/06/15/intellij-now-warns-on-co-routines-types.html</link><dc:creator>Senthil Kumaran</dc:creator><description>&lt;div&gt;&lt;p&gt;When using Python3's async-await, not awaiting on coroutines was one of the common mistakes, I was making. I
+discovered that newer version of IntelliJ added a warning for it, so that it can spotted when you are writing the
+code itself.&lt;/p&gt;
+&lt;img alt="https://dl.dropbox.com/s/iumdzyhqmkz5qxf/Screenshot%202017-06-15%2008.06.18.png?dl=0" class="align-center" src="https://dl.dropbox.com/s/iumdzyhqmkz5qxf/Screenshot%202017-06-15%2008.06.18.png?dl=0"&gt;&lt;/div&gt;</description><category>intellij</category><guid>http://www.xtoinfinity.com/posts/2017/06/15/intellij-now-warns-on-co-routines-types.html</guid><pubDate>Thu, 15 Jun 2017 16:22:24 GMT</pubDate></item><item><title>Language Instinct</title><link>http://www.xtoinfinity.com/posts/2017/06/07/language-instinct.html</link><dc:creator>Senthil Kumaran</dc:creator><description>&lt;div&gt;&lt;p&gt;It looks like children can learn multiple languages, and they can understand the structure of words used in language.
+Today we visited an ice-cream shop, and after enjoying ice-cream, Siddhartha said:&lt;/p&gt;
+&lt;p&gt;Siddhartha: I like the ice-cream.&lt;/p&gt;
+&lt;p&gt;Shalini: Say it in &lt;a class="reference external" href="https://en.wikipedia.org/wiki/Saurashtra_language"&gt;Sourashtra&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Siddhartha: &lt;strong&gt;Ice-cream love-ares.&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;The way his mind seems to have worked is. He placed the Subject of the sentence first, as it is usually in Sourashtra.&lt;/p&gt;
+&lt;p&gt;He did not know the equivalent of "like" in Saurashtra. So, he used the English word "love" and added the suffix
+"ares", which means, "being".&lt;/p&gt;
+&lt;p&gt;Correct translation should be: &lt;strong&gt;Ice-cream opa-ares.&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;It's interesting how close he was in constructing a sentence by intuitively forming the grammar and creating words
+using smaller parts.&lt;/p&gt;
+&lt;p&gt;I think, adults do this too.&lt;/p&gt;&lt;/div&gt;</description><category>sourashtra</category><guid>http://www.xtoinfinity.com/posts/2017/06/07/language-instinct.html</guid><pubDate>Wed, 07 Jun 2017 16:34:00 GMT</pubDate></item><item><title>Bill Gates Summer Reading List</title><link>http://www.xtoinfinity.com/posts/2017/05/26/bill-gates-summer-reading-list.html</link><dc:creator>Senthil Kumaran</dc:creator><description>&lt;p&gt;This is an &lt;a class="reference external" href="https://www.gatesnotes.com/GlobalPages/NewsLetter?_cldee=b3JzZW50aGlsQGdtYWlsLmNvbQ%3d%3d"&gt;excellent list of books&lt;/a&gt; recommended by Bill Gates for summer reading.&lt;/p&gt;</description><guid>http://www.xtoinfinity.com/posts/2017/05/26/bill-gates-summer-reading-list.html</guid><pubDate>Fri, 26 May 2017 14:05:35 GMT</pubDate></item><item><title>100 square in primes</title><link>http://www.xtoinfinity.com/posts/2017/05/02/100-square-in-primes.html</link><dc:creator>Senthil Kumaran</dc:creator><description>&lt;div&gt;&lt;p&gt;Every number can be expressed as product of prime numbers.&lt;/p&gt;
+&lt;p&gt;Here is Daniel Finkel’s 100-square in primes. Just stare at it for few minutes to realize it's beauty.&lt;/p&gt;
+&lt;img alt="https://cdn-images-1.medium.com/max/1600/1*Cm26rZNDjDMh9IonCO1vJQ.png" class="align-center" src="https://cdn-images-1.medium.com/max/1600/1*Cm26rZNDjDMh9IonCO1vJQ.png"&gt;&lt;/div&gt;</description><guid>http://www.xtoinfinity.com/posts/2017/05/02/100-square-in-primes.html</guid><pubDate>Wed, 03 May 2017 05:46:38 GMT</pubDate></item><item><title>Performance Orientation vs Mastery Orientation</title><link>http://www.xtoinfinity.com/posts/2017/04/23/performance-orientation-vs-mastery-orientation.html</link><dc:creator>Senthil Kumaran</dc:creator><description>&lt;div&gt;&lt;p&gt;On the topic of learning, it is known that "mastery orientation" is better.&lt;/p&gt;
+&lt;p&gt;It's like to do something because you don't know how to do it rather than to prove or to show, that you can do it. The problem solving or the learning is for the self. That's the essence of mastery based learning.&lt;/p&gt;
+&lt;p&gt;The final dialog from the movie "The Karate Kid" might be useful to recollect.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Mr. Han:&lt;/strong&gt; Just tell me, Xiao Dre, why? Why do you need to go back out there so badly?&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Dre Parker:&lt;/strong&gt; Because I'm still scared. And no matter what happens, tonight, when I leave, I don't want to be scared anymore.&lt;/p&gt;
+&lt;p&gt;I read a article, titled " &lt;a class="reference external" href="http://www.pixelpoppers.com/2009/11/awesome-by-proxy-addicted-to-fake.html"&gt;Awesome By Proxy- Addicted to Fake Achievement&lt;/a&gt; " by a person discovered what he was doing wrong when choosing the kind of games he was playing, and he could introspect and choose to change this style.&lt;/p&gt;
+&lt;pre class="literal-block"&gt;
+We humans are remarkably adept at finding ways to lie to ourselves, and ways to be self-destructive.
+&lt;/pre&gt;&lt;/div&gt;</description><category>learning</category><guid>http://www.xtoinfinity.com/posts/2017/04/23/performance-orientation-vs-mastery-orientation.html</guid><pubDate>Mon, 24 Apr 2017 03:14:23 GMT</pubDate></item><item><title>Google Auto Draw</title><link>http://www.xtoinfinity.com/posts/2017/04/16/google-auto-draw.html</link><dc:creator>Senthil Kumaran</dc:creator><description>&lt;div&gt;&lt;p&gt;&lt;a class="reference external" href="https://aiexperiments.withgoogle.com/autodraw"&gt;https://aiexperiments.withgoogle.com/autodraw&lt;/a&gt;  - I really liked this experiment. You can doodle something and it will
+pick your doodle and give you a proper picture.  For e.g. below I drew a flower and than could get a neat version.&lt;/p&gt;
+&lt;p&gt;If you are web-developer, no more struggling with creation for favicons. :) outsource it to AI.&lt;/p&gt;
+&lt;p&gt;My drawing:&lt;/p&gt;
+&lt;img alt="https://dl.dropbox.com/s/5q3g581fjj6j3h8/Screenshot%202017-04-16%2019.05.52.png?dl=0" class="align-center" src="https://dl.dropbox.com/s/5q3g581fjj6j3h8/Screenshot%202017-04-16%2019.05.52.png?dl=0" style="width: 450px; height: 300px;"&gt;
+&lt;p&gt;Computer Output:&lt;/p&gt;
+&lt;img alt="https://dl.dropbox.com/s/89npmolgfarbytb/Screenshot%202017-04-16%2019.05.59.png?dl=0" class="align-center" src="https://dl.dropbox.com/s/89npmolgfarbytb/Screenshot%202017-04-16%2019.05.59.png?dl=0" style="width: 450px; height: 300px;"&gt;&lt;/div&gt;</description><category>ai</category><guid>http://www.xtoinfinity.com/posts/2017/04/16/google-auto-draw.html</guid><pubDate>Mon, 17 Apr 2017 02:10:07 GMT</pubDate></item><item><title>Steve Jobs: How to start a business</title><link>http://www.xtoinfinity.com/posts/2017/04/06/steve-jobs-how-to-start-a-business.html</link><dc:creator>Senthil Kumaran</dc:creator><description>&lt;div&gt;&lt;div class="youtube-video align-center"&gt;
+&lt;iframe width="425" height="344" src="https://www.youtube.com/embed/toVTP-vcsk8?rel=0&amp;amp;hd=1&amp;amp;wmode=transparent"&gt;&lt;/iframe&gt;
+&lt;/div&gt;&lt;p&gt;This is a short documentary on Steve Jobs, trying to start again with the NeXT computers. It captures him as
+a individual working with his team, using his experience, build and sell a computer for education market.&lt;/p&gt;
+&lt;p&gt;Given the team he had, the approach he took, it seems that the result was a successful one.&lt;/p&gt;
+&lt;pre class="literal-block"&gt;
+BYTE in 1989 listed the NeXT Computer as among the "Excellence" winners of the BYTE Awards, stating that
+it "shows what can be done when a personal computer is designed as a system, and not a collection of
+hardware elements". Citing as "truly innovative" the optical drive, DSP, and object-oriented programming
+environment, the magazine concluded that "the NeXT Computer is worth every penny of its $6500 market price".
+&lt;/pre&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;&lt;a class="reference external" href="https://en.wikipedia.org/wiki/NeXT_Computer#Reception"&gt;NeXT_Computer&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/div&gt;</description><category>business</category><category>startup</category><guid>http://www.xtoinfinity.com/posts/2017/04/06/steve-jobs-how-to-start-a-business.html</guid><pubDate>Fri, 07 Apr 2017 06:35:00 GMT</pubDate></item><item><title>CS50 Lecture by Mark Zuckerberg</title><link>http://www.xtoinfinity.com/posts/2017/04/04/cs50-lecture-by-mark-zuckerberg.html</link><dc:creator>Senthil Kumaran</dc:creator><description>&lt;div&gt;&lt;div class="youtube-video align-center"&gt;
+&lt;iframe width="425" height="344" src="https://www.youtube.com/embed/xFFs9UgOAlE?rel=0&amp;amp;hd=1&amp;amp;wmode=transparent"&gt;&lt;/iframe&gt;
+&lt;/div&gt;&lt;p&gt;Listened to this guest lecture  by Mark Zuckerberg in 2005. He was not world famous then yet, so the
+audience size is small and they ask pointed questions about facebook. This was supposed to be a computer
+science class, and Mark chides multiple times at the crowd that they are not asking CS questions yet.&lt;/p&gt;
+&lt;p&gt;Mark Zuckerberg's personality comes out well in this lecture. The interesting things that
+a computer science engineer can pick up is, Mark suggests, knowing "C" you could jump to
+"PHP". The idea about scalable architecture, performance optimization early in the game etc.&lt;/p&gt;
+&lt;p&gt;His thoughts on running a business in a competitive environment were interesting too.&lt;/p&gt;&lt;/div&gt;</description><guid>http://www.xtoinfinity.com/posts/2017/04/04/cs50-lecture-by-mark-zuckerberg.html</guid><pubDate>Wed, 05 Apr 2017 06:40:51 GMT</pubDate></item><item><title>Finished Reading: The Meaning Of It All - Richard Feynman</title><link>http://www.xtoinfinity.com/posts/2017/04/03/finished-reading-the-meaning-of-it-all-richard-feynman.html</link><dc:creator>Senthil Kumaran</dc:creator><description>&lt;div&gt;&lt;img alt="https://dl.dropbox.com/s/w6ilwgd9niepm8c/meaning_of_it_all.png" class="align-center" src="https://dl.dropbox.com/s/w6ilwgd9niepm8c/meaning_of_it_all.png"&gt;
+&lt;p&gt;This is a short non-technical book consisting of compiled speeches of Richard Feynman. It does not into physics, but
+covers a lot of topics like religion, politics, society, ethical questions in science, atom bombs and scientist
+motivations. Richard feynman has lot of context to explore all these areas. Plus, his communication style is very
+pleasant.&lt;/p&gt;
+&lt;p&gt;I usually avoid reading general books like this. But I happen to pick this up, and on a day, when I was about to give
+some leeway into an astrology (it's not a science) shared by my close ones, having just reading a topic in this book
+gave me excellent points to bring my thinking back into track. Contrary to my assumption when starting to read this
+book, I found it extremely useful!&lt;/p&gt;&lt;/div&gt;</description><category>books</category><guid>http://www.xtoinfinity.com/posts/2017/04/03/finished-reading-the-meaning-of-it-all-richard-feynman.html</guid><pubDate>Mon, 03 Apr 2017 17:29:32 GMT</pubDate></item></channel></rss>

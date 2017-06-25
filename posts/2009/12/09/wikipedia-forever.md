@@ -1,0 +1,1 @@
+<html><body><a href="http://wikimediafoundation.org/wiki/Support_Wikipedia/en"><img border="0" alt="Wikipedia Affiliate Button" src="http://wikimediafoundation.org/w/extensions/skins/Donate/images/banners/Banner_125x125_0001_B.jpg"></a></body></html>

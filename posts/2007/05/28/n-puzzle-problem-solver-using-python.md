@@ -1,0 +1,3 @@
+<html><body><p>Completed and submitted my project "<a href="http://sarovar.org/docman/view.php/194/130/N-Puzzle_Project_Report.zip">N-Puzzle problem solver</a>". Wrote it in Python programming language and it was good fun. Learned about the similarities of lisp and python. Why lisp is so powerful and how easy things will become once you get a hang of the language called Python.
+
+Solving the N-Puzzle problem, I had tried without any base algorithms and it was damn hard to derive any solution. Once I saw the problem solving strategy using Manhattan Distances at norvig 's site. Coding the solution was enjoyable. You get a feel of what AI problems are when trying these Toy-AI problems.</p></body></html>

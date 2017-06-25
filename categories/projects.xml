@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Senthil Kumaran's thoughts. (Posts about projects)</title><link>http://www.xtoinfinity.com/</link><description></description><atom:link href="http://www.xtoinfinity.com/categories/projects.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><lastBuildDate>Tue, 21 Mar 2017 14:11:30 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Who slides Wins</title><link>http://www.xtoinfinity.com/posts/who-slides-wins.html</link><dc:creator>Senthil Kumaran</dc:creator><description>&lt;div&gt;&lt;p&gt;Few years ago, I wrote this n-puzzle using pygame for fun.  It was inspired from the
+sliding block puzzle game that I had played as a kid, which had numerals in the front and
+a picture of taj mahal in the back. The idea was to slide and fit the photo together.&lt;/p&gt;
+&lt;p&gt;&lt;a class="reference external" href="https://github.com/orsenthil/who-slides-wins"&gt;https://github.com/orsenthil/who-slides-wins&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;How to play&lt;/strong&gt;&lt;/p&gt;
+&lt;ol class="arabic simple"&gt;
+&lt;li&gt;Human plays first. Use Arrow Keys to Move and Fit the Picture.&lt;/li&gt;
+&lt;li&gt;Press Enter when Done.&lt;/li&gt;
+&lt;li&gt;Computer Plays and tries to beat you with less moves that you took.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;It uses A* with Manhattan Distances to Solve the puzzle.&lt;/p&gt;
+&lt;p&gt;If you want to try it on your computer.&lt;/p&gt;
+&lt;ol class="arabic simple"&gt;
+&lt;li&gt;Install python2.7&lt;/li&gt;
+&lt;li&gt;Create a virtualenv.&lt;/li&gt;
+&lt;li&gt;pip install pygame&lt;/li&gt;
+&lt;li&gt;clone the git repo.&lt;/li&gt;
+&lt;li&gt;python run_game.py&lt;/li&gt;
+&lt;/ol&gt;&lt;/div&gt;</description><category>projects</category><guid>http://www.xtoinfinity.com/posts/who-slides-wins.html</guid><pubDate>Wed, 15 Feb 2017 17:22:07 GMT</pubDate></item></channel></rss>

@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html prefix="og: http://ogp.me/ns# article: http://ogp.me/ns/article# " lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="description" content="BSDKernel.java">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>BSDKernel.java | Senthil Kumaran's thoughts.</title>
+<link href="../../../assets/css/all-nocdn.css" rel="stylesheet" type="text/css">
+<meta name="theme-color" content="#5670d4">
+<meta name="generator" content="Nikola (getnikola.com)">
+<link rel="alternate" type="application/rss+xml" title="RSS" href="../../../rss.xml">
+<link rel="canonical" href="http://www.xtoinfinity.com/listings/java/abstractfactory/BSDKernel.java.html">
+<!--[if lt IE 9]><script src="../../../assets/js/html5.js"></script><![endif]-->
+</head>
+<body>
+<a href="#content" class="sr-only sr-only-focusable">Skip to main content</a>
+
+<!-- Menubar -->
+
+<nav class="navbar navbar-inverse navbar-static-top"><div class="container">
+<!-- This keeps the margins nice -->
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-navbar" aria-controls="bs-navbar" aria-expanded="false">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="http://www.xtoinfinity.com/">
+
+                <span id="blog-title">Senthil Kumaran's thoughts.</span>
+            </a>
+        </div>
+<!-- /.navbar-header -->
+        <div class="collapse navbar-collapse" id="bs-navbar" aria-expanded="false">
+            <ul class="nav navbar-nav">
+<li>
+<a href="../../../archive.html">Archives</a>
+                </li>
+<li>
+<a href="../../../categories/index.html">Tags</a>
+                </li>
+<li>
+<a href="../../../rss.xml">RSS feed</a>
+
+                
+            </li>
+</ul>
+<ul class="nav navbar-nav navbar-right">
+<li>
+    <a href="BSDKernel.java" id="sourcelink">Source</a>
+    </li>
+
+                
+            </ul>
+</div>
+<!-- /.navbar-collapse -->
+    </div>
+<!-- /.container -->
+</nav><!-- End of Menubar --><div class="container" id="content" role="main">
+    <div class="body-content">
+        <!--Body content-->
+        <div class="row">
+            
+            
+
+<nav class="breadcrumbs"><ul class="breadcrumb">
+<li><a href="../../">listings</a></li>
+                <li><a href="../">java</a></li>
+                <li><a href=".">abstractfactory</a></li>
+                <li>BSDKernel.java</li>
+</ul></nav><h1>BSDKernel.java
+        <small><a href="BSDKernel.java">(Source)</a></small>
+    </h1>
+    <table class="codetable"><tr>
+<td class="linenos"><div class="linenodiv"><pre><a href="#listingsjavaabstractfactorybsdkerneljava-1"> 1</a>
+<a href="#listingsjavaabstractfactorybsdkerneljava-2"> 2</a>
+<a href="#listingsjavaabstractfactorybsdkerneljava-3"> 3</a>
+<a href="#listingsjavaabstractfactorybsdkerneljava-4"> 4</a>
+<a href="#listingsjavaabstractfactorybsdkerneljava-5"> 5</a>
+<a href="#listingsjavaabstractfactorybsdkerneljava-6"> 6</a>
+<a href="#listingsjavaabstractfactorybsdkerneljava-7"> 7</a>
+<a href="#listingsjavaabstractfactorybsdkerneljava-8"> 8</a>
+<a href="#listingsjavaabstractfactorybsdkerneljava-9"> 9</a>
+<a href="#listingsjavaabstractfactorybsdkerneljava-10">10</a></pre></div></td>
+<td class="code"><pre class="code literal-block"><a name="listingsjavaabstractfactorybsdkerneljava-1"></a><span class="kd">public</span> <span class="kd">class</span> <span class="nc">BSDKernel</span> <span class="kd">implements</span> <span class="n">IKernel</span> <span class="o">{</span>
+<a name="listingsjavaabstractfactorybsdkerneljava-2"></a>    <span class="cm">/**</span>
+<a name="listingsjavaabstractfactorybsdkerneljava-3"></a><span class="cm">     * Load the kernel on top of the system image.</span>
+<a name="listingsjavaabstractfactorybsdkerneljava-4"></a><span class="cm">     */</span>
+<a name="listingsjavaabstractfactorybsdkerneljava-5"></a>    <span class="nd">@Override</span>
+<a name="listingsjavaabstractfactorybsdkerneljava-6"></a>    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">loadKernel</span><span class="o">()</span> <span class="o">{</span>
+<a name="listingsjavaabstractfactorybsdkerneljava-7"></a>        <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"Loading: "</span> <span class="o">+</span> <span class="k">this</span><span class="o">.</span><span class="na">getClass</span><span class="o">().</span><span class="na">getSimpleName</span><span class="o">());</span>
+<a name="listingsjavaabstractfactorybsdkerneljava-8"></a>
+<a name="listingsjavaabstractfactorybsdkerneljava-9"></a>    <span class="o">}</span>
+<a name="listingsjavaabstractfactorybsdkerneljava-10"></a><span class="o">}</span>
+</pre></td>
+</tr></table>
+</div>
+        <!--End of body content-->
+
+        <footer id="footer">
+            Contents © 2017         <a href="mailto:orsenthil@gmail.com">Senthil Kumaran</a> - Powered by         <a href="https://getnikola.com" rel="nofollow">Nikola</a>         
+            
+        </footer>
+</div>
+</div>
+
+
+            <script src="../../../assets/js/all-nocdn.js"></script><script>$('a.image-reference:not(.islink) img:not(.islink)').parent().colorbox({rel:"gal",maxWidth:"100%",maxHeight:"100%",scalePhotos:true});</script><!-- fancy dates --><script>
+    moment.locale("en");
+    fancydates(0, "YYYY-MM-DD HH:mm");
+    </script><!-- end fancy dates --><script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-71599453-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+</body>
+</html>

@@ -1,0 +1,1 @@
+<html><body><p>Watched the Super Star Rajini starer Shivaji today. It was very enjoyable. A pleasant and a family entertainer. Super star fans of course are gonna love it. Its  movie to watch leisurely and enjoy throughly. Lots of styles in this movie, good number of fun dialogs. Summa Adurudhu ellai. :-)</p></body></html>

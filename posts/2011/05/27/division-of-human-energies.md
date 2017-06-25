@@ -1,0 +1,3 @@
+<html><body><a title="By Anshuzsnowy7 (Own work) [GFDL (www.gnu.org/copyleft/fdl.html)], via Wikimedia Commons" href="http://commons.wikimedia.org/wiki/File:Snow_wall_on_the_way_to_saach_pass.jpg"><img class="aligncenter" src="http://upload.wikimedia.org/wikipedia/commons/thumb/f/ff/Snow_wall_on_the_way_to_saach_pass.jpg/800px-Snow_wall_on_the_way_to_saach_pass.jpg" alt="Snow wall on the way to saach pass" width="240"></a>
+
+<p style="text-align:center;"><em>I am confirmed in my division of human energies. Ambitious people climb, but faithful people build. --<a title="Julia Ward Howe" href="http://en.wikiquote.org/wiki/Julia_Ward_Howe" target="_blank">Julia Ward Howe</a></em></p></body></html>

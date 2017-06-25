@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html prefix="og: http://ogp.me/ns# article: http://ogp.me/ns/article# " lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Leslie Lamport on Teaching Concurrency | Senthil Kumaran's thoughts.</title>
+<link href="../assets/css/all-nocdn.css" rel="stylesheet" type="text/css">
+<meta name="theme-color" content="#5670d4">
+<meta name="generator" content="Nikola (getnikola.com)">
+<link rel="alternate" type="application/rss+xml" title="RSS" href="../rss.xml">
+<link rel="canonical" href="http://www.xtoinfinity.com/posts/leslie-lamport-on-teaching-concurrency.html">
+<!--[if lt IE 9]><script src="../assets/js/html5.js"></script><![endif]--><meta name="author" content="Senthil Kumaran">
+<link rel="prev" href="edisons-todo-list.html" title="Edison's TODO list" type="text/html">
+<link rel="next" href="rationale-behind-punishments.html" title="Rationale behind punishments" type="text/html">
+<meta property="og:site_name" content="Senthil Kumaran's thoughts.">
+<meta property="og:title" content="Leslie Lamport on Teaching Concurrency">
+<meta property="og:url" content="http://www.xtoinfinity.com/posts/leslie-lamport-on-teaching-concurrency.html">
+<meta property="og:description" content="This post is a short discussion on the Leslie Lamport 's paper &quot;Teaching Concurrency&quot;.
+Lamport's basic premise is that understanding the system the most important part, and engineers often muddy their">
+<meta property="og:type" content="article">
+<meta property="article:published_time" content="2016-12-20T19:17:54-08:00">
+<meta property="article:tag" content="mathjax">
+</head>
+<body>
+<a href="#content" class="sr-only sr-only-focusable">Skip to main content</a>
+
+<!-- Menubar -->
+
+<nav class="navbar navbar-inverse navbar-static-top"><div class="container">
+<!-- This keeps the margins nice -->
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-navbar" aria-controls="bs-navbar" aria-expanded="false">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="http://www.xtoinfinity.com/">
+
+                <span id="blog-title">Senthil Kumaran's thoughts.</span>
+            </a>
+        </div>
+<!-- /.navbar-header -->
+        <div class="collapse navbar-collapse" id="bs-navbar" aria-expanded="false">
+            <ul class="nav navbar-nav">
+<li>
+<a href="../archive.html">Archives</a>
+                </li>
+<li>
+<a href="../categories/index.html">Tags</a>
+                </li>
+<li>
+<a href="../rss.xml">RSS feed</a>
+
+                
+            </li>
+</ul>
+<ul class="nav navbar-nav navbar-right">
+<li>
+    <a href="leslie-lamport-on-teaching-concurrency.rst" id="sourcelink">Source</a>
+    </li>
+
+                
+            </ul>
+</div>
+<!-- /.navbar-collapse -->
+    </div>
+<!-- /.container -->
+</nav><!-- End of Menubar --><div class="container" id="content" role="main">
+    <div class="body-content">
+        <!--Body content-->
+        <div class="row">
+            
+            
+<article class="post-text h-entry hentry postpage" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title" itemprop="headline name"><a href="#" class="u-url">Leslie Lamport on Teaching Concurrency</a></h1>
+
+        <div class="metadata">
+            <p class="byline author vcard"><span class="byline-name fn">
+                    Senthil Kumaran
+            </span></p>
+            <p class="dateline"><a href="#" rel="bookmark"><time class="published dt-published" datetime="2016-12-20T19:17:54-08:00" itemprop="datePublished" title="2016-12-20 19:17">2016-12-20 19:17</time></a></p>
+                <p class="commentline">
+        
+    <a href="leslie-lamport-on-teaching-concurrency.html#disqus_thread" data-disqus-identifier="cache/posts/leslie-lamport-on-teaching-concurrency.html">Comments</a>
+
+
+            
+        </p>
+<p class="sourceline"><a href="leslie-lamport-on-teaching-concurrency.rst" id="sourcelink">Source</a></p>
+
+        </div>
+        
+
+    </header><div class="e-content entry-content" itemprop="articleBody text">
+    <div>
+<p>This post is a short discussion on the <a class="reference external" href="https://en.wikipedia.org/wiki/Leslie_Lamport">Leslie Lamport</a> 's paper "<a class="reference external" href="http://research.microsoft.com/en-us/um/people/lamport/pubs/teaching-concurrency.pdf">Teaching Concurrency</a>".</p>
+<p>Lamport's basic premise is that understanding the system the most important part, and engineers often muddy their
+understanding with implementation details as soon as they start talking about programming languages suitable for
+concurrency.</p>
+<p>He even challenges engineers to come up with the solution for concurrency problems without using "<a class="reference external" href="https://en.wikipedia.org/wiki/Semaphore_(programming)">semaphores</a>",
+"<a class="reference external" href="https://en.wikipedia.org/wiki/Monitor_(synchronization)">monitors</a>", or any other construct that were invented and provided as a tool. Using those, he says, is like using the
+'sort' to routine the language to implement a sorting algorithm.</p>
+<blockquote>
+The modern field of concurrency started with Dijkstra’s 1965 paper on the mutual exclusion problem. For most of the
+1970s, one “solved” the mutual exclusion problem by using semaphores or monitors or conditional critical regions or
+some other language construct. This is like solving the sorting problem by using a programming language with a sort
+command. Most of your colleagues can explain how to implement mutual exclusion using a semaphore. How many of them
+can answer the following question: Can one implement mutual exclusion without using lower-level constructs that,
+like semaphores, assume mutually exclusive access to a resource?</blockquote>
+<p>Lamport's approach to problem solving suggests, we need to think of computing problem as series of states instead of
+series of steps. I think, series of steps tend to give some linearity the approach, while series of states tend to
+indicate that sub-parts of the system can have multiple states and the next state each sub-part can take only depends
+upon the current state and action that leads the state transition to the next state.</p>
+<blockquote>
+<p>It is more useful to think about states than sequences of steps because what a computing device does next depends on
+its current state, not on what steps it took in the past.</p>
+<p>To describe a computation we need to describe a sequence of states. More often, we need to describe the set of
+computations that can be produced by some particular computing device, such as an algorithm. There is one method that
+works in practice: describing a set of computations by</p>
+<ol class="arabic simple">
+<li>the set of all initial initial states and</li>
+<li>A next-state relation that describes, for every state, the possible next states that is, the set of states
+reachable from that state by a single step.</li>
+</ol>
+</blockquote>
+<p>On computational thinking.</p>
+<blockquote>
+<p>How should we describe computations?</p>
+<p>Most computer scientists would probably interpret this question to mean, what language should we use? Imagine an
+art historian answering “how would you describe impressionist painting?” by saying “in French”.</p>
+<p>Programming and hardware-design languages don’t help an engineer understand what problem a system should solve.
+Thinking of computations as sequences of states, rather than as something described by a language, is the first
+step towards such understanding.</p>
+</blockquote>
+<p>Lamport also describes in great details about importance of problem specification. Sometimes, when the problem is
+specified clearly and understood problem, the solution becomes easy.  Most of our struggles seems to be with coming to
+grasp the problem specification.</p>
+<blockquote>
+The great contribution of Dijkstra’s paper on mutual exclusion was not his solution; it was stating the problem.
+(It is remarkable that, in this first paper on the subject, Dijkstra stated all the requirements that distinguish
+mutual exclusion from fundamentally simpler and less interesting problems.)</blockquote>
+<p><em>On concurrency, itself</em></p>
+<p>He gives an example of concurrency problem  that according to him is "trivial". It took me some reading to understand
+the problem. <a class="reference external" href="http://stackoverflow.com/questions/24989756/what-is-the-inductive-invariant-of-the-simple-concurrent-program">StackOverflow.com</a> certainly helped.</p>
+<blockquote>
+<p>Once an engineer understands what a computation is and how it is described, she can understand the most important
+concept in concurrency: invariance. A computing device does the correct thing only because it maintains a correct
+state. Correctness of the state is expressed by an invariant—a predicate that is true in every state of every
+computation.</p>
+<p>Invariance is the key to understanding concurrent systems, but few engineers or computer scientists have learned to
+think in terms of invariants. Here is a simple example.</p>
+</blockquote>
+<p><strong>Now, the problem</strong></p>
+<p>Consider N processes numbered from 0 through N − 1 in which each process i executes</p>
+<div class="math">
+\begin{equation*}
+x[i] :=1;
+\end{equation*}
+</div>
+<div class="math">
+\begin{equation*}
+
+y[i] := x[(i-1)modN]
+\end{equation*}
+</div>
+<p>and stops, where each <span class="math">\(x[i]\)</span> initially equals 0. (The reads and writes of each <span class="math">\(x[i]\)</span> are assumed to be
+atomic.)</p>
+<p>This algorithm satisfies the following property: after every process has stopped, <span class="math">\(y[i]\)</span> equals 1 for at least
+one process <span class="math">\(i\)</span> .</p>
+<p>It is easy to see that the algorithm satisfies this property; the last process <span class="math">\(i\)</span> to write <span class="math">\(y[i]\)</span> must set
+it to 1. But that process doesnt set <span class="math">\(y[i]\)</span> to 1 because it was the last process to write y.</p>
+<p>What a process does depends only on the current state, not on what processes wrote before it. The algorithm satisfies
+this property because it maintains an inductive invariant.</p>
+<p><strong>Explanation</strong></p>
+<p>The explanation on how <span class="math">\(y[i]\)</span> equals for 1 at least one process <span class="math">\(i\)</span> goes like this.</p>
+<ol class="arabic simple">
+<li>The <span class="math">\(x_s\)</span> model the following behavior: <span class="math">\(x[i]\)</span> is 1 if and only if the process <span class="math">\(i\)</span> has already run.</li>
+<li>After all processes have completed, all <span class="math">\(x_s\)</span> are thus set to 1.</li>
+<li>The <span class="math">\(y_s\)</span> are a bit trickier: <span class="math">\(y[i]\)</span> is set if <span class="math">\(x[i-1]\)</span> was set, that is, <span class="math">\(y[i]\)</span> is 1 if and
+only if the predecessor of <span class="math">\(i\)</span> had already run when <span class="math">\(i\)</span> was doing its write to <span class="math">\(y\)</span>.</li>
+</ol>
+<p>I essentially to had resort to <a class="reference external" href="http://stackoverflow.com/questions/24989756/what-is-the-inductive-invariant-of-the-simple-concurrent-program">StackOverflow.com</a> post author's explanation to completely understand this.</p>
+<p>The program invariant is:</p>
+<blockquote>
+<p>If a process has set <span class="math">\(y[i]\)</span>, it must already have set <span class="math">\(x[i]\)</span> to 1.
+This is true regardless whether <span class="math">\(y[i]\)</span> is set to 0 or 1.</p>
+<p>Proving this invariant is quite easy: In the beginning, none of the <span class="math">\(y_s\)</span> is set, so it holds trivially.
+During program execution, each write to <span class="math">\(y[i]\)</span> is <a class="reference external" href="https://en.wikipedia.org/wiki/Sequence_point">sequenced after</a> a write to <span class="math">\(x[i]\)</span>. Therefore
+the invariant also holds for every step of the program afterwards.</p>
+</blockquote>
+<p>The further reasoning goes like this.</p>
+<blockquote>
+<p>The last process to finish sets <span class="math">\(y[i]\)</span> to 1 because, by definition of being the last process, its
+predecessor must have already finished execution at that point (ie. its y value is already set).</p>
+<p>Which means, because of the invariant, its <span class="math">\(x\)</span> value (which determines the last process' <span class="math">\(y\)</span> value)
+has to be 1.</p>
+</blockquote>
+<p>The alternate way to look at this problem can give some intuitive understanding too.</p>
+<blockquote>
+You cannot find an execution order in which all <span class="math">\(y_s\)</span> are set to 0. Doing so would require all processes to
+execute before their predecessor. However, since our processes are arranged in a ring (that is, if I follow the
+predecessor chain I will eventually end up at my starting point again), this leads to the contradiction that at
+least one process must have finished executing before it wrote to <span class="math">\(y\)</span>.</blockquote>
+<p>To understand this concurrency problem, it requires some notion of syntax, a prior understanding of proving hypothesis,
+and possibly discussing the problem and solution.</p>
+<p>Trying to understand itself, I guess, is a progress.</p>
+</div>
+    </div>
+    <aside class="postpromonav"><nav><ul itemprop="keywords" class="tags"></ul>
+<ul class="pager hidden-print">
+<li class="previous">
+                <a href="edisons-todo-list.html" rel="prev" title="Edison's TODO list">Previous post</a>
+            </li>
+            <li class="next">
+                <a href="rationale-behind-punishments.html" rel="next" title="Rationale behind punishments">Next post</a>
+            </li>
+        </ul></nav></aside><section class="comments hidden-print"><h2>Comments</h2>
+        
+        
+        <div id="disqus_thread"></div>
+        <script>
+        var disqus_shortname ="xtoinfinity",
+            disqus_url="http://www.xtoinfinity.com/posts/leslie-lamport-on-teaching-concurrency.html",
+        disqus_title="Leslie Lamport on Teaching Concurrency",
+        disqus_identifier="cache/posts/leslie-lamport-on-teaching-concurrency.html",
+        disqus_config = function () {
+            this.language = "en";
+        };
+        (function() {
+            var dsq = document.createElement('script'); dsq.async = true;
+            dsq.src = 'https://' + disqus_shortname + '.disqus.com/embed.js';
+            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+        })();
+    </script><noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a>
+</noscript>
+    <a href="https://disqus.com" class="dsq-brlink" rel="nofollow">Comments powered by <span class="logo-disqus">Disqus</span></a>
+
+
+        </section><script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"> </script><script type="text/x-mathjax-config">
+            MathJax.Hub.Config({tex2jax: {inlineMath: [['$latex ','$'], ['\\(','\\)']]}});
+            </script></article><script>var disqus_shortname="xtoinfinity";(function(){var a=document.createElement("script");a.async=true;a.src="https://"+disqus_shortname+".disqus.com/count.js";(document.getElementsByTagName("head")[0]||document.getElementsByTagName("body")[0]).appendChild(a)}());</script>
+</div>
+        <!--End of body content-->
+
+        <footer id="footer">
+            Contents © 2017         <a href="mailto:orsenthil@gmail.com">Senthil Kumaran</a> - Powered by         <a href="https://getnikola.com" rel="nofollow">Nikola</a>         
+            
+        </footer>
+</div>
+</div>
+
+
+            <script src="../assets/js/all-nocdn.js"></script><script>$('a.image-reference:not(.islink) img:not(.islink)').parent().colorbox({rel:"gal",maxWidth:"100%",maxHeight:"100%",scalePhotos:true});</script><!-- fancy dates --><script>
+    moment.locale("en");
+    fancydates(0, "YYYY-MM-DD HH:mm");
+    </script><!-- end fancy dates --><script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-71599453-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+</body>
+</html>

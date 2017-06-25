@@ -1,0 +1,1 @@
+<html><body><a href="http://www.python.org/download/releases/2.5/">Python 2.5</a> (FINAL) is now available.</body></html>

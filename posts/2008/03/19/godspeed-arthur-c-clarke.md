@@ -1,0 +1,1 @@
+<html><body><p>"Any sufficiently advanced technology is indistinguishable from magic." ~ <a href="http://en.wikipedia.org/wiki/Arthur_C._Clarke">Arthur C. Clarke</a>.</p></body></html>

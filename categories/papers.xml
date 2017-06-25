@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Senthil Kumaran's thoughts. (Posts about papers)</title><link>http://www.xtoinfinity.com/</link><description></description><atom:link href="http://www.xtoinfinity.com/categories/papers.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><lastBuildDate>Tue, 21 Mar 2017 14:11:30 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>SWIM - Group Membership protocol paper</title><link>http://www.xtoinfinity.com/posts/swim-group-membership-protocol-paper.html</link><dc:creator>Senthil Kumaran</dc:creator><description>&lt;div&gt;&lt;p&gt;For my computer science paper reading, I picked up a paper called &lt;a class="reference external" href="https://www.cs.cornell.edu/~asdas/research/dsn02-swim.pdf"&gt;SWIM - Scalable Weakly-consistent Infection style Process Group Membership Protocol&lt;/a&gt;, which I bookmarked a while ago.&lt;/p&gt;
+&lt;p&gt;I must have come across this while taking the distributed systems course by &lt;a class="reference external" href="http://indy.cs.illinois.edu/"&gt;Indranil Gupta&lt;/a&gt; in Coursera.
+This paper is interesting, approachable and tries to solve the problem of membership updates in distributed systems.&lt;/p&gt;
+&lt;p&gt;The primary motivation of this seems that heartbeat based member update seem not scalable, so they innovate on providing an alternate mechanism that can utilized for membership updates in a group.&lt;/p&gt;
+&lt;p&gt;The basic protocol uses the random-probing based failure detector protocol of and disseminates membership updates via
+network multicast.&lt;/p&gt;
+&lt;p&gt;The core innovative concepts include:&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;Epidemic style membership broadcast.&lt;/li&gt;
+&lt;li&gt;Suspicion-based failure detector protocol.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;In turn these provide:&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;Constant message load (bandwidth) per member regardless of the number of members in the group&lt;/li&gt;
+&lt;li&gt;Constant time to first-detection of a faulty process regardless of the number of members in the group&lt;/li&gt;
+&lt;li&gt;Low false-positive failure detection rate&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;This seems to be a popular paper, and there are many implementations available in the web. I think, I must bookmarked this paper as suggestion to myself that these are interesting projects (in python) to attempt.&lt;/p&gt;&lt;/div&gt;</description><category>computer science</category><category>papers</category><guid>http://www.xtoinfinity.com/posts/swim-group-membership-protocol-paper.html</guid><pubDate>Fri, 13 Jan 2017 04:54:20 GMT</pubDate></item><item><title>Dominant Resource Fairness</title><link>http://www.xtoinfinity.com/posts/dominant-resource-fairness.html</link><dc:creator>Senthil Kumaran</dc:creator><description>&lt;div&gt;&lt;p&gt;I was reading the paper on &lt;a class="reference external" href="https://people.eecs.berkeley.edu/~alig/papers/drf.pdf"&gt;Dominant Resource Fairness&lt;/a&gt; and found it approachable, interesting and fairly easy to
+understand.&lt;/p&gt;
+&lt;p&gt;&lt;a class="reference external" href="https://people.eecs.berkeley.edu/~alig/papers/drf.pdf"&gt;Dominant Resource Fairness&lt;/a&gt; is a resource allocation strategy used by a system like &lt;a class="reference external" href="http://mesos.apache.org/"&gt;Mesos&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;In general terms, resources are basically things that a group will need and the idea is the allocate the resources
+amongst the members of the group in an efficient way. Examples could be the amount of money (resource) to be
+distributed across a group of people in the community or the processor cores in a multi-core processor that needs to be
+distributed and allocated to the process running on that processor.&lt;/p&gt;
+&lt;p&gt;The Dominant Resource Fairness uses &lt;a class="reference external" href="https://en.wikipedia.org/wiki/Linear_programming"&gt;Linear Programming&lt;/a&gt; technique to solve the problem of resource sharing.&lt;/p&gt;
+&lt;p&gt;In a datacenter with multiple computers, having multiple CPUs, multiple memories, network cards and many other resources,
+those needs to be shared across the processes that are running in the datacenter. DRF uses the concept of a dominant
+resource. The Dominant share is the maximum share that an entity (process) has been allocated for any resource. For
+e.g, if if a process A has heavy CPU usage and process B has heavy memory usage, the dominant resource for process A is
+CPU and the dominant resource for process B is Memory.&lt;/p&gt;
+&lt;p&gt;Dominant Resource Fairness seeks to maximize the minimum dominant share across all entities. That's the formulation
+for the linear programming problem for you. Doing it across in a distributed way for different tasks with different
+requirements is the challenge that is being solved.&lt;/p&gt;
+&lt;p&gt;For example, if user A runs CPU-heavy tasks and user B runs memory-heavy tasks, the DRF attempts to equalize CPU share
+of user A with the memory share of user B. In this case, the DRF would allocate more CPU and less memory to the tasks
+run by user A, and allocate less CPU and more memory to the tasks run by user B. In the single resource case -- where
+all jobs are requesting the same resources -- the DRF reduces to max-min fairness for that resource.&lt;/p&gt;
+&lt;p&gt;Some interesting anecdotes I found in the paper include, enforcing "fairness" in resource sharing is a difficult
+problem by itself.&lt;/p&gt;
+&lt;blockquote&gt;
+A big search company provided dedicated machines for jobs only if the users could guarantee high utilization. The
+company soon found that users would sprinkle their code with infinite loops to artificially inflate utilization
+levels.&lt;/blockquote&gt;
+&lt;p&gt;The paper also quoted economic research on difficultly in ensuring fairness.&lt;/p&gt;
+&lt;blockquote&gt;
+Competitive equilibrium from equal incomes (CEEI), a popular fair allocation policy preferred in the micro-economic
+domain is not strategy proof.&lt;/blockquote&gt;&lt;/div&gt;</description><category>computer science</category><category>papers</category><category>research</category><guid>http://www.xtoinfinity.com/posts/dominant-resource-fairness.html</guid><pubDate>Thu, 05 Jan 2017 03:27:53 GMT</pubDate></item></channel></rss>

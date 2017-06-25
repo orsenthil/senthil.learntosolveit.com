@@ -1,0 +1,267 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Senthil Kumaran's thoughts. (Posts about v1)</title><link>http://www.xtoinfinity.com/</link><description></description><atom:link href="http://www.xtoinfinity.com/categories/v1.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><lastBuildDate>Tue, 21 Mar 2017 14:11:30 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Comma Free Codes</title><link>http://www.xtoinfinity.com/posts/comma-free-codes.html</link><dc:creator>Senthil Kumaran</dc:creator><description>&lt;div&gt;&lt;p&gt;We awe at Donald Knuth. I wondered, if I can understand a subject taught by Knuth and derive satisfaction of learning
+something directly from the master. I attended his most recent lecture on "comma free codes", felt that it was
+accessible and could be understood by putting some effort. This is my attempt to grasp the topic of "comma free codes",
+taught by Knuth for his 21st annual christmas tree lecture on Dec 2015. We will use some definitions directly from
+Williard Eastman's paper, reference the topics in wikipedia, look at Knuth's explanation.&lt;/p&gt;
+&lt;p&gt;We talk of codes in the context of information theory. A code is a system of rules to convert information—such as a
+letter, word, sound, image, or gesture—into another form or representation. A sequence of symbols, like a sequence of
+binary symbols, sequence of base-10 decimals or a sequence of English language alphabets can all be termed as "code". A
+block code is a set of codes having the same length.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Comma Free Block Code&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Comma free code is a code that can be easily synchronized without any external unit like comma or space,
+"&lt;strong&gt;likethis&lt;/strong&gt;". Comma free block code is set of same length codes having the comma free property.&lt;/p&gt;
+&lt;p&gt;The four letter words in "&lt;strong&gt;goodgame&lt;/strong&gt;" is recognizable, it easy to derive those as "&lt;strong&gt;good&lt;/strong&gt;" and "&lt;strong&gt;game&lt;/strong&gt;".
+Other possible substring four letter words in that phrase "&lt;strong&gt;oodg&lt;/strong&gt;", "&lt;strong&gt;odga&lt;/strong&gt;", "&lt;strong&gt;dgga&lt;/strong&gt;" are invalid words in
+english (or non code-words) and thus we did not have any problem separating the codewords when they were not
+separated by delimiters like space or comma. Anecdotally, Chinese and Thai languages do not use space between words.&lt;/p&gt;
+&lt;p&gt;Take an alternate example, "&lt;strong&gt;fujiverb&lt;/strong&gt;". Can you say deterministically if the word "&lt;strong&gt;jive&lt;/strong&gt;" is my code word? Or my
+code words consists only of "&lt;strong&gt;fuji&lt;/strong&gt;" and "&lt;strong&gt;verb&lt;/strong&gt;". You cannot determine it from this message and thus, "fuji" and
+"verb" do not form valid a "comma free block codes".&lt;/p&gt;
+&lt;p&gt;The same applies to a periodic code word like "&lt;strong&gt;gaga&lt;/strong&gt;". If a message "&lt;strong&gt;gagagaga&lt;/strong&gt;" occurs, then the middle word
+"&lt;strong&gt;gaga&lt;/strong&gt;" will be ambiguous as it is composed of 2-letter suffix and a 2-prefix of our code word and we wont be able to
+differentiate it.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Mathematical definition&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Comma free code words are defined like this.&lt;/p&gt;
+&lt;blockquote&gt;
+A block code, &lt;strong&gt;C&lt;/strong&gt; containing words of length &lt;strong&gt;n&lt;/strong&gt; is called comma free if, and only if, for any words
+&lt;span class="math"&gt;\(w = w_1, w_2 ... w_n. \: and \: x = x_1, x_2 ... x_n\)&lt;/span&gt; belonging to &lt;strong&gt;C&lt;/strong&gt;, the &lt;strong&gt;n&lt;/strong&gt; letter overlaps
+&lt;span class="math"&gt;\(w_k ... w_nx_1 .... x_{k-1} (k = 2, ... n)\)&lt;/span&gt; are not words in the code.&lt;/blockquote&gt;
+&lt;p&gt;This simply means that if two code words are joined together, than in that joined word, any substring from second letter
+to the last of the block code length should not be a code word.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;How to find them?&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Backtracking.&lt;/p&gt;
+&lt;p&gt;The general idea to find comma free block codes is use a backtracking solution and for every word that we want to add to
+the list, prune through through already added words and find if the new word can be a substring of two words joined
+together from the existing list. Knuth gave a demo of finding the maximum comma free subset of the four letter words.&lt;/p&gt;
+&lt;p&gt;&lt;a class="reference external" href="http://www.xtoinfinity.com/listings/commafree_check.py.html"&gt;commafree_check.py&lt;/a&gt;  &lt;a class="reference external" href="http://www.xtoinfinity.com/listings/commafree_check.py"&gt;(Source)&lt;/a&gt;&lt;/p&gt;
+&lt;pre class="code python"&gt;&lt;a name="rest_code_d19b769e30da4297a6780aecb5bae873-1"&gt;&lt;/a&gt;&lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;check_comma_free&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;input_string&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
+&lt;a name="rest_code_d19b769e30da4297a6780aecb5bae873-2"&gt;&lt;/a&gt;  &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="n"&gt;check_periodic&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;input_string&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
+&lt;a name="rest_code_d19b769e30da4297a6780aecb5bae873-3"&gt;&lt;/a&gt;    &lt;span class="k"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;"input string is periodic, it cannot be commafree."&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;a name="rest_code_d19b769e30da4297a6780aecb5bae873-4"&gt;&lt;/a&gt;    &lt;span class="k"&gt;return&lt;/span&gt;
+&lt;a name="rest_code_d19b769e30da4297a6780aecb5bae873-5"&gt;&lt;/a&gt;  &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="nb"&gt;len&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;comma_free_words&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="o"&gt;==&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+&lt;a name="rest_code_d19b769e30da4297a6780aecb5bae873-6"&gt;&lt;/a&gt;    &lt;span class="n"&gt;comma_free_words&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;append&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;input_string&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;a name="rest_code_d19b769e30da4297a6780aecb5bae873-7"&gt;&lt;/a&gt;  &lt;span class="k"&gt;else&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+&lt;a name="rest_code_d19b769e30da4297a6780aecb5bae873-8"&gt;&lt;/a&gt;    &lt;span class="n"&gt;parts&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;get_parts&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;input_string&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;a name="rest_code_d19b769e30da4297a6780aecb5bae873-9"&gt;&lt;/a&gt;    &lt;span class="k"&gt;for&lt;/span&gt; &lt;span class="n"&gt;head&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;tail&lt;/span&gt; &lt;span class="ow"&gt;in&lt;/span&gt; &lt;span class="n"&gt;parts&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+&lt;a name="rest_code_d19b769e30da4297a6780aecb5bae873-10"&gt;&lt;/a&gt;      &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;any_starts_with&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;head&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="ow"&gt;and&lt;/span&gt; &lt;span class="n"&gt;any_ends_with&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;tail&lt;/span&gt;&lt;span class="p"&gt;))&lt;/span&gt; &lt;span class="ow"&gt;or&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;any_starts_with&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;tail&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="ow"&gt;and&lt;/span&gt; &lt;span class="n"&gt;any_ends_with&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;head&lt;/span&gt;&lt;span class="p"&gt;)):&lt;/span&gt;
+&lt;a name="rest_code_d19b769e30da4297a6780aecb5bae873-11"&gt;&lt;/a&gt;        &lt;span class="k"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;"&lt;/span&gt;&lt;span class="si"&gt;%s&lt;/span&gt;&lt;span class="s2"&gt;|&lt;/span&gt;&lt;span class="si"&gt;%s&lt;/span&gt;&lt;span class="s2"&gt; are part of the previous words."&lt;/span&gt; &lt;span class="o"&gt;%&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;head&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;tail&lt;/span&gt;&lt;span class="p"&gt;))&lt;/span&gt;
+&lt;a name="rest_code_d19b769e30da4297a6780aecb5bae873-12"&gt;&lt;/a&gt;        &lt;span class="k"&gt;return&lt;/span&gt;
+&lt;a name="rest_code_d19b769e30da4297a6780aecb5bae873-13"&gt;&lt;/a&gt;    &lt;span class="n"&gt;comma_free_words&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;append&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;input_string&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;/pre&gt;&lt;p&gt;This logic is dependent on the order in which comma free block codes are analyzed. For finding a maximal set in a given
+alphabet size in any order a proper backtracking based solution should be devised, which considers all the cases of
+insertions.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;How many are there?&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Backtracking based solution requires us to intelligently prune the search space. Finding effective strategies for
+pruning the search space becomes our the next problem in finding the comma free codes. We will have to determine how
+many comma free block codes are possible for a given alphabet size and for a given length.&lt;/p&gt;
+&lt;p&gt;For 4 letter words, (n = 4) of the alphabet size &lt;strong&gt;m&lt;/strong&gt;, we know that there are &lt;span class="math"&gt;\(m^4\)&lt;/span&gt; possible words (permutation
+with repetition). But we're restricted to aperiodic words of length 4, of which there are &lt;span class="math"&gt;\(m^4 - m^2\)&lt;/span&gt;. Notice
+further that if word, &lt;strong&gt;item&lt;/strong&gt; has been chosen, we aren't allowed to include any of its cyclic shifts &lt;strong&gt;temi&lt;/strong&gt;, &lt;em&gt;emit*&lt;/em&gt;,
+or &lt;strong&gt;mite&lt;/strong&gt;, because they all appear within &lt;strong&gt;itemitem&lt;/strong&gt;. Hence the maximum number of codewords in our commafree code
+cannot exceed &lt;span class="math"&gt;\((m^4 - m^2)/4\)&lt;/span&gt;.&lt;/p&gt;
+&lt;p&gt;Let us consider the binary case, m = 2 and length n = 4, &lt;strong&gt;C(2, 4)&lt;/strong&gt;. We can choose four-bit "words" like this.&lt;/p&gt;
+&lt;p&gt;[0001] = {0001, 0010, 0100, 1000},&lt;/p&gt;
+&lt;p&gt;[0011] = {0011, 0110, 1100, 1001},&lt;/p&gt;
+&lt;p&gt;[0111] = {0111, 1100, 1101, 1011},&lt;/p&gt;
+&lt;p&gt;The maximum number of code words from our formula will be &lt;span class="math"&gt;\(2^4 - 2^2/4 \: = \: 3\)&lt;/span&gt;.  Can we choose three
+four-bit "words" from the above cyclic classes? Yes and choosing the lowest in each cyclic class will simply do. But
+choosing the lowest will not work for all n and m.&lt;/p&gt;
+&lt;p&gt;In the class taught by Knuth, we analyzed the choosing codes when m = 3 {0, 1, 2} and for n = 3, &lt;strong&gt;C(3, 3)&lt;/strong&gt;. The words
+in the category were&lt;/p&gt;
+&lt;p&gt;000  111  222     # Invalid since they are periodic&lt;/p&gt;
+&lt;p&gt;001  010  100     # A set of cyclic shifts, only one can taken as a valid code word.&lt;/p&gt;
+&lt;p&gt;002  020  200&lt;/p&gt;
+&lt;p&gt;011  110  101&lt;/p&gt;
+&lt;p&gt;012  120  201&lt;/p&gt;
+&lt;p&gt;021  210  102&lt;/p&gt;
+&lt;p&gt;112  121  211&lt;/p&gt;
+&lt;p&gt;220  202  022&lt;/p&gt;
+&lt;p&gt;221  212  122&lt;/p&gt;
+&lt;p&gt;The number 3-alphabet code words of length 3 is 27 ( = &lt;span class="math"&gt;\(3^3\)&lt;/span&gt;). The set of valid code words in this will be
+&lt;span class="math"&gt;\((3^3-3) / 3 = 8\)&lt;/span&gt;.&lt;/p&gt;
+&lt;p&gt;Choosing the lowest index will not work here for e.g, if we choose 021 and 220, and we send the word 220021 the word 002
+is conflicting as it is part of our code word. With any back-tracking based solution, we will have to determine the
+correct non-cyclic words to choose in each set to form our maximal set of 8 code words.&lt;/p&gt;
+&lt;p&gt;The problem of finding comma free code words increases exponentially to the size of the length of the code word and on
+the code word size. For e.g, The task of finding all four-letter comma free codes is not difficult when m = 3, and only
+18 cycle classes are involved. But it already becomes challenging when m = 4, because we must then deal with &lt;span class="math"&gt;\((4^4
+- 4^2) / 4 = 60\)&lt;/span&gt; classes. Therefore we'll want to give it some careful thought as we try to set it up for backtracking.&lt;/p&gt;
+&lt;p&gt;Willard Eastman came up with clever solution to find a code word for any odd word length n over an infinite alphabet
+size. Eastman proposed a solution wherein if we give a n letter word (n should be odd), the algorithm will output the
+correct shift required to make the n letter word a code word.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Eastman's Algorithm&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Construction of Comma Free Codes&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;The following elegant construction yields a comma free code of maximum size for any odd block length n, over any
+alphabet.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Given a sequence of &lt;span class="math"&gt;\(x =x_0x_1...x_{n-1}\)&lt;/span&gt; of nonnegative integers, where x differs from each of its
+other cyclic shifts &lt;span class="math"&gt;\(x_k...x_{n-1}x_0..x_{k-1}\)&lt;/span&gt; for 0 &amp;lt; k &amp;lt; n, the procedure outputs a cyclic shift
+&lt;span class="math"&gt;\(\sigma x\)&lt;/span&gt; with the property that the set of all such &lt;span class="math"&gt;\(\sigma x\)&lt;/span&gt; is a commafree.&lt;/p&gt;
+&lt;p&gt;We regard x as an infinite periodic sequence &lt;span class="math"&gt;\(&amp;lt;x_n&amp;gt;\)&lt;/span&gt; with &lt;span class="math"&gt;\(x_k = x_{k-n}\)&lt;/span&gt; for all &lt;span class="math"&gt;\(k \ge n\)&lt;/span&gt;. Each
+cyclic shift then has the form &lt;span class="math"&gt;\(x_kx_{k+1}...x_{k+n-1}\)&lt;/span&gt;. The simplest nontrivial example occurs when n = 3,
+where &lt;span class="math"&gt;\(x=x_0 x_1 x_2 x_0 x_1 x_2 x_0 ...\)&lt;/span&gt; and we don't have &lt;span class="math"&gt;\(x_0 = x_1 = x_2\)&lt;/span&gt;. In this case, the algorithm
+outputs &lt;span class="math"&gt;\(x_kx_{k+1}x_{k+2}\)&lt;/span&gt; where &lt;span class="math"&gt;\(x_k &amp;gt; x_{k+1} \le x_{k+2}\)&lt;/span&gt;; and the set of all such triples clearly
+satisfies the commafree condition.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;The idea expressed is to choose a triplet (a, b, c) of the form.&lt;/p&gt;
+&lt;div class="math"&gt;
+\begin{equation*}
+a \: \gt b \: \le c
+\end{equation*}
+&lt;/div&gt;
+&lt;p&gt;&lt;strong&gt;Why does this work?&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;If we take two words, xyz and abc following this property, combining them we have,&lt;/p&gt;
+&lt;div class="math"&gt;
+\begin{equation*}
+x \: \gt y \: \le z \quad a \: \gt b \: \le c
+\end{equation*}
+&lt;/div&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;yza cannot be a word because z cannot be &amp;gt; than y.&lt;/li&gt;
+&lt;li&gt;zab cannot be a word because a cannot be &amp;lt; than b.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;There by none of the substrings will be a code word and we can satisfy the comma free property.&lt;/p&gt;
+&lt;p&gt;And if we use this condition to determine the code words in our &lt;strong&gt;C(3,3)&lt;/strong&gt; set, we will come up with the following
+codes which can form valid code words.&lt;/p&gt;
+&lt;strike&gt;000  111  222&lt;/strike&gt; &lt;br&gt;
+
+001  010  &lt;strong&gt;100&lt;/strong&gt; &lt;br&gt;
+
+002  020  &lt;strong&gt;200&lt;/strong&gt; &lt;br&gt;
+
+011  110  &lt;strong&gt;101&lt;/strong&gt; &lt;br&gt;
+
+012  120  &lt;strong&gt;201&lt;/strong&gt; &lt;br&gt;
+
+021  210  &lt;strong&gt;102&lt;/strong&gt; &lt;br&gt;
+
+112  121  &lt;strong&gt;211&lt;/strong&gt; &lt;br&gt;
+
+220  &lt;strong&gt;202&lt;/strong&gt;  022 &lt;br&gt;
+
+221  &lt;strong&gt;212&lt;/strong&gt;  122 &lt;br&gt;&lt;p&gt;The highlighted words will form valid code words and all of these satisfy the criteria, &lt;span class="math"&gt;\(a \: \gt b \: \le c\)&lt;/span&gt;
+Now, if you are given a word like &lt;strong&gt;211201212&lt;/strong&gt;, you know for sure that they are composed of &lt;strong&gt;211&lt;/strong&gt;, &lt;strong&gt;201&lt;/strong&gt; and
+&lt;strong&gt;212&lt;/strong&gt; as none of other intermediaries like (112, 120, 201, 012, 121) occur in our set.&lt;/p&gt;
+&lt;p&gt;Eastman's algorithm helps in finding the correct shift required to make any word a code word.&lt;/p&gt;
+&lt;p&gt;For e.g,&lt;/p&gt;
+&lt;p&gt;Input: 001
+Output: Shift by 2, thus producing 100&lt;/p&gt;
+&lt;p&gt;Input: 221
+Output: Shift by 1, thus producing 212&lt;/p&gt;
+&lt;p&gt;And the beauty is, it is not just for words of length 3, but for &lt;strong&gt;any odd word length n&lt;/strong&gt;.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;The key idea is to think of &lt;strong&gt;x&lt;/strong&gt; as partitioned into &lt;strong&gt;t&lt;/strong&gt; substrings by boundary marked by &lt;span class="math"&gt;\(b_j\)&lt;/span&gt; where
+&lt;span class="math"&gt;\(0 \le b_0 \lt b_1 \lt ... \lt b_{t-1} &amp;lt; n\)&lt;/span&gt; and &lt;span class="math"&gt;\(b_j = b_{j-t} + n\)&lt;/span&gt; for &lt;span class="math"&gt;\(j \ge t\)&lt;/span&gt;. Then substring
+&lt;span class="math"&gt;\(y_j\)&lt;/span&gt; is &lt;span class="math"&gt;\(x_{b_j} x_{b_{j+1}-1}\)&lt;/span&gt;. The number &lt;strong&gt;t&lt;/strong&gt; of substrings is always odd. Initially, t = n and
+&lt;span class="math"&gt;\(b_j = j\)&lt;/span&gt; for all j; ultimately t = 1 and &lt;span class="math"&gt;\(\sigma x = y0\)&lt;/span&gt; is the desired output.&lt;/p&gt;
+&lt;p&gt;Eastman's algorithm is based on comparison of adjacent substrings &lt;span class="math"&gt;\(y_{j-1} and y_j\)&lt;/span&gt;. If those substring have
+the same length, we use lexicographic comparison; otherwise we declare that the longer string is bigger.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;The number of &lt;strong&gt;t&lt;/strong&gt; substring is always odd because we went with an odd string length (n).&lt;/p&gt;
+&lt;p&gt;The comparison of adjacent substring form the recursive nature of the algorithm, we start with small substring of
+length 1 adjacent to each other and then we find compare higher length substring, whose markers have been found by
+the previous step. This will become clear as we look the hand demo.&lt;/p&gt;
+&lt;a class="reference external image-reference" href="http://www.amazon.com/gp/product/B005J52SRE"&gt;&lt;img alt="http://ecx.images-amazon.com/images/I/41KZVIUGswL._SX332_BO1,204,203,200_.jpg" class="align-right" src="http://ecx.images-amazon.com/images/I/41KZVIUGswL._SX332_BO1,204,203,200_.jpg" style="width: 160px; height: 200px;"&gt;&lt;/a&gt;
+&lt;p&gt;&lt;strong&gt;Basin and Ranges&lt;/strong&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+It's convenient to describe the algorithm using the terminology based on the topograph of Nevada. Say that i is a
+basin if the substrings satisfy &lt;span class="math"&gt;\(y_{i-1} \gt y_i \le y_{i+1}\)&lt;/span&gt;. There must be at least one basin; otherwise all
+the &lt;span class="math"&gt;\(y_i\)&lt;/span&gt; would be equal, and x would equal one of its cyclic shifts. We look at consecutive basins, i and j;
+this means that i &amp;lt; j and that i and j are basins, and that i+1 through j - 1 are not basins. If there's only one
+basin we have &lt;span class="math"&gt;\(j = i + t\)&lt;/span&gt;. The indices between consecutive basins are called ranges.&lt;/blockquote&gt;
+&lt;p&gt;The basin and ranges is Knuth's terminology, taken from the book Basin and Ranges by John McPhee which describes the
+topology of Nevada. It is easier to imagine the construct we are looking for if we start to think in terms of basin and
+ranges.&lt;/p&gt;
+&lt;blockquote&gt;
+Since t is odd, there is an odd number of consecutive basins for which &lt;span class="math"&gt;\(j - i\)&lt;/span&gt; is odd. Each round of Eastman's
+algorithm retains exactly one boundary point in the range between such basins and deletes all the others. The
+retained point is the smallest &lt;span class="math"&gt;\(k = i + 2l\)&lt;/span&gt; such that &lt;span class="math"&gt;\(y_k \gt y_{k+1}\)&lt;/span&gt;. At the end of a round, we reset
+t to the number of retained boundary points, and we begin another round if t &amp;gt; 1.&lt;/blockquote&gt;
+&lt;p&gt;&lt;strong&gt;Word of length 19&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Let's work through the algorithm by hand when n = 19 and x = 3141592653589793238&lt;/p&gt;
+&lt;p&gt;Phase 1&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;First markers differentiate each character.&lt;/li&gt;
+&lt;li&gt;We use . to denote the cyclic repetition of the 19 letter word.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre class="literal-block"&gt;
+3 | 1 | 4 |  1 | 5 | 9 | 2 | 6 | 5 | 3 | 5 | 8 | 9 | 7 | 9 | 3 | 2 | 3 | 8 . 3 | 1 | 4 | 1 | 5
+&lt;/pre&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;Next we go about identifying basins. We identify the basins where for any 3 numbers (a, b, c), &lt;span class="math"&gt;\(a \: \gt b
+\le c\)&lt;/span&gt; and put the markers below them&lt;/li&gt;
+&lt;li&gt;After the cyclic repetition we see the repetition of the basin. Like the last line below 1 is same as the first
+line. It is the basin that is repeated.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre class="literal-block"&gt;
+3  1  4  1  5  9  2  6  5  3  5  8  9  7  9  3  2  3  8  3  1  4  1 5
+
+   |     |        |        |           |        |        .  |
+&lt;/pre&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;We mark the ranges as odd length or even length ones.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre class="literal-block"&gt;
+3  1  4  1  5  9  2  6  5  3  5  8  9  7  9  3  2  3  8  3  1  4  1 5
+
+---|--e--|---o----|---o----|-----e-----|---o----|-----e--.--|--------
+&lt;/pre&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;Next, take all the odd length basin markers, go by steps of 2, 4, 6 so on and identify the first greater than
+number and place the new basin markers before them.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;For e.g, in 1-5-9-2. The 2 length path is "1-5-9" and first higher will be 9 and we have to place the marker ahead of
+it. So, the phase 0 of eastman algorithm will output, 5, 8 and 15. denoting the indices where our basins are after the
+first phase.&lt;/p&gt;
+&lt;p&gt;If you are watching the video with Knuth giving a demo, there is a mistake in the video that second basin identifier
+is placed after 5, instead of before 5 (We should go by steps of 2 and place it before the first greater than number).&lt;/p&gt;
+&lt;pre class="literal-block"&gt;
+3  1  4  1  5  | 9  2  6  |  5  3  5  8  9  7  9  | 3  2  3  8  . 3  1  4 1  5
+&lt;/pre&gt;
+&lt;p&gt;Phase 2&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;In the second phase, we use the basin markers of the previous phase and compare the sub strings denoted by the basin.&lt;/li&gt;
+&lt;li&gt;We take the substring of length 19, but now denoted by basins. The repetition of the string in the previous steps
+helped us here.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre class="literal-block"&gt;
+9  2  6  |  5  3  5  8  9  7  9  | 3  2  3  8  3  1  4 1  5
+&lt;/pre&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;We apply the algorithm recursively on the strings 926, 5358979 and 323831415. We find that the string 323831415 is
+greater than the rest, so we can keep the basin marker ahead of it.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre class="literal-block"&gt;
+9  2  6  5  3  5  8  9  7  9  | 3  2  3  8  3  1  4 1  5
+&lt;/pre&gt;
+&lt;p&gt;At the end of Phase 2, the algorithm outputs index 15, as the shift required to create the code word out of 19 word
+string. And thus our code word found by the eastman's algorithm is&lt;/p&gt;
+&lt;pre class="literal-block"&gt;
+3  2  3  8  3  1  4 1  5  9  2  6  5  3  5  8  9  7  9
+&lt;/pre&gt;
+&lt;p&gt;Knuth's gave a demo with his implementation in CWEB. He shared a thought that even though algorithm is expressed
+recursively, the iterative implementation was straight forward. For the rest of the lecture he explores the
+algorithm on a binary string of PI of n = 19 and finds the shift required. Also, gives the probability of Eastman's
+algorithm finishing in one round, that is, just the phase 1.&lt;/p&gt;
+&lt;p&gt;All these are covered as exercises and answers in the pre-fascicle 5B of his volume 5 of The Art of Computer
+Programming, which can be explored in further depth.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Video&lt;/strong&gt;&lt;/p&gt;
+&lt;iframe width="560" height="315" src="https://www.youtube.com/embed/48iJx8FVuis" frameborder="0" allowfullscreen&gt;&lt;/iframe&gt;&lt;p&gt;&lt;strong&gt;References&lt;/strong&gt;&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;Pre-Fascicle 5B, Volume 4 of The Art of Computer Programming, Introduction to Backtracking.
+&lt;a class="reference external" href="http://www-cs-faculty.stanford.edu/~uno/taocp.html"&gt;http://www-cs-faculty.stanford.edu/~uno/taocp.html&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;On the construction of comma free codes &lt;a class="reference external" href="http://ieeexplore.ieee.org/xpl/articleDetails.jsp?reload=true&amp;amp;arnumber=1053766"&gt;http://ieeexplore.ieee.org/xpl/articleDetails.jsp?reload=true&amp;amp;arnumber=1053766&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;COMMAFREE-EASTMAN.w &lt;a class="reference external" href="http://www-cs-faculty.stanford.edu/~uno/programs/commafree-eastman.w"&gt;http://www-cs-faculty.stanford.edu/~uno/programs/commafree-eastman.w&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Tidbits&lt;/strong&gt;&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;Eastman had worked on Travelling Salesman problem in 1950s before Gomory had come up with integer
+programming. &lt;a class="reference external" href="https://en.wikipedia.org/wiki/Ralph_E._Gomory"&gt;https://en.wikipedia.org/wiki/Ralph_E._Gomory&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Chinese language do not use space between words. &lt;a class="reference external" href="https://3000hanzi.com/blog/should_chinese_add_spaces_between_words/"&gt;https://3000hanzi.com/blog/should_chinese_add_spaces_between_words/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Thai language does not use spaces between words.
+&lt;a class="reference external" href="https://www.quora.com/Why-doesnt-the-Thai-language-use-spaces-between-words"&gt;https://www.quora.com/Why-doesnt-the-Thai-language-use-spaces-between-words&lt;/a&gt;
+&lt;a class="reference external" href="http://www.thai-language.com/ref/breaking-words"&gt;http://www.thai-language.com/ref/breaking-words&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Mobius Function: &lt;a class="reference external" href="http://mathworld.wolfram.com/MoebiusFunction.html"&gt;http://mathworld.wolfram.com/MoebiusFunction.html&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Comma Free Code: &lt;a class="reference external" href="http://cms.math.ca/openaccess/cjm/v10/cjm1958v10.0202-0209.pdf"&gt;http://cms.math.ca/openaccess/cjm/v10/cjm1958v10.0202-0209.pdf&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/div&gt;</description><category>algorithms</category><category>knuth</category><category>mathjax</category><category>v1</category><guid>http://www.xtoinfinity.com/posts/comma-free-codes.html</guid><pubDate>Wed, 16 Dec 2015 16:40:37 GMT</pubDate></item></channel></rss>

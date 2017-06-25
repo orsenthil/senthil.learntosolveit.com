@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html prefix="og: http://ogp.me/ns# article: http://ogp.me/ns/article# " lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="description" content="LinuxFactory.java">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>LinuxFactory.java | Senthil Kumaran's thoughts.</title>
+<link href="../../../assets/css/all-nocdn.css" rel="stylesheet" type="text/css">
+<meta name="theme-color" content="#5670d4">
+<meta name="generator" content="Nikola (getnikola.com)">
+<link rel="alternate" type="application/rss+xml" title="RSS" href="../../../rss.xml">
+<link rel="canonical" href="http://www.xtoinfinity.com/listings/java/abstractfactory/LinuxFactory.java.html">
+<!--[if lt IE 9]><script src="../../../assets/js/html5.js"></script><![endif]-->
+</head>
+<body>
+<a href="#content" class="sr-only sr-only-focusable">Skip to main content</a>
+
+<!-- Menubar -->
+
+<nav class="navbar navbar-inverse navbar-static-top"><div class="container">
+<!-- This keeps the margins nice -->
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-navbar" aria-controls="bs-navbar" aria-expanded="false">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="http://www.xtoinfinity.com/">
+
+                <span id="blog-title">Senthil Kumaran's thoughts.</span>
+            </a>
+        </div>
+<!-- /.navbar-header -->
+        <div class="collapse navbar-collapse" id="bs-navbar" aria-expanded="false">
+            <ul class="nav navbar-nav">
+<li>
+<a href="../../../archive.html">Archives</a>
+                </li>
+<li>
+<a href="../../../categories/index.html">Tags</a>
+                </li>
+<li>
+<a href="../../../rss.xml">RSS feed</a>
+
+                
+            </li>
+</ul>
+<ul class="nav navbar-nav navbar-right">
+<li>
+    <a href="LinuxFactory.java" id="sourcelink">Source</a>
+    </li>
+
+                
+            </ul>
+</div>
+<!-- /.navbar-collapse -->
+    </div>
+<!-- /.container -->
+</nav><!-- End of Menubar --><div class="container" id="content" role="main">
+    <div class="body-content">
+        <!--Body content-->
+        <div class="row">
+            
+            
+
+<nav class="breadcrumbs"><ul class="breadcrumb">
+<li><a href="../../">listings</a></li>
+                <li><a href="../">java</a></li>
+                <li><a href=".">abstractfactory</a></li>
+                <li>LinuxFactory.java</li>
+</ul></nav><h1>LinuxFactory.java
+        <small><a href="LinuxFactory.java">(Source)</a></small>
+    </h1>
+    <table class="codetable"><tr>
+<td class="linenos"><div class="linenodiv"><pre><a href="#listingsjavaabstractfactorylinuxfactoryjava-1"> 1</a>
+<a href="#listingsjavaabstractfactorylinuxfactoryjava-2"> 2</a>
+<a href="#listingsjavaabstractfactorylinuxfactoryjava-3"> 3</a>
+<a href="#listingsjavaabstractfactorylinuxfactoryjava-4"> 4</a>
+<a href="#listingsjavaabstractfactorylinuxfactoryjava-5"> 5</a>
+<a href="#listingsjavaabstractfactorylinuxfactoryjava-6"> 6</a>
+<a href="#listingsjavaabstractfactorylinuxfactoryjava-7"> 7</a>
+<a href="#listingsjavaabstractfactorylinuxfactoryjava-8"> 8</a>
+<a href="#listingsjavaabstractfactorylinuxfactoryjava-9"> 9</a>
+<a href="#listingsjavaabstractfactorylinuxfactoryjava-10">10</a>
+<a href="#listingsjavaabstractfactorylinuxfactoryjava-11">11</a>
+<a href="#listingsjavaabstractfactorylinuxfactoryjava-12">12</a>
+<a href="#listingsjavaabstractfactorylinuxfactoryjava-13">13</a>
+<a href="#listingsjavaabstractfactorylinuxfactoryjava-14">14</a>
+<a href="#listingsjavaabstractfactorylinuxfactoryjava-15">15</a>
+<a href="#listingsjavaabstractfactorylinuxfactoryjava-16">16</a>
+<a href="#listingsjavaabstractfactorylinuxfactoryjava-17">17</a>
+<a href="#listingsjavaabstractfactorylinuxfactoryjava-18">18</a>
+<a href="#listingsjavaabstractfactorylinuxfactoryjava-19">19</a>
+<a href="#listingsjavaabstractfactorylinuxfactoryjava-20">20</a>
+<a href="#listingsjavaabstractfactorylinuxfactoryjava-21">21</a>
+<a href="#listingsjavaabstractfactorylinuxfactoryjava-22">22</a>
+<a href="#listingsjavaabstractfactorylinuxfactoryjava-23">23</a>
+<a href="#listingsjavaabstractfactorylinuxfactoryjava-24">24</a>
+<a href="#listingsjavaabstractfactorylinuxfactoryjava-25">25</a>
+<a href="#listingsjavaabstractfactorylinuxfactoryjava-26">26</a>
+<a href="#listingsjavaabstractfactorylinuxfactoryjava-27">27</a>
+<a href="#listingsjavaabstractfactorylinuxfactoryjava-28">28</a>
+<a href="#listingsjavaabstractfactorylinuxfactoryjava-29">29</a>
+<a href="#listingsjavaabstractfactorylinuxfactoryjava-30">30</a>
+<a href="#listingsjavaabstractfactorylinuxfactoryjava-31">31</a></pre></div></td>
+<td class="code"><pre class="code literal-block"><a name="listingsjavaabstractfactorylinuxfactoryjava-1"></a><span class="kd">public</span> <span class="kd">class</span> <span class="nc">LinuxFactory</span> <span class="kd">implements</span> <span class="n">IUnixFactory</span> <span class="o">{</span>
+<a name="listingsjavaabstractfactorylinuxfactoryjava-2"></a>    <span class="nd">@Override</span>
+<a name="listingsjavaabstractfactorylinuxfactoryjava-3"></a>    <span class="kd">public</span> <span class="n">IBootLoader</span> <span class="nf">installBootLoader</span><span class="o">()</span> <span class="o">{</span>
+<a name="listingsjavaabstractfactorylinuxfactoryjava-4"></a>        <span class="k">return</span> <span class="k">new</span> <span class="n">LinuxBootLoader</span><span class="o">();</span>
+<a name="listingsjavaabstractfactorylinuxfactoryjava-5"></a>    <span class="o">}</span>
+<a name="listingsjavaabstractfactorylinuxfactoryjava-6"></a>
+<a name="listingsjavaabstractfactorylinuxfactoryjava-7"></a>    <span class="nd">@Override</span>
+<a name="listingsjavaabstractfactorylinuxfactoryjava-8"></a>    <span class="kd">public</span> <span class="n">IKernel</span> <span class="nf">installKernel</span><span class="o">()</span> <span class="o">{</span>
+<a name="listingsjavaabstractfactorylinuxfactoryjava-9"></a>        <span class="k">return</span> <span class="k">new</span> <span class="n">Linux</span><span class="o">();</span>
+<a name="listingsjavaabstractfactorylinuxfactoryjava-10"></a>    <span class="o">}</span>
+<a name="listingsjavaabstractfactorylinuxfactoryjava-11"></a>
+<a name="listingsjavaabstractfactorylinuxfactoryjava-12"></a>    <span class="nd">@Override</span>
+<a name="listingsjavaabstractfactorylinuxfactoryjava-13"></a>    <span class="kd">public</span> <span class="n">IShell</span> <span class="nf">installShell</span><span class="o">()</span> <span class="o">{</span>
+<a name="listingsjavaabstractfactorylinuxfactoryjava-14"></a>        <span class="k">return</span> <span class="k">new</span> <span class="n">Bash</span><span class="o">();</span>
+<a name="listingsjavaabstractfactorylinuxfactoryjava-15"></a>    <span class="o">}</span>
+<a name="listingsjavaabstractfactorylinuxfactoryjava-16"></a>
+<a name="listingsjavaabstractfactorylinuxfactoryjava-17"></a>    <span class="nd">@Override</span>
+<a name="listingsjavaabstractfactorylinuxfactoryjava-18"></a>    <span class="kd">public</span> <span class="n">IDisplayManager</span> <span class="nf">installDisplayManager</span><span class="o">()</span> <span class="o">{</span>
+<a name="listingsjavaabstractfactorylinuxfactoryjava-19"></a>        <span class="k">return</span> <span class="k">new</span> <span class="n">X11</span><span class="o">();</span>
+<a name="listingsjavaabstractfactorylinuxfactoryjava-20"></a>    <span class="o">}</span>
+<a name="listingsjavaabstractfactorylinuxfactoryjava-21"></a>
+<a name="listingsjavaabstractfactorylinuxfactoryjava-22"></a>    <span class="nd">@Override</span>
+<a name="listingsjavaabstractfactorylinuxfactoryjava-23"></a>    <span class="kd">public</span> <span class="n">IWindowManager</span> <span class="nf">installWindowManager</span><span class="o">()</span> <span class="o">{</span>
+<a name="listingsjavaabstractfactorylinuxfactoryjava-24"></a>        <span class="k">return</span> <span class="k">new</span> <span class="n">Gnome</span><span class="o">();</span>
+<a name="listingsjavaabstractfactorylinuxfactoryjava-25"></a>    <span class="o">}</span>
+<a name="listingsjavaabstractfactorylinuxfactoryjava-26"></a>
+<a name="listingsjavaabstractfactorylinuxfactoryjava-27"></a>    <span class="nd">@Override</span>
+<a name="listingsjavaabstractfactorylinuxfactoryjava-28"></a>    <span class="kd">public</span> <span class="n">IBaseApplications</span> <span class="nf">installApps</span><span class="o">()</span> <span class="o">{</span>
+<a name="listingsjavaabstractfactorylinuxfactoryjava-29"></a>        <span class="k">return</span> <span class="k">new</span> <span class="n">GNUApplications</span><span class="o">();</span>
+<a name="listingsjavaabstractfactorylinuxfactoryjava-30"></a>    <span class="o">}</span>
+<a name="listingsjavaabstractfactorylinuxfactoryjava-31"></a><span class="o">}</span>
+</pre></td>
+</tr></table>
+</div>
+        <!--End of body content-->
+
+        <footer id="footer">
+            Contents © 2017         <a href="mailto:orsenthil@gmail.com">Senthil Kumaran</a> - Powered by         <a href="https://getnikola.com" rel="nofollow">Nikola</a>         
+            
+        </footer>
+</div>
+</div>
+
+
+            <script src="../../../assets/js/all-nocdn.js"></script><script>$('a.image-reference:not(.islink) img:not(.islink)').parent().colorbox({rel:"gal",maxWidth:"100%",maxHeight:"100%",scalePhotos:true});</script><!-- fancy dates --><script>
+    moment.locale("en");
+    fancydates(0, "YYYY-MM-DD HH:mm");
+    </script><!-- end fancy dates --><script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-71599453-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+</body>
+</html>

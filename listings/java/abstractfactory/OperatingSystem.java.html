@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html prefix="og: http://ogp.me/ns# article: http://ogp.me/ns/article# " lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="description" content="OperatingSystem.java">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>OperatingSystem.java | Senthil Kumaran's thoughts.</title>
+<link href="../../../assets/css/all-nocdn.css" rel="stylesheet" type="text/css">
+<meta name="theme-color" content="#5670d4">
+<meta name="generator" content="Nikola (getnikola.com)">
+<link rel="alternate" type="application/rss+xml" title="RSS" href="../../../rss.xml">
+<link rel="canonical" href="http://www.xtoinfinity.com/listings/java/abstractfactory/OperatingSystem.java.html">
+<!--[if lt IE 9]><script src="../../../assets/js/html5.js"></script><![endif]-->
+</head>
+<body>
+<a href="#content" class="sr-only sr-only-focusable">Skip to main content</a>
+
+<!-- Menubar -->
+
+<nav class="navbar navbar-inverse navbar-static-top"><div class="container">
+<!-- This keeps the margins nice -->
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-navbar" aria-controls="bs-navbar" aria-expanded="false">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="http://www.xtoinfinity.com/">
+
+                <span id="blog-title">Senthil Kumaran's thoughts.</span>
+            </a>
+        </div>
+<!-- /.navbar-header -->
+        <div class="collapse navbar-collapse" id="bs-navbar" aria-expanded="false">
+            <ul class="nav navbar-nav">
+<li>
+<a href="../../../archive.html">Archives</a>
+                </li>
+<li>
+<a href="../../../categories/index.html">Tags</a>
+                </li>
+<li>
+<a href="../../../rss.xml">RSS feed</a>
+
+                
+            </li>
+</ul>
+<ul class="nav navbar-nav navbar-right">
+<li>
+    <a href="OperatingSystem.java" id="sourcelink">Source</a>
+    </li>
+
+                
+            </ul>
+</div>
+<!-- /.navbar-collapse -->
+    </div>
+<!-- /.container -->
+</nav><!-- End of Menubar --><div class="container" id="content" role="main">
+    <div class="body-content">
+        <!--Body content-->
+        <div class="row">
+            
+            
+
+<nav class="breadcrumbs"><ul class="breadcrumb">
+<li><a href="../../">listings</a></li>
+                <li><a href="../">java</a></li>
+                <li><a href=".">abstractfactory</a></li>
+                <li>OperatingSystem.java</li>
+</ul></nav><h1>OperatingSystem.java
+        <small><a href="OperatingSystem.java">(Source)</a></small>
+    </h1>
+    <table class="codetable"><tr>
+<td class="linenos"><div class="linenodiv"><pre><a href="#listingsjavaabstractfactoryoperatingsystemjava-1"> 1</a>
+<a href="#listingsjavaabstractfactoryoperatingsystemjava-2"> 2</a>
+<a href="#listingsjavaabstractfactoryoperatingsystemjava-3"> 3</a>
+<a href="#listingsjavaabstractfactoryoperatingsystemjava-4"> 4</a>
+<a href="#listingsjavaabstractfactoryoperatingsystemjava-5"> 5</a>
+<a href="#listingsjavaabstractfactoryoperatingsystemjava-6"> 6</a>
+<a href="#listingsjavaabstractfactoryoperatingsystemjava-7"> 7</a>
+<a href="#listingsjavaabstractfactoryoperatingsystemjava-8"> 8</a>
+<a href="#listingsjavaabstractfactoryoperatingsystemjava-9"> 9</a>
+<a href="#listingsjavaabstractfactoryoperatingsystemjava-10">10</a>
+<a href="#listingsjavaabstractfactoryoperatingsystemjava-11">11</a>
+<a href="#listingsjavaabstractfactoryoperatingsystemjava-12">12</a>
+<a href="#listingsjavaabstractfactoryoperatingsystemjava-13">13</a>
+<a href="#listingsjavaabstractfactoryoperatingsystemjava-14">14</a>
+<a href="#listingsjavaabstractfactoryoperatingsystemjava-15">15</a>
+<a href="#listingsjavaabstractfactoryoperatingsystemjava-16">16</a>
+<a href="#listingsjavaabstractfactoryoperatingsystemjava-17">17</a>
+<a href="#listingsjavaabstractfactoryoperatingsystemjava-18">18</a>
+<a href="#listingsjavaabstractfactoryoperatingsystemjava-19">19</a>
+<a href="#listingsjavaabstractfactoryoperatingsystemjava-20">20</a>
+<a href="#listingsjavaabstractfactoryoperatingsystemjava-21">21</a>
+<a href="#listingsjavaabstractfactoryoperatingsystemjava-22">22</a>
+<a href="#listingsjavaabstractfactoryoperatingsystemjava-23">23</a>
+<a href="#listingsjavaabstractfactoryoperatingsystemjava-24">24</a>
+<a href="#listingsjavaabstractfactoryoperatingsystemjava-25">25</a>
+<a href="#listingsjavaabstractfactoryoperatingsystemjava-26">26</a>
+<a href="#listingsjavaabstractfactoryoperatingsystemjava-27">27</a>
+<a href="#listingsjavaabstractfactoryoperatingsystemjava-28">28</a>
+<a href="#listingsjavaabstractfactoryoperatingsystemjava-29">29</a>
+<a href="#listingsjavaabstractfactoryoperatingsystemjava-30">30</a>
+<a href="#listingsjavaabstractfactoryoperatingsystemjava-31">31</a>
+<a href="#listingsjavaabstractfactoryoperatingsystemjava-32">32</a>
+<a href="#listingsjavaabstractfactoryoperatingsystemjava-33">33</a>
+<a href="#listingsjavaabstractfactoryoperatingsystemjava-34">34</a>
+<a href="#listingsjavaabstractfactoryoperatingsystemjava-35">35</a>
+<a href="#listingsjavaabstractfactoryoperatingsystemjava-36">36</a>
+<a href="#listingsjavaabstractfactoryoperatingsystemjava-37">37</a>
+<a href="#listingsjavaabstractfactoryoperatingsystemjava-38">38</a>
+<a href="#listingsjavaabstractfactoryoperatingsystemjava-39">39</a>
+<a href="#listingsjavaabstractfactoryoperatingsystemjava-40">40</a>
+<a href="#listingsjavaabstractfactoryoperatingsystemjava-41">41</a>
+<a href="#listingsjavaabstractfactoryoperatingsystemjava-42">42</a>
+<a href="#listingsjavaabstractfactoryoperatingsystemjava-43">43</a>
+<a href="#listingsjavaabstractfactoryoperatingsystemjava-44">44</a>
+<a href="#listingsjavaabstractfactoryoperatingsystemjava-45">45</a>
+<a href="#listingsjavaabstractfactoryoperatingsystemjava-46">46</a>
+<a href="#listingsjavaabstractfactoryoperatingsystemjava-47">47</a>
+<a href="#listingsjavaabstractfactoryoperatingsystemjava-48">48</a>
+<a href="#listingsjavaabstractfactoryoperatingsystemjava-49">49</a>
+<a href="#listingsjavaabstractfactoryoperatingsystemjava-50">50</a>
+<a href="#listingsjavaabstractfactoryoperatingsystemjava-51">51</a>
+<a href="#listingsjavaabstractfactoryoperatingsystemjava-52">52</a>
+<a href="#listingsjavaabstractfactoryoperatingsystemjava-53">53</a>
+<a href="#listingsjavaabstractfactoryoperatingsystemjava-54">54</a>
+<a href="#listingsjavaabstractfactoryoperatingsystemjava-55">55</a></pre></div></td>
+<td class="code"><pre class="code literal-block"><a name="listingsjavaabstractfactoryoperatingsystemjava-1"></a><span class="kd">public</span> <span class="kd">class</span> <span class="nc">OperatingSystem</span> <span class="o">{</span>
+<a name="listingsjavaabstractfactoryoperatingsystemjava-2"></a>    <span class="n">IUnixFactory</span> <span class="n">unixFactory</span><span class="o">;</span>
+<a name="listingsjavaabstractfactoryoperatingsystemjava-3"></a>
+<a name="listingsjavaabstractfactoryoperatingsystemjava-4"></a>    <span class="kd">public</span> <span class="nf">OperatingSystem</span><span class="o">(</span><span class="n">IUnixFactory</span> <span class="n">unixFactory</span><span class="o">)</span> <span class="o">{</span>
+<a name="listingsjavaabstractfactoryoperatingsystemjava-5"></a>        <span class="k">this</span><span class="o">.</span><span class="na">unixFactory</span> <span class="o">=</span> <span class="n">unixFactory</span><span class="o">;</span>
+<a name="listingsjavaabstractfactoryoperatingsystemjava-6"></a>    <span class="o">}</span>
+<a name="listingsjavaabstractfactoryoperatingsystemjava-7"></a>
+<a name="listingsjavaabstractfactoryoperatingsystemjava-8"></a>    <span class="cm">/**</span>
+<a name="listingsjavaabstractfactoryoperatingsystemjava-9"></a><span class="cm">     * installerClient uses only the interfaces declared by AbstractFactory (IUnixFactory) and AbstractProduct</span>
+<a name="listingsjavaabstractfactoryoperatingsystemjava-10"></a><span class="cm">     * (IBootLoader, IKernel, IShell, IDisplayManager, IWindowManager, IBaseApplications) classes.</span>
+<a name="listingsjavaabstractfactoryoperatingsystemjava-11"></a><span class="cm">     */</span>
+<a name="listingsjavaabstractfactoryoperatingsystemjava-12"></a>    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">installerClient</span><span class="o">()</span> <span class="o">{</span>
+<a name="listingsjavaabstractfactoryoperatingsystemjava-13"></a>
+<a name="listingsjavaabstractfactoryoperatingsystemjava-14"></a>
+<a name="listingsjavaabstractfactoryoperatingsystemjava-15"></a>        <span class="n">IBootLoader</span> <span class="n">bootLoader</span> <span class="o">=</span> <span class="n">unixFactory</span><span class="o">.</span><span class="na">installBootLoader</span><span class="o">();</span>
+<a name="listingsjavaabstractfactoryoperatingsystemjava-16"></a>        <span class="n">IKernel</span> <span class="n">kernel</span> <span class="o">=</span> <span class="n">unixFactory</span><span class="o">.</span><span class="na">installKernel</span><span class="o">();</span>
+<a name="listingsjavaabstractfactoryoperatingsystemjava-17"></a>        <span class="n">IShell</span> <span class="n">shell</span> <span class="o">=</span> <span class="n">unixFactory</span><span class="o">.</span><span class="na">installShell</span><span class="o">();</span>
+<a name="listingsjavaabstractfactoryoperatingsystemjava-18"></a>        <span class="n">IDisplayManager</span> <span class="n">displayManager</span> <span class="o">=</span> <span class="n">unixFactory</span><span class="o">.</span><span class="na">installDisplayManager</span><span class="o">();</span>
+<a name="listingsjavaabstractfactoryoperatingsystemjava-19"></a>        <span class="n">IWindowManager</span> <span class="n">windowManager</span> <span class="o">=</span> <span class="n">unixFactory</span><span class="o">.</span><span class="na">installWindowManager</span><span class="o">();</span>
+<a name="listingsjavaabstractfactoryoperatingsystemjava-20"></a>        <span class="n">IBaseApplications</span> <span class="n">applications</span> <span class="o">=</span> <span class="n">unixFactory</span><span class="o">.</span><span class="na">installApps</span><span class="o">();</span>
+<a name="listingsjavaabstractfactoryoperatingsystemjava-21"></a>
+<a name="listingsjavaabstractfactoryoperatingsystemjava-22"></a>        <span class="n">bootLoader</span><span class="o">.</span><span class="na">bootUp</span><span class="o">();</span>
+<a name="listingsjavaabstractfactoryoperatingsystemjava-23"></a>        <span class="n">kernel</span><span class="o">.</span><span class="na">loadKernel</span><span class="o">();</span>
+<a name="listingsjavaabstractfactoryoperatingsystemjava-24"></a>        <span class="n">shell</span><span class="o">.</span><span class="na">loadShell</span><span class="o">();</span>
+<a name="listingsjavaabstractfactoryoperatingsystemjava-25"></a>        <span class="n">displayManager</span><span class="o">.</span><span class="na">installDisplayManager</span><span class="o">();</span>
+<a name="listingsjavaabstractfactoryoperatingsystemjava-26"></a>        <span class="n">windowManager</span><span class="o">.</span><span class="na">installWindowManager</span><span class="o">();</span>
+<a name="listingsjavaabstractfactoryoperatingsystemjava-27"></a>        <span class="n">applications</span><span class="o">.</span><span class="na">installApplications</span><span class="o">();</span>
+<a name="listingsjavaabstractfactoryoperatingsystemjava-28"></a>
+<a name="listingsjavaabstractfactoryoperatingsystemjava-29"></a>    <span class="o">}</span>
+<a name="listingsjavaabstractfactoryoperatingsystemjava-30"></a>
+<a name="listingsjavaabstractfactoryoperatingsystemjava-31"></a>    <span class="cm">/**</span>
+<a name="listingsjavaabstractfactoryoperatingsystemjava-32"></a><span class="cm">     * client will not know the</span>
+<a name="listingsjavaabstractfactoryoperatingsystemjava-33"></a><span class="cm">     * products the type of bootloader, kernel, shell, display, window manager or applications.</span>
+<a name="listingsjavaabstractfactoryoperatingsystemjava-34"></a><span class="cm">     * That is encapsulated in factory used by the client.</span>
+<a name="listingsjavaabstractfactoryoperatingsystemjava-35"></a><span class="cm">     *</span>
+<a name="listingsjavaabstractfactoryoperatingsystemjava-36"></a><span class="cm">     */</span>
+<a name="listingsjavaabstractfactoryoperatingsystemjava-37"></a>    <span class="kd">private</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">factoryClient</span><span class="o">(</span><span class="n">IUnixFactory</span> <span class="n">factory</span><span class="o">)</span> <span class="o">{</span>
+<a name="listingsjavaabstractfactoryoperatingsystemjava-38"></a>        <span class="n">OperatingSystem</span> <span class="n">operatingSystem</span> <span class="o">=</span> <span class="k">new</span> <span class="n">OperatingSystem</span><span class="o">(</span><span class="n">factory</span><span class="o">);</span>
+<a name="listingsjavaabstractfactoryoperatingsystemjava-39"></a>        <span class="n">operatingSystem</span><span class="o">.</span><span class="na">installerClient</span><span class="o">();</span>
+<a name="listingsjavaabstractfactoryoperatingsystemjava-40"></a>    <span class="o">}</span>
+<a name="listingsjavaabstractfactoryoperatingsystemjava-41"></a>
+<a name="listingsjavaabstractfactoryoperatingsystemjava-42"></a>    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="o">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">args</span><span class="o">)</span> <span class="o">{</span>
+<a name="listingsjavaabstractfactoryoperatingsystemjava-43"></a>        <span class="n">IUnixFactory</span> <span class="n">factory</span><span class="o">;</span>
+<a name="listingsjavaabstractfactoryoperatingsystemjava-44"></a>
+<a name="listingsjavaabstractfactoryoperatingsystemjava-45"></a>        <span class="n">factory</span> <span class="o">=</span> <span class="k">new</span> <span class="n">LinuxFactory</span><span class="o">();</span>
+<a name="listingsjavaabstractfactoryoperatingsystemjava-46"></a>        <span class="n">factoryClient</span><span class="o">(</span><span class="n">factory</span><span class="o">);</span>
+<a name="listingsjavaabstractfactoryoperatingsystemjava-47"></a>
+<a name="listingsjavaabstractfactoryoperatingsystemjava-48"></a>        <span class="n">factory</span> <span class="o">=</span> <span class="k">new</span> <span class="n">BSDFactory</span><span class="o">();</span>
+<a name="listingsjavaabstractfactoryoperatingsystemjava-49"></a>        <span class="n">factoryClient</span><span class="o">(</span><span class="n">factory</span><span class="o">);</span>
+<a name="listingsjavaabstractfactoryoperatingsystemjava-50"></a>
+<a name="listingsjavaabstractfactoryoperatingsystemjava-51"></a>        <span class="n">factory</span> <span class="o">=</span> <span class="k">new</span> <span class="n">UbuntuFactory</span><span class="o">();</span>
+<a name="listingsjavaabstractfactoryoperatingsystemjava-52"></a>        <span class="n">factoryClient</span><span class="o">(</span><span class="n">factory</span><span class="o">);</span>
+<a name="listingsjavaabstractfactoryoperatingsystemjava-53"></a>    <span class="o">}</span>
+<a name="listingsjavaabstractfactoryoperatingsystemjava-54"></a>
+<a name="listingsjavaabstractfactoryoperatingsystemjava-55"></a><span class="o">}</span>
+</pre></td>
+</tr></table>
+</div>
+        <!--End of body content-->
+
+        <footer id="footer">
+            Contents © 2017         <a href="mailto:orsenthil@gmail.com">Senthil Kumaran</a> - Powered by         <a href="https://getnikola.com" rel="nofollow">Nikola</a>         
+            
+        </footer>
+</div>
+</div>
+
+
+            <script src="../../../assets/js/all-nocdn.js"></script><script>$('a.image-reference:not(.islink) img:not(.islink)').parent().colorbox({rel:"gal",maxWidth:"100%",maxHeight:"100%",scalePhotos:true});</script><!-- fancy dates --><script>
+    moment.locale("en");
+    fancydates(0, "YYYY-MM-DD HH:mm");
+    </script><!-- end fancy dates --><script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-71599453-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+</body>
+</html>

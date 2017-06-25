@@ -1,0 +1,683 @@
+<!DOCTYPE html>
+<html prefix="og: http://ogp.me/ns# article: http://ogp.me/ns/article# " lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>PCL: A Practical Database | Senthil Kumaran's thoughts.</title>
+<link href="../../../../assets/css/all-nocdn.css" rel="stylesheet" type="text/css">
+<meta name="theme-color" content="#5670d4">
+<meta name="generator" content="Nikola (getnikola.com)">
+<link rel="alternate" type="application/rss+xml" title="RSS" href="../../../../rss.xml">
+<link rel="canonical" href="http://www.xtoinfinity.com/posts/2007/03/22/pcl-a-practical-database.html">
+<!--[if lt IE 9]><script src="../../../../assets/js/html5.js"></script><![endif]--><meta name="author" content="Senthil Kumaran">
+<link rel="prev" href="../14/happy-pi-day-2.html" title="Happy PI Day" type="text/html">
+<link rel="next" href="../23/karate-2nd-year.html" title="Karate - 2nd year" type="text/html">
+<meta property="og:site_name" content="Senthil Kumaran's thoughts.">
+<meta property="og:title" content="PCL: A Practical Database">
+<meta property="og:url" content="http://www.xtoinfinity.com/posts/2007/03/22/pcl-a-practical-database.html">
+<meta property="og:description" content="Practical: A Simple Database
+
+
+In this chapter you'll write a simple database for keeping track of CDs.
+
+
+Common Lisp provides three distinct kinds of operators: functions, macros, and special operato">
+<meta property="og:type" content="article">
+<meta property="article:published_time" content="2007-03-22T02:15:00-07:00">
+<meta property="article:tag" content="ai">
+<meta property="article:tag" content="lisp">
+<meta property="article:tag" content="pcl">
+</head>
+<body>
+<a href="#content" class="sr-only sr-only-focusable">Skip to main content</a>
+
+<!-- Menubar -->
+
+<nav class="navbar navbar-inverse navbar-static-top"><div class="container">
+<!-- This keeps the margins nice -->
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-navbar" aria-controls="bs-navbar" aria-expanded="false">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="http://www.xtoinfinity.com/">
+
+                <span id="blog-title">Senthil Kumaran's thoughts.</span>
+            </a>
+        </div>
+<!-- /.navbar-header -->
+        <div class="collapse navbar-collapse" id="bs-navbar" aria-expanded="false">
+            <ul class="nav navbar-nav">
+<li>
+<a href="../../../../archive.html">Archives</a>
+                </li>
+<li>
+<a href="../../../../categories/index.html">Tags</a>
+                </li>
+<li>
+<a href="../../../../rss.xml">RSS feed</a>
+
+                
+            </li>
+</ul>
+<ul class="nav navbar-nav navbar-right">
+<li>
+    <a href="pcl-a-practical-database.md" id="sourcelink">Source</a>
+    </li>
+
+                
+            </ul>
+</div>
+<!-- /.navbar-collapse -->
+    </div>
+<!-- /.container -->
+</nav><!-- End of Menubar --><div class="container" id="content" role="main">
+    <div class="body-content">
+        <!--Body content-->
+        <div class="row">
+            
+            
+<article class="post-text h-entry hentry postpage" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title" itemprop="headline name"><a href="#" class="u-url">PCL: A Practical Database</a></h1>
+
+        <div class="metadata">
+            <p class="byline author vcard"><span class="byline-name fn">
+                    Senthil Kumaran
+            </span></p>
+            <p class="dateline"><a href="#" rel="bookmark"><time class="published dt-published" datetime="2007-03-22T02:15:00-07:00" itemprop="datePublished" title="2007-03-22 02:15">2007-03-22 02:15</time></a></p>
+                <p class="commentline">
+        
+    <a href="pcl-a-practical-database.html#disqus_thread" data-disqus-identifier="cache/posts/2007/03/22/pcl-a-practical-database.html">Comments</a>
+
+
+            
+        </p>
+<p class="sourceline"><a href="pcl-a-practical-database.md" id="sourcelink">Source</a></p>
+
+        </div>
+        
+
+    </header><div class="e-content entry-content" itemprop="articleBody text">
+    <div>
+<p></p>
+<code>Practical: A Simple Database
+<ul>
+<li>
+<p>In this chapter you'll write a simple database for keeping track of CDs.</p>
+</li>
+<li>
+<p>Common Lisp provides three distinct kinds of operators: functions, macros, and special operators.</p>
+</li>
+</ul>
+<p>CDs and Records</p>
+<ul>
+<li>To keep track of CDs that need to be ripped to MP3s and which CDs should be</li>
+</ul>
+<p>ripped first, each record in the database will contain the title and artist</p>
+<p>of the CD, a rating of how much the user likes it, and a flag saying whether</p>
+<p>it has been ripped.</p>
+<ul>
+<li>
+<p>need a way to represent a single database record.</p>
+</li>
+<li>
+<p>user defined class - CLOS ( Common Lisp Object System)</p>
+</li>
+</ul>
+<p>CL-USER&gt; (list 1 2 3)</p>
+<p>(1 2 3)</p>
+<ul>
+<li>A plist is a list where every other element, starting with the first, is a</li>
+</ul>
+<p>symbol that describes what the next element in the list is. Symbol can be</p>
+<p>thought of as a name.</p>
+<ul>
+<li>For the symbols that name the fields in the CD database, you can use a particular kind of symbol, called a keyword symbol.</li>
+</ul>
+<p>CL-USER&gt; (list :a 1 :b 2 :c 3)</p>
+<p>(:A 1 :B 2 :C 3)</p>
+<ul>
+<li>function GETF, which takes a plist and a symbol and returns the value in the</li>
+</ul>
+<p>plist following the symbol.</p>
+<p>CL-USER&gt; (getf (list :a 1 :b 2 :c 3) :c)</p>
+<p>3</p>
+<ul>
+<li>make-cd that will take the four fields as arguments and return a plist</li>
+</ul>
+<p>representing that CD.</p>
+<p>CL-USER&gt; (defun make-cd(title artist rating ripped)</p>
+<pre class="code literal-block"><span></span>   (list :title title :artist artist :rating rating :ripped ripped))
+</pre>
+
+
+<p>MAKE-CD</p>
+<p>CL-USER&gt;</p>
+<ul>
+<li>
+<p>DEFUN tells us that this form is defining a new function.</p>
+</li>
+<li>
+<p>When make-cd is called, the arguments passed to the call will be bound to the variables in the parameter list. For instance, to make a record for the CD Roses by Kathy Mattea, you might call make-cd like this:</p>
+</li>
+</ul>
+<p>CL-USER&gt; (make-cd "Roses" "Kathy Mattea" 7 t)</p>
+<p>(:TITLE "Roses" :ARTIST "Kathy Mattea" :RATING 7 :RIPPED T)</p>
+<p>CL-USER&gt;</p>
+<!--more Read the Notes further...-->
+
+<p>Filling CDs.</p>
+<ul>
+<li>
+<p>Larger Constructs to hold records.</p>
+</li>
+<li>
+<p>Also for simplicity you can use a global variable, <em>db</em>, which you can</p>
+</li>
+</ul>
+<p>define with the DEFVAR macro. The asterisks (*) in the name are a Lisp</p>
+<p>naming convention for global variables.</p>
+<ul>
+<li>You can use the PUSH macro to add items to <em>db</em>. But it's probably a good idea to abstract things a tiny bit, so you should define a function add-record that adds a record to the database.</li>
+</ul>
+<p>CL-USER&gt; (defun add-record (cd) (push cd <em>db</em>))</p>
+<p>ADD-RECORD</p>
+<ul>
+<li>add-record and make-cd together to add CDs to the database.</li>
+</ul>
+<p>CL-USER&gt; (add-record (make-cd "Fly" "Dixie Chicks" 8 t))</p>
+<p>((:TITLE "Fly" :ARTIST "Dixie Chicks" :RATING 8 :RIPPED T))</p>
+<p>CL-USER&gt; (add-record (make-cd "Roses" "Kathy Mattea" 7 t))</p>
+<p>((:TITLE "Roses" :ARTIST "Kathy Mattea" :RATING 7 :RIPPED T)</p>
+<p>(:TITLE "Fly" :ARTIST "Dixie Chicks" :RATING 8 :RIPPED T))</p>
+<p>CL-USER&gt; (add-record (make-cd "Home" "Dixie Chicks" 9 t))</p>
+<p>((:TITLE "Home" :ARTIST "Dixie Chicks" :RATING 9 :RIPPED T)</p>
+<p>(:TITLE "Roses" :ARTIST "Kathy Mattea" :RATING 7 :RIPPED T)</p>
+<p>(:TITLE "Fly" :ARTIST "Dixie Chicks" :RATING 8 :RIPPED T))</p>
+<p>CL-USER&gt;</p>
+<ul>
+<li>Current value of <em>db</em> by typing <em>db</em>
+</li>
+</ul>
+<p>CL-USER&gt; <em>db</em></p>
+<ul>
+<li>dump-db function that dumps out the database in a more human-readable</li>
+</ul>
+<p>format.</p>
+<p>CL-USER&gt; (defun dump-db()</p>
+<pre class="code literal-block"><span></span>   (dolist (cd *db*)
+
+     (format t "~{~a:~10t~a~%~}~%" cd)))
+</pre>
+
+
+<p>DUMP-DB</p>
+<p>CL-USER&gt; </p>
+<ul>
+<li>
+<p>looping over all the elements of <em>db</em> with the DOLIST macro, binding each element to the variable cd in turn. For each value of cd, you use the FORMAT function to print it.</p>
+</li>
+<li>
+<p>In format, t is shorthand for the stream <em>standard-output</em>.</p>
+</li>
+<li>
+<p>Format directives start with ~ (much the way printf's directives start with %).</p>
+</li>
+</ul>
+<hr>
+<p>One of the coolest FORMAT directives is the ~R directive. Ever want to know</p>
+<p>how to say a really big number in English words? Lisp knows.</p>
+<p>CL-USER&gt; (format nil "~R" 42424242424242424242424242424242424242424242424242)</p>
+<p>"forty-two quindecillion, four hundred and twenty-four quattuordecillion, two hundred and forty-two tredecillion, four hundred and twenty-four duodecillion, two hundred and forty-two undecillion, four hundred and twenty-four decillion, two hundred and forty-two nonillion, four hundred and twenty-four octillion, two hundred and forty-two septillion, four hundred and twenty-four sextillion, two hundred and forty-two quintillion, four hundred and twenty-four quadrillion, two hundred and forty-two trillion, four hundred and twenty-four billion, two hundred and forty-two million, four hundred and twenty-four thousand, two hundred and forty-two"</p>
+<p>CL-USER&gt; </p>
+<hr>
+<ul>
+<li>~a directive is the aesthetic directive; it means to consume one argument</li>
+</ul>
+<p>and output it in a human-readable form. This will render keywords without</p>
+<p>the leading : and strings without quotation marks.</p>
+<p>CL-USER&gt; (format t "~a" "Dixie Chicks")</p>
+<p>Dixie Chicks</p>
+<p>NIL</p>
+<p>CL-USER&gt; (format t "~a" :title)</p>
+<p>TITLE</p>
+<p>NIL</p>
+<p>CL-USER&gt;</p>
+<ul>
+<li>The ~t directive is for tabulating. The ~10t tells FORMAT to emit enough spaces to move to the tenth column before processing the next ~a. A ~t doesn't consume any arguments.</li>
+</ul>
+<p>CL-USER&gt; (format t "~a:~10t~a" :artist "Dixie Chicks")</p>
+<p>ARTIST:   Dixie Chicks</p>
+<p>NIL</p>
+<p>CL-USER&gt;</p>
+<ul>
+<li>
+<p>When FORMAT sees ~{ the next argument to be consumed must be a list. FORMAT loops over that list, processing the directives between the ~{ and ~}.</p>
+</li>
+<li>
+<p>The ~% directive doesn't consume any arguments but tells FORMAT to emit a newline. </p>
+</li>
+<li>
+<p>we could have removed dolist macro call and used the format directive</p>
+</li>
+</ul>
+<p>itself:</p>
+<p>CL-USER&gt; (defun dump-db()</p>
+<pre class="code literal-block"><span></span>   (format t "~{~{~a:~10t~a~%~}~%~}" *db*))
+</pre>
+
+
+<p>DUMP-DB</p>
+<p>CL-USER&gt;</p>
+<p>Improving User Interaction.</p>
+<ul>
+<li>need some way to prompt the user for a piece of information and read it.</li>
+</ul>
+<p>CL-USER&gt; (defun prompt-read(prompt)</p>
+<pre class="code literal-block"><span></span>   (format *query-io* "~a: " prompt)
+
+   (force-output *query-io*)
+
+   (read-line *query-io*))
+</pre>
+
+
+<p>PROMPT-READ</p>
+<p>CL-USER&gt;</p>
+<ul>
+<li>
+<p>format to emit the prompt.</p>
+</li>
+<li>
+<p>FORCE-OUTPUT is necessary in some implementations to ensure that Lisp doesn't wait for a newline.</p>
+</li>
+<li>
+<p>read a single line of text with the aptly named READ-LINE function</p>
+</li>
+<li>
+<p>query-io is a global variable, can be recognized by the <em>query-io</em> naming.</p>
+</li>
+</ul>
+<p>combing make-cd with prompt-read</p>
+<p>CL-USER&gt; (defun prompt-for-cd()</p>
+<pre class="code literal-block"><span></span>   (make-cd
+
+    (prompt-read "Title")
+
+    (prompt-read "Artist")
+
+    (prompt-read "Rating")
+
+    (prompt-read "Ripped [y/n]")))
+</pre>
+
+
+<p>PROMPT-FOR-CD</p>
+<p>CL-USER&gt;</p>
+<ul>
+<li>prompt-read returns a string, for converting the value to integer, lets use</li>
+</ul>
+<p>lisp's parse-integer function.</p>
+<ul>
+<li>parse-integer takes an optional argument :junk-allowed which tells to relax</li>
+</ul>
+<p>the conversion, if there is any exception.</p>
+<ul>
+<li>junk-allowed returns nill, if that cannot find the integer, to get over and</li>
+</ul>
+<p>set it as 0, we use the or macro.</p>
+<p>CL-USER&gt; (parse-integer (prompt-read "Rating"))</p>
+<p>Rating: 10</p>
+<p>10</p>
+<p>2</p>
+<p>CL-USER&gt; (parse-integer(prompt-read "Rating"):junk-allowed t)</p>
+<p>Rating: 10</p>
+<p>10</p>
+<p>2</p>
+<p>CL-USER&gt; (parse-integer(prompt-read "Rating"):junk-allowed t)</p>
+<p>Rating: Senthil</p>
+<p>NIL</p>
+<p>0</p>
+<p>CL-USER&gt; (or(parse-integer(prompt-read "Rating"):junk-allowed t)0)</p>
+<p>Rating: Senthil</p>
+<p>0</p>
+<p>CL-USER&gt;</p>
+<ul>
+<li>For y or n prompt, we can use common lisp function Y-OR-N-P, that will</li>
+</ul>
+<p>reprompt the user till  something starting with Y,y,N,n is entered.</p>
+<p>So, the final prompt-for-cd will be:</p>
+<p>CL-USER&gt; (defun prompt-for-cd ()</p>
+<pre class="code literal-block"><span></span>   (make-cd
+
+    (prompt-read "Title")
+
+    (prompt-read "Artist")
+
+    (or (parse-integer (prompt-read "Rating"):junk-allowd t)0)
+
+    (y-or-n-p "Ripped [y/n]")))
+</pre>
+
+
+<p>PROMPT-FOR-CD</p>
+<ul>
+<li>
+<p>lets go for adding a bunch of CDs.</p>
+</li>
+<li>
+<p>You can use the simple form of the LOOP macro, which repeatedly executes a body of expressions until it's exited by a call to RETURN.</p>
+</li>
+</ul>
+<p>CL-USER&gt; (defun add-cds()</p>
+<pre class="code literal-block"><span></span>   (loop (add-record (prompt-for-cd))
+
+     (if (not (y-or-n-p "Another? [y/n]"))(return))))
+</pre>
+
+
+<p>ADD-CDS</p>
+<p>CL-USER&gt; </p>
+<p>Saving and Loading the Database</p>
+<p>*save-db function that takes a filename as an argument and saves the current state of the database.</p>
+<p>CL-USER&gt; (defun save-db (filename)</p>
+<pre class="code literal-block"><span></span>   (with-open-file (out filename
+
+            :direction :output
+
+            :if-exists :supersede)
+
+     (with-standard-io-syntax
+
+       (print *db* out))))
+</pre>
+
+
+<p>SAVE-DB</p>
+<p>CL-USER&gt;</p>
+<ul>
+<li>WITH-OPEN-FILE macro opens a file, binds the stream to a variable, executes a set of expressions, and then closes the file. The list following WITH-OPEN-FILE is not function,but list of parameters to WITH-OPEN-FILE, defines the file to open to out stream, direction, output and if the file exists, then supersede.</li>
+</ul>
+<p>After opening the file, we need to print the content using print command, which is different from formant, it prints in lisp recognizable objects which be read back by lisp-reader.</p>
+<ul>
+<li>WITH-STANDARD-IO-SYNTAX ensures that certain variables that affect the behavior of PRINT are set to their standard values.</li>
+</ul>
+<p>CL-USER&gt; (save-db "~/my-cds.db")</p>
+<p>If open my-cds.db, we will find the output as in <em>db</em> at CL-USER&gt; prompt.</p>
+<p>The function to load the database back is similar.</p>
+<p>CL-USER&gt; (defun load-db(filename)</p>
+<pre class="code literal-block"><span></span>   (with-open-file (in filename)
+
+     (with-standard-io-syntax
+
+       (setf *db* (read in)))))
+</pre>
+
+
+<p>LOAD-DB</p>
+<p>CL-USER&gt;</p>
+<ul>
+<li>The SETF macro is Common Lisp's main assignment operator. It sets its first argument to the result of evaluating its second argument.</li>
+</ul>
+<p>Querying the Database</p>
+<ul>
+<li>query database.</li>
+</ul>
+<p>Something LIKE (select :artist "Dixie Chicks")</p>
+<ul>
+<li>REMOVE-IF-NOT takes a predicate and a list and returns a copy of the list,</li>
+</ul>
+<p>containing only the predicate.</p>
+<ul>
+<li>
+<p>The predicate argument can be any function that accepts a single argument</p>
+</li>
+<li>
+<p>and returns a boolean value--NIL for false and anything else for true.</p>
+</li>
+</ul>
+<p>CL-USER&gt; (remove-if-not #'evenp '(1 2 3 4 5 6 7 8 9 10))</p>
+<p>(2 4 6 8 10)</p>
+<p>CL-USER&gt;</p>
+<ul>
+<li>
+<p>The funny notation #' is shorthand for "Get me the function with the following name." Without the #', Lisp would treat evenp as the name of a variable and look up the value of the variable, not the function.</p>
+</li>
+<li>
+<p>We can also pass, remove-if-not, an anonymous function.</p>
+</li>
+</ul>
+<p>CL-USER&gt; (remove-if-not #'(lambda (x)(= 0(mod x 2)))' (1 2 3 4 5 6 7 8 9 10))</p>
+<p>(2 4 6 8 10)</p>
+<p>CL-USER&gt;</p>
+<ul>
+<li>The anonymous function here is (lambda (x) (=0 (mod x 2))) which returns</li>
+</ul>
+<p>true when x is even, else false.</p>
+<ul>
+<li>
+<p>Note that lambda isn't the name of the function--it's the indicator you're defining an anonymous function.</p>
+</li>
+<li>
+<p>To select record using artist, we use the property of plist, getf, and equal</p>
+</li>
+</ul>
+<p>to compare and put them all together in a lambda expression.</p>
+<p>CL-USER&gt; (remove-if-not </p>
+<pre class="code literal-block"><span></span>  #'(lambda (cd) (equal (getf cd :artist) "Dixie Chicks")) *db*)
+</pre>
+
+
+<p>((:TITLE "Home" :ARTIST "Dixie Chicks" :RATING 9 :RIPPED T)</p>
+<p>(:TITLE "Fly" :ARTIST "Dixie Chicks" :RATING 8 :RIPPED T))</p>
+<p>CL-USER&gt;</p>
+<ul>
+<li>To wrap the whole expression in a function.</li>
+</ul>
+<p>CL-USER&gt; (defun select-by-artist (artist)</p>
+<pre class="code literal-block"><span></span>   (remove-if-not
+
+    #'(lambda (cd) (equal (getf cd :artist)artist)) *db*))
+</pre>
+
+
+<p>SELECT-BY-ARTIST</p>
+<p>CL-USER&gt; </p>
+<ul>
+<li>
+<p>Anonymous functions, embeds the required details like artist.</p>
+</li>
+<li>
+<p>More general select function, with Anonymous function at the next stage.</p>
+</li>
+</ul>
+<p>CL-USER&gt; (defun select (selector-fn)</p>
+<pre class="code literal-block"><span></span>   (remove-if-not selector-fn *db*))
+</pre>
+
+
+<p>SELECT</p>
+<p>CL-USER&gt; (select #'(lambda (cd) (equal (getf cd :artist) "Dixie Chicks")))</p>
+<p>((:TITLE "Home" :ARTIST "Dixie Chicks" :RATING 9 :RIPPED T)</p>
+<p>(:TITLE "Fly" :ARTIST "Dixie Chicks" :RATING 8 :RIPPED T))</p>
+<p>CL-USER&gt;</p>
+<ul>
+<li>Anonymous function creation can be wrapped up.</li>
+</ul>
+<p>CL-USER&gt; (defun artist-selector (artist)</p>
+<pre class="code literal-block"><span></span>   #'(lambda (cd) (equal (getf cd :artist) artist)))
+</pre>
+
+
+<p>ARTIST-SELECTOR</p>
+<p>CL-USER&gt; (select (artist-selector "Dixie Chicks"))</p>
+<p>((:TITLE "Home" :ARTIST "Dixie Chicks" :RATING 9 :RIPPED T)</p>
+<p>(:TITLE "Fly" :ARTIST "Dixie Chicks" :RATING 8 :RIPPED T))</p>
+<p>CL-USER&gt;</p>
+<ul>
+<li>Write a general purpose, selector function generator, a function that,</li>
+</ul>
+<p>depending upon what arguments is getting passed, will generate a selector</p>
+<p>function for different fields, or different combination of fields.</p>
+<p>*Keyword parameters</p>
+<p>*Write functions with varying number of parameters, which are bound to the</p>
+<p>corresponding arguments to the call to the function.</p>
+<p>(defun foo (&amp;key a b c) (list a b c))</p>
+<p>The only difference is the &amp;key at the beginning of the argument list. However, the calls to this new foo will look quite different. These are all legal calls with the result to the right of the ==&gt;:</p>
+<p>(foo :a 1 :b 2 :c 3)  ==&gt; (1 2 3)</p>
+<p>(foo :c 3 :b 2 :a 1)  ==&gt; (1 2 3)</p>
+<p>(foo :a 1 :c 3)       ==&gt; (1 NIL 3)</p>
+<p>(foo)                 ==&gt; (NIL NIL NIL)</p>
+<ul>
+<li>Need to differentiate between NIL assigned when no value passed vs</li>
+</ul>
+<p>explicitly assigned NIL.</p>
+<ul>
+<li>
+<p>To allow this, when you specify a keyword parameter you can replace the simple name with a list consisting of the name of the parameter, a default value, and another parameter name, called a supplied-p parameter.</p>
+</li>
+<li>
+<p>supplied-p parameter will set to true or false if an arugment was passed to</p>
+</li>
+</ul>
+<p>the function call.</p>
+<p>(defun foo (&amp;key a (b 20) (c 30 c-p)) (list a b c c-p))</p>
+<p>Now the same calls from earlier yield these results:</p>
+<p>(foo :a 1 :b 2 :c 3)  ==&gt; (1 2 3 T)</p>
+<p>(foo :c 3 :b 2 :a 1)  ==&gt; (1 2 3 T)</p>
+<p>(foo :a 1 :c 3)       ==&gt; (1 20 3 T)</p>
+<p>(foo)                 ==&gt; (NIL 20 30 NIL)</p>
+<ul>
+<li>A general selector function, based on the above discussions will be:</li>
+</ul>
+<p>(defun where (&amp;key title artist rating (ripped nil ripped-p))</p>
+<p>#'(lambda (cd)</p>
+<pre class="code literal-block"><span></span>  (and
+
+   (if title    (equal (getf cd :title)  title)  t)
+
+   (if artist   (equal (getf cd :artist) artist) t)
+
+   (if rating   (equal (getf cd :rating) rating) t)
+
+   (if ripped-p (equal (getf cd :ripped) ripped) t))))
+</pre>
+
+
+<ul>
+<li>Updating Existing Records--Another Use for WHERE</li>
+</ul>
+<p>(defun update (selector-fn &amp;key title artist rating (ripped nil ripped-p))</p>
+<p>(setf <em>db</em></p>
+<pre class="code literal-block"><span></span>    (mapcar
+
+     #'(lambda (row)
+
+         (when (funcall selector-fn row)
+
+           (if title    (setf (getf row :title) title))
+
+           (if artist   (setf (getf row :artist) artist))
+
+           (if rating   (setf (getf row :rating) rating))
+
+           (if ripped-p (setf (getf row :ripped) ripped)))
+
+         row) *db*)))
+</pre>
+
+
+<ul>
+<li>CL-USER&gt; (update (where :artist "Dixie Chicks") :rating 11)</li>
+</ul>
+<p>NIL</p>
+<ul>
+<li>Function to delete rows.</li>
+</ul>
+<p>(defun delete-rows (selector-fn)</p>
+<p>(setf <em>db</em> (remove-if selector-fn <em>db</em>)))</p>
+<ul>
+<li>
+<p>Remove Duplication and winning Big</p>
+</li>
+<li>
+<p>When a Lisp expression contains a call to a macro, instead of evaluating the arguments and passing them to the function, the Lisp compiler passes the arguments, unevaluated, to the macro code, which returns a new Lisp expression that is then evaluated in place of the original macro call.</p>
+</li>
+<li>
+<p>The main syntactic difference between a function and a macro is that you</p>
+</li>
+<li>
+<p>define a macro with DEFMACRO instead of DEFUN.</p>
+</li>
+</ul>
+<p>CL-USER&gt;(defmacro backwards (expr) (reverse expr))</p>
+<p>CL-USER&gt; (backwards ("hello, world" t format))</p>
+<p>hello, world</p>
+<p>NIL</p>
+<p>When the REPL started to evaluate the backwards expression, it recognized that backwards is the name of a macro. So it left the expression ("hello, world" t format) unevaluated, which is good because it isn't a legal Lisp form. It then passed that list to the backwards code. The code in backwards passed the list to REVERSE, which returned the list (format t "hello, world").</p>
+<p></p></code>
+<p></p>
+</div>
+    </div>
+    <aside class="postpromonav"><nav><ul itemprop="keywords" class="tags">
+<li><a class="tag p-category" href="../../../../categories/ai.html" rel="tag">ai</a></li>
+            <li><a class="tag p-category" href="../../../../categories/lisp.html" rel="tag">lisp</a></li>
+            <li><a class="tag p-category" href="../../../../categories/pcl.html" rel="tag">pcl</a></li>
+        </ul>
+<ul class="pager hidden-print">
+<li class="previous">
+                <a href="../14/happy-pi-day-2.html" rel="prev" title="Happy PI Day">Previous post</a>
+            </li>
+            <li class="next">
+                <a href="../23/karate-2nd-year.html" rel="next" title="Karate - 2nd year">Next post</a>
+            </li>
+        </ul></nav></aside><section class="comments hidden-print"><h2>Comments</h2>
+        
+        
+        <div id="disqus_thread"></div>
+        <script>
+        var disqus_shortname ="xtoinfinity",
+            disqus_url="http://www.xtoinfinity.com/posts/2007/03/22/pcl-a-practical-database.html",
+        disqus_title="PCL: A Practical Database",
+        disqus_identifier="cache/posts/2007/03/22/pcl-a-practical-database.html",
+        disqus_config = function () {
+            this.language = "en";
+        };
+        (function() {
+            var dsq = document.createElement('script'); dsq.async = true;
+            dsq.src = 'https://' + disqus_shortname + '.disqus.com/embed.js';
+            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+        })();
+    </script><noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a>
+</noscript>
+    <a href="https://disqus.com" class="dsq-brlink" rel="nofollow">Comments powered by <span class="logo-disqus">Disqus</span></a>
+
+
+        </section></article><script>var disqus_shortname="xtoinfinity";(function(){var a=document.createElement("script");a.async=true;a.src="https://"+disqus_shortname+".disqus.com/count.js";(document.getElementsByTagName("head")[0]||document.getElementsByTagName("body")[0]).appendChild(a)}());</script>
+</div>
+        <!--End of body content-->
+
+        <footer id="footer">
+            Contents © 2017         <a href="mailto:orsenthil@gmail.com">Senthil Kumaran</a> - Powered by         <a href="https://getnikola.com" rel="nofollow">Nikola</a>         
+            
+        </footer>
+</div>
+</div>
+
+
+            <script src="../../../../assets/js/all-nocdn.js"></script><script>$('a.image-reference:not(.islink) img:not(.islink)').parent().colorbox({rel:"gal",maxWidth:"100%",maxHeight:"100%",scalePhotos:true});</script><!-- fancy dates --><script>
+    moment.locale("en");
+    fancydates(0, "YYYY-MM-DD HH:mm");
+    </script><!-- end fancy dates --><script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-71599453-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+</body>
+</html>

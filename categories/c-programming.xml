@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Senthil Kumaran's thoughts. (Posts about c-programming)</title><link>http://www.xtoinfinity.com/</link><description></description><atom:link href="http://www.xtoinfinity.com/categories/c-programming.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><lastBuildDate>Tue, 21 Mar 2017 14:11:31 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Yashwant Kanetkar - Let Us C</title><link>http://www.xtoinfinity.com/posts/yashwant-kanetkar-let-us-c.html</link><dc:creator>Senthil Kumaran</dc:creator><description>&lt;div&gt;&lt;p&gt;I came across an article on &lt;a class="reference external" href="https://en.wikipedia.org/wiki/Yashavant_Kanetkar"&gt;Yashwant Kanetkar&lt;/a&gt;, and it rekindled many of my fond memories.&lt;/p&gt;
+&lt;blockquote&gt;
+Let Us C is not merely a book, but a bible for millions of programmers in India.&lt;/blockquote&gt;
+&lt;p&gt;That is true for me. I had read it during years 2000-2002, and I kept a count of it. I read, solved all the
+problems in that book for more than 100 times.&lt;/p&gt;
+&lt;p&gt;It has helped me a lot and I am indebted to that book.&lt;/p&gt;
+&lt;p&gt;The &lt;a class="reference external" href="https://yourstory.com/2017/01/techie-tuesdays-yashavant-kanetkar/"&gt;article on Yashwant Kanetkar&lt;/a&gt; was published in a Indian magazine, I made a
+copy of it, because, as you can imagine, I will cherish it.&lt;/p&gt;
+&lt;p&gt;I also watched a short talk by Yaashwant Kanetkar in which he explores his journey, and has some words of advice for
+programmers from India.&lt;/p&gt;
+&lt;div class="youtube-video align-center"&gt;
+&lt;iframe width="425" height="344" src="https://www.youtube.com/embed/AV7hmWfptdY?rel=0&amp;amp;hd=1&amp;amp;wmode=transparent"&gt;&lt;/iframe&gt;
+&lt;/div&gt;&lt;/div&gt;</description><category>c-programming</category><guid>http://www.xtoinfinity.com/posts/yashwant-kanetkar-let-us-c.html</guid><pubDate>Sun, 19 Feb 2017 21:21:29 GMT</pubDate></item></channel></rss>

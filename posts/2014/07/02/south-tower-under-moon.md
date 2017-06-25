@@ -1,0 +1,1 @@
+<html><body><a href="/2014/07/2014-07-01_18-40-56.png"><img class="aligncenter size-large wp-image-1506" src="http://xtoinf.files.wordpress.com/2014/07/2014-07-01_18-40-56.png?w=676" alt="Tower and midnight moon" width="676" height="400"></a></body></html>

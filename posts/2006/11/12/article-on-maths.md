@@ -1,0 +1,3 @@
+<html><body><a href="http://jwz.livejournal.com/" class="lj-user">jwz</a> posted an entry on <a href="http://steve-yegge.blogspot.com/2006/03/math-for-programmers.html">Maths for Programmers</a>. That article is a very insightful. It analyzes how maths can be useful to any programmer at any time. We have all lost touch of basic mathematics and need to gear up. His suggestion is Maths should be learned breadth-first and not depth-first, as knowing different mathematical solutions we come to know about which section the problem belongs to and we might approach it correct. Another suggestion for all of us is to start with any math section at wikipedia and follow it till we understand it and do it daily.
+
+Anyway, that article is a good read.</body></html>

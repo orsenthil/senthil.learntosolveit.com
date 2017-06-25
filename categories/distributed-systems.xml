@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Senthil Kumaran's thoughts. (Posts about distributed systems)</title><link>http://www.xtoinfinity.com/</link><description></description><atom:link href="http://www.xtoinfinity.com/categories/distributed-systems.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><lastBuildDate>Tue, 21 Mar 2017 14:11:30 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Runway - A distributed systems analysis tool by Salesforce</title><link>http://www.xtoinfinity.com/posts/runway-a-distributed-systems-analysis-tool-by-salesforce.html</link><dc:creator>Senthil Kumaran</dc:creator><description>&lt;div&gt;&lt;p&gt;Diego Ongaro of &lt;a class="reference external" href="https://en.wikipedia.org/wiki/Raft_(computer_science)"&gt;Raft&lt;/a&gt; fame describes a tool that he has been working on at Salesforce. The tool &lt;a class="reference external" href="http://runway.systems"&gt;http://runway.systems&lt;/a&gt; is
+intended to help the designers of distributed systems. The idea is, folks designing distributed systems can encode their
+encode their model, specify the states of the system, specify the invariant and run the simulations in the tool.&lt;/p&gt;
+&lt;p&gt;This tool will help in visualization and analysis of the distributed systems behavior under various conditions. Diego
+states that such a system would have been really helpful to him when, if it was available, when he was writing Raft.&lt;/p&gt;
+&lt;p&gt;In this approachable presentation, he illustrates the tool using.&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;A fictional, &lt;a class="reference external" href="https://github.com/salesforce/runway-model-toomanybananas"&gt;too many bananas problem&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Simulating an &lt;a class="reference external" href="https://en.wikipedia.org/wiki/Elevator_algorithm"&gt;Elevator Control System&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Simulation of &lt;a class="reference external" href="https://en.wikipedia.org/wiki/Raft_(computer_science)"&gt;Leader Election and Master Failures in Raft&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class="youtube-video align-center"&gt;
+&lt;iframe width="425" height="344" src="https://www.youtube.com/embed/BAZHZG-8ayo?rel=0&amp;amp;hd=1&amp;amp;wmode=transparent"&gt;&lt;/iframe&gt;
+&lt;/div&gt;&lt;/div&gt;</description><category>distributed systems</category><category>introduction</category><guid>http://www.xtoinfinity.com/posts/runway-a-distributed-systems-analysis-tool-by-salesforce.html</guid><pubDate>Fri, 30 Dec 2016 01:10:06 GMT</pubDate></item></channel></rss>

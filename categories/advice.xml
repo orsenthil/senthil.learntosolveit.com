@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Senthil Kumaran's thoughts. (Posts about advice)</title><link>http://www.xtoinfinity.com/</link><description></description><atom:link href="http://www.xtoinfinity.com/categories/advice.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><lastBuildDate>Tue, 21 Mar 2017 14:37:12 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>How to become a better programmer by James Long</title><link>http://www.xtoinfinity.com/posts/2017/03/21/how-to-become-a-better-programmer-by-james-long.html</link><dc:creator>Senthil Kumaran</dc:creator><description>&lt;div&gt;&lt;p&gt;The original post is &lt;a class="reference external" href="http://jlongster.com/How-I-Became-Better-Programmer"&gt;here&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;I might have stumbled upon this via hackernews and this topic is of perennial interest to me. The general advice
+given were helpful. I liked the specific, measurable suggestions too. These were:&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;Learn C  - &lt;em&gt;I know C. I have written C. I will need to get back to writing in C.&lt;/em&gt;&lt;/li&gt;
+&lt;li&gt;Write a compiler  - &lt;em&gt;Not yet.&lt;/em&gt;&lt;/li&gt;
+&lt;li&gt;Learn macros - &lt;em&gt;Not yet.&lt;/em&gt;&lt;/li&gt;
+&lt;li&gt;SICP - &lt;em&gt;Not yet.&lt;/em&gt;&lt;/li&gt;
+&lt;li&gt;Understand continuations - &lt;em&gt;Not yet.&lt;/em&gt;&lt;/li&gt;
+&lt;li&gt;If anything, just try a new language - &lt;em&gt;I try this every now and then. The emphasis on his post were learning functional languages which, I think, I will be starting this year.&lt;/em&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/div&gt;</description><category>advice</category><category>easy</category><category>general</category><category>philosophy</category><guid>http://www.xtoinfinity.com/posts/2017/03/21/how-to-become-a-better-programmer-by-james-long.html</guid><pubDate>Tue, 21 Mar 2017 14:27:38 GMT</pubDate></item></channel></rss>

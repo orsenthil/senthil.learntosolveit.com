@@ -1,0 +1,1 @@
+<html><body><p>Home Page: <a href="http://puggy.symonds.net/~senthil/">http://puggy.symonds.net/~senthil/</a><br>UnixBlog: <a href="http://puggy.symonds.net/~senthil/unixblog/">http://puggy.symonds.net/~senthil/unixblog/</a><br>NECSUS: <a href="http://puggy.symonds.net/~senthil/necsus/">http://puggy.symonds.net/~senthil/necsus/</a></p></body></html>

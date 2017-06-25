@@ -1,0 +1,1 @@
+<html><body><a href="http://lists.us.dell.com/pipermail/libsmbios-devel/2005-September/000079.html">[PATCH] checkSkipTest for Skipping unit_test failures</a>.<br><br>trying for an entry into <a href="http://linux.dell.com/libsmbios/main/index.html">libsmbios</a>.</body></html>

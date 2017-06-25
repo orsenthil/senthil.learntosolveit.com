@@ -1,0 +1,1 @@
+<html><body><p>I found docs.google.com much better, more intuitive and faster than Open Office in Ubuntu. I composed an entire 3 page document today on online docs.</p></body></html>

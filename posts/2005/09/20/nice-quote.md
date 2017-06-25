@@ -1,0 +1,1 @@
+<html><body><p class="mobile-post">Dealing with failure is easy:<br>        Work hard to improve.<br>Success is also easy to handle:<br>        You've solved the wrong problem.<br>        Work hard to improve.      <br> </p></body></html>

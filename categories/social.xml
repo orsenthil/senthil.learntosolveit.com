@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Senthil Kumaran's thoughts. (Posts about social)</title><link>http://www.xtoinfinity.com/</link><description></description><atom:link href="http://www.xtoinfinity.com/categories/social.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><lastBuildDate>Tue, 21 Mar 2017 14:11:30 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Web of Stories - Donald Knuth</title><link>http://www.xtoinfinity.com/posts/web-of-stories-donald-knuth.html</link><dc:creator>Senthil Kumaran</dc:creator><description>&lt;div&gt;&lt;p&gt;I am a &lt;a class="reference external" href="http://www.xtoinfinity.com/output/categories/knuth.html"&gt;Donald Knuth fan&lt;/a&gt;, and sometimes I strive to understand his &lt;a class="reference external" href="http://www.xtoinfinity.com/output/posts/comma-free-codes.html"&gt;lectures&lt;/a&gt;. Stumbled upon this website called
+webofstories.com that feature many scientists and carries &lt;em&gt;extensive&lt;/em&gt; interviews with them, who reflect upon their
+life, their personal moments, their personal views on their achievements.&lt;/p&gt;
+&lt;p&gt;I watched the entire &lt;a class="reference external" href="http://www.webofstories.com/play/donald.knuth/1"&gt;3 hour interview with Donald Knuth&lt;/a&gt; and immensely enjoyed it.&lt;/p&gt;
+&lt;p&gt;One of the excellent moment was, when he shares his 2nd computer program, which was a learning tic-tac-toe. This was
+written for the IBM 650 Machine having just 10K bytes of memory.&lt;/p&gt;
+&lt;img alt="http://www.columbia.edu/cu/computinghistory/650-2.jpg" class="align-center" src="http://www.columbia.edu/cu/computinghistory/650-2.jpg" style="width: 450px; height: 300px;"&gt;
+&lt;p&gt;Those days, the programs were written in punched-cards and a typical program would look something like this (location,
+instruction).&lt;/p&gt;
+&lt;pre class="literal-block"&gt;
+0001 0000010000
+0002 0000000000-
+0003 1000018003
+0004 6100080007
+0005 2400008003
+0006 0100008000
+0007 6900060005
+0008 2019990003
+&lt;/pre&gt;
+&lt;p&gt;Imagine writing an AI program in that. The difficulty of writing does not matter, just the possibility that it could be
+written and could be very was exciting, probably led Knuth to write it. This video shows his excitement when he shares
+that moment.&lt;/p&gt;
+&lt;div class="youtube-video align-center"&gt;
+&lt;iframe width="425" height="344" src="https://www.youtube.com/embed/_c3dKYrjj2Q?rel=0&amp;amp;hd=1&amp;amp;wmode=transparent"&gt;&lt;/iframe&gt;
+&lt;/div&gt;&lt;p&gt;Other interview bits are interesting too. Knuth covers academia, maths, computer science, computer history, programming
+as art, typography, religion, his dates, his wife, his children and awards he has won. Many interesting things can be
+picked up.&lt;/p&gt;
+&lt;hr class="docutils"&gt;
+&lt;blockquote&gt;
+"If it doesn't go well, so what, I tried, and I did it." - Donald Knuth on his thoughts, when delivering the lecture of "Science and Religion" at MIT.&lt;/blockquote&gt;
+&lt;hr class="docutils"&gt;&lt;/div&gt;</description><category>knuth</category><category>social</category><guid>http://www.xtoinfinity.com/posts/web-of-stories-donald-knuth.html</guid><pubDate>Thu, 29 Dec 2016 22:47:53 GMT</pubDate></item><item><title>Rationale behind punishments</title><link>http://www.xtoinfinity.com/posts/rationale-behind-punishments.html</link><dc:creator>Senthil Kumaran</dc:creator><description>&lt;div&gt;&lt;p&gt;I stumbled upon a &lt;a class="reference external" href="https://www.reddit.com/r/explainlikeimfive/comments/5kbvkj/eli5_why_is_suspension_from_school_a_punishment/"&gt;Explain Like I am Five Story which dealt with the rationale behind punishments&lt;/a&gt;.  The topic of
+punishments is a complex one and needs balanced thinking. The author elucidated many reasons for which punishments are
+administered in society. We see the trends of those in both online and offline societies.&lt;/p&gt;
+&lt;p&gt;Punishments are administered for one of the following reasons.&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;&lt;strong&gt;Incapacitation&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Is stopping somebody from doing an unacceptable behavior in the society again.&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;&lt;strong&gt;Restitution&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Is getting something back for the victim of somebody who misbehaves, to compensate them for that which they've been
+deprived by the offender. Like charging fine and using it for taxes.&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;&lt;strong&gt;Retribution&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Is like feeling of justice that deprived might get. Many of us think, this is the primary purpose for punishment. This
+is non measurable, but often paves way to other measurable impacts like incapacitation, restitution etc.&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;&lt;strong&gt;Rehabilitation&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;The purpose is to give the offender, time to reflect on the wrong doing, possibly empathize with the one affected.&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;&lt;strong&gt;Deterrence&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Is about reducing the likelihood that misbehaviour will occur in the first place. The punishment is more for a warning
+to prevent a socially unacceptable behavior.&lt;/p&gt;
+&lt;p&gt;Many a social regulatory policies can be mapped to above concepts of negative reinforcements to prevent any undesirable
+outcomes.&lt;/p&gt;&lt;/div&gt;</description><category>meta</category><category>social</category><guid>http://www.xtoinfinity.com/posts/rationale-behind-punishments.html</guid><pubDate>Tue, 27 Dec 2016 15:32:32 GMT</pubDate></item></channel></rss>

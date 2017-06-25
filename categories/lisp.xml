@@ -1,0 +1,992 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Senthil Kumaran's thoughts. (Posts about lisp)</title><link>http://www.xtoinfinity.com/</link><description></description><atom:link href="http://www.xtoinfinity.com/categories/lisp.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><lastBuildDate>Tue, 21 Mar 2017 14:11:33 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>PCL : Syntax and Semantics</title><link>http://www.xtoinfinity.com/posts/2007/03/29/pcl-syntax-and-semantics.html</link><dc:creator>Senthil Kumaran</dc:creator><description>&lt;div&gt;&lt;p&gt;&lt;/p&gt;&lt;p&gt;Syntax and Semantics&lt;/p&gt;
+&lt;p&gt;What's with All the Parentheses?&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;extensive use of parentheses and prefix notation.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;when John McCarthy first invented Lisp, he intended to implement a more Algol-like syntax, which he called M-expressions.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;The project of defining M-expressions precisely and compiling them or at least translating them into S-expressions was neither finalized nor explicitly abandoned. It just receded into the indefinite future, and a new generation of programmers appeared who preferred [S-expressions] to any FORTRAN-like or ALGOL-like notation that could be devised.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Breaking Open the Black Box&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;In most programming languages, the language processor--whether an interpreter or a compiler--operates as a black box.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Language processor is divided into three subsystems.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;1) a lexical analyzer breaks up the stream of characters into tokens.&lt;/p&gt;
+&lt;p&gt;2) and feeds them to a parser that builds a tree representing the expressions in the program, according to the language's grammar.&lt;/p&gt;
+&lt;p&gt;3) This tree--called an abstract syntax tree--is then fed to an evaluator that either interprets it directly or compiles it into some other language such as machine code.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Common Lisp defines two black boxes, one that translates text into Lisp objects and another that implements the semantics of the language in terms of those objects. The first box is called the reader, and the second is called the evaluator&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Each black box defines one level of syntax. The reader defines how strings&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;of characters can be translated into Lisp objects called s-expressions.&lt;/p&gt;
+&lt;!--more Further Notes on Syntax and Semantics--&gt;
+
+&lt;ul&gt;
+&lt;li&gt;(foo 1 2) is  legal s-expression whereas ("foo" 1 2) is not, because a list&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;starting with string has no meaning.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;This split of Black Box into two has a couple of consequences:&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;One is that you can use s-expressions, as an externalizable data format (&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;remember the file database example) for data other than source code, using READ to read it and PRINT to print it.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;The other consequence is that since the semantics of the language are defined in terms of trees of objects rather than strings of characters, it's easier to generate code within the language than it would be if you had to generate code as text. &lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Generating code completely from scratch is only marginally easier--building&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;up lists vs. building up strings is about the same amount of work. The real&lt;/p&gt;
+&lt;p&gt;win, however, is that you can generate code by manipulating existing data. (&lt;/p&gt;
+&lt;p&gt;This is the basis of macros in lisp)&lt;/p&gt;
+&lt;p&gt;S-expressions&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Elements of s-expressions are lists and atoms&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Lists are delimited by parentheses and can contain any number of&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;whitespace-separated elements. ( Recursion here)&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Atoms are everything else.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Comments--which aren't, technically speaking, s-expressions--start with a semicolon, extend to the end of a line, and are treated essentially like whitespace.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Since lists are syntactically so trivial, the only remaining syntactic rules&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;you need to know are those governing the form of different kinds of atoms (&lt;/p&gt;
+&lt;p&gt;numbers, strings and names)&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Numbers are fairly straightforward: any sequence of digits--possibly prefaced with a sign (+ or -), containing a decimal point (.) or a solidus (/), or ending with an exponent marker--is read as a number.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;E.g: 123, 3/7, 1.0,1.0e0, 1.0d0, 1.0e-4,+42,-42&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;All rationals are internally represented in a simplified form.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;On the other hand, 1.0, 1.0d0, and 1 can all denote different objects&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;because the different floating-point representations and integers are&lt;/p&gt;
+&lt;p&gt;different types.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Strings are enclosed in double quotes.Within a string a backslash () escapes the next character, causing it to be included in the string regardless of what it is. The only two characters that must be escaped within a string are double quotes and the backslash itself. &lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Names used in Lisp programs, such as FORMAT and hello-world, and &lt;em&gt;db&lt;/em&gt; are represented by objects called symbols.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Almost any character can appear in a name. Whitespace characters cannot&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;appear, because the elements of the list are separated by whitespace.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;No periods only name.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;open and close parentheses, double and single quotes, backtick, comma,&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;colon, semicolon, backslash, and vertical bar are for syntactic purposes in&lt;/p&gt;
+&lt;p&gt;lisp. if wish to include them in name, precede with backslash or two vertical&lt;/p&gt;
+&lt;p&gt;bars.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;While reading names, the reader converts all unescaped characters in a name&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;to their uppercase equivalents. Thats why REPL prints the upper case name&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Standard style, these days, is to write code in all lowercase and let the reader change names to uppercase&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;the reader interns symbols--after it has read the name and converted it to&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;all uppercase, the reader looks in a table called a package for an existing&lt;/p&gt;
+&lt;p&gt;symbol with the same name. If cant find one, create a new symbol and add it&lt;/p&gt;
+&lt;p&gt;to the table or return the symbol as already in the table.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;hyphenated names is a convention.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Global variables are given names that start and end with *&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Constants are given names, starting and ending with +.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Few programmers, define name starting with % and %%.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;The syntax of list, number,strings and symbols represent a good amount of&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;lisp programs.&lt;/p&gt;
+&lt;p&gt;x             ; the symbol X&lt;/p&gt;
+&lt;p&gt;()            ; the empty list&lt;/p&gt;
+&lt;p&gt;(1 2 3)       ; a list of three numbers&lt;/p&gt;
+&lt;p&gt;("foo" "bar") ; a list of two strings&lt;/p&gt;
+&lt;p&gt;(x y z)       ; a list of three symbols&lt;/p&gt;
+&lt;p&gt;(x 1 "foo")   ; a list of a symbol, a number, and a string&lt;/p&gt;
+&lt;p&gt;(+ (* 2 3) 4) ; a list of a symbol, a list, and a number.&lt;/p&gt;
+&lt;p&gt;An only slightly more complex example is the following four-item list that contains two symbols, the empty list, and another list, itself containing two symbols and a string:&lt;/p&gt;
+&lt;p&gt;(defun hello-world ()&lt;/p&gt;
+&lt;p&gt;(format t "hello, world"))&lt;/p&gt;
+&lt;p&gt;S-expressions as Lisp Forms.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Common Lisp's evaluation rule defines a second level of syntax that&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;determines which s-expressions can be treated as Lisp forms.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Any atom--any nonlist or the empty list--is a legal Lisp form as is any list that has a symbol as its first element.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;For purposes of discussion, you can think of the evaluator as a function that takes as an argument a syntactically well-formed Lisp form and returns a value, which we can call the value of the form.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;The simplest Lisp forms, atoms, can be divided into two categories: symbols and everything else.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;symbol, evaluated as a form, is considered the name of a variable and&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;evaluates to the current value of the variable.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;For instance, the symbol PI names a constant variable whose value is the best possible floating-point approximation to the mathematical constant pi.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;All other atoms--numbers and strings are the kinds you've seen so far--are&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;self-evaluating objects.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;It's also possible for symbols to be self-evaluating in the sense that the variables they name can be assigned the value of the symbol itself. Two important constants that are defined this way are T and NIL, the canonical true and false values.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Another class of self-evaluating symbols are the keyword symbols--symbols whose names start with :.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;To determine what kind of form a given list is, the evaluator must determine whether the symbol that starts the list is the name of a function, a macro, or a special operator.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Function Calls&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;The evaluation rule for function call forms is simple: evaluate the remaining elements of the list as Lisp forms and pass the resulting values to the named function.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;(function-name argument*)&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Thus, the following expression is evaluated by first evaluating 1, then evaluating 2, and then passing the resulting values to the + function, which returns 3:&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;(+ 1 2)&lt;/p&gt;
+&lt;p&gt;Special Operators&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Because all the arguments to a function are evaluated before the function is called, there's no way to write a function that behaves like the IF operator&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;To solve this problem, Common Lisp defines a couple dozen so-called special operators, IF being one, that do things that functions can't do. There are 25 in all, but only a small handful are used directly in day-to-day programming.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;The rule for IF is pretty easy: evaluate the first expression. If it evaluates to non-NIL, then evaluate the next expression and return its value. Otherwise, return the value of evaluating the third expression or NIL if the third expression is omitted.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;An even simpler special operator is QUOTE, which takes a single expression as its "argument" and simply returns it, unevaluated.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;QUOTE is used commonly enough that a special syntax for it is built into the reader. Instead of writing the following:&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;(quote (+ 1 2))&lt;/p&gt;
+&lt;p&gt;you can write this:&lt;/p&gt;
+&lt;p&gt;'(+ 1 2)&lt;/p&gt;
+&lt;p&gt;This syntax is a small extension of the s-expression syntax understood by the reader. From the point of view of the evaluator, both those expressions will look the same: a list whose first element is the symbol QUOTE and whose second element is the list (+ 1 2).15&lt;/p&gt;
+&lt;p&gt;Macros:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;While special operators extend the syntax of Common Lisp beyond what can be expressed with just function calls, the set of special operators is fixed by the language standard. Macros, on the other hand, give users of the language a way to extend its syntax&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;The evaluation of a macro form proceeds in two phases: First, the elements of the macro form are passed, unevaluated, to the macro function. Second, the form returned by the macro function--called its expansion--is evaluated according to the normal evaluation rules.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;For instance, when you compile a whole file of source code with the&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;function COMPILE-FILE, all the macro forms in the file are recursively&lt;/p&gt;
+&lt;p&gt;expanded until the code consists of nothing but function call forms and&lt;/p&gt;
+&lt;p&gt;special forms. This macroless code is then compiled into a FASL file that&lt;/p&gt;
+&lt;p&gt;the LOAD function knows how to load.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Since the evaluator doesn't evaluate the elements of the macro form before&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;passing them to the macro function, they don't need to be well-formed Lisp&lt;/p&gt;
+&lt;p&gt;forms.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;In other words, each macro defines its own local syntax. For instance, the backwards macro from Chapter 3 defines a syntax in which an expression is a legal backwards form if it's a list that's the reverse of a legal Lisp form.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;macros (while syntantically similar to functions) provide an exciting hook&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;into the compiler.&lt;/p&gt;
+&lt;p&gt;Truth, Falsehood and Equality.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;T for True, NIL for False value and everything else is True.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;tricky thing about NIL is that it's the only object that's both an atom and a list: in addition to falsehood, it's also used to represent the empty list.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;nil, (), 'nil, '() evaluate to NIL.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;t, 't evaluate to T.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Common Lisp provides a number of type-specific equality predicates: = is used to compare numbers, CHAR= to compare characters, and so on.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;EQ tests for "object identity"--two objects are EQ if they're&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;identical.(Dont use as they are implementation dependent)&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Thus, Common Lisp defines EQL to behave like EQ except that it also is guaranteed to consider two objects of the same class representing the same numeric or character value to be equivalent.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;*EQUAL loosens the discrimination of EQL to consider lists equivalent if they&lt;/p&gt;
+&lt;p&gt;have the same structure and contents, recursively, according to EQUAL. EQUAL&lt;/p&gt;
+&lt;p&gt;also considers strings equivalent if they contain the same characters.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;EQUALP is similar to EQUAL except it's even less discriminating. It considers two strings equivalent if they contain the same characters, ignoring differences in case. &lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Formatting Lisp Code.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;The indentation should reflect the structure of the code.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Macro and special forms that implement control constructs are typically indented a little differently: the "body" elements are indented two spaces relative to the opening parenthesis of the form.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;(defun print-list (list)&lt;/p&gt;
+&lt;p&gt;(dolist (i list)&lt;/p&gt;
+&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;(format t "item: ~a~%" i)))
+&lt;/pre&gt;
+
+
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;re-indent a whole expression by positioning the cursor on the opening parenthesis and typing C-M-q. &lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Or you can re-indent the whole body of a function from anywhere within it by typing C-c M-q.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Finally, comments should be prefaced with one to four semicolons depending on the scope of the comment as follows:&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;*;;;; four colon comments for file header. ;;; three colon for paragraph.&lt;/p&gt;
+&lt;p&gt;;; for the code following, which is indented along with code.&lt;/p&gt;&lt;/div&gt;</description><category>ai</category><category>lisp</category><category>pcl</category><guid>http://www.xtoinfinity.com/posts/2007/03/29/pcl-syntax-and-semantics.html</guid><pubDate>Thu, 29 Mar 2007 16:41:00 GMT</pubDate></item><item><title>PCL: A Practical Database</title><link>http://www.xtoinfinity.com/posts/2007/03/22/pcl-a-practical-database.html</link><dc:creator>Senthil Kumaran</dc:creator><description>&lt;div&gt;&lt;p&gt;&lt;/p&gt;&lt;code&gt;Practical: A Simple Database
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;In this chapter you'll write a simple database for keeping track of CDs.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Common Lisp provides three distinct kinds of operators: functions, macros, and special operators.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;CDs and Records&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;To keep track of CDs that need to be ripped to MP3s and which CDs should be&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;ripped first, each record in the database will contain the title and artist&lt;/p&gt;
+&lt;p&gt;of the CD, a rating of how much the user likes it, and a flag saying whether&lt;/p&gt;
+&lt;p&gt;it has been ripped.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;need a way to represent a single database record.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;user defined class - CLOS ( Common Lisp Object System)&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;CL-USER&amp;gt; (list 1 2 3)&lt;/p&gt;
+&lt;p&gt;(1 2 3)&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;A plist is a list where every other element, starting with the first, is a&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;symbol that describes what the next element in the list is. Symbol can be&lt;/p&gt;
+&lt;p&gt;thought of as a name.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;For the symbols that name the fields in the CD database, you can use a particular kind of symbol, called a keyword symbol.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;CL-USER&amp;gt; (list :a 1 :b 2 :c 3)&lt;/p&gt;
+&lt;p&gt;(:A 1 :B 2 :C 3)&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;function GETF, which takes a plist and a symbol and returns the value in the&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;plist following the symbol.&lt;/p&gt;
+&lt;p&gt;CL-USER&amp;gt; (getf (list :a 1 :b 2 :c 3) :c)&lt;/p&gt;
+&lt;p&gt;3&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;make-cd that will take the four fields as arguments and return a plist&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;representing that CD.&lt;/p&gt;
+&lt;p&gt;CL-USER&amp;gt; (defun make-cd(title artist rating ripped)&lt;/p&gt;
+&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;   (list :title title :artist artist :rating rating :ripped ripped))
+&lt;/pre&gt;
+
+
+&lt;p&gt;MAKE-CD&lt;/p&gt;
+&lt;p&gt;CL-USER&amp;gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;DEFUN tells us that this form is defining a new function.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;When make-cd is called, the arguments passed to the call will be bound to the variables in the parameter list. For instance, to make a record for the CD Roses by Kathy Mattea, you might call make-cd like this:&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;CL-USER&amp;gt; (make-cd "Roses" "Kathy Mattea" 7 t)&lt;/p&gt;
+&lt;p&gt;(:TITLE "Roses" :ARTIST "Kathy Mattea" :RATING 7 :RIPPED T)&lt;/p&gt;
+&lt;p&gt;CL-USER&amp;gt;&lt;/p&gt;
+&lt;!--more Read the Notes further...--&gt;
+
+&lt;p&gt;Filling CDs.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Larger Constructs to hold records.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Also for simplicity you can use a global variable, &lt;em&gt;db&lt;/em&gt;, which you can&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;define with the DEFVAR macro. The asterisks (*) in the name are a Lisp&lt;/p&gt;
+&lt;p&gt;naming convention for global variables.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;You can use the PUSH macro to add items to &lt;em&gt;db&lt;/em&gt;. But it's probably a good idea to abstract things a tiny bit, so you should define a function add-record that adds a record to the database.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;CL-USER&amp;gt; (defun add-record (cd) (push cd &lt;em&gt;db&lt;/em&gt;))&lt;/p&gt;
+&lt;p&gt;ADD-RECORD&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;add-record and make-cd together to add CDs to the database.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;CL-USER&amp;gt; (add-record (make-cd "Fly" "Dixie Chicks" 8 t))&lt;/p&gt;
+&lt;p&gt;((:TITLE "Fly" :ARTIST "Dixie Chicks" :RATING 8 :RIPPED T))&lt;/p&gt;
+&lt;p&gt;CL-USER&amp;gt; (add-record (make-cd "Roses" "Kathy Mattea" 7 t))&lt;/p&gt;
+&lt;p&gt;((:TITLE "Roses" :ARTIST "Kathy Mattea" :RATING 7 :RIPPED T)&lt;/p&gt;
+&lt;p&gt;(:TITLE "Fly" :ARTIST "Dixie Chicks" :RATING 8 :RIPPED T))&lt;/p&gt;
+&lt;p&gt;CL-USER&amp;gt; (add-record (make-cd "Home" "Dixie Chicks" 9 t))&lt;/p&gt;
+&lt;p&gt;((:TITLE "Home" :ARTIST "Dixie Chicks" :RATING 9 :RIPPED T)&lt;/p&gt;
+&lt;p&gt;(:TITLE "Roses" :ARTIST "Kathy Mattea" :RATING 7 :RIPPED T)&lt;/p&gt;
+&lt;p&gt;(:TITLE "Fly" :ARTIST "Dixie Chicks" :RATING 8 :RIPPED T))&lt;/p&gt;
+&lt;p&gt;CL-USER&amp;gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Current value of &lt;em&gt;db&lt;/em&gt; by typing &lt;em&gt;db&lt;/em&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;CL-USER&amp;gt; &lt;em&gt;db&lt;/em&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;dump-db function that dumps out the database in a more human-readable&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;format.&lt;/p&gt;
+&lt;p&gt;CL-USER&amp;gt; (defun dump-db()&lt;/p&gt;
+&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;   (dolist (cd *db*)
+
+     (format t "~{~a:~10t~a~%~}~%" cd)))
+&lt;/pre&gt;
+
+
+&lt;p&gt;DUMP-DB&lt;/p&gt;
+&lt;p&gt;CL-USER&amp;gt; &lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;looping over all the elements of &lt;em&gt;db&lt;/em&gt; with the DOLIST macro, binding each element to the variable cd in turn. For each value of cd, you use the FORMAT function to print it.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;In format, t is shorthand for the stream &lt;em&gt;standard-output&lt;/em&gt;.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Format directives start with ~ (much the way printf's directives start with %).&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;p&gt;One of the coolest FORMAT directives is the ~R directive. Ever want to know&lt;/p&gt;
+&lt;p&gt;how to say a really big number in English words? Lisp knows.&lt;/p&gt;
+&lt;p&gt;CL-USER&amp;gt; (format nil "~R" 42424242424242424242424242424242424242424242424242)&lt;/p&gt;
+&lt;p&gt;"forty-two quindecillion, four hundred and twenty-four quattuordecillion, two hundred and forty-two tredecillion, four hundred and twenty-four duodecillion, two hundred and forty-two undecillion, four hundred and twenty-four decillion, two hundred and forty-two nonillion, four hundred and twenty-four octillion, two hundred and forty-two septillion, four hundred and twenty-four sextillion, two hundred and forty-two quintillion, four hundred and twenty-four quadrillion, two hundred and forty-two trillion, four hundred and twenty-four billion, two hundred and forty-two million, four hundred and twenty-four thousand, two hundred and forty-two"&lt;/p&gt;
+&lt;p&gt;CL-USER&amp;gt; &lt;/p&gt;
+&lt;hr&gt;
+&lt;ul&gt;
+&lt;li&gt;~a directive is the aesthetic directive; it means to consume one argument&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;and output it in a human-readable form. This will render keywords without&lt;/p&gt;
+&lt;p&gt;the leading : and strings without quotation marks.&lt;/p&gt;
+&lt;p&gt;CL-USER&amp;gt; (format t "~a" "Dixie Chicks")&lt;/p&gt;
+&lt;p&gt;Dixie Chicks&lt;/p&gt;
+&lt;p&gt;NIL&lt;/p&gt;
+&lt;p&gt;CL-USER&amp;gt; (format t "~a" :title)&lt;/p&gt;
+&lt;p&gt;TITLE&lt;/p&gt;
+&lt;p&gt;NIL&lt;/p&gt;
+&lt;p&gt;CL-USER&amp;gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;The ~t directive is for tabulating. The ~10t tells FORMAT to emit enough spaces to move to the tenth column before processing the next ~a. A ~t doesn't consume any arguments.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;CL-USER&amp;gt; (format t "~a:~10t~a" :artist "Dixie Chicks")&lt;/p&gt;
+&lt;p&gt;ARTIST:   Dixie Chicks&lt;/p&gt;
+&lt;p&gt;NIL&lt;/p&gt;
+&lt;p&gt;CL-USER&amp;gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;When FORMAT sees ~{ the next argument to be consumed must be a list. FORMAT loops over that list, processing the directives between the ~{ and ~}.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;The ~% directive doesn't consume any arguments but tells FORMAT to emit a newline. &lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;we could have removed dolist macro call and used the format directive&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;itself:&lt;/p&gt;
+&lt;p&gt;CL-USER&amp;gt; (defun dump-db()&lt;/p&gt;
+&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;   (format t "~{~{~a:~10t~a~%~}~%~}" *db*))
+&lt;/pre&gt;
+
+
+&lt;p&gt;DUMP-DB&lt;/p&gt;
+&lt;p&gt;CL-USER&amp;gt;&lt;/p&gt;
+&lt;p&gt;Improving User Interaction.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;need some way to prompt the user for a piece of information and read it.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;CL-USER&amp;gt; (defun prompt-read(prompt)&lt;/p&gt;
+&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;   (format *query-io* "~a: " prompt)
+
+   (force-output *query-io*)
+
+   (read-line *query-io*))
+&lt;/pre&gt;
+
+
+&lt;p&gt;PROMPT-READ&lt;/p&gt;
+&lt;p&gt;CL-USER&amp;gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;format to emit the prompt.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;FORCE-OUTPUT is necessary in some implementations to ensure that Lisp doesn't wait for a newline.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;read a single line of text with the aptly named READ-LINE function&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;query-io is a global variable, can be recognized by the &lt;em&gt;query-io&lt;/em&gt; naming.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;combing make-cd with prompt-read&lt;/p&gt;
+&lt;p&gt;CL-USER&amp;gt; (defun prompt-for-cd()&lt;/p&gt;
+&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;   (make-cd
+
+    (prompt-read "Title")
+
+    (prompt-read "Artist")
+
+    (prompt-read "Rating")
+
+    (prompt-read "Ripped [y/n]")))
+&lt;/pre&gt;
+
+
+&lt;p&gt;PROMPT-FOR-CD&lt;/p&gt;
+&lt;p&gt;CL-USER&amp;gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;prompt-read returns a string, for converting the value to integer, lets use&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;lisp's parse-integer function.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;parse-integer takes an optional argument :junk-allowed which tells to relax&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;the conversion, if there is any exception.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;junk-allowed returns nill, if that cannot find the integer, to get over and&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;set it as 0, we use the or macro.&lt;/p&gt;
+&lt;p&gt;CL-USER&amp;gt; (parse-integer (prompt-read "Rating"))&lt;/p&gt;
+&lt;p&gt;Rating: 10&lt;/p&gt;
+&lt;p&gt;10&lt;/p&gt;
+&lt;p&gt;2&lt;/p&gt;
+&lt;p&gt;CL-USER&amp;gt; (parse-integer(prompt-read "Rating"):junk-allowed t)&lt;/p&gt;
+&lt;p&gt;Rating: 10&lt;/p&gt;
+&lt;p&gt;10&lt;/p&gt;
+&lt;p&gt;2&lt;/p&gt;
+&lt;p&gt;CL-USER&amp;gt; (parse-integer(prompt-read "Rating"):junk-allowed t)&lt;/p&gt;
+&lt;p&gt;Rating: Senthil&lt;/p&gt;
+&lt;p&gt;NIL&lt;/p&gt;
+&lt;p&gt;0&lt;/p&gt;
+&lt;p&gt;CL-USER&amp;gt; (or(parse-integer(prompt-read "Rating"):junk-allowed t)0)&lt;/p&gt;
+&lt;p&gt;Rating: Senthil&lt;/p&gt;
+&lt;p&gt;0&lt;/p&gt;
+&lt;p&gt;CL-USER&amp;gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;For y or n prompt, we can use common lisp function Y-OR-N-P, that will&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;reprompt the user till  something starting with Y,y,N,n is entered.&lt;/p&gt;
+&lt;p&gt;So, the final prompt-for-cd will be:&lt;/p&gt;
+&lt;p&gt;CL-USER&amp;gt; (defun prompt-for-cd ()&lt;/p&gt;
+&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;   (make-cd
+
+    (prompt-read "Title")
+
+    (prompt-read "Artist")
+
+    (or (parse-integer (prompt-read "Rating"):junk-allowd t)0)
+
+    (y-or-n-p "Ripped [y/n]")))
+&lt;/pre&gt;
+
+
+&lt;p&gt;PROMPT-FOR-CD&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;lets go for adding a bunch of CDs.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;You can use the simple form of the LOOP macro, which repeatedly executes a body of expressions until it's exited by a call to RETURN.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;CL-USER&amp;gt; (defun add-cds()&lt;/p&gt;
+&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;   (loop (add-record (prompt-for-cd))
+
+     (if (not (y-or-n-p "Another? [y/n]"))(return))))
+&lt;/pre&gt;
+
+
+&lt;p&gt;ADD-CDS&lt;/p&gt;
+&lt;p&gt;CL-USER&amp;gt; &lt;/p&gt;
+&lt;p&gt;Saving and Loading the Database&lt;/p&gt;
+&lt;p&gt;*save-db function that takes a filename as an argument and saves the current state of the database.&lt;/p&gt;
+&lt;p&gt;CL-USER&amp;gt; (defun save-db (filename)&lt;/p&gt;
+&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;   (with-open-file (out filename
+
+            :direction :output
+
+            :if-exists :supersede)
+
+     (with-standard-io-syntax
+
+       (print *db* out))))
+&lt;/pre&gt;
+
+
+&lt;p&gt;SAVE-DB&lt;/p&gt;
+&lt;p&gt;CL-USER&amp;gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;WITH-OPEN-FILE macro opens a file, binds the stream to a variable, executes a set of expressions, and then closes the file. The list following WITH-OPEN-FILE is not function,but list of parameters to WITH-OPEN-FILE, defines the file to open to out stream, direction, output and if the file exists, then supersede.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;After opening the file, we need to print the content using print command, which is different from formant, it prints in lisp recognizable objects which be read back by lisp-reader.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;WITH-STANDARD-IO-SYNTAX ensures that certain variables that affect the behavior of PRINT are set to their standard values.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;CL-USER&amp;gt; (save-db "~/my-cds.db")&lt;/p&gt;
+&lt;p&gt;If open my-cds.db, we will find the output as in &lt;em&gt;db&lt;/em&gt; at CL-USER&amp;gt; prompt.&lt;/p&gt;
+&lt;p&gt;The function to load the database back is similar.&lt;/p&gt;
+&lt;p&gt;CL-USER&amp;gt; (defun load-db(filename)&lt;/p&gt;
+&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;   (with-open-file (in filename)
+
+     (with-standard-io-syntax
+
+       (setf *db* (read in)))))
+&lt;/pre&gt;
+
+
+&lt;p&gt;LOAD-DB&lt;/p&gt;
+&lt;p&gt;CL-USER&amp;gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;The SETF macro is Common Lisp's main assignment operator. It sets its first argument to the result of evaluating its second argument.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Querying the Database&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;query database.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Something LIKE (select :artist "Dixie Chicks")&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;REMOVE-IF-NOT takes a predicate and a list and returns a copy of the list,&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;containing only the predicate.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;The predicate argument can be any function that accepts a single argument&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;and returns a boolean value--NIL for false and anything else for true.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;CL-USER&amp;gt; (remove-if-not #'evenp '(1 2 3 4 5 6 7 8 9 10))&lt;/p&gt;
+&lt;p&gt;(2 4 6 8 10)&lt;/p&gt;
+&lt;p&gt;CL-USER&amp;gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;The funny notation #' is shorthand for "Get me the function with the following name." Without the #', Lisp would treat evenp as the name of a variable and look up the value of the variable, not the function.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;We can also pass, remove-if-not, an anonymous function.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;CL-USER&amp;gt; (remove-if-not #'(lambda (x)(= 0(mod x 2)))' (1 2 3 4 5 6 7 8 9 10))&lt;/p&gt;
+&lt;p&gt;(2 4 6 8 10)&lt;/p&gt;
+&lt;p&gt;CL-USER&amp;gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;The anonymous function here is (lambda (x) (=0 (mod x 2))) which returns&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;true when x is even, else false.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Note that lambda isn't the name of the function--it's the indicator you're defining an anonymous function.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;To select record using artist, we use the property of plist, getf, and equal&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;to compare and put them all together in a lambda expression.&lt;/p&gt;
+&lt;p&gt;CL-USER&amp;gt; (remove-if-not &lt;/p&gt;
+&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;  #'(lambda (cd) (equal (getf cd :artist) "Dixie Chicks")) *db*)
+&lt;/pre&gt;
+
+
+&lt;p&gt;((:TITLE "Home" :ARTIST "Dixie Chicks" :RATING 9 :RIPPED T)&lt;/p&gt;
+&lt;p&gt;(:TITLE "Fly" :ARTIST "Dixie Chicks" :RATING 8 :RIPPED T))&lt;/p&gt;
+&lt;p&gt;CL-USER&amp;gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;To wrap the whole expression in a function.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;CL-USER&amp;gt; (defun select-by-artist (artist)&lt;/p&gt;
+&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;   (remove-if-not
+
+    #'(lambda (cd) (equal (getf cd :artist)artist)) *db*))
+&lt;/pre&gt;
+
+
+&lt;p&gt;SELECT-BY-ARTIST&lt;/p&gt;
+&lt;p&gt;CL-USER&amp;gt; &lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Anonymous functions, embeds the required details like artist.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;More general select function, with Anonymous function at the next stage.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;CL-USER&amp;gt; (defun select (selector-fn)&lt;/p&gt;
+&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;   (remove-if-not selector-fn *db*))
+&lt;/pre&gt;
+
+
+&lt;p&gt;SELECT&lt;/p&gt;
+&lt;p&gt;CL-USER&amp;gt; (select #'(lambda (cd) (equal (getf cd :artist) "Dixie Chicks")))&lt;/p&gt;
+&lt;p&gt;((:TITLE "Home" :ARTIST "Dixie Chicks" :RATING 9 :RIPPED T)&lt;/p&gt;
+&lt;p&gt;(:TITLE "Fly" :ARTIST "Dixie Chicks" :RATING 8 :RIPPED T))&lt;/p&gt;
+&lt;p&gt;CL-USER&amp;gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Anonymous function creation can be wrapped up.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;CL-USER&amp;gt; (defun artist-selector (artist)&lt;/p&gt;
+&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;   #'(lambda (cd) (equal (getf cd :artist) artist)))
+&lt;/pre&gt;
+
+
+&lt;p&gt;ARTIST-SELECTOR&lt;/p&gt;
+&lt;p&gt;CL-USER&amp;gt; (select (artist-selector "Dixie Chicks"))&lt;/p&gt;
+&lt;p&gt;((:TITLE "Home" :ARTIST "Dixie Chicks" :RATING 9 :RIPPED T)&lt;/p&gt;
+&lt;p&gt;(:TITLE "Fly" :ARTIST "Dixie Chicks" :RATING 8 :RIPPED T))&lt;/p&gt;
+&lt;p&gt;CL-USER&amp;gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Write a general purpose, selector function generator, a function that,&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;depending upon what arguments is getting passed, will generate a selector&lt;/p&gt;
+&lt;p&gt;function for different fields, or different combination of fields.&lt;/p&gt;
+&lt;p&gt;*Keyword parameters&lt;/p&gt;
+&lt;p&gt;*Write functions with varying number of parameters, which are bound to the&lt;/p&gt;
+&lt;p&gt;corresponding arguments to the call to the function.&lt;/p&gt;
+&lt;p&gt;(defun foo (&amp;amp;key a b c) (list a b c))&lt;/p&gt;
+&lt;p&gt;The only difference is the &amp;amp;key at the beginning of the argument list. However, the calls to this new foo will look quite different. These are all legal calls with the result to the right of the ==&amp;gt;:&lt;/p&gt;
+&lt;p&gt;(foo :a 1 :b 2 :c 3)  ==&amp;gt; (1 2 3)&lt;/p&gt;
+&lt;p&gt;(foo :c 3 :b 2 :a 1)  ==&amp;gt; (1 2 3)&lt;/p&gt;
+&lt;p&gt;(foo :a 1 :c 3)       ==&amp;gt; (1 NIL 3)&lt;/p&gt;
+&lt;p&gt;(foo)                 ==&amp;gt; (NIL NIL NIL)&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Need to differentiate between NIL assigned when no value passed vs&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;explicitly assigned NIL.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;To allow this, when you specify a keyword parameter you can replace the simple name with a list consisting of the name of the parameter, a default value, and another parameter name, called a supplied-p parameter.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;supplied-p parameter will set to true or false if an arugment was passed to&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;the function call.&lt;/p&gt;
+&lt;p&gt;(defun foo (&amp;amp;key a (b 20) (c 30 c-p)) (list a b c c-p))&lt;/p&gt;
+&lt;p&gt;Now the same calls from earlier yield these results:&lt;/p&gt;
+&lt;p&gt;(foo :a 1 :b 2 :c 3)  ==&amp;gt; (1 2 3 T)&lt;/p&gt;
+&lt;p&gt;(foo :c 3 :b 2 :a 1)  ==&amp;gt; (1 2 3 T)&lt;/p&gt;
+&lt;p&gt;(foo :a 1 :c 3)       ==&amp;gt; (1 20 3 T)&lt;/p&gt;
+&lt;p&gt;(foo)                 ==&amp;gt; (NIL 20 30 NIL)&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;A general selector function, based on the above discussions will be:&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;(defun where (&amp;amp;key title artist rating (ripped nil ripped-p))&lt;/p&gt;
+&lt;p&gt;#'(lambda (cd)&lt;/p&gt;
+&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;  (and
+
+   (if title    (equal (getf cd :title)  title)  t)
+
+   (if artist   (equal (getf cd :artist) artist) t)
+
+   (if rating   (equal (getf cd :rating) rating) t)
+
+   (if ripped-p (equal (getf cd :ripped) ripped) t))))
+&lt;/pre&gt;
+
+
+&lt;ul&gt;
+&lt;li&gt;Updating Existing Records--Another Use for WHERE&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;(defun update (selector-fn &amp;amp;key title artist rating (ripped nil ripped-p))&lt;/p&gt;
+&lt;p&gt;(setf &lt;em&gt;db&lt;/em&gt;&lt;/p&gt;
+&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;    (mapcar
+
+     #'(lambda (row)
+
+         (when (funcall selector-fn row)
+
+           (if title    (setf (getf row :title) title))
+
+           (if artist   (setf (getf row :artist) artist))
+
+           (if rating   (setf (getf row :rating) rating))
+
+           (if ripped-p (setf (getf row :ripped) ripped)))
+
+         row) *db*)))
+&lt;/pre&gt;
+
+
+&lt;ul&gt;
+&lt;li&gt;CL-USER&amp;gt; (update (where :artist "Dixie Chicks") :rating 11)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;NIL&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Function to delete rows.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;(defun delete-rows (selector-fn)&lt;/p&gt;
+&lt;p&gt;(setf &lt;em&gt;db&lt;/em&gt; (remove-if selector-fn &lt;em&gt;db&lt;/em&gt;)))&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Remove Duplication and winning Big&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;When a Lisp expression contains a call to a macro, instead of evaluating the arguments and passing them to the function, the Lisp compiler passes the arguments, unevaluated, to the macro code, which returns a new Lisp expression that is then evaluated in place of the original macro call.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;The main syntactic difference between a function and a macro is that you&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;define a macro with DEFMACRO instead of DEFUN.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;CL-USER&amp;gt;(defmacro backwards (expr) (reverse expr))&lt;/p&gt;
+&lt;p&gt;CL-USER&amp;gt; (backwards ("hello, world" t format))&lt;/p&gt;
+&lt;p&gt;hello, world&lt;/p&gt;
+&lt;p&gt;NIL&lt;/p&gt;
+&lt;p&gt;When the REPL started to evaluate the backwards expression, it recognized that backwards is the name of a macro. So it left the expression ("hello, world" t format) unevaluated, which is good because it isn't a legal Lisp form. It then passed that list to the backwards code. The code in backwards passed the list to REVERSE, which returned the list (format t "hello, world").&lt;/p&gt;
+&lt;p&gt;&lt;/p&gt;&lt;/code&gt;
+&lt;p&gt;&lt;/p&gt;&lt;/div&gt;</description><category>ai</category><category>lisp</category><category>pcl</category><guid>http://www.xtoinfinity.com/posts/2007/03/22/pcl-a-practical-database.html</guid><pubDate>Thu, 22 Mar 2007 09:15:00 GMT</pubDate></item><item><title>Lisp Notes -2. On REPL</title><link>http://www.xtoinfinity.com/posts/2007/03/05/lisp-notes-2-on-repl.html</link><dc:creator>Senthil Kumaran</dc:creator><description>&lt;div&gt;&lt;p&gt;&lt;/p&gt;&lt;p&gt;Subsequent to &lt;a href="http://phoe6.livejournal.com/46112.html"&gt;Lisp Notes 1&lt;/a&gt;;these are my notes for the Chapter 2 "Lather, Rinse, Repeat: A Tour of the REPL" in the &lt;a href="http://www.xtoinfinity.com/posts/2007/03/05/www.gigamonkeys.com/book/index.html"&gt;Practical Common Lisp Book&lt;/a&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Lisp provides an interactive read-eval-print loop.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Lisp can be used in Automated Theorem proving, planning and scheduling and computer vision. Large scale battlefield simulation, automated planning and natural language interfaces.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Help in EMACS, Press CTRL Key, type h, release CTRL key and press t. This key combination called key-chord is represented like this. C-t h&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Info system is available by C-h i&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;C-h ? brings complete list.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;C-h k lets us type any key combination and lets us know the command which will be invoked.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;C-h w lets us enter the command and returns the corresponding key combination.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;!--more Rest of Notes--&gt;
+
+&lt;p&gt;Crucial bit of emacs terminology is a Buffer. While working with EMACS, each file you edit  will be represented by a different buffer, only one of which is current in any way.&lt;/p&gt;
+&lt;p&gt;Buffers:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;C-x b is command to switch to buffer.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Some key combinations may be available for switches to certain buffer.&lt;/p&gt;
+&lt;p&gt;For e.g. to switch to lisp source file.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;C-c C-z switch to buffer where you interact with lisp ( REPL)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;CL-USER&amp;gt;&lt;/p&gt;
+&lt;p&gt;This is the lisp command prompt. Lisp reads the lines of lisp expressions evaluates them according to the rules of lisp and prints the result.&lt;/p&gt;
+&lt;p&gt;The endless cycle of reading, evaluating and printing is why it is called read-eval-print loop or REPL for short.&lt;/p&gt;
+&lt;p&gt;Its also refered to as top level, top level listner, lisp listner.&lt;/p&gt;
+&lt;p&gt;From REPL we can:&lt;/p&gt;
+&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;          - Define or redefine variables, functions, classes and methods.
+
+          - Evaluate any lisp expression.
+
+          - Load files containing lisp source code or compiled code.
+
+          - compile other files or individual functions.
+
+          - Enter Debugger.
+
+          - Step through the code.
+
+          - Inspect the state of the individual lisp command.
+&lt;/pre&gt;
+
+
+&lt;p&gt;CL-USER&amp;gt;10&lt;/p&gt;
+&lt;p&gt;10&lt;/p&gt;
+&lt;p&gt;R - Reads "10" and coverts to lisp object "10"&lt;/p&gt;
+&lt;p&gt;E - Evaluates to itself.&lt;/p&gt;
+&lt;p&gt;P - Prints "10"&lt;/p&gt;
+&lt;p&gt;CL-USER&amp;gt;(+ 2 3)&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;symbol is coverted to + function which takes 2 and 3 as parameters.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;CL-USER&amp;gt;"hello,world"&lt;/p&gt;
+&lt;p&gt;"hello,world"&lt;/p&gt;
+&lt;p&gt;That was a "hello,world" value.&lt;/p&gt;
+&lt;p&gt;Format function:&lt;/p&gt;
+&lt;p&gt;Format takes a variable number of arguments, but the only two required to send the output a string.&lt;/p&gt;
+&lt;p&gt;CL-USER&amp;gt;(format t "hello,world")&lt;/p&gt;
+&lt;p&gt;"hello,world"&lt;/p&gt;
+&lt;p&gt;NIL&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;t sends the output to stdout.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;NIL is the return value of the function.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;CL-USER&amp;gt;(defun hello-world() (format t "hello,world"))&lt;/p&gt;
+&lt;p&gt;HELLO-WORLD&lt;/p&gt;
+&lt;p&gt;CL-USER&amp;gt;(hello-world)&lt;/p&gt;
+&lt;p&gt;hello,world&lt;/p&gt;
+&lt;p&gt;NIL&lt;/p&gt;
+&lt;p&gt;Saving the file:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;C-x C-f type the file name with extension as .lisp or .cl&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Inside the SLIME mode, C-c C-q invokes the command slime-close-parens-at-point which will insert as many closing paranthesis as necessary to match all the open paranthesis.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;To get the source file to lisp enviroment:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;C-c C-c  ( slime-compile-defun)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Or switch the REPL Buffer:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;C-c C-z (directly from SLIME to REPL)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Or&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;C-x b  and all the buffer.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Make some changes and type again.&lt;/p&gt;
+&lt;p&gt;(defun hello-world()&lt;/p&gt;
+&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;   (format t "Hello,World!"))
+&lt;/pre&gt;
+
+
+&lt;ul&gt;
+&lt;li&gt;C-c C-c&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Or&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;C-c C-z&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;(hello,world)&lt;/p&gt;
+&lt;p&gt;Hello,World!&lt;/p&gt;
+&lt;p&gt;NIL&lt;/p&gt;
+&lt;p&gt;Save the changes to hello.lisp by typing C-x C-s in EMACS which invokes (save-buffer)&lt;/p&gt;
+&lt;p&gt;Exit SLIME, which is in REPL type ',' -a  comma.&lt;/p&gt;
+&lt;p&gt;Invoke again:&lt;/p&gt;
+&lt;p&gt;M-x slime&lt;/p&gt;
+&lt;p&gt;CL-USER&amp;gt;(hello-world)&lt;/p&gt;
+&lt;p&gt;Will got get invoke because REPL is not aware and it will put you in the debugger mode. pressing 'q' will exit the debugger.&lt;/p&gt;
+&lt;p&gt;CL-USER&amp;gt;(hello-world)&lt;/p&gt;
+&lt;p&gt;;Evaluation aborted&lt;/p&gt;
+&lt;p&gt;CL-USER&amp;gt;&lt;/p&gt;
+&lt;p&gt;Letting the REPL Know.&lt;/p&gt;
+&lt;p&gt;1) C-x b hello.lisp and then compling using C-c C-c&lt;/p&gt;
+&lt;p&gt;2) Load the whole file:&lt;/p&gt;
+&lt;p&gt;(load "hello.lisp")&lt;/p&gt;
+&lt;p&gt;; Loading file&lt;/p&gt;
+&lt;p&gt;T&lt;/p&gt;
+&lt;p&gt;T- means loaded correctly.&lt;/p&gt;
+&lt;p&gt;FASL - Fast Load file&lt;/p&gt;
+&lt;p&gt;(load(compile-file("hello.lisp"))&lt;/p&gt;
+&lt;p&gt;From the SLIME enviroment itself, the following features are available:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;C-c C-l (slime-load-file)&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;C-c C-k  to compile and load the file represented by the current buffer.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;&lt;/div&gt;</description><category>ai</category><category>lisp</category><category>pcl</category><guid>http://www.xtoinfinity.com/posts/2007/03/05/lisp-notes-2-on-repl.html</guid><pubDate>Mon, 05 Mar 2007 17:39:00 GMT</pubDate></item><item><title>Lisp Notes - 1</title><link>http://www.xtoinfinity.com/posts/2007/02/25/lisp-notes-1.html</link><dc:creator>Senthil Kumaran</dc:creator><description>&lt;div&gt;&lt;p&gt;&lt;/p&gt;&lt;p&gt;The nearest thing Common Lisp has to a motto is the koan-like description, "the programmable programming language." While cryptic,that description gets at the root of the biggest advantage Common Lisp still has over other languages.&lt;/p&gt;
+&lt;p&gt;Ideas first introduced in Lisp include the if/then/else construct,recursive function calls, dynamic memory allocation, garbage collection,first-class functions, lexical closures, interactive programming, incremental compilation and dynamic typing.&lt;/p&gt;&lt;/div&gt;</description><category>lisp</category><guid>http://www.xtoinfinity.com/posts/2007/02/25/lisp-notes-1.html</guid><pubDate>Sun, 25 Feb 2007 18:26:00 GMT</pubDate></item></channel></rss>

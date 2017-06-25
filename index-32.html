@@ -1,0 +1,594 @@
+<!DOCTYPE html>
+<html prefix="og: http://ogp.me/ns# article: http://ogp.me/ns/article# " lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="description" content="Senthil Kumaran's thoughts.">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Senthil Kumaran's thoughts. (old posts, page 32) | Senthil Kumaran's thoughts.</title>
+<link href="assets/css/all-nocdn.css" rel="stylesheet" type="text/css">
+<meta name="theme-color" content="#5670d4">
+<meta name="generator" content="Nikola (getnikola.com)">
+<link rel="alternate" type="application/rss+xml" title="RSS" href="rss.xml">
+<link rel="canonical" href="http://www.xtoinfinity.com/index-32.html">
+<link rel="prev" href="index-33.html" type="text/html">
+<link rel="next" href="index-31.html" type="text/html">
+<!--[if lt IE 9]><script src="assets/js/html5.js"></script><![endif]-->
+</head>
+<body>
+<a href="#content" class="sr-only sr-only-focusable">Skip to main content</a>
+
+<!-- Menubar -->
+
+<nav class="navbar navbar-inverse navbar-static-top"><div class="container">
+<!-- This keeps the margins nice -->
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-navbar" aria-controls="bs-navbar" aria-expanded="false">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="http://www.xtoinfinity.com/">
+
+                <span id="blog-title">Senthil Kumaran's thoughts.</span>
+            </a>
+        </div>
+<!-- /.navbar-header -->
+        <div class="collapse navbar-collapse" id="bs-navbar" aria-expanded="false">
+            <ul class="nav navbar-nav">
+<li>
+<a href="archive.html">Archives</a>
+                </li>
+<li>
+<a href="categories/index.html">Tags</a>
+                </li>
+<li>
+<a href="rss.xml">RSS feed</a>
+
+                
+            </li>
+</ul>
+<ul class="nav navbar-nav navbar-right"></ul>
+</div>
+<!-- /.navbar-collapse -->
+    </div>
+<!-- /.container -->
+</nav><!-- End of Menubar --><div class="container" id="content" role="main">
+    <div class="body-content">
+        <!--Body content-->
+        <div class="row">
+            
+            
+
+    
+<div class="postindex">
+    <article class="h-entry post-text"><header><h1 class="p-name entry-title"><a href="posts/dominant-resource-fairness.html" class="u-url">Dominant Resource Fairness</a></h1>
+        <div class="metadata">
+            <p class="byline author vcard"><span class="byline-name fn">
+                Senthil Kumaran
+            </span></p>
+            <p class="dateline"><a href="posts/dominant-resource-fairness.html" rel="bookmark"><time class="published dt-published" datetime="2017-01-04T19:27:53-08:00" title="2017-01-04 19:27">2017-01-04 19:27</time></a></p>
+                <p class="commentline">
+        
+    <a href="posts/dominant-resource-fairness.html#disqus_thread" data-disqus-identifier="cache/posts/dominant-resource-fairness.html">Comments</a>
+
+
+        </p>
+</div>
+    </header><div class="e-content entry-content">
+    <div>
+<p>I was reading the paper on <a class="reference external" href="https://people.eecs.berkeley.edu/~alig/papers/drf.pdf">Dominant Resource Fairness</a> and found it approachable, interesting and fairly easy to
+understand.</p>
+<p><a class="reference external" href="https://people.eecs.berkeley.edu/~alig/papers/drf.pdf">Dominant Resource Fairness</a> is a resource allocation strategy used by a system like <a class="reference external" href="http://mesos.apache.org/">Mesos</a>.</p>
+<p>In general terms, resources are basically things that a group will need and the idea is the allocate the resources
+amongst the members of the group in an efficient way. Examples could be the amount of money (resource) to be
+distributed across a group of people in the community or the processor cores in a multi-core processor that needs to be
+distributed and allocated to the process running on that processor.</p>
+<p>The Dominant Resource Fairness uses <a class="reference external" href="https://en.wikipedia.org/wiki/Linear_programming">Linear Programming</a> technique to solve the problem of resource sharing.</p>
+<p>In a datacenter with multiple computers, having multiple CPUs, multiple memories, network cards and many other resources,
+those needs to be shared across the processes that are running in the datacenter. DRF uses the concept of a dominant
+resource. The Dominant share is the maximum share that an entity (process) has been allocated for any resource. For
+e.g, if if a process A has heavy CPU usage and process B has heavy memory usage, the dominant resource for process A is
+CPU and the dominant resource for process B is Memory.</p>
+<p>Dominant Resource Fairness seeks to maximize the minimum dominant share across all entities. That's the formulation
+for the linear programming problem for you. Doing it across in a distributed way for different tasks with different
+requirements is the challenge that is being solved.</p>
+<p>For example, if user A runs CPU-heavy tasks and user B runs memory-heavy tasks, the DRF attempts to equalize CPU share
+of user A with the memory share of user B. In this case, the DRF would allocate more CPU and less memory to the tasks
+run by user A, and allocate less CPU and more memory to the tasks run by user B. In the single resource case -- where
+all jobs are requesting the same resources -- the DRF reduces to max-min fairness for that resource.</p>
+<p>Some interesting anecdotes I found in the paper include, enforcing "fairness" in resource sharing is a difficult
+problem by itself.</p>
+<blockquote>
+A big search company provided dedicated machines for jobs only if the users could guarantee high utilization. The
+company soon found that users would sprinkle their code with infinite loops to artificially inflate utilization
+levels.</blockquote>
+<p>The paper also quoted economic research on difficultly in ensuring fairness.</p>
+<blockquote>
+Competitive equilibrium from equal incomes (CEEI), a popular fair allocation policy preferred in the micro-economic
+domain is not strategy proof.</blockquote>
+</div>
+    </div>
+    </article><article class="h-entry post-text"><header><h1 class="p-name entry-title"><a href="posts/stephen-brennan-tutorial-on-writing-a-shell.html" class="u-url">Stephen Brennan Tutorial on writing a shell</a></h1>
+        <div class="metadata">
+            <p class="byline author vcard"><span class="byline-name fn">
+                Senthil Kumaran
+            </span></p>
+            <p class="dateline"><a href="posts/stephen-brennan-tutorial-on-writing-a-shell.html" rel="bookmark"><time class="published dt-published" datetime="2016-12-30T17:39:14-08:00" title="2016-12-30 17:39">2016-12-30 17:39</time></a></p>
+                <p class="commentline">
+        
+    <a href="posts/stephen-brennan-tutorial-on-writing-a-shell.html#disqus_thread" data-disqus-identifier="cache/posts/stephen-brennan-tutorial-on-writing-a-shell.html">Comments</a>
+
+
+        </p>
+</div>
+    </header><div class="e-content entry-content">
+    <div>
+<p>After learning to program in C language, the next best thing to attempt will be writing some small utility in C.
+I landed upon a great tutorial (<a class="reference external" href="https://brennan.io/2015/01/16/write-a-shell-in-c/">https://brennan.io/2015/01/16/write-a-shell-in-c/</a>) that taught how to write a shell with some builtin utilities in C. I <a class="reference external" href="https://github.com/orsenthil/simple-shell">tried</a> that tutorial today and saw how to build a shell.</p>
+<p>That's the best way to learn about the init, fork, parent process, child process and the shell loop itself.
+As a side-effect, I also setup and used <a class="reference external" href="https://www.jetbrains.com/clion/">CLion</a>  on my computer.</p>
+</div>
+    </div>
+    </article><article class="h-entry post-text"><header><h1 class="p-name entry-title"><a href="posts/deis-illustrated-guide-to-kubernetes.html" class="u-url">Deis Illustrated Guide to Kubernetes</a></h1>
+        <div class="metadata">
+            <p class="byline author vcard"><span class="byline-name fn">
+                Senthil Kumaran
+            </span></p>
+            <p class="dateline"><a href="posts/deis-illustrated-guide-to-kubernetes.html" rel="bookmark"><time class="published dt-published" datetime="2016-12-30T12:30:59-08:00" title="2016-12-30 12:30">2016-12-30 12:30</time></a></p>
+                <p class="commentline">
+        
+    <a href="posts/deis-illustrated-guide-to-kubernetes.html#disqus_thread" data-disqus-identifier="cache/posts/deis-illustrated-guide-to-kubernetes.html">Comments</a>
+
+
+        </p>
+</div>
+    </header><div class="e-content entry-content">
+    <div>
+<img alt="https://dl.dropbox.com/s/jqh03qsqpbtf2pm/deis_kubernetes.png" class="align-center" src="https://dl.dropbox.com/s/jqh03qsqpbtf2pm/deis_kubernetes.png" style="width: 450px; height: 300px;"><p>Deis had published an easy to understand version of Kubernetes guide calling <a class="reference external" href="https://deis.com/phippy/The-Illustrated-Childrens-Guide-to-Kubernetes.pdf">Children's Illustrated Guide to Kubernetes</a></p>
+<p>It explains Containers and the need for container management pretty well. It focuses on Kubernetes. There are other
+container orchestration systems like <a class="reference external" href="https://dcos.io">DCOS</a> that provide the same capabilities of container orchestration as explained
+in that guide.</p>
+<p>The character rendering, which include, PHP app as a giraffe, Kubernetes as a ship captain, docker as whale, gopher as
+go lang app, elephant as postgresql app were great.</p>
+<div class="youtube-video align-center">
+<iframe width="425" height="344" src="https://www.youtube.com/embed/4ht22ReBjno?rel=0&amp;hd=1&amp;wmode=transparent"></iframe>
+</div>
+</div>
+    </div>
+    </article><article class="h-entry post-text"><header><h1 class="p-name entry-title"><a href="posts/runway-a-distributed-systems-analysis-tool-by-salesforce.html" class="u-url">Runway - A distributed systems analysis tool by Salesforce</a></h1>
+        <div class="metadata">
+            <p class="byline author vcard"><span class="byline-name fn">
+                Senthil Kumaran
+            </span></p>
+            <p class="dateline"><a href="posts/runway-a-distributed-systems-analysis-tool-by-salesforce.html" rel="bookmark"><time class="published dt-published" datetime="2016-12-29T17:10:06-08:00" title="2016-12-29 17:10">2016-12-29 17:10</time></a></p>
+                <p class="commentline">
+        
+    <a href="posts/runway-a-distributed-systems-analysis-tool-by-salesforce.html#disqus_thread" data-disqus-identifier="cache/posts/runway-a-distributed-systems-analysis-tool-by-salesforce.html">Comments</a>
+
+
+        </p>
+</div>
+    </header><div class="e-content entry-content">
+    <div>
+<p>Diego Ongaro of <a class="reference external" href="https://en.wikipedia.org/wiki/Raft_(computer_science)">Raft</a> fame describes a tool that he has been working on at Salesforce. The tool <a class="reference external" href="http://runway.systems">http://runway.systems</a> is
+intended to help the designers of distributed systems. The idea is, folks designing distributed systems can encode their
+encode their model, specify the states of the system, specify the invariant and run the simulations in the tool.</p>
+<p>This tool will help in visualization and analysis of the distributed systems behavior under various conditions. Diego
+states that such a system would have been really helpful to him when, if it was available, when he was writing Raft.</p>
+<p>In this approachable presentation, he illustrates the tool using.</p>
+<ul class="simple">
+<li>A fictional, <a class="reference external" href="https://github.com/salesforce/runway-model-toomanybananas">too many bananas problem</a>
+</li>
+<li>Simulating an <a class="reference external" href="https://en.wikipedia.org/wiki/Elevator_algorithm">Elevator Control System</a>
+</li>
+<li>Simulation of <a class="reference external" href="https://en.wikipedia.org/wiki/Raft_(computer_science)">Leader Election and Master Failures in Raft</a>
+</li>
+</ul>
+<div class="youtube-video align-center">
+<iframe width="425" height="344" src="https://www.youtube.com/embed/BAZHZG-8ayo?rel=0&amp;hd=1&amp;wmode=transparent"></iframe>
+</div>
+</div>
+    </div>
+    </article><article class="h-entry post-text"><header><h1 class="p-name entry-title"><a href="posts/web-of-stories-donald-knuth.html" class="u-url">Web of Stories - Donald Knuth</a></h1>
+        <div class="metadata">
+            <p class="byline author vcard"><span class="byline-name fn">
+                Senthil Kumaran
+            </span></p>
+            <p class="dateline"><a href="posts/web-of-stories-donald-knuth.html" rel="bookmark"><time class="published dt-published" datetime="2016-12-29T14:47:53-08:00" title="2016-12-29 14:47">2016-12-29 14:47</time></a></p>
+                <p class="commentline">
+        
+    <a href="posts/web-of-stories-donald-knuth.html#disqus_thread" data-disqus-identifier="cache/posts/web-of-stories-donald-knuth.html">Comments</a>
+
+
+        </p>
+</div>
+    </header><div class="e-content entry-content">
+    <div>
+<p>I am a <a class="reference external" href="http://www.xtoinfinity.com/output/categories/knuth.html">Donald Knuth fan</a>, and sometimes I strive to understand his <a class="reference external" href="http://www.xtoinfinity.com/output/posts/comma-free-codes.html">lectures</a>. Stumbled upon this website called
+webofstories.com that feature many scientists and carries <em>extensive</em> interviews with them, who reflect upon their
+life, their personal moments, their personal views on their achievements.</p>
+<p>I watched the entire <a class="reference external" href="http://www.webofstories.com/play/donald.knuth/1">3 hour interview with Donald Knuth</a> and immensely enjoyed it.</p>
+<p>One of the excellent moment was, when he shares his 2nd computer program, which was a learning tic-tac-toe. This was
+written for the IBM 650 Machine having just 10K bytes of memory.</p>
+<img alt="http://www.columbia.edu/cu/computinghistory/650-2.jpg" class="align-center" src="http://www.columbia.edu/cu/computinghistory/650-2.jpg" style="width: 450px; height: 300px;"><p>Those days, the programs were written in punched-cards and a typical program would look something like this (location,
+instruction).</p>
+<pre class="literal-block">
+0001 0000010000
+0002 0000000000-
+0003 1000018003
+0004 6100080007
+0005 2400008003
+0006 0100008000
+0007 6900060005
+0008 2019990003
+</pre>
+<p>Imagine writing an AI program in that. The difficulty of writing does not matter, just the possibility that it could be
+written and could be very was exciting, probably led Knuth to write it. This video shows his excitement when he shares
+that moment.</p>
+<div class="youtube-video align-center">
+<iframe width="425" height="344" src="https://www.youtube.com/embed/_c3dKYrjj2Q?rel=0&amp;hd=1&amp;wmode=transparent"></iframe>
+</div>
+<p>Other interview bits are interesting too. Knuth covers academia, maths, computer science, computer history, programming
+as art, typography, religion, his dates, his wife, his children and awards he has won. Many interesting things can be
+picked up.</p>
+<hr class="docutils">
+<blockquote>
+"If it doesn't go well, so what, I tried, and I did it." - Donald Knuth on his thoughts, when delivering the lecture of "Science and Religion" at MIT.</blockquote>
+<hr class="docutils">
+</div>
+    </div>
+    </article><article class="h-entry post-text"><header><h1 class="p-name entry-title"><a href="posts/coconut-lang.html" class="u-url">Coconut Lang</a></h1>
+        <div class="metadata">
+            <p class="byline author vcard"><span class="byline-name fn">
+                Senthil Kumaran
+            </span></p>
+            <p class="dateline"><a href="posts/coconut-lang.html" rel="bookmark"><time class="published dt-published" datetime="2016-12-28T15:08:30-08:00" title="2016-12-28 15:08">2016-12-28 15:08</time></a></p>
+                <p class="commentline">
+        
+    <a href="posts/coconut-lang.html#disqus_thread" data-disqus-identifier="cache/posts/coconut-lang.html">Comments</a>
+
+
+        </p>
+</div>
+    </header><div class="e-content entry-content">
+    <div>
+<p>With the trend in functional programming up, I noticed a new programming language called "coconut" that implements
+functional programing "style". This is written on top of "python", the coconut language scripts are compiled and
+translated to python.</p>
+<p>For e.g, this factorial coconut program, will be translated to a valid python program.</p>
+<pre class="literal-block">
+def factorial(n):
+    """Compute n! where n is an integer &gt;= 0."""
+    case n:
+        match 0:
+            return 1
+        match _ is int if n &gt; 0:
+            return n * factorial(n-1)
+    else:
+        raise TypeError("the argument to factorial must be an integer &gt;= 0")
+</pre>
+<p>You can notice the pattern matching style in the above program, which is not a syntax in Python. This program will then
+be converted into a valid python program.</p>
+<p>Great many details can be found in the <a class="reference external" href="http://coconut-lang.org/">coconut-lang</a> website.</p>
+</div>
+    </div>
+    </article><article class="h-entry post-text"><header><h1 class="p-name entry-title"><a href="posts/core-functional-programming-concepts.html" class="u-url">Core Functional Programming Concepts</a></h1>
+        <div class="metadata">
+            <p class="byline author vcard"><span class="byline-name fn">
+                Senthil Kumaran
+            </span></p>
+            <p class="dateline"><a href="posts/core-functional-programming-concepts.html" rel="bookmark"><time class="published dt-published" datetime="2016-12-27T18:04:16-08:00" title="2016-12-27 18:04">2016-12-27 18:04</time></a></p>
+                <p class="commentline">
+        
+    <a href="posts/core-functional-programming-concepts.html#disqus_thread" data-disqus-identifier="cache/posts/core-functional-programming-concepts.html">Comments</a>
+
+
+        </p>
+</div>
+    </header><div class="e-content entry-content">
+    <div>
+<p>Found this introductory post on <a class="reference external" href="https://thesocietea.org/2016/12/core-functional-programming-concepts/">core functional programming concepts</a> dealing with the subject succinctly.
+It is easy to approach functional programming, if we can recognize the following concepts held true by all the
+functional programs, and languages facilitating them.</p>
+<ol class="arabic">
+<li>
+<p class="first">Functions are Pure</p>
+<blockquote>
+<ul class="simple">
+<li>No side-effects, like printing something from the function.</li>
+<li>When called with the same input, will always return the same output. We take that for granted, isn't it?</li>
+</ul>
+</blockquote>
+</li>
+<li>
+<p class="first">Functions are first-class and are of higher order.</p>
+<blockquote>
+<ul class="simple">
+<li>Treat function names as variables.</li>
+<li>Toss function (names) as an argument to a function, and as a return value from a function.</li>
+</ul>
+</blockquote>
+</li>
+<li>
+<p class="first">Variables are immutable.</p>
+<blockquote>
+<ul class="simple">
+<li>Forget mutating variables in a program. If you want an updated value, create a new variable. When you are
+getting started with programming, you feel this is questionable. With experience under your belt, you start
+to prefer immutability of variables.</li>
+</ul>
+</blockquote>
+</li>
+<li>
+<p class="first">Functions have referential transparency.</p>
+<blockquote>
+<ul class="simple">
+<li>It follows from functions are pure requirement. The referential transparency requirement is about substituting
+the function call with return value, wherever the function is called, should not change the state of the program.</li>
+</ul>
+</blockquote>
+</li>
+<li>
+<p class="first">Lambda Calculus</p>
+<blockquote>
+<ul class="simple">
+<li>The mathematics behind functional programming. Take arguments and have a return valued. When evaluating multiple
+arguments, the function is evaluated one argument at a time, with result send to next one-arg-less function,
+kind of a tail-recursion. This concept is called currying.</li>
+</ul>
+</blockquote>
+</li>
+</ol>
+</div>
+    </div>
+    </article><article class="h-entry post-text"><header><h1 class="p-name entry-title"><a href="posts/know-linux-version.html" class="u-url">Know Linux Version</a></h1>
+        <div class="metadata">
+            <p class="byline author vcard"><span class="byline-name fn">
+                Senthil Kumaran
+            </span></p>
+            <p class="dateline"><a href="posts/know-linux-version.html" rel="bookmark"><time class="published dt-published" datetime="2016-12-27T14:56:05-08:00" title="2016-12-27 14:56">2016-12-27 14:56</time></a></p>
+                <p class="commentline">
+        
+    <a href="posts/know-linux-version.html#disqus_thread" data-disqus-identifier="cache/posts/know-linux-version.html">Comments</a>
+
+
+        </p>
+</div>
+    </header><div class="e-content entry-content">
+    <div>
+<p>New <em>trick</em> to know the version of your linux operating system.</p>
+<pre class="code bash"><a name="rest_code_e4509488638548b19b297bfd7d8d299c-1"></a>cat /etc/*-release
+</pre>
+<p>Works fine!</p>
+<pre class="code bash"><a name="rest_code_37a10cf1af7e4316b09ec321fa18bb42-1"></a><span class="c1"># cat /etc/*-release</span>
+<a name="rest_code_37a10cf1af7e4316b09ec321fa18bb42-2"></a><span class="nv">DISTRIB_ID</span><span class="o">=</span>Ubuntu
+<a name="rest_code_37a10cf1af7e4316b09ec321fa18bb42-3"></a><span class="nv">DISTRIB_RELEASE</span><span class="o">=</span><span class="m">16</span>.04
+<a name="rest_code_37a10cf1af7e4316b09ec321fa18bb42-4"></a><span class="nv">DISTRIB_CODENAME</span><span class="o">=</span>xenial
+<a name="rest_code_37a10cf1af7e4316b09ec321fa18bb42-5"></a><span class="nv">DISTRIB_DESCRIPTION</span><span class="o">=</span><span class="s2">"Ubuntu 16.04.1 LTS"</span>
+<a name="rest_code_37a10cf1af7e4316b09ec321fa18bb42-6"></a><span class="nv">NAME</span><span class="o">=</span><span class="s2">"Ubuntu"</span>
+<a name="rest_code_37a10cf1af7e4316b09ec321fa18bb42-7"></a><span class="nv">VERSION</span><span class="o">=</span><span class="s2">"16.04.1 LTS (Xenial Xerus)"</span>
+<a name="rest_code_37a10cf1af7e4316b09ec321fa18bb42-8"></a><span class="nv">ID</span><span class="o">=</span>ubuntu
+<a name="rest_code_37a10cf1af7e4316b09ec321fa18bb42-9"></a><span class="nv">ID_LIKE</span><span class="o">=</span>debian
+<a name="rest_code_37a10cf1af7e4316b09ec321fa18bb42-10"></a><span class="nv">PRETTY_NAME</span><span class="o">=</span><span class="s2">"Ubuntu 16.04.1 LTS"</span>
+<a name="rest_code_37a10cf1af7e4316b09ec321fa18bb42-11"></a><span class="nv">VERSION_ID</span><span class="o">=</span><span class="s2">"16.04"</span>
+<a name="rest_code_37a10cf1af7e4316b09ec321fa18bb42-12"></a><span class="nv">HOME_URL</span><span class="o">=</span><span class="s2">"http://www.ubuntu.com/"</span>
+<a name="rest_code_37a10cf1af7e4316b09ec321fa18bb42-13"></a><span class="nv">SUPPORT_URL</span><span class="o">=</span><span class="s2">"http://help.ubuntu.com/"</span>
+<a name="rest_code_37a10cf1af7e4316b09ec321fa18bb42-14"></a><span class="nv">BUG_REPORT_URL</span><span class="o">=</span><span class="s2">"http://bugs.launchpad.net/ubuntu/"</span>
+<a name="rest_code_37a10cf1af7e4316b09ec321fa18bb42-15"></a><span class="nv">UBUNTU_CODENAME</span><span class="o">=</span>xenial
+</pre>
+</div>
+    </div>
+    </article><article class="h-entry post-text"><header><h1 class="p-name entry-title"><a href="posts/rationale-behind-punishments.html" class="u-url">Rationale behind punishments</a></h1>
+        <div class="metadata">
+            <p class="byline author vcard"><span class="byline-name fn">
+                Senthil Kumaran
+            </span></p>
+            <p class="dateline"><a href="posts/rationale-behind-punishments.html" rel="bookmark"><time class="published dt-published" datetime="2016-12-27T07:32:32-08:00" title="2016-12-27 07:32">2016-12-27 07:32</time></a></p>
+                <p class="commentline">
+        
+    <a href="posts/rationale-behind-punishments.html#disqus_thread" data-disqus-identifier="cache/posts/rationale-behind-punishments.html">Comments</a>
+
+
+        </p>
+</div>
+    </header><div class="e-content entry-content">
+    <div>
+<p>I stumbled upon a <a class="reference external" href="https://www.reddit.com/r/explainlikeimfive/comments/5kbvkj/eli5_why_is_suspension_from_school_a_punishment/">Explain Like I am Five Story which dealt with the rationale behind punishments</a>.  The topic of
+punishments is a complex one and needs balanced thinking. The author elucidated many reasons for which punishments are
+administered in society. We see the trends of those in both online and offline societies.</p>
+<p>Punishments are administered for one of the following reasons.</p>
+<ul class="simple">
+<li><strong>Incapacitation</strong></li>
+</ul>
+<p>Is stopping somebody from doing an unacceptable behavior in the society again.</p>
+<ul class="simple">
+<li><strong>Restitution</strong></li>
+</ul>
+<p>Is getting something back for the victim of somebody who misbehaves, to compensate them for that which they've been
+deprived by the offender. Like charging fine and using it for taxes.</p>
+<ul class="simple">
+<li><strong>Retribution</strong></li>
+</ul>
+<p>Is like feeling of justice that deprived might get. Many of us think, this is the primary purpose for punishment. This
+is non measurable, but often paves way to other measurable impacts like incapacitation, restitution etc.</p>
+<ul class="simple">
+<li><strong>Rehabilitation</strong></li>
+</ul>
+<p>The purpose is to give the offender, time to reflect on the wrong doing, possibly empathize with the one affected.</p>
+<ul class="simple">
+<li><strong>Deterrence</strong></li>
+</ul>
+<p>Is about reducing the likelihood that misbehaviour will occur in the first place. The punishment is more for a warning
+to prevent a socially unacceptable behavior.</p>
+<p>Many a social regulatory policies can be mapped to above concepts of negative reinforcements to prevent any undesirable
+outcomes.</p>
+</div>
+    </div>
+    </article><article class="h-entry post-text"><header><h1 class="p-name entry-title"><a href="posts/leslie-lamport-on-teaching-concurrency.html" class="u-url">Leslie Lamport on Teaching Concurrency</a></h1>
+        <div class="metadata">
+            <p class="byline author vcard"><span class="byline-name fn">
+                Senthil Kumaran
+            </span></p>
+            <p class="dateline"><a href="posts/leslie-lamport-on-teaching-concurrency.html" rel="bookmark"><time class="published dt-published" datetime="2016-12-20T19:17:54-08:00" title="2016-12-20 19:17">2016-12-20 19:17</time></a></p>
+                <p class="commentline">
+        
+    <a href="posts/leslie-lamport-on-teaching-concurrency.html#disqus_thread" data-disqus-identifier="cache/posts/leslie-lamport-on-teaching-concurrency.html">Comments</a>
+
+
+        </p>
+</div>
+    </header><div class="e-content entry-content">
+    <div>
+<p>This post is a short discussion on the <a class="reference external" href="https://en.wikipedia.org/wiki/Leslie_Lamport">Leslie Lamport</a> 's paper "<a class="reference external" href="http://research.microsoft.com/en-us/um/people/lamport/pubs/teaching-concurrency.pdf">Teaching Concurrency</a>".</p>
+<p>Lamport's basic premise is that understanding the system the most important part, and engineers often muddy their
+understanding with implementation details as soon as they start talking about programming languages suitable for
+concurrency.</p>
+<p>He even challenges engineers to come up with the solution for concurrency problems without using "<a class="reference external" href="https://en.wikipedia.org/wiki/Semaphore_(programming)">semaphores</a>",
+"<a class="reference external" href="https://en.wikipedia.org/wiki/Monitor_(synchronization)">monitors</a>", or any other construct that were invented and provided as a tool. Using those, he says, is like using the
+'sort' to routine the language to implement a sorting algorithm.</p>
+<blockquote>
+The modern field of concurrency started with Dijkstra’s 1965 paper on the mutual exclusion problem. For most of the
+1970s, one “solved” the mutual exclusion problem by using semaphores or monitors or conditional critical regions or
+some other language construct. This is like solving the sorting problem by using a programming language with a sort
+command. Most of your colleagues can explain how to implement mutual exclusion using a semaphore. How many of them
+can answer the following question: Can one implement mutual exclusion without using lower-level constructs that,
+like semaphores, assume mutually exclusive access to a resource?</blockquote>
+<p>Lamport's approach to problem solving suggests, we need to think of computing problem as series of states instead of
+series of steps. I think, series of steps tend to give some linearity the approach, while series of states tend to
+indicate that sub-parts of the system can have multiple states and the next state each sub-part can take only depends
+upon the current state and action that leads the state transition to the next state.</p>
+<blockquote>
+<p>It is more useful to think about states than sequences of steps because what a computing device does next depends on
+its current state, not on what steps it took in the past.</p>
+<p>To describe a computation we need to describe a sequence of states. More often, we need to describe the set of
+computations that can be produced by some particular computing device, such as an algorithm. There is one method that
+works in practice: describing a set of computations by</p>
+<ol class="arabic simple">
+<li>the set of all initial initial states and</li>
+<li>A next-state relation that describes, for every state, the possible next states that is, the set of states
+reachable from that state by a single step.</li>
+</ol>
+</blockquote>
+<p>On computational thinking.</p>
+<blockquote>
+<p>How should we describe computations?</p>
+<p>Most computer scientists would probably interpret this question to mean, what language should we use? Imagine an
+art historian answering “how would you describe impressionist painting?” by saying “in French”.</p>
+<p>Programming and hardware-design languages don’t help an engineer understand what problem a system should solve.
+Thinking of computations as sequences of states, rather than as something described by a language, is the first
+step towards such understanding.</p>
+</blockquote>
+<p>Lamport also describes in great details about importance of problem specification. Sometimes, when the problem is
+specified clearly and understood problem, the solution becomes easy.  Most of our struggles seems to be with coming to
+grasp the problem specification.</p>
+<blockquote>
+The great contribution of Dijkstra’s paper on mutual exclusion was not his solution; it was stating the problem.
+(It is remarkable that, in this first paper on the subject, Dijkstra stated all the requirements that distinguish
+mutual exclusion from fundamentally simpler and less interesting problems.)</blockquote>
+<p><em>On concurrency, itself</em></p>
+<p>He gives an example of concurrency problem  that according to him is "trivial". It took me some reading to understand
+the problem. <a class="reference external" href="http://stackoverflow.com/questions/24989756/what-is-the-inductive-invariant-of-the-simple-concurrent-program">StackOverflow.com</a> certainly helped.</p>
+<blockquote>
+<p>Once an engineer understands what a computation is and how it is described, she can understand the most important
+concept in concurrency: invariance. A computing device does the correct thing only because it maintains a correct
+state. Correctness of the state is expressed by an invariant—a predicate that is true in every state of every
+computation.</p>
+<p>Invariance is the key to understanding concurrent systems, but few engineers or computer scientists have learned to
+think in terms of invariants. Here is a simple example.</p>
+</blockquote>
+<p><strong>Now, the problem</strong></p>
+<p>Consider N processes numbered from 0 through N − 1 in which each process i executes</p>
+<div class="math">
+\begin{equation*}
+x[i] :=1;
+\end{equation*}
+</div>
+<div class="math">
+\begin{equation*}
+
+y[i] := x[(i-1)modN]
+\end{equation*}
+</div>
+<p>and stops, where each <span class="math">\(x[i]\)</span> initially equals 0. (The reads and writes of each <span class="math">\(x[i]\)</span> are assumed to be
+atomic.)</p>
+<p>This algorithm satisfies the following property: after every process has stopped, <span class="math">\(y[i]\)</span> equals 1 for at least
+one process <span class="math">\(i\)</span> .</p>
+<p>It is easy to see that the algorithm satisfies this property; the last process <span class="math">\(i\)</span> to write <span class="math">\(y[i]\)</span> must set
+it to 1. But that process doesnt set <span class="math">\(y[i]\)</span> to 1 because it was the last process to write y.</p>
+<p>What a process does depends only on the current state, not on what processes wrote before it. The algorithm satisfies
+this property because it maintains an inductive invariant.</p>
+<p><strong>Explanation</strong></p>
+<p>The explanation on how <span class="math">\(y[i]\)</span> equals for 1 at least one process <span class="math">\(i\)</span> goes like this.</p>
+<ol class="arabic simple">
+<li>The <span class="math">\(x_s\)</span> model the following behavior: <span class="math">\(x[i]\)</span> is 1 if and only if the process <span class="math">\(i\)</span> has already run.</li>
+<li>After all processes have completed, all <span class="math">\(x_s\)</span> are thus set to 1.</li>
+<li>The <span class="math">\(y_s\)</span> are a bit trickier: <span class="math">\(y[i]\)</span> is set if <span class="math">\(x[i-1]\)</span> was set, that is, <span class="math">\(y[i]\)</span> is 1 if and
+only if the predecessor of <span class="math">\(i\)</span> had already run when <span class="math">\(i\)</span> was doing its write to <span class="math">\(y\)</span>.</li>
+</ol>
+<p>I essentially to had resort to <a class="reference external" href="http://stackoverflow.com/questions/24989756/what-is-the-inductive-invariant-of-the-simple-concurrent-program">StackOverflow.com</a> post author's explanation to completely understand this.</p>
+<p>The program invariant is:</p>
+<blockquote>
+<p>If a process has set <span class="math">\(y[i]\)</span>, it must already have set <span class="math">\(x[i]\)</span> to 1.
+This is true regardless whether <span class="math">\(y[i]\)</span> is set to 0 or 1.</p>
+<p>Proving this invariant is quite easy: In the beginning, none of the <span class="math">\(y_s\)</span> is set, so it holds trivially.
+During program execution, each write to <span class="math">\(y[i]\)</span> is <a class="reference external" href="https://en.wikipedia.org/wiki/Sequence_point">sequenced after</a> a write to <span class="math">\(x[i]\)</span>. Therefore
+the invariant also holds for every step of the program afterwards.</p>
+</blockquote>
+<p>The further reasoning goes like this.</p>
+<blockquote>
+<p>The last process to finish sets <span class="math">\(y[i]\)</span> to 1 because, by definition of being the last process, its
+predecessor must have already finished execution at that point (ie. its y value is already set).</p>
+<p>Which means, because of the invariant, its <span class="math">\(x\)</span> value (which determines the last process' <span class="math">\(y\)</span> value)
+has to be 1.</p>
+</blockquote>
+<p>The alternate way to look at this problem can give some intuitive understanding too.</p>
+<blockquote>
+You cannot find an execution order in which all <span class="math">\(y_s\)</span> are set to 0. Doing so would require all processes to
+execute before their predecessor. However, since our processes are arranged in a ring (that is, if I follow the
+predecessor chain I will eventually end up at my starting point again), this leads to the contradiction that at
+least one process must have finished executing before it wrote to <span class="math">\(y\)</span>.</blockquote>
+<p>To understand this concurrency problem, it requires some notion of syntax, a prior understanding of proving hypothesis,
+and possibly discussing the problem and solution.</p>
+<p>Trying to understand itself, I guess, is a progress.</p>
+</div>
+    </div>
+    </article>
+</div>
+
+        <nav class="postindexpager"><ul class="pager">
+<li class="previous">
+                <a href="index-33.html" rel="prev">Newer posts</a>
+            </li>
+            <li class="next">
+                <a href="index-31.html" rel="next">Older posts</a>
+            </li>
+        </ul></nav><script>var disqus_shortname="xtoinfinity";(function(){var a=document.createElement("script");a.async=true;a.src="https://"+disqus_shortname+".disqus.com/count.js";(document.getElementsByTagName("head")[0]||document.getElementsByTagName("body")[0]).appendChild(a)}());</script><script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"> </script><script type="text/x-mathjax-config">
+            MathJax.Hub.Config({tex2jax: {inlineMath: [['$latex ','$'], ['\\(','\\)']]}});
+            </script>
+</div>
+        <!--End of body content-->
+
+        <footer id="footer">
+            Contents © 2017         <a href="mailto:orsenthil@gmail.com">Senthil Kumaran</a> - Powered by         <a href="https://getnikola.com" rel="nofollow">Nikola</a>         
+            
+        </footer>
+</div>
+</div>
+
+
+            <script src="assets/js/all-nocdn.js"></script><script>$('a.image-reference:not(.islink) img:not(.islink)').parent().colorbox({rel:"gal",maxWidth:"100%",maxHeight:"100%",scalePhotos:true});</script><!-- fancy dates --><script>
+    moment.locale("en");
+    fancydates(0, "YYYY-MM-DD HH:mm");
+    </script><!-- end fancy dates --><script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-71599453-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+</body>
+</html>

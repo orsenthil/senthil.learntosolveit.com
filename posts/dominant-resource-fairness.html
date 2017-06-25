@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html prefix="og: http://ogp.me/ns# article: http://ogp.me/ns/article# " lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Dominant Resource Fairness | Senthil Kumaran's thoughts.</title>
+<link href="../assets/css/all-nocdn.css" rel="stylesheet" type="text/css">
+<meta name="theme-color" content="#5670d4">
+<meta name="generator" content="Nikola (getnikola.com)">
+<link rel="alternate" type="application/rss+xml" title="RSS" href="../rss.xml">
+<link rel="canonical" href="http://www.xtoinfinity.com/posts/dominant-resource-fairness.html">
+<!--[if lt IE 9]><script src="../assets/js/html5.js"></script><![endif]--><meta name="author" content="Senthil Kumaran">
+<link rel="prev" href="stephen-brennan-tutorial-on-writing-a-shell.html" title="Stephen Brennan Tutorial on writing a shell" type="text/html">
+<link rel="next" href="swim-group-membership-protocol-paper.html" title="SWIM - Group Membership protocol paper" type="text/html">
+<meta property="og:site_name" content="Senthil Kumaran's thoughts.">
+<meta property="og:title" content="Dominant Resource Fairness">
+<meta property="og:url" content="http://www.xtoinfinity.com/posts/dominant-resource-fairness.html">
+<meta property="og:description" content="I was reading the paper on Dominant Resource Fairness and found it approachable, interesting and fairly easy to
+understand.
+Dominant Resource Fairness is a resource allocation strategy used by a syste">
+<meta property="og:type" content="article">
+<meta property="article:published_time" content="2017-01-04T19:27:53-08:00">
+<meta property="article:tag" content="computer science">
+<meta property="article:tag" content="papers">
+<meta property="article:tag" content="research">
+</head>
+<body>
+<a href="#content" class="sr-only sr-only-focusable">Skip to main content</a>
+
+<!-- Menubar -->
+
+<nav class="navbar navbar-inverse navbar-static-top"><div class="container">
+<!-- This keeps the margins nice -->
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-navbar" aria-controls="bs-navbar" aria-expanded="false">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="http://www.xtoinfinity.com/">
+
+                <span id="blog-title">Senthil Kumaran's thoughts.</span>
+            </a>
+        </div>
+<!-- /.navbar-header -->
+        <div class="collapse navbar-collapse" id="bs-navbar" aria-expanded="false">
+            <ul class="nav navbar-nav">
+<li>
+<a href="../archive.html">Archives</a>
+                </li>
+<li>
+<a href="../categories/index.html">Tags</a>
+                </li>
+<li>
+<a href="../rss.xml">RSS feed</a>
+
+                
+            </li>
+</ul>
+<ul class="nav navbar-nav navbar-right">
+<li>
+    <a href="dominant-resource-fairness.rst" id="sourcelink">Source</a>
+    </li>
+
+                
+            </ul>
+</div>
+<!-- /.navbar-collapse -->
+    </div>
+<!-- /.container -->
+</nav><!-- End of Menubar --><div class="container" id="content" role="main">
+    <div class="body-content">
+        <!--Body content-->
+        <div class="row">
+            
+            
+<article class="post-text h-entry hentry postpage" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title" itemprop="headline name"><a href="#" class="u-url">Dominant Resource Fairness</a></h1>
+
+        <div class="metadata">
+            <p class="byline author vcard"><span class="byline-name fn">
+                    Senthil Kumaran
+            </span></p>
+            <p class="dateline"><a href="#" rel="bookmark"><time class="published dt-published" datetime="2017-01-04T19:27:53-08:00" itemprop="datePublished" title="2017-01-04 19:27">2017-01-04 19:27</time></a></p>
+                <p class="commentline">
+        
+    <a href="dominant-resource-fairness.html#disqus_thread" data-disqus-identifier="cache/posts/dominant-resource-fairness.html">Comments</a>
+
+
+            
+        </p>
+<p class="sourceline"><a href="dominant-resource-fairness.rst" id="sourcelink">Source</a></p>
+
+        </div>
+        
+
+    </header><div class="e-content entry-content" itemprop="articleBody text">
+    <div>
+<p>I was reading the paper on <a class="reference external" href="https://people.eecs.berkeley.edu/~alig/papers/drf.pdf">Dominant Resource Fairness</a> and found it approachable, interesting and fairly easy to
+understand.</p>
+<p><a class="reference external" href="https://people.eecs.berkeley.edu/~alig/papers/drf.pdf">Dominant Resource Fairness</a> is a resource allocation strategy used by a system like <a class="reference external" href="http://mesos.apache.org/">Mesos</a>.</p>
+<p>In general terms, resources are basically things that a group will need and the idea is the allocate the resources
+amongst the members of the group in an efficient way. Examples could be the amount of money (resource) to be
+distributed across a group of people in the community or the processor cores in a multi-core processor that needs to be
+distributed and allocated to the process running on that processor.</p>
+<p>The Dominant Resource Fairness uses <a class="reference external" href="https://en.wikipedia.org/wiki/Linear_programming">Linear Programming</a> technique to solve the problem of resource sharing.</p>
+<p>In a datacenter with multiple computers, having multiple CPUs, multiple memories, network cards and many other resources,
+those needs to be shared across the processes that are running in the datacenter. DRF uses the concept of a dominant
+resource. The Dominant share is the maximum share that an entity (process) has been allocated for any resource. For
+e.g, if if a process A has heavy CPU usage and process B has heavy memory usage, the dominant resource for process A is
+CPU and the dominant resource for process B is Memory.</p>
+<p>Dominant Resource Fairness seeks to maximize the minimum dominant share across all entities. That's the formulation
+for the linear programming problem for you. Doing it across in a distributed way for different tasks with different
+requirements is the challenge that is being solved.</p>
+<p>For example, if user A runs CPU-heavy tasks and user B runs memory-heavy tasks, the DRF attempts to equalize CPU share
+of user A with the memory share of user B. In this case, the DRF would allocate more CPU and less memory to the tasks
+run by user A, and allocate less CPU and more memory to the tasks run by user B. In the single resource case -- where
+all jobs are requesting the same resources -- the DRF reduces to max-min fairness for that resource.</p>
+<p>Some interesting anecdotes I found in the paper include, enforcing "fairness" in resource sharing is a difficult
+problem by itself.</p>
+<blockquote>
+A big search company provided dedicated machines for jobs only if the users could guarantee high utilization. The
+company soon found that users would sprinkle their code with infinite loops to artificially inflate utilization
+levels.</blockquote>
+<p>The paper also quoted economic research on difficultly in ensuring fairness.</p>
+<blockquote>
+Competitive equilibrium from equal incomes (CEEI), a popular fair allocation policy preferred in the micro-economic
+domain is not strategy proof.</blockquote>
+</div>
+    </div>
+    <aside class="postpromonav"><nav><ul itemprop="keywords" class="tags">
+<li><a class="tag p-category" href="../categories/computer-science.html" rel="tag">computer science</a></li>
+            <li><a class="tag p-category" href="../categories/papers.html" rel="tag">papers</a></li>
+            <li><a class="tag p-category" href="../categories/research.html" rel="tag">research</a></li>
+        </ul>
+<ul class="pager hidden-print">
+<li class="previous">
+                <a href="stephen-brennan-tutorial-on-writing-a-shell.html" rel="prev" title="Stephen Brennan Tutorial on writing a shell">Previous post</a>
+            </li>
+            <li class="next">
+                <a href="swim-group-membership-protocol-paper.html" rel="next" title="SWIM - Group Membership protocol paper">Next post</a>
+            </li>
+        </ul></nav></aside><section class="comments hidden-print"><h2>Comments</h2>
+        
+        
+        <div id="disqus_thread"></div>
+        <script>
+        var disqus_shortname ="xtoinfinity",
+            disqus_url="http://www.xtoinfinity.com/posts/dominant-resource-fairness.html",
+        disqus_title="Dominant Resource Fairness",
+        disqus_identifier="cache/posts/dominant-resource-fairness.html",
+        disqus_config = function () {
+            this.language = "en";
+        };
+        (function() {
+            var dsq = document.createElement('script'); dsq.async = true;
+            dsq.src = 'https://' + disqus_shortname + '.disqus.com/embed.js';
+            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+        })();
+    </script><noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a>
+</noscript>
+    <a href="https://disqus.com" class="dsq-brlink" rel="nofollow">Comments powered by <span class="logo-disqus">Disqus</span></a>
+
+
+        </section></article><script>var disqus_shortname="xtoinfinity";(function(){var a=document.createElement("script");a.async=true;a.src="https://"+disqus_shortname+".disqus.com/count.js";(document.getElementsByTagName("head")[0]||document.getElementsByTagName("body")[0]).appendChild(a)}());</script>
+</div>
+        <!--End of body content-->
+
+        <footer id="footer">
+            Contents © 2017         <a href="mailto:orsenthil@gmail.com">Senthil Kumaran</a> - Powered by         <a href="https://getnikola.com" rel="nofollow">Nikola</a>         
+            
+        </footer>
+</div>
+</div>
+
+
+            <script src="../assets/js/all-nocdn.js"></script><script>$('a.image-reference:not(.islink) img:not(.islink)').parent().colorbox({rel:"gal",maxWidth:"100%",maxHeight:"100%",scalePhotos:true});</script><!-- fancy dates --><script>
+    moment.locale("en");
+    fancydates(0, "YYYY-MM-DD HH:mm");
+    </script><!-- end fancy dates --><script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-71599453-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+</body>
+</html>

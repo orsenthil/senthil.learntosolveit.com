@@ -1,0 +1,1 @@
+<html><body><p>All the gopurams (towers) is complete and one can walk inside too.</p><p><a href="https://xtoinf.files.wordpress.com/2014/08/2014-08-29_14-45-55.png"><img class="aligncenter wp-image-1522 size-full" src="http://xtoinf.files.wordpress.com/2014/08/2014-08-29_14-45-55.png" alt="2014-08-29_14.45.55" width="1276" height="756"></a></p></body></html>

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Senthil Kumaran's thoughts. (Posts about mathjax)</title><link>http://www.xtoinfinity.com/</link><description></description><atom:link href="http://www.xtoinfinity.com/categories/cat_mathjax.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><lastBuildDate>Tue, 21 Mar 2017 14:11:31 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>The Man Who Knew Infinity</title><link>http://www.xtoinfinity.com/posts/the-man-who-knew-infinity.html</link><dc:creator>Senthil Kumaran</dc:creator><description>&lt;div&gt;&lt;blockquote&gt;
+"An equation for me has no meaning, unless it represents a thought of God." - Srinivasa Ramanujan&lt;/blockquote&gt;
+&lt;p&gt;"The man who knew infinity" is the story of &lt;a class="reference external" href="https://en.wikipedia.org/wiki/Srinivasa_Ramanujan"&gt;Srinivasa Ramanujan&lt;/a&gt;. This phrase, associated with Ramanujan should be
+familiar to many due to a &lt;a class="reference external" href="http://www.amazon.com/Man-Who-Knew-Infinity-Ramanujan/dp/B00C7F17OE/"&gt;very popular book&lt;/a&gt; with the same title. There is a motion picture directed by Matt Brown
+based upon this book.&lt;/p&gt;
+&lt;p&gt;I watched his movie on a Saturday at Berkeley. I was excited to listen to the QA with the director, and Mathematicians
+such as &lt;a class="reference external" href="https://en.wikipedia.org/wiki/Richard_Borcherds"&gt;Richard Borcheds&lt;/a&gt; , &lt;a class="reference external" href="http://www.cs.berkeley.edu/~oholtz/"&gt;Olga Holz&lt;/a&gt; and &lt;a class="reference external" href="https://math.berkeley.edu/~ribet/"&gt;Ken Ribet&lt;/a&gt; following the screening.&lt;/p&gt;
+&lt;p&gt;In India, we have been exposed to Ramanujan quite early in our lives. I had stories in school book about great Indian
+mathematicians like Aryabhata, Brahmangupta, and Bhaskaracharya. Indian Satellites to Space launched by ISRO bear their
+names too. Along with those personalities, we have Srinivasa Ramanujan and whom we know for his invention of &lt;a class="reference external" href="https://nrich.maths.org/1380"&gt;Magic
+Squares&lt;/a&gt;, and &lt;strong&gt;Ramanujan Number&lt;/strong&gt;, &lt;strong&gt;the smallest number expressible as sum of two cubes.&lt;/strong&gt;&lt;/p&gt;
+&lt;div class="math"&gt;
+\begin{equation*}
+1729 = 1^3 + {12}^3 = 9^3 + 10^3
+\end{equation*}
+&lt;/div&gt;
+&lt;p&gt;Beyond that, I had not known much about the significance of this number or Ramanujan's work.&lt;/p&gt;
+&lt;p&gt;Years later, when taking &lt;a class="reference external" href="https://youtu.be/h_9WjWENWV8?t=14m48s"&gt;online courses&lt;/a&gt;, I had come to know about Hardy and Ramanujan's research in Number Theory
+being at the core of secure communication and cryptography. Do you use Credit Cards online and feel confident that
+someone will not maliciously take your money? All this is was because of the research in number theory.&lt;/p&gt;
+&lt;p&gt;There is also famous anecdote associated with Ramanujan, known to many from South India, Ramanujan prayed to a goddess,
+and she gave inspiration for his work.  He mentions that his theorems had come up like a dream, a boon granted by the
+Goddess, and he would write formulae in his book. That's how he invented those theorems.&lt;/p&gt;
+&lt;p&gt;If it happened like that, imagine how excited young students from Madurai will be, where there a temple every
+hundred feet. :)&lt;/p&gt;
+&lt;p&gt;It needs to be clarified that, Ramanujan was a genius and he also worked very hard on his subjects.&lt;/p&gt;
+&lt;p&gt;All these are portrayed well in this movie. The relationship between Hardy and Ramanujan, the scientific culture at
+Trinity College, London revealed in real detail. The movie has a significant portion dealing with how Hardy mentors
+Ramanujan, and strives to bring his work to the modern world.&lt;/p&gt;
+&lt;p&gt;In the question and answer session that followed, two questions were of interest to me.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;How do mathematicians study Ramanujan's work when he has not left many formula proofs with his equation?&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a class="reference external" href="https://en.wikipedia.org/wiki/Richard_Borcherds"&gt;Richard Borcheds&lt;/a&gt;, who is an accomplished mathematician, replied that Ramanujan's work was published in the form of
+series of &lt;a class="reference external" href="http://www.amazon.com/Ramanujans-Notebooks-Bruce-C-Berndt/dp/1461270073/"&gt;notebooks&lt;/a&gt;. He left behind three notebooks containing almost 3000 theorems, virtually all without proof. The
+reason he could have done that is perhaps he grew up in a time when the paper was very expensive for him and he wanted
+to be economical.&lt;/p&gt;
+&lt;p&gt;(It did not answer the question, but provided a good perspective).&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Question 2: In the movie, Ramanujan is shown to be desisting writing formal proofs. Is that true?&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Richard Borcheds shared that, it is bit exaggerated in the movie. Ramanujan always knew the proof of his work and
+could state it if he wanted to. But he usually did not.&lt;/p&gt;
+&lt;p&gt;I enjoyed watching this movie and listening to the perspectives associated with the genius from kumbakonam.&lt;/p&gt;&lt;/div&gt;</description><category>mathjax</category><guid>http://www.xtoinfinity.com/posts/the-man-who-knew-infinity.html</guid><pubDate>Mon, 27 Jun 2016 04:12:17 GMT</pubDate></item></channel></rss>

@@ -1,0 +1,1 @@
+<html><body><p>http://www.tintinologist.org/guides/lists/curses.html</p></body></html>
