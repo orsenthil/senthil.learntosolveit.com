@@ -8,8 +8,8 @@
 .. type: text
 
 
-`How https works by sudhakar`_ is an easy to understand illustration on how HTTPS works in securing the communication
- between the browser and the server.
+`How https works by sudhakar`_ is an easy to understand illustration on how
+HTTPS works in securing the communication between the browser and the server.
 
 .. target-notes::
 
