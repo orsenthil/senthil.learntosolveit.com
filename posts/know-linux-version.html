@@ -81,7 +81,7 @@ DISTRIB_DESCRIPTION="U'>
 <article class="post-text h-entry hentry postpage" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title" itemprop="headline name"><a href="#" class="u-url">Know Linux Version</a></h1>
 
         <div class="metadata">
-            <p class="byline author vcard"><span class="byline-name fn">
+            <p class="byline author vcard"><span class="byline-name fn" itemprop="author">
                     Senthil Kumaran
             </span></p>
             <p class="dateline"><a href="#" rel="bookmark"><time class="published dt-published" datetime="2016-12-27T14:56:05-08:00" itemprop="datePublished" title="2016-12-27 14:56">2016-12-27 14:56</time></a></p>
@@ -92,7 +92,7 @@ DISTRIB_DESCRIPTION="U'>
 
             
         </p>
-<p class="sourceline"><a href="know-linux-version.rst" id="sourcelink">Source</a></p>
+<p class="sourceline"><a href="know-linux-version.rst" class="sourcelink">Source</a></p>
 
         </div>
         
@@ -100,24 +100,24 @@ DISTRIB_DESCRIPTION="U'>
     </header><div class="e-content entry-content" itemprop="articleBody text">
     <div>
 <p>New <em>trick</em> to know the version of your linux operating system.</p>
-<pre class="code bash"><a name="rest_code_db4523953b7946b88a47df3d5f58d85c-1"></a>cat /etc/*-release
+<pre class="code bash"><a name="rest_code_37213e586b064d8b8142e1904f940528-1"></a>cat /etc/*-release
 </pre>
 <p>Works fine!</p>
-<pre class="code bash"><a name="rest_code_04ab5c1669d045519d38d1fdb351552e-1"></a><span class="c1"># cat /etc/*-release</span>
-<a name="rest_code_04ab5c1669d045519d38d1fdb351552e-2"></a><span class="nv">DISTRIB_ID</span><span class="o">=</span>Ubuntu
-<a name="rest_code_04ab5c1669d045519d38d1fdb351552e-3"></a><span class="nv">DISTRIB_RELEASE</span><span class="o">=</span><span class="m">16</span>.04
-<a name="rest_code_04ab5c1669d045519d38d1fdb351552e-4"></a><span class="nv">DISTRIB_CODENAME</span><span class="o">=</span>xenial
-<a name="rest_code_04ab5c1669d045519d38d1fdb351552e-5"></a><span class="nv">DISTRIB_DESCRIPTION</span><span class="o">=</span><span class="s2">"Ubuntu 16.04.1 LTS"</span>
-<a name="rest_code_04ab5c1669d045519d38d1fdb351552e-6"></a><span class="nv">NAME</span><span class="o">=</span><span class="s2">"Ubuntu"</span>
-<a name="rest_code_04ab5c1669d045519d38d1fdb351552e-7"></a><span class="nv">VERSION</span><span class="o">=</span><span class="s2">"16.04.1 LTS (Xenial Xerus)"</span>
-<a name="rest_code_04ab5c1669d045519d38d1fdb351552e-8"></a><span class="nv">ID</span><span class="o">=</span>ubuntu
-<a name="rest_code_04ab5c1669d045519d38d1fdb351552e-9"></a><span class="nv">ID_LIKE</span><span class="o">=</span>debian
-<a name="rest_code_04ab5c1669d045519d38d1fdb351552e-10"></a><span class="nv">PRETTY_NAME</span><span class="o">=</span><span class="s2">"Ubuntu 16.04.1 LTS"</span>
-<a name="rest_code_04ab5c1669d045519d38d1fdb351552e-11"></a><span class="nv">VERSION_ID</span><span class="o">=</span><span class="s2">"16.04"</span>
-<a name="rest_code_04ab5c1669d045519d38d1fdb351552e-12"></a><span class="nv">HOME_URL</span><span class="o">=</span><span class="s2">"http://www.ubuntu.com/"</span>
-<a name="rest_code_04ab5c1669d045519d38d1fdb351552e-13"></a><span class="nv">SUPPORT_URL</span><span class="o">=</span><span class="s2">"http://help.ubuntu.com/"</span>
-<a name="rest_code_04ab5c1669d045519d38d1fdb351552e-14"></a><span class="nv">BUG_REPORT_URL</span><span class="o">=</span><span class="s2">"http://bugs.launchpad.net/ubuntu/"</span>
-<a name="rest_code_04ab5c1669d045519d38d1fdb351552e-15"></a><span class="nv">UBUNTU_CODENAME</span><span class="o">=</span>xenial
+<pre class="code bash"><a name="rest_code_d9aec36d3ce84630a0fdd1bddafe7eba-1"></a><span class="c1"># cat /etc/*-release</span>
+<a name="rest_code_d9aec36d3ce84630a0fdd1bddafe7eba-2"></a><span class="nv">DISTRIB_ID</span><span class="o">=</span>Ubuntu
+<a name="rest_code_d9aec36d3ce84630a0fdd1bddafe7eba-3"></a><span class="nv">DISTRIB_RELEASE</span><span class="o">=</span><span class="m">16</span>.04
+<a name="rest_code_d9aec36d3ce84630a0fdd1bddafe7eba-4"></a><span class="nv">DISTRIB_CODENAME</span><span class="o">=</span>xenial
+<a name="rest_code_d9aec36d3ce84630a0fdd1bddafe7eba-5"></a><span class="nv">DISTRIB_DESCRIPTION</span><span class="o">=</span><span class="s2">"Ubuntu 16.04.1 LTS"</span>
+<a name="rest_code_d9aec36d3ce84630a0fdd1bddafe7eba-6"></a><span class="nv">NAME</span><span class="o">=</span><span class="s2">"Ubuntu"</span>
+<a name="rest_code_d9aec36d3ce84630a0fdd1bddafe7eba-7"></a><span class="nv">VERSION</span><span class="o">=</span><span class="s2">"16.04.1 LTS (Xenial Xerus)"</span>
+<a name="rest_code_d9aec36d3ce84630a0fdd1bddafe7eba-8"></a><span class="nv">ID</span><span class="o">=</span>ubuntu
+<a name="rest_code_d9aec36d3ce84630a0fdd1bddafe7eba-9"></a><span class="nv">ID_LIKE</span><span class="o">=</span>debian
+<a name="rest_code_d9aec36d3ce84630a0fdd1bddafe7eba-10"></a><span class="nv">PRETTY_NAME</span><span class="o">=</span><span class="s2">"Ubuntu 16.04.1 LTS"</span>
+<a name="rest_code_d9aec36d3ce84630a0fdd1bddafe7eba-11"></a><span class="nv">VERSION_ID</span><span class="o">=</span><span class="s2">"16.04"</span>
+<a name="rest_code_d9aec36d3ce84630a0fdd1bddafe7eba-12"></a><span class="nv">HOME_URL</span><span class="o">=</span><span class="s2">"http://www.ubuntu.com/"</span>
+<a name="rest_code_d9aec36d3ce84630a0fdd1bddafe7eba-13"></a><span class="nv">SUPPORT_URL</span><span class="o">=</span><span class="s2">"http://help.ubuntu.com/"</span>
+<a name="rest_code_d9aec36d3ce84630a0fdd1bddafe7eba-14"></a><span class="nv">BUG_REPORT_URL</span><span class="o">=</span><span class="s2">"http://bugs.launchpad.net/ubuntu/"</span>
+<a name="rest_code_d9aec36d3ce84630a0fdd1bddafe7eba-15"></a><span class="nv">UBUNTU_CODENAME</span><span class="o">=</span>xenial
 </pre>
 </div>
     </div>
