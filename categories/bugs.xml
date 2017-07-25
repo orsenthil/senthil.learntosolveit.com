@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Senthil Kumaran's thoughts. (Posts about bugs)</title><link>http://www.xtoinfinity.com/</link><description></description><atom:link href="http://www.xtoinfinity.com/categories/bugs.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><lastBuildDate>Mon, 17 Jul 2017 17:06:30 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Computer Bugs - Roundoff Error and the Patriot Missile</title><link>http://www.xtoinfinity.com/posts/2017/07/17/computer-bugs-roundoff-error-and-the-patriot-missile.html</link><dc:creator>Senthil Kumaran</dc:creator><description>&lt;ul class="simple"&gt;
+&lt;li&gt;During the Gulf War in 1991, a U.S. Patriot missile failed to intercept an&lt;/li&gt;
+&lt;li&gt;Iraqi Scud missile, and 28 Americans were killed.&lt;/li&gt;
+&lt;li&gt;A later study determined that the problem was caused by the inaccuracy of the binary representation of 0.10.&lt;/li&gt;
+&lt;li&gt;The Patriot incremented a counter once every 0.10 seconds.&lt;/li&gt;
+&lt;li&gt;It multiplied the counter value by 0.10 to compute the actual time. However, the (24-bit) binary representation of 0.10 actually corresponds to 0.099999904632568359375, which is off by 0.000000095367431640625.&lt;/li&gt;
+&lt;li&gt;This doesn’t seem like much, but after 100 hours the time ends up being off by 0.34 seconds—enough time for a Scud to travel 500 meters!&lt;/li&gt;
+&lt;li&gt;Professor Skeel wrote a &lt;a class="reference external" href="http://mate.uprh.edu/~pnegron/notas4061/patriot.htm"&gt;short article&lt;/a&gt; about this.&lt;/li&gt;
+&lt;/ul&gt;</description><category>bugs</category><guid>http://www.xtoinfinity.com/posts/2017/07/17/computer-bugs-roundoff-error-and-the-patriot-missile.html</guid><pubDate>Mon, 17 Jul 2017 16:09:13 GMT</pubDate></item></channel></rss>
