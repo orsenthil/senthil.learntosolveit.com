@@ -7,9 +7,9 @@
 .. description:
 .. type: text
 
-This is an inspiring short video. This is very relevant to me, because in many projects, especially the big ones, I
-feel that things are not designed well, it's chaotic, it's burning all the time.  Sometimes, most of us are like
-animals in this story. Instead, if we be the hummingbird, the experience is well worth it.
+This is an inspiring short video. This is very relevant to me because in many projects, especially the big ones, I
+feel like the things are not designed well. The situation is chaotic, it's burning all the time. Most of us are like
+those big resourceful animals in this story. Instead, if we be the hummingbird, the experience is well worth it.
 
 
 .. youtube:: IGMW6YWjMxw
