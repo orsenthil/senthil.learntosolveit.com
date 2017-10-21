@@ -11,7 +11,7 @@
 <link rel="alternate" type="application/rss+xml" title="RSS" href="rss.xml">
 <link rel="canonical" href="http://www.xtoinfinity.com/index.html">
 <link rel="next" href="index-36.html" type="text/html">
-<!--[if lt IE 9]><script src="assets/js/html5.js"></script><![endif]--><link rel="prefetch" href="posts/2017/10/20/s-chandrasekhars-107th-birthday.html" type="text/html">
+<!--[if lt IE 9]><script src="assets/js/html5.js"></script><![endif]--><link rel="prefetch" href="posts/2017/10/21/nuclear-gandhi-in-civilization-v.html" type="text/html">
 </head>
 <body>
 <a href="#content" class="sr-only sr-only-focusable">Skip to main content</a>
@@ -64,7 +64,42 @@
 
     
 <div class="postindex">
-    <article class="h-entry post-text"><header><h1 class="p-name entry-title"><a href="posts/2017/10/20/s-chandrasekhars-107th-birthday.html" class="u-url">S. Chandrasekhar's 107th Birthday</a></h1>
+    <article class="h-entry post-text"><header><h1 class="p-name entry-title"><a href="posts/2017/10/21/nuclear-gandhi-in-civilization-v.html" class="u-url">Nuclear Gandhi in Civilization V</a></h1>
+        <div class="metadata">
+            <p class="byline author vcard"><span class="byline-name fn" itemprop="author">
+                Senthil Kumaran
+            </span></p>
+            <p class="dateline"><a href="posts/2017/10/21/nuclear-gandhi-in-civilization-v.html" rel="bookmark"><time class="published dt-published" datetime="2017-10-21T11:44:00-07:00" title="2017-10-21 11:44">2017-10-21 11:44</time></a></p>
+                <p class="commentline">
+        
+    <a href="posts/2017/10/21/nuclear-gandhi-in-civilization-v.html#disqus_thread" data-disqus-identifier="cache/posts/2017/10/21/nuclear-gandhi-in-civilization-v.html">Comments</a>
+
+
+        </p>
+</div>
+    </header><div class="e-content entry-content">
+    <div>
+<p>It seems like the developers of Civilization V once decided to store aggresiveness index of leaders in a unsigned int.
+And Gandhi, as the most pacifist leader that he was, was assigned lowest number 1. Also, in the game play if a society adopted
+democracy, the aggresiveness score was reduced by 2.</p>
+<p>So, when Gandhi adopted democracy, his aggresiveness score became <strong>1 - 2 = -1</strong>, and as it was unsigned int, and it gained a very high value.</p>
+<pre class="code c"><a name="rest_code_d195179c40b94a638bfcee0f603a0af0-1"></a><span class="cp">#include</span><span class="cpf">&lt;stdio.h&gt;</span><span class="cp"></span>
+<a name="rest_code_d195179c40b94a638bfcee0f603a0af0-2"></a>
+<a name="rest_code_d195179c40b94a638bfcee0f603a0af0-3"></a><span class="kt">int</span> <span class="nf">main</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span> <span class="p">{</span>
+<a name="rest_code_d195179c40b94a638bfcee0f603a0af0-4"></a>    <span class="kt">unsigned</span> <span class="kt">int</span> <span class="n">i</span><span class="p">;</span>
+<a name="rest_code_d195179c40b94a638bfcee0f603a0af0-5"></a>    <span class="n">i</span> <span class="o">=</span> <span class="o">-</span><span class="mi">1</span><span class="p">;</span>
+<a name="rest_code_d195179c40b94a638bfcee0f603a0af0-6"></a>    <span class="n">printf</span><span class="p">(</span><span class="s">"%x</span><span class="se">\n</span><span class="s">"</span><span class="p">,</span> <span class="n">i</span><span class="p">);</span>
+<a name="rest_code_d195179c40b94a638bfcee0f603a0af0-7"></a><span class="p">}</span>
+</pre>
+<pre class="code bash"><a name="rest_code_72ca2a7309984f318ca55717f5478fe7-1"></a>$ clang unsigned.c
+<a name="rest_code_72ca2a7309984f318ca55717f5478fe7-2"></a>$ ./a.out
+<a name="rest_code_72ca2a7309984f318ca55717f5478fe7-3"></a><span class="m">4294967295</span>
+</pre>
+<p>And thus Gandhi was ready to nuke whenever there is a conflict.</p>
+<img alt="https://i.kinja-img.com/gawker-media/image/upload/s--4uHRnRfT--/c_fit,fl_progressive,q_80,w_636/dnqxrzdmsdkud7fmsqyp.jpg" src="https://i.kinja-img.com/gawker-media/image/upload/s--4uHRnRfT--/c_fit,fl_progressive,q_80,w_636/dnqxrzdmsdkud7fmsqyp.jpg">
+</div>
+    </div>
+    </article><article class="h-entry post-text"><header><h1 class="p-name entry-title"><a href="posts/2017/10/20/s-chandrasekhars-107th-birthday.html" class="u-url">S. Chandrasekhar's 107th Birthday</a></h1>
         <div class="metadata">
             <p class="byline author vcard"><span class="byline-name fn" itemprop="author">
                 Senthil Kumaran
@@ -260,31 +295,6 @@ those big resourceful animals in this story. Instead, if we be the hummingbird, 
 <div class="youtube-video align-center">
 <iframe width="425" height="344" src="https://www.youtube.com/embed/IGMW6YWjMxw?rel=0&amp;hd=1&amp;wmode=transparent"></iframe>
 </div>
-</div>
-    </div>
-    </article><article class="h-entry post-text"><header><h1 class="p-name entry-title"><a href="posts/2017/08/03/microsoft-and-ibm-pc-history.html" class="u-url">Microsoft and IBM PC History</a></h1>
-        <div class="metadata">
-            <p class="byline author vcard"><span class="byline-name fn" itemprop="author">
-                Senthil Kumaran
-            </span></p>
-            <p class="dateline"><a href="posts/2017/08/03/microsoft-and-ibm-pc-history.html" rel="bookmark"><time class="published dt-published" datetime="2017-08-03T10:34:04-07:00" title="2017-08-03 10:34">2017-08-03 10:34</time></a></p>
-                <p class="commentline">
-        
-    <a href="posts/2017/08/03/microsoft-and-ibm-pc-history.html#disqus_thread" data-disqus-identifier="cache/posts/2017/08/03/microsoft-and-ibm-pc-history.html">Comments</a>
-
-
-        </p>
-</div>
-    </header><div class="e-content entry-content">
-    <div>
-<p>No matter how many times I read this story, it never gets boring to me. I finished reading a two part article on
-Microsoft and IBM PC history featured in Ars Technica UK.</p>
-<ul class="simple">
-<li><a class="reference external" href="https://arstechnica.co.uk/gadgets/2017/06/ibm-pc-history-part-1/">https://arstechnica.co.uk/gadgets/2017/06/ibm-pc-history-part-1/</a></li>
-<li><a class="reference external" href="https://arstechnica.com/gadgets/2017/07/ibm-pc-history-part-2/">https://arstechnica.com/gadgets/2017/07/ibm-pc-history-part-2/</a></li>
-</ul>
-<p>If you are programmer working in this industry, go ahead and consume those pieces. You will turn out a bit more
-enlightened at the end.</p>
 </div>
     </div>
     </article>
