@@ -19,4 +19,3 @@ Found this in the words a professor giving advise to his students.
 From `10 Lessons of an MIT Education`_
 
 .. _10 Lessons of an MIT Education: http://www.math.tamu.edu/~cyan/Rota/mitless.html
-
