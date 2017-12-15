@@ -11,7 +11,7 @@
 <link rel="alternate" type="application/rss+xml" title="RSS" href="rss.xml">
 <link rel="canonical" href="http://www.xtoinfinity.com/index.html">
 <link rel="next" href="index-37.html" type="text/html">
-<!--[if lt IE 9]><script src="assets/js/html5.js"></script><![endif]--><link rel="prefetch" href="posts/2017/12/10/book-review-the-stars-like-dust.html" type="text/html">
+<!--[if lt IE 9]><script src="assets/js/html5.js"></script><![endif]--><link rel="prefetch" href="posts/2017/12/15/tensorflow-trial.html" type="text/html">
 </head>
 <body>
 <a href="#content" class="sr-only sr-only-focusable">Skip to main content</a>
@@ -64,7 +64,42 @@
 
     
 <div class="postindex">
-    <article class="h-entry post-text"><header><h1 class="p-name entry-title"><a href="posts/2017/12/10/book-review-the-stars-like-dust.html" class="u-url">Book Review - The Stars, Like Dust</a></h1>
+    <article class="h-entry post-text"><header><h1 class="p-name entry-title"><a href="posts/2017/12/15/tensorflow-trial.html" class="u-url">Tensorflow trial</a></h1>
+        <div class="metadata">
+            <p class="byline author vcard"><span class="byline-name fn" itemprop="author">
+                Senthil Kumaran
+            </span></p>
+            <p class="dateline"><a href="posts/2017/12/15/tensorflow-trial.html" rel="bookmark"><time class="published dt-published" datetime="2017-12-15T06:34:25-08:00" title="2017-12-15 06:34">2017-12-15 06:34</time></a></p>
+                <p class="commentline">
+        
+    <a href="posts/2017/12/15/tensorflow-trial.html#disqus_thread" data-disqus-identifier="cache/posts/2017/12/15/tensorflow-trial.html">Comments</a>
+
+
+        </p>
+</div>
+    </header><div class="e-content entry-content">
+    <div>
+<p>Followed this <a class="reference external" href="https://www.digitalocean.com/community/tutorials/how-to-install-and-use-tensorflow-on-ubuntu-16-04">digitalocean tutorial on Tensorflow</a> to try an image classification on my computer.</p>
+<p>Tried with a Robot image first.</p>
+<img alt="https://www.robotshop.com/media/catalog/product/cache/15/image/900x900/9df78eab33525d08d6e5fb8d27136e95/e/z/ez-robot-jd-humanoid-robot.jpg" src="https://www.robotshop.com/media/catalog/product/cache/15/image/900x900/9df78eab33525d08d6e5fb8d27136e95/e/z/ez-robot-jd-humanoid-robot.jpg" style="width: 300px; height: 400px;"><p>It couldn't recognize it that well.</p>
+<pre class="code console"><a name="rest_code_e46f7de1d45d4b11b4ae431837ff107a-1"></a><span class="gp">$</span> python classify_image.py --image_file ez-robot-jd-humanoid-robot.jpg <span class="m">2</span>&gt;/dev/null
+<a name="rest_code_e46f7de1d45d4b11b4ae431837ff107a-2"></a><span class="go">whistle (score = 0.05857)</span>
+<a name="rest_code_e46f7de1d45d4b11b4ae431837ff107a-3"></a><span class="go">tripod (score = 0.03762)</span>
+<a name="rest_code_e46f7de1d45d4b11b4ae431837ff107a-4"></a><span class="go">microphone, mike (score = 0.03662)</span>
+<a name="rest_code_e46f7de1d45d4b11b4ae431837ff107a-5"></a><span class="go">radio, wireless (score = 0.01969)</span>
+<a name="rest_code_e46f7de1d45d4b11b4ae431837ff107a-6"></a><span class="go">spotlight, spot (score = 0.01623)</span>
+</pre>
+<p>But, eureka for Cats!</p>
+<img alt="https://www.petmd.com/sites/default/files/what-does-it-mean-when-cat-wags-tail.jpg" src="https://www.petmd.com/sites/default/files/what-does-it-mean-when-cat-wags-tail.jpg" style="width: 300px; height: 400px;"><pre class="code console"><a name="rest_code_083391572a6c46ca8c152b32717fd34d-1"></a><span class="gp">$</span> python classify_image.py --image_file what-does-it-mean-when-cat-wags-tail.jpg <span class="m">2</span>&gt;/dev/null
+<a name="rest_code_083391572a6c46ca8c152b32717fd34d-2"></a><span class="go">tabby, tabby cat (score = 0.51155)</span>
+<a name="rest_code_083391572a6c46ca8c152b32717fd34d-3"></a><span class="go">Egyptian cat (score = 0.36965)</span>
+<a name="rest_code_083391572a6c46ca8c152b32717fd34d-4"></a><span class="go">tiger cat (score = 0.06952)</span>
+<a name="rest_code_083391572a6c46ca8c152b32717fd34d-5"></a><span class="go">lynx, catamount (score = 0.00368)</span>
+<a name="rest_code_083391572a6c46ca8c152b32717fd34d-6"></a><span class="go">doormat, welcome mat (score = 0.00064)</span>
+</pre>
+</div>
+    </div>
+    </article><article class="h-entry post-text"><header><h1 class="p-name entry-title"><a href="posts/2017/12/10/book-review-the-stars-like-dust.html" class="u-url">Book Review - The Stars, Like Dust</a></h1>
         <div class="metadata">
             <p class="byline author vcard"><span class="byline-name fn" itemprop="author">
                 Senthil Kumaran
@@ -298,30 +333,6 @@ I had missed it, so I got excited to go check it out again.</p>
 times the mass of sun will turn into white-dwarf and eventually into a
 black-hole!</p>
 <p>Chandrasekhar discovered this, and it is known as Chandrasekhar's limit.</p>
-</div>
-    </div>
-    </article><article class="h-entry post-text"><header><h1 class="p-name entry-title"><a href="posts/2017/10/16/selfoverestimate.html" class="u-url">self.overEstimate</a></h1>
-        <div class="metadata">
-            <p class="byline author vcard"><span class="byline-name fn" itemprop="author">
-                Senthil Kumaran
-            </span></p>
-            <p class="dateline"><a href="posts/2017/10/16/selfoverestimate.html" rel="bookmark"><time class="published dt-published" datetime="2017-10-16T13:58:45-07:00" title="2017-10-16 13:58">2017-10-16 13:58</time></a></p>
-                <p class="commentline">
-        
-    <a href="posts/2017/10/16/selfoverestimate.html#disqus_thread" data-disqus-identifier="cache/posts/2017/10/16/selfoverestimate.html">Comments</a>
-
-
-        </p>
-</div>
-    </header><div class="e-content entry-content">
-    <div>
-<p>This seems like a typical my-thing. I've fallen into this trap many times. It looks people in my profession fall prey to this too.</p>
-<blockquote>
-<p>That’s one reason I don’t miss IT, because programmers are very unlikable people… In aviation, for example, people who greatly overestimate their level of skill are all dead.</p>
-<ul class="simple">
-<li>Philip Greenspun, co-founder of ArsDigita, excerpted from Founders at Work.</li>
-</ul>
-</blockquote>
 </div>
     </div>
     </article>
