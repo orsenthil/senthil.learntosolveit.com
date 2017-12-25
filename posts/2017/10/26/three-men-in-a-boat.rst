@@ -1,10 +1,10 @@
-.. title: Three Men in a Boat
+.. title: Book Review: Three Men in a Boat
 .. slug: three-men-in-a-boat
 .. date: 2017-10-26 04:02:44 UTC-07:00
-.. tags: books
-.. category: 
-.. link: 
-.. description: 
+.. tags: reviews, books
+.. category: Books
+.. link:
+.. description:
 .. type: text
 
 
@@ -15,6 +15,6 @@
     Funny writing. Made me chuckle at times and was very imaginative. makes for a light hearted reading.
     <br/><br/>
 
-I started reading this book using a hardcopy that I had for long time. For convenience, I quickly finished by reading the online ebook at `Project Gutenberg`_ . Since I read fast, I did't enjoy this very much. Won't discuss this much. 
+I started reading this book using a hardcopy that I had for long time. For convenience, I quickly finished by reading the online ebook at `Project Gutenberg`_ . Since I read fast, I did't enjoy this very much. Won't discuss this much.
 
 .. _Project Gutenberg: http://www.gutenberg.org/files/308/308-h/308-h.htm

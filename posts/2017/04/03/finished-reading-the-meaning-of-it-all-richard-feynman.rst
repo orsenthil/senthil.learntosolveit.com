@@ -1,8 +1,8 @@
 .. title: Finished Reading: The Meaning Of It All - Richard Feynman
 .. slug: finished-reading-the-meaning-of-it-all-richard-feynman
 .. date: 2017-04-03 10:29:32 UTC-07:00
-.. tags: books
-.. category:
+.. tags: reviews, books
+.. category: Books
 .. link:
 .. description:
 .. type: text

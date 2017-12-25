@@ -1,10 +1,10 @@
-.. title: The Collapsing Universe
+.. title: Book Review: The Collapsing Universe
 .. slug: the-collapsing-universe
 .. date: 2017-09-25 10:41:17 UTC-07:00
-.. tags: books, asimov
-.. category: 
-.. link: 
-.. description: 
+.. tags: reviews, books, asimov
+.. category: Books
+.. link:
+.. description:
 .. type: text
 
 .. raw:: html

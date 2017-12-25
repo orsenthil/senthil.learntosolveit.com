@@ -1,8 +1,8 @@
-.. title: Finished Reading: The Chip by T.R.Reid
+.. title: Book Review: The Chip by T.R.Reid
 .. slug: finished-reading-the-chip-by-trreid
 .. date: 2017-07-11 19:07:48 UTC-07:00
-.. tags: books
-.. category:
+.. tags: reviews, books
+.. category: Books
 .. link:
 .. description:
 .. type: text
@@ -15,4 +15,3 @@ these engineers and success of American Industry as a result of these individual
 
 .. _Robert Noyce: https://en.wikipedia.org/wiki/Robert_Noyce
 .. _Jack Kilby: https://en.wikipedia.org/wiki/Jack_Kilby
-

@@ -1,8 +1,8 @@
 .. title: Book Review - The Stars, Like Dust
 .. slug: book-review-the-stars-like-dust
 .. date: 2017-12-10 05:17:55 UTC-08:00
-.. tags: books
-.. category:
+.. tags: reviews, books
+.. category: Books
 .. link:
 .. description:
 .. type: text
