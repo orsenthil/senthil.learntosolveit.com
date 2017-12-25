@@ -1,7 +1,7 @@
 .. title: Book Review: The Chip by T.R.Reid
 .. slug: finished-reading-the-chip-by-trreid
 .. date: 2017-07-11 19:07:48 UTC-07:00
-.. tags: reviews, books
+.. tags: reviews, books-read-in-2017
 .. category: Books
 .. link:
 .. description:

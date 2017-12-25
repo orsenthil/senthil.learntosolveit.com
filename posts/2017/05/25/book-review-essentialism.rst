@@ -1,7 +1,7 @@
 .. title: Book Review: Essentialism: The Disciplined Pursuit of Less
 .. slug: book-review-essentialism
 .. date: 2017-05-25 19:07:48 UTC-07:00
-.. tags: reviews, books
+.. tags: reviews, books-read-in-2017
 .. category: Books
 .. link:
 .. description:

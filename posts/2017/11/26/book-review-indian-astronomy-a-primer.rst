@@ -1,7 +1,7 @@
 .. title: Book Review: Indian Astronomy - A Primer
 .. slug: book-review-indian-astronomy-a-primer
 .. date: 2017-11-26 17:40:00 UTC-08:00
-.. tags: reviews, books
+.. tags: reviews, books-read-in-2017
 .. category: Books
 .. link:
 .. description:

@@ -1,7 +1,7 @@
-.. title: Finished Reading: The Meaning Of It All - Richard Feynman
+.. title: Book Review: The Meaning Of It All - Richard Feynman
 .. slug: finished-reading-the-meaning-of-it-all-richard-feynman
 .. date: 2017-04-03 10:29:32 UTC-07:00
-.. tags: reviews, books
+.. tags: reviews, books-read-in-2017
 .. category: Books
 .. link:
 .. description:
@@ -20,6 +20,3 @@ I usually avoid reading general books like this. But I happen to pick this up, a
 some leeway into an astrology (it's not a science) shared by my close ones, having just reading a topic in this book
 gave me excellent points to bring my thinking back into track. Contrary to my assumption when starting to read this
 book, I found it extremely useful!
-
-
-

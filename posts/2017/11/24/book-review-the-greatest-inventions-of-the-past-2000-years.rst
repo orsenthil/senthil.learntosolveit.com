@@ -1,7 +1,7 @@
 .. title: Book Review: The Greatest Inventions of the Past 2000 Years
 .. slug: book-review-the-greatest-inventions-of-the-past-2000-years
 .. date: 2017-11-24 18:06:15 UTC-08:00
-.. tags: reviews, books
+.. tags: reviews, books-read-in-2017
 .. category: Books
 .. link:
 .. description:

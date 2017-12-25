@@ -1,7 +1,7 @@
 .. title: Book Review: The Financial Expert
 .. slug: book-review-the-financial-expert
 .. date: 2017-04-26 19:07:48 UTC-07:00
-.. tags: reviews, books
+.. tags: reviews, books-read-in-2017
 .. category: Books
 .. link:
 .. description:

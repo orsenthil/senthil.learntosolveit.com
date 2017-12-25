@@ -1,7 +1,7 @@
 .. title: Book Review: Neuromancer
 .. slug: book-review-neuromancer
 .. date: 2017-12-25 07:33:03 UTC-08:00
-.. tags: reviews, books
+.. tags: reviews, books-read-in-2017
 .. category: Books
 .. link:
 .. description:

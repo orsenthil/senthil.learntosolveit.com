@@ -1,7 +1,7 @@
 .. title: Book Review: Superhuman by Habit
 .. slug: book-review-superhuman-by-habit
 .. date: 2017-12-02 23:23:59 UTC-08:00
-.. tags: reviews, books
+.. tags: reviews, books-read-in-2017
 .. category: Books
 .. link:
 .. description:

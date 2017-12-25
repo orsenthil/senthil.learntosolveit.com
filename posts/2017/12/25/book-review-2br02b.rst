@@ -1,7 +1,7 @@
 .. title: Book Review: 2BR02B
 .. slug: book-review-2br02b
 .. date: 2017-12-25 06:39:03 UTC-08:00
-.. tags: reviews, books
+.. tags: reviews, books-read-in-2017
 .. category: Books
 .. link:
 .. description:

@@ -1,7 +1,7 @@
 .. title: Book Review: Three Men in a Boat
 .. slug: three-men-in-a-boat
 .. date: 2017-10-26 04:02:44 UTC-07:00
-.. tags: reviews, books
+.. tags: reviews, books-read-in-2017
 .. category: Books
 .. link:
 .. description:

@@ -1,7 +1,7 @@
 .. title: Book Review: The Manga Guide to Electricity
 .. slug: book-review-the-manga-guide-to-electricity
 .. date: 2017-12-25 06:15:34 UTC-08:00
-.. tags: reviews, books
+.. tags: reviews, books-read-in-2017
 .. category: Books
 .. link:
 .. description: Review of The Manga Guide to Electricity by Kazuhiro Fujitaki, Matsuda
