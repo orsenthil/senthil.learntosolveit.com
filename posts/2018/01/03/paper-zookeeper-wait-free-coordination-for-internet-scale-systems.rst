@@ -7,18 +7,16 @@
 .. description:
 .. type: text
 
-`ZooKeeper: Wait-free coordination for Internet-scale systems`_ is readable explanation of Zookeeper distributed
-coordination system. It gives the motivation, overview of the API of the Zookeeper service.
+`ZooKeeper - Wait-free coordination for Internet-scale systems`_ is readable
+explanation of Zookeeper distributed coordination system. It gives the motivation
+behind the design and of overview of the API of the Zookeeper service.
 
-The Zookeeper Overview article here also gives enough high level introduction that could be useful before reading the
- paper.
+The Zookeeper Overview article here also gives enough high level
+introduction that could be useful before reading the paper.
 
 
 .. image:: https://cwiki.apache.org/confluence/download/attachments/24193436/service.png
    :align: center
    :target: https://cwiki.apache.org/confluence/display/ZOOKEEPER/ProjectDescription
 
-
-
-
-.. _ZooKeeper: Wait-free coordination for Internet-scale systems: https://www.usenix.org/legacy/event/usenix10/tech/full_papers/Hunt.pdf
+.. _ZooKeeper - Wait-free coordination for Internet-scale systems: https://www.usenix.org/legacy/event/usenix10/tech/full_papers/Hunt.pdf
