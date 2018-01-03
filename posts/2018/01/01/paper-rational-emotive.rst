@@ -1,7 +1,7 @@
 .. title: Paper: Rational Emotive Behaviour Therapy
 .. slug: paper-rational-emotive
 .. date: 2018-01-01 21:42:49 UTC-08:00
-.. tags:
+.. tags: papers-2018
 .. category:
 .. link:
 .. description:
