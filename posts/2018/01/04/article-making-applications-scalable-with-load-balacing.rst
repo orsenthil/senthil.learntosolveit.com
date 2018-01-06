@@ -27,7 +27,7 @@ any previous number of simultaneous failures is called high availability.
 
 The point is, *load balancing* and *high availability* are different.
 
-The article focuses the different load-balacing options, gives details on Layer 3/4 load balancer, Layer 7 load
+The article focuses the different load-balancing options, gives details on Layer 3/4 load balancer, Layer 7 load
 balancer and where those are used.
 
 .. image::  https://dl.dropbox.com/s/qf9ksk6z56oamtk/scalable_architecture.png

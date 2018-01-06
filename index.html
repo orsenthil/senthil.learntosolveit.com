@@ -11,7 +11,7 @@
 <link rel="alternate" type="application/rss+xml" title="RSS" href="rss.xml">
 <link rel="canonical" href="http://www.xtoinfinity.com/index.html">
 <link rel="next" href="index-38.html" type="text/html">
-<!--[if lt IE 9]><script src="assets/js/html5.js"></script><![endif]--><link rel="prefetch" href="posts/2018/01/04/article-making-applications-scalable-with-load-balacing.html" type="text/html">
+<!--[if lt IE 9]><script src="assets/js/html5.js"></script><![endif]--><link rel="prefetch" href="posts/2018/01/05/paper-chubby-lock-service.html" type="text/html">
 </head>
 <body>
 <a href="#content" class="sr-only sr-only-focusable">Skip to main content</a>
@@ -64,7 +64,28 @@
 
     
 <div class="postindex">
-    <article class="h-entry post-text"><header><h1 class="p-name entry-title"><a href="posts/2018/01/04/article-making-applications-scalable-with-load-balacing.html" class="u-url">Article: Making Applications scalable with load-balacing</a></h1>
+    <article class="h-entry post-text"><header><h1 class="p-name entry-title"><a href="posts/2018/01/05/paper-chubby-lock-service.html" class="u-url">Paper: Chubby Lock Service</a></h1>
+        <div class="metadata">
+            <p class="byline author vcard"><span class="byline-name fn" itemprop="author">
+                Senthil Kumaran
+            </span></p>
+            <p class="dateline"><a href="posts/2018/01/05/paper-chubby-lock-service.html" rel="bookmark"><time class="published dt-published" datetime="2018-01-05T22:24:55-08:00" title="2018-01-05 22:24">2018-01-05 22:24</time></a></p>
+                <p class="commentline">
+        
+    <a href="posts/2018/01/05/paper-chubby-lock-service.html#disqus_thread" data-disqus-identifier="cache/posts/2018/01/05/paper-chubby-lock-service.html">Comments</a>
+
+
+        </p>
+</div>
+    </header><div class="e-content entry-content">
+    <div>
+<p><a class="reference external" href="https://research.google.com/archive/chubby-osdi06.pdf">The Chubby Lock Service for Loosely-Coupled Distributed Systems</a> is the internal distributed lock service that
+Google uses. The paper shares the motivation and the design of the system. The focus is on a distributed lock, and
+reliability given by paxos implementation. It seems that chubby is also used for the distributed DNS.</p>
+<p>Open source Zookeeper project is modelled after this system.</p>
+</div>
+    </div>
+    </article><article class="h-entry post-text"><header><h1 class="p-name entry-title"><a href="posts/2018/01/04/article-making-applications-scalable-with-load-balacing.html" class="u-url">Article: Making Applications scalable with load-balacing</a></h1>
         <div class="metadata">
             <p class="byline author vcard"><span class="byline-name fn" itemprop="author">
                 Senthil Kumaran
@@ -93,7 +114,7 @@ servers participate in the same service and do the same work.</p>
 <p><em>High Availability</em> - The ability to maintain unaffected service during
 any previous number of simultaneous failures is called high availability.</p>
 <p>The point is, <em>load balancing</em> and <em>high availability</em> are different.</p>
-<p>The article focuses the different load-balacing options, gives details on Layer 3/4 load balancer, Layer 7 load
+<p>The article focuses the different load-balancing options, gives details on Layer 3/4 load balancer, Layer 7 load
 balancer and where those are used.</p>
 <img alt="https://dl.dropbox.com/s/qf9ksk6z56oamtk/scalable_architecture.png" class="align-center" src="https://dl.dropbox.com/s/qf9ksk6z56oamtk/scalable_architecture.png" style="width: 450px; height: 300px;">
 </div>
@@ -309,24 +330,6 @@ involved in what makes or creates electricity in the first place. This book open
     <span><a href="https://www.goodreads.com/book/show/41822.The_Stars_Like_Dust" style="float: left; padding-right: 20px"><img border="0" alt="The Stars, Like Dust (Galactic Empire, #1)" src="https://images.gr-assets.com/books/1325310236m/41822.jpg"></a><a href="https://www.goodreads.com/book/show/41822.The_Stars_Like_Dust">The Stars, Like Dust</a> by <a href="https://www.goodreads.com/author/show/16667.Isaac_Asimov">Isaac Asimov</a><br>
 My rating: <a href="https://www.goodreads.com/review/show/863064457">4 of 5 stars</a><br><br>
 This book belongs to the genre of Space-opera. Plenty of drama, plot twists, hero, heroine and plot twist. I think, I read it twice, and I enjoyed the book when I read it the second time.</span>
-    </div>
-    </article><article class="h-entry post-text"><header><h1 class="p-name entry-title"><a href="posts/2017/12/02/book-review-superhuman-by-habit.html" class="u-url">Book Review: Superhuman by Habit</a></h1>
-        <div class="metadata">
-            <p class="byline author vcard"><span class="byline-name fn" itemprop="author">
-                Senthil Kumaran
-            </span></p>
-            <p class="dateline"><a href="posts/2017/12/02/book-review-superhuman-by-habit.html" rel="bookmark"><time class="published dt-published" datetime="2017-12-02T23:23:59-08:00" title="2017-12-02 23:23">2017-12-02 23:23</time></a></p>
-                <p class="commentline">
-        
-    <a href="posts/2017/12/02/book-review-superhuman-by-habit.html#disqus_thread" data-disqus-identifier="cache/posts/2017/12/02/book-review-superhuman-by-habit.html">Comments</a>
-
-
-        </p>
-</div>
-    </header><div class="e-content entry-content">
-    <span><a href="https://www.goodreads.com/book/show/23206969-superhuman-by-habit" style="float: left; padding-right: 20px"><img border="0" alt="Superhuman by Habit: A Guide to Becoming the Best Possible Version of Yourself, One Tiny Habit at a Time" src="https://images.gr-assets.com/books/1412054737m/23206969.jpg"></a><a href="https://www.goodreads.com/book/show/23206969-superhuman-by-habit">Superhuman by Habit: A Guide to Becoming the Best Possible Version of Yourself, One Tiny Habit at a Time</a> by <a href="https://www.goodreads.com/author/show/2608008.Tynan">Tynan</a><br>
-My rating: <a href="https://www.goodreads.com/review/show/2202420264">4 of 5 stars</a><br><br>
-The value of this book will be measured by how much I could utilize the tips giving in this book to improve my self-discipline. I will never give a 5-rating for a self-improvement book. The 4 rating is for excellent language and conversational style of this book. The book is well written, it is based on good research, solid principles and explained it's propositions well. Towards the end, it had some "selling" of stuff that author personally liked. But that's it, nothing negative about it.</span>
     </div>
     </article>
 </div>
