@@ -11,8 +11,6 @@ When I saw this tip in the IntelliJ, I was pleasantly surprised.
 
 .. image:: https://dl.dropbox.com/s/uljj8f71wfzsg1a/Screenshot%202018-04-16%2022.43.48.png?dl=0
    :align: center
-   :height: 300
-   :width: 450
 
 https://kotlinlang.org/ might be an interesting one to get started on.
 
