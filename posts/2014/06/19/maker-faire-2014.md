@@ -150,7 +150,11 @@ I had fun exploring the <span class="il">maker</span>'s fair and I'm excited to
 
 <div></div></blockquote>
 
-<div style="text-align:center;">[embed]https://twitter.com/phoe6/status/469143392228605952[/embed]</div>
+<div style="text-align:center;">
+
+<blockquote class="twitter-tweet" data-lang="en"><p lang="en" dir="ltr">Meet your hero moment for me at <a href="https://twitter.com/hashtag/MakerFaire?src=hash&amp;ref_src=twsrc%5Etfw">#MakerFaire</a> I talked with Sal about sourashtra language &amp; translation I&#39;ve attempted <a href="http://t.co/B3FdfRjm9R">pic.twitter.com/B3FdfRjm9R</a></p>&mdash; Senthil Kumaran (@phoe6) <a href="https://twitter.com/phoe6/status/469143392228605952?ref_src=twsrc%5Etfw">May 21, 2014</a></blockquote>
+<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+</div>
 
 <div></div>
 
@@ -170,7 +174,11 @@ I had fun exploring the <span class="il">maker</span>'s fair and I'm excited to
 
 <div></div>
 
-<div style="text-align:center;">[embed]https://www.youtube.com/watch?v=m3znbQ-_Iqw[/embed]</div>
+<div style="text-align:center;">
+
+<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/ODdjs0RV3hE?rel=0&amp;showinfo=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+
+</div>
 
 <div></div>
 
