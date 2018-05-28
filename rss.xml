@@ -1,5 +1,34 @@
 <?xml version="1.0" encoding="utf-8"?>
-<?xml-stylesheet type="text/xsl" href="assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Senthil Kumaran's thoughts.</title><link>http://www.xtoinfinity.com/</link><description>Senthil Kumaran's thoughts.</description><atom:link href="http://www.xtoinfinity.com/rss.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><lastBuildDate>Fri, 18 May 2018 07:37:34 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Book Review: Guns, Germs and Steel</title><link>http://www.xtoinfinity.com/posts/2018/05/04/book-review-guns-germs-and-steel.html</link><dc:creator>Senthil Kumaran</dc:creator><description>&lt;div&gt;&lt;p&gt;It is hard for me write a review for as a great a book as "Guns, Germs and Steel". I had not read anything like that
+<?xml-stylesheet type="text/xsl" href="assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Senthil Kumaran's thoughts.</title><link>http://www.xtoinfinity.com/</link><description>Senthil Kumaran's thoughts.</description><atom:link href="http://www.xtoinfinity.com/rss.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><lastBuildDate>Mon, 28 May 2018 17:52:49 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Masako Wakamiya, app developer of Hinadan</title><link>http://www.xtoinfinity.com/posts/2018/05/28/masako-wakamiya-app-developer.html</link><dc:creator>Senthil Kumaran</dc:creator><description>&lt;div&gt;&lt;p&gt;Interesting to watch this interview of 82 year old App Developer. She developed the app called Hinadan (&lt;a class="reference external" href="https://itunes.apple.com/us/app/hinadan/id1199778491?mt=8"&gt;https://itunes.apple.com/us/app/hinadan/id1199778491?mt=8&lt;/a&gt;) for people like her.&lt;/p&gt;
+&lt;div class="system-message"&gt;
+&lt;p class="system-message-title"&gt;System Message: WARNING/2 (&lt;tt class="docutils"&gt;&amp;lt;string&amp;gt;&lt;/tt&gt;, line 3)&lt;/p&gt;
+&lt;p&gt;This directive does not accept content. The 'key=value' format for options is deprecated, use ':key: value' instead&lt;/p&gt;
+&lt;pre class="literal-block"&gt;
+.. youtube:: dlhcybooMas
+   :align: center
+
+    Wakamiya asked software developers to step in. Uninterested, they suggested she make a game
+    herself. She took them up on the suggestion. Wakamiya soon bought programming books and
+    learned Apple’s Swift programming language through lessons with a programmer, nearly 200
+    miles away from her home in Japan's Kanagawa Prefecture, via Facebook Messenger and Skype.
+
+    This wasn’t the first time that Wakamiya took on a challenge.
+    She’s been dabbling in the tech field since the age of 60.
+
+    Upon retiring from a 43-year career as a bank clerk (she began at age 18), Wakamiya spent long hours caregiving
+    for her then-90-year-old mother. Feeling isolated, and seeking connection with the outside world, Wakamiya
+    bought her first computer, then moved on to a Microsoft PC, and later a Mac and iPhones. In between learning
+    the piano, at age 75, Wakamiya eventually joined a computer club for seniors, Mellow Club, learning to
+    create Excel art along the way. Then, this past year came Wakamiya’s focus on creating the game Hinadan.
+
+    The app, based on the annual Japanese doll festival of Hina Matsuri, invites players to arrange
+    12 ornamental dolls — representing the country’s emperor, family and guests — in a specific
+    order. The game requires in-depth memorization of various arrangements, and has become especially
+    popular with older women, who enjoy playing it with their grandchildren, Wakamiya said.
+
+&lt;/pre&gt;
+&lt;/div&gt;
+&lt;p&gt;From - &lt;a class="reference external" href="https://www.aarp.org/work/working-at-50-plus/info-2018/worlds-oldest-app-developer-fd.html"&gt;https://www.aarp.org/work/working-at-50-plus/info-2018/worlds-oldest-app-developer-fd.html&lt;/a&gt;&lt;/p&gt;&lt;/div&gt;</description><guid>http://www.xtoinfinity.com/posts/2018/05/28/masako-wakamiya-app-developer.html</guid><pubDate>Mon, 28 May 2018 17:44:15 GMT</pubDate></item><item><title>Book Review: Guns, Germs and Steel</title><link>http://www.xtoinfinity.com/posts/2018/05/04/book-review-guns-germs-and-steel.html</link><dc:creator>Senthil Kumaran</dc:creator><description>&lt;div&gt;&lt;p&gt;It is hard for me write a review for as a great a book as "Guns, Germs and Steel". I had not read anything like that
 before. It just opened me up to a whole new level of experience, and new set of expectations from books.&lt;/p&gt;
 &lt;p&gt;I think, I picked it up after reading Bill Gates review about this.&lt;/p&gt;
 &lt;p&gt;"Like a lot of people, I was blown away by Diamond's Guns, Germs and Steel. I had never read anything that explained
@@ -77,6 +106,4 @@ examples in the book OpenCV with Python by Example by Prateek Joshi.&lt;/p&gt;
 &lt;img alt="https://dl.dropbox.com/s/ha9ttqytpvj8f6t/Screenshot%202018-02-24%2018.46.52.png?dl=0" class="align-center" src="https://dl.dropbox.com/s/ha9ttqytpvj8f6t/Screenshot%202018-02-24%2018.46.52.png?dl=0" style="width: 650px; height: 400px;"&gt;&lt;/div&gt;</description><guid>http://www.xtoinfinity.com/posts/2018/02/24/image-filters-sobel-laplacian-canny.html</guid><pubDate>Sun, 25 Feb 2018 03:10:12 GMT</pubDate></item><item><title>Radians and Roger Coats</title><link>http://www.xtoinfinity.com/posts/2018/02/17/radians-and-roger-coats.html</link><dc:creator>Senthil Kumaran</dc:creator><description>&lt;div&gt;&lt;p&gt;When trying to understand the concept of &lt;a class="reference external" href="https://en.wikipedia.org/wiki/Radian#History"&gt;radians&lt;/a&gt;, I came across the inventor of the concept &lt;a class="reference external" href="https://en.wikipedia.org/wiki/Roger_Cotes"&gt;Roger Coats&lt;/a&gt;
 His name is not familiar to many. I understood, he is known for working closely with Isaac Newton by proofreading the
 second edition of his famous book, the Principia, before publication.&lt;/p&gt;
-&lt;p&gt;Cotes died from a violent fever in Cambridge in 1716 at the early age of 33. Isaac Newton remarked, "If he had lived we would have known something."&lt;/p&gt;&lt;/div&gt;</description><category>maths</category><guid>http://www.xtoinfinity.com/posts/2018/02/17/radians-and-roger-coats.html</guid><pubDate>Sat, 17 Feb 2018 21:23:54 GMT</pubDate></item><item><title>Book Review: Beyond the Door</title><link>http://www.xtoinfinity.com/posts/2018/01/09/book-review-beyond-the-door.html</link><dc:creator>Senthil Kumaran</dc:creator><description>&lt;span&gt;&lt;a href="https://www.goodreads.com/book/show/6468230-beyond-the-door" style="float: left; padding-right: 20px"&gt;&lt;img border="0" alt="Beyond the Door" src="https://images.gr-assets.com/books/1328315609m/6468230.jpg"&gt;&lt;/a&gt;&lt;a href="https://www.goodreads.com/book/show/6468230-beyond-the-door"&gt;Beyond the Door&lt;/a&gt; by &lt;a href="https://www.goodreads.com/author/show/4764.Philip_K_Dick"&gt;Philip K. Dick&lt;/a&gt;&lt;br&gt;
-My rating: &lt;a href="https://www.goodreads.com/review/show/2251671973"&gt;2 of 5 stars&lt;/a&gt;&lt;br&gt;&lt;br&gt;
-A simple, imaginative book. Couldn't think about the plot. If it were a different author, this book or story would have been long dead.&lt;/span&gt;</description><category>books-read-in-2018</category><category>reviews</category><guid>http://www.xtoinfinity.com/posts/2018/01/09/book-review-beyond-the-door.html</guid><pubDate>Wed, 10 Jan 2018 05:32:34 GMT</pubDate></item></channel></rss>
+&lt;p&gt;Cotes died from a violent fever in Cambridge in 1716 at the early age of 33. Isaac Newton remarked, "If he had lived we would have known something."&lt;/p&gt;&lt;/div&gt;</description><category>maths</category><guid>http://www.xtoinfinity.com/posts/2018/02/17/radians-and-roger-coats.html</guid><pubDate>Sat, 17 Feb 2018 21:23:54 GMT</pubDate></item></channel></rss>
