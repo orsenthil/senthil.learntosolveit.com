@@ -7,12 +7,15 @@
 .. description:
 .. type: text
 
-Interesting to watch this interview of 82 year old App Developer. She developed the app called Hinadan (https://itunes.apple.com/us/app/hinadan/id1199778491?mt=8) for people like her.
+Interesting to watch this interview of 82 year old App Developer. She developed the app called `Hinadan`_ for people like her.
+
+.. _Hinadan: https://itunes.apple.com/us/app/hinadan/id1199778491?mt=8
 
 .. youtube:: dlhcybooMas
-   :align: center
 
-    Wakamiya asked software developers to step in. Uninterested, they suggested she make a game
+Here is her story.
+
+    Wakamiya asked software developers to step in to develop her app. Uninterested, they suggested she make a game
     herself. She took them up on the suggestion. Wakamiya soon bought programming books and
     learned Apple’s Swift programming language through lessons with a programmer, nearly 200
     miles away from her home in Japan's Kanagawa Prefecture, via Facebook Messenger and Skype.
