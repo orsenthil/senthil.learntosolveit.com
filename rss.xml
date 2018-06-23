@@ -1,5 +1,46 @@
 <?xml version="1.0" encoding="utf-8"?>
-<?xml-stylesheet type="text/xsl" href="assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Senthil Kumaran's thoughts.</title><link>http://www.xtoinfinity.com/</link><description>Senthil Kumaran's thoughts.</description><atom:link href="http://www.xtoinfinity.com/rss.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><lastBuildDate>Mon, 18 Jun 2018 18:00:40 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Little Free Library</title><link>http://www.xtoinfinity.com/posts/2018/06/18/little-free-library.html</link><dc:creator>Senthil Kumaran</dc:creator><description>&lt;div&gt;&lt;p&gt;I set up a Little Free Library in front of my house. Excited to share the books with the San Ramon Community. I have
+<?xml-stylesheet type="text/xsl" href="assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Senthil Kumaran's thoughts.</title><link>http://www.xtoinfinity.com/</link><description>Senthil Kumaran's thoughts.</description><atom:link href="http://www.xtoinfinity.com/rss.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><lastBuildDate>Sat, 23 Jun 2018 17:46:19 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Project completion - Spastics Society of Karnataka website</title><link>http://www.xtoinfinity.com/posts/2018/06/23/project-completion-spastics-society-of-karnataka.html</link><dc:creator>Senthil Kumaran</dc:creator><description>&lt;div&gt;&lt;p&gt;I have been involved with Spastics Society Of Karnataka for more than 10 years. Today, we launched a new website
+for the organization. Please check this out &lt;a class="reference external" href="http://spasticssocietyofkarnataka.org/"&gt;http://spasticssocietyofkarnataka.org/&lt;/a&gt;&lt;/p&gt;
+&lt;div class="section" id="a-bit-of-history"&gt;
+&lt;h2&gt;A bit of history&lt;/h2&gt;
+&lt;p&gt;Let's use &lt;a class="reference external" href="https://en.wikipedia.org/wiki/Wayback_Machine"&gt;wayback machine&lt;/a&gt; to look at how this evolved.&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;When I inherited this project, the &lt;a class="reference external" href="https://web.archive.org/web/20040521200831/http://www.spasticssocietyofkarnataka.org"&gt;website looked like this in 2004&lt;/a&gt;. I don't remember the technology, but it was
+done by a volunteer by name Mr. Nagaraj. He transfered the hosting and domain from  Net 4 India to us.&lt;/li&gt;
+&lt;li&gt;Then sometime &lt;a class="reference external" href="https://web.archive.org/web/20070523104054/http://www.spasticssocietyofkarnataka.org"&gt;in 2007 the website started looking like this&lt;/a&gt; - I don't remember the technology that I used. It seems
+I was using &lt;a class="reference external" href="https://web.archive.org/web/20070523172324/http://www.oswd.org:80/"&gt;open source web design&lt;/a&gt;  and looks like I hand-coded it.&lt;/li&gt;
+&lt;li&gt;In 2008, we moved entirely to &lt;a class="reference external" href="https://edu.google.com/k-12-solutions/g-suite/?modal_active=none"&gt;Google Apps for Education&lt;/a&gt; - this was a great move. It facilitated online
+processing, official email ids, all our data in a single place. This was like migrating Spastics Society of Karnataka
+to the "Cloud". The website changed its &lt;a class="reference external" href="https://sites.google.com/a/spasticssocietyofkarnataka.org/spastics-society-of-karnataka/Home"&gt;look to this in 2008&lt;/a&gt; using google sites.&lt;/li&gt;
+&lt;li&gt;The google sites website was not very pleasant looking. &lt;a class="reference external" href="https://web.archive.org/web/20160721031435/http://www.spasticssocietyofkarnataka.org:80/"&gt;This time in 2013, I updated website to wordpress&lt;/a&gt;, and
+hosted on bluehost.com and our domains were migrated to Google Domains. The wordpress website also had
+accessibility features on changing font, style etc.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;There was problem, wordpress is not the most secure of the software that is present today. We got &lt;a class="reference external" href="https://productforums.google.com/forum/#!msg/webmasters/YayR1-iZ3x0/73Ig3qiWEQAJ"&gt;hacked by chinese hackers&lt;/a&gt; who put up malware in our site.
+This wasn't good. I removed the phishing, and they could still get to us. This happened for 2 months and I felt a
+lack of control with wordpress.&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;We decided to shutdown and &lt;strong&gt;delete&lt;/strong&gt; the wordpress site, and decided to rebuild it. For stop-gap, we directed
+people to &lt;a class="reference external" href="https://sites.google.com/a/spasticssocietyofkarnataka.org/spastics-society-of-karnataka/Home"&gt;Google Sites website&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;This stop gap solution lasted for more than a year because I did not want to rebuild it entirely with wordpress again.&lt;/li&gt;
+&lt;li&gt;In 2016, I decided to hand-code it using &lt;a class="reference external" href="https://getbootstrap.com/"&gt;Bootstrap&lt;/a&gt; and &lt;a class="reference external" href="https://getnikola.com/"&gt;Nikola&lt;/a&gt; and &lt;a class="reference external" href="http://orsenthil.github.io/sskweb/"&gt;built this&lt;/a&gt; - This was hugely unappealing. It
+was &lt;strong&gt;extremely secure and trustworthy&lt;/strong&gt;, but felt very unappealing to everyone.&lt;/li&gt;
+&lt;li&gt;In 2018, we decided to make a appealing website, and this time I went with a hosted service, wix.com. The result is
+what you see at &lt;a class="reference external" href="http://spasticssocietyofkarnataka.org/"&gt;http://spasticssocietyofkarnataka.org/&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div class="section" id="features"&gt;
+&lt;h2&gt;Features&lt;/h2&gt;
+&lt;p&gt;This was a team effort. My friends Avinash and Nivedita got involved. We use Trello.com to track our tasks. From
+school Preethi, and Priya  Madam and Sobha Madam got involved too. The website does not have &lt;a class="reference external" href="https://en.wikipedia.org/wiki/Bus_factor"&gt;bus-factor&lt;/a&gt; of 1 and
+this is an incredible feature.&lt;/p&gt;
+&lt;p&gt;The website was mostly done by Avinash. He cannot use his hands, and &lt;a class="reference external" href="https://www.youtube.com/watch?v=bEwO17xd4eU"&gt;uses voice to operate his computer&lt;/a&gt; So this
+website was created using voice.&lt;/p&gt;
+&lt;p&gt;Simple theme, accessible on mobile and our google apps (cloud) still remain for forms, email and everything as it
+is convenient to manage.&lt;/p&gt;
+&lt;p&gt;I believe this change is going to help school further. Given what I have shared above, this project is a living
+entity, and will evolve with times.&lt;/p&gt;
+&lt;/div&gt;&lt;/div&gt;</description><guid>http://www.xtoinfinity.com/posts/2018/06/23/project-completion-spastics-society-of-karnataka.html</guid><pubDate>Sat, 23 Jun 2018 16:37:59 GMT</pubDate></item><item><title>Little Free Library</title><link>http://www.xtoinfinity.com/posts/2018/06/18/little-free-library.html</link><dc:creator>Senthil Kumaran</dc:creator><description>&lt;div&gt;&lt;p&gt;I set up a Little Free Library in front of my house. Excited to share the books with the San Ramon Community. I have
 to see how it plays out when the schools reopen.&lt;/p&gt;
 &lt;img alt="https://dl.dropbox.com/s/hpt3jmvzdlxq6n1/Screenshot%202018-06-18%2010.58.54.png?dl=0" class="align-center" src="https://dl.dropbox.com/s/hpt3jmvzdlxq6n1/Screenshot%202018-06-18%2010.58.54.png?dl=0" style="width: 450px; height: 300px;"&gt;&lt;/div&gt;</description><guid>http://www.xtoinfinity.com/posts/2018/06/18/little-free-library.html</guid><pubDate>Mon, 18 Jun 2018 17:58:24 GMT</pubDate></item><item><title>Book Review: Chaos - Making a New Science</title><link>http://www.xtoinfinity.com/posts/2018/06/03/book-review-chaos-making-a-new-science.html</link><dc:creator>Senthil Kumaran</dc:creator><description>&lt;span&gt;&lt;a href="https://www.goodreads.com/book/show/36691904-chaos" style="float: left; padding-right: 20px"&gt;&lt;img border="0" alt="Chaos: Making a New Science" src="https://images.gr-assets.com/books/1512063964m/36691904.jpg"&gt;&lt;/a&gt;&lt;a href="https://www.goodreads.com/book/show/36691904-chaos"&gt;Chaos: Making a New Science&lt;/a&gt; by &lt;a href="https://www.goodreads.com/author/show/10401.James_Gleick"&gt;James Gleick&lt;/a&gt;&lt;br&gt;
 My rating: &lt;a href="https://www.goodreads.com/review/show/2217154759"&gt;4 of 5 stars&lt;/a&gt;&lt;br&gt;&lt;br&gt;
@@ -96,6 +137,4 @@ human society devised multiple tools for this kind. When the problem was met wit
 currency", started in China, was way to scale currency, and keep a ledger for supply and demand.
 The coin system that was first invented in &lt;a class="reference external" href="https://www.ancient.eu/lydia/"&gt;Lydia&lt;/a&gt; is the same coin system that we use today, and the fiat currency
 is still in use. Except now that we have the technology to scale currency without trusting or depending on a
-government to maintain a ledger.&lt;/p&gt;&lt;/div&gt;</description><category>economics</category><category>paper</category><guid>http://www.xtoinfinity.com/posts/2018/03/06/shelling-out-origins-of-money.html</guid><pubDate>Tue, 06 Mar 2018 17:33:55 GMT</pubDate></item><item><title>Odds</title><link>http://www.xtoinfinity.com/posts/2018/03/04/odds.html</link><dc:creator>Senthil Kumaran</dc:creator><description>&lt;div&gt;&lt;p&gt;I recollected this favorite poem of my mine from school days. I first read it in a Sportstar magazine and I don't
-know the author of this poem.&lt;/p&gt;
-&lt;img alt="https://dl.dropbox.com/s/q56odzlv987nu8u/Screenshot%202018-03-04%2011.46.21.png?dl=0" class="align-center" src="https://dl.dropbox.com/s/q56odzlv987nu8u/Screenshot%202018-03-04%2011.46.21.png?dl=0"&gt;&lt;/div&gt;</description><category>poem</category><guid>http://www.xtoinfinity.com/posts/2018/03/04/odds.html</guid><pubDate>Sun, 04 Mar 2018 19:35:46 GMT</pubDate></item></channel></rss>
+government to maintain a ledger.&lt;/p&gt;&lt;/div&gt;</description><category>economics</category><category>paper</category><guid>http://www.xtoinfinity.com/posts/2018/03/06/shelling-out-origins-of-money.html</guid><pubDate>Tue, 06 Mar 2018 17:33:55 GMT</pubDate></item></channel></rss>
