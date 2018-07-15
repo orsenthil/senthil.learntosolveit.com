@@ -1,16 +1,11 @@
 .. title: Book Review: Yummy Sourashtra Recipe Book
 .. slug: book-review-yummy-sourashtra-recipe-book
 .. date: 2018-07-14 10:04:47 UTC-07:00
-.. tags:
+.. tags: books
 .. category:
 .. link:
 .. description:
 .. type: text
-
-The book in various different formats is available here:
-
-https://www.yummysourashtra.com/recipe-book/
-
 
 .. raw:: html
 
@@ -18,4 +13,9 @@ https://www.yummysourashtra.com/recipe-book/
     My rating: <a href="https://www.goodreads.com/review/show/2454475203">5 of 5 stars</a><br /><br />
     This book is written by my parents, so my obvious bias there. It chooses many good Sourashtra Recipes and presents them. The presentation is good. The language, editing can be improved.
     <br/><br/>
+
+
+The book in various different formats is available here:
+
+https://www.yummysourashtra.com/recipe-book/
 
