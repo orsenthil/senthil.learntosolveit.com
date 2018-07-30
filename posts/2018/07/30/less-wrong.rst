@@ -12,8 +12,8 @@ In any decision making, being right, getting things right seems intimidating. Fo
 debatable too. Being less wrong appears desirable and achievable. If a person is committed to non-perfectionist
 philosophy, then being less wrong falls right into his stride.
 
-When I stumbled upon the phrase LessWrong from the blog/form lesswrong.com, I found the word appealing. In the FAQ_
- section I stumbled upon some insight into what tries to achieve.
+I stumbled upon the phrase Less Wrong from the blog lesswrong.com. In the FAQ_
+section I discovered some insight into what tries to achieve.
 
 ::
 
