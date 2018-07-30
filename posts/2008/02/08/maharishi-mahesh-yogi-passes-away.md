@@ -6,11 +6,11 @@ Transcendental Meditation is one of them and Maharishi Mahesh Yogi pioneered it.
 
 
 
-It was when doing night-shifts at work that I did not get time for these and because during the day time with whatever time  I got, I wanted to study and prepare for a move to software development that my interests in these started to fade away. I think, being in Bangalore than in Madurai (where you have lot of temples and average interest in spiritual things is very high) and away from some friends who had shared my previous interests also led to this change. I was also disgusted with wrong paths which people might follow, if they just pray to god and not do the required work in trying to achieve what they wanted. So many nearby examples and sometimes myself included were in my mind. So, I simply kind of gave it up.
+It was when doing night-shifts at work that I did not get time for these and because during the day time with whatever time  I got, I wanted to study and prepare for a move to software development that my interests in meditation started to fade away. I think, being in Bangalore than in Madurai (where you have lot of temples and average interest in spiritual things is very high) and away from some friends who had shared my previous interests also led to this change. I was also disgusted with wrong paths which people might follow, if they just pray to god and not do the required work in trying to achieve what they wanted. So many nearby examples and sometimes myself included were in my mind. So, I simply kind of gave it up.
 
 
 
-Our interests change at different points in time. Right now, I do <a href="https://photos.google.com/album/AF1QipPciKCXTHANWuS0FAZLpM1WfCQjW4NSb9q4qupO?key=CJ7vgICc96WLywE">physical exercises</a> everyday, enjoy it without any aim for marks or achieving big things.
+Our interests change at different points in time. Right now, I do <a href="https://photos.app.goo.gl/mXsw1QhEnuio4b4DA">physical exercises</a> everyday, enjoy it without any aim for marks or achieving big things.
 
 
 
