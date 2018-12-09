@@ -7,7 +7,7 @@
 .. description:
 .. type: text
 
-I was thinking about this model while I was introspecting. I decided to capture it, so that I can revisit, to
+I was thinking about this model while I was introspecting. I decided to capture it, so that I can revisit to
 recollect and reinforce this idea.
 
 .. image::  https://dl.dropbox.com/s/xkajrkz93qymip2/Screenshot%202018-12-09%2007.57.59.png?dl=0
