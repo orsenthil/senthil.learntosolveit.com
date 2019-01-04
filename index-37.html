@@ -6,8 +6,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Senthil Kumaran's thoughts. (old posts, page 37) | Senthil Kumaran's thoughts.</title>
 <link href="assets/css/all-nocdn.css" rel="stylesheet" type="text/css">
-<meta name="theme-color" content="#5670d4">
-<meta name="generator" content="Nikola (getnikola.com)">
+<meta content="#5670d4" name="theme-color">
 <link rel="alternate" type="application/rss+xml" title="RSS" href="rss.xml">
 <link rel="canonical" href="http://www.xtoinfinity.com/index-37.html">
 <link rel="prev" href="index-38.html" type="text/html">
@@ -61,13 +60,10 @@
             
 
     
-
-
-    
 <div class="postindex">
     <article class="h-entry post-text"><header><h1 class="p-name entry-title"><a href="posts/2017/10/26/three-men-in-a-boat.html" class="u-url">Book Review: Three Men in a Boat</a></h1>
         <div class="metadata">
-            <p class="byline author vcard"><span class="byline-name fn" itemprop="author">
+            <p class="byline author vcard"><span class="byline-name fn">
                 Senthil Kumaran
             </span></p>
             <p class="dateline"><a href="posts/2017/10/26/three-men-in-a-boat.html" rel="bookmark"><time class="published dt-published" datetime="2017-10-26T04:02:44-07:00" title="2017-10-26 04:02">2017-10-26 04:02</time></a></p>
@@ -88,7 +84,7 @@ Funny writing. Made me chuckle at times and was very imaginative. makes for a li
     </div>
     </article><article class="h-entry post-text"><header><h1 class="p-name entry-title"><a href="posts/2017/10/21/nuclear-gandhi-in-civilization-v.html" class="u-url">Nuclear Gandhi in Civilization V</a></h1>
         <div class="metadata">
-            <p class="byline author vcard"><span class="byline-name fn" itemprop="author">
+            <p class="byline author vcard"><span class="byline-name fn">
                 Senthil Kumaran
             </span></p>
             <p class="dateline"><a href="posts/2017/10/21/nuclear-gandhi-in-civilization-v.html" rel="bookmark"><time class="published dt-published" datetime="2017-10-21T11:44:00-07:00" title="2017-10-21 11:44">2017-10-21 11:44</time></a></p>
@@ -105,17 +101,17 @@ Funny writing. Made me chuckle at times and was very imaginative. makes for a li
 And Gandhi, as the most pacifist leader that he was, was assigned lowest number 1. Also, in the game play if a society adopted
 democracy, the aggresiveness score was reduced by 2.</p>
 <p>So, when Gandhi adopted democracy, his aggresiveness score became <strong>1 - 2 = -1</strong>, and as it was unsigned int, and it gained a very high value.</p>
-<pre class="code c"><a name="rest_code_0735f997ec664b44a433bc55792f0c11-1"></a><span class="cp">#include</span><span class="cpf">&lt;stdio.h&gt;</span><span class="cp"></span>
-<a name="rest_code_0735f997ec664b44a433bc55792f0c11-2"></a>
-<a name="rest_code_0735f997ec664b44a433bc55792f0c11-3"></a><span class="kt">int</span> <span class="nf">main</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span> <span class="p">{</span>
-<a name="rest_code_0735f997ec664b44a433bc55792f0c11-4"></a>    <span class="kt">unsigned</span> <span class="kt">int</span> <span class="n">i</span><span class="p">;</span>
-<a name="rest_code_0735f997ec664b44a433bc55792f0c11-5"></a>    <span class="n">i</span> <span class="o">=</span> <span class="o">-</span><span class="mi">1</span><span class="p">;</span>
-<a name="rest_code_0735f997ec664b44a433bc55792f0c11-6"></a>    <span class="n">printf</span><span class="p">(</span><span class="s">"%x</span><span class="se">\n</span><span class="s">"</span><span class="p">,</span> <span class="n">i</span><span class="p">);</span>
-<a name="rest_code_0735f997ec664b44a433bc55792f0c11-7"></a><span class="p">}</span>
+<pre class="code c"><a name="rest_code_7a1bc8372eee4ae9be5ad33834d263e8-1"></a><span class="cp">#include</span><span class="cpf">&lt;stdio.h&gt;</span><span class="cp"></span>
+<a name="rest_code_7a1bc8372eee4ae9be5ad33834d263e8-2"></a>
+<a name="rest_code_7a1bc8372eee4ae9be5ad33834d263e8-3"></a><span class="kt">int</span> <span class="nf">main</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span> <span class="p">{</span>
+<a name="rest_code_7a1bc8372eee4ae9be5ad33834d263e8-4"></a>    <span class="kt">unsigned</span> <span class="kt">int</span> <span class="n">i</span><span class="p">;</span>
+<a name="rest_code_7a1bc8372eee4ae9be5ad33834d263e8-5"></a>    <span class="n">i</span> <span class="o">=</span> <span class="o">-</span><span class="mi">1</span><span class="p">;</span>
+<a name="rest_code_7a1bc8372eee4ae9be5ad33834d263e8-6"></a>    <span class="n">printf</span><span class="p">(</span><span class="s">"%x</span><span class="se">\n</span><span class="s">"</span><span class="p">,</span> <span class="n">i</span><span class="p">);</span>
+<a name="rest_code_7a1bc8372eee4ae9be5ad33834d263e8-7"></a><span class="p">}</span>
 </pre>
-<pre class="code bash"><a name="rest_code_8608defa531f44a6b1ccaea5abbdb71e-1"></a>$ clang unsigned.c
-<a name="rest_code_8608defa531f44a6b1ccaea5abbdb71e-2"></a>$ ./a.out
-<a name="rest_code_8608defa531f44a6b1ccaea5abbdb71e-3"></a><span class="m">4294967295</span>
+<pre class="code bash"><a name="rest_code_59fa469b8b9e4e2c8b3b89014410991f-1"></a>$ clang unsigned.c
+<a name="rest_code_59fa469b8b9e4e2c8b3b89014410991f-2"></a>$ ./a.out
+<a name="rest_code_59fa469b8b9e4e2c8b3b89014410991f-3"></a><span class="m">4294967295</span>
 </pre>
 <p>And thus Gandhi was ready to nuke whenever there is a conflict.</p>
 <img alt="https://i.kinja-img.com/gawker-media/image/upload/s--4uHRnRfT--/c_fit,fl_progressive,q_80,w_636/dnqxrzdmsdkud7fmsqyp.jpg" src="https://i.kinja-img.com/gawker-media/image/upload/s--4uHRnRfT--/c_fit,fl_progressive,q_80,w_636/dnqxrzdmsdkud7fmsqyp.jpg">
@@ -123,7 +119,7 @@ democracy, the aggresiveness score was reduced by 2.</p>
     </div>
     </article><article class="h-entry post-text"><header><h1 class="p-name entry-title"><a href="posts/2017/10/20/s-chandrasekhars-107th-birthday.html" class="u-url">S. Chandrasekhar's 107th Birthday</a></h1>
         <div class="metadata">
-            <p class="byline author vcard"><span class="byline-name fn" itemprop="author">
+            <p class="byline author vcard"><span class="byline-name fn">
                 Senthil Kumaran
             </span></p>
             <p class="dateline"><a href="posts/2017/10/20/s-chandrasekhars-107th-birthday.html" rel="bookmark"><time class="published dt-published" datetime="2017-10-20T13:40:11-07:00" title="2017-10-20 13:40">2017-10-20 13:40</time></a></p>
@@ -146,7 +142,7 @@ black-hole!</p>
     </div>
     </article><article class="h-entry post-text"><header><h1 class="p-name entry-title"><a href="posts/2017/10/16/selfoverestimate.html" class="u-url">self.overEstimate</a></h1>
         <div class="metadata">
-            <p class="byline author vcard"><span class="byline-name fn" itemprop="author">
+            <p class="byline author vcard"><span class="byline-name fn">
                 Senthil Kumaran
             </span></p>
             <p class="dateline"><a href="posts/2017/10/16/selfoverestimate.html" rel="bookmark"><time class="published dt-published" datetime="2017-10-16T13:58:45-07:00" title="2017-10-16 13:58">2017-10-16 13:58</time></a></p>
@@ -170,7 +166,7 @@ black-hole!</p>
     </div>
     </article><article class="h-entry post-text"><header><h1 class="p-name entry-title"><a href="posts/2017/10/09/hemmingway-on-writing.html" class="u-url">Hemmingway on Writing</a></h1>
         <div class="metadata">
-            <p class="byline author vcard"><span class="byline-name fn" itemprop="author">
+            <p class="byline author vcard"><span class="byline-name fn">
                 Senthil Kumaran
             </span></p>
             <p class="dateline"><a href="posts/2017/10/09/hemmingway-on-writing.html" rel="bookmark"><time class="published dt-published" datetime="2017-10-09T12:57:47-07:00" title="2017-10-09 12:57">2017-10-09 12:57</time></a></p>
@@ -193,7 +189,7 @@ Don't get discouraged because there's a lot of mechanical work to writing. I rew
     </div>
     </article><article class="h-entry post-text"><header><h1 class="p-name entry-title"><a href="posts/2017/10/08/blockchain-demo.html" class="u-url">Blockchain Demo</a></h1>
         <div class="metadata">
-            <p class="byline author vcard"><span class="byline-name fn" itemprop="author">
+            <p class="byline author vcard"><span class="byline-name fn">
                 Senthil Kumaran
             </span></p>
             <p class="dateline"><a href="posts/2017/10/08/blockchain-demo.html" rel="bookmark"><time class="published dt-published" datetime="2017-10-08T17:11:40-07:00" title="2017-10-08 17:11">2017-10-08 17:11</time></a></p>
@@ -217,7 +213,7 @@ recording transactions in the blockchain, and verifying transactions in the bloc
     </div>
     </article><article class="h-entry post-text"><header><h1 class="p-name entry-title"><a href="posts/2017/09/25/the-collapsing-universe.html" class="u-url">Book Review: The Collapsing Universe</a></h1>
         <div class="metadata">
-            <p class="byline author vcard"><span class="byline-name fn" itemprop="author">
+            <p class="byline author vcard"><span class="byline-name fn">
                 Senthil Kumaran
             </span></p>
             <p class="dateline"><a href="posts/2017/09/25/the-collapsing-universe.html" rel="bookmark"><time class="published dt-published" datetime="2017-09-25T10:41:17-07:00" title="2017-09-25 10:41">2017-09-25 10:41</time></a></p>
@@ -245,7 +241,7 @@ The Good Doctor once again explains Cosmology in lucid terms. He starts off with
     </div>
     </article><article class="h-entry post-text"><header><h1 class="p-name entry-title"><a href="posts/2017/09/02/big-numbers-eons.html" class="u-url">Big numbers - Eons</a></h1>
         <div class="metadata">
-            <p class="byline author vcard"><span class="byline-name fn" itemprop="author">
+            <p class="byline author vcard"><span class="byline-name fn">
                 Senthil Kumaran
             </span></p>
             <p class="dateline"><a href="posts/2017/09/02/big-numbers-eons.html" rel="bookmark"><time class="published dt-published" datetime="2017-09-02T23:24:51-07:00" title="2017-09-02 23:24">2017-09-02 23:24</time></a></p>
@@ -261,7 +257,7 @@ The Good Doctor once again explains Cosmology in lucid terms. He starts off with
     </div>
     </article><article class="h-entry post-text"><header><h1 class="p-name entry-title"><a href="posts/2017/08/24/go-programming-teaser-post.html" class="u-url">Go programming - teaser post.</a></h1>
         <div class="metadata">
-            <p class="byline author vcard"><span class="byline-name fn" itemprop="author">
+            <p class="byline author vcard"><span class="byline-name fn">
                 Senthil Kumaran
             </span></p>
             <p class="dateline"><a href="posts/2017/08/24/go-programming-teaser-post.html" rel="bookmark"><time class="published dt-published" datetime="2017-08-24T08:56:08-07:00" title="2017-08-24 08:56">2017-08-24 08:56</time></a></p>
@@ -278,7 +274,7 @@ and excited me to pay more attention to go.</p>
     </div>
     </article><article class="h-entry post-text"><header><h1 class="p-name entry-title"><a href="posts/2017/08/15/want-to-save-a-family-from-deadly-mosquitoes.html" class="u-url">Want to save a family from deadly mosquitoes?</a></h1>
         <div class="metadata">
-            <p class="byline author vcard"><span class="byline-name fn" itemprop="author">
+            <p class="byline author vcard"><span class="byline-name fn">
                 Senthil Kumaran
             </span></p>
             <p class="dateline"><a href="posts/2017/08/15/want-to-save-a-family-from-deadly-mosquitoes.html" rel="bookmark"><time class="published dt-published" datetime="2017-08-15T17:26:15-07:00" title="2017-08-15 17:26">2017-08-15 17:26</time></a></p>
@@ -311,7 +307,7 @@ we’ve made in the fight against malaria-spreading mosquitos, and you can give 
         <!--End of body content-->
 
         <footer id="footer">
-            Contents © 2018         <a href="mailto:orsenthil@gmail.com">Senthil Kumaran</a> - Powered by         <a href="https://getnikola.com" rel="nofollow">Nikola</a>         
+            Contents © 2019         <a href="mailto:orsenthil@gmail.com">Senthil Kumaran</a> - Powered by         <a href="https://getnikola.com" rel="nofollow">Nikola</a>         
             
         </footer>
 </div>

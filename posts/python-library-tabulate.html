@@ -5,8 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Python Library: tabulate | Senthil Kumaran's thoughts.</title>
 <link href="../assets/css/all-nocdn.css" rel="stylesheet" type="text/css">
-<meta name="theme-color" content="#5670d4">
-<meta name="generator" content="Nikola (getnikola.com)">
+<meta content="#5670d4" name="theme-color">
 <link rel="alternate" type="application/rss+xml" title="RSS" href="../rss.xml">
 <link rel="canonical" href="http://www.xtoinfinity.com/posts/python-library-tabulate.html">
 <!--[if lt IE 9]><script src="../assets/js/html5.js"></script><![endif]--><meta name="author" content="Senthil Kumaran">
@@ -75,7 +74,7 @@ Getting the columns right, drawing and aligning the bar characters is a frustrat
 <article class="post-text h-entry hentry postpage" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title" itemprop="headline name"><a href="#" class="u-url">Python Library: tabulate</a></h1>
 
         <div class="metadata">
-            <p class="byline author vcard"><span class="byline-name fn" itemprop="author">
+            <p class="byline author vcard"><span class="byline-name fn">
                     Senthil Kumaran
             </span></p>
             <p class="dateline"><a href="#" rel="bookmark"><time class="published dt-published" datetime="2016-08-20T22:52:19-07:00" itemprop="datePublished" title="2016-08-20 22:52">2016-08-20 22:52</time></a></p>
@@ -86,7 +85,7 @@ Getting the columns right, drawing and aligning the bar characters is a frustrat
 
             
         </p>
-<p class="sourceline"><a href="python-library-tabulate.rst" class="sourcelink">Source</a></p>
+<p class="sourceline"><a href="python-library-tabulate.rst" id="sourcelink">Source</a></p>
 
         </div>
         
@@ -171,24 +170,24 @@ The table could easily be constructed using python data structures like list.</p
 </table>
 <p>This table was generated using this python program.</p>
 <p><a class="reference external" href="../listings/python/tabulate_example.py.html">python/tabulate_example.py</a>  <a class="reference external" href="../listings/python/tabulate_example.py">(Source)</a></p>
-<pre class="code python"><a name="rest_code_a21dc25863f846269652ca5779de3b08-1"></a><span class="kn">from</span> <span class="nn">tabulate</span> <span class="kn">import</span> <span class="n">tabulate</span>
-<a name="rest_code_a21dc25863f846269652ca5779de3b08-2"></a>
-<a name="rest_code_a21dc25863f846269652ca5779de3b08-3"></a><span class="n">table_header</span> <span class="o">=</span> <span class="p">[</span><span class="s2">"graph"</span><span class="p">,</span> <span class="s2">"vertex"</span><span class="p">,</span> <span class="s2">"edge"</span><span class="p">]</span>
-<a name="rest_code_a21dc25863f846269652ca5779de3b08-4"></a>
-<a name="rest_code_a21dc25863f846269652ca5779de3b08-5"></a><span class="n">items</span> <span class="o">=</span> <span class="p">[</span>
-<a name="rest_code_a21dc25863f846269652ca5779de3b08-6"></a>    <span class="p">[</span><span class="s2">"communication"</span><span class="p">,</span> <span class="s2">"telephone, computer"</span><span class="p">,</span> <span class="s2">"fiber optic cable"</span><span class="p">],</span>
-<a name="rest_code_a21dc25863f846269652ca5779de3b08-7"></a>    <span class="p">[</span><span class="s2">"circuit"</span><span class="p">,</span> <span class="s2">"gate, register, processor"</span><span class="p">,</span> <span class="s2">"wire"</span><span class="p">],</span>
-<a name="rest_code_a21dc25863f846269652ca5779de3b08-8"></a>    <span class="p">[</span><span class="s2">"mechanical"</span><span class="p">,</span> <span class="s2">"joint"</span><span class="p">,</span> <span class="s2">"rod, beam, spring"</span><span class="p">],</span>
-<a name="rest_code_a21dc25863f846269652ca5779de3b08-9"></a>    <span class="p">[</span><span class="s2">"financial"</span><span class="p">,</span> <span class="s2">"stock, currency"</span><span class="p">,</span> <span class="s2">"transactions"</span><span class="p">],</span>
-<a name="rest_code_a21dc25863f846269652ca5779de3b08-10"></a>    <span class="p">[</span><span class="s2">"transportation"</span><span class="p">,</span> <span class="s2">"street intersection, airport"</span><span class="p">,</span> <span class="s2">"highway, airway route"</span><span class="p">],</span>
-<a name="rest_code_a21dc25863f846269652ca5779de3b08-11"></a>    <span class="p">[</span><span class="s2">"internet"</span><span class="p">,</span> <span class="s2">"class C network"</span><span class="p">,</span> <span class="s2">"connection"</span><span class="p">],</span>
-<a name="rest_code_a21dc25863f846269652ca5779de3b08-12"></a>    <span class="p">[</span><span class="s2">"game"</span><span class="p">,</span> <span class="s2">"board position"</span><span class="p">,</span> <span class="s2">"legal move"</span><span class="p">],</span>
-<a name="rest_code_a21dc25863f846269652ca5779de3b08-13"></a>    <span class="p">[</span><span class="s2">"social relationship"</span><span class="p">,</span> <span class="s2">"person, actor"</span><span class="p">,</span> <span class="s2">"friendship, movie cast"</span><span class="p">],</span>
-<a name="rest_code_a21dc25863f846269652ca5779de3b08-14"></a>    <span class="p">[</span><span class="s2">"neural network"</span><span class="p">,</span> <span class="s2">"neuron"</span><span class="p">,</span> <span class="s2">"synapse"</span><span class="p">],</span>
-<a name="rest_code_a21dc25863f846269652ca5779de3b08-15"></a>    <span class="p">[</span><span class="s2">"protein network"</span><span class="p">,</span> <span class="s2">"protein"</span><span class="p">,</span> <span class="s2">"protein-protein interaction"</span><span class="p">],</span>
-<a name="rest_code_a21dc25863f846269652ca5779de3b08-16"></a>    <span class="p">[</span><span class="s2">"molecule"</span><span class="p">,</span> <span class="s2">"atom"</span><span class="p">,</span> <span class="s2">"bond"</span><span class="p">]]</span>
-<a name="rest_code_a21dc25863f846269652ca5779de3b08-17"></a>
-<a name="rest_code_a21dc25863f846269652ca5779de3b08-18"></a><span class="k">print</span><span class="p">(</span><span class="n">tabulate</span><span class="p">(</span><span class="n">items</span><span class="p">,</span> <span class="n">headers</span><span class="o">=</span><span class="n">table_header</span><span class="p">,</span> <span class="n">tablefmt</span><span class="o">=</span><span class="s2">"rst"</span><span class="p">))</span>
+<pre class="code python"><a name="rest_code_e5ad45dff18c468bbdedf5d05c1ba84b-1"></a><span class="kn">from</span> <span class="nn">tabulate</span> <span class="kn">import</span> <span class="n">tabulate</span>
+<a name="rest_code_e5ad45dff18c468bbdedf5d05c1ba84b-2"></a>
+<a name="rest_code_e5ad45dff18c468bbdedf5d05c1ba84b-3"></a><span class="n">table_header</span> <span class="o">=</span> <span class="p">[</span><span class="s2">"graph"</span><span class="p">,</span> <span class="s2">"vertex"</span><span class="p">,</span> <span class="s2">"edge"</span><span class="p">]</span>
+<a name="rest_code_e5ad45dff18c468bbdedf5d05c1ba84b-4"></a>
+<a name="rest_code_e5ad45dff18c468bbdedf5d05c1ba84b-5"></a><span class="n">items</span> <span class="o">=</span> <span class="p">[</span>
+<a name="rest_code_e5ad45dff18c468bbdedf5d05c1ba84b-6"></a>    <span class="p">[</span><span class="s2">"communication"</span><span class="p">,</span> <span class="s2">"telephone, computer"</span><span class="p">,</span> <span class="s2">"fiber optic cable"</span><span class="p">],</span>
+<a name="rest_code_e5ad45dff18c468bbdedf5d05c1ba84b-7"></a>    <span class="p">[</span><span class="s2">"circuit"</span><span class="p">,</span> <span class="s2">"gate, register, processor"</span><span class="p">,</span> <span class="s2">"wire"</span><span class="p">],</span>
+<a name="rest_code_e5ad45dff18c468bbdedf5d05c1ba84b-8"></a>    <span class="p">[</span><span class="s2">"mechanical"</span><span class="p">,</span> <span class="s2">"joint"</span><span class="p">,</span> <span class="s2">"rod, beam, spring"</span><span class="p">],</span>
+<a name="rest_code_e5ad45dff18c468bbdedf5d05c1ba84b-9"></a>    <span class="p">[</span><span class="s2">"financial"</span><span class="p">,</span> <span class="s2">"stock, currency"</span><span class="p">,</span> <span class="s2">"transactions"</span><span class="p">],</span>
+<a name="rest_code_e5ad45dff18c468bbdedf5d05c1ba84b-10"></a>    <span class="p">[</span><span class="s2">"transportation"</span><span class="p">,</span> <span class="s2">"street intersection, airport"</span><span class="p">,</span> <span class="s2">"highway, airway route"</span><span class="p">],</span>
+<a name="rest_code_e5ad45dff18c468bbdedf5d05c1ba84b-11"></a>    <span class="p">[</span><span class="s2">"internet"</span><span class="p">,</span> <span class="s2">"class C network"</span><span class="p">,</span> <span class="s2">"connection"</span><span class="p">],</span>
+<a name="rest_code_e5ad45dff18c468bbdedf5d05c1ba84b-12"></a>    <span class="p">[</span><span class="s2">"game"</span><span class="p">,</span> <span class="s2">"board position"</span><span class="p">,</span> <span class="s2">"legal move"</span><span class="p">],</span>
+<a name="rest_code_e5ad45dff18c468bbdedf5d05c1ba84b-13"></a>    <span class="p">[</span><span class="s2">"social relationship"</span><span class="p">,</span> <span class="s2">"person, actor"</span><span class="p">,</span> <span class="s2">"friendship, movie cast"</span><span class="p">],</span>
+<a name="rest_code_e5ad45dff18c468bbdedf5d05c1ba84b-14"></a>    <span class="p">[</span><span class="s2">"neural network"</span><span class="p">,</span> <span class="s2">"neuron"</span><span class="p">,</span> <span class="s2">"synapse"</span><span class="p">],</span>
+<a name="rest_code_e5ad45dff18c468bbdedf5d05c1ba84b-15"></a>    <span class="p">[</span><span class="s2">"protein network"</span><span class="p">,</span> <span class="s2">"protein"</span><span class="p">,</span> <span class="s2">"protein-protein interaction"</span><span class="p">],</span>
+<a name="rest_code_e5ad45dff18c468bbdedf5d05c1ba84b-16"></a>    <span class="p">[</span><span class="s2">"molecule"</span><span class="p">,</span> <span class="s2">"atom"</span><span class="p">,</span> <span class="s2">"bond"</span><span class="p">]]</span>
+<a name="rest_code_e5ad45dff18c468bbdedf5d05c1ba84b-17"></a>
+<a name="rest_code_e5ad45dff18c468bbdedf5d05c1ba84b-18"></a><span class="k">print</span><span class="p">(</span><span class="n">tabulate</span><span class="p">(</span><span class="n">items</span><span class="p">,</span> <span class="n">headers</span><span class="o">=</span><span class="n">table_header</span><span class="p">,</span> <span class="n">tablefmt</span><span class="o">=</span><span class="s2">"rst"</span><span class="p">))</span>
 </pre>
 <p>I landed upon tabulate when another python library by name <a class="reference external" href="https://ptable.readthedocs.io/en/latest/tutorial.html">PTable</a> <a class="footnote-reference" href="python-library-tabulate.html#id3" id="id4">[2]</a> did not provide a restructured text specific formatting. If you just prefer ASCII tables, then that's a convenient library as well.</p>
 <table class="docutils footnote" frame="void" id="id1" rules="none">
@@ -250,7 +249,7 @@ The table could easily be constructed using python data structures like list.</p
         <!--End of body content-->
 
         <footer id="footer">
-            Contents © 2018         <a href="mailto:orsenthil@gmail.com">Senthil Kumaran</a> - Powered by         <a href="https://getnikola.com" rel="nofollow">Nikola</a>         
+            Contents © 2019         <a href="mailto:orsenthil@gmail.com">Senthil Kumaran</a> - Powered by         <a href="https://getnikola.com" rel="nofollow">Nikola</a>         
             
         </footer>
 </div>

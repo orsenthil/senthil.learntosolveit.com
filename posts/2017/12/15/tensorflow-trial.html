@@ -5,8 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Tensorflow trial | Senthil Kumaran's thoughts.</title>
 <link href="../../../../assets/css/all-nocdn.css" rel="stylesheet" type="text/css">
-<meta name="theme-color" content="#5670d4">
-<meta name="generator" content="Nikola (getnikola.com)">
+<meta content="#5670d4" name="theme-color">
 <link rel="alternate" type="application/rss+xml" title="RSS" href="../../../../rss.xml">
 <link rel="canonical" href="http://www.xtoinfinity.com/posts/2017/12/15/tensorflow-trial.html">
 <!--[if lt IE 9]><script src="../../../../assets/js/html5.js"></script><![endif]--><meta name="author" content="Senthil Kumaran">
@@ -78,7 +77,7 @@ $ python classify_image.py --image">
 <article class="post-text h-entry hentry postpage" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title" itemprop="headline name"><a href="#" class="u-url">Tensorflow trial</a></h1>
 
         <div class="metadata">
-            <p class="byline author vcard"><span class="byline-name fn" itemprop="author">
+            <p class="byline author vcard"><span class="byline-name fn">
                     Senthil Kumaran
             </span></p>
             <p class="dateline"><a href="#" rel="bookmark"><time class="published dt-published" datetime="2017-12-15T06:34:25-08:00" itemprop="datePublished" title="2017-12-15 06:34">2017-12-15 06:34</time></a></p>
@@ -89,7 +88,7 @@ $ python classify_image.py --image">
 
             
         </p>
-<p class="sourceline"><a href="tensorflow-trial.rst" class="sourcelink">Source</a></p>
+<p class="sourceline"><a href="tensorflow-trial.rst" id="sourcelink">Source</a></p>
 
         </div>
         
@@ -99,20 +98,20 @@ $ python classify_image.py --image">
 <p>Followed this <a class="reference external" href="https://www.digitalocean.com/community/tutorials/how-to-install-and-use-tensorflow-on-ubuntu-16-04">digitalocean tutorial on Tensorflow</a> to try an image classification on my computer.</p>
 <p>Tried with a Robot image first.</p>
 <img alt="https://www.robotshop.com/media/catalog/product/cache/15/image/900x900/9df78eab33525d08d6e5fb8d27136e95/e/z/ez-robot-jd-humanoid-robot.jpg" src="https://www.robotshop.com/media/catalog/product/cache/15/image/900x900/9df78eab33525d08d6e5fb8d27136e95/e/z/ez-robot-jd-humanoid-robot.jpg" style="width: 300px; height: 400px;"><p>It couldn't recognize it that well.</p>
-<pre class="code console"><a name="rest_code_6f2c187ec02244ac8b592db93924b9ae-1"></a><span class="gp">$</span> python classify_image.py --image_file ez-robot-jd-humanoid-robot.jpg <span class="m">2</span>&gt;/dev/null
-<a name="rest_code_6f2c187ec02244ac8b592db93924b9ae-2"></a><span class="go">whistle (score = 0.05857)</span>
-<a name="rest_code_6f2c187ec02244ac8b592db93924b9ae-3"></a><span class="go">tripod (score = 0.03762)</span>
-<a name="rest_code_6f2c187ec02244ac8b592db93924b9ae-4"></a><span class="go">microphone, mike (score = 0.03662)</span>
-<a name="rest_code_6f2c187ec02244ac8b592db93924b9ae-5"></a><span class="go">radio, wireless (score = 0.01969)</span>
-<a name="rest_code_6f2c187ec02244ac8b592db93924b9ae-6"></a><span class="go">spotlight, spot (score = 0.01623)</span>
+<pre class="code console"><a name="rest_code_c500b1033b4740e0b334e1d6a23b66c3-1"></a><span class="gp">$</span> python classify_image.py --image_file ez-robot-jd-humanoid-robot.jpg <span class="m">2</span>&gt;/dev/null
+<a name="rest_code_c500b1033b4740e0b334e1d6a23b66c3-2"></a><span class="go">whistle (score = 0.05857)</span>
+<a name="rest_code_c500b1033b4740e0b334e1d6a23b66c3-3"></a><span class="go">tripod (score = 0.03762)</span>
+<a name="rest_code_c500b1033b4740e0b334e1d6a23b66c3-4"></a><span class="go">microphone, mike (score = 0.03662)</span>
+<a name="rest_code_c500b1033b4740e0b334e1d6a23b66c3-5"></a><span class="go">radio, wireless (score = 0.01969)</span>
+<a name="rest_code_c500b1033b4740e0b334e1d6a23b66c3-6"></a><span class="go">spotlight, spot (score = 0.01623)</span>
 </pre>
 <p>But, eureka for Cats!</p>
-<img alt="https://www.petmd.com/sites/default/files/what-does-it-mean-when-cat-wags-tail.jpg" src="https://www.petmd.com/sites/default/files/what-does-it-mean-when-cat-wags-tail.jpg" style="width: 300px; height: 400px;"><pre class="code console"><a name="rest_code_1d4156899bcc40df83f3efc3e1adad12-1"></a><span class="gp">$</span> python classify_image.py --image_file what-does-it-mean-when-cat-wags-tail.jpg <span class="m">2</span>&gt;/dev/null
-<a name="rest_code_1d4156899bcc40df83f3efc3e1adad12-2"></a><span class="go">tabby, tabby cat (score = 0.51155)</span>
-<a name="rest_code_1d4156899bcc40df83f3efc3e1adad12-3"></a><span class="go">Egyptian cat (score = 0.36965)</span>
-<a name="rest_code_1d4156899bcc40df83f3efc3e1adad12-4"></a><span class="go">tiger cat (score = 0.06952)</span>
-<a name="rest_code_1d4156899bcc40df83f3efc3e1adad12-5"></a><span class="go">lynx, catamount (score = 0.00368)</span>
-<a name="rest_code_1d4156899bcc40df83f3efc3e1adad12-6"></a><span class="go">doormat, welcome mat (score = 0.00064)</span>
+<img alt="https://www.petmd.com/sites/default/files/what-does-it-mean-when-cat-wags-tail.jpg" src="https://www.petmd.com/sites/default/files/what-does-it-mean-when-cat-wags-tail.jpg" style="width: 300px; height: 400px;"><pre class="code console"><a name="rest_code_f6f415f6611a43958711cf8280024105-1"></a><span class="gp">$</span> python classify_image.py --image_file what-does-it-mean-when-cat-wags-tail.jpg <span class="m">2</span>&gt;/dev/null
+<a name="rest_code_f6f415f6611a43958711cf8280024105-2"></a><span class="go">tabby, tabby cat (score = 0.51155)</span>
+<a name="rest_code_f6f415f6611a43958711cf8280024105-3"></a><span class="go">Egyptian cat (score = 0.36965)</span>
+<a name="rest_code_f6f415f6611a43958711cf8280024105-4"></a><span class="go">tiger cat (score = 0.06952)</span>
+<a name="rest_code_f6f415f6611a43958711cf8280024105-5"></a><span class="go">lynx, catamount (score = 0.00368)</span>
+<a name="rest_code_f6f415f6611a43958711cf8280024105-6"></a><span class="go">doormat, welcome mat (score = 0.00064)</span>
 </pre>
 </div>
     </div>
@@ -153,7 +152,7 @@ $ python classify_image.py --image">
         <!--End of body content-->
 
         <footer id="footer">
-            Contents © 2018         <a href="mailto:orsenthil@gmail.com">Senthil Kumaran</a> - Powered by         <a href="https://getnikola.com" rel="nofollow">Nikola</a>         
+            Contents © 2019         <a href="mailto:orsenthil@gmail.com">Senthil Kumaran</a> - Powered by         <a href="https://getnikola.com" rel="nofollow">Nikola</a>         
             
         </footer>
 </div>

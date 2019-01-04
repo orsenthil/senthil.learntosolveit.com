@@ -5,8 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Nuclear Gandhi in Civilization V | Senthil Kumaran's thoughts.</title>
 <link href="../../../../assets/css/all-nocdn.css" rel="stylesheet" type="text/css">
-<meta name="theme-color" content="#5670d4">
-<meta name="generator" content="Nikola (getnikola.com)">
+<meta content="#5670d4" name="theme-color">
 <link rel="alternate" type="application/rss+xml" title="RSS" href="../../../../rss.xml">
 <link rel="canonical" href="http://www.xtoinfinity.com/posts/2017/10/21/nuclear-gandhi-in-civilization-v.html">
 <!--[if lt IE 9]><script src="../../../../assets/js/html5.js"></script><![endif]--><meta name="author" content="Senthil Kumaran">
@@ -75,7 +74,7 @@ And Gandhi, as the most pacifist leader that he was, was assigned lowest number 
 <article class="post-text h-entry hentry postpage" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title" itemprop="headline name"><a href="#" class="u-url">Nuclear Gandhi in Civilization V</a></h1>
 
         <div class="metadata">
-            <p class="byline author vcard"><span class="byline-name fn" itemprop="author">
+            <p class="byline author vcard"><span class="byline-name fn">
                     Senthil Kumaran
             </span></p>
             <p class="dateline"><a href="#" rel="bookmark"><time class="published dt-published" datetime="2017-10-21T11:44:00-07:00" itemprop="datePublished" title="2017-10-21 11:44">2017-10-21 11:44</time></a></p>
@@ -86,7 +85,7 @@ And Gandhi, as the most pacifist leader that he was, was assigned lowest number 
 
             
         </p>
-<p class="sourceline"><a href="nuclear-gandhi-in-civilization-v.rst" class="sourcelink">Source</a></p>
+<p class="sourceline"><a href="nuclear-gandhi-in-civilization-v.rst" id="sourcelink">Source</a></p>
 
         </div>
         
@@ -97,17 +96,17 @@ And Gandhi, as the most pacifist leader that he was, was assigned lowest number 
 And Gandhi, as the most pacifist leader that he was, was assigned lowest number 1. Also, in the game play if a society adopted
 democracy, the aggresiveness score was reduced by 2.</p>
 <p>So, when Gandhi adopted democracy, his aggresiveness score became <strong>1 - 2 = -1</strong>, and as it was unsigned int, and it gained a very high value.</p>
-<pre class="code c"><a name="rest_code_0735f997ec664b44a433bc55792f0c11-1"></a><span class="cp">#include</span><span class="cpf">&lt;stdio.h&gt;</span><span class="cp"></span>
-<a name="rest_code_0735f997ec664b44a433bc55792f0c11-2"></a>
-<a name="rest_code_0735f997ec664b44a433bc55792f0c11-3"></a><span class="kt">int</span> <span class="nf">main</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span> <span class="p">{</span>
-<a name="rest_code_0735f997ec664b44a433bc55792f0c11-4"></a>    <span class="kt">unsigned</span> <span class="kt">int</span> <span class="n">i</span><span class="p">;</span>
-<a name="rest_code_0735f997ec664b44a433bc55792f0c11-5"></a>    <span class="n">i</span> <span class="o">=</span> <span class="o">-</span><span class="mi">1</span><span class="p">;</span>
-<a name="rest_code_0735f997ec664b44a433bc55792f0c11-6"></a>    <span class="n">printf</span><span class="p">(</span><span class="s">"%x</span><span class="se">\n</span><span class="s">"</span><span class="p">,</span> <span class="n">i</span><span class="p">);</span>
-<a name="rest_code_0735f997ec664b44a433bc55792f0c11-7"></a><span class="p">}</span>
+<pre class="code c"><a name="rest_code_7a1bc8372eee4ae9be5ad33834d263e8-1"></a><span class="cp">#include</span><span class="cpf">&lt;stdio.h&gt;</span><span class="cp"></span>
+<a name="rest_code_7a1bc8372eee4ae9be5ad33834d263e8-2"></a>
+<a name="rest_code_7a1bc8372eee4ae9be5ad33834d263e8-3"></a><span class="kt">int</span> <span class="nf">main</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span> <span class="p">{</span>
+<a name="rest_code_7a1bc8372eee4ae9be5ad33834d263e8-4"></a>    <span class="kt">unsigned</span> <span class="kt">int</span> <span class="n">i</span><span class="p">;</span>
+<a name="rest_code_7a1bc8372eee4ae9be5ad33834d263e8-5"></a>    <span class="n">i</span> <span class="o">=</span> <span class="o">-</span><span class="mi">1</span><span class="p">;</span>
+<a name="rest_code_7a1bc8372eee4ae9be5ad33834d263e8-6"></a>    <span class="n">printf</span><span class="p">(</span><span class="s">"%x</span><span class="se">\n</span><span class="s">"</span><span class="p">,</span> <span class="n">i</span><span class="p">);</span>
+<a name="rest_code_7a1bc8372eee4ae9be5ad33834d263e8-7"></a><span class="p">}</span>
 </pre>
-<pre class="code bash"><a name="rest_code_8608defa531f44a6b1ccaea5abbdb71e-1"></a>$ clang unsigned.c
-<a name="rest_code_8608defa531f44a6b1ccaea5abbdb71e-2"></a>$ ./a.out
-<a name="rest_code_8608defa531f44a6b1ccaea5abbdb71e-3"></a><span class="m">4294967295</span>
+<pre class="code bash"><a name="rest_code_59fa469b8b9e4e2c8b3b89014410991f-1"></a>$ clang unsigned.c
+<a name="rest_code_59fa469b8b9e4e2c8b3b89014410991f-2"></a>$ ./a.out
+<a name="rest_code_59fa469b8b9e4e2c8b3b89014410991f-3"></a><span class="m">4294967295</span>
 </pre>
 <p>And thus Gandhi was ready to nuke whenever there is a conflict.</p>
 <img alt="https://i.kinja-img.com/gawker-media/image/upload/s--4uHRnRfT--/c_fit,fl_progressive,q_80,w_636/dnqxrzdmsdkud7fmsqyp.jpg" src="https://i.kinja-img.com/gawker-media/image/upload/s--4uHRnRfT--/c_fit,fl_progressive,q_80,w_636/dnqxrzdmsdkud7fmsqyp.jpg">
@@ -150,7 +149,7 @@ democracy, the aggresiveness score was reduced by 2.</p>
         <!--End of body content-->
 
         <footer id="footer">
-            Contents © 2018         <a href="mailto:orsenthil@gmail.com">Senthil Kumaran</a> - Powered by         <a href="https://getnikola.com" rel="nofollow">Nikola</a>         
+            Contents © 2019         <a href="mailto:orsenthil@gmail.com">Senthil Kumaran</a> - Powered by         <a href="https://getnikola.com" rel="nofollow">Nikola</a>         
             
         </footer>
 </div>

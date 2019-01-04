@@ -6,8 +6,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Senthil Kumaran's thoughts. (old posts, page 31) | Senthil Kumaran's thoughts.</title>
 <link href="assets/css/all-nocdn.css" rel="stylesheet" type="text/css">
-<meta name="theme-color" content="#5670d4">
-<meta name="generator" content="Nikola (getnikola.com)">
+<meta content="#5670d4" name="theme-color">
 <link rel="alternate" type="application/rss+xml" title="RSS" href="rss.xml">
 <link rel="canonical" href="http://www.xtoinfinity.com/index-31.html">
 <link rel="prev" href="index-32.html" type="text/html">
@@ -61,13 +60,10 @@
             
 
     
-
-
-    
 <div class="postindex">
     <article class="h-entry post-text"><header><h1 class="p-name entry-title"><a href="posts/edisons-todo-list.html" class="u-url">Edison's TODO list</a></h1>
         <div class="metadata">
-            <p class="byline author vcard"><span class="byline-name fn" itemprop="author">
+            <p class="byline author vcard"><span class="byline-name fn">
                 Senthil Kumaran
             </span></p>
             <p class="dateline"><a href="posts/edisons-todo-list.html" rel="bookmark"><time class="published dt-published" datetime="2016-12-16T09:34:07-08:00" title="2016-12-16 09:34">2016-12-16 09:34</time></a></p>
@@ -195,7 +191,7 @@
     </div>
     </article><article class="h-entry post-text"><header><h1 class="p-name entry-title"><a href="posts/supplying-values.html" class="u-url">Supplying Values</a></h1>
         <div class="metadata">
-            <p class="byline author vcard"><span class="byline-name fn" itemprop="author">
+            <p class="byline author vcard"><span class="byline-name fn">
                 Senthil Kumaran
             </span></p>
             <p class="dateline"><a href="posts/supplying-values.html" rel="bookmark"><time class="published dt-published" datetime="2016-12-15T09:21:42-08:00" title="2016-12-15 09:21">2016-12-15 09:21</time></a></p>
@@ -229,7 +225,7 @@ and openness. Does that put convenience in adopting a value at the top for masse
     </div>
     </article><article class="h-entry post-text"><header><h1 class="p-name entry-title"><a href="posts/teamcity-server-on-mac.html" class="u-url">TeamCity Server on Mac</a></h1>
         <div class="metadata">
-            <p class="byline author vcard"><span class="byline-name fn" itemprop="author">
+            <p class="byline author vcard"><span class="byline-name fn">
                 Senthil Kumaran
             </span></p>
             <p class="dateline"><a href="posts/teamcity-server-on-mac.html" rel="bookmark"><time class="published dt-published" datetime="2016-12-14T18:47:35-08:00" title="2016-12-14 18:47">2016-12-14 18:47</time></a></p>
@@ -246,42 +242,42 @@ and openness. Does that put convenience in adopting a value at the top for masse
 <ol class="arabic simple">
 <li>Run TeamCity server</li>
 </ol>
-<pre class="code bash"><a name="rest_code_3214046be41a44b2872e71acd2b555e3-1"></a><span class="ch">#!/bin/bash</span>
-<a name="rest_code_3214046be41a44b2872e71acd2b555e3-2"></a>
-<a name="rest_code_3214046be41a44b2872e71acd2b555e3-3"></a><span class="nv">PATH_TO_DATA_DIR</span><span class="o">=</span>/Users/senthil/teamcity/data
-<a name="rest_code_3214046be41a44b2872e71acd2b555e3-4"></a><span class="nv">PATH_TO_LOGS_DIR</span><span class="o">=</span>/Users/senthil/teamcity/logs
-<a name="rest_code_3214046be41a44b2872e71acd2b555e3-5"></a><span class="nv">PORT_HOST</span><span class="o">=</span><span class="m">8111</span>
-<a name="rest_code_3214046be41a44b2872e71acd2b555e3-6"></a>
-<a name="rest_code_3214046be41a44b2872e71acd2b555e3-7"></a>docker run -it --name teamcity-server-instance  <span class="se">\</span>
-<a name="rest_code_3214046be41a44b2872e71acd2b555e3-8"></a>    -v <span class="nv">$PATH_TO_DATA_DIR</span>:/data/teamcity_server/datadir <span class="se">\</span>
-<a name="rest_code_3214046be41a44b2872e71acd2b555e3-9"></a>    -v <span class="nv">$PATH_TO_LOGS_DIR</span>:/opt/teamcity/logs  <span class="se">\</span>
-<a name="rest_code_3214046be41a44b2872e71acd2b555e3-10"></a>    -p <span class="nv">$PORT_HOST</span>:8111 <span class="se">\</span>
-<a name="rest_code_3214046be41a44b2872e71acd2b555e3-11"></a>    jetbrains/teamcity-server
+<pre class="code bash"><a name="rest_code_b37f619b6d754931b35027289b0e9ec6-1"></a><span class="ch">#!/bin/bash</span>
+<a name="rest_code_b37f619b6d754931b35027289b0e9ec6-2"></a>
+<a name="rest_code_b37f619b6d754931b35027289b0e9ec6-3"></a><span class="nv">PATH_TO_DATA_DIR</span><span class="o">=</span>/Users/senthil/teamcity/data
+<a name="rest_code_b37f619b6d754931b35027289b0e9ec6-4"></a><span class="nv">PATH_TO_LOGS_DIR</span><span class="o">=</span>/Users/senthil/teamcity/logs
+<a name="rest_code_b37f619b6d754931b35027289b0e9ec6-5"></a><span class="nv">PORT_HOST</span><span class="o">=</span><span class="m">8111</span>
+<a name="rest_code_b37f619b6d754931b35027289b0e9ec6-6"></a>
+<a name="rest_code_b37f619b6d754931b35027289b0e9ec6-7"></a>docker run -it --name teamcity-server-instance  <span class="se">\</span>
+<a name="rest_code_b37f619b6d754931b35027289b0e9ec6-8"></a>    -v <span class="nv">$PATH_TO_DATA_DIR</span>:/data/teamcity_server/datadir <span class="se">\</span>
+<a name="rest_code_b37f619b6d754931b35027289b0e9ec6-9"></a>    -v <span class="nv">$PATH_TO_LOGS_DIR</span>:/opt/teamcity/logs  <span class="se">\</span>
+<a name="rest_code_b37f619b6d754931b35027289b0e9ec6-10"></a>    -p <span class="nv">$PORT_HOST</span>:8111 <span class="se">\</span>
+<a name="rest_code_b37f619b6d754931b35027289b0e9ec6-11"></a>    jetbrains/teamcity-server
 </pre>
 <p>The teamcity server is accessible now at <a class="reference external" href="http://127.0.0.1:8111">http://127.0.0.1:8111</a></p>
 <ol class="arabic simple" start="2">
 <li>Setup a reverse proxy to access that locally.</li>
 </ol>
-<pre class="code bash"><a name="rest_code_95b00f1ce99d440aa2bfc23f5c1e15f6-1"></a>$ cat /etc/apache2/vhosts/teamcity.local.conf
-<a name="rest_code_95b00f1ce99d440aa2bfc23f5c1e15f6-2"></a>&lt;VirtualHost *:80&gt;
-<a name="rest_code_95b00f1ce99d440aa2bfc23f5c1e15f6-3"></a>    ProxyPreserveHost On
-<a name="rest_code_95b00f1ce99d440aa2bfc23f5c1e15f6-4"></a>    ServerName teamcity.local
-<a name="rest_code_95b00f1ce99d440aa2bfc23f5c1e15f6-5"></a>    ProxyPass / http://127.0.0.1:8111/
-<a name="rest_code_95b00f1ce99d440aa2bfc23f5c1e15f6-6"></a>    ProxyPassReverse / http://127.0.0.1:8111/
-<a name="rest_code_95b00f1ce99d440aa2bfc23f5c1e15f6-7"></a>    LogLevel debug
-<a name="rest_code_95b00f1ce99d440aa2bfc23f5c1e15f6-8"></a>&lt;/VirtualHost&gt;
+<pre class="code bash"><a name="rest_code_684c286032964425919a600b438c40dd-1"></a>$ cat /etc/apache2/vhosts/teamcity.local.conf
+<a name="rest_code_684c286032964425919a600b438c40dd-2"></a>&lt;VirtualHost *:80&gt;
+<a name="rest_code_684c286032964425919a600b438c40dd-3"></a>    ProxyPreserveHost On
+<a name="rest_code_684c286032964425919a600b438c40dd-4"></a>    ServerName teamcity.local
+<a name="rest_code_684c286032964425919a600b438c40dd-5"></a>    ProxyPass / http://127.0.0.1:8111/
+<a name="rest_code_684c286032964425919a600b438c40dd-6"></a>    ProxyPassReverse / http://127.0.0.1:8111/
+<a name="rest_code_684c286032964425919a600b438c40dd-7"></a>    LogLevel debug
+<a name="rest_code_684c286032964425919a600b438c40dd-8"></a>&lt;/VirtualHost&gt;
 </pre>
 <ol class="arabic simple" start="3">
 <li>Setup your <cite>/etc/host</cite> to point <a class="reference external" href="http://teamcity.local">http://teamcity.local</a> to 127.0.0.1:8111</li>
 </ol>
-<pre class="code bash"><a name="rest_code_03e6178732ad41dea3ef10416448d758-1"></a>$ cat /etc/hosts <span class="p">|</span>grep teamcity
-<a name="rest_code_03e6178732ad41dea3ef10416448d758-2"></a><span class="m">127</span>.0.0.1   teamcity.local
+<pre class="code bash"><a name="rest_code_6db3744e14b6441184905fcbfdb6489b-1"></a>$ cat /etc/hosts <span class="p">|</span>grep teamcity
+<a name="rest_code_6db3744e14b6441184905fcbfdb6489b-2"></a><span class="m">127</span>.0.0.1   teamcity.local
 </pre>
 </div>
     </div>
     </article><article class="h-entry post-text"><header><h1 class="p-name entry-title"><a href="posts/virtualbox-networking-modes.html" class="u-url">Virtualbox Networking Modes</a></h1>
         <div class="metadata">
-            <p class="byline author vcard"><span class="byline-name fn" itemprop="author">
+            <p class="byline author vcard"><span class="byline-name fn">
                 Senthil Kumaran
             </span></p>
             <p class="dateline"><a href="posts/virtualbox-networking-modes.html" rel="bookmark"><time class="published dt-published" datetime="2016-12-14T08:14:25-08:00" title="2016-12-14 08:14">2016-12-14 08:14</time></a></p>
@@ -313,7 +309,7 @@ providing connectivity among virtual machines and the host.</li>
     </div>
     </article><article class="h-entry post-text"><header><h1 class="p-name entry-title"><a href="posts/the-myth-of-a-strong-leader.html" class="u-url">The Myth of a Strong Leader</a></h1>
         <div class="metadata">
-            <p class="byline author vcard"><span class="byline-name fn" itemprop="author">
+            <p class="byline author vcard"><span class="byline-name fn">
                 Senthil Kumaran
             </span></p>
             <p class="dateline"><a href="posts/the-myth-of-a-strong-leader.html" rel="bookmark"><time class="published dt-published" datetime="2016-12-05T18:51:10-08:00" title="2016-12-05 18:51">2016-12-05 18:51</time></a></p>
@@ -336,7 +332,7 @@ According to the book, an effective person works by collaboration, flexibility a
     </div>
     </article><article class="h-entry post-text"><header><h1 class="p-name entry-title"><a href="posts/iterm2-%2B-tmux-integration.html" class="u-url">iterm2 + tmux integration</a></h1>
         <div class="metadata">
-            <p class="byline author vcard"><span class="byline-name fn" itemprop="author">
+            <p class="byline author vcard"><span class="byline-name fn">
                 Senthil Kumaran
             </span></p>
             <p class="dateline"><a href="posts/iterm2-%2B-tmux-integration.html" rel="bookmark"><time class="published dt-published" datetime="2016-12-03T08:22:59-08:00" title="2016-12-03 08:22">2016-12-03 08:22</time></a></p>
@@ -363,7 +359,7 @@ connection.</p>
     </div>
     </article><article class="h-entry post-text"><header><h1 class="p-name entry-title"><a href="posts/mastery-based-learning.html" class="u-url">Mastery Based Learning</a></h1>
         <div class="metadata">
-            <p class="byline author vcard"><span class="byline-name fn" itemprop="author">
+            <p class="byline author vcard"><span class="byline-name fn">
                 Senthil Kumaran
             </span></p>
             <p class="dateline"><a href="posts/mastery-based-learning.html" rel="bookmark"><time class="published dt-published" datetime="2016-12-02T18:55:40-08:00" title="2016-12-02 18:55">2016-12-02 18:55</time></a></p>
@@ -389,7 +385,7 @@ computational resources, mastery based learning is very much practical today.</p
     </div>
     </article><article class="h-entry post-text"><header><h1 class="p-name entry-title"><a href="posts/intellij-completions.html" class="u-url">IntelliJ Completions</a></h1>
         <div class="metadata">
-            <p class="byline author vcard"><span class="byline-name fn" itemprop="author">
+            <p class="byline author vcard"><span class="byline-name fn">
                 Senthil Kumaran
             </span></p>
             <p class="dateline"><a href="posts/intellij-completions.html" rel="bookmark"><time class="published dt-published" datetime="2016-12-02T10:46:54-08:00" title="2016-12-02 10:46">2016-12-02 10:46</time></a></p>
@@ -417,7 +413,7 @@ Expanding words with ⌥/.
     </div>
     </article><article class="h-entry post-text"><header><h1 class="p-name entry-title"><a href="posts/parkinson-might-start-in-gut.html" class="u-url">Parkinson might start in gut</a></h1>
         <div class="metadata">
-            <p class="byline author vcard"><span class="byline-name fn" itemprop="author">
+            <p class="byline author vcard"><span class="byline-name fn">
                 Senthil Kumaran
             </span></p>
             <p class="dateline"><a href="posts/parkinson-might-start-in-gut.html" rel="bookmark"><time class="published dt-published" datetime="2016-12-02T08:37:32-08:00" title="2016-12-02 08:37">2016-12-02 08:37</time></a></p>
@@ -437,7 +433,7 @@ But I have seen folks with Parkinsons live for very long time with only slight i
     </div>
     </article><article class="h-entry post-text"><header><h1 class="p-name entry-title"><a href="posts/mesos-the-operating-system-for-your-cluster-by-david-greenberg.html" class="u-url">"Mesos: The Operating System for your Cluster" by David Greenberg</a></h1>
         <div class="metadata">
-            <p class="byline author vcard"><span class="byline-name fn" itemprop="author">
+            <p class="byline author vcard"><span class="byline-name fn">
                 Senthil Kumaran
             </span></p>
             <p class="dateline"><a href="posts/mesos-the-operating-system-for-your-cluster-by-david-greenberg.html" rel="bookmark"><time class="published dt-published" datetime="2016-12-01T08:20:01-08:00" title="2016-12-01 08:20">2016-12-01 08:20</time></a></p>
@@ -472,7 +468,7 @@ for mesos, the frameworks and their facilities built on top of mesos and the abs
         <!--End of body content-->
 
         <footer id="footer">
-            Contents © 2018         <a href="mailto:orsenthil@gmail.com">Senthil Kumaran</a> - Powered by         <a href="https://getnikola.com" rel="nofollow">Nikola</a>         
+            Contents © 2019         <a href="mailto:orsenthil@gmail.com">Senthil Kumaran</a> - Powered by         <a href="https://getnikola.com" rel="nofollow">Nikola</a>         
             
         </footer>
 </div>
