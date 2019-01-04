@@ -1,8 +1,8 @@
 .. title: Book Review - Manga Guide to Linear Algebra
 .. slug: book-review-manga-guide-to-linear-algebra
 .. date: 2018-04-07 12:24:19 UTC-07:00
-.. tags: books
-.. category:
+.. tags: reviews, books-read-in-2018
+.. category: Books
 .. link:
 .. description:
 .. type: text

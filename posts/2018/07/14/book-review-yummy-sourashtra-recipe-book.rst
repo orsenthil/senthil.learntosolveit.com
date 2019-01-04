@@ -1,8 +1,8 @@
 .. title: Book Review: Yummy Sourashtra Recipe Book
 .. slug: book-review-yummy-sourashtra-recipe-book
 .. date: 2018-07-14 10:04:47 UTC-07:00
-.. tags: books
-.. category:
+.. tags: reviews, books-read-in-2018
+.. category: Books
 .. link:
 .. description:
 .. type: text

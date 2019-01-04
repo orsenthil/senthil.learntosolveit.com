@@ -1,8 +1,8 @@
 .. title: Book Review - The Mysterious Affair At Styles
 .. slug: book-review-the-mysterious-affair-at-styles
 .. date: 2018-08-13 07:47:17 UTC-07:00
-.. tags:
-.. category:
+.. tags: reviews, books-read-in-2018
+.. category: Books
 .. link:
 .. description:
 .. type: text

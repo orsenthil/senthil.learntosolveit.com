@@ -1,8 +1,8 @@
 .. title: Book Review: Stranger In a Strange Land
 .. slug: book-review-stranger-in-a-strange-land
 .. date: 2019-01-04 06:29:12 UTC-08:00
-.. tags: books
-.. category:
+.. tags: reviews, books-read-in-2018
+.. category: Books
 .. link:
 .. description:
 .. type: text

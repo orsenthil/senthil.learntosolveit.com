@@ -1,8 +1,8 @@
 .. title: Coursera - Image and Video Processing: From Mars to Hollywood with a Stop at the Hospital
 .. slug: finished-coursera-course-image-and-video-processing-from-mars-to-hollywood-with-a-stop-at-the-hospital
 .. date: 2018-03-17 15:40:05 UTC-07:00
-.. tags:
-.. category:
+.. tags: courses-2018
+.. category: Courses
 .. link:
 .. description:
 .. type: text

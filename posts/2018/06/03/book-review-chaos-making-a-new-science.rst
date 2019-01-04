@@ -1,8 +1,8 @@
 .. title: Book Review: Chaos - Making a New Science
 .. slug: book-review-chaos-making-a-new-science
 .. date: 2018-06-03 23:23:51 UTC-07:00
-.. tags:
-.. category:
+.. tags: reviews, books-read-in-2018
+.. category: Books
 .. link:
 .. description:
 .. type: text

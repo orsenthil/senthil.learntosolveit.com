@@ -1,8 +1,8 @@
 .. title: Book Review: The Myth of the Strong Leader - Political Leadership in the Modern Age
 .. slug: book-review-the-myth-of-the-strong-leader-political-leadership-in-the-modern-age
 .. date: 2019-01-04 06:27:19 UTC-08:00
-.. tags: books
-.. category:
+.. tags: reviews, books-read-in-2018
+.. category: Books
 .. link:
 .. description:
 .. type: text

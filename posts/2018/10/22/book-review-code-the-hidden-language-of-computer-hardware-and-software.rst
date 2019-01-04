@@ -1,8 +1,8 @@
 .. title: Book Review - Code: The Hidden Language of Computer Hardware and Software
 .. slug: book-review-code-the-hidden-language-of-computer-hardware-and-software
 .. date: 2018-10-22 06:40:34 UTC-07:00
-.. tags: books
-.. category:
+.. tags: reviews, books-read-in-2018
+.. category: Books
 .. link:
 .. description:
 .. type: text

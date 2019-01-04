@@ -1,8 +1,8 @@
 .. title: Book Review: Astrophysics for People in a Hurry
 .. slug: book-review-astrophysics-for-people-in-a-hurry
 .. date: 2018-08-04 20:03:34 UTC-07:00
-.. tags: books, reviews
-.. category:
+.. tags: reviews, books-read-in-2018
+.. category: Books
 .. link:
 .. description:
 .. type: text

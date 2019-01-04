@@ -1,8 +1,8 @@
 .. title: Book Review: The Best We Could Do
 .. slug: book-review-the-best-we-could-do
 .. date: 2018-11-07 07:16:54 UTC-08:00
-.. tags:  books
-.. category:
+.. tags:  reviews, books-read-in-2018
+.. category: Books
 .. link:
 .. description:
 .. type: text

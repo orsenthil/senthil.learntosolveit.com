@@ -1,8 +1,8 @@
 .. title: Book Review: Guns, Germs and Steel
 .. slug: book-review-guns-germs-and-steel
 .. date: 2018-05-04 01:53:40 UTC-07:00
-.. tags:
-.. category:
+.. tags: reviews, books-read-in-2018
+.. category: Books
 .. link:
 .. description:
 .. type: text

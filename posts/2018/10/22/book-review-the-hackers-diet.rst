@@ -1,8 +1,8 @@
 .. title: Book Review: The Hacker's Diet
 .. slug: book-review-the-hackers-diet
 .. date: 2018-10-22 06:21:14 UTC-07:00
-.. tags: books
-.. category:
+.. tags: reviews, books-read-in-2018
+.. category: Books
 .. link:
 .. description:
 .. type: text

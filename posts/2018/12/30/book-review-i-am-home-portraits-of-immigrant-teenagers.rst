@@ -1,8 +1,8 @@
 .. title: Book Review: I am Home portraits of immigrant teenagers
 .. slug: book-review-i-am-home-portraits-of-immigrant-teenagers
 .. date: 2018-12-30 17:50:19 UTC-08:00
-.. tags: books
-.. category:
+.. tags: reviews, books-read-in-2018
+.. category: Books
 .. link:
 .. description:
 .. type: text
