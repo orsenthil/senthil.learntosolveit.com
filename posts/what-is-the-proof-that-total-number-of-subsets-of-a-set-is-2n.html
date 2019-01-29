@@ -3,22 +3,24 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>2018 in Books | Senthil Kumaran's thoughts.</title>
+<title>What is the proof that total number of subsets of a set is 2^n? | Senthil Kumaran's thoughts.</title>
 <link href="../assets/css/all-nocdn.css" rel="stylesheet" type="text/css">
 <meta content="#5670d4" name="theme-color">
 <link rel="alternate" type="application/rss+xml" title="RSS" href="../rss.xml">
-<link rel="canonical" href="http://www.xtoinfinity.com/posts/2018-in-books.html">
+<link rel="canonical" href="http://www.xtoinfinity.com/posts/what-is-the-proof-that-total-number-of-subsets-of-a-set-is-2n.html">
 <!--[if lt IE 9]><script src="../assets/js/html5.js"></script><![endif]--><meta name="author" content="Senthil Kumaran">
-<link rel="prev" href="book-review-stranger-in-a-strange-land.html" title="Book Review: Stranger In a Strange Land" type="text/html">
-<link rel="next" href="what-is-the-proof-that-total-number-of-subsets-of-a-set-is-2n.html" title="What is the proof that total number of subsets of a set is 2^n?" type="text/html">
+<link rel="prev" href="2018-in-books.html" title="2018 in Books" type="text/html">
 <meta property="og:site_name" content="Senthil Kumaran's thoughts.">
-<meta property="og:title" content="2018 in Books">
-<meta property="og:url" content="http://www.xtoinfinity.com/posts/2018-in-books.html">
-<meta property="og:description" content="In 2018, I read 19 books that I have kept track via GoodReads. The app shares fancy page that gives interesting details
-about my reading in 2018. Here is my Year In Books page.
-These were some notable">
+<meta property="og:title" content="What is the proof that total number of subsets of a set is 2^n?">
+<meta property="og:url" content="http://www.xtoinfinity.com/posts/what-is-the-proof-that-total-number-of-subsets-of-a-set-is-2n.html">
+<meta property="og:description" content='I have known "by heart" that total number of the subsets of a set of n number is \(2^n\)
+I was struggling to find an intuitive explanation, and two answers helped me to understand it.
+
+For each elemen'>
 <meta property="og:type" content="article">
-<meta property="article:published_time" content="2019-01-04T06:58:17-08:00">
+<meta property="article:published_time" content="2019-01-29T05:18:44-08:00">
+<meta property="article:tag" content="mathjax">
+<meta property="article:tag" content="maths">
 </head>
 <body>
 <a href="#content" class="sr-only sr-only-focusable">Skip to main content</a>
@@ -56,7 +58,7 @@ These were some notable">
 </ul>
 <ul class="nav navbar-nav navbar-right">
 <li>
-    <a href="2018-in-books.rst" id="sourcelink">Source</a>
+    <a href="what-is-the-proof-that-total-number-of-subsets-of-a-set-is-2n.rst" id="sourcelink">Source</a>
     </li>
 
                 
@@ -71,56 +73,46 @@ These were some notable">
         <div class="row">
             
             
-<article class="post-text h-entry hentry postpage" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title" itemprop="headline name"><a href="#" class="u-url">2018 in Books</a></h1>
+<article class="post-text h-entry hentry postpage" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title" itemprop="headline name"><a href="#" class="u-url">What is the proof that total number of subsets of a set is 2^n?</a></h1>
 
         <div class="metadata">
             <p class="byline author vcard"><span class="byline-name fn">
                     Senthil Kumaran
             </span></p>
-            <p class="dateline"><a href="#" rel="bookmark"><time class="published dt-published" datetime="2019-01-04T06:58:17-08:00" itemprop="datePublished" title="2019-01-04 06:58">2019-01-04 06:58</time></a></p>
+            <p class="dateline"><a href="#" rel="bookmark"><time class="published dt-published" datetime="2019-01-29T05:18:44-08:00" itemprop="datePublished" title="2019-01-29 05:18">2019-01-29 05:18</time></a></p>
                 <p class="commentline">
         
-    <a href="2018-in-books.html#disqus_thread" data-disqus-identifier="cache/posts/2018-in-books.html">Comments</a>
+    <a href="what-is-the-proof-that-total-number-of-subsets-of-a-set-is-2n.html#disqus_thread" data-disqus-identifier="cache/posts/what-is-the-proof-that-total-number-of-subsets-of-a-set-is-2n.html">Comments</a>
 
 
             
         </p>
-<p class="sourceline"><a href="2018-in-books.rst" id="sourcelink">Source</a></p>
+<p class="sourceline"><a href="what-is-the-proof-that-total-number-of-subsets-of-a-set-is-2n.rst" id="sourcelink">Source</a></p>
 
         </div>
         
 
     </header><div class="e-content entry-content" itemprop="articleBody text">
     <div>
-<p>In 2018, I read 19 books that I have kept track via GoodReads. The app shares fancy page that gives interesting details
-about my reading in 2018. Here is my <a class="reference external" href="https://www.goodreads.com/user/year_in_books/2018/1666575">Year In Books</a> page.</p>
-<p>These were some notable books that I had read.</p>
-<ul class="simple">
-<li>Lauren Ipsum - A Story about Computer Science and Other Improbable Things by Carlos Bueno</li>
-<li>Apache Mesos Essentials by Darmesh Kakadia</li>
-<li>Beyond the Door by Philip K Dick</li>
-<li>Manga Guide to Linear Algebra by Shin Takahashi</li>
-<li>Guns, Germs and Steel by Jared Diamond</li>
-<li>Chaos: Making of a new science by James Gleick</li>
-<li>Yummy Sourashtra Recipe Book by my parents</li>
-<li>Astrophysics for people in a hurry by Neil deGrasse Tyson</li>
-<li>The Mysterious affairs at Styles by Agatha Christie</li>
-<li>The Hackers Diet by John Walker</li>
-<li>Code: The Hidden Language of Computer Hardware and Software by Charles Petzold</li>
-<li>The Best we could do by Thi Bui</li>
-<li>I am Home, the potraits of immigrant teenagers by Erica McConnell, Rachel Neumann and Thi Bui</li>
-<li>The Myth of a strong leader: Political leadership in the modern age by Archie Brown</li>
-<li>Stranger in a strange land by Robert Heinlein</li>
-</ul>
-<p>I have organized the reviews of these under the blog tag <a class="reference external" href="http://xtoinfinity.com/categories/books-read-in-2018.html">books-read-in-2018</a>.</p>
+<p>I have known "by heart" that total number of the subsets of a set of n number is <span class="math">\(2^n\)</span>
+I was struggling to find an intuitive explanation, and two answers helped me to understand it.</p>
+<blockquote>
+For each element, you have two choices: either you put it in your subset, or you don't; and these choices are all
+independent.</blockquote>
+<p>Citation:</p>
+<p>Bruno Joyal (<a class="reference external" href="https://math.stackexchange.com/users/12507/bruno-joyal">https://math.stackexchange.com/users/12507/bruno-joyal</a>), What is the proof that the total number of
+subsets of a set is $2^n$?, URL (version: 2013-10-31): <a class="reference external" href="https://math.stackexchange.com/q/546417">https://math.stackexchange.com/q/546417</a></p>
+<p>Another was this table that represented the sets as binary, to denote 0 as an absence of the element and 1 as presence
+of the element.</p>
+<img alt="https://dl.dropbox.com/s/0smcrv98o8igrhh/power_set.jpg" src="https://dl.dropbox.com/s/0smcrv98o8igrhh/power_set.jpg"><p>That can help us understand that the total number of subsets of set of n is <span class="math">\(2^n\)</span></p>
 </div>
     </div>
-    <aside class="postpromonav"><nav><ul class="pager hidden-print">
+    <aside class="postpromonav"><nav><ul itemprop="keywords" class="tags">
+<li><a class="tag p-category" href="../categories/maths.html" rel="tag">maths</a></li>
+        </ul>
+<ul class="pager hidden-print">
 <li class="previous">
-                <a href="book-review-stranger-in-a-strange-land.html" rel="prev" title="Book Review: Stranger In a Strange Land">Previous post</a>
-            </li>
-            <li class="next">
-                <a href="what-is-the-proof-that-total-number-of-subsets-of-a-set-is-2n.html" rel="next" title="What is the proof that total number of subsets of a set is 2^n?">Next post</a>
+                <a href="2018-in-books.html" rel="prev" title="2018 in Books">Previous post</a>
             </li>
         </ul></nav></aside><section class="comments hidden-print"><h2>Comments</h2>
         
@@ -128,9 +120,9 @@ about my reading in 2018. Here is my <a class="reference external" href="https:/
         <div id="disqus_thread"></div>
         <script>
         var disqus_shortname ="xtoinfinity",
-            disqus_url="http://www.xtoinfinity.com/posts/2018-in-books.html",
-        disqus_title="2018 in Books",
-        disqus_identifier="cache/posts/2018-in-books.html",
+            disqus_url="http://www.xtoinfinity.com/posts/what-is-the-proof-that-total-number-of-subsets-of-a-set-is-2n.html",
+        disqus_title="What is the proof that total number of subsets of a set is 2^n?",
+        disqus_identifier="cache/posts/what-is-the-proof-that-total-number-of-subsets-of-a-set-is-2n.html",
         disqus_config = function () {
             this.language = "en";
         };
@@ -144,7 +136,9 @@ about my reading in 2018. Here is my <a class="reference external" href="https:/
     <a href="https://disqus.com" class="dsq-brlink" rel="nofollow">Comments powered by <span class="logo-disqus">Disqus</span></a>
 
 
-        </section></article><script>var disqus_shortname="xtoinfinity";(function(){var a=document.createElement("script");a.async=true;a.src="https://"+disqus_shortname+".disqus.com/count.js";(document.getElementsByTagName("head")[0]||document.getElementsByTagName("body")[0]).appendChild(a)}());</script>
+        </section><script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"> </script><script type="text/x-mathjax-config">
+            MathJax.Hub.Config({tex2jax: {inlineMath: [['$latex ','$'], ['\\(','\\)']]}});
+            </script></article><script>var disqus_shortname="xtoinfinity";(function(){var a=document.createElement("script");a.async=true;a.src="https://"+disqus_shortname+".disqus.com/count.js";(document.getElementsByTagName("head")[0]||document.getElementsByTagName("body")[0]).appendChild(a)}());</script>
 </div>
         <!--End of body content-->
 

@@ -1,5 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
-<?xml-stylesheet type="text/xsl" href="assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Senthil Kumaran's thoughts.</title><link>http://www.xtoinfinity.com/</link><description>Senthil Kumaran's thoughts.</description><atom:link href="http://www.xtoinfinity.com/rss.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><lastBuildDate>Fri, 04 Jan 2019 15:17:09 GMT</lastBuildDate><generator>https://getnikola.com/</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>2018 in Books</title><link>http://www.xtoinfinity.com/posts/2018-in-books.html</link><dc:creator>Senthil Kumaran</dc:creator><description>&lt;div&gt;&lt;p&gt;In 2018, I read 19 books that I have kept track via GoodReads. The app shares fancy page that gives interesting details
+<?xml-stylesheet type="text/xsl" href="assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Senthil Kumaran's thoughts.</title><link>http://www.xtoinfinity.com/</link><description>Senthil Kumaran's thoughts.</description><atom:link href="http://www.xtoinfinity.com/rss.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><lastBuildDate>Tue, 29 Jan 2019 13:48:51 GMT</lastBuildDate><generator>https://getnikola.com/</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>What is the proof that total number of subsets of a set is 2^n?</title><link>http://www.xtoinfinity.com/posts/what-is-the-proof-that-total-number-of-subsets-of-a-set-is-2n.html</link><dc:creator>Senthil Kumaran</dc:creator><description>&lt;div&gt;&lt;p&gt;I have known "by heart" that total number of the subsets of a set of n number is &lt;span class="math"&gt;\(2^n\)&lt;/span&gt;
+I was struggling to find an intuitive explanation, and two answers helped me to understand it.&lt;/p&gt;
+&lt;blockquote&gt;
+For each element, you have two choices: either you put it in your subset, or you don't; and these choices are all
+independent.&lt;/blockquote&gt;
+&lt;p&gt;Citation:&lt;/p&gt;
+&lt;p&gt;Bruno Joyal (&lt;a class="reference external" href="https://math.stackexchange.com/users/12507/bruno-joyal"&gt;https://math.stackexchange.com/users/12507/bruno-joyal&lt;/a&gt;), What is the proof that the total number of
+subsets of a set is $2^n$?, URL (version: 2013-10-31): &lt;a class="reference external" href="https://math.stackexchange.com/q/546417"&gt;https://math.stackexchange.com/q/546417&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Another was this table that represented the sets as binary, to denote 0 as an absence of the element and 1 as presence
+of the element.&lt;/p&gt;
+&lt;img alt="https://dl.dropbox.com/s/0smcrv98o8igrhh/power_set.jpg" src="https://dl.dropbox.com/s/0smcrv98o8igrhh/power_set.jpg"&gt;
+&lt;p&gt;That can help us understand that the total number of subsets of set of n is &lt;span class="math"&gt;\(2^n\)&lt;/span&gt;&lt;/p&gt;&lt;/div&gt;</description><category>mathjax</category><category>maths</category><guid>http://www.xtoinfinity.com/posts/what-is-the-proof-that-total-number-of-subsets-of-a-set-is-2n.html</guid><pubDate>Tue, 29 Jan 2019 13:18:44 GMT</pubDate></item><item><title>2018 in Books</title><link>http://www.xtoinfinity.com/posts/2018-in-books.html</link><dc:creator>Senthil Kumaran</dc:creator><description>&lt;div&gt;&lt;p&gt;In 2018, I read 19 books that I have kept track via GoodReads. The app shares fancy page that gives interesting details
 about my reading in 2018. Here is my &lt;a class="reference external" href="https://www.goodreads.com/user/year_in_books/2018/1666575"&gt;Year In Books&lt;/a&gt; page.&lt;/p&gt;
 &lt;p&gt;These were some notable books that I had read.&lt;/p&gt;
 &lt;ul class="simple"&gt;
@@ -61,19 +72,4 @@ veneration for that language.&lt;/p&gt;
 &lt;p&gt;He also credits Paul Graham, and XKCD comics to have significantly surged the
 interest back in lisp.&lt;/p&gt;
 &lt;p&gt;Interesting anecdotes like how braces end up being chosen for the language. The
-motivation of the SICP book was very noble.&lt;/p&gt;&lt;/div&gt;</description><guid>http://www.xtoinfinity.com/posts/2018/10/16/lisp-two-bit-history-article.html</guid><pubDate>Wed, 17 Oct 2018 00:28:21 GMT</pubDate></item><item><title>My writing projects</title><link>http://www.xtoinfinity.com/posts/2018/08/22/my-writing-projects.html</link><dc:creator>Senthil Kumaran</dc:creator><description>&lt;div&gt;&lt;p&gt;I have three projects that are focused on technical writing, note taking and documentation of computer science concepts.&lt;/p&gt;
-&lt;ul class="simple"&gt;
-&lt;li&gt;&lt;a class="reference external" href="http://www.learntosolveit.com/"&gt;http://www.learntosolveit.com/&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a class="reference external" href="http://www.coursedocs.org/"&gt;http://www.coursedocs.org/&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;And my blog &lt;a class="reference external" href="http://xtoinfinity.com/"&gt;http://xtoinfinity.com/&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;I feel like these projects could be consolidated, merged into a single domain. I am thinking of merging&lt;/p&gt;
-&lt;ul class="simple"&gt;
-&lt;li&gt;&lt;a class="reference external" href="http://www.learntosolveit.com/"&gt;http://www.learntosolveit.com/&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a class="reference external" href="http://www.coursedocs.org/"&gt;http://www.coursedocs.org/&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;and calling it learntosolveit.com&lt;/p&gt;
-&lt;p&gt;And I am thinking of hosting &lt;a class="reference external" href="http://xtoinfinity.com/"&gt;http://xtoinfinity.com/&lt;/a&gt; at &lt;cite&gt;senthil.learntosolveit.com&lt;/cite&gt; setup the appropriate domain
-redirections.&lt;/p&gt;
-&lt;p&gt;Since these are writing projects, keeping them consolidated seem to make sense to me. Still wondering what the
-dis-advantages of this will be.&lt;/p&gt;&lt;/div&gt;</description><category>projects</category><guid>http://www.xtoinfinity.com/posts/2018/08/22/my-writing-projects.html</guid><pubDate>Wed, 22 Aug 2018 07:39:26 GMT</pubDate></item></channel></rss>
+motivation of the SICP book was very noble.&lt;/p&gt;&lt;/div&gt;</description><guid>http://www.xtoinfinity.com/posts/2018/10/16/lisp-two-bit-history-article.html</guid><pubDate>Wed, 17 Oct 2018 00:28:21 GMT</pubDate></item></channel></rss>
