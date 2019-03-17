@@ -38,8 +38,7 @@ $ python classify_image.py --image">
             <span class="icon-bar"></span>
             </button>
             <a class="navbar-brand" href="http://www.xtoinfinity.com/">
-
-                <span id="blog-title">Senthil Kumaran's thoughts.</span>
+                <img src="https://dl.dropboxusercontent.com/s/9wfngl1x5h25309/xtoinfinity-logo2.png" alt="Senthil Kumaran's thoughts." id="logo"><span id="blog-title">Senthil Kumaran's thoughts.</span>
             </a>
         </div>
 <!-- /.navbar-header -->
@@ -101,20 +100,20 @@ $ python classify_image.py --image">
 <p>Followed this <a class="reference external" href="https://www.digitalocean.com/community/tutorials/how-to-install-and-use-tensorflow-on-ubuntu-16-04">digitalocean tutorial on Tensorflow</a> to try an image classification on my computer.</p>
 <p>Tried with a Robot image first.</p>
 <img alt="https://www.robotshop.com/media/catalog/product/cache/15/image/900x900/9df78eab33525d08d6e5fb8d27136e95/e/z/ez-robot-jd-humanoid-robot.jpg" src="https://www.robotshop.com/media/catalog/product/cache/15/image/900x900/9df78eab33525d08d6e5fb8d27136e95/e/z/ez-robot-jd-humanoid-robot.jpg" style="width: 300px; height: 400px;"><p>It couldn't recognize it that well.</p>
-<pre class="code console"><a name="rest_code_01af95c331fc4551b35c0fd8166ed2aa-1"></a><span class="gp">$</span> python classify_image.py --image_file ez-robot-jd-humanoid-robot.jpg <span class="m">2</span>&gt;/dev/null
-<a name="rest_code_01af95c331fc4551b35c0fd8166ed2aa-2"></a><span class="go">whistle (score = 0.05857)</span>
-<a name="rest_code_01af95c331fc4551b35c0fd8166ed2aa-3"></a><span class="go">tripod (score = 0.03762)</span>
-<a name="rest_code_01af95c331fc4551b35c0fd8166ed2aa-4"></a><span class="go">microphone, mike (score = 0.03662)</span>
-<a name="rest_code_01af95c331fc4551b35c0fd8166ed2aa-5"></a><span class="go">radio, wireless (score = 0.01969)</span>
-<a name="rest_code_01af95c331fc4551b35c0fd8166ed2aa-6"></a><span class="go">spotlight, spot (score = 0.01623)</span>
+<pre class="code console"><a name="rest_code_73b3984cf7bd4bb9978a18a6bee85788-1"></a><span class="gp">$</span> python classify_image.py --image_file ez-robot-jd-humanoid-robot.jpg <span class="m">2</span>&gt;/dev/null
+<a name="rest_code_73b3984cf7bd4bb9978a18a6bee85788-2"></a><span class="go">whistle (score = 0.05857)</span>
+<a name="rest_code_73b3984cf7bd4bb9978a18a6bee85788-3"></a><span class="go">tripod (score = 0.03762)</span>
+<a name="rest_code_73b3984cf7bd4bb9978a18a6bee85788-4"></a><span class="go">microphone, mike (score = 0.03662)</span>
+<a name="rest_code_73b3984cf7bd4bb9978a18a6bee85788-5"></a><span class="go">radio, wireless (score = 0.01969)</span>
+<a name="rest_code_73b3984cf7bd4bb9978a18a6bee85788-6"></a><span class="go">spotlight, spot (score = 0.01623)</span>
 </pre>
 <p>But, eureka for Cats!</p>
-<img alt="https://www.petmd.com/sites/default/files/what-does-it-mean-when-cat-wags-tail.jpg" src="https://www.petmd.com/sites/default/files/what-does-it-mean-when-cat-wags-tail.jpg" style="width: 300px; height: 400px;"><pre class="code console"><a name="rest_code_a78a019b55d74a2e81a6ac60c8fd4ab0-1"></a><span class="gp">$</span> python classify_image.py --image_file what-does-it-mean-when-cat-wags-tail.jpg <span class="m">2</span>&gt;/dev/null
-<a name="rest_code_a78a019b55d74a2e81a6ac60c8fd4ab0-2"></a><span class="go">tabby, tabby cat (score = 0.51155)</span>
-<a name="rest_code_a78a019b55d74a2e81a6ac60c8fd4ab0-3"></a><span class="go">Egyptian cat (score = 0.36965)</span>
-<a name="rest_code_a78a019b55d74a2e81a6ac60c8fd4ab0-4"></a><span class="go">tiger cat (score = 0.06952)</span>
-<a name="rest_code_a78a019b55d74a2e81a6ac60c8fd4ab0-5"></a><span class="go">lynx, catamount (score = 0.00368)</span>
-<a name="rest_code_a78a019b55d74a2e81a6ac60c8fd4ab0-6"></a><span class="go">doormat, welcome mat (score = 0.00064)</span>
+<img alt="https://www.petmd.com/sites/default/files/what-does-it-mean-when-cat-wags-tail.jpg" src="https://www.petmd.com/sites/default/files/what-does-it-mean-when-cat-wags-tail.jpg" style="width: 300px; height: 400px;"><pre class="code console"><a name="rest_code_c53ffca75f5d4b54ae7e1a88516acd0f-1"></a><span class="gp">$</span> python classify_image.py --image_file what-does-it-mean-when-cat-wags-tail.jpg <span class="m">2</span>&gt;/dev/null
+<a name="rest_code_c53ffca75f5d4b54ae7e1a88516acd0f-2"></a><span class="go">tabby, tabby cat (score = 0.51155)</span>
+<a name="rest_code_c53ffca75f5d4b54ae7e1a88516acd0f-3"></a><span class="go">Egyptian cat (score = 0.36965)</span>
+<a name="rest_code_c53ffca75f5d4b54ae7e1a88516acd0f-4"></a><span class="go">tiger cat (score = 0.06952)</span>
+<a name="rest_code_c53ffca75f5d4b54ae7e1a88516acd0f-5"></a><span class="go">lynx, catamount (score = 0.00368)</span>
+<a name="rest_code_c53ffca75f5d4b54ae7e1a88516acd0f-6"></a><span class="go">doormat, welcome mat (score = 0.00064)</span>
 </pre>
 </div>
     </div>

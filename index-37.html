@@ -28,8 +28,7 @@
             <span class="icon-bar"></span>
             </button>
             <a class="navbar-brand" href="http://www.xtoinfinity.com/">
-
-                <span id="blog-title">Senthil Kumaran's thoughts.</span>
+                <img src="https://dl.dropboxusercontent.com/s/9wfngl1x5h25309/xtoinfinity-logo2.png" alt="Senthil Kumaran's thoughts." id="logo"><span id="blog-title">Senthil Kumaran's thoughts.</span>
             </a>
         </div>
 <!-- /.navbar-header -->
@@ -104,17 +103,17 @@ Funny writing. Made me chuckle at times and was very imaginative. makes for a li
 And Gandhi, as the most pacifist leader that he was, was assigned lowest number 1. Also, in the game play if a society adopted
 democracy, the aggresiveness score was reduced by 2.</p>
 <p>So, when Gandhi adopted democracy, his aggresiveness score became <strong>1 - 2 = -1</strong>, and as it was unsigned int, and it gained a very high value.</p>
-<pre class="code c"><a name="rest_code_8831af08906246139e4edddaa5447b53-1"></a><span class="cp">#include</span><span class="cpf">&lt;stdio.h&gt;</span><span class="cp"></span>
-<a name="rest_code_8831af08906246139e4edddaa5447b53-2"></a>
-<a name="rest_code_8831af08906246139e4edddaa5447b53-3"></a><span class="kt">int</span> <span class="nf">main</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span> <span class="p">{</span>
-<a name="rest_code_8831af08906246139e4edddaa5447b53-4"></a>    <span class="kt">unsigned</span> <span class="kt">int</span> <span class="n">i</span><span class="p">;</span>
-<a name="rest_code_8831af08906246139e4edddaa5447b53-5"></a>    <span class="n">i</span> <span class="o">=</span> <span class="o">-</span><span class="mi">1</span><span class="p">;</span>
-<a name="rest_code_8831af08906246139e4edddaa5447b53-6"></a>    <span class="n">printf</span><span class="p">(</span><span class="s">"%x</span><span class="se">\n</span><span class="s">"</span><span class="p">,</span> <span class="n">i</span><span class="p">);</span>
-<a name="rest_code_8831af08906246139e4edddaa5447b53-7"></a><span class="p">}</span>
+<pre class="code c"><a name="rest_code_b9798727a517457d92b343ff31b551d3-1"></a><span class="cp">#include</span><span class="cpf">&lt;stdio.h&gt;</span><span class="cp"></span>
+<a name="rest_code_b9798727a517457d92b343ff31b551d3-2"></a>
+<a name="rest_code_b9798727a517457d92b343ff31b551d3-3"></a><span class="kt">int</span> <span class="nf">main</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span> <span class="p">{</span>
+<a name="rest_code_b9798727a517457d92b343ff31b551d3-4"></a>    <span class="kt">unsigned</span> <span class="kt">int</span> <span class="n">i</span><span class="p">;</span>
+<a name="rest_code_b9798727a517457d92b343ff31b551d3-5"></a>    <span class="n">i</span> <span class="o">=</span> <span class="o">-</span><span class="mi">1</span><span class="p">;</span>
+<a name="rest_code_b9798727a517457d92b343ff31b551d3-6"></a>    <span class="n">printf</span><span class="p">(</span><span class="s">"%x</span><span class="se">\n</span><span class="s">"</span><span class="p">,</span> <span class="n">i</span><span class="p">);</span>
+<a name="rest_code_b9798727a517457d92b343ff31b551d3-7"></a><span class="p">}</span>
 </pre>
-<pre class="code bash"><a name="rest_code_c9cc3f71a057448abe4d608c75a892c8-1"></a>$ clang unsigned.c
-<a name="rest_code_c9cc3f71a057448abe4d608c75a892c8-2"></a>$ ./a.out
-<a name="rest_code_c9cc3f71a057448abe4d608c75a892c8-3"></a><span class="m">4294967295</span>
+<pre class="code bash"><a name="rest_code_1e0977bf35824dad8341ca9a677c98da-1"></a>$ clang unsigned.c
+<a name="rest_code_1e0977bf35824dad8341ca9a677c98da-2"></a>$ ./a.out
+<a name="rest_code_1e0977bf35824dad8341ca9a677c98da-3"></a><span class="m">4294967295</span>
 </pre>
 <p>And thus Gandhi was ready to nuke whenever there is a conflict.</p>
 <img alt="https://i.kinja-img.com/gawker-media/image/upload/s--4uHRnRfT--/c_fit,fl_progressive,q_80,w_636/dnqxrzdmsdkud7fmsqyp.jpg" src="https://i.kinja-img.com/gawker-media/image/upload/s--4uHRnRfT--/c_fit,fl_progressive,q_80,w_636/dnqxrzdmsdkud7fmsqyp.jpg">
