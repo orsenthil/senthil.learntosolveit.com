@@ -15,10 +15,12 @@
     My rating: <a href="https://www.goodreads.com/review/show/2604151046">5 of 5 stars</a><br /><br />
 
     This is a highly accessible account to the Origin of Human Civilization, from BigBang, the birth of stars, universe, dinosaurs, humans, governments, the current social system to the possibilities of what lies ahead. <br /><br />Reducing the origin of the universe from 13.6 billion years to 13-day scale was very interesting to get a sense of the scale. Discussion of the progress of human societies and adding adequate details as supported facts was a good approach too. The author takes us to the origin of governments, international bodies, and touches about the topics of origin of democracy supported by nationalism. <br /><br />I like to dwell on the topics of Big History / Origin Story, and this was a worthy book.
-    <br/>
+    <br/> <br/>
+
 
 A central theme of this book is humans are engaged in some sort of a  "collective-learning", and that forms the central theme "our origin history".
 
+This is a shared origin history for everyone in the universe, and there is course https://www.bighistoryproject.com based on this book.
 These are some important highlights I had noted in this book.
 
 Newton's View:
