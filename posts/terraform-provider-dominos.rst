@@ -12,9 +12,7 @@ even Software as a Service, which is basically an API.
 
 So, it made possible to develop software like terraform-provider-dominos_ using which you can order Pizza.
 I tried it. The terraform apply crashed for me, but I knew that terraform might have attempted the purchase operation
-and had probably crashed due to slow response from the API.
-
-It was the case, I saw my credit card charged in my account, an order confirmation email, and in 30 minutes, I got my pizza.
+and had probably crashed due to slow response from the API. It was the case. I saw my credit card charged in my account, an order confirmation email, and in 30 minutes, I got my pizza.
 
 .. image:: https://dl.dropboxusercontent.com/s/wrwm5e74hxvultx/IMG_20190705_190646.jpg
    :width: 480
