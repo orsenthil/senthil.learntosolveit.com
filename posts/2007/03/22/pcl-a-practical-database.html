@@ -5,7 +5,9 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>PCL: A Practical Database | Senthil Kumaran's thoughts.</title>
 <link href="../../../../assets/css/all-nocdn.css" rel="stylesheet" type="text/css">
-<meta content="#5670d4" name="theme-color">
+<link href="https://fonts.googleapis.com/css?family=Playfair+Display:700,900" rel="stylesheet">
+<meta name="theme-color" content="#5670d4">
+<meta name="generator" content="Nikola (getnikola.com)">
 <link rel="alternate" type="application/rss+xml" title="RSS" href="../../../../rss.xml">
 <link rel="canonical" href="http://www.xtoinfinity.com/posts/2007/03/22/pcl-a-practical-database.html">
 <!--[if lt IE 9]><script src="../../../../assets/js/html5.js"></script><![endif]--><meta name="author" content="Senthil Kumaran">
@@ -30,60 +32,67 @@ Common Lisp provides three distinct kinds of operators: functions, macros, and s
 <body>
 <a href="#content" class="sr-only sr-only-focusable">Skip to main content</a>
 
-<!-- Menubar -->
-
-<nav class="navbar navbar-inverse navbar-static-top"><div class="container">
-<!-- This keeps the margins nice -->
-        <div class="navbar-header">
-            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-navbar" aria-controls="bs-navbar" aria-expanded="false">
-            <span class="sr-only">Toggle navigation</span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
+<!-- Header and menu bar -->
+<div class="container">
+      <header class="blog-header py-3"><div class="row nbb-header align-items-center">
+          <div class="col-md-3 col-xs-2 col-sm-2" style="width: auto;">
+            <button class="navbar-toggler navbar-light bg-light nbb-navbar-toggler" type="button" data-toggle="collapse" data-target=".bs-nav-collapsible" aria-controls="bs-navbar" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
             </button>
-            <a class="navbar-brand" href="http://www.xtoinfinity.com/">
-                <img src="https://dl.dropboxusercontent.com/s/9wfngl1x5h25309/xtoinfinity-logo2.png" alt="Senthil Kumaran's thoughts." id="logo"><span id="blog-title">Senthil Kumaran's thoughts.</span>
-            </a>
+            <div class="collapse bs-nav-collapsible bootblog4-search-form-holder">
+                
+            </div>
         </div>
-<!-- /.navbar-header -->
-        <div class="collapse navbar-collapse" id="bs-navbar" aria-expanded="false">
-            <ul class="nav navbar-nav">
-<li>
-<a href="http://news.xtoinfinity.com">News</a>
+          <div class="col-md-6 col-xs-10 col-sm-10 bootblog4-brand" style="width: auto;">
+            <a class="navbar-brand blog-header-logo text-dark" href="http://www.xtoinfinity.com/">
+            <img src="https://dl.dropboxusercontent.com/s/9wfngl1x5h25309/xtoinfinity-logo2.png" alt="Senthil Kumaran's thoughts." id="logo" class="d-inline-block align-top"><span id="blog-title">Senthil Kumaran's thoughts.</span>
+        </a>
+          </div>
+            <div class="col-md-3 justify-content-end align-items-center bs-nav-collapsible collapse flex-collapse bootblog4-right-nav">
+            <nav class="navbar navbar-light bg-white"><ul class="navbar-nav bootblog4-right-nav">
+<li class="nav-item">
+    <a href="pcl-a-practical-database.md" id="sourcelink" class="nav-link">Source</a>
+    </li>
+
+
+                    
+            </ul></nav>
+</div>
+    </div>
+</header><nav class="navbar navbar-expand-md navbar-light bg-white static-top"><div class="collapse navbar-collapse bs-nav-collapsible" id="bs-navbar">
+            <ul class="navbar-nav nav-fill d-flex w-100">
+<li class="nav-item">
+<a href="http://news.xtoinfinity.com" class="nav-link">News</a>
                 </li>
-<li>
-<a href="../../../../archive.html">Archives</a>
+<li class="nav-item">
+<a href="../../../../archive.html" class="nav-link">Archives</a>
                 </li>
-<li>
-<a href="../../../../rss.xml">RSS feed</a>
+<li class="nav-item">
+<a href="../../../../rss.xml" class="nav-link">RSS feed</a>
 
                 
             </li>
 </ul>
-<ul class="nav navbar-nav navbar-right">
-<li>
-    <a href="pcl-a-practical-database.md" id="sourcelink">Source</a>
-    </li>
-
-                
-            </ul>
 </div>
 <!-- /.navbar-collapse -->
-    </div>
-<!-- /.container -->
-</nav><!-- End of Menubar --><div class="container" id="content" role="main">
+</nav>
+</div>
+
+<div class="container" id="content" role="main">
     <div class="body-content">
         <!--Body content-->
-        <div class="row">
-            
-            
+        
+        
 <article class="post-text h-entry hentry postpage" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title" itemprop="headline name"><a href="#" class="u-url">PCL: A Practical Database</a></h1>
 
         <div class="metadata">
-            <p class="byline author vcard"><span class="byline-name fn">
+            <p class="byline author vcard"><span class="byline-name fn" itemprop="author">
                     Senthil Kumaran
             </span></p>
-            <p class="dateline"><a href="#" rel="bookmark"><time class="published dt-published" datetime="2007-03-22T02:15:00-07:00" itemprop="datePublished" title="2007-03-22 02:15">2007-03-22 02:15</time></a></p>
+            <p class="dateline">
+            <a href="#" rel="bookmark">
+            <time class="published dt-published" datetime="2007-03-22T02:15:00-07:00" itemprop="datePublished" title="2007-03-22 02:15">2007-03-22 02:15</time></a>
+            </p>
                 <p class="commentline">
         
     <a href="pcl-a-practical-database.html#disqus_thread" data-disqus-identifier="cache/posts/2007/03/22/pcl-a-practical-database.html">Comments</a>
@@ -91,7 +100,7 @@ Common Lisp provides three distinct kinds of operators: functions, macros, and s
 
             
         </p>
-<p class="sourceline"><a href="pcl-a-practical-database.md" id="sourcelink">Source</a></p>
+<p class="sourceline"><a href="pcl-a-practical-database.md" class="sourcelink">Source</a></p>
 
         </div>
         
@@ -146,7 +155,7 @@ Common Lisp provides three distinct kinds of operators: functions, macros, and s
 </ul>
 <p>representing that CD.</p>
 <p>CL-USER&gt; (defun make-cd(title artist rating ripped)</p>
-<pre class="code literal-block"><span></span>   (list :title title :artist artist :rating rating :ripped ripped))
+<pre class="code literal-block"><span></span>   <span class="p">(</span><span class="n">list</span> <span class="p">:</span><span class="n">title</span> <span class="n">title</span> <span class="p">:</span><span class="n">artist</span> <span class="n">artist</span> <span class="p">:</span><span class="n">rating</span> <span class="n">rating</span> <span class="p">:</span><span class="n">ripped</span> <span class="n">ripped</span><span class="p">))</span>
 </pre>
 
 
@@ -204,9 +213,9 @@ Common Lisp provides three distinct kinds of operators: functions, macros, and s
 </ul>
 <p>format.</p>
 <p>CL-USER&gt; (defun dump-db()</p>
-<pre class="code literal-block"><span></span>   (dolist (cd *db*)
+<pre class="code literal-block"><span></span>   <span class="p">(</span><span class="n">dolist</span> <span class="p">(</span><span class="n">cd</span> <span class="o">*</span><span class="n">db</span><span class="o">*</span><span class="p">)</span>
 
-     (format t "~{~a:~10t~a~%~}~%" cd)))
+     <span class="p">(</span><span class="n">format</span> <span class="n">t</span> <span class="ss">"~{~a:~10t~a~%~}~%"</span> <span class="n">cd</span><span class="p">)))</span>
 </pre>
 
 
@@ -262,7 +271,7 @@ Common Lisp provides three distinct kinds of operators: functions, macros, and s
 </ul>
 <p>itself:</p>
 <p>CL-USER&gt; (defun dump-db()</p>
-<pre class="code literal-block"><span></span>   (format t "~{~{~a:~10t~a~%~}~%~}" *db*))
+<pre class="code literal-block"><span></span>   <span class="p">(</span><span class="n">format</span> <span class="n">t</span> <span class="ss">"~{~{~a:~10t~a~%~}~%~}"</span> <span class="o">*</span><span class="n">db</span><span class="o">*</span><span class="p">))</span>
 </pre>
 
 
@@ -273,11 +282,11 @@ Common Lisp provides three distinct kinds of operators: functions, macros, and s
 <li>need some way to prompt the user for a piece of information and read it.</li>
 </ul>
 <p>CL-USER&gt; (defun prompt-read(prompt)</p>
-<pre class="code literal-block"><span></span>   (format *query-io* "~a: " prompt)
+<pre class="code literal-block"><span></span>   <span class="p">(</span><span class="n">format</span> <span class="o">*</span><span class="n">query</span><span class="o">-</span><span class="n">io</span><span class="o">*</span> <span class="ss">"~a: "</span> <span class="n">prompt</span><span class="p">)</span>
 
-   (force-output *query-io*)
+   <span class="p">(</span><span class="k">force</span><span class="o">-</span><span class="k">output</span> <span class="o">*</span><span class="n">query</span><span class="o">-</span><span class="n">io</span><span class="o">*</span><span class="p">)</span>
 
-   (read-line *query-io*))
+   <span class="p">(</span><span class="k">read</span><span class="o">-</span><span class="n">line</span> <span class="o">*</span><span class="n">query</span><span class="o">-</span><span class="n">io</span><span class="o">*</span><span class="p">))</span>
 </pre>
 
 
@@ -299,15 +308,15 @@ Common Lisp provides three distinct kinds of operators: functions, macros, and s
 </ul>
 <p>combing make-cd with prompt-read</p>
 <p>CL-USER&gt; (defun prompt-for-cd()</p>
-<pre class="code literal-block"><span></span>   (make-cd
+<pre class="code literal-block"><span></span>   <span class="p">(</span><span class="n">make</span><span class="o">-</span><span class="n">cd</span>
 
-    (prompt-read "Title")
+    <span class="p">(</span><span class="n">prompt</span><span class="o">-</span><span class="k">read</span> <span class="ss">"Title"</span><span class="p">)</span>
 
-    (prompt-read "Artist")
+    <span class="p">(</span><span class="n">prompt</span><span class="o">-</span><span class="k">read</span> <span class="ss">"Artist"</span><span class="p">)</span>
 
-    (prompt-read "Rating")
+    <span class="p">(</span><span class="n">prompt</span><span class="o">-</span><span class="k">read</span> <span class="ss">"Rating"</span><span class="p">)</span>
 
-    (prompt-read "Ripped [y/n]")))
+    <span class="p">(</span><span class="n">prompt</span><span class="o">-</span><span class="k">read</span> <span class="ss">"Ripped [y/n]"</span><span class="p">)))</span>
 </pre>
 
 
@@ -347,15 +356,15 @@ Common Lisp provides three distinct kinds of operators: functions, macros, and s
 <p>reprompt the user till  something starting with Y,y,N,n is entered.</p>
 <p>So, the final prompt-for-cd will be:</p>
 <p>CL-USER&gt; (defun prompt-for-cd ()</p>
-<pre class="code literal-block"><span></span>   (make-cd
+<pre class="code literal-block"><span></span>   <span class="p">(</span><span class="n">make</span><span class="o">-</span><span class="n">cd</span>
 
-    (prompt-read "Title")
+    <span class="p">(</span><span class="n">prompt</span><span class="o">-</span><span class="k">read</span> <span class="ss">"Title"</span><span class="p">)</span>
 
-    (prompt-read "Artist")
+    <span class="p">(</span><span class="n">prompt</span><span class="o">-</span><span class="k">read</span> <span class="ss">"Artist"</span><span class="p">)</span>
 
-    (or (parse-integer (prompt-read "Rating"):junk-allowd t)0)
+    <span class="p">(</span><span class="k">or</span> <span class="p">(</span><span class="n">parse</span><span class="o">-</span><span class="nb">integer</span> <span class="p">(</span><span class="n">prompt</span><span class="o">-</span><span class="k">read</span> <span class="ss">"Rating"</span><span class="p">):</span><span class="n">junk</span><span class="o">-</span><span class="n">allowd</span> <span class="n">t</span><span class="p">)</span><span class="mi">0</span><span class="p">)</span>
 
-    (y-or-n-p "Ripped [y/n]")))
+    <span class="p">(</span><span class="n">y</span><span class="o">-</span><span class="k">or</span><span class="o">-</span><span class="n">n</span><span class="o">-</span><span class="n">p</span> <span class="ss">"Ripped [y/n]"</span><span class="p">)))</span>
 </pre>
 
 
@@ -369,9 +378,9 @@ Common Lisp provides three distinct kinds of operators: functions, macros, and s
 </li>
 </ul>
 <p>CL-USER&gt; (defun add-cds()</p>
-<pre class="code literal-block"><span></span>   (loop (add-record (prompt-for-cd))
+<pre class="code literal-block"><span></span>   <span class="ss">(</span><span class="k">loop</span> <span class="ss">(</span><span class="nv">add</span><span class="o">-</span><span class="nv">record</span> <span class="ss">(</span><span class="nv">prompt</span><span class="o">-</span><span class="k">for</span><span class="o">-</span><span class="nv">cd</span><span class="ss">))</span>
 
-     (if (not (y-or-n-p "Another? [y/n]"))(return))))
+     <span class="ss">(</span><span class="k">if</span> <span class="ss">(</span><span class="nv">not</span> <span class="ss">(</span><span class="nv">y</span><span class="o">-</span><span class="nv">or</span><span class="o">-</span><span class="nv">n</span><span class="o">-</span><span class="nv">p</span> <span class="s2">"</span><span class="s">Another? [y/n]</span><span class="s2">"</span><span class="ss">))(</span><span class="k">return</span><span class="ss">))))</span>
 </pre>
 
 
@@ -380,15 +389,15 @@ Common Lisp provides three distinct kinds of operators: functions, macros, and s
 <p>Saving and Loading the Database</p>
 <p>*save-db function that takes a filename as an argument and saves the current state of the database.</p>
 <p>CL-USER&gt; (defun save-db (filename)</p>
-<pre class="code literal-block"><span></span>   (with-open-file (out filename
+<pre class="code literal-block"><span></span>   <span class="ss">(</span><span class="nv">with</span><span class="o">-</span><span class="nv">open</span><span class="o">-</span><span class="nv">file</span> <span class="ss">(</span><span class="nv">out</span> <span class="nv">filename</span>
 
-            :direction :output
+            :<span class="nv">direction</span> :<span class="nv">output</span>
 
-            :if-exists :supersede)
+            :<span class="k">if</span><span class="o">-</span><span class="nv">exists</span> :<span class="nv">supersede</span><span class="ss">)</span>
 
-     (with-standard-io-syntax
+     <span class="ss">(</span><span class="nv">with</span><span class="o">-</span><span class="nv">standard</span><span class="o">-</span><span class="nv">io</span><span class="o">-</span><span class="nv">syntax</span>
 
-       (print *db* out))))
+       <span class="ss">(</span><span class="nv">print</span> <span class="o">*</span><span class="nv">db</span><span class="o">*</span> <span class="nv">out</span><span class="ss">))))</span>
 </pre>
 
 
@@ -405,11 +414,11 @@ Common Lisp provides three distinct kinds of operators: functions, macros, and s
 <p>If open my-cds.db, we will find the output as in <em>db</em> at CL-USER&gt; prompt.</p>
 <p>The function to load the database back is similar.</p>
 <p>CL-USER&gt; (defun load-db(filename)</p>
-<pre class="code literal-block"><span></span>   (with-open-file (in filename)
+<pre class="code literal-block"><span></span>   <span class="p">(</span><span class="k">with</span><span class="o">-</span><span class="k">open</span><span class="o">-</span><span class="n">file</span> <span class="p">(</span><span class="k">in</span> <span class="n">filename</span><span class="p">)</span>
 
-     (with-standard-io-syntax
+     <span class="p">(</span><span class="k">with</span><span class="o">-</span><span class="n">standard</span><span class="o">-</span><span class="n">io</span><span class="o">-</span><span class="n">syntax</span>
 
-       (setf *db* (read in)))))
+       <span class="p">(</span><span class="n">setf</span> <span class="o">*</span><span class="n">db</span><span class="o">*</span> <span class="p">(</span><span class="k">read</span> <span class="k">in</span><span class="p">)))))</span>
 </pre>
 
 
@@ -463,7 +472,7 @@ Common Lisp provides three distinct kinds of operators: functions, macros, and s
 </ul>
 <p>to compare and put them all together in a lambda expression.</p>
 <p>CL-USER&gt; (remove-if-not </p>
-<pre class="code literal-block"><span></span>  #'(lambda (cd) (equal (getf cd :artist) "Dixie Chicks")) *db*)
+<pre class="code literal-block"><span></span>  <span class="o">#</span><span class="err">'</span><span class="p">(</span><span class="n">lambda</span> <span class="p">(</span><span class="n">cd</span><span class="p">)</span> <span class="p">(</span><span class="n">equal</span> <span class="p">(</span><span class="n">getf</span> <span class="n">cd</span> <span class="p">:</span><span class="n">artist</span><span class="p">)</span> <span class="ss">"Dixie Chicks"</span><span class="p">))</span> <span class="o">*</span><span class="n">db</span><span class="o">*</span><span class="p">)</span>
 </pre>
 
 
@@ -474,9 +483,9 @@ Common Lisp provides three distinct kinds of operators: functions, macros, and s
 <li>To wrap the whole expression in a function.</li>
 </ul>
 <p>CL-USER&gt; (defun select-by-artist (artist)</p>
-<pre class="code literal-block"><span></span>   (remove-if-not
+<pre class="code literal-block"><span></span>   <span class="ss">(</span><span class="nv">remove</span><span class="o">-</span><span class="k">if</span><span class="o">-</span><span class="nv">not</span>
 
-    #'(lambda (cd) (equal (getf cd :artist)artist)) *db*))
+    #<span class="s1">'</span><span class="s">(lambda (cd) (equal (getf cd :artist)artist)) *db*))</span>
 </pre>
 
 
@@ -491,7 +500,7 @@ Common Lisp provides three distinct kinds of operators: functions, macros, and s
 </li>
 </ul>
 <p>CL-USER&gt; (defun select (selector-fn)</p>
-<pre class="code literal-block"><span></span>   (remove-if-not selector-fn *db*))
+<pre class="code literal-block"><span></span>   <span class="ss">(</span><span class="nv">remove</span><span class="o">-</span><span class="k">if</span><span class="o">-</span><span class="nv">not</span> <span class="nv">selector</span><span class="o">-</span><span class="nv">fn</span> <span class="o">*</span><span class="nv">db</span><span class="o">*</span><span class="ss">))</span>
 </pre>
 
 
@@ -504,7 +513,7 @@ Common Lisp provides three distinct kinds of operators: functions, macros, and s
 <li>Anonymous function creation can be wrapped up.</li>
 </ul>
 <p>CL-USER&gt; (defun artist-selector (artist)</p>
-<pre class="code literal-block"><span></span>   #'(lambda (cd) (equal (getf cd :artist) artist)))
+<pre class="code literal-block"><span></span>   <span class="o">#</span><span class="err">'</span><span class="p">(</span><span class="n">lambda</span> <span class="p">(</span><span class="n">cd</span><span class="p">)</span> <span class="p">(</span><span class="n">equal</span> <span class="p">(</span><span class="n">getf</span> <span class="n">cd</span> <span class="p">:</span><span class="n">artist</span><span class="p">)</span> <span class="n">artist</span><span class="p">)))</span>
 </pre>
 
 
@@ -551,15 +560,15 @@ Common Lisp provides three distinct kinds of operators: functions, macros, and s
 </ul>
 <p>(defun where (&amp;key title artist rating (ripped nil ripped-p))</p>
 <p>#'(lambda (cd)</p>
-<pre class="code literal-block"><span></span>  (and
+<pre class="code literal-block"><span></span>  <span class="ss">(</span><span class="nv">and</span>
 
-   (if title    (equal (getf cd :title)  title)  t)
+   <span class="ss">(</span><span class="k">if</span> <span class="nv">title</span>    <span class="ss">(</span><span class="nv">equal</span> <span class="ss">(</span><span class="nv">getf</span> <span class="nv">cd</span> :<span class="nv">title</span><span class="ss">)</span>  <span class="nv">title</span><span class="ss">)</span>  <span class="nv">t</span><span class="ss">)</span>
 
-   (if artist   (equal (getf cd :artist) artist) t)
+   <span class="ss">(</span><span class="k">if</span> <span class="nv">artist</span>   <span class="ss">(</span><span class="nv">equal</span> <span class="ss">(</span><span class="nv">getf</span> <span class="nv">cd</span> :<span class="nv">artist</span><span class="ss">)</span> <span class="nv">artist</span><span class="ss">)</span> <span class="nv">t</span><span class="ss">)</span>
 
-   (if rating   (equal (getf cd :rating) rating) t)
+   <span class="ss">(</span><span class="k">if</span> <span class="nv">rating</span>   <span class="ss">(</span><span class="nv">equal</span> <span class="ss">(</span><span class="nv">getf</span> <span class="nv">cd</span> :<span class="nv">rating</span><span class="ss">)</span> <span class="nv">rating</span><span class="ss">)</span> <span class="nv">t</span><span class="ss">)</span>
 
-   (if ripped-p (equal (getf cd :ripped) ripped) t))))
+   <span class="ss">(</span><span class="k">if</span> <span class="nv">ripped</span><span class="o">-</span><span class="nv">p</span> <span class="ss">(</span><span class="nv">equal</span> <span class="ss">(</span><span class="nv">getf</span> <span class="nv">cd</span> :<span class="nv">ripped</span><span class="ss">)</span> <span class="nv">ripped</span><span class="ss">)</span> <span class="nv">t</span><span class="ss">))))</span>
 </pre>
 
 
@@ -568,21 +577,21 @@ Common Lisp provides three distinct kinds of operators: functions, macros, and s
 </ul>
 <p>(defun update (selector-fn &amp;key title artist rating (ripped nil ripped-p))</p>
 <p>(setf <em>db</em></p>
-<pre class="code literal-block"><span></span>    (mapcar
+<pre class="code literal-block"><span></span>    <span class="ss">(</span><span class="nv">mapcar</span>
 
-     #'(lambda (row)
+     #<span class="s1">'</span><span class="s">(lambda (row)</span>
 
-         (when (funcall selector-fn row)
+         <span class="ss">(</span><span class="nv">when</span> <span class="ss">(</span><span class="nv">funcall</span> <span class="nv">selector</span><span class="o">-</span><span class="nv">fn</span> <span class="nv">row</span><span class="ss">)</span>
 
-           (if title    (setf (getf row :title) title))
+           <span class="ss">(</span><span class="k">if</span> <span class="nv">title</span>    <span class="ss">(</span><span class="nv">setf</span> <span class="ss">(</span><span class="nv">getf</span> <span class="nv">row</span> :<span class="nv">title</span><span class="ss">)</span> <span class="nv">title</span><span class="ss">))</span>
 
-           (if artist   (setf (getf row :artist) artist))
+           <span class="ss">(</span><span class="k">if</span> <span class="nv">artist</span>   <span class="ss">(</span><span class="nv">setf</span> <span class="ss">(</span><span class="nv">getf</span> <span class="nv">row</span> :<span class="nv">artist</span><span class="ss">)</span> <span class="nv">artist</span><span class="ss">))</span>
 
-           (if rating   (setf (getf row :rating) rating))
+           <span class="ss">(</span><span class="k">if</span> <span class="nv">rating</span>   <span class="ss">(</span><span class="nv">setf</span> <span class="ss">(</span><span class="nv">getf</span> <span class="nv">row</span> :<span class="nv">rating</span><span class="ss">)</span> <span class="nv">rating</span><span class="ss">))</span>
 
-           (if ripped-p (setf (getf row :ripped) ripped)))
+           <span class="ss">(</span><span class="k">if</span> <span class="nv">ripped</span><span class="o">-</span><span class="nv">p</span> <span class="ss">(</span><span class="nv">setf</span> <span class="ss">(</span><span class="nv">getf</span> <span class="nv">row</span> :<span class="nv">ripped</span><span class="ss">)</span> <span class="nv">ripped</span><span class="ss">)))</span>
 
-         row) *db*)))
+         <span class="nv">row</span><span class="ss">)</span> <span class="o">*</span><span class="nv">db</span><span class="o">*</span><span class="ss">)))</span>
 </pre>
 
 
@@ -652,11 +661,7 @@ Common Lisp provides three distinct kinds of operators: functions, macros, and s
     <a href="https://disqus.com" class="dsq-brlink" rel="nofollow">Comments powered by <span class="logo-disqus">Disqus</span></a>
 
 
-        </section></article><script>var disqus_shortname="xtoinfinity";(function(){var a=document.createElement("script");a.async=true;a.src="https://"+disqus_shortname+".disqus.com/count.js";(document.getElementsByTagName("head")[0]||document.getElementsByTagName("body")[0]).appendChild(a)}());</script>
-</div>
-        <!--End of body content-->
-
-        <footer id="footer">
+        </section></article><script>var disqus_shortname="xtoinfinity";(function(){var a=document.createElement("script");a.async=true;a.src="https://"+disqus_shortname+".disqus.com/count.js";(document.getElementsByTagName("head")[0]||document.getElementsByTagName("body")[0]).appendChild(a)}());</script><!--End of body content--><footer id="footer">
             Contents © 2019         <a href="mailto:orsenthil@gmail.com">Senthil Kumaran</a> - Powered by         <a href="https://getnikola.com" rel="nofollow">Nikola</a>         
             
         </footer>
@@ -664,10 +669,13 @@ Common Lisp provides three distinct kinds of operators: functions, macros, and s
 </div>
 
 
-            <script src="../../../../assets/js/all-nocdn.js"></script><script>$('a.image-reference:not(.islink) img:not(.islink)').parent().colorbox({rel:"gal",maxWidth:"100%",maxHeight:"100%",scalePhotos:true});</script><!-- fancy dates --><script>
-    moment.locale("en");
-    fancydates(0, "YYYY-MM-DD HH:mm");
-    </script><!-- end fancy dates --><script>
+        <script src="../../../../assets/js/all-nocdn.js"></script><script>
+    baguetteBox.run('div#content', {
+        ignoreClass: 'islink',
+        captions: function(element) {
+            return element.getElementsByTagName('img')[0].alt;
+    }});
+    </script><script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
   m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)

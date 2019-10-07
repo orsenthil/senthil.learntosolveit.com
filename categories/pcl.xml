@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Senthil Kumaran's thoughts. (pcl)</title><link>http://www.xtoinfinity.com/</link><description></description><atom:link href="http://www.xtoinfinity.com/categories/pcl.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><lastBuildDate>Mon, 18 Mar 2019 00:00:51 GMT</lastBuildDate><generator>https://getnikola.com/</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>PCL : Syntax and Semantics</title><link>http://www.xtoinfinity.com/posts/2007/03/29/pcl-syntax-and-semantics.html</link><dc:creator>Senthil Kumaran</dc:creator><description>&lt;div&gt;&lt;p&gt;&lt;/p&gt;&lt;p&gt;Syntax and Semantics&lt;/p&gt;
+<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Senthil Kumaran's thoughts. (Posts about pcl)</title><link>http://www.xtoinfinity.com/</link><description></description><atom:link href="http://www.xtoinfinity.com/categories/pcl.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><lastBuildDate>Mon, 07 Oct 2019 00:27:08 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>PCL : Syntax and Semantics</title><link>http://www.xtoinfinity.com/posts/2007/03/29/pcl-syntax-and-semantics.html</link><dc:creator>Senthil Kumaran</dc:creator><description>&lt;div&gt;&lt;p&gt;&lt;/p&gt;&lt;p&gt;Syntax and Semantics&lt;/p&gt;
 &lt;p&gt;What's with All the Parentheses?&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;
@@ -305,7 +305,7 @@
 &lt;/ul&gt;
 &lt;p&gt;(defun print-list (list)&lt;/p&gt;
 &lt;p&gt;(dolist (i list)&lt;/p&gt;
-&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;(format t "item: ~a~%" i)))
+&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;format&lt;/span&gt; &lt;span class="n"&gt;t&lt;/span&gt; &lt;span class="ss"&gt;"item: ~a~%"&lt;/span&gt; &lt;span class="n"&gt;i&lt;/span&gt;&lt;span class="p"&gt;)))&lt;/span&gt;
 &lt;/pre&gt;
 
 
@@ -368,7 +368,7 @@
 &lt;/ul&gt;
 &lt;p&gt;representing that CD.&lt;/p&gt;
 &lt;p&gt;CL-USER&amp;gt; (defun make-cd(title artist rating ripped)&lt;/p&gt;
-&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;   (list :title title :artist artist :rating rating :ripped ripped))
+&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;   &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;list&lt;/span&gt; &lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="n"&gt;title&lt;/span&gt; &lt;span class="n"&gt;title&lt;/span&gt; &lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="n"&gt;artist&lt;/span&gt; &lt;span class="n"&gt;artist&lt;/span&gt; &lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="n"&gt;rating&lt;/span&gt; &lt;span class="n"&gt;rating&lt;/span&gt; &lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="n"&gt;ripped&lt;/span&gt; &lt;span class="n"&gt;ripped&lt;/span&gt;&lt;span class="p"&gt;))&lt;/span&gt;
 &lt;/pre&gt;
 
 
@@ -425,9 +425,9 @@
 &lt;/ul&gt;
 &lt;p&gt;format.&lt;/p&gt;
 &lt;p&gt;CL-USER&amp;gt; (defun dump-db()&lt;/p&gt;
-&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;   (dolist (cd *db*)
+&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;   &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;dolist&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;cd&lt;/span&gt; &lt;span class="o"&gt;*&lt;/span&gt;&lt;span class="n"&gt;db&lt;/span&gt;&lt;span class="o"&gt;*&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
 
-     (format t "~{~a:~10t~a~%~}~%" cd)))
+     &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;format&lt;/span&gt; &lt;span class="n"&gt;t&lt;/span&gt; &lt;span class="ss"&gt;"~{~a:~10t~a~%~}~%"&lt;/span&gt; &lt;span class="n"&gt;cd&lt;/span&gt;&lt;span class="p"&gt;)))&lt;/span&gt;
 &lt;/pre&gt;
 
 
@@ -483,7 +483,7 @@
 &lt;/ul&gt;
 &lt;p&gt;itself:&lt;/p&gt;
 &lt;p&gt;CL-USER&amp;gt; (defun dump-db()&lt;/p&gt;
-&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;   (format t "~{~{~a:~10t~a~%~}~%~}" *db*))
+&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;   &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;format&lt;/span&gt; &lt;span class="n"&gt;t&lt;/span&gt; &lt;span class="ss"&gt;"~{~{~a:~10t~a~%~}~%~}"&lt;/span&gt; &lt;span class="o"&gt;*&lt;/span&gt;&lt;span class="n"&gt;db&lt;/span&gt;&lt;span class="o"&gt;*&lt;/span&gt;&lt;span class="p"&gt;))&lt;/span&gt;
 &lt;/pre&gt;
 
 
@@ -494,11 +494,11 @@
 &lt;li&gt;need some way to prompt the user for a piece of information and read it.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;CL-USER&amp;gt; (defun prompt-read(prompt)&lt;/p&gt;
-&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;   (format *query-io* "~a: " prompt)
+&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;   &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;format&lt;/span&gt; &lt;span class="o"&gt;*&lt;/span&gt;&lt;span class="n"&gt;query&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;io&lt;/span&gt;&lt;span class="o"&gt;*&lt;/span&gt; &lt;span class="ss"&gt;"~a: "&lt;/span&gt; &lt;span class="n"&gt;prompt&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
 
-   (force-output *query-io*)
+   &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="k"&gt;force&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="k"&gt;output&lt;/span&gt; &lt;span class="o"&gt;*&lt;/span&gt;&lt;span class="n"&gt;query&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;io&lt;/span&gt;&lt;span class="o"&gt;*&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
 
-   (read-line *query-io*))
+   &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="k"&gt;read&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;line&lt;/span&gt; &lt;span class="o"&gt;*&lt;/span&gt;&lt;span class="n"&gt;query&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;io&lt;/span&gt;&lt;span class="o"&gt;*&lt;/span&gt;&lt;span class="p"&gt;))&lt;/span&gt;
 &lt;/pre&gt;
 
 
@@ -520,15 +520,15 @@
 &lt;/ul&gt;
 &lt;p&gt;combing make-cd with prompt-read&lt;/p&gt;
 &lt;p&gt;CL-USER&amp;gt; (defun prompt-for-cd()&lt;/p&gt;
-&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;   (make-cd
+&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;   &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;make&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;cd&lt;/span&gt;
 
-    (prompt-read "Title")
+    &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;prompt&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="k"&gt;read&lt;/span&gt; &lt;span class="ss"&gt;"Title"&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
 
-    (prompt-read "Artist")
+    &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;prompt&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="k"&gt;read&lt;/span&gt; &lt;span class="ss"&gt;"Artist"&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
 
-    (prompt-read "Rating")
+    &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;prompt&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="k"&gt;read&lt;/span&gt; &lt;span class="ss"&gt;"Rating"&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
 
-    (prompt-read "Ripped [y/n]")))
+    &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;prompt&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="k"&gt;read&lt;/span&gt; &lt;span class="ss"&gt;"Ripped [y/n]"&lt;/span&gt;&lt;span class="p"&gt;)))&lt;/span&gt;
 &lt;/pre&gt;
 
 
@@ -568,15 +568,15 @@
 &lt;p&gt;reprompt the user till  something starting with Y,y,N,n is entered.&lt;/p&gt;
 &lt;p&gt;So, the final prompt-for-cd will be:&lt;/p&gt;
 &lt;p&gt;CL-USER&amp;gt; (defun prompt-for-cd ()&lt;/p&gt;
-&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;   (make-cd
+&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;   &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;make&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;cd&lt;/span&gt;
 
-    (prompt-read "Title")
+    &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;prompt&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="k"&gt;read&lt;/span&gt; &lt;span class="ss"&gt;"Title"&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
 
-    (prompt-read "Artist")
+    &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;prompt&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="k"&gt;read&lt;/span&gt; &lt;span class="ss"&gt;"Artist"&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
 
-    (or (parse-integer (prompt-read "Rating"):junk-allowd t)0)
+    &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="k"&gt;or&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;parse&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="nb"&gt;integer&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;prompt&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="k"&gt;read&lt;/span&gt; &lt;span class="ss"&gt;"Rating"&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;&lt;span class="n"&gt;junk&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;allowd&lt;/span&gt; &lt;span class="n"&gt;t&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
 
-    (y-or-n-p "Ripped [y/n]")))
+    &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;y&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="k"&gt;or&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;n&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;p&lt;/span&gt; &lt;span class="ss"&gt;"Ripped [y/n]"&lt;/span&gt;&lt;span class="p"&gt;)))&lt;/span&gt;
 &lt;/pre&gt;
 
 
@@ -590,9 +590,9 @@
 &lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;CL-USER&amp;gt; (defun add-cds()&lt;/p&gt;
-&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;   (loop (add-record (prompt-for-cd))
+&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;   &lt;span class="ss"&gt;(&lt;/span&gt;&lt;span class="k"&gt;loop&lt;/span&gt; &lt;span class="ss"&gt;(&lt;/span&gt;&lt;span class="nv"&gt;add&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="nv"&gt;record&lt;/span&gt; &lt;span class="ss"&gt;(&lt;/span&gt;&lt;span class="nv"&gt;prompt&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="k"&gt;for&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="nv"&gt;cd&lt;/span&gt;&lt;span class="ss"&gt;))&lt;/span&gt;
 
-     (if (not (y-or-n-p "Another? [y/n]"))(return))))
+     &lt;span class="ss"&gt;(&lt;/span&gt;&lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="ss"&gt;(&lt;/span&gt;&lt;span class="nv"&gt;not&lt;/span&gt; &lt;span class="ss"&gt;(&lt;/span&gt;&lt;span class="nv"&gt;y&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="nv"&gt;or&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="nv"&gt;n&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="nv"&gt;p&lt;/span&gt; &lt;span class="s2"&gt;"&lt;/span&gt;&lt;span class="s"&gt;Another? [y/n]&lt;/span&gt;&lt;span class="s2"&gt;"&lt;/span&gt;&lt;span class="ss"&gt;))(&lt;/span&gt;&lt;span class="k"&gt;return&lt;/span&gt;&lt;span class="ss"&gt;))))&lt;/span&gt;
 &lt;/pre&gt;
 
 
@@ -601,15 +601,15 @@
 &lt;p&gt;Saving and Loading the Database&lt;/p&gt;
 &lt;p&gt;*save-db function that takes a filename as an argument and saves the current state of the database.&lt;/p&gt;
 &lt;p&gt;CL-USER&amp;gt; (defun save-db (filename)&lt;/p&gt;
-&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;   (with-open-file (out filename
+&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;   &lt;span class="ss"&gt;(&lt;/span&gt;&lt;span class="nv"&gt;with&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="nv"&gt;open&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="nv"&gt;file&lt;/span&gt; &lt;span class="ss"&gt;(&lt;/span&gt;&lt;span class="nv"&gt;out&lt;/span&gt; &lt;span class="nv"&gt;filename&lt;/span&gt;
 
-            :direction :output
+            :&lt;span class="nv"&gt;direction&lt;/span&gt; :&lt;span class="nv"&gt;output&lt;/span&gt;
 
-            :if-exists :supersede)
+            :&lt;span class="k"&gt;if&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="nv"&gt;exists&lt;/span&gt; :&lt;span class="nv"&gt;supersede&lt;/span&gt;&lt;span class="ss"&gt;)&lt;/span&gt;
 
-     (with-standard-io-syntax
+     &lt;span class="ss"&gt;(&lt;/span&gt;&lt;span class="nv"&gt;with&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="nv"&gt;standard&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="nv"&gt;io&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="nv"&gt;syntax&lt;/span&gt;
 
-       (print *db* out))))
+       &lt;span class="ss"&gt;(&lt;/span&gt;&lt;span class="nv"&gt;print&lt;/span&gt; &lt;span class="o"&gt;*&lt;/span&gt;&lt;span class="nv"&gt;db&lt;/span&gt;&lt;span class="o"&gt;*&lt;/span&gt; &lt;span class="nv"&gt;out&lt;/span&gt;&lt;span class="ss"&gt;))))&lt;/span&gt;
 &lt;/pre&gt;
 
 
@@ -626,11 +626,11 @@
 &lt;p&gt;If open my-cds.db, we will find the output as in &lt;em&gt;db&lt;/em&gt; at CL-USER&amp;gt; prompt.&lt;/p&gt;
 &lt;p&gt;The function to load the database back is similar.&lt;/p&gt;
 &lt;p&gt;CL-USER&amp;gt; (defun load-db(filename)&lt;/p&gt;
-&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;   (with-open-file (in filename)
+&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;   &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="k"&gt;with&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="k"&gt;open&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;file&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="k"&gt;in&lt;/span&gt; &lt;span class="n"&gt;filename&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
 
-     (with-standard-io-syntax
+     &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="k"&gt;with&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;standard&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;io&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;syntax&lt;/span&gt;
 
-       (setf *db* (read in)))))
+       &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;setf&lt;/span&gt; &lt;span class="o"&gt;*&lt;/span&gt;&lt;span class="n"&gt;db&lt;/span&gt;&lt;span class="o"&gt;*&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="k"&gt;read&lt;/span&gt; &lt;span class="k"&gt;in&lt;/span&gt;&lt;span class="p"&gt;)))))&lt;/span&gt;
 &lt;/pre&gt;
 
 
@@ -684,7 +684,7 @@
 &lt;/ul&gt;
 &lt;p&gt;to compare and put them all together in a lambda expression.&lt;/p&gt;
 &lt;p&gt;CL-USER&amp;gt; (remove-if-not &lt;/p&gt;
-&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;  #'(lambda (cd) (equal (getf cd :artist) "Dixie Chicks")) *db*)
+&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;  &lt;span class="o"&gt;#&lt;/span&gt;&lt;span class="err"&gt;'&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;lambda&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;cd&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;equal&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;getf&lt;/span&gt; &lt;span class="n"&gt;cd&lt;/span&gt; &lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="n"&gt;artist&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="ss"&gt;"Dixie Chicks"&lt;/span&gt;&lt;span class="p"&gt;))&lt;/span&gt; &lt;span class="o"&gt;*&lt;/span&gt;&lt;span class="n"&gt;db&lt;/span&gt;&lt;span class="o"&gt;*&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
 &lt;/pre&gt;
 
 
@@ -695,9 +695,9 @@
 &lt;li&gt;To wrap the whole expression in a function.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;CL-USER&amp;gt; (defun select-by-artist (artist)&lt;/p&gt;
-&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;   (remove-if-not
+&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;   &lt;span class="ss"&gt;(&lt;/span&gt;&lt;span class="nv"&gt;remove&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="k"&gt;if&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="nv"&gt;not&lt;/span&gt;
 
-    #'(lambda (cd) (equal (getf cd :artist)artist)) *db*))
+    #&lt;span class="s1"&gt;'&lt;/span&gt;&lt;span class="s"&gt;(lambda (cd) (equal (getf cd :artist)artist)) *db*))&lt;/span&gt;
 &lt;/pre&gt;
 
 
@@ -712,7 +712,7 @@
 &lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;CL-USER&amp;gt; (defun select (selector-fn)&lt;/p&gt;
-&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;   (remove-if-not selector-fn *db*))
+&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;   &lt;span class="ss"&gt;(&lt;/span&gt;&lt;span class="nv"&gt;remove&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="k"&gt;if&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="nv"&gt;not&lt;/span&gt; &lt;span class="nv"&gt;selector&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="nv"&gt;fn&lt;/span&gt; &lt;span class="o"&gt;*&lt;/span&gt;&lt;span class="nv"&gt;db&lt;/span&gt;&lt;span class="o"&gt;*&lt;/span&gt;&lt;span class="ss"&gt;))&lt;/span&gt;
 &lt;/pre&gt;
 
 
@@ -725,7 +725,7 @@
 &lt;li&gt;Anonymous function creation can be wrapped up.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;CL-USER&amp;gt; (defun artist-selector (artist)&lt;/p&gt;
-&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;   #'(lambda (cd) (equal (getf cd :artist) artist)))
+&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;   &lt;span class="o"&gt;#&lt;/span&gt;&lt;span class="err"&gt;'&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;lambda&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;cd&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;equal&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;getf&lt;/span&gt; &lt;span class="n"&gt;cd&lt;/span&gt; &lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="n"&gt;artist&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="n"&gt;artist&lt;/span&gt;&lt;span class="p"&gt;)))&lt;/span&gt;
 &lt;/pre&gt;
 
 
@@ -772,15 +772,15 @@
 &lt;/ul&gt;
 &lt;p&gt;(defun where (&amp;amp;key title artist rating (ripped nil ripped-p))&lt;/p&gt;
 &lt;p&gt;#'(lambda (cd)&lt;/p&gt;
-&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;  (and
+&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;  &lt;span class="ss"&gt;(&lt;/span&gt;&lt;span class="nv"&gt;and&lt;/span&gt;
 
-   (if title    (equal (getf cd :title)  title)  t)
+   &lt;span class="ss"&gt;(&lt;/span&gt;&lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="nv"&gt;title&lt;/span&gt;    &lt;span class="ss"&gt;(&lt;/span&gt;&lt;span class="nv"&gt;equal&lt;/span&gt; &lt;span class="ss"&gt;(&lt;/span&gt;&lt;span class="nv"&gt;getf&lt;/span&gt; &lt;span class="nv"&gt;cd&lt;/span&gt; :&lt;span class="nv"&gt;title&lt;/span&gt;&lt;span class="ss"&gt;)&lt;/span&gt;  &lt;span class="nv"&gt;title&lt;/span&gt;&lt;span class="ss"&gt;)&lt;/span&gt;  &lt;span class="nv"&gt;t&lt;/span&gt;&lt;span class="ss"&gt;)&lt;/span&gt;
 
-   (if artist   (equal (getf cd :artist) artist) t)
+   &lt;span class="ss"&gt;(&lt;/span&gt;&lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="nv"&gt;artist&lt;/span&gt;   &lt;span class="ss"&gt;(&lt;/span&gt;&lt;span class="nv"&gt;equal&lt;/span&gt; &lt;span class="ss"&gt;(&lt;/span&gt;&lt;span class="nv"&gt;getf&lt;/span&gt; &lt;span class="nv"&gt;cd&lt;/span&gt; :&lt;span class="nv"&gt;artist&lt;/span&gt;&lt;span class="ss"&gt;)&lt;/span&gt; &lt;span class="nv"&gt;artist&lt;/span&gt;&lt;span class="ss"&gt;)&lt;/span&gt; &lt;span class="nv"&gt;t&lt;/span&gt;&lt;span class="ss"&gt;)&lt;/span&gt;
 
-   (if rating   (equal (getf cd :rating) rating) t)
+   &lt;span class="ss"&gt;(&lt;/span&gt;&lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="nv"&gt;rating&lt;/span&gt;   &lt;span class="ss"&gt;(&lt;/span&gt;&lt;span class="nv"&gt;equal&lt;/span&gt; &lt;span class="ss"&gt;(&lt;/span&gt;&lt;span class="nv"&gt;getf&lt;/span&gt; &lt;span class="nv"&gt;cd&lt;/span&gt; :&lt;span class="nv"&gt;rating&lt;/span&gt;&lt;span class="ss"&gt;)&lt;/span&gt; &lt;span class="nv"&gt;rating&lt;/span&gt;&lt;span class="ss"&gt;)&lt;/span&gt; &lt;span class="nv"&gt;t&lt;/span&gt;&lt;span class="ss"&gt;)&lt;/span&gt;
 
-   (if ripped-p (equal (getf cd :ripped) ripped) t))))
+   &lt;span class="ss"&gt;(&lt;/span&gt;&lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="nv"&gt;ripped&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="nv"&gt;p&lt;/span&gt; &lt;span class="ss"&gt;(&lt;/span&gt;&lt;span class="nv"&gt;equal&lt;/span&gt; &lt;span class="ss"&gt;(&lt;/span&gt;&lt;span class="nv"&gt;getf&lt;/span&gt; &lt;span class="nv"&gt;cd&lt;/span&gt; :&lt;span class="nv"&gt;ripped&lt;/span&gt;&lt;span class="ss"&gt;)&lt;/span&gt; &lt;span class="nv"&gt;ripped&lt;/span&gt;&lt;span class="ss"&gt;)&lt;/span&gt; &lt;span class="nv"&gt;t&lt;/span&gt;&lt;span class="ss"&gt;))))&lt;/span&gt;
 &lt;/pre&gt;
 
 
@@ -789,21 +789,21 @@
 &lt;/ul&gt;
 &lt;p&gt;(defun update (selector-fn &amp;amp;key title artist rating (ripped nil ripped-p))&lt;/p&gt;
 &lt;p&gt;(setf &lt;em&gt;db&lt;/em&gt;&lt;/p&gt;
-&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;    (mapcar
+&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;    &lt;span class="ss"&gt;(&lt;/span&gt;&lt;span class="nv"&gt;mapcar&lt;/span&gt;
 
-     #'(lambda (row)
+     #&lt;span class="s1"&gt;'&lt;/span&gt;&lt;span class="s"&gt;(lambda (row)&lt;/span&gt;
 
-         (when (funcall selector-fn row)
+         &lt;span class="ss"&gt;(&lt;/span&gt;&lt;span class="nv"&gt;when&lt;/span&gt; &lt;span class="ss"&gt;(&lt;/span&gt;&lt;span class="nv"&gt;funcall&lt;/span&gt; &lt;span class="nv"&gt;selector&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="nv"&gt;fn&lt;/span&gt; &lt;span class="nv"&gt;row&lt;/span&gt;&lt;span class="ss"&gt;)&lt;/span&gt;
 
-           (if title    (setf (getf row :title) title))
+           &lt;span class="ss"&gt;(&lt;/span&gt;&lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="nv"&gt;title&lt;/span&gt;    &lt;span class="ss"&gt;(&lt;/span&gt;&lt;span class="nv"&gt;setf&lt;/span&gt; &lt;span class="ss"&gt;(&lt;/span&gt;&lt;span class="nv"&gt;getf&lt;/span&gt; &lt;span class="nv"&gt;row&lt;/span&gt; :&lt;span class="nv"&gt;title&lt;/span&gt;&lt;span class="ss"&gt;)&lt;/span&gt; &lt;span class="nv"&gt;title&lt;/span&gt;&lt;span class="ss"&gt;))&lt;/span&gt;
 
-           (if artist   (setf (getf row :artist) artist))
+           &lt;span class="ss"&gt;(&lt;/span&gt;&lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="nv"&gt;artist&lt;/span&gt;   &lt;span class="ss"&gt;(&lt;/span&gt;&lt;span class="nv"&gt;setf&lt;/span&gt; &lt;span class="ss"&gt;(&lt;/span&gt;&lt;span class="nv"&gt;getf&lt;/span&gt; &lt;span class="nv"&gt;row&lt;/span&gt; :&lt;span class="nv"&gt;artist&lt;/span&gt;&lt;span class="ss"&gt;)&lt;/span&gt; &lt;span class="nv"&gt;artist&lt;/span&gt;&lt;span class="ss"&gt;))&lt;/span&gt;
 
-           (if rating   (setf (getf row :rating) rating))
+           &lt;span class="ss"&gt;(&lt;/span&gt;&lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="nv"&gt;rating&lt;/span&gt;   &lt;span class="ss"&gt;(&lt;/span&gt;&lt;span class="nv"&gt;setf&lt;/span&gt; &lt;span class="ss"&gt;(&lt;/span&gt;&lt;span class="nv"&gt;getf&lt;/span&gt; &lt;span class="nv"&gt;row&lt;/span&gt; :&lt;span class="nv"&gt;rating&lt;/span&gt;&lt;span class="ss"&gt;)&lt;/span&gt; &lt;span class="nv"&gt;rating&lt;/span&gt;&lt;span class="ss"&gt;))&lt;/span&gt;
 
-           (if ripped-p (setf (getf row :ripped) ripped)))
+           &lt;span class="ss"&gt;(&lt;/span&gt;&lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="nv"&gt;ripped&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="nv"&gt;p&lt;/span&gt; &lt;span class="ss"&gt;(&lt;/span&gt;&lt;span class="nv"&gt;setf&lt;/span&gt; &lt;span class="ss"&gt;(&lt;/span&gt;&lt;span class="nv"&gt;getf&lt;/span&gt; &lt;span class="nv"&gt;row&lt;/span&gt; :&lt;span class="nv"&gt;ripped&lt;/span&gt;&lt;span class="ss"&gt;)&lt;/span&gt; &lt;span class="nv"&gt;ripped&lt;/span&gt;&lt;span class="ss"&gt;)))&lt;/span&gt;
 
-         row) *db*)))
+         &lt;span class="nv"&gt;row&lt;/span&gt;&lt;span class="ss"&gt;)&lt;/span&gt; &lt;span class="o"&gt;*&lt;/span&gt;&lt;span class="nv"&gt;db&lt;/span&gt;&lt;span class="o"&gt;*&lt;/span&gt;&lt;span class="ss"&gt;)))&lt;/span&gt;
 &lt;/pre&gt;
 
 
@@ -877,19 +877,19 @@
 &lt;p&gt;The endless cycle of reading, evaluating and printing is why it is called read-eval-print loop or REPL for short.&lt;/p&gt;
 &lt;p&gt;Its also refered to as top level, top level listner, lisp listner.&lt;/p&gt;
 &lt;p&gt;From REPL we can:&lt;/p&gt;
-&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;          - Define or redefine variables, functions, classes and methods.
+&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;          &lt;span class="o"&gt;-&lt;/span&gt; &lt;span class="n"&gt;Define&lt;/span&gt; &lt;span class="k"&gt;or&lt;/span&gt; &lt;span class="n"&gt;redefine&lt;/span&gt; &lt;span class="n"&gt;variables&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;functions&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;classes&lt;/span&gt; &lt;span class="k"&gt;and&lt;/span&gt; &lt;span class="n"&gt;methods&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;
 
-          - Evaluate any lisp expression.
+          &lt;span class="o"&gt;-&lt;/span&gt; &lt;span class="n"&gt;Evaluate&lt;/span&gt; &lt;span class="k"&gt;any&lt;/span&gt; &lt;span class="n"&gt;lisp&lt;/span&gt; &lt;span class="n"&gt;expression&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;
 
-          - Load files containing lisp source code or compiled code.
+          &lt;span class="o"&gt;-&lt;/span&gt; &lt;span class="k"&gt;Load&lt;/span&gt; &lt;span class="n"&gt;files&lt;/span&gt; &lt;span class="n"&gt;containing&lt;/span&gt; &lt;span class="n"&gt;lisp&lt;/span&gt; &lt;span class="k"&gt;source&lt;/span&gt; &lt;span class="n"&gt;code&lt;/span&gt; &lt;span class="k"&gt;or&lt;/span&gt; &lt;span class="n"&gt;compiled&lt;/span&gt; &lt;span class="n"&gt;code&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;
 
-          - compile other files or individual functions.
+          &lt;span class="o"&gt;-&lt;/span&gt; &lt;span class="n"&gt;compile&lt;/span&gt; &lt;span class="n"&gt;other&lt;/span&gt; &lt;span class="n"&gt;files&lt;/span&gt; &lt;span class="k"&gt;or&lt;/span&gt; &lt;span class="n"&gt;individual&lt;/span&gt; &lt;span class="n"&gt;functions&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;
 
-          - Enter Debugger.
+          &lt;span class="o"&gt;-&lt;/span&gt; &lt;span class="n"&gt;Enter&lt;/span&gt; &lt;span class="n"&gt;Debugger&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;
 
-          - Step through the code.
+          &lt;span class="o"&gt;-&lt;/span&gt; &lt;span class="n"&gt;Step&lt;/span&gt; &lt;span class="n"&gt;through&lt;/span&gt; &lt;span class="n"&gt;the&lt;/span&gt; &lt;span class="n"&gt;code&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;
 
-          - Inspect the state of the individual lisp command.
+          &lt;span class="o"&gt;-&lt;/span&gt; &lt;span class="n"&gt;Inspect&lt;/span&gt; &lt;span class="n"&gt;the&lt;/span&gt; &lt;span class="k"&gt;state&lt;/span&gt; &lt;span class="k"&gt;of&lt;/span&gt; &lt;span class="n"&gt;the&lt;/span&gt; &lt;span class="n"&gt;individual&lt;/span&gt; &lt;span class="n"&gt;lisp&lt;/span&gt; &lt;span class="n"&gt;command&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;
 &lt;/pre&gt;
 
 
@@ -948,7 +948,7 @@
 &lt;/ul&gt;
 &lt;p&gt;Make some changes and type again.&lt;/p&gt;
 &lt;p&gt;(defun hello-world()&lt;/p&gt;
-&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;   (format t "Hello,World!"))
+&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;   &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;format&lt;/span&gt; &lt;span class="n"&gt;t&lt;/span&gt; &lt;span class="ss"&gt;"Hello,World!"&lt;/span&gt;&lt;span class="p"&gt;))&lt;/span&gt;
 &lt;/pre&gt;
 
 
