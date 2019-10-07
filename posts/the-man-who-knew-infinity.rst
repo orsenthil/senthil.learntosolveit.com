@@ -1,11 +1,10 @@
 .. title: The Man Who Knew Infinity
 .. slug: the-man-who-knew-infinity
 .. date: 2016-06-26 21:12:17 UTC-07:00
-.. tags: mathjax
+.. tags: 
 .. category: mathjax
-.. link: 
-.. description: 
 .. type: text
+.. has_math: yes
 
    "An equation for me has no meaning, unless it represents a thought of God." - Srinivasa Ramanujan
 

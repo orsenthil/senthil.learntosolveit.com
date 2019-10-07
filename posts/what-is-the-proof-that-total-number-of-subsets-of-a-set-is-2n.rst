@@ -1,12 +1,9 @@
 .. title: What is the proof that total number of subsets of a set is 2^n?
 .. slug: what-is-the-proof-that-total-number-of-subsets-of-a-set-is-2n
 .. date: 2019-01-29 05:18:44 UTC-08:00
-.. tags: maths, mathjax
-.. category: 
-.. link: 
-.. description: 
+.. tags: maths
 .. type: text
-.. has_math: true
+.. has_math: yes
 
 I have known "by heart" that total number of the subsets of a set of n number is :math:`2^n`
 I was struggling to find an intuitive explanation, and two answers helped me to understand it.

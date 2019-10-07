@@ -1,11 +1,10 @@
 .. title: Abstract Factory - Design Pattern Explanation
 .. slug: abstract-factory-design-pattern-explanation
 .. date: 2016-07-15 09:28:06 UTC-07:00
-.. tags: mathjax, java
-.. category:
-.. link:
+.. tags: java
 .. description: Simple explanation of Abstract Factory Design Pattern in Java.
 .. type: text
+.. has_math: yes
 
 Design patterns like "Decorator", "Singleton" are common and be easily
 recognized. The "Builder" pattern is also recognizable whenever you use Java's

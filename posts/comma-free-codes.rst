@@ -1,11 +1,11 @@
 .. title: Comma Free Codes
 .. slug: comma-free-codes
 .. date: 2015-12-16 08:40:37 UTC-08:00
-.. tags: algorithms, mathjax, v1, knuth
+.. tags: algorithms, v1, knuth
 .. category: computer-science
-.. link:
 .. description: Knuth's christmas tree lecture on comma free codes
 .. type: text
+.. has_math: yes
 
 We awe at Donald Knuth. I wondered, if I can understand a subject taught by Knuth and derive satisfaction of learning
 something directly from the master. I attended his most recent lecture on "comma free codes", felt that it was

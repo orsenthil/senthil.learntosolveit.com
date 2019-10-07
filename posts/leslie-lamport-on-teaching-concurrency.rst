@@ -1,11 +1,9 @@
 .. title: Leslie Lamport on Teaching Concurrency
 .. slug: leslie-lamport-on-teaching-concurrency
 .. date: 2016-12-20 19:17:54 UTC-08:00
-.. tags: mathjax
-.. category:
-.. link:
-.. description:
+.. tags: 
 .. type: text
+.. has_math: yes
 
 This post is a short discussion on the `Leslie Lamport`_ 's paper "`Teaching Concurrency`_".
 
