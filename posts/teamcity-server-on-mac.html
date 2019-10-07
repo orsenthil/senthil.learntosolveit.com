@@ -110,36 +110,36 @@ PO">
 <ol class="arabic simple">
 <li>Run TeamCity server</li>
 </ol>
-<pre class="code bash"><a name="rest_code_8a7f83f7f8d9416e90171855f4e947b7-1"></a><span class="ch">#!/bin/bash</span>
-<a name="rest_code_8a7f83f7f8d9416e90171855f4e947b7-2"></a>
-<a name="rest_code_8a7f83f7f8d9416e90171855f4e947b7-3"></a><span class="nv">PATH_TO_DATA_DIR</span><span class="o">=</span>/Users/senthil/teamcity/data
-<a name="rest_code_8a7f83f7f8d9416e90171855f4e947b7-4"></a><span class="nv">PATH_TO_LOGS_DIR</span><span class="o">=</span>/Users/senthil/teamcity/logs
-<a name="rest_code_8a7f83f7f8d9416e90171855f4e947b7-5"></a><span class="nv">PORT_HOST</span><span class="o">=</span><span class="m">8111</span>
-<a name="rest_code_8a7f83f7f8d9416e90171855f4e947b7-6"></a>
-<a name="rest_code_8a7f83f7f8d9416e90171855f4e947b7-7"></a>docker run -it --name teamcity-server-instance  <span class="se">\</span>
-<a name="rest_code_8a7f83f7f8d9416e90171855f4e947b7-8"></a>    -v <span class="nv">$PATH_TO_DATA_DIR</span>:/data/teamcity_server/datadir <span class="se">\</span>
-<a name="rest_code_8a7f83f7f8d9416e90171855f4e947b7-9"></a>    -v <span class="nv">$PATH_TO_LOGS_DIR</span>:/opt/teamcity/logs  <span class="se">\</span>
-<a name="rest_code_8a7f83f7f8d9416e90171855f4e947b7-10"></a>    -p <span class="nv">$PORT_HOST</span>:8111 <span class="se">\</span>
-<a name="rest_code_8a7f83f7f8d9416e90171855f4e947b7-11"></a>    jetbrains/teamcity-server
+<pre class="code bash"><a name="rest_code_dd659a92d4db4ae18920e340d6b1020c-1"></a><span class="ch">#!/bin/bash</span>
+<a name="rest_code_dd659a92d4db4ae18920e340d6b1020c-2"></a>
+<a name="rest_code_dd659a92d4db4ae18920e340d6b1020c-3"></a><span class="nv">PATH_TO_DATA_DIR</span><span class="o">=</span>/Users/senthil/teamcity/data
+<a name="rest_code_dd659a92d4db4ae18920e340d6b1020c-4"></a><span class="nv">PATH_TO_LOGS_DIR</span><span class="o">=</span>/Users/senthil/teamcity/logs
+<a name="rest_code_dd659a92d4db4ae18920e340d6b1020c-5"></a><span class="nv">PORT_HOST</span><span class="o">=</span><span class="m">8111</span>
+<a name="rest_code_dd659a92d4db4ae18920e340d6b1020c-6"></a>
+<a name="rest_code_dd659a92d4db4ae18920e340d6b1020c-7"></a>docker run -it --name teamcity-server-instance  <span class="se">\</span>
+<a name="rest_code_dd659a92d4db4ae18920e340d6b1020c-8"></a>    -v <span class="nv">$PATH_TO_DATA_DIR</span>:/data/teamcity_server/datadir <span class="se">\</span>
+<a name="rest_code_dd659a92d4db4ae18920e340d6b1020c-9"></a>    -v <span class="nv">$PATH_TO_LOGS_DIR</span>:/opt/teamcity/logs  <span class="se">\</span>
+<a name="rest_code_dd659a92d4db4ae18920e340d6b1020c-10"></a>    -p <span class="nv">$PORT_HOST</span>:8111 <span class="se">\</span>
+<a name="rest_code_dd659a92d4db4ae18920e340d6b1020c-11"></a>    jetbrains/teamcity-server
 </pre>
 <p>The teamcity server is accessible now at <a class="reference external" href="http://127.0.0.1:8111">http://127.0.0.1:8111</a></p>
 <ol class="arabic simple" start="2">
 <li>Setup a reverse proxy to access that locally.</li>
 </ol>
-<pre class="code bash"><a name="rest_code_2c016e02dca64e37a54241ec947e5798-1"></a>$ cat /etc/apache2/vhosts/teamcity.local.conf
-<a name="rest_code_2c016e02dca64e37a54241ec947e5798-2"></a>&lt;VirtualHost *:80&gt;
-<a name="rest_code_2c016e02dca64e37a54241ec947e5798-3"></a>    ProxyPreserveHost On
-<a name="rest_code_2c016e02dca64e37a54241ec947e5798-4"></a>    ServerName teamcity.local
-<a name="rest_code_2c016e02dca64e37a54241ec947e5798-5"></a>    ProxyPass / http://127.0.0.1:8111/
-<a name="rest_code_2c016e02dca64e37a54241ec947e5798-6"></a>    ProxyPassReverse / http://127.0.0.1:8111/
-<a name="rest_code_2c016e02dca64e37a54241ec947e5798-7"></a>    LogLevel debug
-<a name="rest_code_2c016e02dca64e37a54241ec947e5798-8"></a>&lt;/VirtualHost&gt;
+<pre class="code bash"><a name="rest_code_f285daafe9ce43f8922e00abb67940bb-1"></a>$ cat /etc/apache2/vhosts/teamcity.local.conf
+<a name="rest_code_f285daafe9ce43f8922e00abb67940bb-2"></a>&lt;VirtualHost *:80&gt;
+<a name="rest_code_f285daafe9ce43f8922e00abb67940bb-3"></a>    ProxyPreserveHost On
+<a name="rest_code_f285daafe9ce43f8922e00abb67940bb-4"></a>    ServerName teamcity.local
+<a name="rest_code_f285daafe9ce43f8922e00abb67940bb-5"></a>    ProxyPass / http://127.0.0.1:8111/
+<a name="rest_code_f285daafe9ce43f8922e00abb67940bb-6"></a>    ProxyPassReverse / http://127.0.0.1:8111/
+<a name="rest_code_f285daafe9ce43f8922e00abb67940bb-7"></a>    LogLevel debug
+<a name="rest_code_f285daafe9ce43f8922e00abb67940bb-8"></a>&lt;/VirtualHost&gt;
 </pre>
 <ol class="arabic simple" start="3">
 <li>Setup your <cite>/etc/host</cite> to point <a class="reference external" href="http://teamcity.local">http://teamcity.local</a> to 127.0.0.1:8111</li>
 </ol>
-<pre class="code bash"><a name="rest_code_5802fa9a194f498083173e717f9cf8ea-1"></a>$ cat /etc/hosts <span class="p">|</span>grep teamcity
-<a name="rest_code_5802fa9a194f498083173e717f9cf8ea-2"></a><span class="m">127</span>.0.0.1   teamcity.local
+<pre class="code bash"><a name="rest_code_2b02f5da578c4bae96e04d2b429e1505-1"></a>$ cat /etc/hosts <span class="p">|</span>grep teamcity
+<a name="rest_code_2b02f5da578c4bae96e04d2b429e1505-2"></a><span class="m">127</span>.0.0.1   teamcity.local
 </pre>
 </div>
     </div>
