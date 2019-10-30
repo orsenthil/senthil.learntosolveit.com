@@ -7,11 +7,9 @@
 .. description: 
 .. type: text
 
-I just could not pass up this John Carmack quote.
+I just could not pass on this John Carmack quote.
 
 .. image:: https://dl.dropboxusercontent.com/s/2bumvtuxe3pnz5q/2019-10-17_08-31.png
-   :width: 600
-   :height: 300
 
 
 I found this in the book, Game Engine Black Book ( http://fabiensanglard.net/gebbdoom/ )
