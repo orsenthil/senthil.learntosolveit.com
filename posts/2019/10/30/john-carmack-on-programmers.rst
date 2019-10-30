@@ -1,5 +1,5 @@
-.. title: John Carmarck on programmers
-.. slug: john-carmarck-on-programmers
+.. title: John Carmack on programmers
+.. slug: john-carmack-on-programmers
 .. date: 2019-10-30 14:51:54 UTC-07:00
 .. tags: 
 .. category: 
