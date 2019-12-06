@@ -3,24 +3,23 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Nuclear Gandhi in Civilization V | Senthil Kumaran</title>
+<title>Book Review: Deep Learning Illustrated: A Visual, Interactive Guide to Artificial Intelligence | Senthil Kumaran</title>
 <link href="../../../../assets/css/all-nocdn.css" rel="stylesheet" type="text/css">
 <link href="https://fonts.googleapis.com/css?family=Playfair+Display:700,900" rel="stylesheet">
 <meta name="theme-color" content="#5670d4">
 <meta name="generator" content="Nikola (getnikola.com)">
 <link rel="alternate" type="application/rss+xml" title="RSS" href="../../../../rss.xml">
-<link rel="canonical" href="http://www.xtoinfinity.com/posts/2017/10/21/nuclear-gandhi-in-civilization-v.html">
+<link rel="canonical" href="http://www.xtoinfinity.com/posts/2019/12/05/book-review-deep-learning-illustrated-a-visual-interactive-guide-to-artificial-intelligence.html">
 <!--[if lt IE 9]><script src="../../../../assets/js/html5.js"></script><![endif]--><meta name="author" content="Senthil Kumaran">
-<link rel="prev" href="../20/s-chandrasekhars-107th-birthday.html" title="S. Chandrasekhar's 107th Birthday" type="text/html">
-<link rel="next" href="../26/three-men-in-a-boat.html" title="Book Review: Three Men in a Boat" type="text/html">
+<link rel="prev" href="../../10/30/john-carmack-on-programmers.html" title="John Carmack on programmers" type="text/html">
 <meta property="og:site_name" content="Senthil Kumaran">
-<meta property="og:title" content="Nuclear Gandhi in Civilization V">
-<meta property="og:url" content="http://www.xtoinfinity.com/posts/2017/10/21/nuclear-gandhi-in-civilization-v.html">
-<meta property="og:description" content="It seems like the developers of Civilization V once decided to store aggresiveness index of leaders in a unsigned int.
-And Gandhi, as the most pacifist leader that he was, was assigned lowest number 1">
+<meta property="og:title" content="Book Review: Deep Learning Illustrated: A Visual, Interactive Guide to">
+<meta property="og:url" content="http://www.xtoinfinity.com/posts/2019/12/05/book-review-deep-learning-illustrated-a-visual-interactive-guide-to-artificial-intelligence.html">
+<meta property="og:description" content="Deep Learning Illustrated: A Visual, Interactive Guide to Artificial Intelligence by Jon Krohn
+My rating: 5 of 5 stars
+This book helped me get into Deep Learning. This is a high-level overview that an">
 <meta property="og:type" content="article">
-<meta property="article:published_time" content="2017-10-21T11:44:00-07:00">
-<meta property="article:tag" content="bugs">
+<meta property="article:published_time" content="2019-12-05T16:00:15-08:00">
 </head>
 <body>
 <a href="#content" class="sr-only sr-only-focusable">Skip to main content</a>
@@ -44,7 +43,7 @@ And Gandhi, as the most pacifist leader that he was, was assigned lowest number 
             <div class="col-md-3 justify-content-end align-items-center bs-nav-collapsible collapse flex-collapse bootblog4-right-nav">
             <nav class="navbar navbar-light bg-white"><ul class="navbar-nav bootblog4-right-nav">
 <li class="nav-item">
-    <a href="nuclear-gandhi-in-civilization-v.rst" id="sourcelink" class="nav-link">Source</a>
+    <a href="book-review-deep-learning-illustrated-a-visual-interactive-guide-to-artificial-intelligence.rst" id="sourcelink" class="nav-link">Source</a>
     </li>
 
 
@@ -76,7 +75,7 @@ And Gandhi, as the most pacifist leader that he was, was assigned lowest number 
         <!--Body content-->
         
         
-<article class="post-text h-entry hentry postpage" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title" itemprop="headline name"><a href="#" class="u-url">Nuclear Gandhi in Civilization V</a></h1>
+<article class="post-text h-entry hentry postpage" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title" itemprop="headline name"><a href="#" class="u-url">Book Review: Deep Learning Illustrated: A Visual, Interactive Guide to Artificial Intelligence</a></h1>
 
         <div class="metadata">
             <p class="byline author vcard"><span class="byline-name fn" itemprop="author">
@@ -84,51 +83,29 @@ And Gandhi, as the most pacifist leader that he was, was assigned lowest number 
             </span></p>
             <p class="dateline">
             <a href="#" rel="bookmark">
-            <time class="published dt-published" datetime="2017-10-21T11:44:00-07:00" itemprop="datePublished" title="2017-10-21 11:44">2017-10-21 11:44</time></a>
+            <time class="published dt-published" datetime="2019-12-05T16:00:15-08:00" itemprop="datePublished" title="2019-12-05 16:00">2019-12-05 16:00</time></a>
             </p>
                 <p class="commentline">
         
-    <a href="nuclear-gandhi-in-civilization-v.html#disqus_thread" data-disqus-identifier="cache/posts/2017/10/21/nuclear-gandhi-in-civilization-v.html">Comments</a>
+    <a href="book-review-deep-learning-illustrated-a-visual-interactive-guide-to-artificial-intelligence.html#disqus_thread" data-disqus-identifier="cache/posts/2019/12/05/book-review-deep-learning-illustrated-a-visual-interactive-guide-to-artificial-intelligence.html">Comments</a>
 
 
             
         </p>
-<p class="sourceline"><a href="nuclear-gandhi-in-civilization-v.rst" class="sourcelink">Source</a></p>
+<p class="sourceline"><a href="book-review-deep-learning-illustrated-a-visual-interactive-guide-to-artificial-intelligence.rst" class="sourcelink">Source</a></p>
 
         </div>
         
 
     </header><div class="e-content entry-content" itemprop="articleBody text">
-    <div>
-<p>It seems like the developers of Civilization V once decided to store aggresiveness index of leaders in a unsigned int.
-And Gandhi, as the most pacifist leader that he was, was assigned lowest number 1. Also, in the game play if a society adopted
-democracy, the aggresiveness score was reduced by 2.</p>
-<p>So, when Gandhi adopted democracy, his aggresiveness score became <strong>1 - 2 = -1</strong>, and as it was unsigned int, and it gained a very high value.</p>
-<pre class="code c"><a name="rest_code_08cbc16e58194589ad5ebf91375919e6-1"></a><span class="cp">#include</span><span class="cpf">&lt;stdio.h&gt;</span><span class="cp"></span>
-<a name="rest_code_08cbc16e58194589ad5ebf91375919e6-2"></a>
-<a name="rest_code_08cbc16e58194589ad5ebf91375919e6-3"></a><span class="kt">int</span> <span class="nf">main</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span> <span class="p">{</span>
-<a name="rest_code_08cbc16e58194589ad5ebf91375919e6-4"></a>    <span class="kt">unsigned</span> <span class="kt">int</span> <span class="n">i</span><span class="p">;</span>
-<a name="rest_code_08cbc16e58194589ad5ebf91375919e6-5"></a>    <span class="n">i</span> <span class="o">=</span> <span class="o">-</span><span class="mi">1</span><span class="p">;</span>
-<a name="rest_code_08cbc16e58194589ad5ebf91375919e6-6"></a>    <span class="n">printf</span><span class="p">(</span><span class="s">"%x</span><span class="se">\n</span><span class="s">"</span><span class="p">,</span> <span class="n">i</span><span class="p">);</span>
-<a name="rest_code_08cbc16e58194589ad5ebf91375919e6-7"></a><span class="p">}</span>
-</pre>
-<pre class="code bash"><a name="rest_code_8fea0d5d62e34a51aa4f7e92ce0fc65f-1"></a>$ clang unsigned.c
-<a name="rest_code_8fea0d5d62e34a51aa4f7e92ce0fc65f-2"></a>$ ./a.out
-<a name="rest_code_8fea0d5d62e34a51aa4f7e92ce0fc65f-3"></a><span class="m">4294967295</span>
-</pre>
-<p>And thus Gandhi was ready to nuke whenever there is a conflict.</p>
-<img alt="https://i.kinja-img.com/gawker-media/image/upload/s--4uHRnRfT--/c_fit,fl_progressive,q_80,w_636/dnqxrzdmsdkud7fmsqyp.jpg" src="https://i.kinja-img.com/gawker-media/image/upload/s--4uHRnRfT--/c_fit,fl_progressive,q_80,w_636/dnqxrzdmsdkud7fmsqyp.jpg">
-</div>
+    <span><a href="https://www.goodreads.com/book/show/47573278-deep-learning-illustrated" style="float: left; padding-right: 20px"><img border="0" alt="Deep Learning Illustrated: A Visual, Interactive Guide to Artificial Intelligence (Addison-Wesley Data &amp; Analytics Series)" src="https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1565318155l/47573278._SX98_.jpg"></a><a href="https://www.goodreads.com/book/show/47573278-deep-learning-illustrated">Deep Learning Illustrated: A Visual, Interactive Guide to Artificial Intelligence</a> by <a href="https://www.goodreads.com/author/show/18012942.Jon_Krohn">Jon Krohn</a><br>
+My rating: <a href="https://www.goodreads.com/review/show/3074143623">5 of 5 stars</a><br><br>
+This book helped me get into Deep Learning. This is a high-level overview that any software engineer will desire as we try to understand “this new world” (even as of 2019). The terms in new-world are used in multiple Medium articles, and github.io pages and github.com READMEs, and we wonder what any of these have to do with solving the problem, how does it fit in, etc. This book took a top-down approach to explain it all and help me made sense of every article that I read about Deep Learning, Convolutional Neural Networks, and Artificial Intelligence as of 2019. I like to thank the Authors for their invaluable and accessible contribution to this field of AI and Neural Networks.
+<br><br><a href="https://www.goodreads.com/review/list/1666575-senthil-kumaran">View all my reviews</a></span>
     </div>
-    <aside class="postpromonav"><nav><ul itemprop="keywords" class="tags">
-<li><a class="tag p-category" href="../../../../categories/bugs.html" rel="tag">bugs</a></li>
-        </ul>
-<ul class="pager hidden-print">
+    <aside class="postpromonav"><nav><ul class="pager hidden-print">
 <li class="previous">
-                <a href="../20/s-chandrasekhars-107th-birthday.html" rel="prev" title="S. Chandrasekhar's 107th Birthday">Previous post</a>
-            </li>
-            <li class="next">
-                <a href="../26/three-men-in-a-boat.html" rel="next" title="Book Review: Three Men in a Boat">Next post</a>
+                <a href="../../10/30/john-carmack-on-programmers.html" rel="prev" title="John Carmack on programmers">Previous post</a>
             </li>
         </ul></nav></aside><section class="comments hidden-print"><h2>Comments</h2>
         
@@ -136,9 +113,9 @@ democracy, the aggresiveness score was reduced by 2.</p>
         <div id="disqus_thread"></div>
         <script>
         var disqus_shortname ="xtoinfinity",
-            disqus_url="http://www.xtoinfinity.com/posts/2017/10/21/nuclear-gandhi-in-civilization-v.html",
-        disqus_title="Nuclear Gandhi in Civilization V",
-        disqus_identifier="cache/posts/2017/10/21/nuclear-gandhi-in-civilization-v.html",
+            disqus_url="http://www.xtoinfinity.com/posts/2019/12/05/book-review-deep-learning-illustrated-a-visual-interactive-guide-to-artificial-intelligence.html",
+        disqus_title="Book Review: Deep Learning Illustrated: A Visual, Interactive Guide to Artificial Intelligence",
+        disqus_identifier="cache/posts/2019/12/05/book-review-deep-learning-illustrated-a-visual-interactive-guide-to-artificial-intelligence.html",
         disqus_config = function () {
             this.language = "en";
         };
