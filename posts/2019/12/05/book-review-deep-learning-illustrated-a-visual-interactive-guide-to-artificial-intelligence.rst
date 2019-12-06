@@ -1,4 +1,4 @@
-.. title: Book Review: Deep Learning Illustrated: A Visual, Interactive Guide to Artificial Intelligence
+.. title: Book Review: Deep Learning Illustrated
 .. slug: book-review-deep-learning-illustrated-a-visual-interactive-guide-to-artificial-intelligence
 .. date: 2019-12-05 16:00:15 UTC-08:00
 .. tags: 
