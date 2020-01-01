@@ -106,20 +106,20 @@ $ python classify_image.py --image">
 <p>Followed this <a class="reference external" href="https://www.digitalocean.com/community/tutorials/how-to-install-and-use-tensorflow-on-ubuntu-16-04">digitalocean tutorial on Tensorflow</a> to try an image classification on my computer.</p>
 <p>Tried with a Robot image first.</p>
 <img alt="https://www.robotshop.com/media/catalog/product/cache/15/image/900x900/9df78eab33525d08d6e5fb8d27136e95/e/z/ez-robot-jd-humanoid-robot.jpg" src="https://www.robotshop.com/media/catalog/product/cache/15/image/900x900/9df78eab33525d08d6e5fb8d27136e95/e/z/ez-robot-jd-humanoid-robot.jpg" style="width: 300px; height: 400px;"><p>It couldn't recognize it that well.</p>
-<pre class="code console"><a name="rest_code_56a02a2d11e7402ebd53295dd5f5ad0c-1"></a><span class="gp">$</span> python classify_image.py --image_file ez-robot-jd-humanoid-robot.jpg <span class="m">2</span>&gt;/dev/null
-<a name="rest_code_56a02a2d11e7402ebd53295dd5f5ad0c-2"></a><span class="go">whistle (score = 0.05857)</span>
-<a name="rest_code_56a02a2d11e7402ebd53295dd5f5ad0c-3"></a><span class="go">tripod (score = 0.03762)</span>
-<a name="rest_code_56a02a2d11e7402ebd53295dd5f5ad0c-4"></a><span class="go">microphone, mike (score = 0.03662)</span>
-<a name="rest_code_56a02a2d11e7402ebd53295dd5f5ad0c-5"></a><span class="go">radio, wireless (score = 0.01969)</span>
-<a name="rest_code_56a02a2d11e7402ebd53295dd5f5ad0c-6"></a><span class="go">spotlight, spot (score = 0.01623)</span>
+<pre class="code console"><a name="rest_code_d7aea2360e914961b65e14357e1746a1-1"></a><span class="gp">$</span> python classify_image.py --image_file ez-robot-jd-humanoid-robot.jpg <span class="m">2</span>&gt;/dev/null
+<a name="rest_code_d7aea2360e914961b65e14357e1746a1-2"></a><span class="go">whistle (score = 0.05857)</span>
+<a name="rest_code_d7aea2360e914961b65e14357e1746a1-3"></a><span class="go">tripod (score = 0.03762)</span>
+<a name="rest_code_d7aea2360e914961b65e14357e1746a1-4"></a><span class="go">microphone, mike (score = 0.03662)</span>
+<a name="rest_code_d7aea2360e914961b65e14357e1746a1-5"></a><span class="go">radio, wireless (score = 0.01969)</span>
+<a name="rest_code_d7aea2360e914961b65e14357e1746a1-6"></a><span class="go">spotlight, spot (score = 0.01623)</span>
 </pre>
 <p>But, eureka for Cats!</p>
-<img alt="https://www.petmd.com/sites/default/files/what-does-it-mean-when-cat-wags-tail.jpg" src="https://www.petmd.com/sites/default/files/what-does-it-mean-when-cat-wags-tail.jpg" style="width: 300px; height: 400px;"><pre class="code console"><a name="rest_code_4547aa2ff77f46068c3c1c5f3e752f21-1"></a><span class="gp">$</span> python classify_image.py --image_file what-does-it-mean-when-cat-wags-tail.jpg <span class="m">2</span>&gt;/dev/null
-<a name="rest_code_4547aa2ff77f46068c3c1c5f3e752f21-2"></a><span class="go">tabby, tabby cat (score = 0.51155)</span>
-<a name="rest_code_4547aa2ff77f46068c3c1c5f3e752f21-3"></a><span class="go">Egyptian cat (score = 0.36965)</span>
-<a name="rest_code_4547aa2ff77f46068c3c1c5f3e752f21-4"></a><span class="go">tiger cat (score = 0.06952)</span>
-<a name="rest_code_4547aa2ff77f46068c3c1c5f3e752f21-5"></a><span class="go">lynx, catamount (score = 0.00368)</span>
-<a name="rest_code_4547aa2ff77f46068c3c1c5f3e752f21-6"></a><span class="go">doormat, welcome mat (score = 0.00064)</span>
+<img alt="https://www.petmd.com/sites/default/files/what-does-it-mean-when-cat-wags-tail.jpg" src="https://www.petmd.com/sites/default/files/what-does-it-mean-when-cat-wags-tail.jpg" style="width: 300px; height: 400px;"><pre class="code console"><a name="rest_code_bb78917ee45b46729498cddc051d9ff5-1"></a><span class="gp">$</span> python classify_image.py --image_file what-does-it-mean-when-cat-wags-tail.jpg <span class="m">2</span>&gt;/dev/null
+<a name="rest_code_bb78917ee45b46729498cddc051d9ff5-2"></a><span class="go">tabby, tabby cat (score = 0.51155)</span>
+<a name="rest_code_bb78917ee45b46729498cddc051d9ff5-3"></a><span class="go">Egyptian cat (score = 0.36965)</span>
+<a name="rest_code_bb78917ee45b46729498cddc051d9ff5-4"></a><span class="go">tiger cat (score = 0.06952)</span>
+<a name="rest_code_bb78917ee45b46729498cddc051d9ff5-5"></a><span class="go">lynx, catamount (score = 0.00368)</span>
+<a name="rest_code_bb78917ee45b46729498cddc051d9ff5-6"></a><span class="go">doormat, welcome mat (score = 0.00064)</span>
 </pre>
 </div>
     </div>
