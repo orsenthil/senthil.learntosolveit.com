@@ -35,10 +35,14 @@ There is also famous anecdote associated with Ramanujan, known to many from Sout
 and she gave inspiration for his work.  He mentions that his theorems had come up like a dream, a boon granted by the
 Goddess, and he would write formulae in his book. That's how he invented those theorems.
 
-If it happened like that, imagine how excited young students from Madurai will be, where there a temple every
-hundred feet. :)
+If it happened like that, imagine how excited young students from Madurai will
+be, where there a temple every hundred feet. :) It needs to be clarified that,
+Ramanujan was a genius and he also worked very hard on his subjects.
 
-It needs to be clarified that, Ramanujan was a genius and he also worked very hard on his subjects.
+A better understanding of this phenonmemon, in general, is now known. The style of discovery is called 
+" `diffused mode`_ learning", wherein after an intense work on challenging
+problem, the solution suddenly comes up during a restful time.
+
 
 All these are portrayed well in this movie. The relationship between Hardy and Ramanujan, the scientific culture at
 Trinity College, London revealed in real detail. The movie has a significant portion dealing with how Hardy mentors
@@ -71,3 +75,4 @@ I enjoyed watching this movie and listening to the perspectives associated with 
 .. _Magic Squares: https://nrich.maths.org/1380
 .. _notebooks: http://www.amazon.com/Ramanujans-Notebooks-Bruce-C-Berndt/dp/1461270073/
 .. _online courses: https://youtu.be/h_9WjWENWV8?t=14m48s
+.. _diffused mode: https://www.youtube.com/watch?v=hbRc8uUKSHM
