@@ -45,13 +45,18 @@ to pursue it as it was not suitable for me. In 2012, I almost enrolled in a
 part-time master's program but did not pursue it as it was not Computer
 Science.
 
+.. image:: https://dl.dropbox.com/s/x2x2zyk9rigcxck/IMG_20191213_180112.jpg
+   :align: right
+   :width: 400
+   :height: 600
+
 In 2014, the OMSCS program was launched, and it looked very promising. I
 applied, and I got an admit in its second offering. I took it up. I started my
 classes in Jan 2015, and after taking 13 courses, completed it in December
 2019.  I have a GPA of 3.21.
 
-My significant recollection during this course is my failure (getting a C) in
-Computational Photography due to a mistake I made. I could have been out of the
+My most important learning during this course was my failure (getting a C) in
+Computational Photography due to a mistake I did. I could have been out of the
 program, but I became careful, corrected myself, and retook the course to get B
 grade.
 
@@ -69,11 +74,5 @@ one during this timeframe. I struggled a bit to balance work
 and study but managed to concentrate on work and not let one disturb the plans
 of the other.
 
-.. image:: https://dl.dropbox.com/s/x2x2zyk9rigcxck/IMG_20191213_180112.jpg
-   :align: left
-   :width: 400
-   :height: 600
-
 Finally, we celebrated my graduation with a family trip to Atlanta, and my wife
 Shalini organized a party with our friends.
-
