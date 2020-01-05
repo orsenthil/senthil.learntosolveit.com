@@ -15,8 +15,8 @@
 I graduated from OMSCS, Online Masters in Computer Science Program from Georgia
 Tech. I accomplished my personal goal of a Masters in Computer Science from a
 reputed university.  I got admitted into this program in 2014 and continued to
-take one class per 15-week term. I decided to go a few extra miles by taking
-three classes more than required, and graduated with a specialization in both
+take one class per 15-week term. I decided to do more than required by taking
+three additional classes, and graduated with a specialization in
 "Computational Perception and Robotics," and "Software Systems."
 
 **My journey**
