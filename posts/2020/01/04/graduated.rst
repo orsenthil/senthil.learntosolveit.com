@@ -71,7 +71,33 @@ them to sleep and then return back to my computer for completing the assignments
 In terms of work, I had lost a job, got a new job, and then changed a new
 one during this timeframe. I struggled a bit to balance work
 and study but managed to concentrate on work and not let one disturb the plans
-of the other.
+of the other. I also got promoted twice in the same organization in this time-frame. This was a long pending desire
+and mental block for me, that I had overcome.
+
 
 Finally, we celebrated my graduation with a family trip to Atlanta, and my wife
-Shalini organized a party with our friends.
+Shalini organized a party with our friends. My wife had also requested me to
+give a short speech.  Here is the speech that I shared with my friends.
+
+
+   We can celebrate anything. My wife, Shalini, is organizing this party as she
+   wanted to celebrate my graduation.
+
+   I feel a little awkward and embarrassed to be honest, but I am supporting her
+   just as she helped me throughout this journey. And I want to thank my friends
+   for coming.
+
+   For sharing things that I have learned, I want to talk about the quality of
+   honesty because I think about it a lot.
+
+   It is challenging to keep up with the changes; it is challenging when our
+   desires fail; it becomes challenging to lose opportunities every day.
+   Given all these, I still think that our time and the journey is enjoyable, if
+   on any task we dedicate our time to, we do so with honesty. There is a lot of
+   value in doing things with our bent of mind. Learning, understanding, and then
+   doing things that we like to do.  Failing is okay, and the number of attempts
+   overtime does not matter. The result might be enjoyable, just as I realized
+   that with my graduation.
+
+
+
