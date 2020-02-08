@@ -23,26 +23,24 @@ this. I noticed that Ubuntu since 18.04 had not set my router as the first
 nameserver and thus after pi-hole experiment, my master node lost its
 resolution capability
 
-Fixing the Ubuntu DNS resolution was easy. I followed `this post from datawookie`
+Fixing the Ubuntu DNS resolution was easy. I followed `this post from datawookie`_
 
 
 1. resolvconf package was already installed.
 
 2. Edit /etc/resolvconf/resolv.conf.d/head
 
-```
+::
 
-nameserver <pi-hole-server>
-nameserver 8.8.4.4
-nameserver 8.8.8.8
-
-```
+   nameserver <pi-hole-server>
+   nameserver 8.8.4.4
+   nameserver 8.8.8.8
 
 3. Restart the resolvconf server
 
-```
-sudo service resolvconf restart
-```
+::
+
+   sudo service resolvconf restart
 
 .. _`this post from datawookie`: https://datawookie.netlify.com/blog/2018/10/dns-on-ubuntu-18.04/
 
