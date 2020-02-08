@@ -1,5 +1,43 @@
 <?xml version="1.0" encoding="utf-8"?>
-<?xml-stylesheet type="text/xsl" href="assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Senthil Kumaran</title><link>http://www.xtoinfinity.com/</link><description>Senthil Kumaran</description><atom:link href="http://www.xtoinfinity.com/rss.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><lastBuildDate>Mon, 03 Feb 2020 14:44:33 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Thank you notes for Supporting Science</title><link>http://www.xtoinfinity.com/posts/2020/02/03/thank-you-notes-for-supporting-science.html</link><dc:creator>Senthil Kumaran</dc:creator><description>&lt;div&gt;&lt;p&gt;I had supported this project called &lt;a class="reference external" href="https://www.donorschoose.org/project/modeling-is-key-to-understand-processes/4573244/"&gt;"Modeling Is Key to Understand Processes, Structures and Scales!"&lt;/a&gt; by Mrs.
+<?xml-stylesheet type="text/xsl" href="assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Senthil Kumaran</title><link>http://www.xtoinfinity.com/</link><description>Senthil Kumaran</description><atom:link href="http://www.xtoinfinity.com/rss.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><lastBuildDate>Sat, 08 Feb 2020 14:50:37 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Raspberry Pi Cluster - Fixing DNS Resolv on Master</title><link>http://www.xtoinfinity.com/posts/2020/02/08/raspberry-pi-cluster-fixing-dns-resolv-on-master.html</link><dc:creator>Senthil Kumaran</dc:creator><description>&lt;div&gt;&lt;p&gt;I had setup a raspberry pi cluster, and suddenly the master became
+non-operational. The cluster was able to see itself, but if I login to master
+node, I noticed it was not able communicate externally.&lt;/p&gt;
+&lt;p&gt;The DNS Resolution for any site from master was failing.&lt;/p&gt;
+&lt;p&gt;Then I figured that Ubuntu had made some changes to resolve.conf protocol&lt;/p&gt;
+&lt;p&gt;Ubuntu requested users not to edit /etc/resolv.conf, and it's content on my
+cluster was not something that I wanted.&lt;/p&gt;
+&lt;p&gt;I had setup pihole, and my devices had started to see the internet through
+this. I noticed that Ubuntu since 18.04 had not set my router as the first
+nameserver and thus after pi-hole experiment, my master node lost its
+resolution capability&lt;/p&gt;
+&lt;p&gt;Fixing the Ubuntu DNS resolution was easy. I followed &lt;cite&gt;this post from datawookie&lt;/cite&gt;&lt;/p&gt;
+&lt;ol class="arabic simple"&gt;
+&lt;li&gt;resolvconf package was already installed.&lt;/li&gt;
+&lt;li&gt;Edit /etc/resolvconf/resolv.conf.d/head&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;a href="http://www.xtoinfinity.com/posts/2020/02/08/raspberry-pi-cluster-fixing-dns-resolv-on-master.html#id1"&gt;&lt;span class="problematic" id="id2"&gt;``&lt;/span&gt;&lt;/a&gt;&lt;a href="http://www.xtoinfinity.com/posts/2020/02/08/raspberry-pi-cluster-fixing-dns-resolv-on-master.html#id3"&gt;&lt;span class="problematic" id="id4"&gt;`&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;div class="system-message" id="id1"&gt;
+&lt;p class="system-message-title"&gt;System Message: WARNING/2 (&lt;tt class="docutils"&gt;&amp;lt;string&amp;gt;&lt;/tt&gt;, line 24); &lt;em&gt;&lt;a href="http://www.xtoinfinity.com/posts/2020/02/08/raspberry-pi-cluster-fixing-dns-resolv-on-master.html#id2"&gt;backlink&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;
+Inline literal start-string without end-string.&lt;/div&gt;
+&lt;div class="system-message" id="id3"&gt;
+&lt;p class="system-message-title"&gt;System Message: WARNING/2 (&lt;tt class="docutils"&gt;&amp;lt;string&amp;gt;&lt;/tt&gt;, line 24); &lt;em&gt;&lt;a href="http://www.xtoinfinity.com/posts/2020/02/08/raspberry-pi-cluster-fixing-dns-resolv-on-master.html#id4"&gt;backlink&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;
+Inline interpreted text or phrase reference start-string without end-string.&lt;/div&gt;
+&lt;p&gt;nameserver &amp;lt;pi-hole-server&amp;gt;
+nameserver 8.8.4.4
+nameserver 8.8.8.8&lt;/p&gt;
+&lt;p&gt;&lt;a href="http://www.xtoinfinity.com/posts/2020/02/08/raspberry-pi-cluster-fixing-dns-resolv-on-master.html#id5"&gt;&lt;span class="problematic" id="id6"&gt;``&lt;/span&gt;&lt;/a&gt;&lt;a href="http://www.xtoinfinity.com/posts/2020/02/08/raspberry-pi-cluster-fixing-dns-resolv-on-master.html#id7"&gt;&lt;span class="problematic" id="id8"&gt;`&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;div class="system-message" id="id5"&gt;
+&lt;p class="system-message-title"&gt;System Message: WARNING/2 (&lt;tt class="docutils"&gt;&amp;lt;string&amp;gt;&lt;/tt&gt;, line 30); &lt;em&gt;&lt;a href="http://www.xtoinfinity.com/posts/2020/02/08/raspberry-pi-cluster-fixing-dns-resolv-on-master.html#id6"&gt;backlink&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;
+Inline literal start-string without end-string.&lt;/div&gt;
+&lt;div class="system-message" id="id7"&gt;
+&lt;p class="system-message-title"&gt;System Message: WARNING/2 (&lt;tt class="docutils"&gt;&amp;lt;string&amp;gt;&lt;/tt&gt;, line 30); &lt;em&gt;&lt;a href="http://www.xtoinfinity.com/posts/2020/02/08/raspberry-pi-cluster-fixing-dns-resolv-on-master.html#id8"&gt;backlink&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;
+Inline interpreted text or phrase reference start-string without end-string.&lt;/div&gt;
+&lt;ol class="arabic simple" start="3"&gt;
+&lt;li&gt;Restart the resolvconf server&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;tt class="docutils literal"&gt;`
+sudo service resolvconf restart
+`&lt;/tt&gt;&lt;/p&gt;&lt;/div&gt;</description><guid>http://www.xtoinfinity.com/posts/2020/02/08/raspberry-pi-cluster-fixing-dns-resolv-on-master.html</guid><pubDate>Sat, 08 Feb 2020 14:38:27 GMT</pubDate></item><item><title>Thank you notes for Supporting Science</title><link>http://www.xtoinfinity.com/posts/2020/02/03/thank-you-notes-for-supporting-science.html</link><dc:creator>Senthil Kumaran</dc:creator><description>&lt;div&gt;&lt;p&gt;I had supported this project called &lt;a class="reference external" href="https://www.donorschoose.org/project/modeling-is-key-to-understand-processes/4573244/"&gt;"Modeling Is Key to Understand Processes, Structures and Scales!"&lt;/a&gt; by Mrs.
 Sexton of Montevideo Elementary School for the fifth graders. They had this project going on for the family science
 night in the winter of 2019.&lt;/p&gt;
 &lt;p&gt;On my birthday this year, I received a &lt;a class="reference external" href="https://photos.app.goo.gl/teWivefK8ZZPMJUa7"&gt;ton of thank you notes&lt;/a&gt; for the supporting this project. It felt amazing to
@@ -58,72 +96,4 @@ This book is one of it's kind. I had never come across a topic like this one. It
 &lt;br&gt;&lt;br&gt;
 &lt;a href="https://www.goodreads.com/review/list/1666575-senthil-kumaran"&gt;View all my reviews&lt;/a&gt;&lt;/span&gt;</description><category>books</category><guid>http://www.xtoinfinity.com/posts/2020/01/22/book-review-there-there-by-tommy-orange.html</guid><pubDate>Wed, 22 Jan 2020 12:18:50 GMT</pubDate></item><item><title>Tagore Poem: Dialogue Between Karna and Kunti</title><link>http://www.xtoinfinity.com/posts/2020/01/19/tagore-poem-dialogue-between-karna-and-kunti.html</link><dc:creator>Senthil Kumaran</dc:creator><description>&lt;p&gt;I came across a translated work of Rabindranath Tagore's Poem: &lt;a class="reference external" href="https://parabaas.com/translation/database/translations/poems/RT_Karnakunti.html"&gt;Dialogue Between Karna and Kunti&lt;/a&gt;
 The poem, even the translation captures the emotions between Karna and Kunti very well. We all know about this
-episode of Mahabharata. In every critical interaction, Karna comes out as a highly ethical character.&lt;/p&gt;</description><guid>http://www.xtoinfinity.com/posts/2020/01/19/tagore-poem-dialogue-between-karna-and-kunti.html</guid><pubDate>Sun, 19 Jan 2020 17:54:18 GMT</pubDate></item><item><title>Graduated</title><link>http://www.xtoinfinity.com/posts/2020/01/04/graduated.html</link><dc:creator>Senthil Kumaran</dc:creator><description>&lt;div&gt;&lt;img alt="https://dl.dropboxusercontent.com/s/i6hs7kdz09ylgo3/IMG-20191213-WA0023.jpg" class="align-left" src="https://dl.dropboxusercontent.com/s/i6hs7kdz09ylgo3/IMG-20191213-WA0023.jpg" style="width: 400px; height: 600px;"&gt;
-&lt;p&gt;I graduated from OMSCS, Online Masters in Computer Science Program from Georgia
-Tech. I accomplished my personal goal of a Masters in Computer Science from a
-reputed university.  I got admitted into this program in 2014 and continued to
-take one class per 15-week term. I decided to do more than required by taking
-three additional classes, and graduated with a specialization in
-"Computational Perception and Robotics," and "Software Systems."&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;My journey&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;My desire to do a master's in computer science was one of my first wishes in my
-career.  I did my schooling and college in India. I had missed going to a
-reputed college. So, I started trying to get into a Masters in Computer
-Science. I failed in 2002 in my first attempt. I started working and earning
-money. I took courses and tried again in 2003 and failed. I must have tried yet
-again in 2004 and failed. My understanding of the subjects, and more
-importantly, my planning skills were feeble.&lt;/p&gt;
-&lt;p&gt;I started taking courses as I could not give up on my desire to learn Computer
-Science. I took Continuing Education Proficiency Courses from IISc offered on
-Wednesday evenings. These courses paved the way for me to get into a CPython
-Development through Google Summer of Code program.&lt;/p&gt;
-&lt;p&gt;I had not achieved my desired goal yet. So, I started trying again in 2007. After having
-work experience, having four patents from work, having done part-time courses, I
-applied again. This time for US universities. I tried for 10 universities in
-2007 and got rejected by all of them. In 2008, I tried again for 5 universities
-and got rejected by them. I went for it in 2009 and did not get into any of the
-5 universities.  In 2010, I got one admit through referral, but I decided not
-to pursue it as it was not suitable for me. In 2012, I almost enrolled in a
-part-time master's program but did not pursue it as it was not Computer
-Science.&lt;/p&gt;
-&lt;img alt="https://dl.dropbox.com/s/x2x2zyk9rigcxck/IMG_20191213_180112.jpg" class="align-right" src="https://dl.dropbox.com/s/x2x2zyk9rigcxck/IMG_20191213_180112.jpg" style="width: 400px; height: 600px;"&gt;
-&lt;p&gt;In 2014, the OMSCS program was launched, and it looked very promising. I
-applied, and I got an admit in its second offering. I took it up. I started my
-classes in Jan 2015, and after taking 13 courses, completed it in December
-2019.  I have a GPA of 3.21.&lt;/p&gt;
-&lt;p&gt;My most important learning during this course was my failure (getting a C) in
-Computational Photography due to a mistake I did. I could have been out of the
-program, but I became careful, corrected myself, and retook the course to get B
-grade.&lt;/p&gt;
-&lt;p&gt;The experience has shaped me well as a person. The journey was fun, eventful.
-My family, my wife, Shalini, supported me a lot. She would regularly check-in
-with my plans and plan our social outings accordingly.&lt;/p&gt;
-&lt;p&gt;We had celebrated our first Kid, Siddhartha's 1st birthday, when I had started
-this program. We had our second kid, Saharsha, while I was doing the courses.
-Keeping them entertained while doing masters is challenging.  I used to put
-them to sleep and then return back to my computer for completing the assignments.&lt;/p&gt;
-&lt;p&gt;In terms of work, I had lost a job, got a new job, and then changed a new
-one during this timeframe. I struggled a bit to balance work
-and study but managed to concentrate on work and not let one disturb the plans
-of the other. I also got promoted twice in the same organization in this time-frame. This was a long pending desire
-and mental block for me, that I had overcome.&lt;/p&gt;
-&lt;p&gt;Finally, we celebrated my graduation with a family trip to Atlanta, and my wife
-Shalini organized a party with our friends. My wife had also requested me to
-give a short speech.  Here is the speech that I shared with my friends.&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;We can celebrate anything. My wife, Shalini, is organizing this party as she
-wanted to celebrate my graduation.&lt;/p&gt;
-&lt;p&gt;I feel a little awkward and embarrassed to be honest, but I am supporting her
-just as she helped me throughout this journey. And I want to thank my friends
-for coming.&lt;/p&gt;
-&lt;p&gt;For sharing things that I have learned, I want to talk about the quality of
-honesty because I think about it a lot.&lt;/p&gt;
-&lt;p&gt;It is challenging to keep up with the changes; it is challenging when our
-desires fail; it becomes challenging to lose opportunities every day.
-Given all these, I still think that our time and the journey is enjoyable, if
-on any task we dedicate our time to, we do so with honesty. There is a lot of
-value in doing things with our bent of mind. Learning, understanding, and then
-doing things that we like to do.  Failing is okay, and the number of attempts
-overtime does not matter. The result might be enjoyable, just as I realized
-that with my graduation.&lt;/p&gt;
-&lt;/blockquote&gt;&lt;/div&gt;</description><guid>http://www.xtoinfinity.com/posts/2020/01/04/graduated.html</guid><pubDate>Sun, 05 Jan 2020 07:09:10 GMT</pubDate></item></channel></rss>
+episode of Mahabharata. In every critical interaction, Karna comes out as a highly ethical character.&lt;/p&gt;</description><guid>http://www.xtoinfinity.com/posts/2020/01/19/tagore-poem-dialogue-between-karna-and-kunti.html</guid><pubDate>Sun, 19 Jan 2020 17:54:18 GMT</pubDate></item></channel></rss>
