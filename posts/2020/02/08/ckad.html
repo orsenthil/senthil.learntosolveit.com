@@ -3,24 +3,24 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Raspberry Pi Cluster - Fixing DNS Resolv on Master | Senthil Kumaran</title>
+<title>CKAD | Senthil Kumaran</title>
 <link href="../../../../assets/css/all-nocdn.css" rel="stylesheet" type="text/css">
 <link href="https://fonts.googleapis.com/css?family=Playfair+Display:700,900" rel="stylesheet">
 <meta name="theme-color" content="#5670d4">
 <meta name="generator" content="Nikola (getnikola.com)">
 <link rel="alternate" type="application/rss+xml" title="RSS" href="../../../../rss.xml">
-<link rel="canonical" href="http://www.xtoinfinity.com/posts/2020/02/08/raspberry-pi-cluster-fixing-dns-resolv-on-master.html">
+<link rel="canonical" href="http://www.xtoinfinity.com/posts/2020/02/08/ckad.html">
 <!--[if lt IE 9]><script src="../../../../assets/js/html5.js"></script><![endif]--><meta name="author" content="Senthil Kumaran">
-<link rel="prev" href="../03/thank-you-notes-for-supporting-science.html" title="Thank you notes for Supporting Science" type="text/html">
-<link rel="next" href="ckad.html" title="CKAD" type="text/html">
+<link rel="prev" href="raspberry-pi-cluster-fixing-dns-resolv-on-master.html" title="Raspberry Pi Cluster - Fixing DNS Resolv on Master" type="text/html">
 <meta property="og:site_name" content="Senthil Kumaran">
-<meta property="og:title" content="Raspberry Pi Cluster - Fixing DNS Resolv on Master">
-<meta property="og:url" content="http://www.xtoinfinity.com/posts/2020/02/08/raspberry-pi-cluster-fixing-dns-resolv-on-master.html">
-<meta property="og:description" content="I had setup a raspberry pi cluster, and suddenly the master became
-non-operational. The cluster was able to see itself, but if I login to master
-node, I noticed it was not able communicate externally.">
+<meta property="og:title" content="CKAD">
+<meta property="og:url" content="http://www.xtoinfinity.com/posts/2020/02/08/ckad.html">
+<meta property="og:description" content="I cleared the CKAD exam.
+
+I took 3 attempts to clear this exam. In my first attemp, I had forgotten the concepts.
+I was not very confident during 2nd, and prepared well for the 3rd attempt to clear it">
 <meta property="og:type" content="article">
-<meta property="article:published_time" content="2020-02-08T06:38:27-08:00">
+<meta property="article:published_time" content="2020-02-08T21:34:32-08:00">
 </head>
 <body>
 <a href="#content" class="sr-only sr-only-focusable">Skip to main content</a>
@@ -44,7 +44,7 @@ node, I noticed it was not able communicate externally.">
             <div class="col-md-3 justify-content-end align-items-center bs-nav-collapsible collapse flex-collapse bootblog4-right-nav">
             <nav class="navbar navbar-light bg-white"><ul class="navbar-nav bootblog4-right-nav">
 <li class="nav-item">
-    <a href="raspberry-pi-cluster-fixing-dns-resolv-on-master.rst" id="sourcelink" class="nav-link">Source</a>
+    <a href="ckad.rst" id="sourcelink" class="nav-link">Source</a>
     </li>
 
 
@@ -76,7 +76,7 @@ node, I noticed it was not able communicate externally.">
         <!--Body content-->
         
         
-<article class="post-text h-entry hentry postpage" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title" itemprop="headline name"><a href="#" class="u-url">Raspberry Pi Cluster - Fixing DNS Resolv on Master</a></h1>
+<article class="post-text h-entry hentry postpage" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title" itemprop="headline name"><a href="#" class="u-url">CKAD</a></h1>
 
         <div class="metadata">
             <p class="byline author vcard"><span class="byline-name fn" itemprop="author">
@@ -84,57 +84,32 @@ node, I noticed it was not able communicate externally.">
             </span></p>
             <p class="dateline">
             <a href="#" rel="bookmark">
-            <time class="published dt-published" datetime="2020-02-08T06:38:27-08:00" itemprop="datePublished" title="2020-02-08 06:38">2020-02-08 06:38</time></a>
+            <time class="published dt-published" datetime="2020-02-08T21:34:32-08:00" itemprop="datePublished" title="2020-02-08 21:34">2020-02-08 21:34</time></a>
             </p>
                 <p class="commentline">
         
-    <a href="raspberry-pi-cluster-fixing-dns-resolv-on-master.html#disqus_thread" data-disqus-identifier="cache/posts/2020/02/08/raspberry-pi-cluster-fixing-dns-resolv-on-master.html">Comments</a>
+    <a href="ckad.html#disqus_thread" data-disqus-identifier="cache/posts/2020/02/08/ckad.html">Comments</a>
 
 
             
         </p>
-<p class="sourceline"><a href="raspberry-pi-cluster-fixing-dns-resolv-on-master.rst" class="sourcelink">Source</a></p>
+<p class="sourceline"><a href="ckad.rst" class="sourcelink">Source</a></p>
 
         </div>
         
 
     </header><div class="e-content entry-content" itemprop="articleBody text">
     <div>
-<p>I had setup a raspberry pi cluster, and suddenly the master became
-non-operational. The cluster was able to see itself, but if I login to master
-node, I noticed it was not able communicate externally.</p>
-<p>The DNS Resolution for any site from master was failing.</p>
-<p>Then I figured that Ubuntu had made some changes to resolve.conf protocol</p>
-<p>Ubuntu requested users not to edit /etc/resolv.conf, and it's content on my
-cluster was not something that I wanted.</p>
-<p>I had setup pihole, and my devices had started to see the internet through
-this. I noticed that Ubuntu since 18.04 had not set my router as the first
-nameserver and thus after pi-hole experiment, my master node lost its
-resolution capability</p>
-<p>Fixing the Ubuntu DNS resolution was easy. I followed <a class="reference external" href="https://datawookie.netlify.com/blog/2018/10/dns-on-ubuntu-18.04/">this post from datawookie</a></p>
-<ol class="arabic simple">
-<li>resolvconf package was already installed.</li>
-<li>Edit /etc/resolvconf/resolv.conf.d/head</li>
-</ol>
-<pre class="literal-block">
-nameserver &lt;pi-hole-server&gt;
-nameserver 8.8.4.4
-nameserver 8.8.8.8
-</pre>
-<ol class="arabic simple" start="3">
-<li>Restart the resolvconf server</li>
-</ol>
-<pre class="literal-block">
-sudo service resolvconf restart
-</pre>
+<p>I cleared the CKAD exam.</p>
+<img alt="https://i.imgur.com/7IP1xMy.png" src="https://i.imgur.com/7IP1xMy.png"><p>I took 3 attempts to clear this exam. In my first attemp, I had forgotten the concepts.
+I was not very confident during 2nd, and prepared well for the 3rd attempt to clear it.</p>
+<p>I read "Kubernetes from Ground Up" again. Practised and "understood" the concepts better.
+With all these, the tests were actually very enjoyable.</p>
 </div>
     </div>
     <aside class="postpromonav"><nav><ul class="pager hidden-print">
 <li class="previous">
-                <a href="../03/thank-you-notes-for-supporting-science.html" rel="prev" title="Thank you notes for Supporting Science">Previous post</a>
-            </li>
-            <li class="next">
-                <a href="ckad.html" rel="next" title="CKAD">Next post</a>
+                <a href="raspberry-pi-cluster-fixing-dns-resolv-on-master.html" rel="prev" title="Raspberry Pi Cluster - Fixing DNS Resolv on Master">Previous post</a>
             </li>
         </ul></nav></aside><section class="comments hidden-print"><h2>Comments</h2>
         
@@ -142,9 +117,9 @@ sudo service resolvconf restart
         <div id="disqus_thread"></div>
         <script>
         var disqus_shortname ="xtoinfinity",
-            disqus_url="http://www.xtoinfinity.com/posts/2020/02/08/raspberry-pi-cluster-fixing-dns-resolv-on-master.html",
-        disqus_title="Raspberry Pi Cluster - Fixing DNS Resolv on Master",
-        disqus_identifier="cache/posts/2020/02/08/raspberry-pi-cluster-fixing-dns-resolv-on-master.html",
+            disqus_url="http://www.xtoinfinity.com/posts/2020/02/08/ckad.html",
+        disqus_title="CKAD",
+        disqus_identifier="cache/posts/2020/02/08/ckad.html",
         disqus_config = function () {
             this.language = "en";
         };
