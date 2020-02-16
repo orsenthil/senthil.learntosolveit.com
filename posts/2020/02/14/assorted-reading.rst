@@ -9,7 +9,6 @@
 
 
 `Time safety is more important than memory safety`_
----------------------------------------------------
 
 .. admonition:: time safety
 
@@ -32,7 +31,6 @@ Choose to experiment, but build something that lasts.
 ----
 
 `OpenSSH 8.2 released`_
------------------------
 
 .. admonition:: rsa compromise
 
@@ -61,7 +59,6 @@ SHA-2, ED25519, and ECDSA.
 ----
 
 `Frank Ramsey - A Genius By All Tests for Genius`_
---------------------------------------------------
 
 .. admonition:: genius
 
@@ -78,7 +75,6 @@ An article about polymath Ramsey who contributed to the field of mathematics, co
 
 
 `Thinking Of Mathematics — An Essay On Eyes-free Computing`_
-------------------------------------------------------------
 
 .. admonition:: once a mathematician, always a mathematician
 
@@ -133,7 +129,6 @@ it, it was the verification stage.
 ----
 
 `Humans should learn Maths`_
-----------------------------
 
 .. admonition:: definitions of maths, science and computing
 
@@ -168,7 +163,6 @@ Author's writing, explanation and choice of words are excellent.
 ----
 
 `2014-02-07 Why programming is difficult - Joe Armstrong`_
-----------------------------------------------------------
 
 
 .. admonition:: what makes programming difficult
@@ -194,14 +188,12 @@ The article is hilarious and very deep. I could sense Joe Armstrong's humility i
 ----
 
 `Firefox Multicontainer Accounts`_
-----------------------------------
 
 This is the equivalent to Google Chrome profiles that I was looking.
 
 ----
 
 `Gears by Bartosz Ciechanowski`_
---------------------------------
 
 Very detailed, step-by-step explanation and interactive demo on how Gears work. I was wondering if the animation is
 available via a javascript library. It seems author wrote both the js, css himself to write this article. He is a gem.

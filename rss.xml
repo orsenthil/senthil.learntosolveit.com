@@ -1,6 +1,95 @@
 <?xml version="1.0" encoding="utf-8"?>
-<?xml-stylesheet type="text/xsl" href="assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Senthil Kumaran</title><link>http://www.xtoinfinity.com/</link><description>Senthil Kumaran</description><atom:link href="http://www.xtoinfinity.com/rss.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><lastBuildDate>Sat, 15 Feb 2020 15:35:56 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Reading List : Memory Safety, RSA, Maths, and Learning</title><link>http://www.xtoinfinity.com/posts/2020/02/14/assorted-reading.html</link><dc:creator>Senthil Kumaran</dc:creator><description>&lt;div&gt;&lt;div class="section" id="time-safety-is-more-important-than-memory-safety"&gt;
-&lt;h2&gt;&lt;a class="reference external" href="https://halestrom.net/darksleep/blog/036_timesafety/"&gt;Time safety is more important than memory safety&lt;/a&gt;&lt;/h2&gt;
+<?xml-stylesheet type="text/xsl" href="assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Senthil Kumaran</title><link>http://www.xtoinfinity.com/</link><description>Senthil Kumaran</description><atom:link href="http://www.xtoinfinity.com/rss.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><lastBuildDate>Sun, 16 Feb 2020 01:55:42 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Reading List: Interviews</title><link>http://www.xtoinfinity.com/posts/2020/02/15/reading-list-interviews.html</link><dc:creator>Senthil Kumaran</dc:creator><description>&lt;div&gt;&lt;p&gt;&lt;a class="reference external" href="https://www.jarednelsen.dev/posts/The-horrifically-dystopian-world-of-software-engineering-interviews"&gt;The Horrifically Dystopian World of Software Engineering Interviews&lt;/a&gt;&lt;/p&gt;
+&lt;div class="admonition admonition-job-search"&gt;
+&lt;p class="first admonition-title"&gt;job search&lt;/p&gt;
+&lt;p class="last"&gt;I could go on bemoaning the many disappointing experiences I had on this
+slog of a job search. There were many of them. 23 interviews and I didn’t
+get a single offer. I have always sought to be completely honest and humble
+with myself and others about my abilities.&lt;/p&gt;
+&lt;/div&gt;
+&lt;p&gt;I had a similar experience after getting fired from twitter. I attend 20-30 interviews and I managed to clear one.
+The experience frustrated me to no end.&lt;/p&gt;
+&lt;p&gt;My personal experience at Square interview was one of humiliation. I was escorted out after the 1st round as I could
+not write code.&lt;/p&gt;
+&lt;div class="admonition admonition-cottage-industry"&gt;
+&lt;p class="first admonition-title"&gt;cottage industry&lt;/p&gt;
+&lt;p class="last"&gt;There is a cottage industry springing up around passing interviews - All of
+this algorithm challenge hubub started with popular companies like Google.
+There were several engineers who worked at these popular tech companies that
+saw an opportunity to make a few bucks be offering prep material. There were
+two influential books written on the subject: Cracking the Coding Interview and
+Elements of Programming Interviews. Both of these books offer guided interview
+preparation material. The problem is that the industry got a hold of these
+books and tailored their interviews to the book’s material.&lt;/p&gt;
+&lt;/div&gt;
+&lt;p&gt;This is real. So many start-ups help you prepare for the interview.&lt;/p&gt;
+&lt;div class="admonition admonition-acceptance"&gt;
+&lt;p class="first admonition-title"&gt;Acceptance&lt;/p&gt;
+&lt;p class="last"&gt;Complaining about it wont do any good.  - Sooner or later I’m going to have to
+get another job. Even if I don’t like the methodology, I am going to have to go
+through the loop again.&lt;/p&gt;
+&lt;/div&gt;
+&lt;p&gt;The final conclusions makes it a balanced article, in my opinion.&lt;/p&gt;
+&lt;p&gt;There is no good way to find the right candidates. These interviews of-course help test if the candidate can code,
+has prepared for the interview and is taking the process seriously. I am with this process until we find a better one.&lt;/p&gt;
+&lt;hr class="docutils"&gt;
+&lt;p&gt;&lt;a class="reference external" href="https://www.usenix.org/legacy/event/usenix10/tech/full_papers/Hunt.pdf"&gt;ZooKeeper- Wait-free coordination for Internet-scale systems&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;By Patrick Hunt and Mahadev Konar of Yahoo! Grid and Flavio P. Junqueira and Benjamin Reed of Yahoo! Research&lt;/p&gt;
+&lt;div class="admonition admonition-wait-free"&gt;
+&lt;p class="first admonition-title"&gt;wait-free&lt;/p&gt;
+&lt;p class="last"&gt;Our system,  Zookeeper,hence implements an API that manipulates
+simple wait-free data objects organized hierarchically as in file systems.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="admonition admonition-linearizable-writes"&gt;
+&lt;p class="first admonition-title"&gt;Linearizable writes&lt;/p&gt;
+&lt;p class="last"&gt;With ZooKeeper, we are able to implement all coordination primitives that our applications require, even though
+only writes are linearizable.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="admonition admonition-ordering-gaurantees"&gt;
+&lt;p class="first admonition-title"&gt;Ordering Gaurantees&lt;/p&gt;
+&lt;p&gt;ZooKeeper has two basic ordering guarantees.&lt;/p&gt;
+&lt;p&gt;Linearizable writes: All requests that update the state of  ZooKeeper  are
+serializable  and  respect precedence.&lt;/p&gt;
+&lt;p class="last"&gt;FIFO client order: All requests from a given client are executed  in the
+order  that  they  were  sent  by  the client.&lt;/p&gt;
+&lt;/div&gt;
+&lt;p&gt;The important design of the Zookeeper was in the Client API used by the clients, server is a well defined architecture.&lt;/p&gt;
+&lt;p&gt;I used Zookeeper for the Packer service, which is a service to manage artifacts on Aurora scheduler (on Mesos)  at
+twitter. ZK was used along with hadoop for storing package metadata. This was overkill for simple operation, and it
+was decided migrate the service from ZK to a relational database like MySQL.&lt;/p&gt;
+&lt;p&gt;I had worked on the client of this service in python and also wrote certain parts the migration client in java.&lt;/p&gt;
+&lt;hr class="docutils"&gt;
+&lt;div class="section" id="byzantine-fault-tolerance"&gt;
+&lt;h2&gt;Byzantine Fault Tolerance&lt;/h2&gt;
+&lt;p&gt;Zookeeper is not Byzantine Fault Tolerant. Author say for the production uses they have have not observed the failure
+that could have been prevented by &lt;em&gt;then&lt;/em&gt; proposed systems to make Zookeeper Byzantine Fault Tolerant.&lt;/p&gt;
+&lt;div class="youtube-video"&gt;
+&lt;iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/dfsRQyYXOsQ?rel=0&amp;amp;wmode=transparent" frameborder="0" allow="encrypted-media" allowfullscreen&gt;&lt;/iframe&gt;
+&lt;/div&gt;&lt;/div&gt;
+&lt;hr class="docutils"&gt;
+&lt;div class="section" id="chubby"&gt;
+&lt;h2&gt;Chubby&lt;/h2&gt;
+&lt;p&gt;&lt;a class="reference external" href="https://static.googleusercontent.com/media/research.google.com/en//archive/chubby-osdi06.pdf"&gt;The Chubby lock service for loosely-coupled distributed systems&lt;/a&gt; By Mike Burrows, Google Inc&lt;/p&gt;
+&lt;div class="admonition admonition-intended-use"&gt;
+&lt;p class="first admonition-title"&gt;intended use&lt;/p&gt;
+&lt;p class="last"&gt;It is intended for use within a loosely-coupled distributed system consisting
+of moderately large numbers of small machines connected by a high-speed
+network. For example, a Chubby instance (also known as a Chubby cell) might
+serve ten thousand 4-processor machines connected by 1Gbit/s Ethernet. Most
+Chubby cells are confined to a single data centre or machine room, though we do
+run at least one Chubby cell whose replicas are separated by thousands of
+kilometres.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="admonition admonition-backup"&gt;
+&lt;p class="first admonition-title"&gt;backup&lt;/p&gt;
+&lt;p class="last"&gt;Every few hours, the master of each Chubby cell writes a snapshot of its
+database to a GFS file server in a different building. The use of a
+separate building ensures both that the backup will survive building damage,
+and that the backups introduce no cyclic dependencies in the system; a GFS cell
+in the same building potentially might rely on the Chubby cell for electing its
+master.&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;/div&gt;</description><category>distributed systems</category><category>interviews</category><guid>http://www.xtoinfinity.com/posts/2020/02/15/reading-list-interviews.html</guid><pubDate>Sat, 15 Feb 2020 15:53:43 GMT</pubDate></item><item><title>Reading List : Memory Safety, RSA, Maths, and Learning</title><link>http://www.xtoinfinity.com/posts/2020/02/14/assorted-reading.html</link><dc:creator>Senthil Kumaran</dc:creator><description>&lt;div&gt;&lt;p&gt;&lt;a class="reference external" href="https://halestrom.net/darksleep/blog/036_timesafety/"&gt;Time safety is more important than memory safety&lt;/a&gt;&lt;/p&gt;
 &lt;div class="admonition admonition-time-safety"&gt;
 &lt;p class="first admonition-title"&gt;time safety&lt;/p&gt;
 &lt;p class="last"&gt;I see choosing "new" languages (or frameworks) as very risky propositions to
@@ -16,10 +105,8 @@ small modification. It's not perfect, but C is much more likely to be the
 &lt;p&gt;Argues that we spend time quickly adopting new languages and frameworks, take it for granted that anything we write
 will be short-lived. Author argues that it is wrong philosophy to adopt, and I agree with him.&lt;/p&gt;
 &lt;p&gt;Choose to experiment, but build something that lasts.&lt;/p&gt;
-&lt;/div&gt;
 &lt;hr class="docutils"&gt;
-&lt;div class="section" id="openssh-8-2-released"&gt;
-&lt;h2&gt;&lt;a class="reference external" href="https://lists.mindrot.org/pipermail/openssh-unix-announce/2020-February/000138.html"&gt;OpenSSH 8.2 released&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;&lt;a class="reference external" href="https://lists.mindrot.org/pipermail/openssh-unix-announce/2020-February/000138.html"&gt;OpenSSH 8.2 released&lt;/a&gt;&lt;/p&gt;
 &lt;div class="admonition admonition-rsa-compromise"&gt;
 &lt;p class="first admonition-title"&gt;rsa compromise&lt;/p&gt;
 &lt;p&gt;It is now possible[1] to perform chosen-prefix attacks against the
@@ -39,10 +126,8 @@ have been supported by OpenSSH since release 5.7.&lt;/p&gt;
 &lt;/div&gt;
 &lt;p&gt;We definitely need a better name for these algorithms. RSA, the term, is so much easier to remember and associate than
 SHA-2, ED25519, and ECDSA.&lt;/p&gt;
-&lt;/div&gt;
 &lt;hr class="docutils"&gt;
-&lt;div class="section" id="frank-ramsey-a-genius-by-all-tests-for-genius"&gt;
-&lt;h2&gt;&lt;a class="reference external" href="https://hnn.us/article/174250"&gt;Frank Ramsey - A Genius By All Tests for Genius&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;&lt;a class="reference external" href="https://hnn.us/article/174250"&gt;Frank Ramsey - A Genius By All Tests for Genius&lt;/a&gt;&lt;/p&gt;
 &lt;div class="admonition admonition-genius"&gt;
 &lt;p class="first admonition-title"&gt;genius&lt;/p&gt;
 &lt;p&gt;Ramsey did all this, and more, in an alarmingly short lifespan. He died at the
@@ -52,10 +137,8 @@ contracted by swimming in the river Cam.&lt;/p&gt;
 the good life was to be found within our human, fallible, ways of being.&lt;/p&gt;
 &lt;/div&gt;
 &lt;p&gt;An article about polymath Ramsey who contributed to the field of mathematics, computer science, economics and otherss&lt;/p&gt;
-&lt;/div&gt;
 &lt;hr class="docutils"&gt;
-&lt;div class="section" id="thinking-of-mathematics-an-essay-on-eyes-free-computing"&gt;
-&lt;h2&gt;&lt;a class="reference external" href="http://emacspeak.sourceforge.net/raman/publications/thinking-of-math/thinking-of-math.html"&gt;Thinking Of Mathematics — An Essay On Eyes-free Computing&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;&lt;a class="reference external" href="http://emacspeak.sourceforge.net/raman/publications/thinking-of-math/thinking-of-math.html"&gt;Thinking Of Mathematics — An Essay On Eyes-free Computing&lt;/a&gt;&lt;/p&gt;
 &lt;div class="admonition admonition-once-a-mathematician-always-a-mathematician"&gt;
 &lt;p class="first admonition-title"&gt;once a mathematician, always a mathematician&lt;/p&gt;
 &lt;p&gt;At its heart, mathematics is about understanding the underlying structure
@@ -96,10 +179,8 @@ Yashwant Kanetkar book.&lt;/p&gt;
 &lt;p&gt;As I recollect, I think, I had a good saturation phase in reading the "Let us C" book by reading, reviewing.
 Incubation by trial and errors, and development of the game itself was illumninatiom and when I let my friends play
 it, it was the verification stage.&lt;/p&gt;
-&lt;/div&gt;
 &lt;hr class="docutils"&gt;
-&lt;div class="section" id="humans-should-learn-maths"&gt;
-&lt;h2&gt;&lt;a class="reference external" href="https://scattered-thoughts.net/writing/humans-should-learn-maths/"&gt;Humans should learn Maths&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;&lt;a class="reference external" href="https://scattered-thoughts.net/writing/humans-should-learn-maths/"&gt;Humans should learn Maths&lt;/a&gt;&lt;/p&gt;
 &lt;div class="admonition admonition-definitions-of-maths-science-and-computing"&gt;
 &lt;p class="first admonition-title"&gt;definitions of maths, science and computing&lt;/p&gt;
 &lt;p&gt;Writing: a means to store knowledge in a brain-independent form that can be easily replicated, transmitted and preserved&lt;/p&gt;
@@ -121,10 +202,8 @@ maintenance required to remember them and the amount of effort it takes to
 apply them. Prefer ideas that have a high power-to-cost ratio.&lt;/p&gt;
 &lt;/div&gt;
 &lt;p&gt;Author's writing, explanation and choice of words are excellent.&lt;/p&gt;
-&lt;/div&gt;
 &lt;hr class="docutils"&gt;
-&lt;div class="section" id="why-programming-is-difficult-joe-armstrong"&gt;
-&lt;h2&gt;&lt;a class="reference external" href="https://joearms.github.io/#2014-02-07%20Why%20programming%20is%20difficult"&gt;2014-02-07 Why programming is difficult - Joe Armstrong&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;&lt;a class="reference external" href="https://joearms.github.io/#2014-02-07%20Why%20programming%20is%20difficult"&gt;2014-02-07 Why programming is difficult - Joe Armstrong&lt;/a&gt;&lt;/p&gt;
 &lt;div class="admonition admonition-what-makes-programming-difficult"&gt;
 &lt;p class="first admonition-title"&gt;what makes programming difficult&lt;/p&gt;
 &lt;p&gt;There are three other things that make programming difficult:&lt;/p&gt;
@@ -144,18 +223,13 @@ trembling fingers enter the magic spell that will remove the curse, and ...
 nothing. The problem remains.&lt;/p&gt;
 &lt;/div&gt;
 &lt;p&gt;The article is hilarious and very deep. I could sense Joe Armstrong's humility in this writing.&lt;/p&gt;
-&lt;/div&gt;
 &lt;hr class="docutils"&gt;
-&lt;div class="section" id="firefox-multicontainer-accounts"&gt;
-&lt;h2&gt;&lt;a class="reference external" href="https://addons.mozilla.org/en-US/firefox/addon/multi-account-containers/"&gt;Firefox Multicontainer Accounts&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;&lt;a class="reference external" href="https://addons.mozilla.org/en-US/firefox/addon/multi-account-containers/"&gt;Firefox Multicontainer Accounts&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;This is the equivalent to Google Chrome profiles that I was looking.&lt;/p&gt;
-&lt;/div&gt;
 &lt;hr class="docutils"&gt;
-&lt;div class="section" id="gears-by-bartosz-ciechanowski"&gt;
-&lt;h2&gt;&lt;a class="reference external" href="https://ciechanow.ski/gears/"&gt;Gears by Bartosz Ciechanowski&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;&lt;a class="reference external" href="https://ciechanow.ski/gears/"&gt;Gears by Bartosz Ciechanowski&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;Very detailed, step-by-step explanation and interactive demo on how Gears work. I was wondering if the animation is
-available via a javascript library. It seems author wrote both the js, css himself to write this article. He is a gem.&lt;/p&gt;
-&lt;/div&gt;&lt;/div&gt;</description><guid>http://www.xtoinfinity.com/posts/2020/02/14/assorted-reading.html</guid><pubDate>Fri, 14 Feb 2020 10:51:32 GMT</pubDate></item><item><title>CKAD</title><link>http://www.xtoinfinity.com/posts/2020/02/08/ckad.html</link><dc:creator>Senthil Kumaran</dc:creator><description>&lt;div&gt;&lt;p&gt;I cleared the CKAD exam.&lt;/p&gt;
+available via a javascript library. It seems author wrote both the js, css himself to write this article. He is a gem.&lt;/p&gt;&lt;/div&gt;</description><guid>http://www.xtoinfinity.com/posts/2020/02/14/assorted-reading.html</guid><pubDate>Fri, 14 Feb 2020 10:51:32 GMT</pubDate></item><item><title>CKAD</title><link>http://www.xtoinfinity.com/posts/2020/02/08/ckad.html</link><dc:creator>Senthil Kumaran</dc:creator><description>&lt;div&gt;&lt;p&gt;I cleared the CKAD exam.&lt;/p&gt;
 &lt;img alt="https://i.imgur.com/7IP1xMy.png" src="https://i.imgur.com/7IP1xMy.png"&gt;
 &lt;p&gt;I took 3 attempts to clear this exam. In my first attemp, I had forgotten the concepts.
 I was not very confident during 2nd, and prepared well for the 3rd attempt to clear it.&lt;/p&gt;
@@ -235,8 +309,4 @@ Mr. Milne-Edwards! Ah! Mr. de Quatrefages, how I wish you were standing here at 
 My rating: &lt;a href="https://www.goodreads.com/review/show/3151562925"&gt;5 of 5 stars&lt;/a&gt;&lt;br&gt;&lt;br&gt;
 I really enjoyed reading Samhita Arni's take on Ramayana, Sita's Ramayana, the story of Ramayana entirely narrated by Sita. It gives a new perspective to the entire story, while not-at-all deviating from the plot and details of the story. &lt;br&gt;&lt;br&gt;As a reader who is familiar with the story, I picked up this book with a notion of what I can expect. However, I was still surprised and thoroughly enjoyed reading this story presented by an excellent writer (Samhita) and a fantastic illustration (Moyna Chitrakar). &lt;br&gt;&lt;br&gt;Following this book, I became eager to check out other works of this author, and I found that her writings bring a freshness to the Indian mythology genre, and I am highly eager to read her next work "The Prince". &lt;br&gt;&lt;br&gt;
 &lt;br&gt;&lt;br&gt;
-&lt;a href="https://www.goodreads.com/review/list/1666575-senthil-kumaran"&gt;View all my reviews&lt;/a&gt;&lt;/span&gt;</description><guid>http://www.xtoinfinity.com/posts/2020/01/22/book-review-sitas-ramayana.html</guid><pubDate>Wed, 22 Jan 2020 12:23:30 GMT</pubDate></item><item><title>Book Review: Hackers and Painters by Paul Graham</title><link>http://www.xtoinfinity.com/posts/2020/01/22/book-review-hackers-and-painters-by-paul-graham.html</link><dc:creator>Senthil Kumaran</dc:creator><description>&lt;span&gt;&lt;a href="https://www.goodreads.com/book/show/41793.Hackers_Painters" style="float: left; padding-right: 20px"&gt;&lt;img border="0" alt="Hackers &amp;amp; Painters: Big Ideas from the Computer Age" src="https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1348562702l/41793._SX98_.jpg"&gt;&lt;/a&gt;&lt;a href="https://www.goodreads.com/book/show/41793.Hackers_Painters"&gt;Hackers &amp;amp; Painters: Big Ideas from the Computer Age&lt;/a&gt; by &lt;a href="https://www.goodreads.com/author/show/23551.Paul_Graham"&gt;Paul Graham&lt;/a&gt;&lt;br&gt;
-My rating: &lt;a href="https://www.goodreads.com/review/show/3133262402"&gt;4 of 5 stars&lt;/a&gt;&lt;br&gt;&lt;br&gt;
-Enjoyed reading Paul Graham's essays. It is quite dated, for e.g, lots of reference to Web in the 1990s, 2000s time when Yahoo was a prominent .com company. Some of his opinions on wealth creation are still applicable in 2020. But we have to read his essays with plenty of skepticism. He sings praise for lisp and instills some desire in the reader to study lisp and start a startup.
-&lt;br&gt;&lt;br&gt;
-&lt;a href="https://www.goodreads.com/review/list/1666575-senthil-kumaran"&gt;View all my reviews&lt;/a&gt;&lt;/span&gt;</description><category>books</category><guid>http://www.xtoinfinity.com/posts/2020/01/22/book-review-hackers-and-painters-by-paul-graham.html</guid><pubDate>Wed, 22 Jan 2020 12:21:00 GMT</pubDate></item></channel></rss>
+&lt;a href="https://www.goodreads.com/review/list/1666575-senthil-kumaran"&gt;View all my reviews&lt;/a&gt;&lt;/span&gt;</description><guid>http://www.xtoinfinity.com/posts/2020/01/22/book-review-sitas-ramayana.html</guid><pubDate>Wed, 22 Jan 2020 12:23:30 GMT</pubDate></item></channel></rss>
