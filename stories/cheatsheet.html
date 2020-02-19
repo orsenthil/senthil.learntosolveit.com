@@ -14,9 +14,9 @@
 <meta property="og:site_name" content="Senthil Kumaran">
 <meta property="og:title" content="Cheatsheet">
 <meta property="og:url" content="http://www.xtoinfinity.com/stories/cheatsheet.html">
-<meta property="og:description" content="Cheatsheet
+<meta property="og:description" content="Reduce the size of the PDF
 
-Reduce the size of the PDF">
+gs -sDEVICE=pdfwrite -dCompatibilityLevel=1.4 -dPDFSETTINGS=/screen -dNOPAUSE -dQUIET -dBATCH -sOutputFile=output.pdf input.pdf">
 <meta property="og:type" content="article">
 <meta property="article:published_time" content="2020-02-19T08:48:19-08:00">
 </head>
@@ -82,11 +82,11 @@ Reduce the size of the PDF">
         
 
     </header><div class="e-content entry-content" itemprop="articleBody text">
-    <div class="section" id="cheatsheet">
-<h2>Cheatsheet</h2>
-<div class="section" id="reduce-the-size-of-the-pdf">
-<h3>Reduce the size of the PDF</h3>
-</div>
+    <div class="section" id="reduce-the-size-of-the-pdf">
+<h2>Reduce the size of the PDF</h2>
+<pre class="literal-block">
+gs -sDEVICE=pdfwrite -dCompatibilityLevel=1.4 -dPDFSETTINGS=/screen -dNOPAUSE -dQUIET -dBATCH -sOutputFile=output.pdf input.pdf
+</pre>
 </div>
     </div>
     
