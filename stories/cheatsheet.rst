@@ -14,3 +14,10 @@ Reduce the size of the PDF
 
    gs -sDEVICE=pdfwrite -dCompatibilityLevel=1.4 -dPDFSETTINGS=/screen -dNOPAUSE -dQUIET -dBATCH -sOutputFile=output.pdf input.pdf
 
+
+Copy files to a single directory
+--------------------------------
+
+::
+
+    find -type f -name *.pdf -exec cp -n {} books \;

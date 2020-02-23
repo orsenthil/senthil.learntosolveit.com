@@ -8,7 +8,7 @@
 .. type: text
 
 
-`Life After dBase`_
+* `Life After dBase`_
 
 .. admonition:: Interest for Maths
 
@@ -24,7 +24,9 @@
    dBASE was one of those.
 
 
-` Interview with Wayne Ratliff`_  - He wrote dBase
+* `Interview with Wayne Ratliff`_
+
+He wrote dBase
 
 .. admonition:: I was a computer
 
@@ -59,24 +61,23 @@
    little beyond that. That's how dBASE got started. I was thinking of how I
    wanted to use it.
 
-`amb operator in lisp`_
+* `amb operator in lisp`_
 
 It is a neat concept to understand. The ruby code made it clear.
 
-`Wikipedia Editing Quickref`_
-
-`Modeling Economics using IPython by Peter Norvig`_
-
-What's the story? 99 percentile end up with all the wealth and then it get's swapped?
-
+* `Wikipedia Editing Quickref`_
 
 Adding references seems easiest contribution one can make.
+
+* `Modeling Economics using IPython by Peter Norvig`_
+
+Am I reading this right? 99 percentile end up with all the wealth and then it get's swapped?
 
 .. _Life After dBase: https://visualstudiomagazine.com/articles/2007/08/01/life-after-dbase.aspx
 
 .. _Wikipedia Editing Quickref: https://upload.wikimedia.org/wikipedia/commons/b/b3/Wiki_markup_cheatsheet_EN.pdf
 
-.. _ Interview with Wayne Ratliff: http://www.foxprohistory.org/interview_wayne_ratliff.htm
+.. _Interview with Wayne Ratliff: http://www.foxprohistory.org/interview_wayne_ratliff.htm
 
 .. _amb operator in lisp: http://www.randomhacks.net/2005/10/11/amb-operator/
 

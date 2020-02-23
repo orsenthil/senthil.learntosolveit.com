@@ -1,5 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
-<?xml-stylesheet type="text/xsl" href="assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Senthil Kumaran</title><link>http://www.xtoinfinity.com/</link><description>Senthil Kumaran</description><atom:link href="http://www.xtoinfinity.com/rss.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><lastBuildDate>Sun, 23 Feb 2020 01:22:23 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Reading - dBase, Foxpro, Editing Wikipedia</title><link>http://www.xtoinfinity.com/posts/2020/02/22/reading-dbase-foxpro-editing-wikipedia.html</link><dc:creator>Senthil Kumaran</dc:creator><description>&lt;div&gt;&lt;p&gt;&lt;a class="reference external" href="https://visualstudiomagazine.com/articles/2007/08/01/life-after-dbase.aspx"&gt;Life After dBase&lt;/a&gt;&lt;/p&gt;
+<?xml-stylesheet type="text/xsl" href="assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Senthil Kumaran</title><link>http://www.xtoinfinity.com/</link><description>Senthil Kumaran</description><atom:link href="http://www.xtoinfinity.com/rss.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><lastBuildDate>Sun, 23 Feb 2020 15:28:59 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>How to teach debugging?</title><link>http://www.xtoinfinity.com/posts/2020/02/23/how-to-teach-debugging.html</link><dc:creator>Senthil Kumaran</dc:creator><description>&lt;div&gt;&lt;p&gt;&lt;em&gt;How to teach debugging?&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;You don't. Teach avoiding making mistakes.&lt;/em&gt;&lt;/p&gt;
+&lt;img alt="https://i.imgur.com/Fnh80HC.png" src="https://i.imgur.com/Fnh80HC.png"&gt;
+&lt;p&gt;This is from Masterminds of programming. Person sharing the story and the perspective is &lt;a class="reference external" href="https://en.wikipedia.org/wiki/Thomas_E._Kurtz"&gt;Thomas Kurtz&lt;/a&gt;&lt;/p&gt;&lt;/div&gt;</description><guid>http://www.xtoinfinity.com/posts/2020/02/23/how-to-teach-debugging.html</guid><pubDate>Sun, 23 Feb 2020 15:24:57 GMT</pubDate></item><item><title>Reading - dBase, Foxpro, Editing Wikipedia</title><link>http://www.xtoinfinity.com/posts/2020/02/22/reading-dbase-foxpro-editing-wikipedia.html</link><dc:creator>Senthil Kumaran</dc:creator><description>&lt;div&gt;&lt;ul class="simple"&gt;
+&lt;li&gt;&lt;a class="reference external" href="https://visualstudiomagazine.com/articles/2007/08/01/life-after-dbase.aspx"&gt;Life After dBase&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
 &lt;div class="admonition admonition-interest-for-maths"&gt;
 &lt;p class="first admonition-title"&gt;Interest for Maths&lt;/p&gt;
 &lt;p class="last"&gt;My personal self-discipline is I start at page one and do all the
@@ -13,7 +18,10 @@ that. It was a low-level book and it got me started again. I do math as a
 backdrop. I'm kind of compulsive about building things, making things, and
 dBASE was one of those.&lt;/p&gt;
 &lt;/div&gt;
-&lt;p&gt;` Interview with Wayne Ratliff`_  - He wrote dBase&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;&lt;a class="reference external" href="http://www.foxprohistory.org/interview_wayne_ratliff.htm"&gt;Interview with Wayne Ratliff&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;He wrote dBase&lt;/p&gt;
 &lt;div class="admonition admonition-i-was-a-computer"&gt;
 &lt;p class="first admonition-title"&gt;I was a computer&lt;/p&gt;
 &lt;p class="last"&gt;Wayne Ratliff: Computers themselves got me away from car design. Before I
@@ -47,13 +55,18 @@ they're thinking of their job rather than the user, and you have to go a
 little beyond that. That's how dBASE got started. I was thinking of how I
 wanted to use it.&lt;/p&gt;
 &lt;/div&gt;
-&lt;p&gt;&lt;a class="reference external" href="http://www.randomhacks.net/2005/10/11/amb-operator/"&gt;amb operator in lisp&lt;/a&gt;&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;&lt;a class="reference external" href="http://www.randomhacks.net/2005/10/11/amb-operator/"&gt;amb operator in lisp&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
 &lt;p&gt;It is a neat concept to understand. The ruby code made it clear.&lt;/p&gt;
-&lt;p&gt;&lt;a class="reference external" href="https://upload.wikimedia.org/wikipedia/commons/b/b3/Wiki_markup_cheatsheet_EN.pdf"&gt;Wikipedia Editing Quickref&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;a class="reference external" href="https://github.com/norvig/pytudes/blob/master/ipynb/Economics.ipynb"&gt;Modeling Economics using IPython by Peter Norvig&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;What's the story? 99 percentile end up with all the wealth and then it get's swapped?&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;&lt;a class="reference external" href="https://upload.wikimedia.org/wikipedia/commons/b/b3/Wiki_markup_cheatsheet_EN.pdf"&gt;Wikipedia Editing Quickref&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
 &lt;p&gt;Adding references seems easiest contribution one can make.&lt;/p&gt;
-&lt;!-- _ Interview with Wayne Ratliff: http://www.foxprohistory.org/interview_wayne_ratliff.htm --&gt;&lt;/div&gt;</description><guid>http://www.xtoinfinity.com/posts/2020/02/22/reading-dbase-foxpro-editing-wikipedia.html</guid><pubDate>Sun, 23 Feb 2020 00:43:21 GMT</pubDate></item><item><title>Reading - Essays, Racket and Splines</title><link>http://www.xtoinfinity.com/posts/2020/02/21/reading-essays.html</link><dc:creator>Senthil Kumaran</dc:creator><description>&lt;div&gt;&lt;p&gt;&lt;a class="reference external" href="http://paulgraham.com/useful.html"&gt;How to write usefully&lt;/a&gt;&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;&lt;a class="reference external" href="https://github.com/norvig/pytudes/blob/master/ipynb/Economics.ipynb"&gt;Modeling Economics using IPython by Peter Norvig&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Am I reading this right? 99 percentile end up with all the wealth and then it get's swapped?&lt;/p&gt;&lt;/div&gt;</description><guid>http://www.xtoinfinity.com/posts/2020/02/22/reading-dbase-foxpro-editing-wikipedia.html</guid><pubDate>Sun, 23 Feb 2020 00:43:21 GMT</pubDate></item><item><title>Reading - Essays, Racket and Splines</title><link>http://www.xtoinfinity.com/posts/2020/02/21/reading-essays.html</link><dc:creator>Senthil Kumaran</dc:creator><description>&lt;div&gt;&lt;p&gt;&lt;a class="reference external" href="http://paulgraham.com/useful.html"&gt;How to write usefully&lt;/a&gt;&lt;/p&gt;
 &lt;div class="admonition admonition-useful-writing"&gt;
 &lt;p class="first admonition-title"&gt;Useful Writing&lt;/p&gt;
 &lt;p class="last"&gt;Useful writing makes claims that are as strong as they can be made without becoming false.&lt;/p&gt;
@@ -345,8 +358,4 @@ I used &lt;a class="reference external" href="https://github.com/alexellis/k3sup
 &lt;li&gt;I used k3sup to install packages, but I do not know how to uninstall the package using k3sup &lt;a class="reference external" href="https://github.com/alexellis/k3sup/issues/179"&gt;https://github.com/alexellis/k3sup/issues/179&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;Givem all these, I still have the my local kubernetes cluster up and running and I am excited about the possiblities
-of using kubernetes on raspberry pis.&lt;/p&gt;&lt;/div&gt;</description><guid>http://www.xtoinfinity.com/posts/2020/02/02/kubernetes-cluster-using-raspberry-pi.html</guid><pubDate>Sun, 02 Feb 2020 21:11:53 GMT</pubDate></item><item><title>Book Review: The Manga Guide to Calculus</title><link>http://www.xtoinfinity.com/posts/2020/01/22/book-review-the-manga-guide-to-calculus.html</link><dc:creator>Senthil Kumaran</dc:creator><description>&lt;span&gt;&lt;a href="https://www.goodreads.com/book/show/6309077-the-manga-guide-to-calculus" style="float: left; padding-right: 20px"&gt;&lt;img border="0" alt="The Manga Guide to Calculus" src="https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1328753481l/6309077._SX98_.jpg"&gt;&lt;/a&gt;&lt;a href="https://www.goodreads.com/book/show/6309077-the-manga-guide-to-calculus"&gt;The Manga Guide to Calculus&lt;/a&gt; by &lt;a href="https://www.goodreads.com/author/show/2865700.Hiroyuki_Kojima"&gt;Hiroyuki Kojima&lt;/a&gt;&lt;br&gt;
-My rating: &lt;a href="https://www.goodreads.com/review/show/2535927955"&gt;2 of 5 stars&lt;/a&gt;&lt;br&gt;&lt;br&gt;
-I tried to pick up some high-level intuition on the basics of calculus with this book, but I failed. Unlike, other Manga guides on electricity, and linear algebra, I found this book not very strong on the plot and I felt it did not present the story in a cohesive manner. &lt;br&gt;&lt;br&gt;The concepts were introduced randomly, and I could not see how one built upon the previously introduced concept. &lt;br&gt;&lt;br&gt;On the positive note, it did introduce very basics of calculus well, and I am eager to pick up other books on calculus with that foundation.
-&lt;br&gt;&lt;br&gt;
-&lt;a href="https://www.goodreads.com/review/list/1666575-senthil-kumaran"&gt;View all my reviews&lt;/a&gt;&lt;/span&gt;</description><category>books</category><guid>http://www.xtoinfinity.com/posts/2020/01/22/book-review-the-manga-guide-to-calculus.html</guid><pubDate>Wed, 22 Jan 2020 14:17:00 GMT</pubDate></item></channel></rss>
+of using kubernetes on raspberry pis.&lt;/p&gt;&lt;/div&gt;</description><guid>http://www.xtoinfinity.com/posts/2020/02/02/kubernetes-cluster-using-raspberry-pi.html</guid><pubDate>Sun, 02 Feb 2020 21:11:53 GMT</pubDate></item></channel></rss>

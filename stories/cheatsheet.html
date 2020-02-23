@@ -16,7 +16,13 @@
 <meta property="og:url" content="http://www.xtoinfinity.com/stories/cheatsheet.html">
 <meta property="og:description" content="Reduce the size of the PDF
 
-gs -sDEVICE=pdfwrite -dCompatibilityLevel=1.4 -dPDFSETTINGS=/screen -dNOPAUSE -dQUIET -dBATCH -sOutputFile=output.pdf input.pdf">
+gs -sDEVICE=pdfwrite -dCompatibilityLevel=1.4 -dPDFSETTINGS=/screen -dNOPAUSE -dQUIET -dBATCH -sOutputFile=output.pdf input.pdf
+
+
+
+Copy files to a single directory
+
+find -t">
 <meta property="og:type" content="article">
 <meta property="article:published_time" content="2020-02-19T08:48:19-08:00">
 </head>
@@ -85,11 +91,19 @@ gs -sDEVICE=pdfwrite -dCompatibilityLevel=1.4 -dPDFSETTINGS=/screen -dNOPAUSE -d
         
 
     </header><div class="e-content entry-content" itemprop="articleBody text">
-    <div class="section" id="reduce-the-size-of-the-pdf">
+    <div>
+<div class="section" id="reduce-the-size-of-the-pdf">
 <h2>Reduce the size of the PDF</h2>
 <pre class="literal-block">
 gs -sDEVICE=pdfwrite -dCompatibilityLevel=1.4 -dPDFSETTINGS=/screen -dNOPAUSE -dQUIET -dBATCH -sOutputFile=output.pdf input.pdf
 </pre>
+</div>
+<div class="section" id="copy-files-to-a-single-directory">
+<h2>Copy files to a single directory</h2>
+<pre class="literal-block">
+find -type f -name *.pdf -exec cp -n {} books \;
+</pre>
+</div>
 </div>
     </div>
     
