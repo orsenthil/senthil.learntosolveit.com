@@ -21,3 +21,15 @@ Copy files to a single directory
 ::
 
     find -type f -name *.pdf -exec cp -n {} books \;
+
+
+Using rclone to mount my google drive locally
+---------------------------------------------
+
+::
+
+    rclone mount orsenthil-google-drive:Books orsenthil-google-drive
+
+* `rclone reference`_
+
+.. _rclone reference: https://www.ostechnix.com/how-to-mount-google-drive-locally-as-virtual-file-system-in-linux/

@@ -104,6 +104,15 @@ gs -sDEVICE=pdfwrite -dCompatibilityLevel=1.4 -dPDFSETTINGS=/screen -dNOPAUSE -d
 find -type f -name *.pdf -exec cp -n {} books \;
 </pre>
 </div>
+<div class="section" id="using-rclone-to-mount-my-google-drive-locally">
+<h2>Using rclone to mount my google drive locally</h2>
+<pre class="literal-block">
+rclone mount orsenthil-google-drive:Books orsenthil-google-drive
+</pre>
+<ul class="simple">
+<li><a class="reference external" href="https://www.ostechnix.com/how-to-mount-google-drive-locally-as-virtual-file-system-in-linux/">rclone reference</a></li>
+</ul>
+</div>
 </div>
     </div>
     
