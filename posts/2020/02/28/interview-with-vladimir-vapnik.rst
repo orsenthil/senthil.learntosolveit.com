@@ -10,8 +10,6 @@
 
 .. youtube:: bQa7hpUpMzM
 
-
-
 This was an unbelievable interview with `Vladimir Vapnik`_. He is the co-inventor of Support Vector Machines, one of
 widely used statistical machine learning algorithm. In explaining his understanding of the world, he uses the
 mathematical terms of predicate and functions.
