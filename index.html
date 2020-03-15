@@ -12,7 +12,7 @@
 <link rel="alternate" type="application/rss+xml" title="RSS" href="rss.xml">
 <link rel="canonical" href="http://www.xtoinfinity.com/index.html">
 <link rel="next" href="index-46.html" type="text/html">
-<!--[if lt IE 9]><script src="assets/js/html5.js"></script><![endif]--><link rel="prefetch" href="posts/2020/03/12/book-review-blown-to-bits.html" type="text/html">
+<!--[if lt IE 9]><script src="assets/js/html5.js"></script><![endif]--><link rel="prefetch" href="posts/2020/03/14/happy-pi-day.html" type="text/html">
 </head>
 <body>
 <a href="#content" class="sr-only sr-only-focusable">Skip to main content</a>
@@ -76,7 +76,36 @@
     
         
     <div class="postindex">
-            <article class="h-entry post-text" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title"><a href="posts/2020/03/12/book-review-blown-to-bits.html" class="u-url">Book Review: Blown to Bits</a></h1>
+            <article class="h-entry post-text" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title"><a href="posts/2020/03/14/happy-pi-day.html" class="u-url">Happy Pi Day</a></h1>
+                <div class="metadata">
+                    <p class="byline author vcard"><span class="byline-name fn" itemprop="author">
+                        Senthil Kumaran
+                    </span></p>
+            <p class="dateline">
+            <a href="posts/2020/03/14/happy-pi-day.html" rel="bookmark">
+            <time class="published dt-published" datetime="2020-03-15T09:12:05-07:00" itemprop="datePublished" title="2020-03-15 09:12">2020-03-15 09:12</time></a>
+            </p>
+                        <p class="commentline">
+        
+    <a href="posts/2020/03/14/happy-pi-day.html#disqus_thread" data-disqus-identifier="cache/posts/2020/03/14/happy-pi-day.html">Comments</a>
+
+
+                </p>
+</div>
+            </header><div class="e-content entry-content">
+                    <div class="section" id="happy-pi-day">
+<h2>Happy Pi Day</h2>
+<p>I celebrated the Pi day during Covid-19 times with these activities.</p>
+<ul class="simple">
+<li>Learning <a class="reference external" href="https://noahgift.github.io/aws-ml-guide/lessons/Lesson4_AWSML_Modeling.html">AWS ML Modelling</a>
+</li>
+</ul>
+<p>Solving an Easy Brilliant.org quiz but getting it wrong.</p>
+<img alt="https://i.imgur.com/ZvUKjlw.png" src="https://i.imgur.com/ZvUKjlw.png"><p>Reading a little about Thales Theorem  from the <a class="reference external" href="https://mathigon.org/timeline">Timeline of Mathematics</a> at Mathigon</p>
+<img alt="https://i.imgur.com/xsLzOCV.png" src="https://i.imgur.com/xsLzOCV.png">
+</div>
+                </div>
+            </article><article class="h-entry post-text" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title"><a href="posts/2020/03/12/book-review-blown-to-bits.html" class="u-url">Book Review: Blown to Bits</a></h1>
                 <div class="metadata">
                     <p class="byline author vcard"><span class="byline-name fn" itemprop="author">
                         Senthil Kumaran
@@ -592,53 +621,6 @@ available via a javascript library. It seems author wrote both the js, css himse
 I was not very confident during 2nd, and prepared well for the 3rd attempt to clear it.</p>
 <p>I read "Kubernetes from Ground Up" again. Practised and "understood" the concepts better.
 With all these, the tests were actually very enjoyable.</p>
-</div>
-                </div>
-            </article><article class="h-entry post-text" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title"><a href="posts/2020/02/08/raspberry-pi-cluster-fixing-dns-resolv-on-master.html" class="u-url">Raspberry Pi Cluster - Fixing DNS Resolv on Master</a></h1>
-                <div class="metadata">
-                    <p class="byline author vcard"><span class="byline-name fn" itemprop="author">
-                        Senthil Kumaran
-                    </span></p>
-            <p class="dateline">
-            <a href="posts/2020/02/08/raspberry-pi-cluster-fixing-dns-resolv-on-master.html" rel="bookmark">
-            <time class="published dt-published" datetime="2020-02-08T06:38:27-08:00" itemprop="datePublished" title="2020-02-08 06:38">2020-02-08 06:38</time></a>
-            </p>
-                        <p class="commentline">
-        
-    <a href="posts/2020/02/08/raspberry-pi-cluster-fixing-dns-resolv-on-master.html#disqus_thread" data-disqus-identifier="cache/posts/2020/02/08/raspberry-pi-cluster-fixing-dns-resolv-on-master.html">Comments</a>
-
-
-                </p>
-</div>
-            </header><div class="e-content entry-content">
-                    <div>
-<p>I had setup a raspberry pi cluster, and suddenly the master became
-non-operational. The cluster was able to see itself, but if I login to master
-node, I noticed it was not able communicate externally.</p>
-<p>The DNS Resolution for any site from master was failing.</p>
-<p>Then I figured that Ubuntu had made some changes to resolve.conf protocol</p>
-<p>Ubuntu requested users not to edit /etc/resolv.conf, and it's content on my
-cluster was not something that I wanted.</p>
-<p>I had setup pihole, and my devices had started to see the internet through
-this. I noticed that Ubuntu since 18.04 had not set my router as the first
-nameserver and thus after pi-hole experiment, my master node lost its
-resolution capability</p>
-<p>Fixing the Ubuntu DNS resolution was easy. I followed <a class="reference external" href="https://datawookie.netlify.com/blog/2018/10/dns-on-ubuntu-18.04/">this post from datawookie</a></p>
-<ol class="arabic simple">
-<li>resolvconf package was already installed.</li>
-<li>Edit /etc/resolvconf/resolv.conf.d/head</li>
-</ol>
-<pre class="literal-block">
-nameserver &lt;pi-hole-server&gt;
-nameserver 8.8.4.4
-nameserver 8.8.8.8
-</pre>
-<ol class="arabic simple" start="3">
-<li>Restart the resolvconf server</li>
-</ol>
-<pre class="literal-block">
-sudo service resolvconf restart
-</pre>
 </div>
                 </div>
             </article>
