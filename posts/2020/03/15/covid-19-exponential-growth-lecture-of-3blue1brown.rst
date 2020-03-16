@@ -110,6 +110,12 @@ only thing to worry about".
 We have name for unknown, `Covid-19`_ and a strategy to deal with this epimedic now, and we can reduce the damping
 factor to the control the growth.
 
+**Related Articles / Simulations**
+
+* `Why outbreaks like coronavirus spread exponentially, and how to flatten the curve by Harry Stevens`_
+
+.. _Why outbreaks like coronavirus spread exponentially, and how to flatten the curve by Harry Stevens: https://www.washingtonpost.com/graphics/2020/world/corona-simulator/
+
 .. _Explain XKCD: https://www.explainxkcd.com/wiki/index.php/605:_Extrapolating
 .. _logistic curve: https://en.wikipedia.org/wiki/Logistic_function
 .. _"least square regression": https://www.mathsisfun.com/data/least-squares-regression.html
