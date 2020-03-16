@@ -1,5 +1,30 @@
 <?xml version="1.0" encoding="utf-8"?>
-<?xml-stylesheet type="text/xsl" href="assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Senthil Kumaran</title><link>http://www.xtoinfinity.com/</link><description>Senthil Kumaran</description><atom:link href="http://www.xtoinfinity.com/rss.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><lastBuildDate>Mon, 16 Mar 2020 02:33:40 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Covid-19 Exponential Growth Lecture of 3Blue1Brown</title><link>http://www.xtoinfinity.com/posts/2020/03/15/covid-19-exponential-growth-lecture-of-3blue1brown.html</link><dc:creator>Senthil Kumaran</dc:creator><description>&lt;div&gt;&lt;p&gt;3Blue1Brown did an excellent video explaining exponential growth. He took the
+<?xml-stylesheet type="text/xsl" href="assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Senthil Kumaran</title><link>http://www.xtoinfinity.com/</link><description>Senthil Kumaran</description><atom:link href="http://www.xtoinfinity.com/rss.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><lastBuildDate>Mon, 16 Mar 2020 22:32:47 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>The Discovery of Radium by Madame M. Curie</title><link>http://www.xtoinfinity.com/posts/2020/03/16/the-discovery-of-radium-by-madame-m-curie.html</link><dc:creator>Senthil Kumaran</dc:creator><description>&lt;div&gt;&lt;p&gt;This is a short text available for reading in project gutenberg, titled &lt;a class="reference external" href="https://www.gutenberg.org/files/61622/61622-h/61622-h.htm"&gt;"The Discovery of Radium by Marie Curie"&lt;/a&gt;&lt;/p&gt;
+&lt;a class="reference external image-reference" href="https://www.gutenberg.org/files/61622/61622-h/61622-h.htm"&gt;&lt;img alt="https://www.gutenberg.org/files/61622/61622-h/images/cover.jpg" class="align-center" src="https://www.gutenberg.org/files/61622/61622-h/images/cover.jpg" style="width: 350px; height: 500px;"&gt;&lt;/a&gt;
+&lt;p&gt;Some interesting quotes from this book&lt;/p&gt;
+&lt;div class="admonition admonition-pursuit-of-truth"&gt;
+&lt;p class="first admonition-title"&gt;pursuit of truth&lt;/p&gt;
+&lt;p class="last"&gt;&lt;em&gt;Then I took up measurements of minerals and I found that several of those
+which contain uranium or thorium or both were active. But then the activity
+was not what I could expect, it was greater than for uranium or thorium
+compounds like the oxides which are almost entirely composed of these
+elements. Then I thought that there should be in the minerals some unknown
+element having a much greater radioactivity than uranium or thorium. And I
+wanted to find and to separate that element, and I settled to that work
+with Professor Curie. We thought it would be done in several weeks or
+months, but it was not so. It took many years of hard work to finish that
+task. There was not one new element, there were several of them. But the
+most important is radium which could be separated in a pure state.&lt;/em&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="admonition admonition-work-of-science"&gt;
+&lt;p class="first admonition-title"&gt;work of science&lt;/p&gt;
+&lt;p class="last"&gt;&lt;em&gt;But we must not forget that when radium was discovered no one knew that it
+would prove useful in hospitals. The work was one of pure science. And this
+is a proof that scientific 5 work must not be considered from the point of
+view of the direct usefulness of it. It must be done for itself, for the
+beauty of science, and then there is always the chance that a scientific
+discovery may become like the radium a benefit for humanity.&lt;/em&gt;&lt;/p&gt;
+&lt;/div&gt;&lt;/div&gt;</description><guid>http://www.xtoinfinity.com/posts/2020/03/16/the-discovery-of-radium-by-madame-m-curie.html</guid><pubDate>Mon, 16 Mar 2020 22:18:22 GMT</pubDate></item><item><title>Covid-19 Exponential Growth Lecture of 3Blue1Brown</title><link>http://www.xtoinfinity.com/posts/2020/03/15/covid-19-exponential-growth-lecture-of-3blue1brown.html</link><dc:creator>Senthil Kumaran</dc:creator><description>&lt;div&gt;&lt;p&gt;3Blue1Brown did an excellent video explaining exponential growth. He took the
 opportunity to explain Covid-19, growth, trajectory and more importantly
 pressing question on when this growth will stop using mathematical equations.
 I was highly impressed. It helped to make sense of the situation, and help with
@@ -264,144 +289,4 @@ and that the backups introduce no cyclic dependencies in the system; a GFS cell
 in the same building potentially might rely on the Chubby cell for electing its
 master.&lt;/p&gt;
 &lt;/div&gt;
-&lt;/div&gt;&lt;/div&gt;</description><category>distributed systems</category><category>interviews</category><guid>http://www.xtoinfinity.com/posts/2020/02/15/reading-list-interviews.html</guid><pubDate>Sat, 15 Feb 2020 15:53:43 GMT</pubDate></item><item><title>Reading List : Memory Safety, RSA, Maths, and Learning</title><link>http://www.xtoinfinity.com/posts/2020/02/14/assorted-reading.html</link><dc:creator>Senthil Kumaran</dc:creator><description>&lt;div&gt;&lt;p&gt;&lt;a class="reference external" href="https://halestrom.net/darksleep/blog/036_timesafety/"&gt;Time safety is more important than memory safety&lt;/a&gt;&lt;/p&gt;
-&lt;div class="admonition admonition-time-safety"&gt;
-&lt;p class="first admonition-title"&gt;time safety&lt;/p&gt;
-&lt;p class="last"&gt;I see choosing "new" languages (or frameworks) as very risky propositions to
-the life of a project. These languages are less likely to be around in ten or
-twenty years time (newer and better Rusts and Gos are likely to form in the
-years ahead) and in the meantime require you to constantly expend effort to
-prevent your projects from being turned into a brick by
-language/environment/library changes. In contrast my old C projects from 5-8
-years ago still compile and run, with one particular example only needing a
-small modification. It's not perfect, but C is much more likely to be the
-"safe" option if time x usefulness of your project is a goal.&lt;/p&gt;
-&lt;/div&gt;
-&lt;p&gt;Argues that we spend time quickly adopting new languages and frameworks, take it for granted that anything we write
-will be short-lived. Author argues that it is wrong philosophy to adopt, and I agree with him.&lt;/p&gt;
-&lt;p&gt;Choose to experiment, but build something that lasts.&lt;/p&gt;
-&lt;hr class="docutils"&gt;
-&lt;p&gt;&lt;a class="reference external" href="https://lists.mindrot.org/pipermail/openssh-unix-announce/2020-February/000138.html"&gt;OpenSSH 8.2 released&lt;/a&gt;&lt;/p&gt;
-&lt;div class="admonition admonition-rsa-compromise"&gt;
-&lt;p class="first admonition-title"&gt;rsa compromise&lt;/p&gt;
-&lt;p&gt;It is now possible[1] to perform chosen-prefix attacks against the
-SHA-1 algorithm for less than USD$50K. For this reason, we will be
-disabling the "ssh-rsa" public key signature algorithm by default in a
-near-future release.&lt;/p&gt;
-&lt;p&gt;The better alternatives include:&lt;/p&gt;
-&lt;p&gt;The RFC8332 RSA SHA-2 signature algorithms rsa-sha2-256/512. These
-algorithms have the advantage of using the same key type as
-"ssh-rsa" but use the safe SHA-2 hash algorithms. These have been
-supported since OpenSSH 7.2 and are already used by default if the
-client and server support them.&lt;/p&gt;
-&lt;p&gt;The ssh-ed25519 signature algorithm. It has been supported in
-OpenSSH since release 6.5.&lt;/p&gt;
-&lt;p class="last"&gt;The RFC5656 ECDSA algorithms: ecdsa-sha2-nistp256/384/521. These
-have been supported by OpenSSH since release 5.7.&lt;/p&gt;
-&lt;/div&gt;
-&lt;p&gt;We definitely need a better name for these algorithms. RSA, the term, is so much easier to remember and associate than
-SHA-2, ED25519, and ECDSA.&lt;/p&gt;
-&lt;hr class="docutils"&gt;
-&lt;p&gt;&lt;a class="reference external" href="https://hnn.us/article/174250"&gt;Frank Ramsey - A Genius By All Tests for Genius&lt;/a&gt;&lt;/p&gt;
-&lt;div class="admonition admonition-genius"&gt;
-&lt;p class="first admonition-title"&gt;genius&lt;/p&gt;
-&lt;p&gt;Ramsey did all this, and more, in an alarmingly short lifespan. He died at the
-age of 26 probably from leptospirosis (bacteria from the feces of animals)
-contracted by swimming in the river Cam.&lt;/p&gt;
-&lt;p class="last"&gt;Rather than focus on a ‘oneness’ or God, like his brother Michael, he thought
-the good life was to be found within our human, fallible, ways of being.&lt;/p&gt;
-&lt;/div&gt;
-&lt;p&gt;An article about polymath Ramsey who contributed to the field of mathematics, computer science, economics and otherss&lt;/p&gt;
-&lt;hr class="docutils"&gt;
-&lt;p&gt;&lt;a class="reference external" href="http://emacspeak.sourceforge.net/raman/publications/thinking-of-math/thinking-of-math.html"&gt;Thinking Of Mathematics — An Essay On Eyes-free Computing&lt;/a&gt;&lt;/p&gt;
-&lt;div class="admonition admonition-once-a-mathematician-always-a-mathematician"&gt;
-&lt;p class="first admonition-title"&gt;once a mathematician, always a mathematician&lt;/p&gt;
-&lt;p&gt;At its heart, mathematics is about understanding the underlying structure
-inherent in a given area of interest —and where no such structure exists —to
-deﬁne the minimal structure that is needed to make forward progress.&lt;/p&gt;
-&lt;p&gt;The phases involved in the creative process were ﬁrst described by German
-physiologist Herman Helmholtz in the late nineteenth century. He identiﬁed
-three stages of creativity:&lt;/p&gt;
-&lt;p&gt;saturation,
-incubation and
-illumination&lt;/p&gt;
-&lt;p class="last"&gt;These three stages have since been augmented with the additional step of
-veriﬁcation by the scientiﬁc community.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="admonition admonition-mathematical-techniques-are-algorithms"&gt;
-&lt;p class="first admonition-title"&gt;mathematical techniques are algorithms&lt;/p&gt;
-&lt;p&gt;Speciﬁc mathematical techniques e.g., differentiation, integration or the
-Simplex method are algorithms.&lt;/p&gt;
-&lt;ol class="last arabic simple"&gt;
-&lt;li&gt;To truly appreciate an algorithm and understand how it works, one needs to
-be able to run it by hand on a representative set of examples.&lt;/li&gt;
-&lt;li&gt;In mathematics, this translates to being able to differentiate or integrate
-a given expression.&lt;/li&gt;
-&lt;li&gt;The latter requires a set of semi-mechanical steps and this is where one
-uses aids such as scratch memory provided by pencil and paper —something for
-which I needed to compensate.&lt;/li&gt;
-&lt;li&gt;However, a true understanding of the underlying algorithm is far more
-important than any speciﬁc technique that one might devise for running the
-algorithm on speciﬁc instances.&lt;/li&gt;
-&lt;/ol&gt;
-&lt;/div&gt;
-&lt;p&gt;I could relate to author's experience in solving some problems.&lt;/p&gt;
-&lt;p&gt;1. Finding the day of the week. I went by the logic that, 1st January of 1900 was a Monday, and then I figured out
-hte day of the week. This problem was given in the book, Let us C, by Yashwant Kanetkar.&lt;/p&gt;
-&lt;p&gt;2. Playing a nimm like game. I had a designed a similar game called 21-match stick game in the college. It was a very
-simple game, wherein the player forced to pick the last match stick looses. This was again from the exercise in the
-Yashwant Kanetkar book.&lt;/p&gt;
-&lt;p&gt;As I recollect, I think, I had a good saturation phase in reading the "Let us C" book by reading, reviewing.
-Incubation by trial and errors, and development of the game itself was illumninatiom and when I let my friends play
-it, it was the verification stage.&lt;/p&gt;
-&lt;hr class="docutils"&gt;
-&lt;p&gt;&lt;a class="reference external" href="https://scattered-thoughts.net/writing/humans-should-learn-maths/"&gt;Humans should learn Maths&lt;/a&gt;&lt;/p&gt;
-&lt;div class="admonition admonition-definitions-of-maths-science-and-computing"&gt;
-&lt;p class="first admonition-title"&gt;definitions of maths, science and computing&lt;/p&gt;
-&lt;p&gt;Writing: a means to store knowledge in a brain-independent form that can be easily replicated, transmitted and preserved&lt;/p&gt;
-&lt;p&gt;Mathematics: a methodology for constructing abstract systems, reasoning about them precisely and finding connections between them&lt;/p&gt;
-&lt;p&gt;Science: a methodology for finding abstract systems which map closely to the real world&lt;/p&gt;
-&lt;p class="last"&gt;Computing: a way to arrange inanimate systems to simulate arbitrary abstract systems&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="admonition admonition-maths-learning-rituals"&gt;
-&lt;p class="first admonition-title"&gt;Maths learning rituals&lt;/p&gt;
-&lt;p&gt;Ritual 1: Learn to read and write proofs&lt;/p&gt;
-&lt;p&gt;Ritual 2: Learn the language&lt;/p&gt;
-&lt;p class="last"&gt;Ritual 3: Practice&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="admonition admonition-cost-of-ideas"&gt;
-&lt;p class="first admonition-title"&gt;cost of ideas&lt;/p&gt;
-&lt;p class="last"&gt;You won't live long enough to learn more than a tiny fraction of all there is
-to know. Ideas have costs in the time it takes to learn them, the amount of
-maintenance required to remember them and the amount of effort it takes to
-apply them. Prefer ideas that have a high power-to-cost ratio.&lt;/p&gt;
-&lt;/div&gt;
-&lt;p&gt;Author's writing, explanation and choice of words are excellent.&lt;/p&gt;
-&lt;hr class="docutils"&gt;
-&lt;p&gt;&lt;a class="reference external" href="https://joearms.github.io/#2014-02-07%20Why%20programming%20is%20difficult"&gt;2014-02-07 Why programming is difficult - Joe Armstrong&lt;/a&gt;&lt;/p&gt;
-&lt;div class="admonition admonition-what-makes-programming-difficult"&gt;
-&lt;p class="first admonition-title"&gt;what makes programming difficult&lt;/p&gt;
-&lt;p&gt;There are three other things that make programming difficult:&lt;/p&gt;
-&lt;ul class="simple"&gt;
-&lt;li&gt;Fixing things that should not be broken&lt;/li&gt;
-&lt;li&gt;No time for learning things&lt;/li&gt;
-&lt;li&gt;Bad environment for programming&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p class="last"&gt;Let's look at these things - these are all “time thieves“&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="admonition admonition-google-casino"&gt;
-&lt;p class="first admonition-title"&gt;Google Casino&lt;/p&gt;
-&lt;p class="last"&gt;Using the Google casino for bug fixing is terribly frustrating. I Google a bit
-and after a while find a posting where some poor unfortunate soul has
-encountered exactly the same problem that I have. My heart leaps for joy. My
-trembling fingers enter the magic spell that will remove the curse, and ...
-nothing. The problem remains.&lt;/p&gt;
-&lt;/div&gt;
-&lt;p&gt;The article is hilarious and very deep. I could sense Joe Armstrong's humility in this writing.&lt;/p&gt;
-&lt;hr class="docutils"&gt;
-&lt;p&gt;&lt;a class="reference external" href="https://addons.mozilla.org/en-US/firefox/addon/multi-account-containers/"&gt;Firefox Multicontainer Accounts&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;This is the equivalent to Google Chrome profiles that I was looking.&lt;/p&gt;
-&lt;hr class="docutils"&gt;
-&lt;p&gt;&lt;a class="reference external" href="https://ciechanow.ski/gears/"&gt;Gears by Bartosz Ciechanowski&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;Very detailed, step-by-step explanation and interactive demo on how Gears work. I was wondering if the animation is
-available via a javascript library. It seems author wrote both the js, css himself to write this article. He is a gem.&lt;/p&gt;&lt;/div&gt;</description><guid>http://www.xtoinfinity.com/posts/2020/02/14/assorted-reading.html</guid><pubDate>Fri, 14 Feb 2020 10:51:32 GMT</pubDate></item></channel></rss>
+&lt;/div&gt;&lt;/div&gt;</description><category>distributed systems</category><category>interviews</category><guid>http://www.xtoinfinity.com/posts/2020/02/15/reading-list-interviews.html</guid><pubDate>Sat, 15 Feb 2020 15:53:43 GMT</pubDate></item></channel></rss>
