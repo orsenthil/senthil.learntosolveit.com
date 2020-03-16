@@ -1,14 +1,69 @@
 <?xml version="1.0" encoding="utf-8"?>
-<?xml-stylesheet type="text/xsl" href="assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Senthil Kumaran</title><link>http://www.xtoinfinity.com/</link><description>Senthil Kumaran</description><atom:link href="http://www.xtoinfinity.com/rss.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><lastBuildDate>Sun, 15 Mar 2020 16:22:17 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Happy Pi Day</title><link>http://www.xtoinfinity.com/posts/2020/03/14/happy-pi-day.html</link><dc:creator>Senthil Kumaran</dc:creator><description>&lt;div class="section" id="happy-pi-day"&gt;
+<?xml-stylesheet type="text/xsl" href="assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Senthil Kumaran</title><link>http://www.xtoinfinity.com/</link><description>Senthil Kumaran</description><atom:link href="http://www.xtoinfinity.com/rss.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><lastBuildDate>Mon, 16 Mar 2020 01:09:03 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Covid-19 Exponential Growth Lecture of 3Blue1Brown</title><link>http://www.xtoinfinity.com/posts/2020/03/15/covid-19-exponential-growth-lecture-of-3blue1brown.html</link><dc:creator>Senthil Kumaran</dc:creator><description>&lt;div&gt;&lt;p&gt;3Blue1Brown did an excellent video explaining exponential growth. He took the opportunity to explain Covid-19,
+growth, trajectory and more importantly pressing question on when this growth will stop using mathematical equations.
+I was highly impressed. It helped to make sense of the situation, and help with dealing with the situation.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Please watch this video&lt;/strong&gt;&lt;/p&gt;
+&lt;div class="youtube-video"&gt;
+&lt;iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/Kas0tIxDvrg?rel=0&amp;amp;wmode=transparent" frameborder="0" allow="encrypted-media" allowfullscreen&gt;&lt;/iframe&gt;
+&lt;/div&gt;&lt;p&gt;The video deals with the questions explained in the slide.&lt;/p&gt;
+&lt;img alt="https://i.imgur.com/46Tu2D9.png" src="https://i.imgur.com/46Tu2D9.png" style="width: 550px; height: 350px;"&gt;
+&lt;p&gt;Exponential growth means as you go from one day to the next, it involves multiplying by a constant.&lt;/p&gt;
+&lt;img alt="https://i.imgur.com/Rk3p1TP.png" src="https://i.imgur.com/Rk3p1TP.png" style="width: 550px; height: 350px;"&gt;
+&lt;p&gt;In terms of an Equation the exponential growth is represented mathematically like this.&lt;/p&gt;
+&lt;img alt="https://i.imgur.com/sTmqAyB.png" src="https://i.imgur.com/sTmqAyB.png" style="width: 550px; height: 350px;"&gt;
+&lt;p&gt;3Blue1Brown says that this data fits in a linear regression model.&lt;/p&gt;
+&lt;p&gt;Linear regression calculates an equation that minimizes the distance between the fitted line and all of the data points.
+And if want to find the equation that minimizes the distance between a line and the data point, the most common way
+is to find &lt;a class="reference external" href="https://www.mathsisfun.com/data/least-squares-regression.html"&gt;"least square regression"&lt;/a&gt; .&lt;/p&gt;
+&lt;p&gt;We will notice that the least square regression ends up with an equation of line &lt;span class="math"&gt;\(y = m \dot x + b\)&lt;/span&gt;
+Where &lt;cite&gt;m&lt;/cite&gt; is same as the multiplying factor the exponential growth.&lt;/p&gt;
+&lt;p&gt;So he uses the data point to track the growth for linear regression.&lt;/p&gt;
+&lt;img alt="https://i.imgur.com/K1FQ7E1.png" src="https://i.imgur.com/K1FQ7E1.png" style="width: 550px; height: 350px;"&gt;
+&lt;p&gt;And finds out &lt;span class="math"&gt;\(R^2\)&lt;/span&gt; which is a coefficient of determination,  a statistical measure of how close the data are to the fitted regression line.
+We notice that &lt;span class="math"&gt;\(R2\)&lt;/span&gt; is close to 1.0 which is a straight line, increasing by a factor, &lt;span class="math"&gt;\(m\)&lt;/span&gt; each day.&lt;/p&gt;
+&lt;p&gt;He is making a point with logistic regression that, when a country has 100 times lower cases than another country,
+the country is not 100 times better, but just 30 days behind!&lt;/p&gt;
+&lt;img alt="https://i.imgur.com/BrhVPIU.png" src="https://i.imgur.com/BrhVPIU.png" style="width: 550px; height: 350px;"&gt;
+&lt;p&gt;And following the numbers, if we extrapolate, we hit a 1 billion cases in 81 days. But that's hardly desirable, and
+everyone wants to know when we do stop growing linearly and hit a plateau. He notes that "Linear Growth" is a
+theoretical phenomenon, not a realistic one. Just like, if you were not married last year, and you got married this
+yea, it does not mean, will you marry every year from now. (&lt;a class="reference external" href="https://www.explainxkcd.com/wiki/index.php/605:_Extrapolating"&gt;Explain XKCD&lt;/a&gt;)&lt;/p&gt;
+&lt;img alt="https://i.imgur.com/q0h9nux.png" src="https://i.imgur.com/q0h9nux.png" style="width: 550px; height: 350px;"&gt;
+&lt;p&gt;But unlike marriage, we are seeing an exponential growth here. We will have to find out the factors that reduce the
+exponential growth.&lt;/p&gt;
+&lt;p&gt;So, in reality what we are expecting is a &lt;a class="reference external" href="https://en.wikipedia.org/wiki/Logistic_function"&gt;logistic curve&lt;/a&gt; where the exponential growth includes damping factor
+contributed by people who are not infected.&lt;/p&gt;
+&lt;p&gt;Our whole idea, then becomes to &lt;strong&gt;increase this damping factor&lt;/strong&gt;, that is not get infected by this virus.&lt;/p&gt;
+&lt;img alt="https://i.imgur.com/vpRwguZ.png" src="https://i.imgur.com/vpRwguZ.png" style="width: 550px; height: 350px;"&gt;
+&lt;p&gt;&lt;strong&gt;What makes the growth factor go down other than maxing out at the total population?&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;For instance with the growth factor of 1.15, we have this number&lt;/p&gt;
+&lt;img alt="https://i.imgur.com/mAX2ICl.png" src="https://i.imgur.com/mAX2ICl.png" style="width: 550px; height: 350px;"&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;&lt;strong&gt;Decrease the number of people getting exposed - aka social isolation&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Decrease the probability of exposure - aka wash your hands completely, maintain hygiene amongst other things.&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;And important point to remember in this damping factor is, the &lt;strong&gt;output decreases exponentially too&lt;/strong&gt;&lt;/p&gt;
+&lt;img alt="https://i.imgur.com/FltSCBb.png" src="https://i.imgur.com/FltSCBb.png"&gt;
+&lt;p&gt;and reduces significantly, only by &lt;em&gt;10%&lt;/em&gt; decrease in the damping factor.&lt;/p&gt;
+&lt;img alt="https://i.imgur.com/aka3Jxt.png" src="https://i.imgur.com/aka3Jxt.png"&gt;
+&lt;p&gt;3Blue1Brown has tried to quantify our worry factor and leaves us with an advice that, "if we are not worried, that's
+only thing to worry about".&lt;/p&gt;
+&lt;p&gt;We have name for unknown, &lt;a class="reference external" href="https://en.wikipedia.org/wiki/Coronavirus_disease_2019"&gt;Covid-19&lt;/a&gt; and a strategy to deal with this epimedic now, and we can reduce the damping
+factor to the control the growth.&lt;/p&gt;&lt;/div&gt;</description><guid>http://www.xtoinfinity.com/posts/2020/03/15/covid-19-exponential-growth-lecture-of-3blue1brown.html</guid><pubDate>Sun, 15 Mar 2020 21:13:54 GMT</pubDate></item><item><title>Happy Pi Day</title><link>http://www.xtoinfinity.com/posts/2020/03/14/happy-pi-day.html</link><dc:creator>Senthil Kumaran</dc:creator><description>&lt;div class="section" id="happy-pi-day"&gt;
 &lt;h2&gt;Happy Pi Day&lt;/h2&gt;
 &lt;p&gt;I celebrated the Pi day during Covid-19 times with these activities.&lt;/p&gt;
 &lt;ul class="simple"&gt;
 &lt;li&gt;Learning &lt;a class="reference external" href="https://noahgift.github.io/aws-ml-guide/lessons/Lesson4_AWSML_Modeling.html"&gt;AWS ML Modelling&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Solving an Easy Brilliant.org quiz but getting it wrong.&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;Solving an Easy Brilliant.org quiz but getting it wrong.&lt;/p&gt;
 &lt;img alt="https://i.imgur.com/ZvUKjlw.png" src="https://i.imgur.com/ZvUKjlw.png"&gt;
-&lt;p&gt;Reading a little about Thales Theorem  from the &lt;a class="reference external" href="https://mathigon.org/timeline"&gt;Timeline of Mathematics&lt;/a&gt; at Mathigon&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;Reading a little about Thales Theorem  from the &lt;a class="reference external" href="https://mathigon.org/timeline"&gt;Timeline of Mathematics&lt;/a&gt; at Mathigon&lt;/li&gt;
+&lt;/ul&gt;
 &lt;img alt="https://i.imgur.com/xsLzOCV.png" src="https://i.imgur.com/xsLzOCV.png"&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;I also did a &lt;a class="reference external" href="https://leetcode.com/contest/weekly-contest-180"&gt;leetcode weekly contest&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
 &lt;/div&gt;</description><guid>http://www.xtoinfinity.com/posts/2020/03/14/happy-pi-day.html</guid><pubDate>Sun, 15 Mar 2020 16:12:05 GMT</pubDate></item><item><title>Book Review: Blown to Bits</title><link>http://www.xtoinfinity.com/posts/2020/03/12/book-review-blown-to-bits.html</link><dc:creator>Senthil Kumaran</dc:creator><description>&lt;div&gt;&lt;a href="https://www.goodreads.com/book/show/3063035-blown-to-bits" style="float: left; padding-right: 20px"&gt;&lt;img border="0" alt="Blown to Bits: Your Life, Liberty, and Happiness After the Digital Explosion" src="https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1348371255l/3063035._SX98_.jpg"&gt;&lt;/a&gt;&lt;a href="https://www.goodreads.com/book/show/3063035-blown-to-bits"&gt;Blown to Bits: Your Life, Liberty, and Happiness After the Digital Explosion&lt;/a&gt; by &lt;a href="https://www.goodreads.com/author/show/1312233.Hal_Abelson"&gt;Hal Abelson&lt;/a&gt;&lt;br&gt;
 My rating: &lt;a href="https://www.goodreads.com/review/show/3003927797"&gt;5 of 5 stars&lt;/a&gt;&lt;br&gt;&lt;br&gt;
 Bits are Bit. Even if they are transmitted through electrons in copper wires or light in fiber optical cables or via modulation in radio waves. All of these carry bits and run the world. This book covers the intersection between technology, society, the justice system, policies, and politics. It is highly approachable and helps you appreciate technology, not just from a technical standpoint but from a societal standpoint. I really appreciate the concern for fellow human beings put forefront in this book. It opens the reader's mind to care a lot about the political process and be aware that any technology we design is going to have a wide societal impact.
@@ -333,9 +388,4 @@ nothing. The problem remains.&lt;/p&gt;
 &lt;hr class="docutils"&gt;
 &lt;p&gt;&lt;a class="reference external" href="https://ciechanow.ski/gears/"&gt;Gears by Bartosz Ciechanowski&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;Very detailed, step-by-step explanation and interactive demo on how Gears work. I was wondering if the animation is
-available via a javascript library. It seems author wrote both the js, css himself to write this article. He is a gem.&lt;/p&gt;&lt;/div&gt;</description><guid>http://www.xtoinfinity.com/posts/2020/02/14/assorted-reading.html</guid><pubDate>Fri, 14 Feb 2020 10:51:32 GMT</pubDate></item><item><title>CKAD</title><link>http://www.xtoinfinity.com/posts/2020/02/08/ckad.html</link><dc:creator>Senthil Kumaran</dc:creator><description>&lt;div&gt;&lt;p&gt;I cleared the CKAD exam.&lt;/p&gt;
-&lt;img alt="https://i.imgur.com/7IP1xMy.png" src="https://i.imgur.com/7IP1xMy.png"&gt;
-&lt;p&gt;I took 3 attempts to clear this exam. In my first attemp, I had forgotten the concepts.
-I was not very confident during 2nd, and prepared well for the 3rd attempt to clear it.&lt;/p&gt;
-&lt;p&gt;I read "Kubernetes from Ground Up" again. Practised and "understood" the concepts better.
-With all these, the tests were actually very enjoyable.&lt;/p&gt;&lt;/div&gt;</description><guid>http://www.xtoinfinity.com/posts/2020/02/08/ckad.html</guid><pubDate>Sun, 09 Feb 2020 05:34:32 GMT</pubDate></item></channel></rss>
+available via a javascript library. It seems author wrote both the js, css himself to write this article. He is a gem.&lt;/p&gt;&lt;/div&gt;</description><guid>http://www.xtoinfinity.com/posts/2020/02/14/assorted-reading.html</guid><pubDate>Fri, 14 Feb 2020 10:51:32 GMT</pubDate></item></channel></rss>

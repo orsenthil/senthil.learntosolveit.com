@@ -15,14 +15,18 @@ I celebrated the Pi day during Covid-19 times with these activities.
 
 * Learning `AWS ML Modelling`_
 
-Solving an Easy Brilliant.org quiz but getting it wrong.
+* Solving an Easy Brilliant.org quiz but getting it wrong.
 
 .. image:: https://i.imgur.com/ZvUKjlw.png
 
-Reading a little about Thales Theorem  from the `Timeline of Mathematics`_ at Mathigon
+* Reading a little about Thales Theorem  from the `Timeline of Mathematics`_ at Mathigon
 
 .. image:: https://i.imgur.com/xsLzOCV.png
 
 .. _AWS ML Modelling: https://noahgift.github.io/aws-ml-guide/lessons/Lesson4_AWSML_Modeling.html
 
 .. _Timeline of Mathematics: https://mathigon.org/timeline
+
+* I also did a `leetcode weekly contest`_
+
+.. _leetcode weekly contest: https://leetcode.com/contest/weekly-contest-180
