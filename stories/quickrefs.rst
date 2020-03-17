@@ -19,7 +19,7 @@ Nikola and Rst
 
 * Inline Hyperlink
 
-.. raw::
+.. raw:: rst
 
    `example <https://example.com>`_
 
