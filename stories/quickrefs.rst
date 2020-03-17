@@ -14,6 +14,16 @@
 These are some resources that augment me. This page serves a quick ref for resources and commands that I might need
 find at some point in time in future. As a reader, you might find it useful too.
 
+Nikola and Rst
+--------------
+
+* Inline Hyperlink
+
+.. raw::
+
+   `example <https://example.com>`_
+
+
 Physical Libraries
 ------------------
 
@@ -22,6 +32,7 @@ Physical Libraries
 * Dublin Public Library
 * San Ramon Public Library
 * Georgia Tech Library
+* `The Hindu Newspaper Reading with ProQuest <https://search-proquest-com.ezproxy.sfpl.org/>`_
 
 Memory Tools
 ------------
