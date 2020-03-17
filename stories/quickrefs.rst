@@ -19,9 +19,11 @@ Nikola and Rst
 
 * Inline Hyperlink
 
-.. raw:: rst
+.. raw:: html
 
+    <pre>
    `example <https://example.com>`_
+    </pre>
 
 
 Physical Libraries
@@ -33,6 +35,7 @@ Physical Libraries
 * San Ramon Public Library
 * Georgia Tech Library
 * `The Hindu Newspaper Reading with ProQuest <https://search-proquest-com.ezproxy.sfpl.org/>`_
+* `Internet Archive <https://archive.org>`_
 
 Memory Tools
 ------------
