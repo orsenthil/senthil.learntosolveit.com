@@ -1,5 +1,75 @@
 <?xml version="1.0" encoding="utf-8"?>
-<?xml-stylesheet type="text/xsl" href="assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Senthil Kumaran</title><link>http://www.xtoinfinity.com/</link><description>Senthil Kumaran</description><atom:link href="http://www.xtoinfinity.com/rss.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><lastBuildDate>Mon, 16 Mar 2020 22:32:47 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>The Discovery of Radium by Madame M. Curie</title><link>http://www.xtoinfinity.com/posts/2020/03/16/the-discovery-of-radium-by-madame-m-curie.html</link><dc:creator>Senthil Kumaran</dc:creator><description>&lt;div&gt;&lt;p&gt;This is a short text available for reading in project gutenberg, titled &lt;a class="reference external" href="https://www.gutenberg.org/files/61622/61622-h/61622-h.htm"&gt;"The Discovery of Radium by Marie Curie"&lt;/a&gt;&lt;/p&gt;
+<?xml-stylesheet type="text/xsl" href="assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Senthil Kumaran</title><link>http://www.xtoinfinity.com/</link><description>Senthil Kumaran</description><atom:link href="http://www.xtoinfinity.com/rss.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><lastBuildDate>Fri, 20 Mar 2020 21:56:45 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Bill Gates Q/A about COVID-19</title><link>http://www.xtoinfinity.com/posts/2020/03/20/gates-notes-qa-about-covid-19.html</link><dc:creator>Senthil Kumaran</dc:creator><description>&lt;div&gt;&lt;p&gt;Bill Gates did a Ask Me Anything on Covid-19 on Reddit. The entire AMA is educational, read it in &lt;a class="reference external" href="https://www.reddit.com/r/Coronavirus/comments/fksnbf/im_bill_gates_cochair_of_the_bill_melinda_gates/"&gt;reddit&lt;/a&gt; or in
+&lt;a class="reference external" href="https://www.gatesnotes.com/Health/A-coronavirus-AMA"&gt;Gates Notes AMA&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;The following question and answers caught my attention in particular.&lt;/p&gt;
+&lt;div class="admonition admonition-bill-gates-ama-on-covid-19-some-question-and-answers"&gt;
+&lt;p class="first admonition-title"&gt;Bill Gates AMA on Covid-19 - Some question and answers.&lt;/p&gt;
+&lt;p&gt;Q: &lt;strong&gt;What about the current crisis worries you the most? What gives you the
+most hope?&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Bill: &lt;em&gt;The current phase has a lot of the cases in rich countries.
+With the right actions including the testing and social distancing (which I
+call “shut down”) within 2-3 months the rich countries should have avoided high
+levels of infection. I worry about all the economic damage but even worse will
+be how this&lt;/em&gt; &lt;strong&gt;will affect the developing countries&lt;/strong&gt; &lt;em&gt;who cannot do the social
+distancing the same way as rich countries and whose hospital capacity is much
+lower.&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;Q: &lt;strong&gt;I read the&lt;/strong&gt; &lt;a class="reference external" href="https://www.imperial.ac.uk/media/imperial-college/medicine/sph/ide/gida-fellowships/Imperial-College-COVID19-NPI-modelling-16-03-2020.pdf"&gt;Imperial College COVID-19 Response Team report&lt;/a&gt;
+&lt;strong&gt;as well as&lt;/strong&gt; &lt;a class="reference external" href="https://twitter.com/jeremycyoung/status/1239975682643357696"&gt;this explanation in a historical context&lt;/a&gt;. &lt;strong&gt;Essentially, it
+says that by doing nothing, 4 million Americans die. Through the mitigation
+strategy—i.e. social distancing and “flattening the curve”— it says that 1.1-2
+million Americans will die. However, it also says that the suppression
+strategy, or “shutting everything down for 18 months”—will lead to only a few
+thousand people dying.&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Do you agree with these numbers, and if so, is there any excuse for not
+immediately issuing a shelter in place order for the entire country?&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Bill: &lt;strong&gt;Fortunately it appears the parameters used in that model
+were too negative.&lt;/strong&gt; &lt;em&gt;The experience in China is the most critical data we
+have. They did their “shut down” and were able to reduce the number of cases.
+They are testing widely so they see rebounds immediately and so far there have
+not been a lot. They avoided widespread infection. The Imperial model does not
+match this experience. Models are only as good as the assumptions put into
+them. People are working on models that match what we are seeing more closely
+and they will become a key tool. A group called Institute for Disease Modeling
+that I fund is one of the groups working with others on this.&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;Q: &lt;strong&gt;How is the economy likely to recover after all of this
+in your opinion?&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Bill: &lt;em&gt;Yes eventually. The economic impact of the “shut down” will be
+large but if it is done well (including the testing piece which I keep
+mentioning) eventually we can open back up.&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;Q: &lt;strong&gt;How is your foundation helping the current pandemic? Are you
+donating money, producing products for health workers?&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Bill: &lt;em&gt;Our foundation is working with all the groups who make
+diagnostics, therapeutics and vaccines to make sure the right efforts are
+prioritized. We want to make sure all countries get access to these tools. We
+donated $100M in February for a variety of things and we will be doing more.
+One priority is to make sure that there is enough manufacturing capacity for
+therapeutics and vaccines.&lt;/em&gt; &lt;strong&gt;We have other efforts like our education group
+working to make sure the online resources for students are as helpful as they
+can be.&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Q: &lt;strong&gt;Is there anything you can do to assist with ventilator production?&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Bill: &lt;em&gt;There are a lot of efforts to do this. If we do social
+distancing (“shut down”) properly then the surge of cases won’t be as
+overwhelming.&lt;/em&gt; &lt;strong&gt;Our foundation’s expertise is in diagnostics, therapeutics and
+vaccines so we are not involved in the ventilator efforts but it could make a
+contribution to have more especially as the disease gets into developing
+countries including Africa.&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Q: &lt;strong&gt;What do you see as the long-term strategy for fighting this
+pandemic and do you feel like it will adequately prepare us for the next?&lt;/strong&gt;&lt;/p&gt;
+&lt;p class="last"&gt;Bill: &lt;em&gt;I think that after this is under control that Governments and
+others will invest heavily in being ready for the next one. This will take
+global cooperation particularly to help the developing countries who will be
+hurt the most. A good example is the need to test therapeutics wherever the
+disease is to help the whole world.&lt;/em&gt; &lt;strong&gt;The Virus doesn't respect national
+boundaries.&lt;/strong&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="related-resources"&gt;
+&lt;h2&gt;Related Resources&lt;/h2&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;&lt;a class="reference external" href="https://www.gatesnotes.com/Health/We-Are-Not-Ready-for-the-Next-Epidemic"&gt;On preparing for next epidemic in 2015&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class="reference external" href="https://www.imperial.ac.uk/media/imperial-college/medicine/sph/ide/gida-fellowships/Imperial-College-COVID19-NPI-modelling-16-03-2020.pdf"&gt;Imperial College Covid-19 Response Team Report that led to Shut-down strategy in US&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class="reference external" href="https://www.coursera.org/learn/covid-19/home/welcome"&gt;Coursera - Science Matters - Let's Talk About COVID-19 by Imperial College London &amp;amp; J-IDEA&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;&lt;/div&gt;</description><guid>http://www.xtoinfinity.com/posts/2020/03/20/gates-notes-qa-about-covid-19.html</guid><pubDate>Fri, 20 Mar 2020 20:13:43 GMT</pubDate></item><item><title>The Discovery of Radium by Madame M. Curie</title><link>http://www.xtoinfinity.com/posts/2020/03/16/the-discovery-of-radium-by-madame-m-curie.html</link><dc:creator>Senthil Kumaran</dc:creator><description>&lt;div&gt;&lt;p&gt;This is a short text available for reading in project gutenberg, titled &lt;a class="reference external" href="https://www.gutenberg.org/files/61622/61622-h/61622-h.htm"&gt;"The Discovery of Radium by Marie Curie"&lt;/a&gt;&lt;/p&gt;
 &lt;a class="reference external image-reference" href="https://www.gutenberg.org/files/61622/61622-h/61622-h.htm"&gt;&lt;img alt="https://www.gutenberg.org/files/61622/61622-h/images/cover.jpg" class="align-center" src="https://www.gutenberg.org/files/61622/61622-h/images/cover.jpg" style="width: 350px; height: 500px;"&gt;&lt;/a&gt;
 &lt;p&gt;Some interesting quotes from this book&lt;/p&gt;
 &lt;div class="admonition admonition-pursuit-of-truth"&gt;
@@ -199,94 +269,4 @@ wanted to use it.&lt;/p&gt;
 &lt;p&gt;This is Racket Language evolution to a variant of Scheme which is faster than any other implementation.&lt;/p&gt;
 &lt;p&gt;&lt;a class="reference external" href="https://bosker.wordpress.com/2013/11/13/beyond-bezier-curves/"&gt;Beyond Bézier curves&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;Provides high level intuition for curve drawing and appreciates Curve technology based on &lt;a class="reference external" href="http://i.stanford.edu/pub/cstr/reports/cs/tr/85/1047/CS-TR-85-1047.pdf"&gt;John Hobby's Research&lt;/a&gt;
-which uses splines.&lt;/p&gt;&lt;/div&gt;</description><guid>http://www.xtoinfinity.com/posts/2020/02/21/reading-essays.html</guid><pubDate>Fri, 21 Feb 2020 12:33:09 GMT</pubDate></item><item><title>Reading List: Interviews</title><link>http://www.xtoinfinity.com/posts/2020/02/15/reading-list-interviews.html</link><dc:creator>Senthil Kumaran</dc:creator><description>&lt;div&gt;&lt;p&gt;&lt;a class="reference external" href="https://www.jarednelsen.dev/posts/The-horrifically-dystopian-world-of-software-engineering-interviews"&gt;The Horrifically Dystopian World of Software Engineering Interviews&lt;/a&gt;&lt;/p&gt;
-&lt;div class="admonition admonition-job-search"&gt;
-&lt;p class="first admonition-title"&gt;job search&lt;/p&gt;
-&lt;p class="last"&gt;I could go on bemoaning the many disappointing experiences I had on this
-slog of a job search. There were many of them. 23 interviews and I didn’t
-get a single offer. I have always sought to be completely honest and humble
-with myself and others about my abilities.&lt;/p&gt;
-&lt;/div&gt;
-&lt;p&gt;I had a similar experience after getting fired from twitter. I attend 20-30 interviews and I managed to clear one.
-The experience frustrated me to no end.&lt;/p&gt;
-&lt;p&gt;My personal experience at Square interview was one of humiliation. I was escorted out after the 1st round as I could
-not write code.&lt;/p&gt;
-&lt;div class="admonition admonition-cottage-industry"&gt;
-&lt;p class="first admonition-title"&gt;cottage industry&lt;/p&gt;
-&lt;p class="last"&gt;There is a cottage industry springing up around passing interviews - All of
-this algorithm challenge hubub started with popular companies like Google.
-There were several engineers who worked at these popular tech companies that
-saw an opportunity to make a few bucks be offering prep material. There were
-two influential books written on the subject: Cracking the Coding Interview and
-Elements of Programming Interviews. Both of these books offer guided interview
-preparation material. The problem is that the industry got a hold of these
-books and tailored their interviews to the book’s material.&lt;/p&gt;
-&lt;/div&gt;
-&lt;p&gt;This is real. So many start-ups help you prepare for the interview.&lt;/p&gt;
-&lt;div class="admonition admonition-acceptance"&gt;
-&lt;p class="first admonition-title"&gt;Acceptance&lt;/p&gt;
-&lt;p class="last"&gt;Complaining about it wont do any good.  - Sooner or later I’m going to have to
-get another job. Even if I don’t like the methodology, I am going to have to go
-through the loop again.&lt;/p&gt;
-&lt;/div&gt;
-&lt;p&gt;The final conclusions makes it a balanced article, in my opinion.&lt;/p&gt;
-&lt;p&gt;There is no good way to find the right candidates. These interviews of-course help test if the candidate can code,
-has prepared for the interview and is taking the process seriously. I am with this process until we find a better one.&lt;/p&gt;
-&lt;hr class="docutils"&gt;
-&lt;p&gt;&lt;a class="reference external" href="https://www.usenix.org/legacy/event/usenix10/tech/full_papers/Hunt.pdf"&gt;ZooKeeper- Wait-free coordination for Internet-scale systems&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;By Patrick Hunt and Mahadev Konar of Yahoo! Grid and Flavio P. Junqueira and Benjamin Reed of Yahoo! Research&lt;/p&gt;
-&lt;div class="admonition admonition-wait-free"&gt;
-&lt;p class="first admonition-title"&gt;wait-free&lt;/p&gt;
-&lt;p class="last"&gt;Our system,  Zookeeper,hence implements an API that manipulates
-simple wait-free data objects organized hierarchically as in file systems.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="admonition admonition-linearizable-writes"&gt;
-&lt;p class="first admonition-title"&gt;Linearizable writes&lt;/p&gt;
-&lt;p class="last"&gt;With ZooKeeper, we are able to implement all coordination primitives that our applications require, even though
-only writes are linearizable.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="admonition admonition-ordering-gaurantees"&gt;
-&lt;p class="first admonition-title"&gt;Ordering Gaurantees&lt;/p&gt;
-&lt;p&gt;ZooKeeper has two basic ordering guarantees.&lt;/p&gt;
-&lt;p&gt;Linearizable writes: All requests that update the state of  ZooKeeper  are
-serializable  and  respect precedence.&lt;/p&gt;
-&lt;p class="last"&gt;FIFO client order: All requests from a given client are executed  in the
-order  that  they  were  sent  by  the client.&lt;/p&gt;
-&lt;/div&gt;
-&lt;p&gt;The important design of the Zookeeper was in the Client API used by the clients, server is a well defined architecture.&lt;/p&gt;
-&lt;p&gt;I used Zookeeper for the Packer service, which is a service to manage artifacts on Aurora scheduler (on Mesos)  at
-twitter. ZK was used along with hadoop for storing package metadata. This was overkill for simple operation, and it
-was decided migrate the service from ZK to a relational database like MySQL.&lt;/p&gt;
-&lt;p&gt;I had worked on the client of this service in python and also wrote certain parts the migration client in java.&lt;/p&gt;
-&lt;hr class="docutils"&gt;
-&lt;div class="section" id="byzantine-fault-tolerance"&gt;
-&lt;h2&gt;Byzantine Fault Tolerance&lt;/h2&gt;
-&lt;p&gt;Zookeeper is not Byzantine Fault Tolerant. Author say for the production uses they have have not observed the failure
-that could have been prevented by &lt;em&gt;then&lt;/em&gt; proposed systems to make Zookeeper Byzantine Fault Tolerant.&lt;/p&gt;
-&lt;div class="youtube-video"&gt;
-&lt;iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/dfsRQyYXOsQ?rel=0&amp;amp;wmode=transparent" frameborder="0" allow="encrypted-media" allowfullscreen&gt;&lt;/iframe&gt;
-&lt;/div&gt;&lt;/div&gt;
-&lt;hr class="docutils"&gt;
-&lt;div class="section" id="chubby"&gt;
-&lt;h2&gt;Chubby&lt;/h2&gt;
-&lt;p&gt;&lt;a class="reference external" href="https://static.googleusercontent.com/media/research.google.com/en//archive/chubby-osdi06.pdf"&gt;The Chubby lock service for loosely-coupled distributed systems&lt;/a&gt; By Mike Burrows, Google Inc&lt;/p&gt;
-&lt;div class="admonition admonition-intended-use"&gt;
-&lt;p class="first admonition-title"&gt;intended use&lt;/p&gt;
-&lt;p class="last"&gt;It is intended for use within a loosely-coupled distributed system consisting
-of moderately large numbers of small machines connected by a high-speed
-network. For example, a Chubby instance (also known as a Chubby cell) might
-serve ten thousand 4-processor machines connected by 1Gbit/s Ethernet. Most
-Chubby cells are confined to a single data centre or machine room, though we do
-run at least one Chubby cell whose replicas are separated by thousands of
-kilometres.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="admonition admonition-backup"&gt;
-&lt;p class="first admonition-title"&gt;backup&lt;/p&gt;
-&lt;p class="last"&gt;Every few hours, the master of each Chubby cell writes a snapshot of its
-database to a GFS file server in a different building. The use of a
-separate building ensures both that the backup will survive building damage,
-and that the backups introduce no cyclic dependencies in the system; a GFS cell
-in the same building potentially might rely on the Chubby cell for electing its
-master.&lt;/p&gt;
-&lt;/div&gt;
-&lt;/div&gt;&lt;/div&gt;</description><category>distributed systems</category><category>interviews</category><guid>http://www.xtoinfinity.com/posts/2020/02/15/reading-list-interviews.html</guid><pubDate>Sat, 15 Feb 2020 15:53:43 GMT</pubDate></item></channel></rss>
+which uses splines.&lt;/p&gt;&lt;/div&gt;</description><guid>http://www.xtoinfinity.com/posts/2020/02/21/reading-essays.html</guid><pubDate>Fri, 21 Feb 2020 12:33:09 GMT</pubDate></item></channel></rss>
