@@ -1,5 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
-<?xml-stylesheet type="text/xsl" href="assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Senthil Kumaran</title><link>http://www.xtoinfinity.com/</link><description>Senthil Kumaran</description><atom:link href="http://www.xtoinfinity.com/rss.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><lastBuildDate>Wed, 25 Mar 2020 04:31:58 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>On Mentors - Katherine Johnson and William Schieffelin Claytor</title><link>http://www.xtoinfinity.com/posts/2020/03/24/on-mentors-katherine-johnson-and-william-schieffelin-claytor.html</link><dc:creator>Senthil Kumaran</dc:creator><description>&lt;div&gt;&lt;p&gt;I came to know today that Katherine Johnson had a excellent teacher, guide and a mentor in &lt;a class="reference external" href="https://en.wikipedia.org/wiki/William_Schieffelin_Claytor"&gt;William Schieffelin Claytor&lt;/a&gt;&lt;/p&gt;
+<?xml-stylesheet type="text/xsl" href="assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Senthil Kumaran</title><link>http://www.xtoinfinity.com/</link><description>Senthil Kumaran</description><atom:link href="http://www.xtoinfinity.com/rss.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><lastBuildDate>Wed, 25 Mar 2020 13:41:16 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Bill Gates Follow up Q/A on Covid-19</title><link>http://www.xtoinfinity.com/posts/2020/03/25/bill-gates-follow-up-qa-on-covid-19.html</link><dc:creator>Senthil Kumaran</dc:creator><description>&lt;div&gt;&lt;p&gt;Bill Gates followed up with a Live Question and Answer session with TED's Chris
+Anderson.&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;&lt;strong&gt;Testing&lt;/strong&gt; is the still "key part".  We need a way to find to detect who
+has-virus and who does not. This is done using swabs. &lt;em&gt;All of us, will have
+to be tested before we resume social interaction.&lt;/em&gt;&lt;/li&gt;
+&lt;li&gt;He is still very much concerned about developing countries, like India,
+Pakistan, and countries in the southern hemisphere, as he perceives, will
+have more difficulty than developed countries like the US to get this
+through.&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;Economic Impact&lt;/em&gt; can be reversed, but if a life is lost, it cannot be
+brought back.&lt;/li&gt;
+&lt;li&gt;The idea of building herd-immunity against this virus, in reality,  doesn't
+look like a choice. The numbers don't add up.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Please watch the entire video conversation here:&lt;/p&gt;
+&lt;p&gt;&lt;a class="reference external" href="https://www.facebook.com/TED/videos/1071228706574778/"&gt;https://www.facebook.com/TED/videos/1071228706574778/&lt;/a&gt;&lt;/p&gt;&lt;/div&gt;</description><guid>http://www.xtoinfinity.com/posts/2020/03/25/bill-gates-follow-up-qa-on-covid-19.html</guid><pubDate>Wed, 25 Mar 2020 13:38:37 GMT</pubDate></item><item><title>On Mentors - Katherine Johnson and William Schieffelin Claytor</title><link>http://www.xtoinfinity.com/posts/2020/03/24/on-mentors-katherine-johnson-and-william-schieffelin-claytor.html</link><dc:creator>Senthil Kumaran</dc:creator><description>&lt;div&gt;&lt;p&gt;I came to know today that Katherine Johnson had a excellent teacher, guide and a mentor in &lt;a class="reference external" href="https://en.wikipedia.org/wiki/William_Schieffelin_Claytor"&gt;William Schieffelin Claytor&lt;/a&gt;&lt;/p&gt;
 &lt;img alt="https://i.imgur.com/VNmVRsy.png" src="https://i.imgur.com/VNmVRsy.png"&gt;&lt;/div&gt;</description><guid>http://www.xtoinfinity.com/posts/2020/03/24/on-mentors-katherine-johnson-and-william-schieffelin-claytor.html</guid><pubDate>Wed, 25 Mar 2020 04:30:41 GMT</pubDate></item><item><title>Bill Gates Q/A about COVID-19</title><link>http://www.xtoinfinity.com/posts/2020/03/20/gates-notes-qa-about-covid-19.html</link><dc:creator>Senthil Kumaran</dc:creator><description>&lt;div&gt;&lt;p&gt;Bill Gates did a Ask Me Anything on Covid-19 on Reddit. The entire AMA is educational, read it in &lt;a class="reference external" href="https://www.reddit.com/r/Coronavirus/comments/fksnbf/im_bill_gates_cochair_of_the_bill_melinda_gates/"&gt;reddit&lt;/a&gt; or in
 &lt;a class="reference external" href="https://www.gatesnotes.com/Health/A-coronavirus-AMA"&gt;Gates Notes AMA&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;The following question and answers caught my attention in particular.&lt;/p&gt;
@@ -196,68 +212,4 @@ was correlated with&lt;/p&gt;
 &lt;li&gt;Psychology. Positive Psychology played as a predictor too.&lt;/li&gt;
 &lt;/ul&gt;&lt;/div&gt;</description><guid>http://www.xtoinfinity.com/posts/2020/02/24/reading-exam-success-predictor.html</guid><pubDate>Mon, 24 Feb 2020 15:37:33 GMT</pubDate></item><item><title>How to teach debugging?</title><link>http://www.xtoinfinity.com/posts/2020/02/23/how-to-teach-debugging.html</link><dc:creator>Senthil Kumaran</dc:creator><description>&lt;div&gt;&lt;img alt="https://i.imgur.com/Fnh80HC.png" src="https://i.imgur.com/Fnh80HC.png"&gt;
 &lt;p&gt;This is from Masterminds of programming. Person sharing the story and the perspective is &lt;a class="reference external" href="https://en.wikipedia.org/wiki/Thomas_E._Kurtz"&gt;Thomas Kurtz&lt;/a&gt;&lt;/p&gt;
-&lt;img alt="https://i.imgur.com/S2mnVEI.png" src="https://i.imgur.com/S2mnVEI.png"&gt;&lt;/div&gt;</description><guid>http://www.xtoinfinity.com/posts/2020/02/23/how-to-teach-debugging.html</guid><pubDate>Sun, 23 Feb 2020 15:24:57 GMT</pubDate></item><item><title>Reading - dBase, Foxpro, Editing Wikipedia</title><link>http://www.xtoinfinity.com/posts/2020/02/22/reading-dbase-foxpro-editing-wikipedia.html</link><dc:creator>Senthil Kumaran</dc:creator><description>&lt;div&gt;&lt;ul class="simple"&gt;
-&lt;li&gt;&lt;a class="reference external" href="https://visualstudiomagazine.com/articles/2007/08/01/life-after-dbase.aspx"&gt;Life After dBase&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;div class="admonition admonition-interest-for-maths"&gt;
-&lt;p class="first admonition-title"&gt;Interest for Maths&lt;/p&gt;
-&lt;p class="last"&gt;My personal self-discipline is I start at page one and do all the
-odd-numbered exercises because they have the answers. I keep all the stuff
-in a notebook. Anything less just doesn't work for me. I've done calculus
-and linear algebra and statistics and dynamics, which is engineering, and
-analytic geometry, and I'm about to start hitting differential equations
-really hard. What happened was my mother-in-law bought me a book at a swap
-meet for 50 cents, and it was "The Magic of Mathematics" or something like
-that. It was a low-level book and it got me started again. I do math as a
-backdrop. I'm kind of compulsive about building things, making things, and
-dBASE was one of those.&lt;/p&gt;
-&lt;/div&gt;
-&lt;ul class="simple"&gt;
-&lt;li&gt;&lt;a class="reference external" href="http://www.foxprohistory.org/interview_wayne_ratliff.htm"&gt;Interview with Wayne Ratliff&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;He wrote dBase&lt;/p&gt;
-&lt;div class="admonition admonition-i-was-a-computer"&gt;
-&lt;p class="first admonition-title"&gt;I was a computer&lt;/p&gt;
-&lt;p class="last"&gt;Wayne Ratliff: Computers themselves got me away from car design. Before I
-completed my degree, I got a job with Martin Marietta in Denver. I was a
-computer. My job title was computer. Other people have programmed
-computers, but I have been one.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="admonition admonition-databases-and-natural-language-research"&gt;
-&lt;p class="first admonition-title"&gt;Databases and Natural Language Research&lt;/p&gt;
-&lt;p class="last"&gt;I went out and bought lots of books on natural language and artificial
-intelligence. I kept getting drawn from one place to another, and I did lots
-of experiments. I hadn't researched the database as much as I did the
-natural-language aspect.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="admonition admonition-self-reflection"&gt;
-&lt;p class="first admonition-title"&gt;self-reflection&lt;/p&gt;
-&lt;p class="last"&gt;The way I've programmed all my life is as a toolmaker. When I compare
-myself, even ten years ago, with other programmers, I see that I was trying
-to generalize to a large extent; they were trying to write programs that
-would solve a specific need. Their programs would frequently be delivered
-much sooner than mine would be, but mine would have longer lifetimes. Once
-the specific need went away, their programs were dead, they had to be
-rewritten each time the needs changed. I always wrote in such a way that the
-program could solve a family of problems, rather than just a single one.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="admonition admonition-hacker"&gt;
-&lt;p class="first admonition-title"&gt;hacker?&lt;/p&gt;
-&lt;p class="last"&gt;Wayne Ratliff: Yes. Do you think hacker is a good word or a bad word? If you
-think it's a good word, then they're hackers. They're good people, but
-they're thinking of their job rather than the user, and you have to go a
-little beyond that. That's how dBASE got started. I was thinking of how I
-wanted to use it.&lt;/p&gt;
-&lt;/div&gt;
-&lt;ul class="simple"&gt;
-&lt;li&gt;&lt;a class="reference external" href="http://www.randomhacks.net/2005/10/11/amb-operator/"&gt;amb operator in lisp&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;It is a neat concept to understand. The ruby code made it clear.&lt;/p&gt;
-&lt;ul class="simple"&gt;
-&lt;li&gt;&lt;a class="reference external" href="https://upload.wikimedia.org/wikipedia/commons/b/b3/Wiki_markup_cheatsheet_EN.pdf"&gt;Wikipedia Editing Quickref&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;Adding references seems easiest contribution one can make.&lt;/p&gt;
-&lt;ul class="simple"&gt;
-&lt;li&gt;&lt;a class="reference external" href="https://github.com/norvig/pytudes/blob/master/ipynb/Economics.ipynb"&gt;Modeling Economics using IPython by Peter Norvig&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;Am I reading this right? 99 percentile end up with all the wealth and then it get's swapped?&lt;/p&gt;&lt;/div&gt;</description><guid>http://www.xtoinfinity.com/posts/2020/02/22/reading-dbase-foxpro-editing-wikipedia.html</guid><pubDate>Sun, 23 Feb 2020 00:43:21 GMT</pubDate></item></channel></rss>
+&lt;img alt="https://i.imgur.com/S2mnVEI.png" src="https://i.imgur.com/S2mnVEI.png"&gt;&lt;/div&gt;</description><guid>http://www.xtoinfinity.com/posts/2020/02/23/how-to-teach-debugging.html</guid><pubDate>Sun, 23 Feb 2020 15:24:57 GMT</pubDate></item></channel></rss>
