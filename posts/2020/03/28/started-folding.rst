@@ -8,13 +8,28 @@
 .. type: text
 
 I setup `Folding@Home`_ and started contributing computing resources to `Covid-19`_ project
-I followed the installation instructions from `this thread`_ and got my client running.
 
 .. image:: https://dl.dropboxusercontent.com/s/h4n6u8p9uut8xzd/IMG_20200328_191444.jpg
 
-Let's not leave any stone unturned.
+
+Stats: https://stats.foldingathome.org/donor/Senthil.Kumaran
+
+.. image:: https://dl.dropbox.com/s/uab0psll81ufw2z/folding-at-home.png
+   :target: https://stats.foldingathome.org/donor/Senthil.Kumaran
+
+Folding@Home hit a milestone Exaflop computing speed, which is a billion billion floating point operations per second.
+
+**Let's not leave any stone unturned.**
+
+Resources
+---------
+*  Installation instructions for `Ubuntu 19.10`_
+* `Coronavirus pushes Folding@Home’s crowdsourced molecular science to exaflop levels`_
+
 
 .. _Folding@Home: https://foldingathome.org/
 
 .. _Covid-19: https://foldingathome.org/covid19/
-.. _this thread: https://foldingforum.org/viewtopic.php?f=16&t=31972#
+.. _Ubuntu 19.10: https://foldingforum.org/viewtopic.php?f=16&t=31972#
+
+.. _Coronavirus pushes Folding@Home’s crowdsourced molecular science to exaflop levels: https://techcrunch.com/2020/03/26/coronavirus-pushes-foldinghomes-crowdsourced-molecular-science-to-exaflop-levels/
