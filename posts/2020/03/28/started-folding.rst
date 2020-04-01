@@ -9,7 +9,7 @@
 
 I setup `Folding@Home`_ and started contributing computing resources to `Covid-19`_ project.
 
-For Covid-19, the folding@home project is trying to find out the structure of covid-19 virus as it comes in contact
+For Covid-19, the `Folding@Home`_ project is trying to find out the structure of covid-19 virus as it comes in contact
 with human bodies through `ACE2 receptor`_, and how an understanding of this can help build therapeutic antibiotics
 or molecules that might disrupt the viral interaction.
 
@@ -21,7 +21,8 @@ Stats: https://stats.foldingathome.org/donor/Senthil.Kumaran
 .. image:: https://dl.dropbox.com/s/uab0psll81ufw2z/folding-at-home.png
    :target: https://stats.foldingathome.org/donor/Senthil.Kumaran
 
-Folding@Home hit a milestone Exaflop computing speed, which is a billion billion floating point operations per second.
+`Folding@Home`_ hit a milestone `Exaflop`_ computing speed, which is a billion billion floating point operations per
+second.
 
 **Let's not leave any stone unturned.**
 
@@ -39,3 +40,5 @@ Resources
 .. _Coronavirus pushes Folding@Home’s crowdsourced molecular science to exaflop levels: https://techcrunch.com/2020/03/26/coronavirus-pushes-foldinghomes-crowdsourced-molecular-science-to-exaflop-levels/
 
 .. _ACE2 receptor: https://en.wikipedia.org/wiki/Angiotensin-converting_enzyme_2
+
+.. _Exaflop: https://en.wikipedia.org/wiki/Exascale_computing
