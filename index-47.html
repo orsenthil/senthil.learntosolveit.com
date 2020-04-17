@@ -80,7 +80,85 @@
     
         
     <div class="postindex">
-            <article class="h-entry post-text" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title"><a href="posts/2020/03/14/happy-pi-day.html" class="u-url">Happy Pi Day</a></h1>
+            <article class="h-entry post-text" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title"><a href="posts/2020/03/15/covid-19-exponential-growth-lecture-of-3blue1brown.html" class="u-url">Covid-19 Exponential Growth Lecture of 3Blue1Brown</a></h1>
+                <div class="metadata">
+                    <p class="byline author vcard"><span class="byline-name fn" itemprop="author">
+                        Senthil Kumaran
+                    </span></p>
+            <p class="dateline">
+            <a href="posts/2020/03/15/covid-19-exponential-growth-lecture-of-3blue1brown.html" rel="bookmark">
+            <time class="published dt-published" datetime="2020-03-15T14:13:54-07:00" itemprop="datePublished" title="2020-03-15 14:13">2020-03-15 14:13</time></a>
+            </p>
+                        <p class="commentline">
+        
+    <a href="posts/2020/03/15/covid-19-exponential-growth-lecture-of-3blue1brown.html#disqus_thread" data-disqus-identifier="cache/posts/2020/03/15/covid-19-exponential-growth-lecture-of-3blue1brown.html">Comments</a>
+
+
+                </p>
+</div>
+            </header><div class="e-content entry-content">
+                    <div>
+<p>3Blue1Brown did an excellent video explaining exponential growth. He took the
+opportunity to explain Covid-19, growth, trajectory and more importantly
+pressing question on when this growth will stop using mathematical equations.
+I was highly impressed. It helped to make sense of the situation, and help with
+dealing with the situation.</p>
+<p><strong>Please watch this video</strong></p>
+<div class="youtube-video">
+<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/Kas0tIxDvrg?rel=0&amp;wmode=transparent" frameborder="0" allow="encrypted-media" allowfullscreen></iframe>
+</div>
+<p>The video deals with the questions explained in the slide.</p>
+<img alt="https://i.imgur.com/46Tu2D9.png" src="https://i.imgur.com/46Tu2D9.png" style="width: 550px; height: 350px;"><p>Exponential growth means as you go from one day to the next, it involves
+multiplying by a constant.</p>
+<img alt="https://i.imgur.com/Rk3p1TP.png" src="https://i.imgur.com/Rk3p1TP.png" style="width: 550px; height: 350px;"><p>In terms of an Equation the exponential growth is represented mathematically
+like this.</p>
+<img alt="https://i.imgur.com/sTmqAyB.png" src="https://i.imgur.com/sTmqAyB.png" style="width: 550px; height: 350px;"><p>3Blue1Brown says that this data fits in a linear regression model.</p>
+<p>Linear regression calculates an equation that minimizes the distance between
+the fitted line and all of the data points.  And if want to find the equation
+that minimizes the distance between a line and the data point, the most common
+way is to find <a class="reference external" href="https://www.mathsisfun.com/data/least-squares-regression.html">"least square regression"</a> .</p>
+<p>We will notice that the least square regression ends up with an equation of
+line <span class="math">\(y = m \dot x + b\)</span> Where <cite>m</cite> is same as the multiplying factor the
+exponential growth.</p>
+<p>So he uses the data point to track the growth for linear regression.</p>
+<img alt="https://i.imgur.com/K1FQ7E1.png" src="https://i.imgur.com/K1FQ7E1.png" style="width: 550px; height: 350px;"><p>And finds out <span class="math">\(R^2\)</span> which is a coefficient of determination,  a
+statistical measure of how close the data are to the fitted regression line.
+We notice that <span class="math">\(R^2\)</span> is close to 1.0 which is a straight line, increasing
+by a factor, <span class="math">\(m\)</span> each day.</p>
+<p>He is making a point with logistic regression that, when a country has 100
+times lower cases than another country, the country is not 100 times better,
+but just 30 days behind!</p>
+<img alt="https://i.imgur.com/BrhVPIU.png" src="https://i.imgur.com/BrhVPIU.png" style="width: 550px; height: 350px;"><p>And following the numbers, if we extrapolate, we will hit a 1 billion cases in
+81 days. But that's hardly desirable, and everyone wants to know when we do
+stop growing linearly and hit a plateau. He notes that "Linear Growth" is a
+theoretical phenomenon, not a realistic one. Just like, if you were not married
+last year, and you got married this yea, it does not mean, will you marry every
+year from now. (<a class="reference external" href="https://www.explainxkcd.com/wiki/index.php/605:_Extrapolating">Explain XKCD</a>)</p>
+<img alt="https://i.imgur.com/q0h9nux.png" src="https://i.imgur.com/q0h9nux.png" style="width: 550px; height: 350px;"><p>But unlike marriage, we <strong>are</strong> seeing an exponential growth here. We will have
+to find out the factors that reduce the exponential growth.</p>
+<p>So, in reality what we are expecting is a <a class="reference external" href="https://en.wikipedia.org/wiki/Logistic_function">logistic curve</a> where the
+exponential growth includes damping factor contributed by people who are not
+infected.</p>
+<p>Our whole idea, then becomes to <strong>increase this damping factor</strong>, that is not
+get infected by this virus.</p>
+<img alt="https://i.imgur.com/vpRwguZ.png" src="https://i.imgur.com/vpRwguZ.png" style="width: 550px; height: 350px;"><p><strong>What makes the growth factor go down other than maxing out at the total population?</strong></p>
+<img alt="https://i.imgur.com/mAX2ICl.png" src="https://i.imgur.com/mAX2ICl.png" style="width: 550px; height: 350px;"><ul class="simple">
+<li><strong>Decrease the number of people getting exposed - aka social distancing</strong></li>
+<li><strong>Decrease the probability of exposure - aka wash your hands completely, maintain hygiene amongst other things.</strong></li>
+</ul>
+<p>And important point to remember in this damping factor is, the <strong>output decreases exponentially too</strong></p>
+<p>For instance with the growth factor of 1.15, we have the first number and
+reduces significantly, only by <em>10%</em> decrease in the damping factor.</p>
+<img alt="https://i.imgur.com/FltSCBb.png" src="https://i.imgur.com/FltSCBb.png"><img alt="https://i.imgur.com/aka3Jxt.png" src="https://i.imgur.com/aka3Jxt.png"><p>3Blue1Brown has tried to quantify our worry factor, and give us hope that by
+social distancing, good hygiene we can reduce the damping factor and control
+the growth. However, "If we are not worried, that's only thing to worry about".</p>
+<p><strong>Related Articles / Simulations</strong></p>
+<ul class="simple">
+<li><a class="reference external" href="https://www.washingtonpost.com/graphics/2020/world/corona-simulator/">Why outbreaks like coronavirus spread exponentially, and how to flatten the curve by Harry Stevens</a></li>
+</ul>
+</div>
+                </div>
+            </article><article class="h-entry post-text" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title"><a href="posts/2020/03/14/happy-pi-day.html" class="u-url">Happy Pi Day</a></h1>
                 <div class="metadata">
                     <p class="byline author vcard"><span class="byline-name fn" itemprop="author">
                         Senthil Kumaran
@@ -174,7 +252,9 @@ problem of Hand-writing recognition, within his lifetime. I was amazed while lis
 <li class="previous"><a href="index.html" rel="prev">Newer posts</a></li>
             <li class="next"><a href="index-46.html" rel="next">Older posts</a></li>
         </ul>
-<script>var disqus_shortname="xtoinfinity";(function(){var a=document.createElement("script");a.async=true;a.src="https://"+disqus_shortname+".disqus.com/count.js";(document.getElementsByTagName("head")[0]||document.getElementsByTagName("body")[0]).appendChild(a)}());</script><!--End of body content--><footer id="footer">
+<script>var disqus_shortname="xtoinfinity";(function(){var a=document.createElement("script");a.async=true;a.src="https://"+disqus_shortname+".disqus.com/count.js";(document.getElementsByTagName("head")[0]||document.getElementsByTagName("body")[0]).appendChild(a)}());</script><script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML" integrity="sha256-SDRP1VVYu+tgAGKhddBSl5+ezofHKZeI+OzxakbIe/Y=" crossorigin="anonymous"></script><script type="text/x-mathjax-config">
+        MathJax.Hub.Config({tex2jax: {inlineMath: [['$latex ','$'], ['\\(','\\)']]}});
+        </script><!--End of body content--><footer id="footer">
             Contents © 2020         <a href="mailto:orsenthil@gmail.com">Senthil Kumaran</a> - Powered by         <a href="https://getnikola.com" rel="nofollow">Nikola</a>         
             
         </footer>
