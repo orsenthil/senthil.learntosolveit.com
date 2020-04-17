@@ -16,7 +16,7 @@ decided to pursue his interest in Medicine, and became a clinician and helping w
 .. admonition:: Doing things you love
 
    “I am just one of those people who was very fortunate, where things worked out, and where I could do not just one
-thing I really enjoyed in life, but two.”
+   thing I really enjoyed in life, but two.”
 
 
 .. image:: https://i.imgur.com/KS2sJMf.png
