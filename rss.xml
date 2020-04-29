@@ -1,5 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
-<?xml-stylesheet type="text/xsl" href="assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Senthil Kumaran</title><link>http://www.xtoinfinity.com/</link><description>Senthil Kumaran</description><atom:link href="http://www.xtoinfinity.com/rss.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><lastBuildDate>Fri, 17 Apr 2020 03:04:31 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Heros of Pandemic: Dr. Brian Lewy</title><link>http://www.xtoinfinity.com/posts/2020/04/16/heros-of-pandemic-dr-brian-lewy.html</link><dc:creator>Senthil Kumaran</dc:creator><description>&lt;div&gt;&lt;p&gt;I came across this article on Brian Lewy, who was once the CEO of RadioShack, but after 30+ years in business,
+<?xml-stylesheet type="text/xsl" href="assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Senthil Kumaran</title><link>http://www.xtoinfinity.com/</link><description>Senthil Kumaran</description><atom:link href="http://www.xtoinfinity.com/rss.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><lastBuildDate>Wed, 29 Apr 2020 16:36:09 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Book Review: Masterminds of Programming</title><link>http://www.xtoinfinity.com/posts/2020/04/29/book-review-masterminds-of-programming.html</link><dc:creator>Senthil Kumaran</dc:creator><description>&lt;span&gt;&lt;a href="https://www.goodreads.com/book/show/1746425.Masterminds_of_Programming" style="float: left; padding-right: 20px"&gt;&lt;img border="0" alt="Masterminds of Programming: Conversations with the Creators of Major Programming Languages" src="https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1328834764l/1746425._SX98_.jpg"&gt;&lt;/a&gt;&lt;a href="https://www.goodreads.com/book/show/1746425.Masterminds_of_Programming"&gt;Masterminds of Programming: Conversations with the Creators of Major Programming Languages&lt;/a&gt; by &lt;a href="https://www.goodreads.com/author/show/801128.Federico_Biancuzzi"&gt;Federico Biancuzzi&lt;/a&gt;&lt;br&gt;
+My rating: &lt;a href="https://www.goodreads.com/review/show/3155122369"&gt;5 of 5 stars&lt;/a&gt;&lt;br&gt;&lt;br&gt;
+This was a lengthy book. The interviewers did a fantastic job with their questions and covered a range of expert programmers and language designers across the spectrum. The important thing I gained from reading this book was my "enthusiasm" again for different programming languages and styles. &lt;br&gt;Each different language creator had some "opinions" about the state of affairs and went about in a personal way to do something about it, create a language, create a community, solve the problem, and usually building on top of what the person had learned from others. The language creation is both a scientific process (standing upon the shoulders of giants), as well as the unique taste that each language designer brought to the table. I was excited to learn more about AWK, Haskell, Perl, and Eiffel as languages after reading this book.
+&lt;br&gt;&lt;/span&gt;</description><guid>http://www.xtoinfinity.com/posts/2020/04/29/book-review-masterminds-of-programming.html</guid><pubDate>Wed, 29 Apr 2020 16:34:42 GMT</pubDate></item><item><title>Heros of Pandemic: Dr. Brian Lewy</title><link>http://www.xtoinfinity.com/posts/2020/04/16/heros-of-pandemic-dr-brian-lewy.html</link><dc:creator>Senthil Kumaran</dc:creator><description>&lt;div&gt;&lt;p&gt;I came across this article on Brian Lewy, who was once the CEO of RadioShack, but after 30+ years in business,
 decided to pursue his interest in Medicine, and became a clinician and helping with fight against COVID-19.&lt;/p&gt;
 &lt;img alt="https://i.imgur.com/khkNx8i.png" src="https://i.imgur.com/khkNx8i.png"&gt;
 &lt;div class="admonition admonition-doing-things-you-love"&gt;
@@ -187,29 +190,4 @@ boundaries.&lt;/strong&gt;&lt;/p&gt;
 &lt;li&gt;&lt;a class="reference external" href="https://www.imperial.ac.uk/media/imperial-college/medicine/sph/ide/gida-fellowships/Imperial-College-COVID19-NPI-modelling-16-03-2020.pdf"&gt;Imperial College Covid-19 Response Team Report that led to Shut-down strategy in US&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a class="reference external" href="https://www.coursera.org/learn/covid-19/home/welcome"&gt;Coursera - Science Matters - Let's Talk About COVID-19 by Imperial College London &amp;amp; J-IDEA&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
-&lt;/div&gt;&lt;/div&gt;</description><guid>http://www.xtoinfinity.com/posts/2020/03/20/gates-notes-qa-about-covid-19.html</guid><pubDate>Fri, 20 Mar 2020 20:13:43 GMT</pubDate></item><item><title>The Discovery of Radium by Madame M. Curie</title><link>http://www.xtoinfinity.com/posts/2020/03/16/the-discovery-of-radium-by-madame-m-curie.html</link><dc:creator>Senthil Kumaran</dc:creator><description>&lt;div&gt;&lt;p&gt;This is a short text available for reading in project gutenberg, titled &lt;a class="reference external" href="https://www.gutenberg.org/files/61622/61622-h/61622-h.htm"&gt;"The Discovery of Radium by Marie Curie"&lt;/a&gt;&lt;/p&gt;
-&lt;a class="reference external image-reference" href="https://www.gutenberg.org/files/61622/61622-h/61622-h.htm"&gt;&lt;img alt="https://www.gutenberg.org/files/61622/61622-h/images/cover.jpg" class="align-center" src="https://www.gutenberg.org/files/61622/61622-h/images/cover.jpg" style="width: 350px; height: 500px;"&gt;&lt;/a&gt;
-&lt;p&gt;Some interesting quotes from this book&lt;/p&gt;
-&lt;div class="admonition admonition-pursuit-of-truth"&gt;
-&lt;p class="first admonition-title"&gt;pursuit of truth&lt;/p&gt;
-&lt;p class="last"&gt;&lt;em&gt;Then I took up measurements of minerals and I found that several of those
-which contain uranium or thorium or both were active. But then the activity
-was not what I could expect, it was greater than for uranium or thorium
-compounds like the oxides which are almost entirely composed of these
-elements. Then I thought that there should be in the minerals some unknown
-element having a much greater radioactivity than uranium or thorium. And I
-wanted to find and to separate that element, and I settled to that work
-with Professor Curie. We thought it would be done in several weeks or
-months, but it was not so. It took many years of hard work to finish that
-task. There was not one new element, there were several of them. But the
-most important is radium which could be separated in a pure state.&lt;/em&gt;&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="admonition admonition-work-of-science"&gt;
-&lt;p class="first admonition-title"&gt;work of science&lt;/p&gt;
-&lt;p class="last"&gt;&lt;em&gt;But we must not forget that when radium was discovered no one knew that it
-would prove useful in hospitals. The work was one of pure science. And this
-is a proof that scientific 5 work must not be considered from the point of
-view of the direct usefulness of it. It must be done for itself, for the
-beauty of science, and then there is always the chance that a scientific
-discovery may become like the radium a benefit for humanity.&lt;/em&gt;&lt;/p&gt;
-&lt;/div&gt;&lt;/div&gt;</description><guid>http://www.xtoinfinity.com/posts/2020/03/16/the-discovery-of-radium-by-madame-m-curie.html</guid><pubDate>Mon, 16 Mar 2020 22:18:22 GMT</pubDate></item></channel></rss>
+&lt;/div&gt;&lt;/div&gt;</description><guid>http://www.xtoinfinity.com/posts/2020/03/20/gates-notes-qa-about-covid-19.html</guid><pubDate>Fri, 20 Mar 2020 20:13:43 GMT</pubDate></item></channel></rss>
