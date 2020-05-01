@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<?xml-stylesheet type="text/xsl" href="assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Senthil Kumaran</title><link>http://www.xtoinfinity.com/</link><description>Senthil Kumaran</description><atom:link href="http://www.xtoinfinity.com/rss.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><lastBuildDate>Wed, 29 Apr 2020 16:36:09 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Book Review: Masterminds of Programming</title><link>http://www.xtoinfinity.com/posts/2020/04/29/book-review-masterminds-of-programming.html</link><dc:creator>Senthil Kumaran</dc:creator><description>&lt;span&gt;&lt;a href="https://www.goodreads.com/book/show/1746425.Masterminds_of_Programming" style="float: left; padding-right: 20px"&gt;&lt;img border="0" alt="Masterminds of Programming: Conversations with the Creators of Major Programming Languages" src="https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1328834764l/1746425._SX98_.jpg"&gt;&lt;/a&gt;&lt;a href="https://www.goodreads.com/book/show/1746425.Masterminds_of_Programming"&gt;Masterminds of Programming: Conversations with the Creators of Major Programming Languages&lt;/a&gt; by &lt;a href="https://www.goodreads.com/author/show/801128.Federico_Biancuzzi"&gt;Federico Biancuzzi&lt;/a&gt;&lt;br&gt;
+<?xml-stylesheet type="text/xsl" href="assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Senthil Kumaran</title><link>http://www.xtoinfinity.com/</link><description>Senthil Kumaran</description><atom:link href="http://www.xtoinfinity.com/rss.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><lastBuildDate>Fri, 01 May 2020 17:03:43 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Leetcode - 30 day challenge</title><link>http://www.xtoinfinity.com/posts/2020/05/01/leetcode-30-day-challenge.html</link><dc:creator>Senthil Kumaran</dc:creator><description>&lt;div&gt;&lt;p&gt;I completed the leetcode 30 day challenge for April 2020.&lt;/p&gt;
+&lt;img alt="https://i.imgur.com/yOqeEtv.png" src="https://i.imgur.com/yOqeEtv.png"&gt;&lt;/div&gt;</description><guid>http://www.xtoinfinity.com/posts/2020/05/01/leetcode-30-day-challenge.html</guid><pubDate>Fri, 01 May 2020 17:01:28 GMT</pubDate></item><item><title>Book Review: Masterminds of Programming</title><link>http://www.xtoinfinity.com/posts/2020/04/29/book-review-masterminds-of-programming.html</link><dc:creator>Senthil Kumaran</dc:creator><description>&lt;span&gt;&lt;a href="https://www.goodreads.com/book/show/1746425.Masterminds_of_Programming" style="float: left; padding-right: 20px"&gt;&lt;img border="0" alt="Masterminds of Programming: Conversations with the Creators of Major Programming Languages" src="https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1328834764l/1746425._SX98_.jpg"&gt;&lt;/a&gt;&lt;a href="https://www.goodreads.com/book/show/1746425.Masterminds_of_Programming"&gt;Masterminds of Programming: Conversations with the Creators of Major Programming Languages&lt;/a&gt; by &lt;a href="https://www.goodreads.com/author/show/801128.Federico_Biancuzzi"&gt;Federico Biancuzzi&lt;/a&gt;&lt;br&gt;
 My rating: &lt;a href="https://www.goodreads.com/review/show/3155122369"&gt;5 of 5 stars&lt;/a&gt;&lt;br&gt;&lt;br&gt;
 This was a lengthy book. The interviewers did a fantastic job with their questions and covered a range of expert programmers and language designers across the spectrum. The important thing I gained from reading this book was my "enthusiasm" again for different programming languages and styles. &lt;br&gt;Each different language creator had some "opinions" about the state of affairs and went about in a personal way to do something about it, create a language, create a community, solve the problem, and usually building on top of what the person had learned from others. The language creation is both a scientific process (standing upon the shoulders of giants), as well as the unique taste that each language designer brought to the table. I was excited to learn more about AWK, Haskell, Perl, and Eiffel as languages after reading this book.
 &lt;br&gt;&lt;/span&gt;</description><guid>http://www.xtoinfinity.com/posts/2020/04/29/book-review-masterminds-of-programming.html</guid><pubDate>Wed, 29 Apr 2020 16:34:42 GMT</pubDate></item><item><title>Heros of Pandemic: Dr. Brian Lewy</title><link>http://www.xtoinfinity.com/posts/2020/04/16/heros-of-pandemic-dr-brian-lewy.html</link><dc:creator>Senthil Kumaran</dc:creator><description>&lt;div&gt;&lt;p&gt;I came across this article on Brian Lewy, who was once the CEO of RadioShack, but after 30+ years in business,
@@ -120,74 +121,4 @@ look like a choice. The numbers don't add up.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;Please watch the entire video conversation here:&lt;/p&gt;
 &lt;p&gt;&lt;a class="reference external" href="https://www.facebook.com/TED/videos/1071228706574778/"&gt;https://www.facebook.com/TED/videos/1071228706574778/&lt;/a&gt;&lt;/p&gt;&lt;/div&gt;</description><guid>http://www.xtoinfinity.com/posts/2020/03/25/bill-gates-follow-up-qa-on-covid-19.html</guid><pubDate>Wed, 25 Mar 2020 13:38:37 GMT</pubDate></item><item><title>On Mentors - Katherine Johnson and William Schieffelin Claytor</title><link>http://www.xtoinfinity.com/posts/2020/03/24/on-mentors-katherine-johnson-and-william-schieffelin-claytor.html</link><dc:creator>Senthil Kumaran</dc:creator><description>&lt;div&gt;&lt;p&gt;I came to know today that Katherine Johnson had a excellent teacher, guide and a mentor in &lt;a class="reference external" href="https://en.wikipedia.org/wiki/William_Schieffelin_Claytor"&gt;William Schieffelin Claytor&lt;/a&gt;&lt;/p&gt;
-&lt;img alt="https://i.imgur.com/VNmVRsy.png" src="https://i.imgur.com/VNmVRsy.png"&gt;&lt;/div&gt;</description><guid>http://www.xtoinfinity.com/posts/2020/03/24/on-mentors-katherine-johnson-and-william-schieffelin-claytor.html</guid><pubDate>Wed, 25 Mar 2020 04:30:41 GMT</pubDate></item><item><title>Bill Gates Q/A about COVID-19</title><link>http://www.xtoinfinity.com/posts/2020/03/20/gates-notes-qa-about-covid-19.html</link><dc:creator>Senthil Kumaran</dc:creator><description>&lt;div&gt;&lt;p&gt;Bill Gates did a Ask Me Anything on Covid-19 on Reddit. The entire AMA is educational, read it in &lt;a class="reference external" href="https://www.reddit.com/r/Coronavirus/comments/fksnbf/im_bill_gates_cochair_of_the_bill_melinda_gates/"&gt;reddit&lt;/a&gt; or in
-&lt;a class="reference external" href="https://www.gatesnotes.com/Health/A-coronavirus-AMA"&gt;Gates Notes AMA&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;The following question and answers caught my attention in particular.&lt;/p&gt;
-&lt;div class="admonition admonition-bill-gates-ama-on-covid-19-some-question-and-answers"&gt;
-&lt;p class="first admonition-title"&gt;Bill Gates AMA on Covid-19 - Some question and answers.&lt;/p&gt;
-&lt;p&gt;Q: &lt;strong&gt;What about the current crisis worries you the most? What gives you the
-most hope?&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;Bill: &lt;em&gt;The current phase has a lot of the cases in rich countries.
-With the right actions including the testing and social distancing (which I
-call “shut down”) within 2-3 months the rich countries should have avoided high
-levels of infection. I worry about all the economic damage but even worse will
-be how this&lt;/em&gt; &lt;strong&gt;will affect the developing countries&lt;/strong&gt; &lt;em&gt;who cannot do the social
-distancing the same way as rich countries and whose hospital capacity is much
-lower.&lt;/em&gt;&lt;/p&gt;
-&lt;p&gt;Q: &lt;strong&gt;I read the&lt;/strong&gt; &lt;a class="reference external" href="https://www.imperial.ac.uk/media/imperial-college/medicine/sph/ide/gida-fellowships/Imperial-College-COVID19-NPI-modelling-16-03-2020.pdf"&gt;Imperial College COVID-19 Response Team report&lt;/a&gt;
-&lt;strong&gt;as well as&lt;/strong&gt; &lt;a class="reference external" href="https://twitter.com/jeremycyoung/status/1239975682643357696"&gt;this explanation in a historical context&lt;/a&gt;. &lt;strong&gt;Essentially, it
-says that by doing nothing, 4 million Americans die. Through the mitigation
-strategy—i.e. social distancing and “flattening the curve”— it says that 1.1-2
-million Americans will die. However, it also says that the suppression
-strategy, or “shutting everything down for 18 months”—will lead to only a few
-thousand people dying.&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Do you agree with these numbers, and if so, is there any excuse for not
-immediately issuing a shelter in place order for the entire country?&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;Bill: &lt;strong&gt;Fortunately it appears the parameters used in that model
-were too negative.&lt;/strong&gt; &lt;em&gt;The experience in China is the most critical data we
-have. They did their “shut down” and were able to reduce the number of cases.
-They are testing widely so they see rebounds immediately and so far there have
-not been a lot. They avoided widespread infection. The Imperial model does not
-match this experience. Models are only as good as the assumptions put into
-them. People are working on models that match what we are seeing more closely
-and they will become a key tool. A group called Institute for Disease Modeling
-that I fund is one of the groups working with others on this.&lt;/em&gt;&lt;/p&gt;
-&lt;p&gt;Q: &lt;strong&gt;How is the economy likely to recover after all of this
-in your opinion?&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;Bill: &lt;em&gt;Yes eventually. The economic impact of the “shut down” will be
-large but if it is done well (including the testing piece which I keep
-mentioning) eventually we can open back up.&lt;/em&gt;&lt;/p&gt;
-&lt;p&gt;Q: &lt;strong&gt;How is your foundation helping the current pandemic? Are you
-donating money, producing products for health workers?&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;Bill: &lt;em&gt;Our foundation is working with all the groups who make
-diagnostics, therapeutics and vaccines to make sure the right efforts are
-prioritized. We want to make sure all countries get access to these tools. We
-donated $100M in February for a variety of things and we will be doing more.
-One priority is to make sure that there is enough manufacturing capacity for
-therapeutics and vaccines.&lt;/em&gt; &lt;strong&gt;We have other efforts like our education group
-working to make sure the online resources for students are as helpful as they
-can be.&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;Q: &lt;strong&gt;Is there anything you can do to assist with ventilator production?&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;Bill: &lt;em&gt;There are a lot of efforts to do this. If we do social
-distancing (“shut down”) properly then the surge of cases won’t be as
-overwhelming.&lt;/em&gt; &lt;strong&gt;Our foundation’s expertise is in diagnostics, therapeutics and
-vaccines so we are not involved in the ventilator efforts but it could make a
-contribution to have more especially as the disease gets into developing
-countries including Africa.&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;Q: &lt;strong&gt;What do you see as the long-term strategy for fighting this
-pandemic and do you feel like it will adequately prepare us for the next?&lt;/strong&gt;&lt;/p&gt;
-&lt;p class="last"&gt;Bill: &lt;em&gt;I think that after this is under control that Governments and
-others will invest heavily in being ready for the next one. This will take
-global cooperation particularly to help the developing countries who will be
-hurt the most. A good example is the need to test therapeutics wherever the
-disease is to help the whole world.&lt;/em&gt; &lt;strong&gt;The Virus doesn't respect national
-boundaries.&lt;/strong&gt;&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="section" id="related-resources"&gt;
-&lt;h2&gt;Related Resources&lt;/h2&gt;
-&lt;ul class="simple"&gt;
-&lt;li&gt;&lt;a class="reference external" href="https://www.gatesnotes.com/Health/We-Are-Not-Ready-for-the-Next-Epidemic"&gt;On preparing for next epidemic in 2015&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a class="reference external" href="https://www.imperial.ac.uk/media/imperial-college/medicine/sph/ide/gida-fellowships/Imperial-College-COVID19-NPI-modelling-16-03-2020.pdf"&gt;Imperial College Covid-19 Response Team Report that led to Shut-down strategy in US&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a class="reference external" href="https://www.coursera.org/learn/covid-19/home/welcome"&gt;Coursera - Science Matters - Let's Talk About COVID-19 by Imperial College London &amp;amp; J-IDEA&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/div&gt;&lt;/div&gt;</description><guid>http://www.xtoinfinity.com/posts/2020/03/20/gates-notes-qa-about-covid-19.html</guid><pubDate>Fri, 20 Mar 2020 20:13:43 GMT</pubDate></item></channel></rss>
+&lt;img alt="https://i.imgur.com/VNmVRsy.png" src="https://i.imgur.com/VNmVRsy.png"&gt;&lt;/div&gt;</description><guid>http://www.xtoinfinity.com/posts/2020/03/24/on-mentors-katherine-johnson-and-william-schieffelin-claytor.html</guid><pubDate>Wed, 25 Mar 2020 04:30:41 GMT</pubDate></item></channel></rss>
