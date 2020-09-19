@@ -1,5 +1,25 @@
 <?xml version="1.0" encoding="utf-8"?>
-<?xml-stylesheet type="text/xsl" href="assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Senthil Kumaran</title><link>http://www.xtoinfinity.com/</link><description>Senthil Kumaran</description><atom:link href="http://www.xtoinfinity.com/rss.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><lastBuildDate>Sat, 08 Aug 2020 22:48:21 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Occamy Minecraft Club</title><link>http://www.xtoinfinity.com/posts/2020/08/08/occamy-minecraft-club.html</link><dc:creator>Senthil Kumaran</dc:creator><description>&lt;div&gt;&lt;img alt="https://occamy.learntosolveit.com/wp-content/uploads/2020/08/2020-06-05_16.23.50.png" src="https://occamy.learntosolveit.com/wp-content/uploads/2020/08/2020-06-05_16.23.50.png" style="width: 480px; height: 480px;"&gt;
+<?xml-stylesheet type="text/xsl" href="assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Senthil Kumaran</title><link>http://www.xtoinfinity.com/</link><description>Senthil Kumaran</description><atom:link href="http://www.xtoinfinity.com/rss.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><lastBuildDate>Sat, 19 Sep 2020 14:40:02 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Covid-19 "Six Months In"</title><link>http://www.xtoinfinity.com/posts/2020/09/19/covid-19-six-months-in-series.html</link><dc:creator>Senthil Kumaran</dc:creator><description>&lt;div&gt;&lt;p&gt;Six-months into pandemic there is a lot of settled knowledge about Coronavirus now.
+This medium article - &lt;a class="reference external" href="https://elemental.medium.com/the-most-likely-way-youll-get-infected-with-covid-19-30430384e5a5"&gt;The Most Likely Way You’ll Get Infected With Covid-19&lt;/a&gt; covered it very well.&lt;/p&gt;
+&lt;p&gt;What we know&lt;/p&gt;
+&lt;ol class="arabic simple"&gt;
+&lt;li&gt;Surfaces don’t seem to matter as much as originally thought.&lt;ol class="loweralpha"&gt;
+&lt;li&gt;SARS-CoV-2 does not spread through surfaces.&lt;/li&gt;
+&lt;li&gt;No need to disinfect food, parcels, etc.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/li&gt;
+&lt;li&gt;Close range droplets are the new leading theory and Aerosol transmission has gradually gained acceptance&lt;ol class="loweralpha"&gt;
+&lt;li&gt;Coronavirus Spreads from infected person exhaling and non-infected inhaling.&lt;/li&gt;
+&lt;li&gt;A tiny droplets of virus spread in air in trajectory less than 6 feet.&lt;/li&gt;
+&lt;li&gt;Best way to prevent this - "Wear Mask".&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;Six months in, "Wearing Masks" is the &lt;em&gt;most effective&lt;/em&gt; way to protect ourselves. Both to avoid the spread and also to
+protect ourselves from getting infected. That's it.&lt;/p&gt;
+&lt;p&gt;Incidentally, the first strong support for wearing mask as reducing infections came via statistical analysis by
+Jeremy Howard  in the article from May 15 - &lt;a class="reference external" href="https://theconversation.com/masks-help-stop-the-spread-of-coronavirus-the-science-is-simple-and-im-one-of-100-experts-urging-governors-to-require-public-mask-wearing-138507"&gt;Masks help stop the spread of coronavirus&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Best way for us to fight the virus - "Wearing Mask".&lt;/p&gt;&lt;/div&gt;</description><guid>http://www.xtoinfinity.com/posts/2020/09/19/covid-19-six-months-in-series.html</guid><pubDate>Sat, 19 Sep 2020 14:09:27 GMT</pubDate></item><item><title>Occamy Minecraft Club</title><link>http://www.xtoinfinity.com/posts/2020/08/08/occamy-minecraft-club.html</link><dc:creator>Senthil Kumaran</dc:creator><description>&lt;div&gt;&lt;img alt="https://occamy.learntosolveit.com/wp-content/uploads/2020/08/2020-06-05_16.23.50.png" src="https://occamy.learntosolveit.com/wp-content/uploads/2020/08/2020-06-05_16.23.50.png" style="width: 480px; height: 480px;"&gt;
 &lt;p&gt;If your child, between age kindergarten to 3rd grade is interested in Learning Minecraft, we have a new club called
 "Occamy Minecraft Club".  The classes are taught by my Son, Siddhartha, and kids learning from other kids usually well.
 I am there to make sure all children learn well from each other during the class.&lt;/p&gt;
@@ -156,10 +176,4 @@ The list of available updates is more than a week old.
 To check for new updates run: sudo apt update
 
 root@meet:~#
-&lt;/pre&gt;&lt;/div&gt;</description><guid>http://www.xtoinfinity.com/posts/2020/04/02/ipv6-login.html</guid><pubDate>Fri, 03 Apr 2020 01:34:40 GMT</pubDate></item><item><title>Being a polymath is natural</title><link>http://www.xtoinfinity.com/posts/2020/03/29/being-a-polymath-is-natural.html</link><dc:creator>Senthil Kumaran</dc:creator><description>&lt;div&gt;&lt;div class="admonition admonition-being-a-polymath"&gt;
-&lt;p class="first admonition-title"&gt;Being a polymath&lt;/p&gt;
-&lt;p class="last"&gt;Polymaths such as Da Vinci, Goethe and Benjamin Franklin were such high achievers that we might feel a bit reluctant
-to use the word ‘polymath’ to describe our own humble attempts to become multi-talented. We can’t all be geniuses.
-But we do all still indulge in polymathic activity; it’s part of what makes us human.&lt;/p&gt;
-&lt;/div&gt;
-&lt;p&gt;Source: &lt;a class="reference external" href="https://aeon.co/essays/we-live-in-a-one-track-world-but-anyone-can-become-a-polymath"&gt;Master of many trades&lt;/a&gt; By Robert Twigger&lt;/p&gt;&lt;/div&gt;</description><guid>http://www.xtoinfinity.com/posts/2020/03/29/being-a-polymath-is-natural.html</guid><pubDate>Sun, 29 Mar 2020 22:30:32 GMT</pubDate></item></channel></rss>
+&lt;/pre&gt;&lt;/div&gt;</description><guid>http://www.xtoinfinity.com/posts/2020/04/02/ipv6-login.html</guid><pubDate>Fri, 03 Apr 2020 01:34:40 GMT</pubDate></item></channel></rss>
