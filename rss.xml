@@ -1,5 +1,184 @@
 <?xml version="1.0" encoding="utf-8"?>
-<?xml-stylesheet type="text/xsl" href="assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Senthil Kumaran</title><link>http://www.xtoinfinity.com/</link><description>Senthil Kumaran</description><atom:link href="http://www.xtoinfinity.com/rss.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><lastBuildDate>Fri, 02 Oct 2020 23:00:44 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Mahatma Gandhi</title><link>http://www.xtoinfinity.com/posts/2020/10/02/mahatma-gandhi.html</link><dc:creator>Senthil Kumaran</dc:creator><description>&lt;div&gt;&lt;p&gt;We might have heard about Einstein’s Famous quote on Gandhi. Few years ago, I discovered that the quote is from a book
+<?xml-stylesheet type="text/xsl" href="assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Senthil Kumaran</title><link>http://www.xtoinfinity.com/</link><description>Senthil Kumaran</description><atom:link href="http://www.xtoinfinity.com/rss.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><lastBuildDate>Sat, 28 Nov 2020 17:01:54 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>A Crack in Creation by Jennifer Doudna and Samuel Steinberg</title><link>http://www.xtoinfinity.com/posts/2020/11/27/a-crack-in-creation-by-jennifer-doudna-and-samuel-steinberg.html</link><dc:creator>Senthil Kumaran</dc:creator><description>&lt;div&gt;&lt;p&gt;&lt;strong&gt;A Crack in Creation: Gene Editing and Unthinkable power to control evolution&lt;/strong&gt;
+by Jennifer Doudna and Samuel Steinberg is a book on gene-editing and a
+technology called CRISPR.&lt;/p&gt;
+&lt;p&gt;The book is a personal narration of Jennifer Doudna as she explains the
+development of CRISPR and it's discovery for use in gene editing.  Rather than a
+review, this are notes while reading this book.  CRISPR is molecular structure
+found in Bacteria, but now more popular term, commonly associated with a gene
+editing technique.&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;Given the technical nature of this article, I must have used the text from the
+sources only with slight modification for explanation. References should give
+the materials I consulted to write this post. In you notice technical
+inaccuracy, I aplogize, please point out, and I will correct it.&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Terms&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;As I reader, I found reviewing biological terms helped me understand the
+material better.&lt;/p&gt;
+&lt;div class="figure"&gt;
+&lt;img alt="https://dl.dropbox.com/s/3cn83qir2ip3nso/Screenshot_2020-11-28-04-50.png" src="https://dl.dropbox.com/s/3cn83qir2ip3nso/Screenshot_2020-11-28-04-50.png" style="width: 480px;"&gt;
+&lt;p class="caption"&gt;DNA, the language of life. Figure from &lt;em&gt;A Crack in Creation&lt;/em&gt; book.&lt;/p&gt;
+&lt;/div&gt;
+&lt;p&gt;Human Body is made of &lt;strong&gt;cells&lt;/strong&gt;, in-fact trillions of cells. Each of these cells
+contain something called DNA. &lt;strong&gt;DNA&lt;/strong&gt; is like recipe, just like a food recipe,
+but for building and maintaining living organisms.&lt;/p&gt;
+&lt;p&gt;Cells use DNA to make proteins. Proteins are the workhorses of the body, they do
+all the stuff we need to do to survive, from digesting food to making other
+proteins.  Proteins are molecules made up of cells.&lt;/p&gt;
+&lt;p&gt;DNA is made up of a long combination of some very basic organic components
+called Adenine, Thymine, Guanine and Cytosine. Human DNA consists of about 3
+billion of these. The sequence of these determines the information available for
+building and maintaining an organism, similar to the way in which letters of the
+alphabet appear in a certain order to form words and sentences.&lt;/p&gt;
+&lt;p&gt;In the nucleus of each cell, the DNA molecule is packaged into thread-like
+structure called &lt;strong&gt;chromosomes&lt;/strong&gt;. A &lt;em&gt;Chromosome&lt;/em&gt; is a DNA containing structure.&lt;/p&gt;
+&lt;p&gt;RNA are like cousins of DNA, which has an oxygen atom with it. One type called
+messager RNA, mRNA, act as carrier of information to different cells, carrying
+information from DNA to those cells to produce proteins.&lt;/p&gt;
+&lt;p&gt;So far, in above definitions, we didn't emphasize on &lt;em&gt;heredity&lt;/em&gt; , that is,
+sending information from parent to child yet. As soon as we start talking about
+&lt;em&gt;heredity&lt;/em&gt;, we use the term, &lt;strong&gt;Genes&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;A gene is the basic physical and functional unit of heredity. Each chromosome of
+human body has many genes.&lt;/p&gt;
+&lt;p&gt;If we take a single cell from human body, and find out the entire set of
+&lt;em&gt;genetic information&lt;/em&gt; in the chromosomes of that cell, we call that a
+&lt;strong&gt;Genome&lt;/strong&gt;. A Genome, from &lt;strong&gt;Gen&lt;/strong&gt; e and Chromos &lt;strong&gt;ome&lt;/strong&gt;, is the entire set of
+&lt;em&gt;genetic&lt;/em&gt; instructions found inside a cell.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;CRISPR in bacteria&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Single celled organisms like Bacteria were using a technique to fight off some
+diseases.  The term CRISPR was given to an identified characteristic in
+Bacterial DNA sequence, which was used to produce a protein called CAS-9, which
+in turn, helped to kill the enemy virus.&lt;/p&gt;
+&lt;p&gt;CRISPR stands for Clustered Regularly Interspaced Short Palindromic Repeats and
+is a family of DNA Sequences found in genomes of bacteria. CAS9 stands for
+CRISPR associated protein 9.&lt;/p&gt;
+&lt;p&gt;The bacteria were found to capture snippets of DNA from invading viruses and use
+them to create DNA segments known as CRISPR arrays. The CRISPR arrays allow the
+bacteria to "remember" the viruses. If the viruses attack again, the bacteria
+produce RNA segments from the CRISPR arrays to target the viruses' DNA. The
+bacteria then use Cas9 to cut the DNA apart and kill the virus.&lt;/p&gt;
+&lt;div class="figure"&gt;
+&lt;img alt="https://dl.dropbox.com/s/staumxmyll7ypty/Screenshot_2020-11-27-19-41.png" src="https://dl.dropbox.com/s/staumxmyll7ypty/Screenshot_2020-11-27-19-41.png" style="width: 480px;"&gt;
+&lt;p class="caption"&gt;CRISPR in Bacteria. Figure from &lt;em&gt;Crack in the Creation&lt;/em&gt;.&lt;/p&gt;
+&lt;/div&gt;
+&lt;p&gt;&lt;strong&gt;CRISPR Shaping Human Genome&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;The CRISPR-Cas9 system works similarly in the lab. Researchers create a small
+piece of RNA with a short "guide" sequence that attaches (binds) to a specific
+target sequence of DNA in a genome. The RNA also binds to the Cas9 enzyme. As in
+bacteria, the modified RNA is used to recognize the DNA sequence, and the Cas9
+enzyme cuts the DNA at the targeted location. Although Cas9 is the enzyme that
+is used most often, other enzymes (for example Cpf1) can also be used. Once the
+DNA is cut, researchers use the cell's own DNA repair machinery to add or delete
+pieces of genetic material, or to make changes to the DNA by replacing an
+existing segment with a customized DNA sequence&lt;/p&gt;
+&lt;p&gt;When CRISPR was determind that it could be used in lab on living organisms, the
+potential for shaping the genome unfolded.&lt;/p&gt;
+&lt;p&gt;First time ever, in over 100,000 years, we have ability to shape the &lt;em&gt;Homo
+Sapien&lt;/em&gt; evolution by mechanisms other than random mutation and natural
+selection.&lt;/p&gt;
+&lt;p&gt;In humans, CRISPR can be used to do a precise repair and produce a normal
+protein from a non-functional gene.&lt;/p&gt;
+&lt;img alt="https://dl.dropbox.com/s/zhew8671tk9dnx6/Screenshot_2020-11-28-04-04.png" src="https://dl.dropbox.com/s/zhew8671tk9dnx6/Screenshot_2020-11-28-04-04.png" style="width: 480px;"&gt;
+&lt;p&gt;CRISPR enables scientists to edit and &lt;em&gt;fix&lt;/em&gt; single incorrect letters of DNA from
+3.2 billion letters that comprise the human genome. It can also be used to
+perform even more complicated edits to Human DNA.&lt;/p&gt;
+&lt;p&gt;A relatively straightforward DNA editing has transformed every genetic disease,
+at-least the diseases for which we know the underlying mutation(s) into a
+potentially treatable disease.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;CRISPR on Animals&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;CRISPR has been used to create gene edited mouse wherein the genome of the
+embroyo was edited and introduced back into womb to have an offspring with
+the desirable characteristics embedded at time of birth.&lt;/p&gt;
+&lt;div class="figure"&gt;
+&lt;img alt="https://dl.dropbox.com/s/l0gxu7imj7v3pqa/Screenshot_2020-11-28-03-51.png" src="https://dl.dropbox.com/s/l0gxu7imj7v3pqa/Screenshot_2020-11-28-03-51.png" style="width: 480px;"&gt;
+&lt;p class="caption"&gt;Gene Edited Mouse. Figure from &lt;em&gt;A Crack in Creation&lt;/em&gt;.&lt;/p&gt;
+&lt;/div&gt;
+&lt;p&gt;And we have used gene editing to create animals desirable characteristics&lt;/p&gt;
+&lt;div class="figure"&gt;
+&lt;img alt="https://dl.dropbox.com/s/7hdtn904xxas57q/Screenshot_2020-11-28-04-01.png" src="https://dl.dropbox.com/s/7hdtn904xxas57q/Screenshot_2020-11-28-04-01.png" style="width: 480px;"&gt;
+&lt;p class="caption"&gt;Gene edited animals. Figure from &lt;em&gt;A crack in creation&lt;/em&gt;.&lt;/p&gt;
+&lt;/div&gt;
+&lt;p&gt;This is currently used in practice. Like Recombinetics uses gene editing for
+dehorning cattle, a safer method than physical dehorning using hot iron-rods.&lt;/p&gt;
+&lt;a class="reference external image-reference" href="https://recombinetics.com/our-technology/"&gt;&lt;img alt="https://dl.dropbox.com/s/r5op4mkkhju3s8p/Screenshot_2020-11-28-07-34.png" src="https://dl.dropbox.com/s/r5op4mkkhju3s8p/Screenshot_2020-11-28-07-34.png" style="width: 640px;"&gt;&lt;/a&gt;
+&lt;hr class="docutils"&gt;
+&lt;p&gt;&lt;strong&gt;Pigs as Bio Reactors&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;An important field of bio technology is regenerative medicine, desired by human
+society who are fighting of some disease eithe naturally or have lost some
+ability due an accident.&lt;/p&gt;
+&lt;p&gt;Many scientists see the pig itself as a source of medicine. It is seen
+that we might be using pigs as bioreactors to produce valuable drugs like
+therapeutic human proteins, which are too complex to synthesize from scratch and
+can only be produced in living cells.&lt;/p&gt;
+&lt;img alt="https://dl.dropbox.com/s/lw2lleanrept8qf/Screenshot_2020-11-28-04-07.png" src="https://dl.dropbox.com/s/lw2lleanrept8qf/Screenshot_2020-11-28-04-07.png" style="width: 480px;"&gt;
+&lt;p&gt;Scientists have already been looking to
+other transgenic animals to produce these biopharmaceutical drugs, or
+farmaceuticals, as they’re colloquially called.&lt;/p&gt;
+&lt;p&gt;&lt;a class="reference external" href="https://www.revivicor.com/index.html"&gt;Revivicor&lt;/a&gt; is a company that is using CRISPR to produce regenerative medicine,
+following the process exactly outlined above. A workflow from their website
+gives the details on how Pigs are used as Bio Reactors for regenerative
+medicine.&lt;/p&gt;
+&lt;a class="reference external image-reference" href="https://www.revivicor.com"&gt;&lt;img alt="https://www.revivicor.com/images/RevivicorTechPoster-04-2010.jpg" src="https://www.revivicor.com/images/RevivicorTechPoster-04-2010.jpg" style="width: 720px;"&gt;&lt;/a&gt;
+&lt;hr class="docutils"&gt;
+&lt;p&gt;&lt;strong&gt;Malaria Resistant Mosquitos&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;The deadliest animal on earth, Mosquito can also be killed using CRISPR. The
+idea seems to create malaria resistant mosquitoes using gene editing so that
+the entire family is disabled from being a carriers of malaria.&lt;/p&gt;
+&lt;img alt="https://dl.dropbox.com/s/qwejig01w6zcyox/Screenshot_2020-11-28-04-23.png" src="https://dl.dropbox.com/s/qwejig01w6zcyox/Screenshot_2020-11-28-04-23.png" style="width: 480px;"&gt;
+&lt;hr class="docutils"&gt;
+&lt;p&gt;&lt;strong&gt;CRISPR for Therapeutics&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;CRISPR can be utilized to edit the germ cells outside the body.
+The edited germ cells can be planted inside for beneficiary aspects.&lt;/p&gt;
+&lt;div class="figure"&gt;
+&lt;img alt="https://dl.dropbox.com/s/8ekvzjzwupi63t7/Screenshot_2020-11-28-04-27.png" src="https://dl.dropbox.com/s/8ekvzjzwupi63t7/Screenshot_2020-11-28-04-27.png" style="width: 480px;"&gt;
+&lt;p class="caption"&gt;Ex-vivo CRISPR therapy. A Crack In The Creation.&lt;/p&gt;
+&lt;/div&gt;
+&lt;p&gt;For targeted drug delivery, like fixing the lung or particular muscle instead
+of injecting the drug into blood stream.&lt;/p&gt;
+&lt;div class="figure"&gt;
+&lt;img alt="https://dl.dropbox.com/s/7zaa0afr6gdipha/Screenshot_2020-11-28-04-31.png" src="https://dl.dropbox.com/s/7zaa0afr6gdipha/Screenshot_2020-11-28-04-31.png" style="width: 480px;"&gt;
+&lt;p class="caption"&gt;In-vivo CRISPR therapy. A Crack In the Creation.&lt;/p&gt;
+&lt;/div&gt;
+&lt;p&gt;Adult Homo sapiens are among the last animals to be treated with CRISPR, human
+cell: have been subjected to more CRISPR gene editing than those of any other
+organism.&lt;/p&gt;
+&lt;p&gt;Scientists have applied CRISPR in lung cells to correct the genetic mutation
+that causes cystic fibrosis, in blood cells to correct the mutations that cause
+sickle cell disease and beta-thalassemia, and in muscle cells to correct the
+mutations that cause Duchenne muscular dystrophy.&lt;/p&gt;
+&lt;p&gt;Scientists have used CRISPR to edit and repair mutations in stem cells, which
+can then be coaxed to transform into virtually any cell or tissue type in the
+body.&lt;/p&gt;
+&lt;p&gt;Even as CRISPR continues to be useful, it's power as a technology and it's
+potential misuse is a concern for everyone.&lt;/p&gt;
+&lt;blockquote&gt;
+Whether we'll ever have the intellectual and moral capacity to
+guide our own genetic destiny is an open question - one that has been in my
+mind since I began to realize what CRISPR is capable of.
+- Jennifer Doudna&lt;/blockquote&gt;
+&lt;p&gt;And Jennifer Doudna shares her stance as she says, that the nature will still be
+our supreme master.&lt;/p&gt;
+&lt;blockquote&gt;
+Any mutations that CRISPR might make—intentional or not—would almost certainly
+pale in comparison to the genetic storm that rages inside each of us from
+birth to death. As one writer put it, “Genetic editing would be a droplet in
+the maelstrom of naturally churning genomes.” If CRISPR could eliminate a
+disease-causing mutation in the embryo with high certainty and only a slight
+risk of introducing a second off-target mutation elsewhere, the potential
+payoffs might well outweigh the dangers.
+- Jennifer Doudna&lt;/blockquote&gt;
+&lt;div class="section" id="references"&gt;
+&lt;h2&gt;References&lt;/h2&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;Doudna, Jennifer A.,, and Samuel H. Sternberg. A Crack in Creation: Gene
+Editing and the Unthinkable Power to Control Evolution. Boston: Houghton
+Mifflin Harcourt, 2017.&lt;/li&gt;
+&lt;li&gt;&lt;a class="reference external" href="https://www.reddit.com/r/explainlikeimfive/comments/2wp3it/eli5_what_is_dna_exactly/"&gt;What exactly is DNA?&lt;/a&gt; (&lt;em&gt;reddit&lt;/em&gt;)&lt;/li&gt;
+&lt;li&gt;&lt;a class="reference external" href="https://www.reddit.com/r/explainlikeimfive/comments/7wz6ua/eli5_what_is_dna/"&gt;What is DNA?&lt;/a&gt; (&lt;em&gt;reddit&lt;/em&gt;)&lt;/li&gt;
+&lt;li&gt;&lt;a class="reference external" href="https://medlineplus.gov/genetics/understanding/basics/cell/"&gt;What is a cell?&lt;/a&gt; (&lt;em&gt;medlineplus.gov&lt;/em&gt;)&lt;/li&gt;
+&lt;li&gt;&lt;a class="reference external" href="https://medlineplus.gov/genetics/understanding/basics/chromosome/"&gt;What is a chromosome?&lt;/a&gt; (&lt;em&gt;medlineplus.gov&lt;/em&gt;)&lt;/li&gt;
+&lt;li&gt;&lt;a class="reference external" href="https://medlineplus.gov/genetics/understanding/genomicresearch/genomeediting/"&gt;What are CRISPR CAS9 and Genome Editing?&lt;/a&gt; (&lt;em&gt;medlineplus.gov&lt;/em&gt;)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;&lt;/div&gt;</description><guid>http://www.xtoinfinity.com/posts/2020/11/27/a-crack-in-creation-by-jennifer-doudna-and-samuel-steinberg.html</guid><pubDate>Fri, 27 Nov 2020 13:20:22 GMT</pubDate></item><item><title>Mahatma Gandhi</title><link>http://www.xtoinfinity.com/posts/2020/10/02/mahatma-gandhi.html</link><dc:creator>Senthil Kumaran</dc:creator><description>&lt;div&gt;&lt;p&gt;We might have heard about Einstein’s Famous quote on Gandhi. Few years ago, I discovered that the quote is from a book
 by Albert Einstein with Title “Essays in Humanism”&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;Mahatma Gandhi&lt;/p&gt;
@@ -148,7 +327,4 @@ funding almost 8 companies working in parallel and joined by other &lt;a class="
 &lt;p&gt;Salesforce CEO, Marc Benioff took a 8 step pledge, and with few pledges being, &lt;em&gt;No significant layoff for next 90
 days&lt;/em&gt; and encouraging employees to keep their own hourly workers like gardeners, home cleaners employed with pay.
 I really appreciate the social responsiblity shown by Marc.&lt;/p&gt;
-&lt;a class="reference external image-reference" href="https://twitter.com/Benioff/status/1242608667771330560"&gt;&lt;img alt="https://i.imgur.com/ZkvaDQ6.png" src="https://i.imgur.com/ZkvaDQ6.png"&gt;&lt;/a&gt;&lt;/div&gt;</description><guid>http://www.xtoinfinity.com/posts/2020/04/06/covid-19-testing-ventilators-and-therapeutic-accelerators.html</guid><pubDate>Mon, 06 Apr 2020 15:42:52 GMT</pubDate></item><item><title>Book Review: The Plague by Albert Camus</title><link>http://www.xtoinfinity.com/posts/2020/04/05/book-review-the-plague-by-albert-camus.html</link><dc:creator>Senthil Kumaran</dc:creator><description>&lt;span&gt;&lt;a href="https://www.goodreads.com/book/show/563469.The_Plague" style="float: left; padding-right: 20px"&gt;&lt;img border="0" alt="The Plague" src="https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1365659412l/563469._SX98_.jpg"&gt;&lt;/a&gt;&lt;a href="https://www.goodreads.com/book/show/563469.The_Plague"&gt;The Plague&lt;/a&gt; by &lt;a href="https://www.goodreads.com/author/show/957894.Albert_Camus"&gt;Albert Camus&lt;/a&gt;&lt;br&gt;
-My rating: &lt;a href="https://www.goodreads.com/review/show/3264210901"&gt;5 of 5 stars&lt;/a&gt;&lt;br&gt;&lt;br&gt;
-The essence of this book is about sympathy. The story is presented through the eyes of a few friends as they witness the plague in the city of Oran. The author, Abert Camus's writing, and the philosophy of the principal character, Dr. Rieux stands out in this Novel. It will probably etch in the mind of the reader forever. It is about sympathy, the qualities of truth, understanding, and comprehension are at the core of it.
-&lt;br&gt;&lt;/span&gt;</description><guid>http://www.xtoinfinity.com/posts/2020/04/05/book-review-the-plague-by-albert-camus.html</guid><pubDate>Sun, 05 Apr 2020 14:50:15 GMT</pubDate></item></channel></rss>
+&lt;a class="reference external image-reference" href="https://twitter.com/Benioff/status/1242608667771330560"&gt;&lt;img alt="https://i.imgur.com/ZkvaDQ6.png" src="https://i.imgur.com/ZkvaDQ6.png"&gt;&lt;/a&gt;&lt;/div&gt;</description><guid>http://www.xtoinfinity.com/posts/2020/04/06/covid-19-testing-ventilators-and-therapeutic-accelerators.html</guid><pubDate>Mon, 06 Apr 2020 15:42:52 GMT</pubDate></item></channel></rss>
