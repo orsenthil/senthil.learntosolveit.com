@@ -47,16 +47,7 @@
 <a href="https://scholar.google.com/citations?user=wkveFyQAAAAJ" class="nav-link">Google Scholar</a>
                 </li>
 <li class="nav-item">
-<a href="https://news.xtoinfinity.com" class="nav-link">News Reader</a>
-                </li>
-<li class="nav-item">
-<a href="https://xtoinfinity.com/stories/quickrefs.html" class="nav-link">Quick References</a>
-                </li>
-<li class="nav-item">
 <a href="rss.xml" class="nav-link">Blog RSS</a>
-                </li>
-<li class="nav-item">
-<a href="archive.html" class="nav-link">Blog Archives</a>
                 </li>
 <li class="nav-item">
 <a href="stories/about-me.html" class="nav-link">About</a>
@@ -80,57 +71,7 @@
     
         
     <div class="postindex">
-            <article class="h-entry post-text" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title"><a href="posts/dominant-resource-fairness.html" class="u-url">Dominant Resource Fairness</a></h1>
-                <div class="metadata">
-                    <p class="byline author vcard"><span class="byline-name fn" itemprop="author">
-                        Senthil Kumaran
-                    </span></p>
-            <p class="dateline">
-            <a href="posts/dominant-resource-fairness.html" rel="bookmark">
-            <time class="published dt-published" datetime="2017-01-04T19:27:53-08:00" itemprop="datePublished" title="2017-01-04 19:27">2017-01-04 19:27</time></a>
-            </p>
-                        <p class="commentline">
-        
-    <a href="posts/dominant-resource-fairness.html#disqus_thread" data-disqus-identifier="cache/posts/dominant-resource-fairness.html">Comments</a>
-
-
-                </p>
-</div>
-            </header><div class="e-content entry-content">
-                    <div>
-<p>I was reading the paper on <a class="reference external" href="https://people.eecs.berkeley.edu/~alig/papers/drf.pdf">Dominant Resource Fairness</a> and found it approachable, interesting and fairly easy to
-understand.</p>
-<p><a class="reference external" href="https://people.eecs.berkeley.edu/~alig/papers/drf.pdf">Dominant Resource Fairness</a> is a resource allocation strategy used by a system like <a class="reference external" href="http://mesos.apache.org/">Mesos</a>.</p>
-<p>In general terms, resources are basically things that a group will need and the idea is the allocate the resources
-amongst the members of the group in an efficient way. Examples could be the amount of money (resource) to be
-distributed across a group of people in the community or the processor cores in a multi-core processor that needs to be
-distributed and allocated to the process running on that processor.</p>
-<p>The Dominant Resource Fairness uses <a class="reference external" href="https://en.wikipedia.org/wiki/Linear_programming">Linear Programming</a> technique to solve the problem of resource sharing.</p>
-<p>In a datacenter with multiple computers, having multiple CPUs, multiple memories, network cards and many other resources,
-those needs to be shared across the processes that are running in the datacenter. DRF uses the concept of a dominant
-resource. The Dominant share is the maximum share that an entity (process) has been allocated for any resource. For
-e.g, if if a process A has heavy CPU usage and process B has heavy memory usage, the dominant resource for process A is
-CPU and the dominant resource for process B is Memory.</p>
-<p>Dominant Resource Fairness seeks to maximize the minimum dominant share across all entities. That's the formulation
-for the linear programming problem for you. Doing it across in a distributed way for different tasks with different
-requirements is the challenge that is being solved.</p>
-<p>For example, if user A runs CPU-heavy tasks and user B runs memory-heavy tasks, the DRF attempts to equalize CPU share
-of user A with the memory share of user B. In this case, the DRF would allocate more CPU and less memory to the tasks
-run by user A, and allocate less CPU and more memory to the tasks run by user B. In the single resource case -- where
-all jobs are requesting the same resources -- the DRF reduces to max-min fairness for that resource.</p>
-<p>Some interesting anecdotes I found in the paper include, enforcing "fairness" in resource sharing is a difficult
-problem by itself.</p>
-<blockquote>
-A big search company provided dedicated machines for jobs only if the users could guarantee high utilization. The
-company soon found that users would sprinkle their code with infinite loops to artificially inflate utilization
-levels.</blockquote>
-<p>The paper also quoted economic research on difficultly in ensuring fairness.</p>
-<blockquote>
-Competitive equilibrium from equal incomes (CEEI), a popular fair allocation policy preferred in the micro-economic
-domain is not strategy proof.</blockquote>
-</div>
-                </div>
-            </article><article class="h-entry post-text" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title"><a href="posts/stephen-brennan-tutorial-on-writing-a-shell.html" class="u-url">Stephen Brennan Tutorial on writing a shell</a></h1>
+            <article class="h-entry post-text" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title"><a href="posts/stephen-brennan-tutorial-on-writing-a-shell.html" class="u-url">Stephen Brennan Tutorial on writing a shell</a></h1>
                 <div class="metadata">
                     <p class="byline author vcard"><span class="byline-name fn" itemprop="author">
                         Senthil Kumaran
@@ -400,24 +341,24 @@ kind of a tail-recursion. This concept is called currying.</li>
             </header><div class="e-content entry-content">
                     <div>
 <p>New <em>trick</em> to know the version of your linux operating system.</p>
-<pre class="code bash"><a name="rest_code_edd1ee92a77c415b9b9279d0d87ec70f-1"></a>cat /etc/*-release
+<pre class="code bash"><a name="rest_code_4cf68112e5b04880a50d2e40bb45da2d-1"></a>cat /etc/*-release
 </pre>
 <p>Works fine!</p>
-<pre class="code bash"><a name="rest_code_354fa4868a90424a99f88da62bd0132c-1"></a><span class="c1"># cat /etc/*-release</span>
-<a name="rest_code_354fa4868a90424a99f88da62bd0132c-2"></a><span class="nv">DISTRIB_ID</span><span class="o">=</span>Ubuntu
-<a name="rest_code_354fa4868a90424a99f88da62bd0132c-3"></a><span class="nv">DISTRIB_RELEASE</span><span class="o">=</span><span class="m">16</span>.04
-<a name="rest_code_354fa4868a90424a99f88da62bd0132c-4"></a><span class="nv">DISTRIB_CODENAME</span><span class="o">=</span>xenial
-<a name="rest_code_354fa4868a90424a99f88da62bd0132c-5"></a><span class="nv">DISTRIB_DESCRIPTION</span><span class="o">=</span><span class="s2">"Ubuntu 16.04.1 LTS"</span>
-<a name="rest_code_354fa4868a90424a99f88da62bd0132c-6"></a><span class="nv">NAME</span><span class="o">=</span><span class="s2">"Ubuntu"</span>
-<a name="rest_code_354fa4868a90424a99f88da62bd0132c-7"></a><span class="nv">VERSION</span><span class="o">=</span><span class="s2">"16.04.1 LTS (Xenial Xerus)"</span>
-<a name="rest_code_354fa4868a90424a99f88da62bd0132c-8"></a><span class="nv">ID</span><span class="o">=</span>ubuntu
-<a name="rest_code_354fa4868a90424a99f88da62bd0132c-9"></a><span class="nv">ID_LIKE</span><span class="o">=</span>debian
-<a name="rest_code_354fa4868a90424a99f88da62bd0132c-10"></a><span class="nv">PRETTY_NAME</span><span class="o">=</span><span class="s2">"Ubuntu 16.04.1 LTS"</span>
-<a name="rest_code_354fa4868a90424a99f88da62bd0132c-11"></a><span class="nv">VERSION_ID</span><span class="o">=</span><span class="s2">"16.04"</span>
-<a name="rest_code_354fa4868a90424a99f88da62bd0132c-12"></a><span class="nv">HOME_URL</span><span class="o">=</span><span class="s2">"http://www.ubuntu.com/"</span>
-<a name="rest_code_354fa4868a90424a99f88da62bd0132c-13"></a><span class="nv">SUPPORT_URL</span><span class="o">=</span><span class="s2">"http://help.ubuntu.com/"</span>
-<a name="rest_code_354fa4868a90424a99f88da62bd0132c-14"></a><span class="nv">BUG_REPORT_URL</span><span class="o">=</span><span class="s2">"http://bugs.launchpad.net/ubuntu/"</span>
-<a name="rest_code_354fa4868a90424a99f88da62bd0132c-15"></a><span class="nv">UBUNTU_CODENAME</span><span class="o">=</span>xenial
+<pre class="code bash"><a name="rest_code_469e3dd45c934ece83fb07ff1594fc35-1"></a><span class="c1"># cat /etc/*-release</span>
+<a name="rest_code_469e3dd45c934ece83fb07ff1594fc35-2"></a><span class="nv">DISTRIB_ID</span><span class="o">=</span>Ubuntu
+<a name="rest_code_469e3dd45c934ece83fb07ff1594fc35-3"></a><span class="nv">DISTRIB_RELEASE</span><span class="o">=</span><span class="m">16</span>.04
+<a name="rest_code_469e3dd45c934ece83fb07ff1594fc35-4"></a><span class="nv">DISTRIB_CODENAME</span><span class="o">=</span>xenial
+<a name="rest_code_469e3dd45c934ece83fb07ff1594fc35-5"></a><span class="nv">DISTRIB_DESCRIPTION</span><span class="o">=</span><span class="s2">"Ubuntu 16.04.1 LTS"</span>
+<a name="rest_code_469e3dd45c934ece83fb07ff1594fc35-6"></a><span class="nv">NAME</span><span class="o">=</span><span class="s2">"Ubuntu"</span>
+<a name="rest_code_469e3dd45c934ece83fb07ff1594fc35-7"></a><span class="nv">VERSION</span><span class="o">=</span><span class="s2">"16.04.1 LTS (Xenial Xerus)"</span>
+<a name="rest_code_469e3dd45c934ece83fb07ff1594fc35-8"></a><span class="nv">ID</span><span class="o">=</span>ubuntu
+<a name="rest_code_469e3dd45c934ece83fb07ff1594fc35-9"></a><span class="nv">ID_LIKE</span><span class="o">=</span>debian
+<a name="rest_code_469e3dd45c934ece83fb07ff1594fc35-10"></a><span class="nv">PRETTY_NAME</span><span class="o">=</span><span class="s2">"Ubuntu 16.04.1 LTS"</span>
+<a name="rest_code_469e3dd45c934ece83fb07ff1594fc35-11"></a><span class="nv">VERSION_ID</span><span class="o">=</span><span class="s2">"16.04"</span>
+<a name="rest_code_469e3dd45c934ece83fb07ff1594fc35-12"></a><span class="nv">HOME_URL</span><span class="o">=</span><span class="s2">"http://www.ubuntu.com/"</span>
+<a name="rest_code_469e3dd45c934ece83fb07ff1594fc35-13"></a><span class="nv">SUPPORT_URL</span><span class="o">=</span><span class="s2">"http://help.ubuntu.com/"</span>
+<a name="rest_code_469e3dd45c934ece83fb07ff1594fc35-14"></a><span class="nv">BUG_REPORT_URL</span><span class="o">=</span><span class="s2">"http://bugs.launchpad.net/ubuntu/"</span>
+<a name="rest_code_469e3dd45c934ece83fb07ff1594fc35-15"></a><span class="nv">UBUNTU_CODENAME</span><span class="o">=</span>xenial
 </pre>
 </div>
                 </div>
@@ -599,6 +540,137 @@ least one process must have finished executing before it wrote to <span class="m
 <p>To understand this concurrency problem, it requires some notion of syntax, a prior understanding of proving hypothesis,
 and possibly discussing the problem and solution.</p>
 <p>Trying to understand itself, I guess, is a progress.</p>
+</div>
+                </div>
+            </article><article class="h-entry post-text" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title"><a href="posts/edisons-todo-list.html" class="u-url">Edison's TODO list</a></h1>
+                <div class="metadata">
+                    <p class="byline author vcard"><span class="byline-name fn" itemprop="author">
+                        Senthil Kumaran
+                    </span></p>
+            <p class="dateline">
+            <a href="posts/edisons-todo-list.html" rel="bookmark">
+            <time class="published dt-published" datetime="2016-12-16T09:34:07-08:00" itemprop="datePublished" title="2016-12-16 09:34">2016-12-16 09:34</time></a>
+            </p>
+                        <p class="commentline">
+        
+    <a href="posts/edisons-todo-list.html#disqus_thread" data-disqus-identifier="cache/posts/edisons-todo-list.html">Comments</a>
+
+
+                </p>
+</div>
+            </header><div class="e-content entry-content">
+                    <div>
+<p>Looks like Edison used TODO list too.</p>
+<p>This <a class="reference external" href="http://www.openculture.com/2016/11/thomas-edisons-hugely-ambitious-to-do-list-from-1888.html">article on openculture</a> has a snapshot of his todo list from year 1888.</p>
+<p>These were his 108 things he wanted todo.</p>
+<p>1 - Cotton Picker</p>
+<p>2 - New Standard Phonograph</p>
+<p>3 - Hand turning phonograph</p>
+<p>4 - New Slow speed cheap Dynamo</p>
+<p>5 - New Expansion Pyromagnetic Dynamo</p>
+<p>6 - Deaf Apparatus</p>
+<p>7 - Electrical Piano</p>
+<p>8 - Long distance standard Telephone Transmitter which employs devices of recording phonogh</p>
+<p>9 - Telephone Coil of Fe [iron] by tt in Parafine or other insulator</p>
+<p>10 - Platina Point Trans using new phono Recorder devices</p>
+<p>11 - Gred Battery for Telephones</p>
+<p>12 - * Long Distance</p>
+<p>13 - * Phonoplex</p>
+<p>14 - * Jump Telegraph</p>
+<p>15 - * Voltmeter</p>
+<p>16 - Improved Magnetic Bridge for practical work</p>
+<p>17 - Motograph Mirror</p>
+<p>18 - * Relay</p>
+<p>19 - * Telephone practical</p>
+<p>20 - Artificial Cable</p>
+<p>21 - Phone motor to work on 100 volt ckts</p>
+<p>22 - Duplicating Phono Cylinders</p>
+<p>23 - Deposit in vacuo on lace, gold silver also on cotton molten chemical compound of lustrous surfaces to imitate silk also reg plating system</p>
+<p>24 - Vacuous Ore milling Large Machine</p>
+<p>25 - Magnetic Separator Large</p>
+<p>26 - Locking material for Iron sand</p>
+<p>27 - Artificial Silk</p>
+<p>28 - Artificial filiments [sic]</p>
+<p>29 - New [illeg.]</p>
+<p>30 - Uninflammable Insulating Material</p>
+<p>31 - Good wax for phonograph</p>
+<p>32 - Phonographic Clock</p>
+<p>33 - Large Phonograph for Novels, etc.</p>
+<p>34 - Pig Iron Expmts with Electricity + Magnetism</p>
+<p>35 - Malleablizing Cast now in Vacuo</p>
+<p>36 - Drawing fine wire</p>
+<p>37 - Joy phonograph for Dolls</p>
+<p>38 - Cable Motograph</p>
+<p>39 - Very Loud Motograph telephone with 1/3 siz phonogh motor.</p>
+<p>40 - Magneto telephone with actual contact end magnet compression of an adjustable rubber press as in new phones</p>
+<p>41 - Snow Compressor</p>
+<p>42 - Glass plate water ore repeator</p>
+<p>43 - Tinned faced [illeg.] for Stove Castings</p>
+<p>44 - Refining Copper Electrically</p>
+<p>45 - Quad neutral relay</p>
+<p>46 - Cheap low induct Cop Insulating material for Lead Cable people</p>
+<p>47 - Constant moved for nonfoundry</p>
+<p>48 - 200 volt 20 cp lamp</p>
+<p>49 - Cheap [illeg.] Indicator</p>
+<p>50 - Recording Valt Indicator</p>
+<p>51 - Box balancing System</p>
+<p>52 - Alternating Machine + Transformer</p>
+<p>53 - Sifua Surface Switches</p>
+<p>54 - Vulcanizing [illeg.] African Rubber adullement</p>
+<p>55 - Platinum wire [illeg.] cutting Machine</p>
+<p>56 - Silver wire wood cutting system</p>
+<p>57 - Silvering or Coppering bathing cloth in Vac for durability</p>
+<p>58 - S Mater attend own with new devices for c speed</p>
+<p>59 - Expansion mirror platwire in vacuo</p>
+<p>60 - Photoghy</p>
+<p>61 - Photoghy by camping heat after central points</p>
+<p>62 - Boron fil.</p>
+<p>63 - Hg [mercury] out of Lamp</p>
+<p>64 - Phonaplex Repeater</p>
+<p>65 - Squirting glass sheet tube etc. Nickel [illeg.]</p>
+<p>66 - Artificial Mother Pearl</p>
+<p>67 - Red Lead pencils equal to graphite</p>
+<p>68 - India Ink</p>
+<p>69 - Tracing Cloth</p>
+<p>70 - Ink for blind</p>
+<p>71 - Fluffy Incandescent Burner for gas</p>
+<p>72 - Regenerative Kerosene Burner</p>
+<p>73 - Centralized arc in arc Lamp</p>
+<p>74 - Cai-[illeg] Tesla arc lamp test</p>
+<p>75 - Strengthening alternating cli by sternt Dynamo</p>
+<p>76 - ERR Cont [illeg.] reducers</p>
+<p>77 - Electroplating Machines for Schenectady</p>
+<p>78 - Condenser Transformer</p>
+<p>79 - Sqr ft difraction gratings in silver by 5000 [illeg.] tool special [illeg.] lathe for ornamental purposes</p>
+<p>80 - Photo Scant [illeg.]</p>
+<p>81 - Cheap plan produce Mimeograph surfaces</p>
+<p>82 - Miners battery + lamp</p>
+<p>83 - Sorting Coal from Slate Machine</p>
+<p>84 - Butter direct from Milk</p>
+<p>85 - Burning asphalt Candles by high chimney</p>
+<p>86 - Magnets RR signals</p>
+<p>87 - Soften [illeg.] of books transfer to Cop plate + plate to [illeg.] matrix</p>
+<p>88 - Telephone Repeater</p>
+<p>89 - Substitute for Hard rubber</p>
+<p>90 - Artificial Ivory</p>
+<p>91 - Soften Vegetable Ivory to press in sheets</p>
+<p>92 - Various batteries on [illeg.] Type</p>
+<p>93 - Revolving Thermo</p>
+<p>94 - Caller Indicator for Jump Telegh</p>
+<p>95 - Marine Telegraphy</p>
+<p>96 - Long distance speaking tube filled H20 2 dia pressure</p>
+<p>97 - Lend plate battery for modifying attending Current</p>
+<p>98 - Two revolving bands in battery Lead faced press in liquid close together + out into separate chambers to [illeg.]reduce by gas the other</p>
+<p>99 - Siren phonogh</p>
+<p>100 - Perm mag like an electromag of [illeg.] hand steel high polish separately magnetized + forced together powerfully[illeg.]</p>
+<p>101 - Telephone working more [illeg.]</p>
+<p>102 - Eartubes formed crescent [illeg.] wire</p>
+<p>103 - Long strip 50 cp carbon under stress [illeg.] for</p>
+<p>104 - Cheap Voltmeter</p>
+<p>105 - Chalk Battery</p>
+<p>106 - Dynamo or motor long tube in long magnetic field top bottom contacts forcing water through generator current by passage.</p>
+<p>107 - Thermo battery slick Copper oxidized then plated over surface oxide nailed to make good contact [illeg.]</p>
+<p>108 - Disk Phonogh</p>
 </div>
                 </div>
             </article>

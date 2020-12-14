@@ -47,16 +47,7 @@
 <a href="https://scholar.google.com/citations?user=wkveFyQAAAAJ" class="nav-link">Google Scholar</a>
                 </li>
 <li class="nav-item">
-<a href="https://news.xtoinfinity.com" class="nav-link">News Reader</a>
-                </li>
-<li class="nav-item">
-<a href="https://xtoinfinity.com/stories/quickrefs.html" class="nav-link">Quick References</a>
-                </li>
-<li class="nav-item">
 <a href="rss.xml" class="nav-link">Blog RSS</a>
-                </li>
-<li class="nav-item">
-<a href="archive.html" class="nav-link">Blog Archives</a>
                 </li>
 <li class="nav-item">
 <a href="stories/about-me.html" class="nav-link">About</a>
@@ -80,49 +71,7 @@
     
         
     <div class="postindex">
-            <article class="h-entry post-text" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title"><a href="posts/the-good-doctor.html" class="u-url">The Good Doctor</a></h1>
-                <div class="metadata">
-                    <p class="byline author vcard"><span class="byline-name fn" itemprop="author">
-                        Senthil Kumaran
-                    </span></p>
-            <p class="dateline">
-            <a href="posts/the-good-doctor.html" rel="bookmark">
-            <time class="published dt-published" datetime="2016-03-19T13:34:02-07:00" itemprop="datePublished" title="2016-03-19 13:34">2016-03-19 13:34</time></a>
-            </p>
-                        <p class="commentline">
-        
-    <a href="posts/the-good-doctor.html#disqus_thread" data-disqus-identifier="cache/posts/the-good-doctor.html">Comments</a>
-
-
-                </p>
-</div>
-            </header><div class="e-content entry-content">
-                    <div>
-<p>"Oh, yes," said Siddhartha, "I make one-off changes to Simulations on Earth."</p>
-<p>Govind adjusted his glasses and wondered. "Really?."</p>
-<p>"I mean it. I make real people come to readings and discussions of their stories."</p>
-<p>"And?".</p>
-<p>"The characters themselves evaluate how they are understood. I introduced Asimov into a class which was doing a
-discussion of his short story 'The Immortal Bard'."</p>
-<p>"Oh wow, exciting."</p>
-<p>"Asimov was excited too since it was his favorite subject. But, then."</p>
-<p>"Hmm.?"</p>
-<p>"He quickly became dismayed. His original writing of Immortal Bard was to illustrate, given enough time, how experts of
-this world create their meaning of original sources. When creators themselves come to face them, they so much believe in
-their interpretation and revisions that they fail the creator himself."</p>
-<p>"That's what happened to Shakespeare in that story. Yeah, I know, that was a hilarious one. "</p>
-<p>"Right, but what Asimov found was, the discussion was not about what he felt the readers might enjoy from his story.
-Instead, everyone went on to prove, why the immortal bard will fail when he brings him back."</p>
-<p>"Amusing."</p>
-<p>"Yeah, Asimov pondered, how the story could be perceived and readers change the intention when asked to prove something
-in an assignment. The Good Doctor that he was, continued with his writing, thinking that someday readers will be able to
-enjoy his stories as he meant it, perhaps with the help of an artificially intelligent agent."</p>
-<p><em>Senthil Kumaran</em></p>
-<hr class="docutils">
-<p>The story is based upon <a class="reference external" href="http://www.angelfire.com/weird/ektomage/otherwriting/bard.html">The Immortal Bard</a> by Issac Asimov.</p>
-</div>
-                </div>
-            </article><article class="h-entry post-text" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title"><a href="posts/good-algorithms-matter.html" class="u-url">Good Algorithms Matter</a></h1>
+            <article class="h-entry post-text" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title"><a href="posts/good-algorithms-matter.html" class="u-url">Good Algorithms Matter</a></h1>
                 <div class="metadata">
                     <p class="byline author vcard"><span class="byline-name fn" itemprop="author">
                         Senthil Kumaran
@@ -289,19 +238,19 @@ to the last of the block code length should not be a code word.</p>
 the list, prune through through already added words and find if the new word can be a substring of two words joined
 together from the existing list. Knuth gave a demo of finding the maximum comma free subset of the four letter words.</p>
 <p><a class="reference external" href="listings/commafree_check.py.html">commafree_check.py</a>  <a class="reference external" href="listings/commafree_check.py">(Source)</a></p>
-<pre class="code python"><a name="rest_code_5a143e3d16514a2ab74e10ffe437b3e8-1"></a><span class="k">def</span> <span class="nf">check_comma_free</span><span class="p">(</span><span class="n">input_string</span><span class="p">):</span>
-<a name="rest_code_5a143e3d16514a2ab74e10ffe437b3e8-2"></a>  <span class="k">if</span> <span class="n">check_periodic</span><span class="p">(</span><span class="n">input_string</span><span class="p">):</span>
-<a name="rest_code_5a143e3d16514a2ab74e10ffe437b3e8-3"></a>    <span class="k">print</span><span class="p">(</span><span class="s2">"input string is periodic, it cannot be commafree."</span><span class="p">)</span>
-<a name="rest_code_5a143e3d16514a2ab74e10ffe437b3e8-4"></a>    <span class="k">return</span>
-<a name="rest_code_5a143e3d16514a2ab74e10ffe437b3e8-5"></a>  <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">comma_free_words</span><span class="p">)</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
-<a name="rest_code_5a143e3d16514a2ab74e10ffe437b3e8-6"></a>    <span class="n">comma_free_words</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">input_string</span><span class="p">)</span>
-<a name="rest_code_5a143e3d16514a2ab74e10ffe437b3e8-7"></a>  <span class="k">else</span><span class="p">:</span>
-<a name="rest_code_5a143e3d16514a2ab74e10ffe437b3e8-8"></a>    <span class="n">parts</span> <span class="o">=</span> <span class="n">get_parts</span><span class="p">(</span><span class="n">input_string</span><span class="p">)</span>
-<a name="rest_code_5a143e3d16514a2ab74e10ffe437b3e8-9"></a>    <span class="k">for</span> <span class="n">head</span><span class="p">,</span> <span class="n">tail</span> <span class="ow">in</span> <span class="n">parts</span><span class="p">:</span>
-<a name="rest_code_5a143e3d16514a2ab74e10ffe437b3e8-10"></a>      <span class="k">if</span> <span class="p">(</span><span class="n">any_starts_with</span><span class="p">(</span><span class="n">head</span><span class="p">)</span> <span class="ow">and</span> <span class="n">any_ends_with</span><span class="p">(</span><span class="n">tail</span><span class="p">))</span> <span class="ow">or</span> <span class="p">(</span><span class="n">any_starts_with</span><span class="p">(</span><span class="n">tail</span><span class="p">)</span> <span class="ow">and</span> <span class="n">any_ends_with</span><span class="p">(</span><span class="n">head</span><span class="p">)):</span>
-<a name="rest_code_5a143e3d16514a2ab74e10ffe437b3e8-11"></a>        <span class="k">print</span><span class="p">(</span><span class="s2">"</span><span class="si">%s</span><span class="s2">|</span><span class="si">%s</span><span class="s2"> are part of the previous words."</span> <span class="o">%</span> <span class="p">(</span><span class="n">head</span><span class="p">,</span> <span class="n">tail</span><span class="p">))</span>
-<a name="rest_code_5a143e3d16514a2ab74e10ffe437b3e8-12"></a>        <span class="k">return</span>
-<a name="rest_code_5a143e3d16514a2ab74e10ffe437b3e8-13"></a>    <span class="n">comma_free_words</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">input_string</span><span class="p">)</span>
+<pre class="code python"><a name="rest_code_a0dfa1baf6ae4c56be26253d56ddcab3-1"></a><span class="k">def</span> <span class="nf">check_comma_free</span><span class="p">(</span><span class="n">input_string</span><span class="p">):</span>
+<a name="rest_code_a0dfa1baf6ae4c56be26253d56ddcab3-2"></a>  <span class="k">if</span> <span class="n">check_periodic</span><span class="p">(</span><span class="n">input_string</span><span class="p">):</span>
+<a name="rest_code_a0dfa1baf6ae4c56be26253d56ddcab3-3"></a>    <span class="k">print</span><span class="p">(</span><span class="s2">"input string is periodic, it cannot be commafree."</span><span class="p">)</span>
+<a name="rest_code_a0dfa1baf6ae4c56be26253d56ddcab3-4"></a>    <span class="k">return</span>
+<a name="rest_code_a0dfa1baf6ae4c56be26253d56ddcab3-5"></a>  <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">comma_free_words</span><span class="p">)</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+<a name="rest_code_a0dfa1baf6ae4c56be26253d56ddcab3-6"></a>    <span class="n">comma_free_words</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">input_string</span><span class="p">)</span>
+<a name="rest_code_a0dfa1baf6ae4c56be26253d56ddcab3-7"></a>  <span class="k">else</span><span class="p">:</span>
+<a name="rest_code_a0dfa1baf6ae4c56be26253d56ddcab3-8"></a>    <span class="n">parts</span> <span class="o">=</span> <span class="n">get_parts</span><span class="p">(</span><span class="n">input_string</span><span class="p">)</span>
+<a name="rest_code_a0dfa1baf6ae4c56be26253d56ddcab3-9"></a>    <span class="k">for</span> <span class="n">head</span><span class="p">,</span> <span class="n">tail</span> <span class="ow">in</span> <span class="n">parts</span><span class="p">:</span>
+<a name="rest_code_a0dfa1baf6ae4c56be26253d56ddcab3-10"></a>      <span class="k">if</span> <span class="p">(</span><span class="n">any_starts_with</span><span class="p">(</span><span class="n">head</span><span class="p">)</span> <span class="ow">and</span> <span class="n">any_ends_with</span><span class="p">(</span><span class="n">tail</span><span class="p">))</span> <span class="ow">or</span> <span class="p">(</span><span class="n">any_starts_with</span><span class="p">(</span><span class="n">tail</span><span class="p">)</span> <span class="ow">and</span> <span class="n">any_ends_with</span><span class="p">(</span><span class="n">head</span><span class="p">)):</span>
+<a name="rest_code_a0dfa1baf6ae4c56be26253d56ddcab3-11"></a>        <span class="k">print</span><span class="p">(</span><span class="s2">"</span><span class="si">%s</span><span class="s2">|</span><span class="si">%s</span><span class="s2"> are part of the previous words."</span> <span class="o">%</span> <span class="p">(</span><span class="n">head</span><span class="p">,</span> <span class="n">tail</span><span class="p">))</span>
+<a name="rest_code_a0dfa1baf6ae4c56be26253d56ddcab3-12"></a>        <span class="k">return</span>
+<a name="rest_code_a0dfa1baf6ae4c56be26253d56ddcab3-13"></a>    <span class="n">comma_free_words</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">input_string</span><span class="p">)</span>
 </pre>
 <p>This logic is dependent on the order in which comma free block codes are analyzed. For finding a maximal set in a given
 alphabet size in any order a proper backtracking based solution should be devised, which considers all the cases of
@@ -766,6 +715,38 @@ historical records of his time. Yet, more than 1900 years later, a historian li
 <p></p>
 <p>Papanasam is the first movie wherein I noticed that Kamal Hassan as a character in the movie didn't make any fun of god. In fact, in one scene wherein he tussles with the inspector at the tea shop, he refers to people as capable of being judged only by "the almighty". That's more philosophical, but in a later scene he mocks a cinema operator as "Nee yeena Karuppu Sattai ya?" (Are you an atheist?)  taking the opposite stance he usually plays on the subject.</p>
 <p>The movie is same as Drishyam and I didn't mind watching it again in Tamil. What I liked about the whole thing was even an accomplished actor like Kamal agreeing to act ditto and not shying away from a remake. This, in my opinion, is a credit both to the story as well as to the creative artist who wants to do the same project in a different language because the project itself is a brilliant one.</p>
+</div>
+                </div>
+            </article><article class="h-entry post-text" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title"><a href="posts/2015/07/14/review-page-a-minute-memory-book.html" class="u-url">Review: Page-a-Minute Memory Book</a></h1>
+                <div class="metadata">
+                    <p class="byline author vcard"><span class="byline-name fn" itemprop="author">
+                        Senthil Kumaran
+                    </span></p>
+            <p class="dateline">
+            <a href="posts/2015/07/14/review-page-a-minute-memory-book.html" rel="bookmark">
+            <time class="published dt-published" datetime="2015-07-14T14:58:10-07:00" itemprop="datePublished" title="2015-07-14 14:58">2015-07-14 14:58</time></a>
+            </p>
+                        <p class="commentline">
+        
+    <a href="posts/2015/07/14/review-page-a-minute-memory-book.html#disqus_thread" data-disqus-identifier="cache/posts/2015/07/14/review-page-a-minute-memory-book.html">Comments</a>
+
+
+                </p>
+</div>
+            </header><div class="e-content entry-content">
+                    <div>
+<p></p>
+<a href="http://www.goodreads.com/book/show/9394" style="float:left;padding-right:20px;"><img src="http://d.gr-assets.com/books/1388247549m/9394.jpg" border="0" alt="Page-a-Minute Memory Book"></a>
+<p><a href="http://www.goodreads.com/book/show/9394">Page-a-Minute Memory Book</a> by <a href="http://www.goodreads.com/author/show/6143">Harry Lorayne</a><br></p>
+<p>My rating: <a href="http://www.goodreads.com/review/show/1301019129">5 of 5 stars</a></p>
+<p><br><br></p>
+<p>Our brain and memory works in an associative manner. Author of this book stresses upon this point
+and gives good tools to create a associations for everything that we will like to remember.H is
+consiciously driving the reader to make associations and explaining the fact that "applying your
+mind" to something essentially means creating association.</p>
+<p>I applied these techniques and found my joy in remembering new things and programming my mind. </p>
+<p><br><br></p>
+<p><a href="http://www.goodreads.com/review/show/1301019129">View all my reviews</a></p>
 </div>
                 </div>
             </article>
