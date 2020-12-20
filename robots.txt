@@ -1,5 +1,4 @@
 Sitemap: http://www.xtoinfinity.com/sitemapindex.xml
 
 User-Agent: *
-Disallow: /
 Host: www.xtoinfinity.com
