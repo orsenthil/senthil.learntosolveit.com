@@ -30,10 +30,7 @@ name, *Ramesh Babu* is my dad's name.  In my community, we used to initialize
 our family and surnames and I used to write it as *O.R.Senthil Kumaran*.
 
 I like many things in this world. You will find my posts related to varied
-topics that interest me.
-
-I am CPython Core Developer since 2009. I have contributed many patches to
-standard library, I review contributions from other developers and contributors.
-
-I speak Sourashtra Language, a minority and endangered language. I occupy my
-time with Social and Language related projects in Sourashtra.
+topics that interest me.I am CPython Core Developer since 2009. I have
+contributed many patches to standard library, I review contributions from other
+developers and contributors.I speak Sourashtra Language, a minority and
+endangered language.
