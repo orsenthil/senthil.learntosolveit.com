@@ -8,19 +8,22 @@
 .. type: text
 
 The Computer From Pascal to Von Neumann is a computer history book by Herman
-H. Goldstine which surveys the history from the laws of thought from earliest
-philosophers like Pascal, Mathematicians like George Bool, to implementors
-like Von Neumann.
+H. Goldstine. It surveys the history from the laws of thought by inventors
+across ages. It goes from earliest philosophers like Pascal, to
+mathematicians like George Boole, to implementors like Von Neumann.
 
-The author takes how each like was built on top of others, and almost
-everyone involved had a shared objective for computers.
+The author reveals how these inventors built their theories on top of others.
+Almost everyone involved in this exercise had a shared objective for
+computers.
 
-These inventors wanted to "free" mankind from the mundane tasks. And these
-inventors lived in different eras like Leibniz lived in 1600s, Charles
-Babbage in 1800s and Dijskstra (1930-2002).
+These inventors wanted to "free" mankind from the repetitive but mundane
+tasks.
+
+And these inventors lived in different eras like Leibniz lived in 1600s,
+Charles Babbage in 1800s and Dijskstra (1930-2002).
 
 When introducing Charles Babbage, author directly goes the motivation that
-drived the inventor.
+drove the inventor.
 
 .. 
 
@@ -44,8 +47,7 @@ reasoning.
 Author also associated United States Military and Government to various
 advancements in Computers. The final chapters gave references to when other
 parts of the world got their first computer. I noted that India's first
-computers were in 1960s with Tata institute of Fundamental research.
-
+computers were in 1960s with Tata Institute of Fundamental Research.
 Here are some interesting historical photos from this book.
 
 
