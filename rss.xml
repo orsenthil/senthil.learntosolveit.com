@@ -1,5 +1,53 @@
 <?xml version="1.0" encoding="utf-8"?>
-<?xml-stylesheet type="text/xsl" href="assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Senthil Kumaran</title><link>http://www.xtoinfinity.com/</link><description>Senthil Kumaran</description><atom:link href="http://www.xtoinfinity.com/rss.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><lastBuildDate>Wed, 06 Jan 2021 16:33:41 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Essays in Humanism by Albert Einstein - Book Review</title><link>http://www.xtoinfinity.com/posts/2020/12/19/essays-in-humanism-by-albert-einstein-book-review.html</link><dc:creator>Senthil Kumaran</dc:creator><description>&lt;span&gt;&lt;a href="https://www.goodreads.com/book/show/12788555-essays-in-humanism" style="float: left; padding-right: 20px"&gt;&lt;img border="0" alt="Essays in Humanism" src="https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1444678165l/12788555._SX98_.jpg"&gt;&lt;/a&gt;&lt;a href="https://www.goodreads.com/book/show/12788555-essays-in-humanism"&gt;Essays in Humanism&lt;/a&gt; by &lt;a href="https://www.goodreads.com/author/show/9810.Albert_Einstein"&gt;Albert Einstein&lt;/a&gt;&lt;br&gt;
+<?xml-stylesheet type="text/xsl" href="assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Senthil Kumaran</title><link>http://www.xtoinfinity.com/</link><description>Senthil Kumaran</description><atom:link href="http://www.xtoinfinity.com/rss.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><lastBuildDate>Sat, 30 Jan 2021 13:30:12 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Book Review - The Computer From Pascal to Von Neumann</title><link>http://www.xtoinfinity.com/posts/2021/01/30/the-computer-from-pascal-to-von-neumann.html</link><dc:creator>Senthil Kumaran</dc:creator><description>&lt;div&gt;&lt;p&gt;The Computer From Pascal to Von Neumann is a computer history book by Herman
+H. Goldstine which surveys the history from the laws of thought from earliest
+philosophers like Pascal, Mathematicians like George Bool, to implementors
+like Von Neumann.&lt;/p&gt;
+&lt;p&gt;The author takes how each like was built on top of others, and almost
+everyone involved had a shared objective for computers.&lt;/p&gt;
+&lt;p&gt;These inventors wanted to "free" mankind from the mundane tasks. And these
+inventors lived in different eras like Leibniz lived in 1600s, Charles
+Babbage in 1800s and Dijskstra (1930-2002).&lt;/p&gt;
+&lt;p&gt;When introducing Charles Babbage, author directly goes the motivation that
+drived the inventor.&lt;/p&gt;
+&lt;!--  --&gt;
+&lt;blockquote&gt;
+The theme of Leibniz— to free men from slavery by the automation of dull but simple - tasks was next taken up by one of the most unusual figures in modern intellectual history, Charles Babbage&lt;/blockquote&gt;
+&lt;p&gt;And here is how Dijskstra explains how and why Computers will exceed human
+reasoning.&lt;/p&gt;
+&lt;!--  --&gt;
+&lt;blockquote&gt;
+&lt;p&gt;In the long run I expect computing science to transcend its parent
+disciplines, mathematics and logic, by effectively realizing a significant
+part of Leibniz’s Dream of providing symbolic calculation as an alternative
+to human reasoning. - Dijskstra&lt;/p&gt;
+&lt;p&gt;(Please note the difference between "mimicking" and "providing an alternative
+to": alternatives are allowed to be better.)&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Author also associated United States Military and Government to various
+advancements in Computers. The final chapters gave references to when other
+parts of the world got their first computer. I noted that India's first
+computers were in 1960s with Tata institute of Fundamental research.&lt;/p&gt;
+&lt;p&gt;Here are some interesting historical photos from this book.&lt;/p&gt;
+&lt;script src="https://cdn.jsdelivr.net/npm/publicalbum@latest/embed-ui.min.js" async&gt;&lt;/script&gt;
+&lt;div class="pa-gallery-player-widget" style="width:100%; height:480px; display:none;" data-link="https://photos.app.goo.gl/P2xjnc5amHczT5mu5" data-title="Pascal-to-VonNeumann" data-description="16 new photos added to shared album"&gt;
+&lt;object data="https://lh3.googleusercontent.com/HmB4zojBLRfLVe0IXlNBqeKVJ1dlLvQt31GJNFbua05lwQeKl2YSr6sYqzji5shI835mire-9Fi80GBDrMO8j1AcC5ZluaLyH-0vQJZ3DX_x7eHY00wydOdLyZ9mo2G7sxjryVOoo60=w1920-h1080"&gt;&lt;/object&gt;
+&lt;object data="https://lh3.googleusercontent.com/8Owxl7DgZpZrXJrFMnv5jtqxPfuWHO5EcuFo53U80qSQmYfSrf2TWxIZ09dTJnyT94zxF3-uLLaCHcJSBUhyfYr7tvz7nudEWuMrp7qsJMNLO4VHwJSL9oHWjrGNurqentO3joBew9Y=w1920-h1080"&gt;&lt;/object&gt;
+&lt;object data="https://lh3.googleusercontent.com/WQ-Oeh3MG-knn-EdzdkD2RVWb2U74ny8agR1wruNWobAyg1Pmr6d9jxQEK4ggmunQ_9abfx9uLJD7PJKFhjNPV-yR44WfYiQk5sX-1nWUVV26mELzKTF5MuTuFf_dakn8QgaaGTI-Gg=w1920-h1080"&gt;&lt;/object&gt;
+&lt;object data="https://lh3.googleusercontent.com/3y6AuldeGvseTYrz4q0jJ7q5A21cCaXFMhDhm8OrjYX8e-YxHP4K-AqMFANwPPQ_pBRhd1T0bKoycT2iBD1B94HAxe_LOQnP_LFKnCSHwCHKPWaQc1yPVLAA9klidVImC7qZq_7xcR4=w1920-h1080"&gt;&lt;/object&gt;
+&lt;object data="https://lh3.googleusercontent.com/Cn6-_eTA-slBVTiymy0gNtZCcXM-j-itPNpM8NKo1f0oE3RWarHneqf3nHVqMXuHmrsv7LgnADuAKPbOxMUc4adhURX0hNf3QjrBTqnPx1qsKw6ioUW1TQlZVB-Z5eRXrk_w4h469Yo=w1920-h1080"&gt;&lt;/object&gt;
+&lt;object data="https://lh3.googleusercontent.com/4EE18mM5dmUkWgq7BdaC6k4hFj5Q7mcEkS4hiTSnCC0BGVNhDl8JBmTnPM6I3xhDC6fNjwAiABiIY_w0_rDDpFhNWUkoTSdFrx-PbSMx_q_xR0M2GBB1b6eGbMYec0PLAfdEWdYjySI=w1920-h1080"&gt;&lt;/object&gt;
+&lt;object data="https://lh3.googleusercontent.com/cT9xaMBlqZrg5EK5vr-H_nv323SA2iLc4lqGB4sZSCkn_v52PYy-nI1hSNjbIyFb2WcmvLtgXeK5el8aqhF6FXM9veYjaJ3i5PHrHopiFYQAnQHrWH6eCvVPAeLhwuORmsD4-SiRuN8=w1920-h1080"&gt;&lt;/object&gt;
+&lt;object data="https://lh3.googleusercontent.com/0yCfJ7lse8ZfdXFSxbcRBBYgbdkhch8Tq6ehdRc7dYDl47C8t9VJVXxAo22EJ9m3iD7L8E8_y8s39EHdZSHWuPbXDjsbmlhsJRBWDT0F53V7G7T9YpOxRnBOHPxutr0CcPWzO2CEHSQ=w1920-h1080"&gt;&lt;/object&gt;
+&lt;object data="https://lh3.googleusercontent.com/50Y6Quje2XuXd8H7129JDDoQsVsyPfdRnSLP1P4O6iwY4bctNDmJfmMUi3BqBFAEOHoPkBmeT6ISs_FSy-sJbq6QURI8HQzT1MAxkKZXH6sK9cyCbjG82mkJitcrZFm0irS1nzkZJXY=w1920-h1080"&gt;&lt;/object&gt;
+&lt;object data="https://lh3.googleusercontent.com/zNsVlJfqEf7kHigCuSgpCInLymt-XUyefdwClsNyB3SzFxk_mNvw7vqj_zb1C5i3ZbLEd9vvkSv0XiTXn7puZsJLgK-WUObbp5Lks6c0UVrdn5qDEO4glYPKjc3kImkH_E2xtMakqpA=w1920-h1080"&gt;&lt;/object&gt;
+&lt;object data="https://lh3.googleusercontent.com/gOJCsTwnBe4FX_7lcfXJH0ufFMG2Q8Jna9cSwe2kczL6B5LSuL6Enilk84uzUNDqEey0o3zb5NPGy9CpST8ULnNA9cmVg2B6n9eADuHwMz24wY25HZa3LJUMTpJPunbcxA9iUGgqI20=w1920-h1080"&gt;&lt;/object&gt;
+&lt;object data="https://lh3.googleusercontent.com/O5aoUKsj1DM6oykZJhjR-UZKdkny83abWgQmoTZdg_hTiOzuyObjisAIjH-5rMEHRVQkwARe9AMeLKopvDyEWR1tFcDyHo_ajvTWwj91HG5YGLA_pdOsA71UMkrTgjyMulA7eQGfV0k=w1920-h1080"&gt;&lt;/object&gt;
+&lt;object data="https://lh3.googleusercontent.com/06ooD7Aqp3o60tWIJ9jPohBR2XnPZCKxZFsYcMl4EC36Qtib1Cwuo6NmJAHescdKyluJVg2kCQhYViD38RABDkL7MbFvkrT2XjASG8hV84sjfXsoAuyXEi98_147b6xH9LNtiZa3jtg=w1920-h1080"&gt;&lt;/object&gt;
+&lt;object data="https://lh3.googleusercontent.com/ANzbXoVjpSj2YmT6VXxDdVsCmI1Pu5t8JBeIYPzqm24M9AJrMdRGYoB6X-COiyvm0r-qJzklEn_98rEHSkNIOayQvmf-7hmJC-FJ6djXy6IXPcC7EGwpVeOQiZDGpiDNq5PAJN9cygY=w1920-h1080"&gt;&lt;/object&gt;
+&lt;object data="https://lh3.googleusercontent.com/O0qxDl-VU_NccGNpNe7v-ZgwOqCqryr63m9KrkEvdWk0_bIVL8H8EkZTAOE13Gl9qipsVrQqV-DiDASDovScOt67IbQsW1K-OeSXExqhX9TtqeKnA2jTBXZnUaMwbUUcFMgZcjxoalk=w1920-h1080"&gt;&lt;/object&gt;
+&lt;object data="https://lh3.googleusercontent.com/BJ7Remq62_vHWKMZ3UQTGjbT4_g7K7NyLh7aOH1EW9ILKTyQMeZIZMt0njgCdRruAeb5Yw7Amvc1IbXO23hw_6-VXqFIUr0Y7BU_xCOM-ViiyXX6pP6AMxaX8V_R5l2pSKrjHkVpOGA=w1920-h1080"&gt;&lt;/object&gt;
+&lt;/div&gt;&lt;/div&gt;</description><guid>http://www.xtoinfinity.com/posts/2021/01/30/the-computer-from-pascal-to-von-neumann.html</guid><pubDate>Sat, 30 Jan 2021 13:09:55 GMT</pubDate></item><item><title>Essays in Humanism by Albert Einstein - Book Review</title><link>http://www.xtoinfinity.com/posts/2020/12/19/essays-in-humanism-by-albert-einstein-book-review.html</link><dc:creator>Senthil Kumaran</dc:creator><description>&lt;span&gt;&lt;a href="https://www.goodreads.com/book/show/12788555-essays-in-humanism" style="float: left; padding-right: 20px"&gt;&lt;img border="0" alt="Essays in Humanism" src="https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1444678165l/12788555._SX98_.jpg"&gt;&lt;/a&gt;&lt;a href="https://www.goodreads.com/book/show/12788555-essays-in-humanism"&gt;Essays in Humanism&lt;/a&gt; by &lt;a href="https://www.goodreads.com/author/show/9810.Albert_Einstein"&gt;Albert Einstein&lt;/a&gt;&lt;br&gt;
 My rating: &lt;a href="https://www.goodreads.com/review/show/3703660748"&gt;4 of 5 stars&lt;/a&gt;&lt;br&gt;&lt;br&gt;
 
 There we Einstein's thoughts on various topics. He desired a World-Government,
@@ -306,13 +354,4 @@ is different and is equally susceptible to this virus.&lt;/p&gt;
 &lt;img alt="https://i.imgur.com/yOqeEtv.png" src="https://i.imgur.com/yOqeEtv.png" style="width: 640px; height: 480px;"&gt;&lt;/div&gt;</description><guid>http://www.xtoinfinity.com/posts/2020/05/01/leetcode-30-day-challenge.html</guid><pubDate>Fri, 01 May 2020 17:01:28 GMT</pubDate></item><item><title>Book Review: Masterminds of Programming</title><link>http://www.xtoinfinity.com/posts/2020/04/29/book-review-masterminds-of-programming.html</link><dc:creator>Senthil Kumaran</dc:creator><description>&lt;span&gt;&lt;a href="https://www.goodreads.com/book/show/1746425.Masterminds_of_Programming" style="float: left; padding-right: 20px"&gt;&lt;img border="0" alt="Masterminds of Programming: Conversations with the Creators of Major Programming Languages" src="https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1328834764l/1746425._SX98_.jpg"&gt;&lt;/a&gt;&lt;a href="https://www.goodreads.com/book/show/1746425.Masterminds_of_Programming"&gt;Masterminds of Programming: Conversations with the Creators of Major Programming Languages&lt;/a&gt; by &lt;a href="https://www.goodreads.com/author/show/801128.Federico_Biancuzzi"&gt;Federico Biancuzzi&lt;/a&gt;&lt;br&gt;
 My rating: &lt;a href="https://www.goodreads.com/review/show/3155122369"&gt;5 of 5 stars&lt;/a&gt;&lt;br&gt;&lt;br&gt;
 This was a lengthy book. The interviewers did a fantastic job with their questions and covered a range of expert programmers and language designers across the spectrum. The important thing I gained from reading this book was my "enthusiasm" again for different programming languages and styles. &lt;br&gt;Each different language creator had some "opinions" about the state of affairs and went about in a personal way to do something about it, create a language, create a community, solve the problem, and usually building on top of what the person had learned from others. The language creation is both a scientific process (standing upon the shoulders of giants), as well as the unique taste that each language designer brought to the table. I was excited to learn more about AWK, Haskell, Perl, and Eiffel as languages after reading this book.
-&lt;br&gt;&lt;/span&gt;</description><guid>http://www.xtoinfinity.com/posts/2020/04/29/book-review-masterminds-of-programming.html</guid><pubDate>Wed, 29 Apr 2020 16:34:42 GMT</pubDate></item><item><title>Heros of Pandemic: Dr. Brian Lewy</title><link>http://www.xtoinfinity.com/posts/2020/04/16/heros-of-pandemic-dr-brian-lewy.html</link><dc:creator>Senthil Kumaran</dc:creator><description>&lt;div&gt;&lt;p&gt;I came across this article on Brian Lewy, who was once the CEO of RadioShack, but after 30+ years in business,
-decided to pursue his interest in Medicine, and became a clinician and helping with fight against COVID-19.&lt;/p&gt;
-&lt;img alt="https://i.imgur.com/khkNx8i.png" src="https://i.imgur.com/khkNx8i.png"&gt;
-&lt;div class="admonition admonition-doing-things-you-love"&gt;
-&lt;p class="first admonition-title"&gt;Doing things you love&lt;/p&gt;
-&lt;p class="last"&gt;“I am just one of those people who was very fortunate, where things worked out, and where I could do not just one
-thing I really enjoyed in life, but two.”&lt;/p&gt;
-&lt;/div&gt;
-&lt;img alt="https://i.imgur.com/KS2sJMf.png" src="https://i.imgur.com/KS2sJMf.png"&gt;
-&lt;p&gt;Source : &lt;a class="reference external" href="https://nationalpost.com/news/canada/second-act-former-ceo-of-radioshack-now-an-er-doctor-on-frontlines-of-covid-19-fight"&gt;Heroes of the pandemic: Former CEO of RadioShack now an ER doctor on frontlines of COVID-19 fight&lt;/a&gt;&lt;/p&gt;&lt;/div&gt;</description><guid>http://www.xtoinfinity.com/posts/2020/04/16/heros-of-pandemic-dr-brian-lewy.html</guid><pubDate>Fri, 17 Apr 2020 02:45:58 GMT</pubDate></item></channel></rss>
+&lt;br&gt;&lt;/span&gt;</description><guid>http://www.xtoinfinity.com/posts/2020/04/29/book-review-masterminds-of-programming.html</guid><pubDate>Wed, 29 Apr 2020 16:34:42 GMT</pubDate></item></channel></rss>
