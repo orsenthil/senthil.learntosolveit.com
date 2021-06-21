@@ -1,1 +1,0 @@
-<html><body><p><font size="2"> "You are educated when you have the ability to listen to  almost<br>  anything without losing your temper or  self-confidence."     </font></p> <p><font size="2">                                                             ~ <a href="http://en.wikiquote.org/wiki/Robert_Frost">Robert  Frost<br></a><br><br> <br></font></p></body></html>

@@ -1,1 +1,0 @@
-<html><body><blockquote>In their capacity as a tool, computers will be but a ripple on the surface of our culture. In their capacity as intellectual challenge, they are without precedent in the cultural history of mankind.</blockquote></body></html>

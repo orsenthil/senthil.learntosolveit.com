@@ -186,41 +186,41 @@ application stack, and there is <strong>BSD</strong> systems.</p>
 </ul>
 <p>We will have <strong>Interfaces</strong> for the products.</p>
 <p><a class="reference external" href="../listings/java/abstractfactory/IBootLoader.java.html">java/abstractfactory/IBootLoader.java</a>  <a class="reference external" href="../listings/java/abstractfactory/IBootLoader.java">(Source)</a></p>
-<pre class="code java"><a name="rest_code_4634f410cf524c2791dbc2502dabd4bc-1"></a><span class="kd">public</span> <span class="kd">interface</span> <span class="nc">IBootLoader</span> <span class="o">{</span>
-<a name="rest_code_4634f410cf524c2791dbc2502dabd4bc-2"></a>    <span class="cm">/**</span>
-<a name="rest_code_4634f410cf524c2791dbc2502dabd4bc-3"></a><span class="cm">     * Boot up the System Image.</span>
-<a name="rest_code_4634f410cf524c2791dbc2502dabd4bc-4"></a><span class="cm">     */</span>
-<a name="rest_code_4634f410cf524c2791dbc2502dabd4bc-5"></a>    <span class="kt">void</span> <span class="nf">bootUp</span><span class="o">();</span>
-<a name="rest_code_4634f410cf524c2791dbc2502dabd4bc-6"></a><span class="o">}</span>
+<pre class="code java"><a name="rest_code_aa532ac6a0044475a231d4c7a2145477-1"></a><span class="kd">public</span> <span class="kd">interface</span> <span class="nc">IBootLoader</span> <span class="o">{</span>
+<a name="rest_code_aa532ac6a0044475a231d4c7a2145477-2"></a>    <span class="cm">/**</span>
+<a name="rest_code_aa532ac6a0044475a231d4c7a2145477-3"></a><span class="cm">     * Boot up the System Image.</span>
+<a name="rest_code_aa532ac6a0044475a231d4c7a2145477-4"></a><span class="cm">     */</span>
+<a name="rest_code_aa532ac6a0044475a231d4c7a2145477-5"></a>    <span class="kt">void</span> <span class="nf">bootUp</span><span class="o">();</span>
+<a name="rest_code_aa532ac6a0044475a231d4c7a2145477-6"></a><span class="o">}</span>
 </pre>
 <p><a class="reference external" href="../listings/java/abstractfactory/IKernel.java.html">java/abstractfactory/IKernel.java</a>  <a class="reference external" href="../listings/java/abstractfactory/IKernel.java">(Source)</a></p>
-<pre class="code java"><a name="rest_code_c41bd20fff994b47a04d106fcbbdf1ca-1"></a><span class="kd">public</span> <span class="kd">interface</span> <span class="nc">IKernel</span> <span class="o">{</span>
-<a name="rest_code_c41bd20fff994b47a04d106fcbbdf1ca-2"></a>
-<a name="rest_code_c41bd20fff994b47a04d106fcbbdf1ca-3"></a>    <span class="cm">/**</span>
-<a name="rest_code_c41bd20fff994b47a04d106fcbbdf1ca-4"></a><span class="cm">     * Load the kernel on top of the system image.</span>
-<a name="rest_code_c41bd20fff994b47a04d106fcbbdf1ca-5"></a><span class="cm">     */</span>
-<a name="rest_code_c41bd20fff994b47a04d106fcbbdf1ca-6"></a>    <span class="kt">void</span> <span class="nf">loadKernel</span><span class="o">();</span>
-<a name="rest_code_c41bd20fff994b47a04d106fcbbdf1ca-7"></a><span class="o">}</span>
+<pre class="code java"><a name="rest_code_aac557f82006416281bfe579668b6488-1"></a><span class="kd">public</span> <span class="kd">interface</span> <span class="nc">IKernel</span> <span class="o">{</span>
+<a name="rest_code_aac557f82006416281bfe579668b6488-2"></a>
+<a name="rest_code_aac557f82006416281bfe579668b6488-3"></a>    <span class="cm">/**</span>
+<a name="rest_code_aac557f82006416281bfe579668b6488-4"></a><span class="cm">     * Load the kernel on top of the system image.</span>
+<a name="rest_code_aac557f82006416281bfe579668b6488-5"></a><span class="cm">     */</span>
+<a name="rest_code_aac557f82006416281bfe579668b6488-6"></a>    <span class="kt">void</span> <span class="nf">loadKernel</span><span class="o">();</span>
+<a name="rest_code_aac557f82006416281bfe579668b6488-7"></a><span class="o">}</span>
 </pre>
 <p><a class="reference external" href="../listings/java/abstractfactory/IShell.java.html">java/abstractfactory/IShell.java</a>  <a class="reference external" href="../listings/java/abstractfactory/IShell.java">(Source)</a></p>
-<pre class="code java"><a name="rest_code_fc46fe0b50f34cd0b718580f544d86f2-1"></a><span class="kd">public</span> <span class="kd">interface</span> <span class="nc">IShell</span> <span class="o">{</span>
-<a name="rest_code_fc46fe0b50f34cd0b718580f544d86f2-2"></a>    <span class="kt">void</span> <span class="nf">loadShell</span><span class="o">();</span>
-<a name="rest_code_fc46fe0b50f34cd0b718580f544d86f2-3"></a><span class="o">}</span>
+<pre class="code java"><a name="rest_code_2a00e9cb394a44f691b13d9dc9a170d4-1"></a><span class="kd">public</span> <span class="kd">interface</span> <span class="nc">IShell</span> <span class="o">{</span>
+<a name="rest_code_2a00e9cb394a44f691b13d9dc9a170d4-2"></a>    <span class="kt">void</span> <span class="nf">loadShell</span><span class="o">();</span>
+<a name="rest_code_2a00e9cb394a44f691b13d9dc9a170d4-3"></a><span class="o">}</span>
 </pre>
 <p><a class="reference external" href="../listings/java/abstractfactory/IDisplayManager.java.html">java/abstractfactory/IDisplayManager.java</a>  <a class="reference external" href="../listings/java/abstractfactory/IDisplayManager.java">(Source)</a></p>
-<pre class="code java"><a name="rest_code_fcfa237a02e3468c9d33187d1a3a0eb4-1"></a><span class="kd">public</span> <span class="kd">interface</span> <span class="nc">IDisplayManager</span> <span class="o">{</span>
-<a name="rest_code_fcfa237a02e3468c9d33187d1a3a0eb4-2"></a>    <span class="kt">void</span> <span class="nf">installDisplayManager</span><span class="o">();</span>
-<a name="rest_code_fcfa237a02e3468c9d33187d1a3a0eb4-3"></a><span class="o">}</span>
+<pre class="code java"><a name="rest_code_22b065748b164e4482b78300cdabc7b6-1"></a><span class="kd">public</span> <span class="kd">interface</span> <span class="nc">IDisplayManager</span> <span class="o">{</span>
+<a name="rest_code_22b065748b164e4482b78300cdabc7b6-2"></a>    <span class="kt">void</span> <span class="nf">installDisplayManager</span><span class="o">();</span>
+<a name="rest_code_22b065748b164e4482b78300cdabc7b6-3"></a><span class="o">}</span>
 </pre>
 <p><a class="reference external" href="../listings/java/abstractfactory/IWindowManager.java.html">java/abstractfactory/IWindowManager.java</a>  <a class="reference external" href="../listings/java/abstractfactory/IWindowManager.java">(Source)</a></p>
-<pre class="code java"><a name="rest_code_d98df4ee493246e1bc5ac632a8db0660-1"></a><span class="kd">public</span> <span class="kd">interface</span> <span class="nc">IWindowManager</span> <span class="o">{</span>
-<a name="rest_code_d98df4ee493246e1bc5ac632a8db0660-2"></a>    <span class="kt">void</span> <span class="nf">installWindowManager</span><span class="o">();</span>
-<a name="rest_code_d98df4ee493246e1bc5ac632a8db0660-3"></a><span class="o">}</span>
+<pre class="code java"><a name="rest_code_82ca18dbf82f4b6894869a42a9026ed5-1"></a><span class="kd">public</span> <span class="kd">interface</span> <span class="nc">IWindowManager</span> <span class="o">{</span>
+<a name="rest_code_82ca18dbf82f4b6894869a42a9026ed5-2"></a>    <span class="kt">void</span> <span class="nf">installWindowManager</span><span class="o">();</span>
+<a name="rest_code_82ca18dbf82f4b6894869a42a9026ed5-3"></a><span class="o">}</span>
 </pre>
 <p><a class="reference external" href="../listings/java/abstractfactory/IBaseApplications.java.html">java/abstractfactory/IBaseApplications.java</a>  <a class="reference external" href="../listings/java/abstractfactory/IBaseApplications.java">(Source)</a></p>
-<pre class="code java"><a name="rest_code_5a6ac705c90546d9b8e6dfd40a623ab4-1"></a><span class="kd">public</span> <span class="kd">interface</span> <span class="nc">IBaseApplications</span> <span class="o">{</span>
-<a name="rest_code_5a6ac705c90546d9b8e6dfd40a623ab4-2"></a>    <span class="kt">void</span> <span class="nf">installApplications</span><span class="o">();</span>
-<a name="rest_code_5a6ac705c90546d9b8e6dfd40a623ab4-3"></a><span class="o">}</span>
+<pre class="code java"><a name="rest_code_7b8f3307cca344cf97eae05c6b85cc98-1"></a><span class="kd">public</span> <span class="kd">interface</span> <span class="nc">IBaseApplications</span> <span class="o">{</span>
+<a name="rest_code_7b8f3307cca344cf97eae05c6b85cc98-2"></a>    <span class="kt">void</span> <span class="nf">installApplications</span><span class="o">();</span>
+<a name="rest_code_7b8f3307cca344cf97eae05c6b85cc98-3"></a><span class="o">}</span>
 </pre>
 </div>
 <div class="section" id="concrete-products">
@@ -262,126 +262,126 @@ concrete products like</p>
 </ul>
 <p>Let's denote these concrete products in code that can be instantiated.</p>
 <p><a class="reference external" href="../listings/java/abstractfactory/BSDBootLoader.java.html">java/abstractfactory/BSDBootLoader.java</a>  <a class="reference external" href="../listings/java/abstractfactory/BSDBootLoader.java">(Source)</a></p>
-<pre class="code java"><a name="rest_code_bf9ca6150e4640af8b403f9642eb83a2-1"></a><span class="kd">public</span> <span class="kd">class</span> <span class="nc">BSDBootLoader</span> <span class="kd">implements</span> <span class="n">IBootLoader</span><span class="o">{</span>
-<a name="rest_code_bf9ca6150e4640af8b403f9642eb83a2-2"></a>    <span class="cm">/**</span>
-<a name="rest_code_bf9ca6150e4640af8b403f9642eb83a2-3"></a><span class="cm">     * Boot up the System Image.</span>
-<a name="rest_code_bf9ca6150e4640af8b403f9642eb83a2-4"></a><span class="cm">     */</span>
-<a name="rest_code_bf9ca6150e4640af8b403f9642eb83a2-5"></a>    <span class="nd">@Override</span>
-<a name="rest_code_bf9ca6150e4640af8b403f9642eb83a2-6"></a>    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">bootUp</span><span class="o">()</span> <span class="o">{</span>
-<a name="rest_code_bf9ca6150e4640af8b403f9642eb83a2-7"></a>        <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"Booting: "</span> <span class="o">+</span> <span class="k">this</span><span class="o">.</span><span class="na">getClass</span><span class="o">().</span><span class="na">getSimpleName</span><span class="o">());</span>
-<a name="rest_code_bf9ca6150e4640af8b403f9642eb83a2-8"></a>
-<a name="rest_code_bf9ca6150e4640af8b403f9642eb83a2-9"></a>    <span class="o">}</span>
-<a name="rest_code_bf9ca6150e4640af8b403f9642eb83a2-10"></a><span class="o">}</span>
+<pre class="code java"><a name="rest_code_72952573985d4dbdbce0fea84a25cf9a-1"></a><span class="kd">public</span> <span class="kd">class</span> <span class="nc">BSDBootLoader</span> <span class="kd">implements</span> <span class="n">IBootLoader</span><span class="o">{</span>
+<a name="rest_code_72952573985d4dbdbce0fea84a25cf9a-2"></a>    <span class="cm">/**</span>
+<a name="rest_code_72952573985d4dbdbce0fea84a25cf9a-3"></a><span class="cm">     * Boot up the System Image.</span>
+<a name="rest_code_72952573985d4dbdbce0fea84a25cf9a-4"></a><span class="cm">     */</span>
+<a name="rest_code_72952573985d4dbdbce0fea84a25cf9a-5"></a>    <span class="nd">@Override</span>
+<a name="rest_code_72952573985d4dbdbce0fea84a25cf9a-6"></a>    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">bootUp</span><span class="o">()</span> <span class="o">{</span>
+<a name="rest_code_72952573985d4dbdbce0fea84a25cf9a-7"></a>        <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"Booting: "</span> <span class="o">+</span> <span class="k">this</span><span class="o">.</span><span class="na">getClass</span><span class="o">().</span><span class="na">getSimpleName</span><span class="o">());</span>
+<a name="rest_code_72952573985d4dbdbce0fea84a25cf9a-8"></a>
+<a name="rest_code_72952573985d4dbdbce0fea84a25cf9a-9"></a>    <span class="o">}</span>
+<a name="rest_code_72952573985d4dbdbce0fea84a25cf9a-10"></a><span class="o">}</span>
 </pre>
 <p><a class="reference external" href="../listings/java/abstractfactory/BSDKernel.java.html">java/abstractfactory/BSDKernel.java</a>  <a class="reference external" href="../listings/java/abstractfactory/BSDKernel.java">(Source)</a></p>
-<pre class="code java"><a name="rest_code_1b678fce6718495698a3cfbd1c8b0a2c-1"></a><span class="kd">public</span> <span class="kd">class</span> <span class="nc">BSDKernel</span> <span class="kd">implements</span> <span class="n">IKernel</span> <span class="o">{</span>
-<a name="rest_code_1b678fce6718495698a3cfbd1c8b0a2c-2"></a>    <span class="cm">/**</span>
-<a name="rest_code_1b678fce6718495698a3cfbd1c8b0a2c-3"></a><span class="cm">     * Load the kernel on top of the system image.</span>
-<a name="rest_code_1b678fce6718495698a3cfbd1c8b0a2c-4"></a><span class="cm">     */</span>
-<a name="rest_code_1b678fce6718495698a3cfbd1c8b0a2c-5"></a>    <span class="nd">@Override</span>
-<a name="rest_code_1b678fce6718495698a3cfbd1c8b0a2c-6"></a>    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">loadKernel</span><span class="o">()</span> <span class="o">{</span>
-<a name="rest_code_1b678fce6718495698a3cfbd1c8b0a2c-7"></a>        <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"Loading: "</span> <span class="o">+</span> <span class="k">this</span><span class="o">.</span><span class="na">getClass</span><span class="o">().</span><span class="na">getSimpleName</span><span class="o">());</span>
-<a name="rest_code_1b678fce6718495698a3cfbd1c8b0a2c-8"></a>
-<a name="rest_code_1b678fce6718495698a3cfbd1c8b0a2c-9"></a>    <span class="o">}</span>
-<a name="rest_code_1b678fce6718495698a3cfbd1c8b0a2c-10"></a><span class="o">}</span>
+<pre class="code java"><a name="rest_code_c1e3dd6552e34e9da660ebe721f2dbe0-1"></a><span class="kd">public</span> <span class="kd">class</span> <span class="nc">BSDKernel</span> <span class="kd">implements</span> <span class="n">IKernel</span> <span class="o">{</span>
+<a name="rest_code_c1e3dd6552e34e9da660ebe721f2dbe0-2"></a>    <span class="cm">/**</span>
+<a name="rest_code_c1e3dd6552e34e9da660ebe721f2dbe0-3"></a><span class="cm">     * Load the kernel on top of the system image.</span>
+<a name="rest_code_c1e3dd6552e34e9da660ebe721f2dbe0-4"></a><span class="cm">     */</span>
+<a name="rest_code_c1e3dd6552e34e9da660ebe721f2dbe0-5"></a>    <span class="nd">@Override</span>
+<a name="rest_code_c1e3dd6552e34e9da660ebe721f2dbe0-6"></a>    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">loadKernel</span><span class="o">()</span> <span class="o">{</span>
+<a name="rest_code_c1e3dd6552e34e9da660ebe721f2dbe0-7"></a>        <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"Loading: "</span> <span class="o">+</span> <span class="k">this</span><span class="o">.</span><span class="na">getClass</span><span class="o">().</span><span class="na">getSimpleName</span><span class="o">());</span>
+<a name="rest_code_c1e3dd6552e34e9da660ebe721f2dbe0-8"></a>
+<a name="rest_code_c1e3dd6552e34e9da660ebe721f2dbe0-9"></a>    <span class="o">}</span>
+<a name="rest_code_c1e3dd6552e34e9da660ebe721f2dbe0-10"></a><span class="o">}</span>
 </pre>
 <p><a class="reference external" href="../listings/java/abstractfactory/Bash.java.html">java/abstractfactory/Bash.java</a>  <a class="reference external" href="../listings/java/abstractfactory/Bash.java">(Source)</a></p>
-<pre class="code java"><a name="rest_code_1e579d9802d24a7caa340d73ee0169ca-1"></a><span class="kd">public</span> <span class="kd">class</span> <span class="nc">Bash</span> <span class="kd">implements</span> <span class="n">IShell</span> <span class="o">{</span>
-<a name="rest_code_1e579d9802d24a7caa340d73ee0169ca-2"></a>
-<a name="rest_code_1e579d9802d24a7caa340d73ee0169ca-3"></a>    <span class="nd">@Override</span>
-<a name="rest_code_1e579d9802d24a7caa340d73ee0169ca-4"></a>    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">loadShell</span><span class="o">()</span> <span class="o">{</span>
-<a name="rest_code_1e579d9802d24a7caa340d73ee0169ca-5"></a>        <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"Loading: "</span> <span class="o">+</span> <span class="k">this</span><span class="o">.</span><span class="na">getClass</span><span class="o">().</span><span class="na">getSimpleName</span><span class="o">());</span>
-<a name="rest_code_1e579d9802d24a7caa340d73ee0169ca-6"></a>
-<a name="rest_code_1e579d9802d24a7caa340d73ee0169ca-7"></a>    <span class="o">}</span>
-<a name="rest_code_1e579d9802d24a7caa340d73ee0169ca-8"></a><span class="o">}</span>
+<pre class="code java"><a name="rest_code_06e037fb45cf4193880fa52848db13df-1"></a><span class="kd">public</span> <span class="kd">class</span> <span class="nc">Bash</span> <span class="kd">implements</span> <span class="n">IShell</span> <span class="o">{</span>
+<a name="rest_code_06e037fb45cf4193880fa52848db13df-2"></a>
+<a name="rest_code_06e037fb45cf4193880fa52848db13df-3"></a>    <span class="nd">@Override</span>
+<a name="rest_code_06e037fb45cf4193880fa52848db13df-4"></a>    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">loadShell</span><span class="o">()</span> <span class="o">{</span>
+<a name="rest_code_06e037fb45cf4193880fa52848db13df-5"></a>        <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"Loading: "</span> <span class="o">+</span> <span class="k">this</span><span class="o">.</span><span class="na">getClass</span><span class="o">().</span><span class="na">getSimpleName</span><span class="o">());</span>
+<a name="rest_code_06e037fb45cf4193880fa52848db13df-6"></a>
+<a name="rest_code_06e037fb45cf4193880fa52848db13df-7"></a>    <span class="o">}</span>
+<a name="rest_code_06e037fb45cf4193880fa52848db13df-8"></a><span class="o">}</span>
 </pre>
 <p><a class="reference external" href="../listings/java/abstractfactory/CShell.java.html">java/abstractfactory/CShell.java</a>  <a class="reference external" href="../listings/java/abstractfactory/CShell.java">(Source)</a></p>
-<pre class="code java"><a name="rest_code_360f5cff257f423ba978839b633034f1-1"></a><span class="kd">public</span> <span class="kd">class</span> <span class="nc">CShell</span> <span class="kd">implements</span> <span class="n">IShell</span> <span class="o">{</span>
-<a name="rest_code_360f5cff257f423ba978839b633034f1-2"></a>    <span class="nd">@Override</span>
-<a name="rest_code_360f5cff257f423ba978839b633034f1-3"></a>    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">loadShell</span><span class="o">()</span> <span class="o">{</span>
-<a name="rest_code_360f5cff257f423ba978839b633034f1-4"></a>        <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"Loading: "</span> <span class="o">+</span> <span class="k">this</span><span class="o">.</span><span class="na">getClass</span><span class="o">().</span><span class="na">getSimpleName</span><span class="o">());</span>
-<a name="rest_code_360f5cff257f423ba978839b633034f1-5"></a>
-<a name="rest_code_360f5cff257f423ba978839b633034f1-6"></a>    <span class="o">}</span>
-<a name="rest_code_360f5cff257f423ba978839b633034f1-7"></a><span class="o">}</span>
+<pre class="code java"><a name="rest_code_e49955b2b9f74e32b9dd74785b2d906f-1"></a><span class="kd">public</span> <span class="kd">class</span> <span class="nc">CShell</span> <span class="kd">implements</span> <span class="n">IShell</span> <span class="o">{</span>
+<a name="rest_code_e49955b2b9f74e32b9dd74785b2d906f-2"></a>    <span class="nd">@Override</span>
+<a name="rest_code_e49955b2b9f74e32b9dd74785b2d906f-3"></a>    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">loadShell</span><span class="o">()</span> <span class="o">{</span>
+<a name="rest_code_e49955b2b9f74e32b9dd74785b2d906f-4"></a>        <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"Loading: "</span> <span class="o">+</span> <span class="k">this</span><span class="o">.</span><span class="na">getClass</span><span class="o">().</span><span class="na">getSimpleName</span><span class="o">());</span>
+<a name="rest_code_e49955b2b9f74e32b9dd74785b2d906f-5"></a>
+<a name="rest_code_e49955b2b9f74e32b9dd74785b2d906f-6"></a>    <span class="o">}</span>
+<a name="rest_code_e49955b2b9f74e32b9dd74785b2d906f-7"></a><span class="o">}</span>
 </pre>
 <p><a class="reference external" href="../listings/java/abstractfactory/GNUApplications.java.html">java/abstractfactory/GNUApplications.java</a>  <a class="reference external" href="../listings/java/abstractfactory/GNUApplications.java">(Source)</a></p>
-<pre class="code java"><a name="rest_code_7a8b1c08b33540c5b3bd542c6e30efe3-1"></a><span class="kd">public</span> <span class="kd">class</span> <span class="nc">GNUApplications</span> <span class="kd">implements</span> <span class="n">IBaseApplications</span><span class="o">{</span>
-<a name="rest_code_7a8b1c08b33540c5b3bd542c6e30efe3-2"></a>    <span class="nd">@Override</span>
-<a name="rest_code_7a8b1c08b33540c5b3bd542c6e30efe3-3"></a>    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">installApplications</span><span class="o">()</span> <span class="o">{</span>
-<a name="rest_code_7a8b1c08b33540c5b3bd542c6e30efe3-4"></a>        <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"Installing: "</span> <span class="o">+</span> <span class="k">this</span><span class="o">.</span><span class="na">getClass</span><span class="o">().</span><span class="na">getSimpleName</span><span class="o">());</span>
-<a name="rest_code_7a8b1c08b33540c5b3bd542c6e30efe3-5"></a>    <span class="o">}</span>
-<a name="rest_code_7a8b1c08b33540c5b3bd542c6e30efe3-6"></a><span class="o">}</span>
+<pre class="code java"><a name="rest_code_d4f0e4285b5c43fdbf1bfcf8f790496d-1"></a><span class="kd">public</span> <span class="kd">class</span> <span class="nc">GNUApplications</span> <span class="kd">implements</span> <span class="n">IBaseApplications</span><span class="o">{</span>
+<a name="rest_code_d4f0e4285b5c43fdbf1bfcf8f790496d-2"></a>    <span class="nd">@Override</span>
+<a name="rest_code_d4f0e4285b5c43fdbf1bfcf8f790496d-3"></a>    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">installApplications</span><span class="o">()</span> <span class="o">{</span>
+<a name="rest_code_d4f0e4285b5c43fdbf1bfcf8f790496d-4"></a>        <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"Installing: "</span> <span class="o">+</span> <span class="k">this</span><span class="o">.</span><span class="na">getClass</span><span class="o">().</span><span class="na">getSimpleName</span><span class="o">());</span>
+<a name="rest_code_d4f0e4285b5c43fdbf1bfcf8f790496d-5"></a>    <span class="o">}</span>
+<a name="rest_code_d4f0e4285b5c43fdbf1bfcf8f790496d-6"></a><span class="o">}</span>
 </pre>
 <p><a class="reference external" href="../listings/java/abstractfactory/Gnome.java.html">java/abstractfactory/Gnome.java</a>  <a class="reference external" href="../listings/java/abstractfactory/Gnome.java">(Source)</a></p>
-<pre class="code java"><a name="rest_code_8f90718d9c3d4014b539b2aa88e41ee8-1"></a><span class="kd">public</span> <span class="kd">class</span> <span class="nc">Gnome</span> <span class="kd">implements</span> <span class="n">IWindowManager</span> <span class="o">{</span>
-<a name="rest_code_8f90718d9c3d4014b539b2aa88e41ee8-2"></a>    <span class="nd">@Override</span>
-<a name="rest_code_8f90718d9c3d4014b539b2aa88e41ee8-3"></a>    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">installWindowManager</span><span class="o">()</span> <span class="o">{</span>
-<a name="rest_code_8f90718d9c3d4014b539b2aa88e41ee8-4"></a>        <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"Installing: "</span> <span class="o">+</span> <span class="k">this</span><span class="o">.</span><span class="na">getClass</span><span class="o">().</span><span class="na">getSimpleName</span><span class="o">());</span>
-<a name="rest_code_8f90718d9c3d4014b539b2aa88e41ee8-5"></a>
-<a name="rest_code_8f90718d9c3d4014b539b2aa88e41ee8-6"></a>    <span class="o">}</span>
-<a name="rest_code_8f90718d9c3d4014b539b2aa88e41ee8-7"></a><span class="o">}</span>
+<pre class="code java"><a name="rest_code_653eb77bba434425a0720f4f5baf0c30-1"></a><span class="kd">public</span> <span class="kd">class</span> <span class="nc">Gnome</span> <span class="kd">implements</span> <span class="n">IWindowManager</span> <span class="o">{</span>
+<a name="rest_code_653eb77bba434425a0720f4f5baf0c30-2"></a>    <span class="nd">@Override</span>
+<a name="rest_code_653eb77bba434425a0720f4f5baf0c30-3"></a>    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">installWindowManager</span><span class="o">()</span> <span class="o">{</span>
+<a name="rest_code_653eb77bba434425a0720f4f5baf0c30-4"></a>        <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"Installing: "</span> <span class="o">+</span> <span class="k">this</span><span class="o">.</span><span class="na">getClass</span><span class="o">().</span><span class="na">getSimpleName</span><span class="o">());</span>
+<a name="rest_code_653eb77bba434425a0720f4f5baf0c30-5"></a>
+<a name="rest_code_653eb77bba434425a0720f4f5baf0c30-6"></a>    <span class="o">}</span>
+<a name="rest_code_653eb77bba434425a0720f4f5baf0c30-7"></a><span class="o">}</span>
 </pre>
 <p><a class="reference external" href="../listings/java/abstractfactory/KDE.java.html">java/abstractfactory/KDE.java</a>  <a class="reference external" href="../listings/java/abstractfactory/KDE.java">(Source)</a></p>
-<pre class="code java"><a name="rest_code_0793c7ba678548cea3fd2844fdd509c4-1"></a><span class="kd">public</span> <span class="kd">class</span> <span class="nc">KDE</span> <span class="kd">implements</span> <span class="n">IWindowManager</span> <span class="o">{</span>
-<a name="rest_code_0793c7ba678548cea3fd2844fdd509c4-2"></a>    <span class="nd">@Override</span>
-<a name="rest_code_0793c7ba678548cea3fd2844fdd509c4-3"></a>    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">installWindowManager</span><span class="o">()</span> <span class="o">{</span>
-<a name="rest_code_0793c7ba678548cea3fd2844fdd509c4-4"></a>        <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"Installing: "</span> <span class="o">+</span> <span class="k">this</span><span class="o">.</span><span class="na">getClass</span><span class="o">().</span><span class="na">getSimpleName</span><span class="o">());</span>
-<a name="rest_code_0793c7ba678548cea3fd2844fdd509c4-5"></a>    <span class="o">}</span>
-<a name="rest_code_0793c7ba678548cea3fd2844fdd509c4-6"></a><span class="o">}</span>
+<pre class="code java"><a name="rest_code_269c49f9848c42829a14cd194bba801b-1"></a><span class="kd">public</span> <span class="kd">class</span> <span class="nc">KDE</span> <span class="kd">implements</span> <span class="n">IWindowManager</span> <span class="o">{</span>
+<a name="rest_code_269c49f9848c42829a14cd194bba801b-2"></a>    <span class="nd">@Override</span>
+<a name="rest_code_269c49f9848c42829a14cd194bba801b-3"></a>    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">installWindowManager</span><span class="o">()</span> <span class="o">{</span>
+<a name="rest_code_269c49f9848c42829a14cd194bba801b-4"></a>        <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"Installing: "</span> <span class="o">+</span> <span class="k">this</span><span class="o">.</span><span class="na">getClass</span><span class="o">().</span><span class="na">getSimpleName</span><span class="o">());</span>
+<a name="rest_code_269c49f9848c42829a14cd194bba801b-5"></a>    <span class="o">}</span>
+<a name="rest_code_269c49f9848c42829a14cd194bba801b-6"></a><span class="o">}</span>
 </pre>
 <p><a class="reference external" href="../listings/java/abstractfactory/Linux.java.html">java/abstractfactory/Linux.java</a>  <a class="reference external" href="../listings/java/abstractfactory/Linux.java">(Source)</a></p>
-<pre class="code java"><a name="rest_code_1d1eaeb638c94ca7bc4e3c3fcc749dbf-1"></a><span class="kd">public</span> <span class="kd">class</span> <span class="nc">Linux</span> <span class="kd">implements</span> <span class="n">IKernel</span><span class="o">{</span>
-<a name="rest_code_1d1eaeb638c94ca7bc4e3c3fcc749dbf-2"></a>    <span class="cm">/**</span>
-<a name="rest_code_1d1eaeb638c94ca7bc4e3c3fcc749dbf-3"></a><span class="cm">     * Load the kernel on top of the system image.</span>
-<a name="rest_code_1d1eaeb638c94ca7bc4e3c3fcc749dbf-4"></a><span class="cm">     */</span>
-<a name="rest_code_1d1eaeb638c94ca7bc4e3c3fcc749dbf-5"></a>    <span class="nd">@Override</span>
-<a name="rest_code_1d1eaeb638c94ca7bc4e3c3fcc749dbf-6"></a>    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">loadKernel</span><span class="o">()</span> <span class="o">{</span>
-<a name="rest_code_1d1eaeb638c94ca7bc4e3c3fcc749dbf-7"></a>        <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"Loading: "</span> <span class="o">+</span> <span class="k">this</span><span class="o">.</span><span class="na">getClass</span><span class="o">().</span><span class="na">getSimpleName</span><span class="o">());</span>
-<a name="rest_code_1d1eaeb638c94ca7bc4e3c3fcc749dbf-8"></a>
-<a name="rest_code_1d1eaeb638c94ca7bc4e3c3fcc749dbf-9"></a>    <span class="o">}</span>
-<a name="rest_code_1d1eaeb638c94ca7bc4e3c3fcc749dbf-10"></a><span class="o">}</span>
+<pre class="code java"><a name="rest_code_8785643ace194021993b339b7cdabe99-1"></a><span class="kd">public</span> <span class="kd">class</span> <span class="nc">Linux</span> <span class="kd">implements</span> <span class="n">IKernel</span><span class="o">{</span>
+<a name="rest_code_8785643ace194021993b339b7cdabe99-2"></a>    <span class="cm">/**</span>
+<a name="rest_code_8785643ace194021993b339b7cdabe99-3"></a><span class="cm">     * Load the kernel on top of the system image.</span>
+<a name="rest_code_8785643ace194021993b339b7cdabe99-4"></a><span class="cm">     */</span>
+<a name="rest_code_8785643ace194021993b339b7cdabe99-5"></a>    <span class="nd">@Override</span>
+<a name="rest_code_8785643ace194021993b339b7cdabe99-6"></a>    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">loadKernel</span><span class="o">()</span> <span class="o">{</span>
+<a name="rest_code_8785643ace194021993b339b7cdabe99-7"></a>        <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"Loading: "</span> <span class="o">+</span> <span class="k">this</span><span class="o">.</span><span class="na">getClass</span><span class="o">().</span><span class="na">getSimpleName</span><span class="o">());</span>
+<a name="rest_code_8785643ace194021993b339b7cdabe99-8"></a>
+<a name="rest_code_8785643ace194021993b339b7cdabe99-9"></a>    <span class="o">}</span>
+<a name="rest_code_8785643ace194021993b339b7cdabe99-10"></a><span class="o">}</span>
 </pre>
 <p><a class="reference external" href="../listings/java/abstractfactory/LinuxBootLoader.java.html">java/abstractfactory/LinuxBootLoader.java</a>  <a class="reference external" href="../listings/java/abstractfactory/LinuxBootLoader.java">(Source)</a></p>
-<pre class="code java"><a name="rest_code_c60987e633b043f38b9586cc51c679ba-1"></a><span class="kd">public</span> <span class="kd">class</span> <span class="nc">LinuxBootLoader</span> <span class="kd">implements</span> <span class="n">IBootLoader</span> <span class="o">{</span>
-<a name="rest_code_c60987e633b043f38b9586cc51c679ba-2"></a>    <span class="nd">@Override</span>
-<a name="rest_code_c60987e633b043f38b9586cc51c679ba-3"></a>    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">bootUp</span><span class="o">()</span> <span class="o">{</span>
-<a name="rest_code_c60987e633b043f38b9586cc51c679ba-4"></a>        <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"Booting: "</span> <span class="o">+</span> <span class="k">this</span><span class="o">.</span><span class="na">getClass</span><span class="o">().</span><span class="na">getSimpleName</span><span class="o">());</span>
-<a name="rest_code_c60987e633b043f38b9586cc51c679ba-5"></a>    <span class="o">}</span>
-<a name="rest_code_c60987e633b043f38b9586cc51c679ba-6"></a><span class="o">}</span>
+<pre class="code java"><a name="rest_code_2e2f2acf0a4a48fd941f844f07594aa2-1"></a><span class="kd">public</span> <span class="kd">class</span> <span class="nc">LinuxBootLoader</span> <span class="kd">implements</span> <span class="n">IBootLoader</span> <span class="o">{</span>
+<a name="rest_code_2e2f2acf0a4a48fd941f844f07594aa2-2"></a>    <span class="nd">@Override</span>
+<a name="rest_code_2e2f2acf0a4a48fd941f844f07594aa2-3"></a>    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">bootUp</span><span class="o">()</span> <span class="o">{</span>
+<a name="rest_code_2e2f2acf0a4a48fd941f844f07594aa2-4"></a>        <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"Booting: "</span> <span class="o">+</span> <span class="k">this</span><span class="o">.</span><span class="na">getClass</span><span class="o">().</span><span class="na">getSimpleName</span><span class="o">());</span>
+<a name="rest_code_2e2f2acf0a4a48fd941f844f07594aa2-5"></a>    <span class="o">}</span>
+<a name="rest_code_2e2f2acf0a4a48fd941f844f07594aa2-6"></a><span class="o">}</span>
 </pre>
 <p><a class="reference external" href="../listings/java/abstractfactory/ProprietaryApps.java.html">java/abstractfactory/ProprietaryApps.java</a>  <a class="reference external" href="../listings/java/abstractfactory/ProprietaryApps.java">(Source)</a></p>
-<pre class="code java"><a name="rest_code_706c39e461784651936036cbfbec0dd9-1"></a><span class="kd">public</span> <span class="kd">class</span> <span class="nc">ProprietaryApps</span> <span class="kd">implements</span> <span class="n">IBaseApplications</span><span class="o">{</span>
-<a name="rest_code_706c39e461784651936036cbfbec0dd9-2"></a>    <span class="nd">@Override</span>
-<a name="rest_code_706c39e461784651936036cbfbec0dd9-3"></a>    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">installApplications</span><span class="o">()</span> <span class="o">{</span>
-<a name="rest_code_706c39e461784651936036cbfbec0dd9-4"></a>        <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"Installing: "</span> <span class="o">+</span> <span class="k">this</span><span class="o">.</span><span class="na">getClass</span><span class="o">().</span><span class="na">getSimpleName</span><span class="o">());</span>
-<a name="rest_code_706c39e461784651936036cbfbec0dd9-5"></a>    <span class="o">}</span>
-<a name="rest_code_706c39e461784651936036cbfbec0dd9-6"></a><span class="o">}</span>
+<pre class="code java"><a name="rest_code_0bbd19b993f942f8b19f486dc90988df-1"></a><span class="kd">public</span> <span class="kd">class</span> <span class="nc">ProprietaryApps</span> <span class="kd">implements</span> <span class="n">IBaseApplications</span><span class="o">{</span>
+<a name="rest_code_0bbd19b993f942f8b19f486dc90988df-2"></a>    <span class="nd">@Override</span>
+<a name="rest_code_0bbd19b993f942f8b19f486dc90988df-3"></a>    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">installApplications</span><span class="o">()</span> <span class="o">{</span>
+<a name="rest_code_0bbd19b993f942f8b19f486dc90988df-4"></a>        <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"Installing: "</span> <span class="o">+</span> <span class="k">this</span><span class="o">.</span><span class="na">getClass</span><span class="o">().</span><span class="na">getSimpleName</span><span class="o">());</span>
+<a name="rest_code_0bbd19b993f942f8b19f486dc90988df-5"></a>    <span class="o">}</span>
+<a name="rest_code_0bbd19b993f942f8b19f486dc90988df-6"></a><span class="o">}</span>
 </pre>
 <p><a class="reference external" href="../listings/java/abstractfactory/SystemVUnix.java.html">java/abstractfactory/SystemVUnix.java</a>  <a class="reference external" href="../listings/java/abstractfactory/SystemVUnix.java">(Source)</a></p>
-<pre class="code java"><a name="rest_code_f34dbba6279a4ceba58ba1855f87e877-1"></a><span class="kd">public</span> <span class="kd">class</span> <span class="nc">SystemVUnix</span> <span class="kd">implements</span> <span class="n">IBaseApplications</span><span class="o">{</span>
-<a name="rest_code_f34dbba6279a4ceba58ba1855f87e877-2"></a>    <span class="nd">@Override</span>
-<a name="rest_code_f34dbba6279a4ceba58ba1855f87e877-3"></a>    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">installApplications</span><span class="o">()</span> <span class="o">{</span>
-<a name="rest_code_f34dbba6279a4ceba58ba1855f87e877-4"></a>        <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"Installing: "</span> <span class="o">+</span> <span class="k">this</span><span class="o">.</span><span class="na">getClass</span><span class="o">().</span><span class="na">getSimpleName</span><span class="o">());</span>
-<a name="rest_code_f34dbba6279a4ceba58ba1855f87e877-5"></a>    <span class="o">}</span>
-<a name="rest_code_f34dbba6279a4ceba58ba1855f87e877-6"></a><span class="o">}</span>
+<pre class="code java"><a name="rest_code_bae8e84801244b18b0d1ba3d0f4cb1e5-1"></a><span class="kd">public</span> <span class="kd">class</span> <span class="nc">SystemVUnix</span> <span class="kd">implements</span> <span class="n">IBaseApplications</span><span class="o">{</span>
+<a name="rest_code_bae8e84801244b18b0d1ba3d0f4cb1e5-2"></a>    <span class="nd">@Override</span>
+<a name="rest_code_bae8e84801244b18b0d1ba3d0f4cb1e5-3"></a>    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">installApplications</span><span class="o">()</span> <span class="o">{</span>
+<a name="rest_code_bae8e84801244b18b0d1ba3d0f4cb1e5-4"></a>        <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"Installing: "</span> <span class="o">+</span> <span class="k">this</span><span class="o">.</span><span class="na">getClass</span><span class="o">().</span><span class="na">getSimpleName</span><span class="o">());</span>
+<a name="rest_code_bae8e84801244b18b0d1ba3d0f4cb1e5-5"></a>    <span class="o">}</span>
+<a name="rest_code_bae8e84801244b18b0d1ba3d0f4cb1e5-6"></a><span class="o">}</span>
 </pre>
 <p><a class="reference external" href="../listings/java/abstractfactory/WayLand.java.html">java/abstractfactory/WayLand.java</a>  <a class="reference external" href="../listings/java/abstractfactory/WayLand.java">(Source)</a></p>
-<pre class="code java"><a name="rest_code_4cfc95bfe702465e98b4f6857c313149-1"></a><span class="kd">public</span> <span class="kd">class</span> <span class="nc">WayLand</span> <span class="kd">implements</span> <span class="n">IDisplayManager</span><span class="o">{</span>
-<a name="rest_code_4cfc95bfe702465e98b4f6857c313149-2"></a>
-<a name="rest_code_4cfc95bfe702465e98b4f6857c313149-3"></a>    <span class="nd">@Override</span>
-<a name="rest_code_4cfc95bfe702465e98b4f6857c313149-4"></a>    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">installDisplayManager</span><span class="o">()</span> <span class="o">{</span>
-<a name="rest_code_4cfc95bfe702465e98b4f6857c313149-5"></a>        <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"Installing: "</span> <span class="o">+</span> <span class="k">this</span><span class="o">.</span><span class="na">getClass</span><span class="o">().</span><span class="na">getSimpleName</span><span class="o">());</span>
-<a name="rest_code_4cfc95bfe702465e98b4f6857c313149-6"></a>    <span class="o">}</span>
-<a name="rest_code_4cfc95bfe702465e98b4f6857c313149-7"></a>
-<a name="rest_code_4cfc95bfe702465e98b4f6857c313149-8"></a><span class="o">}</span>
+<pre class="code java"><a name="rest_code_814b494dd9f04f45828b6a7eb33c5b43-1"></a><span class="kd">public</span> <span class="kd">class</span> <span class="nc">WayLand</span> <span class="kd">implements</span> <span class="n">IDisplayManager</span><span class="o">{</span>
+<a name="rest_code_814b494dd9f04f45828b6a7eb33c5b43-2"></a>
+<a name="rest_code_814b494dd9f04f45828b6a7eb33c5b43-3"></a>    <span class="nd">@Override</span>
+<a name="rest_code_814b494dd9f04f45828b6a7eb33c5b43-4"></a>    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">installDisplayManager</span><span class="o">()</span> <span class="o">{</span>
+<a name="rest_code_814b494dd9f04f45828b6a7eb33c5b43-5"></a>        <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"Installing: "</span> <span class="o">+</span> <span class="k">this</span><span class="o">.</span><span class="na">getClass</span><span class="o">().</span><span class="na">getSimpleName</span><span class="o">());</span>
+<a name="rest_code_814b494dd9f04f45828b6a7eb33c5b43-6"></a>    <span class="o">}</span>
+<a name="rest_code_814b494dd9f04f45828b6a7eb33c5b43-7"></a>
+<a name="rest_code_814b494dd9f04f45828b6a7eb33c5b43-8"></a><span class="o">}</span>
 </pre>
 <p><a class="reference external" href="../listings/java/abstractfactory/X11.java.html">java/abstractfactory/X11.java</a>  <a class="reference external" href="../listings/java/abstractfactory/X11.java">(Source)</a></p>
-<pre class="code java"><a name="rest_code_31685f3aa9b04cfea31c9c2c83dd820f-1"></a><span class="kd">public</span> <span class="kd">class</span> <span class="nc">X11</span> <span class="kd">implements</span> <span class="n">IDisplayManager</span><span class="o">{</span>
-<a name="rest_code_31685f3aa9b04cfea31c9c2c83dd820f-2"></a>    <span class="nd">@Override</span>
-<a name="rest_code_31685f3aa9b04cfea31c9c2c83dd820f-3"></a>    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">installDisplayManager</span><span class="o">()</span> <span class="o">{</span>
-<a name="rest_code_31685f3aa9b04cfea31c9c2c83dd820f-4"></a>        <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"Installing: "</span> <span class="o">+</span> <span class="k">this</span><span class="o">.</span><span class="na">getClass</span><span class="o">().</span><span class="na">getSimpleName</span><span class="o">());</span>
-<a name="rest_code_31685f3aa9b04cfea31c9c2c83dd820f-5"></a>    <span class="o">}</span>
-<a name="rest_code_31685f3aa9b04cfea31c9c2c83dd820f-6"></a><span class="o">}</span>
+<pre class="code java"><a name="rest_code_ae586617b99b49ff8c04aeaccb80e9b1-1"></a><span class="kd">public</span> <span class="kd">class</span> <span class="nc">X11</span> <span class="kd">implements</span> <span class="n">IDisplayManager</span><span class="o">{</span>
+<a name="rest_code_ae586617b99b49ff8c04aeaccb80e9b1-2"></a>    <span class="nd">@Override</span>
+<a name="rest_code_ae586617b99b49ff8c04aeaccb80e9b1-3"></a>    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">installDisplayManager</span><span class="o">()</span> <span class="o">{</span>
+<a name="rest_code_ae586617b99b49ff8c04aeaccb80e9b1-4"></a>        <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"Installing: "</span> <span class="o">+</span> <span class="k">this</span><span class="o">.</span><span class="na">getClass</span><span class="o">().</span><span class="na">getSimpleName</span><span class="o">());</span>
+<a name="rest_code_ae586617b99b49ff8c04aeaccb80e9b1-5"></a>    <span class="o">}</span>
+<a name="rest_code_ae586617b99b49ff8c04aeaccb80e9b1-6"></a><span class="o">}</span>
 </pre>
 </div>
 <div class="section" id="factories">
@@ -393,97 +393,97 @@ concrete products like</p>
 <li>UbuntuFactory</li>
 </ul>
 <p><a class="reference external" href="../listings/java/abstractfactory/BSDFactory.java.html">java/abstractfactory/BSDFactory.java</a>  <a class="reference external" href="../listings/java/abstractfactory/BSDFactory.java">(Source)</a></p>
-<pre class="code java"><a name="rest_code_b1489e5ec209442f830d32fe8afb3611-1"></a><span class="kd">public</span> <span class="kd">class</span> <span class="nc">BSDFactory</span> <span class="kd">implements</span> <span class="n">IUnixFactory</span> <span class="o">{</span>
-<a name="rest_code_b1489e5ec209442f830d32fe8afb3611-2"></a>    <span class="nd">@Override</span>
-<a name="rest_code_b1489e5ec209442f830d32fe8afb3611-3"></a>    <span class="kd">public</span> <span class="n">IBootLoader</span> <span class="nf">installBootLoader</span><span class="o">()</span> <span class="o">{</span>
-<a name="rest_code_b1489e5ec209442f830d32fe8afb3611-4"></a>        <span class="k">return</span> <span class="k">new</span> <span class="n">BSDBootLoader</span><span class="o">();</span>
-<a name="rest_code_b1489e5ec209442f830d32fe8afb3611-5"></a>    <span class="o">}</span>
-<a name="rest_code_b1489e5ec209442f830d32fe8afb3611-6"></a>
-<a name="rest_code_b1489e5ec209442f830d32fe8afb3611-7"></a>    <span class="nd">@Override</span>
-<a name="rest_code_b1489e5ec209442f830d32fe8afb3611-8"></a>    <span class="kd">public</span> <span class="n">IKernel</span> <span class="nf">installKernel</span><span class="o">()</span> <span class="o">{</span>
-<a name="rest_code_b1489e5ec209442f830d32fe8afb3611-9"></a>        <span class="k">return</span> <span class="k">new</span> <span class="n">BSDKernel</span><span class="o">();</span>
-<a name="rest_code_b1489e5ec209442f830d32fe8afb3611-10"></a>    <span class="o">}</span>
-<a name="rest_code_b1489e5ec209442f830d32fe8afb3611-11"></a>
-<a name="rest_code_b1489e5ec209442f830d32fe8afb3611-12"></a>    <span class="nd">@Override</span>
-<a name="rest_code_b1489e5ec209442f830d32fe8afb3611-13"></a>    <span class="kd">public</span> <span class="n">IShell</span> <span class="nf">installShell</span><span class="o">()</span> <span class="o">{</span>
-<a name="rest_code_b1489e5ec209442f830d32fe8afb3611-14"></a>        <span class="k">return</span> <span class="k">new</span> <span class="n">CShell</span><span class="o">();</span>
-<a name="rest_code_b1489e5ec209442f830d32fe8afb3611-15"></a>    <span class="o">}</span>
-<a name="rest_code_b1489e5ec209442f830d32fe8afb3611-16"></a>
-<a name="rest_code_b1489e5ec209442f830d32fe8afb3611-17"></a>    <span class="nd">@Override</span>
-<a name="rest_code_b1489e5ec209442f830d32fe8afb3611-18"></a>    <span class="kd">public</span> <span class="n">IDisplayManager</span> <span class="nf">installDisplayManager</span><span class="o">()</span> <span class="o">{</span>
-<a name="rest_code_b1489e5ec209442f830d32fe8afb3611-19"></a>        <span class="k">return</span> <span class="k">new</span> <span class="n">X11</span><span class="o">();</span>
-<a name="rest_code_b1489e5ec209442f830d32fe8afb3611-20"></a>    <span class="o">}</span>
-<a name="rest_code_b1489e5ec209442f830d32fe8afb3611-21"></a>
-<a name="rest_code_b1489e5ec209442f830d32fe8afb3611-22"></a>    <span class="nd">@Override</span>
-<a name="rest_code_b1489e5ec209442f830d32fe8afb3611-23"></a>    <span class="kd">public</span> <span class="n">IWindowManager</span> <span class="nf">installWindowManager</span><span class="o">()</span> <span class="o">{</span>
-<a name="rest_code_b1489e5ec209442f830d32fe8afb3611-24"></a>        <span class="k">return</span> <span class="k">new</span> <span class="n">KDE</span><span class="o">();</span>
-<a name="rest_code_b1489e5ec209442f830d32fe8afb3611-25"></a>    <span class="o">}</span>
-<a name="rest_code_b1489e5ec209442f830d32fe8afb3611-26"></a>
-<a name="rest_code_b1489e5ec209442f830d32fe8afb3611-27"></a>    <span class="nd">@Override</span>
-<a name="rest_code_b1489e5ec209442f830d32fe8afb3611-28"></a>    <span class="kd">public</span> <span class="n">IBaseApplications</span> <span class="nf">installApps</span><span class="o">()</span> <span class="o">{</span>
-<a name="rest_code_b1489e5ec209442f830d32fe8afb3611-29"></a>        <span class="k">return</span> <span class="k">new</span> <span class="n">SystemVUnix</span><span class="o">();</span>
-<a name="rest_code_b1489e5ec209442f830d32fe8afb3611-30"></a>    <span class="o">}</span>
-<a name="rest_code_b1489e5ec209442f830d32fe8afb3611-31"></a><span class="o">}</span>
+<pre class="code java"><a name="rest_code_4055254e54e747119a6758c29a50f895-1"></a><span class="kd">public</span> <span class="kd">class</span> <span class="nc">BSDFactory</span> <span class="kd">implements</span> <span class="n">IUnixFactory</span> <span class="o">{</span>
+<a name="rest_code_4055254e54e747119a6758c29a50f895-2"></a>    <span class="nd">@Override</span>
+<a name="rest_code_4055254e54e747119a6758c29a50f895-3"></a>    <span class="kd">public</span> <span class="n">IBootLoader</span> <span class="nf">installBootLoader</span><span class="o">()</span> <span class="o">{</span>
+<a name="rest_code_4055254e54e747119a6758c29a50f895-4"></a>        <span class="k">return</span> <span class="k">new</span> <span class="n">BSDBootLoader</span><span class="o">();</span>
+<a name="rest_code_4055254e54e747119a6758c29a50f895-5"></a>    <span class="o">}</span>
+<a name="rest_code_4055254e54e747119a6758c29a50f895-6"></a>
+<a name="rest_code_4055254e54e747119a6758c29a50f895-7"></a>    <span class="nd">@Override</span>
+<a name="rest_code_4055254e54e747119a6758c29a50f895-8"></a>    <span class="kd">public</span> <span class="n">IKernel</span> <span class="nf">installKernel</span><span class="o">()</span> <span class="o">{</span>
+<a name="rest_code_4055254e54e747119a6758c29a50f895-9"></a>        <span class="k">return</span> <span class="k">new</span> <span class="n">BSDKernel</span><span class="o">();</span>
+<a name="rest_code_4055254e54e747119a6758c29a50f895-10"></a>    <span class="o">}</span>
+<a name="rest_code_4055254e54e747119a6758c29a50f895-11"></a>
+<a name="rest_code_4055254e54e747119a6758c29a50f895-12"></a>    <span class="nd">@Override</span>
+<a name="rest_code_4055254e54e747119a6758c29a50f895-13"></a>    <span class="kd">public</span> <span class="n">IShell</span> <span class="nf">installShell</span><span class="o">()</span> <span class="o">{</span>
+<a name="rest_code_4055254e54e747119a6758c29a50f895-14"></a>        <span class="k">return</span> <span class="k">new</span> <span class="n">CShell</span><span class="o">();</span>
+<a name="rest_code_4055254e54e747119a6758c29a50f895-15"></a>    <span class="o">}</span>
+<a name="rest_code_4055254e54e747119a6758c29a50f895-16"></a>
+<a name="rest_code_4055254e54e747119a6758c29a50f895-17"></a>    <span class="nd">@Override</span>
+<a name="rest_code_4055254e54e747119a6758c29a50f895-18"></a>    <span class="kd">public</span> <span class="n">IDisplayManager</span> <span class="nf">installDisplayManager</span><span class="o">()</span> <span class="o">{</span>
+<a name="rest_code_4055254e54e747119a6758c29a50f895-19"></a>        <span class="k">return</span> <span class="k">new</span> <span class="n">X11</span><span class="o">();</span>
+<a name="rest_code_4055254e54e747119a6758c29a50f895-20"></a>    <span class="o">}</span>
+<a name="rest_code_4055254e54e747119a6758c29a50f895-21"></a>
+<a name="rest_code_4055254e54e747119a6758c29a50f895-22"></a>    <span class="nd">@Override</span>
+<a name="rest_code_4055254e54e747119a6758c29a50f895-23"></a>    <span class="kd">public</span> <span class="n">IWindowManager</span> <span class="nf">installWindowManager</span><span class="o">()</span> <span class="o">{</span>
+<a name="rest_code_4055254e54e747119a6758c29a50f895-24"></a>        <span class="k">return</span> <span class="k">new</span> <span class="n">KDE</span><span class="o">();</span>
+<a name="rest_code_4055254e54e747119a6758c29a50f895-25"></a>    <span class="o">}</span>
+<a name="rest_code_4055254e54e747119a6758c29a50f895-26"></a>
+<a name="rest_code_4055254e54e747119a6758c29a50f895-27"></a>    <span class="nd">@Override</span>
+<a name="rest_code_4055254e54e747119a6758c29a50f895-28"></a>    <span class="kd">public</span> <span class="n">IBaseApplications</span> <span class="nf">installApps</span><span class="o">()</span> <span class="o">{</span>
+<a name="rest_code_4055254e54e747119a6758c29a50f895-29"></a>        <span class="k">return</span> <span class="k">new</span> <span class="n">SystemVUnix</span><span class="o">();</span>
+<a name="rest_code_4055254e54e747119a6758c29a50f895-30"></a>    <span class="o">}</span>
+<a name="rest_code_4055254e54e747119a6758c29a50f895-31"></a><span class="o">}</span>
 </pre>
 <p><a class="reference external" href="../listings/java/abstractfactory/LinuxFactory.java.html">java/abstractfactory/LinuxFactory.java</a>  <a class="reference external" href="../listings/java/abstractfactory/LinuxFactory.java">(Source)</a></p>
-<pre class="code java"><a name="rest_code_e0633c9c7cd644ea849b5194d53b94b5-1"></a><span class="kd">public</span> <span class="kd">class</span> <span class="nc">LinuxFactory</span> <span class="kd">implements</span> <span class="n">IUnixFactory</span> <span class="o">{</span>
-<a name="rest_code_e0633c9c7cd644ea849b5194d53b94b5-2"></a>    <span class="nd">@Override</span>
-<a name="rest_code_e0633c9c7cd644ea849b5194d53b94b5-3"></a>    <span class="kd">public</span> <span class="n">IBootLoader</span> <span class="nf">installBootLoader</span><span class="o">()</span> <span class="o">{</span>
-<a name="rest_code_e0633c9c7cd644ea849b5194d53b94b5-4"></a>        <span class="k">return</span> <span class="k">new</span> <span class="n">LinuxBootLoader</span><span class="o">();</span>
-<a name="rest_code_e0633c9c7cd644ea849b5194d53b94b5-5"></a>    <span class="o">}</span>
-<a name="rest_code_e0633c9c7cd644ea849b5194d53b94b5-6"></a>
-<a name="rest_code_e0633c9c7cd644ea849b5194d53b94b5-7"></a>    <span class="nd">@Override</span>
-<a name="rest_code_e0633c9c7cd644ea849b5194d53b94b5-8"></a>    <span class="kd">public</span> <span class="n">IKernel</span> <span class="nf">installKernel</span><span class="o">()</span> <span class="o">{</span>
-<a name="rest_code_e0633c9c7cd644ea849b5194d53b94b5-9"></a>        <span class="k">return</span> <span class="k">new</span> <span class="n">Linux</span><span class="o">();</span>
-<a name="rest_code_e0633c9c7cd644ea849b5194d53b94b5-10"></a>    <span class="o">}</span>
-<a name="rest_code_e0633c9c7cd644ea849b5194d53b94b5-11"></a>
-<a name="rest_code_e0633c9c7cd644ea849b5194d53b94b5-12"></a>    <span class="nd">@Override</span>
-<a name="rest_code_e0633c9c7cd644ea849b5194d53b94b5-13"></a>    <span class="kd">public</span> <span class="n">IShell</span> <span class="nf">installShell</span><span class="o">()</span> <span class="o">{</span>
-<a name="rest_code_e0633c9c7cd644ea849b5194d53b94b5-14"></a>        <span class="k">return</span> <span class="k">new</span> <span class="n">Bash</span><span class="o">();</span>
-<a name="rest_code_e0633c9c7cd644ea849b5194d53b94b5-15"></a>    <span class="o">}</span>
-<a name="rest_code_e0633c9c7cd644ea849b5194d53b94b5-16"></a>
-<a name="rest_code_e0633c9c7cd644ea849b5194d53b94b5-17"></a>    <span class="nd">@Override</span>
-<a name="rest_code_e0633c9c7cd644ea849b5194d53b94b5-18"></a>    <span class="kd">public</span> <span class="n">IDisplayManager</span> <span class="nf">installDisplayManager</span><span class="o">()</span> <span class="o">{</span>
-<a name="rest_code_e0633c9c7cd644ea849b5194d53b94b5-19"></a>        <span class="k">return</span> <span class="k">new</span> <span class="n">X11</span><span class="o">();</span>
-<a name="rest_code_e0633c9c7cd644ea849b5194d53b94b5-20"></a>    <span class="o">}</span>
-<a name="rest_code_e0633c9c7cd644ea849b5194d53b94b5-21"></a>
-<a name="rest_code_e0633c9c7cd644ea849b5194d53b94b5-22"></a>    <span class="nd">@Override</span>
-<a name="rest_code_e0633c9c7cd644ea849b5194d53b94b5-23"></a>    <span class="kd">public</span> <span class="n">IWindowManager</span> <span class="nf">installWindowManager</span><span class="o">()</span> <span class="o">{</span>
-<a name="rest_code_e0633c9c7cd644ea849b5194d53b94b5-24"></a>        <span class="k">return</span> <span class="k">new</span> <span class="n">Gnome</span><span class="o">();</span>
-<a name="rest_code_e0633c9c7cd644ea849b5194d53b94b5-25"></a>    <span class="o">}</span>
-<a name="rest_code_e0633c9c7cd644ea849b5194d53b94b5-26"></a>
-<a name="rest_code_e0633c9c7cd644ea849b5194d53b94b5-27"></a>    <span class="nd">@Override</span>
-<a name="rest_code_e0633c9c7cd644ea849b5194d53b94b5-28"></a>    <span class="kd">public</span> <span class="n">IBaseApplications</span> <span class="nf">installApps</span><span class="o">()</span> <span class="o">{</span>
-<a name="rest_code_e0633c9c7cd644ea849b5194d53b94b5-29"></a>        <span class="k">return</span> <span class="k">new</span> <span class="n">GNUApplications</span><span class="o">();</span>
-<a name="rest_code_e0633c9c7cd644ea849b5194d53b94b5-30"></a>    <span class="o">}</span>
-<a name="rest_code_e0633c9c7cd644ea849b5194d53b94b5-31"></a><span class="o">}</span>
+<pre class="code java"><a name="rest_code_e94f495d272744d182071fba36ed02dd-1"></a><span class="kd">public</span> <span class="kd">class</span> <span class="nc">LinuxFactory</span> <span class="kd">implements</span> <span class="n">IUnixFactory</span> <span class="o">{</span>
+<a name="rest_code_e94f495d272744d182071fba36ed02dd-2"></a>    <span class="nd">@Override</span>
+<a name="rest_code_e94f495d272744d182071fba36ed02dd-3"></a>    <span class="kd">public</span> <span class="n">IBootLoader</span> <span class="nf">installBootLoader</span><span class="o">()</span> <span class="o">{</span>
+<a name="rest_code_e94f495d272744d182071fba36ed02dd-4"></a>        <span class="k">return</span> <span class="k">new</span> <span class="n">LinuxBootLoader</span><span class="o">();</span>
+<a name="rest_code_e94f495d272744d182071fba36ed02dd-5"></a>    <span class="o">}</span>
+<a name="rest_code_e94f495d272744d182071fba36ed02dd-6"></a>
+<a name="rest_code_e94f495d272744d182071fba36ed02dd-7"></a>    <span class="nd">@Override</span>
+<a name="rest_code_e94f495d272744d182071fba36ed02dd-8"></a>    <span class="kd">public</span> <span class="n">IKernel</span> <span class="nf">installKernel</span><span class="o">()</span> <span class="o">{</span>
+<a name="rest_code_e94f495d272744d182071fba36ed02dd-9"></a>        <span class="k">return</span> <span class="k">new</span> <span class="n">Linux</span><span class="o">();</span>
+<a name="rest_code_e94f495d272744d182071fba36ed02dd-10"></a>    <span class="o">}</span>
+<a name="rest_code_e94f495d272744d182071fba36ed02dd-11"></a>
+<a name="rest_code_e94f495d272744d182071fba36ed02dd-12"></a>    <span class="nd">@Override</span>
+<a name="rest_code_e94f495d272744d182071fba36ed02dd-13"></a>    <span class="kd">public</span> <span class="n">IShell</span> <span class="nf">installShell</span><span class="o">()</span> <span class="o">{</span>
+<a name="rest_code_e94f495d272744d182071fba36ed02dd-14"></a>        <span class="k">return</span> <span class="k">new</span> <span class="n">Bash</span><span class="o">();</span>
+<a name="rest_code_e94f495d272744d182071fba36ed02dd-15"></a>    <span class="o">}</span>
+<a name="rest_code_e94f495d272744d182071fba36ed02dd-16"></a>
+<a name="rest_code_e94f495d272744d182071fba36ed02dd-17"></a>    <span class="nd">@Override</span>
+<a name="rest_code_e94f495d272744d182071fba36ed02dd-18"></a>    <span class="kd">public</span> <span class="n">IDisplayManager</span> <span class="nf">installDisplayManager</span><span class="o">()</span> <span class="o">{</span>
+<a name="rest_code_e94f495d272744d182071fba36ed02dd-19"></a>        <span class="k">return</span> <span class="k">new</span> <span class="n">X11</span><span class="o">();</span>
+<a name="rest_code_e94f495d272744d182071fba36ed02dd-20"></a>    <span class="o">}</span>
+<a name="rest_code_e94f495d272744d182071fba36ed02dd-21"></a>
+<a name="rest_code_e94f495d272744d182071fba36ed02dd-22"></a>    <span class="nd">@Override</span>
+<a name="rest_code_e94f495d272744d182071fba36ed02dd-23"></a>    <span class="kd">public</span> <span class="n">IWindowManager</span> <span class="nf">installWindowManager</span><span class="o">()</span> <span class="o">{</span>
+<a name="rest_code_e94f495d272744d182071fba36ed02dd-24"></a>        <span class="k">return</span> <span class="k">new</span> <span class="n">Gnome</span><span class="o">();</span>
+<a name="rest_code_e94f495d272744d182071fba36ed02dd-25"></a>    <span class="o">}</span>
+<a name="rest_code_e94f495d272744d182071fba36ed02dd-26"></a>
+<a name="rest_code_e94f495d272744d182071fba36ed02dd-27"></a>    <span class="nd">@Override</span>
+<a name="rest_code_e94f495d272744d182071fba36ed02dd-28"></a>    <span class="kd">public</span> <span class="n">IBaseApplications</span> <span class="nf">installApps</span><span class="o">()</span> <span class="o">{</span>
+<a name="rest_code_e94f495d272744d182071fba36ed02dd-29"></a>        <span class="k">return</span> <span class="k">new</span> <span class="n">GNUApplications</span><span class="o">();</span>
+<a name="rest_code_e94f495d272744d182071fba36ed02dd-30"></a>    <span class="o">}</span>
+<a name="rest_code_e94f495d272744d182071fba36ed02dd-31"></a><span class="o">}</span>
 </pre>
 <p><a class="reference external" href="../listings/java/abstractfactory/UbuntuFactory.java.html">java/abstractfactory/UbuntuFactory.java</a>  <a class="reference external" href="../listings/java/abstractfactory/UbuntuFactory.java">(Source)</a></p>
-<pre class="code java"><a name="rest_code_9eb2f0988cbf47ea963c7fe1de35378a-1"></a><span class="kd">public</span> <span class="kd">class</span> <span class="nc">UbuntuFactory</span> <span class="kd">extends</span> <span class="n">LinuxFactory</span> <span class="o">{</span>
-<a name="rest_code_9eb2f0988cbf47ea963c7fe1de35378a-2"></a>    <span class="nd">@Override</span>
-<a name="rest_code_9eb2f0988cbf47ea963c7fe1de35378a-3"></a>    <span class="kd">public</span> <span class="n">IDisplayManager</span> <span class="nf">installDisplayManager</span><span class="o">()</span> <span class="o">{</span>
-<a name="rest_code_9eb2f0988cbf47ea963c7fe1de35378a-4"></a>        <span class="k">return</span> <span class="k">new</span> <span class="n">X11</span><span class="o">();</span>
-<a name="rest_code_9eb2f0988cbf47ea963c7fe1de35378a-5"></a>    <span class="o">}</span>
-<a name="rest_code_9eb2f0988cbf47ea963c7fe1de35378a-6"></a>
-<a name="rest_code_9eb2f0988cbf47ea963c7fe1de35378a-7"></a>    <span class="nd">@Override</span>
-<a name="rest_code_9eb2f0988cbf47ea963c7fe1de35378a-8"></a>    <span class="kd">public</span> <span class="n">IBaseApplications</span> <span class="nf">installApps</span><span class="o">()</span> <span class="o">{</span>
-<a name="rest_code_9eb2f0988cbf47ea963c7fe1de35378a-9"></a>        <span class="k">return</span> <span class="k">new</span> <span class="n">ProprietaryApps</span><span class="o">();</span>
-<a name="rest_code_9eb2f0988cbf47ea963c7fe1de35378a-10"></a>    <span class="o">}</span>
-<a name="rest_code_9eb2f0988cbf47ea963c7fe1de35378a-11"></a><span class="o">}</span>
+<pre class="code java"><a name="rest_code_f19e63a30f6c4e738a33fea5043516c4-1"></a><span class="kd">public</span> <span class="kd">class</span> <span class="nc">UbuntuFactory</span> <span class="kd">extends</span> <span class="n">LinuxFactory</span> <span class="o">{</span>
+<a name="rest_code_f19e63a30f6c4e738a33fea5043516c4-2"></a>    <span class="nd">@Override</span>
+<a name="rest_code_f19e63a30f6c4e738a33fea5043516c4-3"></a>    <span class="kd">public</span> <span class="n">IDisplayManager</span> <span class="nf">installDisplayManager</span><span class="o">()</span> <span class="o">{</span>
+<a name="rest_code_f19e63a30f6c4e738a33fea5043516c4-4"></a>        <span class="k">return</span> <span class="k">new</span> <span class="n">X11</span><span class="o">();</span>
+<a name="rest_code_f19e63a30f6c4e738a33fea5043516c4-5"></a>    <span class="o">}</span>
+<a name="rest_code_f19e63a30f6c4e738a33fea5043516c4-6"></a>
+<a name="rest_code_f19e63a30f6c4e738a33fea5043516c4-7"></a>    <span class="nd">@Override</span>
+<a name="rest_code_f19e63a30f6c4e738a33fea5043516c4-8"></a>    <span class="kd">public</span> <span class="n">IBaseApplications</span> <span class="nf">installApps</span><span class="o">()</span> <span class="o">{</span>
+<a name="rest_code_f19e63a30f6c4e738a33fea5043516c4-9"></a>        <span class="k">return</span> <span class="k">new</span> <span class="n">ProprietaryApps</span><span class="o">();</span>
+<a name="rest_code_f19e63a30f6c4e738a33fea5043516c4-10"></a>    <span class="o">}</span>
+<a name="rest_code_f19e63a30f6c4e738a33fea5043516c4-11"></a><span class="o">}</span>
 </pre>
 </div>
 <div class="section" id="abstract-factory">
 <h3>Abstract Factory</h3>
 <p>The factories will implement an <strong>abstraction</strong> provided by the <strong>Abstract Factory</strong></p>
 <p><a class="reference external" href="../listings/java/abstractfactory/IUnixFactory.java.html">java/abstractfactory/IUnixFactory.java</a>  <a class="reference external" href="../listings/java/abstractfactory/IUnixFactory.java">(Source)</a></p>
-<pre class="code java"><a name="rest_code_722c07b1a7244cdcb6ad0232fee3485e-1"></a><span class="kd">public</span> <span class="kd">interface</span> <span class="nc">IUnixFactory</span> <span class="o">{</span>
-<a name="rest_code_722c07b1a7244cdcb6ad0232fee3485e-2"></a>    <span class="n">IBootLoader</span> <span class="nf">installBootLoader</span><span class="o">();</span>
-<a name="rest_code_722c07b1a7244cdcb6ad0232fee3485e-3"></a>    <span class="n">IKernel</span> <span class="nf">installKernel</span><span class="o">();</span>
-<a name="rest_code_722c07b1a7244cdcb6ad0232fee3485e-4"></a>    <span class="n">IShell</span> <span class="nf">installShell</span><span class="o">();</span>
-<a name="rest_code_722c07b1a7244cdcb6ad0232fee3485e-5"></a>    <span class="n">IDisplayManager</span>  <span class="nf">installDisplayManager</span><span class="o">();</span>
-<a name="rest_code_722c07b1a7244cdcb6ad0232fee3485e-6"></a>    <span class="n">IWindowManager</span> <span class="nf">installWindowManager</span><span class="o">();</span>
-<a name="rest_code_722c07b1a7244cdcb6ad0232fee3485e-7"></a>    <span class="n">IBaseApplications</span> <span class="nf">installApps</span><span class="o">();</span>
-<a name="rest_code_722c07b1a7244cdcb6ad0232fee3485e-8"></a><span class="o">}</span>
+<pre class="code java"><a name="rest_code_200943e845e94545865d4a1c4ffd6efa-1"></a><span class="kd">public</span> <span class="kd">interface</span> <span class="nc">IUnixFactory</span> <span class="o">{</span>
+<a name="rest_code_200943e845e94545865d4a1c4ffd6efa-2"></a>    <span class="n">IBootLoader</span> <span class="nf">installBootLoader</span><span class="o">();</span>
+<a name="rest_code_200943e845e94545865d4a1c4ffd6efa-3"></a>    <span class="n">IKernel</span> <span class="nf">installKernel</span><span class="o">();</span>
+<a name="rest_code_200943e845e94545865d4a1c4ffd6efa-4"></a>    <span class="n">IShell</span> <span class="nf">installShell</span><span class="o">();</span>
+<a name="rest_code_200943e845e94545865d4a1c4ffd6efa-5"></a>    <span class="n">IDisplayManager</span>  <span class="nf">installDisplayManager</span><span class="o">();</span>
+<a name="rest_code_200943e845e94545865d4a1c4ffd6efa-6"></a>    <span class="n">IWindowManager</span> <span class="nf">installWindowManager</span><span class="o">();</span>
+<a name="rest_code_200943e845e94545865d4a1c4ffd6efa-7"></a>    <span class="n">IBaseApplications</span> <span class="nf">installApps</span><span class="o">();</span>
+<a name="rest_code_200943e845e94545865d4a1c4ffd6efa-8"></a><span class="o">}</span>
 </pre>
 </div>
 <div class="section" id="client">
@@ -491,83 +491,83 @@ concrete products like</p>
 <p>The design is best understood from the view of the client  which uses the
 <strong>Abstract Factory</strong>  to the create the products.</p>
 <p><a class="reference external" href="../listings/java/abstractfactory/OperatingSystem.java.html">java/abstractfactory/OperatingSystem.java</a>  <a class="reference external" href="../listings/java/abstractfactory/OperatingSystem.java">(Source)</a></p>
-<pre class="code java"><a name="rest_code_9eb04a9615af4d8493a5451f40deaf64-1"></a><span class="kd">public</span> <span class="kd">class</span> <span class="nc">OperatingSystem</span> <span class="o">{</span>
-<a name="rest_code_9eb04a9615af4d8493a5451f40deaf64-2"></a>    <span class="n">IUnixFactory</span> <span class="n">unixFactory</span><span class="o">;</span>
-<a name="rest_code_9eb04a9615af4d8493a5451f40deaf64-3"></a>
-<a name="rest_code_9eb04a9615af4d8493a5451f40deaf64-4"></a>    <span class="kd">public</span> <span class="nf">OperatingSystem</span><span class="o">(</span><span class="n">IUnixFactory</span> <span class="n">unixFactory</span><span class="o">)</span> <span class="o">{</span>
-<a name="rest_code_9eb04a9615af4d8493a5451f40deaf64-5"></a>        <span class="k">this</span><span class="o">.</span><span class="na">unixFactory</span> <span class="o">=</span> <span class="n">unixFactory</span><span class="o">;</span>
-<a name="rest_code_9eb04a9615af4d8493a5451f40deaf64-6"></a>    <span class="o">}</span>
-<a name="rest_code_9eb04a9615af4d8493a5451f40deaf64-7"></a>
-<a name="rest_code_9eb04a9615af4d8493a5451f40deaf64-8"></a>    <span class="cm">/**</span>
-<a name="rest_code_9eb04a9615af4d8493a5451f40deaf64-9"></a><span class="cm">     * installerClient uses only the interfaces declared by AbstractFactory (IUnixFactory) and AbstractProduct</span>
-<a name="rest_code_9eb04a9615af4d8493a5451f40deaf64-10"></a><span class="cm">     * (IBootLoader, IKernel, IShell, IDisplayManager, IWindowManager, IBaseApplications) classes.</span>
-<a name="rest_code_9eb04a9615af4d8493a5451f40deaf64-11"></a><span class="cm">     */</span>
-<a name="rest_code_9eb04a9615af4d8493a5451f40deaf64-12"></a>    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">installerClient</span><span class="o">()</span> <span class="o">{</span>
-<a name="rest_code_9eb04a9615af4d8493a5451f40deaf64-13"></a>
-<a name="rest_code_9eb04a9615af4d8493a5451f40deaf64-14"></a>
-<a name="rest_code_9eb04a9615af4d8493a5451f40deaf64-15"></a>        <span class="n">IBootLoader</span> <span class="n">bootLoader</span> <span class="o">=</span> <span class="n">unixFactory</span><span class="o">.</span><span class="na">installBootLoader</span><span class="o">();</span>
-<a name="rest_code_9eb04a9615af4d8493a5451f40deaf64-16"></a>        <span class="n">IKernel</span> <span class="n">kernel</span> <span class="o">=</span> <span class="n">unixFactory</span><span class="o">.</span><span class="na">installKernel</span><span class="o">();</span>
-<a name="rest_code_9eb04a9615af4d8493a5451f40deaf64-17"></a>        <span class="n">IShell</span> <span class="n">shell</span> <span class="o">=</span> <span class="n">unixFactory</span><span class="o">.</span><span class="na">installShell</span><span class="o">();</span>
-<a name="rest_code_9eb04a9615af4d8493a5451f40deaf64-18"></a>        <span class="n">IDisplayManager</span> <span class="n">displayManager</span> <span class="o">=</span> <span class="n">unixFactory</span><span class="o">.</span><span class="na">installDisplayManager</span><span class="o">();</span>
-<a name="rest_code_9eb04a9615af4d8493a5451f40deaf64-19"></a>        <span class="n">IWindowManager</span> <span class="n">windowManager</span> <span class="o">=</span> <span class="n">unixFactory</span><span class="o">.</span><span class="na">installWindowManager</span><span class="o">();</span>
-<a name="rest_code_9eb04a9615af4d8493a5451f40deaf64-20"></a>        <span class="n">IBaseApplications</span> <span class="n">applications</span> <span class="o">=</span> <span class="n">unixFactory</span><span class="o">.</span><span class="na">installApps</span><span class="o">();</span>
-<a name="rest_code_9eb04a9615af4d8493a5451f40deaf64-21"></a>
-<a name="rest_code_9eb04a9615af4d8493a5451f40deaf64-22"></a>        <span class="n">bootLoader</span><span class="o">.</span><span class="na">bootUp</span><span class="o">();</span>
-<a name="rest_code_9eb04a9615af4d8493a5451f40deaf64-23"></a>        <span class="n">kernel</span><span class="o">.</span><span class="na">loadKernel</span><span class="o">();</span>
-<a name="rest_code_9eb04a9615af4d8493a5451f40deaf64-24"></a>        <span class="n">shell</span><span class="o">.</span><span class="na">loadShell</span><span class="o">();</span>
-<a name="rest_code_9eb04a9615af4d8493a5451f40deaf64-25"></a>        <span class="n">displayManager</span><span class="o">.</span><span class="na">installDisplayManager</span><span class="o">();</span>
-<a name="rest_code_9eb04a9615af4d8493a5451f40deaf64-26"></a>        <span class="n">windowManager</span><span class="o">.</span><span class="na">installWindowManager</span><span class="o">();</span>
-<a name="rest_code_9eb04a9615af4d8493a5451f40deaf64-27"></a>        <span class="n">applications</span><span class="o">.</span><span class="na">installApplications</span><span class="o">();</span>
-<a name="rest_code_9eb04a9615af4d8493a5451f40deaf64-28"></a>
-<a name="rest_code_9eb04a9615af4d8493a5451f40deaf64-29"></a>    <span class="o">}</span>
-<a name="rest_code_9eb04a9615af4d8493a5451f40deaf64-30"></a>
-<a name="rest_code_9eb04a9615af4d8493a5451f40deaf64-31"></a>    <span class="cm">/**</span>
-<a name="rest_code_9eb04a9615af4d8493a5451f40deaf64-32"></a><span class="cm">     * client will not know the</span>
-<a name="rest_code_9eb04a9615af4d8493a5451f40deaf64-33"></a><span class="cm">     * products the type of bootloader, kernel, shell, display, window manager or applications.</span>
-<a name="rest_code_9eb04a9615af4d8493a5451f40deaf64-34"></a><span class="cm">     * That is encapsulated in factory used by the client.</span>
-<a name="rest_code_9eb04a9615af4d8493a5451f40deaf64-35"></a><span class="cm">     *</span>
-<a name="rest_code_9eb04a9615af4d8493a5451f40deaf64-36"></a><span class="cm">     */</span>
-<a name="rest_code_9eb04a9615af4d8493a5451f40deaf64-37"></a>    <span class="kd">private</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">factoryClient</span><span class="o">(</span><span class="n">IUnixFactory</span> <span class="n">factory</span><span class="o">)</span> <span class="o">{</span>
-<a name="rest_code_9eb04a9615af4d8493a5451f40deaf64-38"></a>        <span class="n">OperatingSystem</span> <span class="n">operatingSystem</span> <span class="o">=</span> <span class="k">new</span> <span class="n">OperatingSystem</span><span class="o">(</span><span class="n">factory</span><span class="o">);</span>
-<a name="rest_code_9eb04a9615af4d8493a5451f40deaf64-39"></a>        <span class="n">operatingSystem</span><span class="o">.</span><span class="na">installerClient</span><span class="o">();</span>
-<a name="rest_code_9eb04a9615af4d8493a5451f40deaf64-40"></a>    <span class="o">}</span>
-<a name="rest_code_9eb04a9615af4d8493a5451f40deaf64-41"></a>
-<a name="rest_code_9eb04a9615af4d8493a5451f40deaf64-42"></a>    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="o">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">args</span><span class="o">)</span> <span class="o">{</span>
-<a name="rest_code_9eb04a9615af4d8493a5451f40deaf64-43"></a>        <span class="n">IUnixFactory</span> <span class="n">factory</span><span class="o">;</span>
-<a name="rest_code_9eb04a9615af4d8493a5451f40deaf64-44"></a>
-<a name="rest_code_9eb04a9615af4d8493a5451f40deaf64-45"></a>        <span class="n">factory</span> <span class="o">=</span> <span class="k">new</span> <span class="n">LinuxFactory</span><span class="o">();</span>
-<a name="rest_code_9eb04a9615af4d8493a5451f40deaf64-46"></a>        <span class="n">factoryClient</span><span class="o">(</span><span class="n">factory</span><span class="o">);</span>
-<a name="rest_code_9eb04a9615af4d8493a5451f40deaf64-47"></a>
-<a name="rest_code_9eb04a9615af4d8493a5451f40deaf64-48"></a>        <span class="n">factory</span> <span class="o">=</span> <span class="k">new</span> <span class="n">BSDFactory</span><span class="o">();</span>
-<a name="rest_code_9eb04a9615af4d8493a5451f40deaf64-49"></a>        <span class="n">factoryClient</span><span class="o">(</span><span class="n">factory</span><span class="o">);</span>
-<a name="rest_code_9eb04a9615af4d8493a5451f40deaf64-50"></a>
-<a name="rest_code_9eb04a9615af4d8493a5451f40deaf64-51"></a>        <span class="n">factory</span> <span class="o">=</span> <span class="k">new</span> <span class="n">UbuntuFactory</span><span class="o">();</span>
-<a name="rest_code_9eb04a9615af4d8493a5451f40deaf64-52"></a>        <span class="n">factoryClient</span><span class="o">(</span><span class="n">factory</span><span class="o">);</span>
-<a name="rest_code_9eb04a9615af4d8493a5451f40deaf64-53"></a>    <span class="o">}</span>
-<a name="rest_code_9eb04a9615af4d8493a5451f40deaf64-54"></a>
-<a name="rest_code_9eb04a9615af4d8493a5451f40deaf64-55"></a><span class="o">}</span>
+<pre class="code java"><a name="rest_code_526bc5d678c4477e96c1197dcd0281f6-1"></a><span class="kd">public</span> <span class="kd">class</span> <span class="nc">OperatingSystem</span> <span class="o">{</span>
+<a name="rest_code_526bc5d678c4477e96c1197dcd0281f6-2"></a>    <span class="n">IUnixFactory</span> <span class="n">unixFactory</span><span class="o">;</span>
+<a name="rest_code_526bc5d678c4477e96c1197dcd0281f6-3"></a>
+<a name="rest_code_526bc5d678c4477e96c1197dcd0281f6-4"></a>    <span class="kd">public</span> <span class="nf">OperatingSystem</span><span class="o">(</span><span class="n">IUnixFactory</span> <span class="n">unixFactory</span><span class="o">)</span> <span class="o">{</span>
+<a name="rest_code_526bc5d678c4477e96c1197dcd0281f6-5"></a>        <span class="k">this</span><span class="o">.</span><span class="na">unixFactory</span> <span class="o">=</span> <span class="n">unixFactory</span><span class="o">;</span>
+<a name="rest_code_526bc5d678c4477e96c1197dcd0281f6-6"></a>    <span class="o">}</span>
+<a name="rest_code_526bc5d678c4477e96c1197dcd0281f6-7"></a>
+<a name="rest_code_526bc5d678c4477e96c1197dcd0281f6-8"></a>    <span class="cm">/**</span>
+<a name="rest_code_526bc5d678c4477e96c1197dcd0281f6-9"></a><span class="cm">     * installerClient uses only the interfaces declared by AbstractFactory (IUnixFactory) and AbstractProduct</span>
+<a name="rest_code_526bc5d678c4477e96c1197dcd0281f6-10"></a><span class="cm">     * (IBootLoader, IKernel, IShell, IDisplayManager, IWindowManager, IBaseApplications) classes.</span>
+<a name="rest_code_526bc5d678c4477e96c1197dcd0281f6-11"></a><span class="cm">     */</span>
+<a name="rest_code_526bc5d678c4477e96c1197dcd0281f6-12"></a>    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">installerClient</span><span class="o">()</span> <span class="o">{</span>
+<a name="rest_code_526bc5d678c4477e96c1197dcd0281f6-13"></a>
+<a name="rest_code_526bc5d678c4477e96c1197dcd0281f6-14"></a>
+<a name="rest_code_526bc5d678c4477e96c1197dcd0281f6-15"></a>        <span class="n">IBootLoader</span> <span class="n">bootLoader</span> <span class="o">=</span> <span class="n">unixFactory</span><span class="o">.</span><span class="na">installBootLoader</span><span class="o">();</span>
+<a name="rest_code_526bc5d678c4477e96c1197dcd0281f6-16"></a>        <span class="n">IKernel</span> <span class="n">kernel</span> <span class="o">=</span> <span class="n">unixFactory</span><span class="o">.</span><span class="na">installKernel</span><span class="o">();</span>
+<a name="rest_code_526bc5d678c4477e96c1197dcd0281f6-17"></a>        <span class="n">IShell</span> <span class="n">shell</span> <span class="o">=</span> <span class="n">unixFactory</span><span class="o">.</span><span class="na">installShell</span><span class="o">();</span>
+<a name="rest_code_526bc5d678c4477e96c1197dcd0281f6-18"></a>        <span class="n">IDisplayManager</span> <span class="n">displayManager</span> <span class="o">=</span> <span class="n">unixFactory</span><span class="o">.</span><span class="na">installDisplayManager</span><span class="o">();</span>
+<a name="rest_code_526bc5d678c4477e96c1197dcd0281f6-19"></a>        <span class="n">IWindowManager</span> <span class="n">windowManager</span> <span class="o">=</span> <span class="n">unixFactory</span><span class="o">.</span><span class="na">installWindowManager</span><span class="o">();</span>
+<a name="rest_code_526bc5d678c4477e96c1197dcd0281f6-20"></a>        <span class="n">IBaseApplications</span> <span class="n">applications</span> <span class="o">=</span> <span class="n">unixFactory</span><span class="o">.</span><span class="na">installApps</span><span class="o">();</span>
+<a name="rest_code_526bc5d678c4477e96c1197dcd0281f6-21"></a>
+<a name="rest_code_526bc5d678c4477e96c1197dcd0281f6-22"></a>        <span class="n">bootLoader</span><span class="o">.</span><span class="na">bootUp</span><span class="o">();</span>
+<a name="rest_code_526bc5d678c4477e96c1197dcd0281f6-23"></a>        <span class="n">kernel</span><span class="o">.</span><span class="na">loadKernel</span><span class="o">();</span>
+<a name="rest_code_526bc5d678c4477e96c1197dcd0281f6-24"></a>        <span class="n">shell</span><span class="o">.</span><span class="na">loadShell</span><span class="o">();</span>
+<a name="rest_code_526bc5d678c4477e96c1197dcd0281f6-25"></a>        <span class="n">displayManager</span><span class="o">.</span><span class="na">installDisplayManager</span><span class="o">();</span>
+<a name="rest_code_526bc5d678c4477e96c1197dcd0281f6-26"></a>        <span class="n">windowManager</span><span class="o">.</span><span class="na">installWindowManager</span><span class="o">();</span>
+<a name="rest_code_526bc5d678c4477e96c1197dcd0281f6-27"></a>        <span class="n">applications</span><span class="o">.</span><span class="na">installApplications</span><span class="o">();</span>
+<a name="rest_code_526bc5d678c4477e96c1197dcd0281f6-28"></a>
+<a name="rest_code_526bc5d678c4477e96c1197dcd0281f6-29"></a>    <span class="o">}</span>
+<a name="rest_code_526bc5d678c4477e96c1197dcd0281f6-30"></a>
+<a name="rest_code_526bc5d678c4477e96c1197dcd0281f6-31"></a>    <span class="cm">/**</span>
+<a name="rest_code_526bc5d678c4477e96c1197dcd0281f6-32"></a><span class="cm">     * client will not know the</span>
+<a name="rest_code_526bc5d678c4477e96c1197dcd0281f6-33"></a><span class="cm">     * products the type of bootloader, kernel, shell, display, window manager or applications.</span>
+<a name="rest_code_526bc5d678c4477e96c1197dcd0281f6-34"></a><span class="cm">     * That is encapsulated in factory used by the client.</span>
+<a name="rest_code_526bc5d678c4477e96c1197dcd0281f6-35"></a><span class="cm">     *</span>
+<a name="rest_code_526bc5d678c4477e96c1197dcd0281f6-36"></a><span class="cm">     */</span>
+<a name="rest_code_526bc5d678c4477e96c1197dcd0281f6-37"></a>    <span class="kd">private</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">factoryClient</span><span class="o">(</span><span class="n">IUnixFactory</span> <span class="n">factory</span><span class="o">)</span> <span class="o">{</span>
+<a name="rest_code_526bc5d678c4477e96c1197dcd0281f6-38"></a>        <span class="n">OperatingSystem</span> <span class="n">operatingSystem</span> <span class="o">=</span> <span class="k">new</span> <span class="n">OperatingSystem</span><span class="o">(</span><span class="n">factory</span><span class="o">);</span>
+<a name="rest_code_526bc5d678c4477e96c1197dcd0281f6-39"></a>        <span class="n">operatingSystem</span><span class="o">.</span><span class="na">installerClient</span><span class="o">();</span>
+<a name="rest_code_526bc5d678c4477e96c1197dcd0281f6-40"></a>    <span class="o">}</span>
+<a name="rest_code_526bc5d678c4477e96c1197dcd0281f6-41"></a>
+<a name="rest_code_526bc5d678c4477e96c1197dcd0281f6-42"></a>    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="o">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">args</span><span class="o">)</span> <span class="o">{</span>
+<a name="rest_code_526bc5d678c4477e96c1197dcd0281f6-43"></a>        <span class="n">IUnixFactory</span> <span class="n">factory</span><span class="o">;</span>
+<a name="rest_code_526bc5d678c4477e96c1197dcd0281f6-44"></a>
+<a name="rest_code_526bc5d678c4477e96c1197dcd0281f6-45"></a>        <span class="n">factory</span> <span class="o">=</span> <span class="k">new</span> <span class="n">LinuxFactory</span><span class="o">();</span>
+<a name="rest_code_526bc5d678c4477e96c1197dcd0281f6-46"></a>        <span class="n">factoryClient</span><span class="o">(</span><span class="n">factory</span><span class="o">);</span>
+<a name="rest_code_526bc5d678c4477e96c1197dcd0281f6-47"></a>
+<a name="rest_code_526bc5d678c4477e96c1197dcd0281f6-48"></a>        <span class="n">factory</span> <span class="o">=</span> <span class="k">new</span> <span class="n">BSDFactory</span><span class="o">();</span>
+<a name="rest_code_526bc5d678c4477e96c1197dcd0281f6-49"></a>        <span class="n">factoryClient</span><span class="o">(</span><span class="n">factory</span><span class="o">);</span>
+<a name="rest_code_526bc5d678c4477e96c1197dcd0281f6-50"></a>
+<a name="rest_code_526bc5d678c4477e96c1197dcd0281f6-51"></a>        <span class="n">factory</span> <span class="o">=</span> <span class="k">new</span> <span class="n">UbuntuFactory</span><span class="o">();</span>
+<a name="rest_code_526bc5d678c4477e96c1197dcd0281f6-52"></a>        <span class="n">factoryClient</span><span class="o">(</span><span class="n">factory</span><span class="o">);</span>
+<a name="rest_code_526bc5d678c4477e96c1197dcd0281f6-53"></a>    <span class="o">}</span>
+<a name="rest_code_526bc5d678c4477e96c1197dcd0281f6-54"></a>
+<a name="rest_code_526bc5d678c4477e96c1197dcd0281f6-55"></a><span class="o">}</span>
 </pre>
 <p>The execution looks like this.</p>
-<pre class="code text"><a name="rest_code_9e26ff028a4d46a39db51c14a144a13e-1"></a>Booting: LinuxBootLoader
-<a name="rest_code_9e26ff028a4d46a39db51c14a144a13e-2"></a>Loading: Linux
-<a name="rest_code_9e26ff028a4d46a39db51c14a144a13e-3"></a>Loading: Bash
-<a name="rest_code_9e26ff028a4d46a39db51c14a144a13e-4"></a>Installing: X11
-<a name="rest_code_9e26ff028a4d46a39db51c14a144a13e-5"></a>Installing: Gnome
-<a name="rest_code_9e26ff028a4d46a39db51c14a144a13e-6"></a>Installing: GNUApplications
-<a name="rest_code_9e26ff028a4d46a39db51c14a144a13e-7"></a>
-<a name="rest_code_9e26ff028a4d46a39db51c14a144a13e-8"></a>Booting: BSDBootLoader
-<a name="rest_code_9e26ff028a4d46a39db51c14a144a13e-9"></a>Loading: BSDKernel
-<a name="rest_code_9e26ff028a4d46a39db51c14a144a13e-10"></a>Loading: CShell
-<a name="rest_code_9e26ff028a4d46a39db51c14a144a13e-11"></a>Installing: X11
-<a name="rest_code_9e26ff028a4d46a39db51c14a144a13e-12"></a>Installing: KDE
-<a name="rest_code_9e26ff028a4d46a39db51c14a144a13e-13"></a>Installing: SystemVUnix
-<a name="rest_code_9e26ff028a4d46a39db51c14a144a13e-14"></a>
-<a name="rest_code_9e26ff028a4d46a39db51c14a144a13e-15"></a>Booting: LinuxBootLoader
-<a name="rest_code_9e26ff028a4d46a39db51c14a144a13e-16"></a>Loading: Linux
-<a name="rest_code_9e26ff028a4d46a39db51c14a144a13e-17"></a>Loading: Bash
-<a name="rest_code_9e26ff028a4d46a39db51c14a144a13e-18"></a>Installing: X11
-<a name="rest_code_9e26ff028a4d46a39db51c14a144a13e-19"></a>Installing: Gnome
-<a name="rest_code_9e26ff028a4d46a39db51c14a144a13e-20"></a>Installing: ProprietaryApps
+<pre class="code text"><a name="rest_code_1928cc6873764088b68b53541b2a5ac1-1"></a>Booting: LinuxBootLoader
+<a name="rest_code_1928cc6873764088b68b53541b2a5ac1-2"></a>Loading: Linux
+<a name="rest_code_1928cc6873764088b68b53541b2a5ac1-3"></a>Loading: Bash
+<a name="rest_code_1928cc6873764088b68b53541b2a5ac1-4"></a>Installing: X11
+<a name="rest_code_1928cc6873764088b68b53541b2a5ac1-5"></a>Installing: Gnome
+<a name="rest_code_1928cc6873764088b68b53541b2a5ac1-6"></a>Installing: GNUApplications
+<a name="rest_code_1928cc6873764088b68b53541b2a5ac1-7"></a>
+<a name="rest_code_1928cc6873764088b68b53541b2a5ac1-8"></a>Booting: BSDBootLoader
+<a name="rest_code_1928cc6873764088b68b53541b2a5ac1-9"></a>Loading: BSDKernel
+<a name="rest_code_1928cc6873764088b68b53541b2a5ac1-10"></a>Loading: CShell
+<a name="rest_code_1928cc6873764088b68b53541b2a5ac1-11"></a>Installing: X11
+<a name="rest_code_1928cc6873764088b68b53541b2a5ac1-12"></a>Installing: KDE
+<a name="rest_code_1928cc6873764088b68b53541b2a5ac1-13"></a>Installing: SystemVUnix
+<a name="rest_code_1928cc6873764088b68b53541b2a5ac1-14"></a>
+<a name="rest_code_1928cc6873764088b68b53541b2a5ac1-15"></a>Booting: LinuxBootLoader
+<a name="rest_code_1928cc6873764088b68b53541b2a5ac1-16"></a>Loading: Linux
+<a name="rest_code_1928cc6873764088b68b53541b2a5ac1-17"></a>Loading: Bash
+<a name="rest_code_1928cc6873764088b68b53541b2a5ac1-18"></a>Installing: X11
+<a name="rest_code_1928cc6873764088b68b53541b2a5ac1-19"></a>Installing: Gnome
+<a name="rest_code_1928cc6873764088b68b53541b2a5ac1-20"></a>Installing: ProprietaryApps
 </pre>
 </div>
 <div class="section" id="tabulated-correspondence">

@@ -1,1 +1,0 @@
-<html><body><p>Step#1 in programming: understand people.      - Linus Torvalds on linux-kernel</p></body></html>

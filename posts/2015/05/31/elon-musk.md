@@ -1,1 +1,0 @@
-<html><body><blockquote>In an interview with Khan Academy, when asked how does he consider the risks when embarking on high risk missions like Space X or  high speed tunnels, he said, he considers, success is in the envelop of possibilities, and therefore goes about pursuing them.</blockquote></body></html>

@@ -1,1 +1,0 @@
-<html><body><p>Beautiful pictures with beautiful words</p></body></html>

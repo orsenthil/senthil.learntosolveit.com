@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<?xml-stylesheet type="text/xsl" href="assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Senthil Kumaran</title><link>http://www.xtoinfinity.com/</link><description>Senthil Kumaran</description><atom:link href="http://www.xtoinfinity.com/rss.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><lastBuildDate>Thu, 10 Jun 2021 04:47:08 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Book Review - My Life with the Chimpanzees by Jane Goodall</title><link>http://www.xtoinfinity.com/posts/2021/06/09/book-review-my-life-with-the-chimpanzees-by-jane-goodall.html</link><dc:creator>Senthil Kumaran</dc:creator><description>&lt;div&gt;&lt;blockquote&gt;
+<?xml-stylesheet type="text/xsl" href="assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Senthil Kumaran</title><link>http://www.xtoinfinity.com/</link><description>Senthil Kumaran</description><atom:link href="http://www.xtoinfinity.com/rss.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><lastBuildDate>Mon, 21 Jun 2021 04:47:33 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Book Review - My Life with the Chimpanzees by Jane Goodall</title><link>http://www.xtoinfinity.com/posts/2021/06/09/book-review-my-life-with-the-chimpanzees-by-jane-goodall.html</link><dc:creator>Senthil Kumaran</dc:creator><description>&lt;div&gt;&lt;blockquote&gt;
 &lt;p&gt;“Understanding what chimpanzees are like has made me realize that we humans are
 not so different from other animals as we used to think. What makes us most
 different is that we are far more clever than even the cleverest chimp, and we
@@ -17,16 +17,16 @@ this book.  It is a wonderful book by a wonderful person.&lt;/p&gt;
 &lt;img alt="https://i.imgur.com/mDX3GWc.png" class="align-center" src="https://i.imgur.com/mDX3GWc.png"&gt;&lt;/div&gt;</description><guid>http://www.xtoinfinity.com/posts/2021/06/09/book-review-my-life-with-the-chimpanzees-by-jane-goodall.html</guid><pubDate>Thu, 10 Jun 2021 04:22:53 GMT</pubDate></item><item><title>Book Review - Zen Shorts by Jon J Muth</title><link>http://www.xtoinfinity.com/posts/2021/02/23/book-review-zen-shorts-by-jon-j-muth.html</link><dc:creator>Senthil Kumaran</dc:creator><description>&lt;span&gt;&lt;a href="https://www.goodreads.com/book/show/140181.Zen_Shorts" style="float: left; padding-right: 20px"&gt;&lt;img border="0" alt="Zen Shorts" src="https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1301850228l/140181._SX98_.jpg"&gt;&lt;/a&gt;&lt;a href="https://www.goodreads.com/book/show/140181.Zen_Shorts"&gt;Zen Shorts&lt;/a&gt; by &lt;a href="https://www.goodreads.com/author/show/12733.Jon_J_Muth"&gt;Jon J. Muth&lt;/a&gt;&lt;br&gt;
 My rating: &lt;a href="https://www.goodreads.com/review/show/3856421324"&gt;5 of 5 stars&lt;/a&gt;&lt;br&gt;&lt;br&gt;
 Book that beautifully shares the essence of Zen. The art and story reaches the reader.
-&lt;br&gt;&lt;/span&gt;</description><guid>http://www.xtoinfinity.com/posts/2021/02/23/book-review-zen-shorts-by-jon-j-muth.html</guid><pubDate>Wed, 24 Feb 2021 01:22:13 GMT</pubDate></item><item><title>Hello, ꢨꢸꢳꣂꢔꢸ !</title><link>http://www.xtoinfinity.com/posts/2021/02/19/hello.html</link><dc:creator>Senthil Kumaran</dc:creator><description>&lt;div&gt;&lt;p&gt;For some reason, I feel very excited to program in Go, C and C++ again.&lt;/p&gt;
-&lt;pre class="literal-block"&gt;
+&lt;br&gt;&lt;/span&gt;</description><guid>http://www.xtoinfinity.com/posts/2021/02/23/book-review-zen-shorts-by-jon-j-muth.html</guid><pubDate>Wed, 24 Feb 2021 01:22:13 GMT</pubDate></item><item><title>Hello, ꢨꢸꢳꣂꢔꢸ !</title><link>http://www.xtoinfinity.com/posts/2021/02/19/hello.html</link><dc:creator>Senthil Kumaran</dc:creator><description>&lt;div&gt;&lt;pre class="literal-block"&gt;
 package main
 
 import "fmt"
 
 func main() {
-     fmt.Println("Hello, ꢨꢸꢳꣂꢔꢸ !")
+     fmt.Println("ꢥꢪ꣄ꢱ꣄ꢒꢵꢬ꣄, ꢨꢸꢳꣂꢔꢸ !")
 }
-&lt;/pre&gt;&lt;/div&gt;</description><guid>http://www.xtoinfinity.com/posts/2021/02/19/hello.html</guid><pubDate>Fri, 19 Feb 2021 23:23:26 GMT</pubDate></item><item><title>Book Review - The Computer From Pascal to Von Neumann</title><link>http://www.xtoinfinity.com/posts/2021/01/30/the-computer-from-pascal-to-von-neumann.html</link><dc:creator>Senthil Kumaran</dc:creator><description>&lt;div&gt;&lt;p&gt;The Computer From Pascal to Von Neumann is a computer history book by Herman
+&lt;/pre&gt;
+&lt;p&gt;The program string is in Sourashtra.&lt;/p&gt;&lt;/div&gt;</description><guid>http://www.xtoinfinity.com/posts/2021/02/19/hello.html</guid><pubDate>Fri, 19 Feb 2021 23:23:26 GMT</pubDate></item><item><title>Book Review - The Computer From Pascal to Von Neumann</title><link>http://www.xtoinfinity.com/posts/2021/01/30/the-computer-from-pascal-to-von-neumann.html</link><dc:creator>Senthil Kumaran</dc:creator><description>&lt;div&gt;&lt;p&gt;The Computer From Pascal to Von Neumann is a computer history book by Herman
 H. Goldstine. It surveys the history from the laws of thought by inventors
 across ages. It goes from earliest philosophers like Pascal, to
 mathematicians like George Boole, to implementors like Von Neumann.&lt;/p&gt;

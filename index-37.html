@@ -71,268 +71,288 @@
     
         
     <div class="postindex">
-            <article class="h-entry post-text" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title"><a href="posts/2017/10/21/nuclear-gandhi-in-civilization-v.html" class="u-url">Nuclear Gandhi in Civilization V</a></h1>
+            <article class="h-entry post-text" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title"><a href="posts/2020/02/23/how-to-teach-debugging.html" class="u-url">How to teach debugging?</a></h1>
                 <div class="metadata">
                     <p class="byline author vcard"><span class="byline-name fn" itemprop="author">
                         Senthil Kumaran
                     </span></p>
             <p class="dateline">
-            <a href="posts/2017/10/21/nuclear-gandhi-in-civilization-v.html" rel="bookmark">
-            <time class="published dt-published" datetime="2017-10-21T11:44:00-07:00" itemprop="datePublished" title="2017-10-21 11:44">2017-10-21 11:44</time></a>
+            <a href="posts/2020/02/23/how-to-teach-debugging.html" rel="bookmark">
+            <time class="published dt-published" datetime="2020-02-23T07:24:57-08:00" itemprop="datePublished" title="2020-02-23 07:24">2020-02-23 07:24</time></a>
             </p>
                         <p class="commentline">
         
-    <a href="posts/2017/10/21/nuclear-gandhi-in-civilization-v.html#disqus_thread" data-disqus-identifier="cache/posts/2017/10/21/nuclear-gandhi-in-civilization-v.html">Comments</a>
+    <a href="posts/2020/02/23/how-to-teach-debugging.html#disqus_thread" data-disqus-identifier="cache/posts/2020/02/23/how-to-teach-debugging.html">Comments</a>
 
 
                 </p>
 </div>
             </header><div class="e-content entry-content">
                     <div>
-<p>It seems like the developers of Civilization V once decided to store aggresiveness index of leaders in a unsigned int.
-And Gandhi, as the most pacifist leader that he was, was assigned lowest number 1. Also, in the game play if a society adopted
-democracy, the aggresiveness score was reduced by 2.</p>
-<p>So, when Gandhi adopted democracy, his aggresiveness score became <strong>1 - 2 = -1</strong>, and as it was unsigned int, and it gained a very high value.</p>
-<pre class="code c"><a name="rest_code_4dc7c1c5e4974ad6a9322ced7d3f9dad-1"></a><span class="cp">#include</span><span class="cpf">&lt;stdio.h&gt;</span><span class="cp"></span>
-<a name="rest_code_4dc7c1c5e4974ad6a9322ced7d3f9dad-2"></a>
-<a name="rest_code_4dc7c1c5e4974ad6a9322ced7d3f9dad-3"></a><span class="kt">int</span> <span class="nf">main</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span> <span class="p">{</span>
-<a name="rest_code_4dc7c1c5e4974ad6a9322ced7d3f9dad-4"></a>    <span class="kt">unsigned</span> <span class="kt">int</span> <span class="n">i</span><span class="p">;</span>
-<a name="rest_code_4dc7c1c5e4974ad6a9322ced7d3f9dad-5"></a>    <span class="n">i</span> <span class="o">=</span> <span class="o">-</span><span class="mi">1</span><span class="p">;</span>
-<a name="rest_code_4dc7c1c5e4974ad6a9322ced7d3f9dad-6"></a>    <span class="n">printf</span><span class="p">(</span><span class="s">"%x</span><span class="se">\n</span><span class="s">"</span><span class="p">,</span> <span class="n">i</span><span class="p">);</span>
-<a name="rest_code_4dc7c1c5e4974ad6a9322ced7d3f9dad-7"></a><span class="p">}</span>
+<img alt="https://i.imgur.com/Fnh80HC.png" src="https://i.imgur.com/Fnh80HC.png"><p>This is from Masterminds of programming. Person sharing the story and the perspective is <a class="reference external" href="https://en.wikipedia.org/wiki/Thomas_E._Kurtz">Thomas Kurtz</a></p>
+<img alt="https://i.imgur.com/S2mnVEI.png" src="https://i.imgur.com/S2mnVEI.png">
+</div>
+                </div>
+            </article><article class="h-entry post-text" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title"><a href="posts/2020/02/08/ckad.html" class="u-url">CKAD</a></h1>
+                <div class="metadata">
+                    <p class="byline author vcard"><span class="byline-name fn" itemprop="author">
+                        Senthil Kumaran
+                    </span></p>
+            <p class="dateline">
+            <a href="posts/2020/02/08/ckad.html" rel="bookmark">
+            <time class="published dt-published" datetime="2020-02-08T21:34:32-08:00" itemprop="datePublished" title="2020-02-08 21:34">2020-02-08 21:34</time></a>
+            </p>
+                        <p class="commentline">
+        
+    <a href="posts/2020/02/08/ckad.html#disqus_thread" data-disqus-identifier="cache/posts/2020/02/08/ckad.html">Comments</a>
+
+
+                </p>
+</div>
+            </header><div class="e-content entry-content">
+                    <div>
+<p>I cleared the CKAD exam.</p>
+<img alt="https://i.imgur.com/7IP1xMy.png" src="https://i.imgur.com/7IP1xMy.png"><p>I took 3 attempts to clear this exam. In my first attemp, I had forgotten the concepts.
+I was not very confident during 2nd, and prepared well for the 3rd attempt to clear it.</p>
+<p>I read "Kubernetes from Ground Up" again. Practised and "understood" the concepts better.
+With all these, the tests were actually very enjoyable.</p>
+</div>
+                </div>
+            </article><article class="h-entry post-text" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title"><a href="posts/2020/02/08/raspberry-pi-cluster-fixing-dns-resolv-on-master.html" class="u-url">Raspberry Pi Cluster - Fixing DNS Resolv on Master</a></h1>
+                <div class="metadata">
+                    <p class="byline author vcard"><span class="byline-name fn" itemprop="author">
+                        Senthil Kumaran
+                    </span></p>
+            <p class="dateline">
+            <a href="posts/2020/02/08/raspberry-pi-cluster-fixing-dns-resolv-on-master.html" rel="bookmark">
+            <time class="published dt-published" datetime="2020-02-08T06:38:27-08:00" itemprop="datePublished" title="2020-02-08 06:38">2020-02-08 06:38</time></a>
+            </p>
+                        <p class="commentline">
+        
+    <a href="posts/2020/02/08/raspberry-pi-cluster-fixing-dns-resolv-on-master.html#disqus_thread" data-disqus-identifier="cache/posts/2020/02/08/raspberry-pi-cluster-fixing-dns-resolv-on-master.html">Comments</a>
+
+
+                </p>
+</div>
+            </header><div class="e-content entry-content">
+                    <div>
+<p>I had setup a raspberry pi cluster, and suddenly the master became
+non-operational. The cluster was able to see itself, but if I login to master
+node, I noticed it was not able communicate externally.</p>
+<p>The DNS Resolution for any site from master was failing.</p>
+<p>Then I figured that Ubuntu had made some changes to resolve.conf protocol</p>
+<p>Ubuntu requested users not to edit /etc/resolv.conf, and it's content on my
+cluster was not something that I wanted.</p>
+<p>I had setup pihole, and my devices had started to see the internet through
+this. I noticed that Ubuntu since 18.04 had not set my router as the first
+nameserver and thus after pi-hole experiment, my master node lost its
+resolution capability</p>
+<p>Fixing the Ubuntu DNS resolution was easy. I followed <a class="reference external" href="https://datawookie.netlify.com/blog/2018/10/dns-on-ubuntu-18.04/">this post from datawookie</a></p>
+<ol class="arabic simple">
+<li>resolvconf package was already installed.</li>
+<li>Edit /etc/resolvconf/resolv.conf.d/head</li>
+</ol>
+<pre class="literal-block">
+nameserver &lt;pi-hole-server&gt;
+nameserver 8.8.4.4
+nameserver 8.8.8.8
 </pre>
-<pre class="code bash"><a name="rest_code_09a2be04e14340898e0581124ffdae1f-1"></a>$ clang unsigned.c
-<a name="rest_code_09a2be04e14340898e0581124ffdae1f-2"></a>$ ./a.out
-<a name="rest_code_09a2be04e14340898e0581124ffdae1f-3"></a><span class="m">4294967295</span>
+<ol class="arabic simple" start="3">
+<li>Restart the resolvconf server</li>
+</ol>
+<pre class="literal-block">
+sudo service resolvconf restart
 </pre>
-<p>And thus Gandhi was ready to nuke whenever there is a conflict.</p>
-<img alt="https://i.kinja-img.com/gawker-media/image/upload/s--4uHRnRfT--/c_fit,fl_progressive,q_80,w_636/dnqxrzdmsdkud7fmsqyp.jpg" src="https://i.kinja-img.com/gawker-media/image/upload/s--4uHRnRfT--/c_fit,fl_progressive,q_80,w_636/dnqxrzdmsdkud7fmsqyp.jpg">
 </div>
                 </div>
-            </article><article class="h-entry post-text" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title"><a href="posts/2017/10/20/s-chandrasekhars-107th-birthday.html" class="u-url">S. Chandrasekhar's 107th Birthday</a></h1>
+            </article><article class="h-entry post-text" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title"><a href="posts/2020/02/03/thank-you-notes-for-supporting-science.html" class="u-url">Thank you notes for Supporting Science</a></h1>
                 <div class="metadata">
                     <p class="byline author vcard"><span class="byline-name fn" itemprop="author">
                         Senthil Kumaran
                     </span></p>
             <p class="dateline">
-            <a href="posts/2017/10/20/s-chandrasekhars-107th-birthday.html" rel="bookmark">
-            <time class="published dt-published" datetime="2017-10-20T13:40:11-07:00" itemprop="datePublished" title="2017-10-20 13:40">2017-10-20 13:40</time></a>
+            <a href="posts/2020/02/03/thank-you-notes-for-supporting-science.html" rel="bookmark">
+            <time class="published dt-published" datetime="2020-02-03T06:34:29-08:00" itemprop="datePublished" title="2020-02-03 06:34">2020-02-03 06:34</time></a>
             </p>
                         <p class="commentline">
         
-    <a href="posts/2017/10/20/s-chandrasekhars-107th-birthday.html#disqus_thread" data-disqus-identifier="cache/posts/2017/10/20/s-chandrasekhars-107th-birthday.html">Comments</a>
+    <a href="posts/2020/02/03/thank-you-notes-for-supporting-science.html#disqus_thread" data-disqus-identifier="cache/posts/2020/02/03/thank-you-notes-for-supporting-science.html">Comments</a>
 
 
                 </p>
 </div>
             </header><div class="e-content entry-content">
                     <div>
-<p>Looks like Google celebrated Subramanya Chandrasekhar's 107'th birthday with a doodle.
-I had missed it, so I got excited to go check it out again.</p>
-<img alt="https://www.google.com/logos/doodles/2017/s-chandrasekhars-107th-birthday-5671696282419200-2xa.gif" src="https://www.google.com/logos/doodles/2017/s-chandrasekhars-107th-birthday-5671696282419200-2xa.gif"><p>The doodle is amazing! It illustrates the concept of a star when it gains 1.4
-times the mass of sun will turn into white-dwarf and eventually into a
-black-hole!</p>
-<p>Chandrasekhar discovered this, and it is known as Chandrasekhar's limit.</p>
+<p>I had supported this project called <a class="reference external" href="https://www.donorschoose.org/project/modeling-is-key-to-understand-processes/4573244/">"Modeling Is Key to Understand Processes, Structures and Scales!"</a> by Mrs.
+Sexton of Montevideo Elementary School for the fifth graders. They had this project going on for the family science
+night in the winter of 2019.</p>
+<p>On my birthday this year, I received a <a class="reference external" href="https://photos.app.goo.gl/teWivefK8ZZPMJUa7">ton of thank you notes</a> for the supporting this project. It felt amazing to
+see so many handwritten cards!</p>
+<p>Thanks to students, and the teacher for this gesture. I will support your science efforts anytime! :)</p>
 </div>
                 </div>
-            </article><article class="h-entry post-text" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title"><a href="posts/2017/10/16/selfoverestimate.html" class="u-url">self.overEstimate</a></h1>
+            </article><article class="h-entry post-text" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title"><a href="posts/2020/02/02/modern-house-in-minecraft.html" class="u-url">Modern House in Minecraft</a></h1>
                 <div class="metadata">
                     <p class="byline author vcard"><span class="byline-name fn" itemprop="author">
                         Senthil Kumaran
                     </span></p>
             <p class="dateline">
-            <a href="posts/2017/10/16/selfoverestimate.html" rel="bookmark">
-            <time class="published dt-published" datetime="2017-10-16T13:58:45-07:00" itemprop="datePublished" title="2017-10-16 13:58">2017-10-16 13:58</time></a>
+            <a href="posts/2020/02/02/modern-house-in-minecraft.html" rel="bookmark">
+            <time class="published dt-published" datetime="2020-02-02T18:19:21-08:00" itemprop="datePublished" title="2020-02-02 18:19">2020-02-02 18:19</time></a>
             </p>
                         <p class="commentline">
         
-    <a href="posts/2017/10/16/selfoverestimate.html#disqus_thread" data-disqus-identifier="cache/posts/2017/10/16/selfoverestimate.html">Comments</a>
+    <a href="posts/2020/02/02/modern-house-in-minecraft.html#disqus_thread" data-disqus-identifier="cache/posts/2020/02/02/modern-house-in-minecraft.html">Comments</a>
 
 
                 </p>
 </div>
             </header><div class="e-content entry-content">
                     <div>
-<p>This seems like a typical my-thing. I've fallen into this trap many times. It looks people in my profession fall prey to this too.</p>
+<p>Siddhartha and I built a Modern House in Minecraft.</p>
+<img alt="https://i.imgur.com/a3eJY9n.png" src="https://i.imgur.com/a3eJY9n.png"><p>We got the idea and followed this Youtube video <a class="reference external" href="https://www.youtube.com/watch?v=-LcdpQ2LLK0">https://www.youtube.com/watch?v=-LcdpQ2LLK0</a> for building the house.</p>
+<p>It was a fun project!</p>
+</div>
+                </div>
+            </article><article class="h-entry post-text" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title"><a href="posts/2020/02/02/kubernetes-cluster-using-raspberry-pi.html" class="u-url">Kubernetes Cluster Using Raspberry Pi</a></h1>
+                <div class="metadata">
+                    <p class="byline author vcard"><span class="byline-name fn" itemprop="author">
+                        Senthil Kumaran
+                    </span></p>
+            <p class="dateline">
+            <a href="posts/2020/02/02/kubernetes-cluster-using-raspberry-pi.html" rel="bookmark">
+            <time class="published dt-published" datetime="2020-02-02T13:11:53-08:00" itemprop="datePublished" title="2020-02-02 13:11">2020-02-02 13:11</time></a>
+            </p>
+                        <p class="commentline">
+        
+    <a href="posts/2020/02/02/kubernetes-cluster-using-raspberry-pi.html#disqus_thread" data-disqus-identifier="cache/posts/2020/02/02/kubernetes-cluster-using-raspberry-pi.html">Comments</a>
+
+
+                </p>
+</div>
+            </header><div class="e-content entry-content">
+                    <div>
+<p>I setup a kubernetes cluster using Raspberry pi. It was much easier than I had imagined.</p>
+<img alt="https://i.imgur.com/GlSDW8O.png" src="https://i.imgur.com/GlSDW8O.png" style="width: 640px; height: 480px;"><p>I used a Raspberry 4 for the master, and an agent. And I used two Raspberry B for two agents.</p>
+<img alt="https://i.imgur.com/kCB1tq0.png" src="https://i.imgur.com/kCB1tq0.png" style="width: 640px; height: 480px;"><p>I setup using <a class="reference external" href="https://mhausenblas.info/kube-rpi/">mhausenblas tutorial</a>, which uses <a class="reference external" href="https://k3s.io/">k3s</a> for setting up of kubernetes on raspberry pis.
+I used <a class="reference external" href="https://github.com/alexellis/k3sup">k3sup</a> tool for installation of packages, which worked well.</p>
+<p>My overall goal ran into some challenges.</p>
+<ul class="simple">
+<li>I was not able to setup the kubernetes dashboard via helm package, and I had to use instructions from github.</li>
+<li>I was not able to setup minecraft using the available helm package: <a class="reference external" href="https://github.com/itzg/docker-minecraft-server/issues/433">https://github.com/itzg/docker-minecraft-server/issues/433</a>
+</li>
+<li>I used k3sup to install packages, but I do not know how to uninstall the package using k3sup <a class="reference external" href="https://github.com/alexellis/k3sup/issues/179">https://github.com/alexellis/k3sup/issues/179</a>
+</li>
+</ul>
+<p>Givem all these, I still have the my local kubernetes cluster up and running and I am excited about the possiblities
+of using kubernetes on raspberry pis.</p>
+</div>
+                </div>
+            </article><article class="h-entry post-text" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title"><a href="posts/2020/01/22/book-review-the-manga-guide-to-calculus.html" class="u-url">Book Review: The Manga Guide to Calculus</a></h1>
+                <div class="metadata">
+                    <p class="byline author vcard"><span class="byline-name fn" itemprop="author">
+                        Senthil Kumaran
+                    </span></p>
+            <p class="dateline">
+            <a href="posts/2020/01/22/book-review-the-manga-guide-to-calculus.html" rel="bookmark">
+            <time class="published dt-published" datetime="2020-01-22T06:17:00-08:00" itemprop="datePublished" title="2020-01-22 06:17">2020-01-22 06:17</time></a>
+            </p>
+                        <p class="commentline">
+        
+    <a href="posts/2020/01/22/book-review-the-manga-guide-to-calculus.html#disqus_thread" data-disqus-identifier="cache/posts/2020/01/22/book-review-the-manga-guide-to-calculus.html">Comments</a>
+
+
+                </p>
+</div>
+            </header><div class="e-content entry-content">
+                    <span><a href="https://www.goodreads.com/book/show/6309077-the-manga-guide-to-calculus" style="float: left; padding-right: 20px"><img border="0" alt="The Manga Guide to Calculus" src="https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1328753481l/6309077._SX98_.jpg"></a><a href="https://www.goodreads.com/book/show/6309077-the-manga-guide-to-calculus">The Manga Guide to Calculus</a> by <a href="https://www.goodreads.com/author/show/2865700.Hiroyuki_Kojima">Hiroyuki Kojima</a><br>
+My rating: <a href="https://www.goodreads.com/review/show/2535927955">2 of 5 stars</a><br><br>
+I tried to pick up some high-level intuition on the basics of calculus with this book, but I failed. Unlike, other Manga guides on electricity, and linear algebra, I found this book not very strong on the plot and I felt it did not present the story in a cohesive manner. <br><br>The concepts were introduced randomly, and I could not see how one built upon the previously introduced concept. <br><br>On the positive note, it did introduce very basics of calculus well, and I am eager to pick up other books on calculus with that foundation.
+<br><br><a href="https://www.goodreads.com/review/list/1666575-senthil-kumaran">View all my reviews</a></span>
+                </div>
+            </article><article class="h-entry post-text" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title"><a href="posts/2020/01/22/book-review-journey-to-the-center-of-the-earth.html" class="u-url">Book Review: Journey to the Center of the Earth</a></h1>
+                <div class="metadata">
+                    <p class="byline author vcard"><span class="byline-name fn" itemprop="author">
+                        Senthil Kumaran
+                    </span></p>
+            <p class="dateline">
+            <a href="posts/2020/01/22/book-review-journey-to-the-center-of-the-earth.html" rel="bookmark">
+            <time class="published dt-published" datetime="2020-01-22T04:43:09-08:00" itemprop="datePublished" title="2020-01-22 04:43">2020-01-22 04:43</time></a>
+            </p>
+                        <p class="commentline">
+        
+    <a href="posts/2020/01/22/book-review-journey-to-the-center-of-the-earth.html#disqus_thread" data-disqus-identifier="cache/posts/2020/01/22/book-review-journey-to-the-center-of-the-earth.html">Comments</a>
+
+
+                </p>
+</div>
+            </header><div class="e-content entry-content">
+                    <div>
+<a href="https://www.goodreads.com/book/show/35386591-journey-to-the-center-of-the-earth" style="float: left; padding-right: 20px"><img border="0" alt="Journey to the Center of the Earth" src="https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1496885813l/35386591._SX98_.jpg"></a><a href="https://www.goodreads.com/book/show/35386591-journey-to-the-center-of-the-earth">Journey to the Center of the Earth</a> by <a href="https://www.goodreads.com/author/show/696805.Jules_Verne">Jules Verne</a><br>
+My rating: <a href="https://www.goodreads.com/review/show/3003926912">5 of 5 stars</a><br><br>
+This is a science-fiction adventure book. If you are a science-fiction fan, like me, then you are for a treat in reading in this book. <br><br>I really loved this book and the narration. It started as a simple story but quickly jumped to an adventure plot, and before I realized it had excellent science mixed into every element of this fictitious story. It has references to Fourier, Poisson and you find calculations for measuring the distances based on sound lag, it has adventures of an Iceland hiker, a cave explorer, a climber, and then you will you biologists in trilobite, yes, a trilobite! and then you find all the pre-historic animals and reference famous explorers, biologists, taxonomists all present in a single story. <br><br>When I choose the book, and read the plot, I wondered "How is this possible"? But when I read it, I was taken into a real adventure by the author. <br><br>I read this book in "Kindle-In-Motion" format, and illustrator, Killian Eng is a class on his own. He did excellent work and justice for this Jule Verne's timeless work.
+<br><br><p>Here are some of my notes and highlights from this book.</p>
+<p>Here is something about Fourier.</p>
 <blockquote>
-<p>That’s one reason I don’t miss IT, because programmers are very unlikable people… In aviation, for example, people who greatly overestimate their level of skill are all dead.</p>
-<ul class="simple">
-<li>Philip Greenspun, co-founder of ArsDigita, excerpted from Founders at Work.</li>
-</ul>
-</blockquote>
-</div>
-                </div>
-            </article><article class="h-entry post-text" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title"><a href="posts/2017/10/09/hemmingway-on-writing.html" class="u-url">Hemmingway on Writing</a></h1>
-                <div class="metadata">
-                    <p class="byline author vcard"><span class="byline-name fn" itemprop="author">
-                        Senthil Kumaran
-                    </span></p>
-            <p class="dateline">
-            <a href="posts/2017/10/09/hemmingway-on-writing.html" rel="bookmark">
-            <time class="published dt-published" datetime="2017-10-09T12:57:47-07:00" itemprop="datePublished" title="2017-10-09 12:57">2017-10-09 12:57</time></a>
-            </p>
-                        <p class="commentline">
-        
-    <a href="posts/2017/10/09/hemmingway-on-writing.html#disqus_thread" data-disqus-identifier="cache/posts/2017/10/09/hemmingway-on-writing.html">Comments</a>
-
-
-                </p>
-</div>
-            </header><div class="e-content entry-content">
-                    <div>
+Was it not always believed until Fourier that the temperature of the interplanetary spaces decreased perpetually?</blockquote>
+<p>About Poisson.</p>
 <blockquote>
-Don't get discouraged because there's a lot of mechanical work to writing. I rewrote the first part of A Farewell to Arms at least fifty times. - Ernest Hemmingway</blockquote>
-<ul class="simple">
-<li><a class="reference external" href="https://en.wikipedia.org/wiki/A_Farewell_to_Arms">https://en.wikipedia.org/wiki/A_Farewell_to_Arms</a></li>
-<li><a class="reference external" href="https://en.wikipedia.org/wiki/Ernest_Hemingway">https://en.wikipedia.org/wiki/Ernest_Hemingway</a></li>
-</ul>
+“Well, I will tell you that true savants, among them Poisson, have demonstrated that if a heat of 360,000 degrees
+existed in the interior of the globe.</blockquote>
+<p>A <a class="reference external" href="https://en.wikipedia.org/wiki/Trilobite">trilobite</a>!</p>
+<blockquote>
+“Very well,” said he quietly, “it is the shell of a crustacean, of an extinct species called a trilobite. Nothing more.”</blockquote>
+<p>All these pre-historic animals.</p>
+<blockquote>
+leptotheria, mericotheria, lophiodia, anoplotheria, megatheria, mastodons, protopitheci, pterodactyls, and all sorts of extinct monsters here assembled together for his special satisfaction.</blockquote>
+<p>And the adventurers!</p>
+<blockquote>
+Mr. Milne-Edwards! Ah! Mr. de Quatrefages, how I wish you were standing here at the side of Otto Liedenbrock!”</blockquote>
+<p>This book was a thorough adventure, with so many references to explore further!</p>
 </div>
                 </div>
-            </article><article class="h-entry post-text" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title"><a href="posts/2017/10/08/blockchain-demo.html" class="u-url">Blockchain Demo</a></h1>
+            </article><article class="h-entry post-text" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title"><a href="posts/2020/01/22/book-review-sitas-ramayana.html" class="u-url">Book Review: Sita's Ramayana</a></h1>
                 <div class="metadata">
                     <p class="byline author vcard"><span class="byline-name fn" itemprop="author">
                         Senthil Kumaran
                     </span></p>
             <p class="dateline">
-            <a href="posts/2017/10/08/blockchain-demo.html" rel="bookmark">
-            <time class="published dt-published" datetime="2017-10-08T17:11:40-07:00" itemprop="datePublished" title="2017-10-08 17:11">2017-10-08 17:11</time></a>
+            <a href="posts/2020/01/22/book-review-sitas-ramayana.html" rel="bookmark">
+            <time class="published dt-published" datetime="2020-01-22T04:23:30-08:00" itemprop="datePublished" title="2020-01-22 04:23">2020-01-22 04:23</time></a>
             </p>
                         <p class="commentline">
         
-    <a href="posts/2017/10/08/blockchain-demo.html#disqus_thread" data-disqus-identifier="cache/posts/2017/10/08/blockchain-demo.html">Comments</a>
+    <a href="posts/2020/01/22/book-review-sitas-ramayana.html#disqus_thread" data-disqus-identifier="cache/posts/2020/01/22/book-review-sitas-ramayana.html">Comments</a>
 
 
                 </p>
 </div>
             </header><div class="e-content entry-content">
-                    <div>
-<p><a class="reference external" href="https://anders.com/blockchain/">https://anders.com/blockchain/</a> is the simplest, and the intuitive explaination of blockchain that I come across until now.
-In the very short youtube video, author leads us starting from a hashing function, a block, the concept of signature in the block,
-then a blockchain, a distributed blockchain, the concept of immutablity in the blockchain and the distributed blockchain,
-recording transactions in the blockchain, and verifying transactions in the blockchain.</p>
-<div class="youtube-video">
-<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/_160oMzblY8?rel=0&amp;wmode=transparent" frameborder="0" allow="encrypted-media" allowfullscreen></iframe>
-</div>
-</div>
+                    <span><a href="https://www.goodreads.com/book/show/11097473-sita-s-ramayana" style="float: left; padding-right: 20px"><img border="0" alt="Sita's Ramayana" src="https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1388198774l/11097473._SX98_.jpg"></a><a href="https://www.goodreads.com/book/show/11097473-sita-s-ramayana">Sita's Ramayana</a> by <a href="https://www.goodreads.com/author/show/342139.Samhita_Arni">Samhita Arni</a><br>
+My rating: <a href="https://www.goodreads.com/review/show/3151562925">5 of 5 stars</a><br><br>
+I really enjoyed reading Samhita Arni's take on Ramayana, Sita's Ramayana, the story of Ramayana entirely narrated by Sita. It gives a new perspective to the entire story, while not-at-all deviating from the plot and details of the story. <br><br>As a reader who is familiar with the story, I picked up this book with a notion of what I can expect. However, I was still surprised and thoroughly enjoyed reading this story presented by an excellent writer (Samhita) and a fantastic illustration (Moyna Chitrakar). <br><br>Following this book, I became eager to check out other works of this author, and I found that her writings bring a freshness to the Indian mythology genre, and I am highly eager to read her next work "The Prince". <br><br><br><br><a href="https://www.goodreads.com/review/list/1666575-senthil-kumaran">View all my reviews</a></span>
                 </div>
-            </article><article class="h-entry post-text" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title"><a href="posts/2017/09/25/the-collapsing-universe.html" class="u-url">Book Review: The Collapsing Universe</a></h1>
+            </article><article class="h-entry post-text" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title"><a href="posts/2020/01/22/book-review-hackers-and-painters-by-paul-graham.html" class="u-url">Book Review: Hackers and Painters by Paul Graham</a></h1>
                 <div class="metadata">
                     <p class="byline author vcard"><span class="byline-name fn" itemprop="author">
                         Senthil Kumaran
                     </span></p>
             <p class="dateline">
-            <a href="posts/2017/09/25/the-collapsing-universe.html" rel="bookmark">
-            <time class="published dt-published" datetime="2017-09-25T10:41:17-07:00" itemprop="datePublished" title="2017-09-25 10:41">2017-09-25 10:41</time></a>
+            <a href="posts/2020/01/22/book-review-hackers-and-painters-by-paul-graham.html" rel="bookmark">
+            <time class="published dt-published" datetime="2020-01-22T04:21:00-08:00" itemprop="datePublished" title="2020-01-22 04:21">2020-01-22 04:21</time></a>
             </p>
                         <p class="commentline">
         
-    <a href="posts/2017/09/25/the-collapsing-universe.html#disqus_thread" data-disqus-identifier="cache/posts/2017/09/25/the-collapsing-universe.html">Comments</a>
+    <a href="posts/2020/01/22/book-review-hackers-and-painters-by-paul-graham.html#disqus_thread" data-disqus-identifier="cache/posts/2020/01/22/book-review-hackers-and-painters-by-paul-graham.html">Comments</a>
 
 
                 </p>
 </div>
             </header><div class="e-content entry-content">
-                    <div>
-<a href="https://www.goodreads.com/book/show/1290985.The_Collapsing_Universe" style="float: left; padding-right: 20px"><img border="0" alt="The Collapsing Universe: The Story of Black Holes" src="https://images.gr-assets.com/books/1464362010m/1290985.jpg"></a><a href="https://www.goodreads.com/book/show/1290985.The_Collapsing_Universe">The Collapsing Universe: The Story of Black Holes</a> by <a href="https://www.goodreads.com/author/show/16667.Isaac_Asimov">Isaac Asimov</a><br>
-My rating: <a href="https://www.goodreads.com/review/show/2135003041">5 of 5 stars</a><br><br>
-The Good Doctor once again explains Cosmology in lucid terms. He starts off with simple premises, known facts, composes and slowly leads up to higher concepts, ultimately leading to the concept of "Black Hole". The book had a "trill" factor to it, as we discover the nature of black holes and what constitutes a black hole and how the universe might have formed.<br><br>I was "wow"ed by this book.
-<br><br><p>Some exciting learning here with this book. I learnt about the following:</p>
-<ul class="simple">
-<li><a class="reference external" href="https://en.wikipedia.org/wiki/Cygnus_X-1">https://en.wikipedia.org/wiki/Cygnus_X-1</a></li>
-<li><a class="reference external" href="https://www.nasa.gov/mission_pages/chandra/multimedia/cygnusx1.html">https://www.nasa.gov/mission_pages/chandra/multimedia/cygnusx1.html</a></li>
-<li><a class="reference external" href="https://en.wikipedia.org/wiki/Chandra_X-ray_Observatory">https://en.wikipedia.org/wiki/Chandra_X-ray_Observatory</a></li>
-<li><a class="reference external" href="https://en.wikipedia.org/wiki/Schwarzschild_radius">https://en.wikipedia.org/wiki/Schwarzschild_radius</a></li>
-<li><a class="reference external" href="https://en.wikipedia.org/wiki/Karl_Schwarzschild">https://en.wikipedia.org/wiki/Karl_Schwarzschild</a></li>
-</ul>
-</div>
-                </div>
-            </article><article class="h-entry post-text" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title"><a href="posts/2017/09/02/big-numbers-eons.html" class="u-url">Big numbers - Eons</a></h1>
-                <div class="metadata">
-                    <p class="byline author vcard"><span class="byline-name fn" itemprop="author">
-                        Senthil Kumaran
-                    </span></p>
-            <p class="dateline">
-            <a href="posts/2017/09/02/big-numbers-eons.html" rel="bookmark">
-            <time class="published dt-published" datetime="2017-09-02T23:24:51-07:00" itemprop="datePublished" title="2017-09-02 23:24">2017-09-02 23:24</time></a>
-            </p>
-                        <p class="commentline">
-        
-    <a href="posts/2017/09/02/big-numbers-eons.html#disqus_thread" data-disqus-identifier="cache/posts/2017/09/02/big-numbers-eons.html">Comments</a>
-
-
-                </p>
-</div>
-            </header><div class="e-content entry-content">
-                    <p>A billion years is some- times called an eon, so that we may say the Earth was formed 4.6 eons ago.</p>
-                </div>
-            </article><article class="h-entry post-text" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title"><a href="posts/2017/08/24/go-programming-teaser-post.html" class="u-url">Go programming - teaser post.</a></h1>
-                <div class="metadata">
-                    <p class="byline author vcard"><span class="byline-name fn" itemprop="author">
-                        Senthil Kumaran
-                    </span></p>
-            <p class="dateline">
-            <a href="posts/2017/08/24/go-programming-teaser-post.html" rel="bookmark">
-            <time class="published dt-published" datetime="2017-08-24T08:56:08-07:00" itemprop="datePublished" title="2017-08-24 08:56">2017-08-24 08:56</time></a>
-            </p>
-                        <p class="commentline">
-        
-    <a href="posts/2017/08/24/go-programming-teaser-post.html#disqus_thread" data-disqus-identifier="cache/posts/2017/08/24/go-programming-teaser-post.html">Comments</a>
-
-
-                </p>
-</div>
-            </header><div class="e-content entry-content">
-                    <p>This blogpost, <a class="reference external" href="http://mjk.space/5-things-about-programming-learned-with-go/">5 things about programming I learned with Go</a> was an excellent teaser for Go programming language
-and excited me to pay more attention to go.</p>
-                </div>
-            </article><article class="h-entry post-text" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title"><a href="posts/2017/08/15/want-to-save-a-family-from-deadly-mosquitoes.html" class="u-url">Want to save a family from deadly mosquitoes?</a></h1>
-                <div class="metadata">
-                    <p class="byline author vcard"><span class="byline-name fn" itemprop="author">
-                        Senthil Kumaran
-                    </span></p>
-            <p class="dateline">
-            <a href="posts/2017/08/15/want-to-save-a-family-from-deadly-mosquitoes.html" rel="bookmark">
-            <time class="published dt-published" datetime="2017-08-15T17:26:15-07:00" itemprop="datePublished" title="2017-08-15 17:26">2017-08-15 17:26</time></a>
-            </p>
-                        <p class="commentline">
-        
-    <a href="posts/2017/08/15/want-to-save-a-family-from-deadly-mosquitoes.html#disqus_thread" data-disqus-identifier="cache/posts/2017/08/15/want-to-save-a-family-from-deadly-mosquitoes.html">Comments</a>
-
-
-                </p>
-</div>
-            </header><div class="e-content entry-content">
-                    <div>
-<p>Bill Gates just gave a bed net to a family in need on my behalf. Learn about the progress
-we’ve made in the fight against malaria-spreading mosquitos, and you can give a bed net, too:</p>
-<p><a class="reference external" href="https://www.gatesnotes.com/Health/Mosquito-Wars?WT.mc_id=00_00_00_share_em">https://www.gatesnotes.com/Health/Mosquito-Wars?WT.mc_id=00_00_00_share_em</a></p>
-</div>
-                </div>
-            </article><article class="h-entry post-text" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title"><a href="posts/2017/08/14/ill-be-a-hummingbird.html" class="u-url">I'll be a hummingbird</a></h1>
-                <div class="metadata">
-                    <p class="byline author vcard"><span class="byline-name fn" itemprop="author">
-                        Senthil Kumaran
-                    </span></p>
-            <p class="dateline">
-            <a href="posts/2017/08/14/ill-be-a-hummingbird.html" rel="bookmark">
-            <time class="published dt-published" datetime="2017-08-14T08:24:27-07:00" itemprop="datePublished" title="2017-08-14 08:24">2017-08-14 08:24</time></a>
-            </p>
-                        <p class="commentline">
-        
-    <a href="posts/2017/08/14/ill-be-a-hummingbird.html#disqus_thread" data-disqus-identifier="cache/posts/2017/08/14/ill-be-a-hummingbird.html">Comments</a>
-
-
-                </p>
-</div>
-            </header><div class="e-content entry-content">
-                    <div>
-<p>This is an inspiring short video. This is very relevant to me because in many projects, especially the big ones, I
-feel like the things are not designed well. The situation is chaotic, it's burning all the time. Most of us are like
-those big resourceful animals in this story. Instead, if we be the hummingbird, the experience is well worth it.</p>
-<div class="youtube-video align-center">
-<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/IGMW6YWjMxw?rel=0&amp;wmode=transparent" frameborder="0" allow="encrypted-media" allowfullscreen></iframe>
-</div>
-</div>
+                    <span><a href="https://www.goodreads.com/book/show/41793.Hackers_Painters" style="float: left; padding-right: 20px"><img border="0" alt="Hackers &amp; Painters: Big Ideas from the Computer Age" src="https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1348562702l/41793._SX98_.jpg"></a><a href="https://www.goodreads.com/book/show/41793.Hackers_Painters">Hackers &amp; Painters: Big Ideas from the Computer Age</a> by <a href="https://www.goodreads.com/author/show/23551.Paul_Graham">Paul Graham</a><br>
+My rating: <a href="https://www.goodreads.com/review/show/3133262402">4 of 5 stars</a><br><br>
+Enjoyed reading Paul Graham's essays. It is quite dated, for e.g, lots of reference to Web in the 1990s, 2000s time when Yahoo was a prominent .com company. Some of his opinions on wealth creation are still applicable in 2020. But we have to read his essays with plenty of skepticism. He sings praise for lisp and instills some desire in the reader to study lisp and start a startup.
+<br><br><a href="https://www.goodreads.com/review/list/1666575-senthil-kumaran">View all my reviews</a></span>
                 </div>
             </article>
 </div>

@@ -7,8 +7,6 @@
 .. description: 
 .. type: text
 
-For some reason, I feel very excited to program in Go, C and C++ again.
-
 ::
 
    package main
@@ -16,5 +14,7 @@ For some reason, I feel very excited to program in Go, C and C++ again.
    import "fmt"
 
    func main() {
-	fmt.Println("Hello, ꢨꢸꢳꣂꢔꢸ !")
+	fmt.Println("ꢥꢪ꣄ꢱ꣄ꢒꢵꢬ꣄, ꢨꢸꢳꣂꢔꢸ !")
    }
+
+The program string is in Sourashtra.
