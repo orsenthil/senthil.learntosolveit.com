@@ -40,7 +40,7 @@ jupyter-client==7.3.4
 jupyter-core==4.10.0
 jupyterlab-pygments==0.2.2
 Logbook==1.5.3
-lxml==4.9.0
+lxml==4.9.1
 MacFSEvents==0.8.1
 Mako==1.2.0
 Markdown==3.3.7
