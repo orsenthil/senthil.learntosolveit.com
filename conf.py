@@ -29,6 +29,7 @@ POSTS = (
     ("posts/*.txt", "posts", "post.tmpl"),
     ("posts/*.md", "posts", "post.tmpl"),
     ("posts/*.html", "posts", "post.tmpl"),
+    ("posts/*.ipynb", "posts", "post.tmpl"),
 )
 
 PAGES = (
@@ -36,6 +37,8 @@ PAGES = (
     ("stories/*.txt", "stories", "story.tmpl"),
     ("stories/*.md", "stories", "story.tmpl"),
     ("stories/*.html", "stories", "story.tmpl"),
+    ("stories/*.ipynb", "stories", "story.tmpl"),
+
 )
 
 NAVIGATION_LINKS = {
@@ -121,6 +124,7 @@ COMPILERS = {
     "rest": ('.txt', '.rst'),
     "markdown": ('.md', '.mdown', '.markdown'),
     "html": ('.html', '.htm'),
+    "ipynb": ('.ipynb',),
 }
 
 # Create by default posts in one file format?
@@ -586,7 +590,7 @@ IMAGE_FOLDERS = {'images': 'images'}
 # xcode
 # This list MAY be incomplete since pygments adds styles every now and then.
 
-CODE_COLOR_SCHEME = 'vim'
+CODE_COLOR_SCHEME = 'default'
 
 # If you use 'site-reveal' theme you can select several subthemes
 # THEME_REVEAL_CONFIG_SUBTHEME = 'sky'
