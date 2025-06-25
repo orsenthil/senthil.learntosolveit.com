@@ -6,6 +6,7 @@
 .. link: 
 .. description: 
 .. type: text
+.. devto: true
 
 This is a coin flip simulator. It compare theoretical binomial distribution with experimental results
 
