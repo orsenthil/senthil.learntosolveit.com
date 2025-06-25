@@ -1,11 +1,12 @@
 .. title: fortune
 .. slug: fortune
 .. date: 2025-06-10 21:36:11 UTC-07:00
-.. tags: browser-extension, python, javascript
+.. tags: browserextension, python, javascript
 .. category: 
 .. link: https://github.com/orsenthil/fortune
 .. description: A minimalist browser extension that displays a new quote in the browser tab.
 .. type: text
+.. devto: true
 
 A minimalist browser extension that displays a new quote in the browser tab. For example, when you open a new tab, you will see quotes like this:
 
