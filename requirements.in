@@ -1,3 +1,5 @@
 Nikola[extras]
 ruamel.yaml
 Wikipedia-API
+pypandoc
+pydevto
