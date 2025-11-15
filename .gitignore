@@ -3,3 +3,7 @@ xtoinfinity.com.iml
 conf.py
 .aider*
 devto.json
+__pycache_/
+*.pyc
+.doit.db
+output/
