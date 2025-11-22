@@ -7,6 +7,7 @@
 .. link: 
 .. description: 
 .. type: text
+.. devto: true
 -->
 
 Biniax is a very simple, but interesting, vertical scrolling , matching game. You have to move you piece to collapse against the piece
