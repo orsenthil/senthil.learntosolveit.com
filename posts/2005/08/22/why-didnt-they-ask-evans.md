@@ -5,8 +5,6 @@
 .. category: Mystery
 .. description: A review of Agatha Christie's novel "Why Didn't They Ask Evans?" highlighting her storytelling and writing style.
 
-![{{% wikipedia article="Why Didn't They Ask Evans?" %}}](http://www.waidev4.com/php/IMAGES/AGATHA_Stories/89---Image.jpg)
-
 That's an {{% wikipedia article="Agatha Christie" %}} title! I read the book over the weekend and got a
 glimpse of the talent of the Queen of Crime. This was my first entry into the
 world of Agatha Christie. She has a very nice writing style, great attention to
