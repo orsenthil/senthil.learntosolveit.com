@@ -7,3 +7,4 @@ __pycache_/
 *.pyc
 .doit.db
 output/
+cache/
