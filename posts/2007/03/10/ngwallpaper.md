@@ -9,7 +9,7 @@ I started using Google Code project hosting for the **ngwallpaper** project.
 This Python script fetches the wallpaper of the day from the {{% wikipedia article="National Geographic" %}}
 website and sets it as your desktop wallpaper.
 
-It currently works on Windows by leveraging {{% wikipedia article="Python for Windows Extensions" %}} (using the `SETDESKTOPWALLPAPER` attribute from a Windows API call).
+It currently works on Windows by leveraging Python for Windows Extensions, (using the `SETDESKTOPWALLPAPER` attribute from a Windows API call).
 
 Future improvements include:
 1. Making it platform-agnostic (support for Windows, Linux, and Mac).

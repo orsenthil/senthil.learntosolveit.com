@@ -5,7 +5,7 @@
 .. category: Technology
 .. description: My project for Yahoo Hack Day India 2009 using Y! BOSS Search APIs, Machine Learning and Google App Engine.
 
-I developed an application using {{% wikipedia article="Yahoo! BOSS" %}} Search APIs, Linguistics, {{% wikipedia article="Machine learning" %}} and {{% wikipedia article="Google App Engine" %}}.
+I developed an application using {{% wikipedia article="Yahoo!" %}} Search APIs, Linguistics, {{% wikipedia article="Machine learning" %}} and {{% wikipedia article="Google App Engine" %}}.
 
 Here is the Application Live. Use it anytime:
 

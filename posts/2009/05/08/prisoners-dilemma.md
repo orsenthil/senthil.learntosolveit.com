@@ -5,7 +5,7 @@
 .. category: Mathematics
 .. description: Exploring the classic prisoner's dilemma where two individuals must decide whether to cooperate or betray each other.
 
-{{% wikipedia article="Prisoner%27s_dilemma" %}} is a fundamental concept in game theory.
+Prisoner's dilemma is a fundamental concept in game theory.
 
 The cops have caught two prisoners and do not have sufficient evidence. They decide to put them in separate cells and give the choice to either betray the other person and be free or be silent.
 
