@@ -43,6 +43,10 @@ PAGES = (
 
 NAVIGATION_LINKS = {
     DEFAULT_LANG: (
+        ("https://projects.learntosolveit.com", "Projects"),
+        ("https://twitter.com/@phoe6", "Twitter/X"),
+        ("https://github.com/orsenthil", "GitHub"),
+        ("https://linkedin.com/in/orsenthil", "LinkedIn"),
          ),
 }
 
