@@ -5,9 +5,9 @@
 .. category: General
 .. description:
 
-# The Right to Read
+# The Right to Read 
 
-**By [{{% wikipedia article="Richard Stallman" %}}](http://www.stallman.org)**
+By Richard Stallman
 
 *This article appeared in the February 1997 issue of **{{% wikipedia article="Communications of the ACM" %}}** (Volume 40, Number 2).*
 

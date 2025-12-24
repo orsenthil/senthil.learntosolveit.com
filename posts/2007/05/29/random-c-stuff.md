@@ -13,38 +13,22 @@ description: Exploring the div function in C's stdlib to divide a number by 3 wi
  *Without using /, % or * operator, write a function to divide a number by 3.
  **/
 
-#include
-
-
+#include <stdio.h>
 
 int divideby3(int);
 
-
-
 int main(int argc,char **argv)
-
 {
-
 	int res;
-
 	res = divideby3(9);
-
 	printf("%d",res);
-
 	return 0;
-
 }
 
-
-
 int divideby3(int aNumber)
-
 {
-
 	div_t d = div(aNumber, 3);
-
 	return d.quot;
-
 }
 
 ```
@@ -60,31 +44,15 @@ perfectly fine.
 
 umm, {{% wikipedia article="Struct (C programming language)" text="structs" %}} are part of standard C.
 
-
-
 div_t is a struct:
 
+<pre>
+/* Returned by `div'.  */
 
 
-<pre>/* Returned by `div'.  */
-
-
-
-typedef struct
-
-
-
-{
-
-
-
+typedef struct {
 int quot;                   /* Quotient.  */
-
-
-
 int rem;                    /* Remainder.  */
-
-
 
 } div_t;</pre>
 

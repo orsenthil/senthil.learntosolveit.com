@@ -33,7 +33,7 @@ Now that I was able to configure the package manager, I got a wealth of neatly a
 
 Even [Picassa](http://picasa.google.com/linux/download.html) download in deb format was handled properly by gnome deb package installer. I had never used deb and always thought deb format is difficult than rpm.
 
-I had transfered my camera shot movies of Bungee jump to Ubuntu machine, first surprised to see the thumbnail of avi file and next [{{% wikipedia article="Totem (media player)" %}} player played that avi](http://orsenthil.blogspot.com/2005/10/tried-new-default-apps-with-linux.html) file. I felt wow!. Because, its first time Totem player had worked for me (apart from the live cd demo)
+I had transfered my camera shot movies of Bungee jump to Ubuntu machine, first surprised to see the thumbnail of avi file and next {{% wikipedia article="Totem (media player)" %}} player played that avi file. I felt wow!. Because, its first time Totem player had worked for me (apart from the live cd demo)
 
 Then I spent looking at all the interesting programs that default, multiverse, and universe repositories could offer. There are tons of python language packages to install directly from the repos.
 

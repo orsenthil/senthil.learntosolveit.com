@@ -22,9 +22,6 @@ The last one act play of a "Life of a Kutta" was amazing, it's set in the period
 of {{% wikipedia article="The Emergency (India)" %}} when forced sterilization was done on males. This presents
 the time from the eyes of a dog who is converted to a man.
 
-![5 Dollar Smile Book
-Cover](http://www.shashitharoor.com/books/five-dollar/fivedollarsmilecover.gif)
-
 The title "5 Dollar Smile" refers to UN Post card featuring photo of a child
 from India, which seeks to donate 5 dollars and make him smile. It's a simple
 story of a boy with a charity. The stories are not conclusive, but many of them
@@ -32,8 +29,6 @@ are thought provoking and sometimes reflecting with real world incidents as they
 happen and pass by.
 
 Next book I read was {{% wikipedia article="Sudha Murty" %}}'s ["How I taught my Grandma and Other stories."](http://www.hinduonnet.com/thehindu/mp/2004/05/20/stories/2004052000240100.htm)
-
-![Grandma Book Cover](http://www.hinduonnet.com/thehindu/mp/2004/05/20/images/2004052000240101.jpg)
 
 A very good book stressing on moral values and principles in life. Sudha Murty
 has narrated the incidents in her life in a very simple style for others to
@@ -56,10 +51,7 @@ Her story about meetings with {{% wikipedia article="J. R. D. Tata" %}} and {{% 
 
 Re: Hi
 
-
-
 Thanks, Vijay.
-
 _Senthil_
 
 ----
@@ -67,8 +59,5 @@ _Senthil_
 
 Hi
 
-
-
 All the best for your quest!
-
 _Anonymous_
