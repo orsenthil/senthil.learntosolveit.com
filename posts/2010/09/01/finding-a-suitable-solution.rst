@@ -219,13 +219,12 @@ I hope this article provided a glimpse into the process of finding an effective
 solution for Avinash.  He uses Dasher effectively for a variety of purposes,
 even for taking tests in college now.
 
-::
    
-   This  was written  by senthil  for the book released on the beginning of Assistive Technology Conference.
+	This  was written  by senthil  for the book released on the beginning of Assistive Technology Conference.
 
-   i thank Senthil for all that he has done for me.
+	i thank Senthil for all that he has done for me.
 
-   - Avinash
+	- Avinash
 
 
 ----

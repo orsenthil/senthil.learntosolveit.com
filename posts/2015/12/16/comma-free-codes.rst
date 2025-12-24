@@ -326,9 +326,7 @@ Programming, which can be explored in further depth.
 
 **Video**
 
-.. raw:: html
-
-  <iframe width="560" height="315" src="https://www.youtube.com/embed/48iJx8FVuis" frameborder="0" allowfullscreen></iframe>
+.. youtube:: 48iJx8FVuis
 
 
 **References**
