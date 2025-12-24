@@ -18,19 +18,3 @@ A memorable example of this concept can be found in the final dialogue from the 
 **Mr. Han:** Just tell me, Xiao Dre, why? Why do you need to go back out there so badly?
 
 **Dre Parker:** Because I'm still scared. And no matter what happens tonight, when I leave, I don't want to be scared anymore.
-
-This dialogue highlights the importance of overcoming personal fears and
-challenges for self-growth, rather than seeking external validation.
-
-I also came across an insightful article titled ["Awesome By Proxy: Addicted to Fake Achievement"](http://www.pixelpoppers.com/2009/11/awesome-by-proxy-addicted-to-fake.html).
-The author reflects on how they were choosing games that provided a false sense
-of achievement and how they decided to change their approach after
-introspection.
-
-> We humans are remarkably adept at finding ways to lie to ourselves, and ways to be self-destructive.
-
-This quote serves as a reminder to critically evaluate our actions and
-motivations, ensuring they align with genuine growth and learning.
-
-Mastery orientation encourages us to focus on the journey of learning and
-self-improvement, rather than being fixated on external rewards or recognition.

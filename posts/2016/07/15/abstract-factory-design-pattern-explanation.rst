@@ -48,8 +48,6 @@ dependent objects without specifying the concrete classes.
 Canonical Design
 ----------------
 
-.. image:: https://dl.dropbox.com/s/3o1opat3zd7c569/Screenshot%202016-07-11%2023.04.02.png
-
 Factory is a class that defers the instantiation of the object to the
 subclass.Factory encapsulates the decision-making that figures out which
 specific subclass to instantiate. There are three different kinds of Factory
@@ -90,9 +88,6 @@ Each Operating System will consists of components like
 The installer will have to abstract those components and help the client create an **Unix** operating system choice.
 
 **Correspondence with Canonical Design**
-
-.. image:: https://dl.dropbox.com/s/wmnawrv6h3rxx4u/Screenshot%202016-07-12%2002.15.48.png
-
 
 Let's look at each of these in some detail.
 
@@ -248,8 +243,6 @@ Tabulated Correspondence
 ------------------------
 
 Mapping of the code with various elements in the design helps us to appreciate this pattern.
-
-.. image:: https://dl.dropbox.com/s/ahu9pj89qtt7pos/Screenshot%202016-07-27%2008.57.29.png
 
 Hope this was useful. If you have any comments on this article, please add your
 thoughts in the comments section of this article.

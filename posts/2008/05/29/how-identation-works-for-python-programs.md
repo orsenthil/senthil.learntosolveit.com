@@ -23,10 +23,14 @@ print 'end'
 
 Would be written as:
 
+<pre>
+
 `<if><x><:>`                           # Stack[0]
 `<INDENT><if><true><:>`  # Stack [0,4]
 `<INDENT><print><'><yes><'>` # Stack [0,4,8]
 `<DEDENT><DEDENT><print><'><end><'>` #Stack[0]
+
+</pre>
 
 The parser would just consider the  as <INDENT> as { of the block and  <DEDENT>  as } of the block would be able to parse it as logical blocks.
 

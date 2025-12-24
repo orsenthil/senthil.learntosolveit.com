@@ -10,6 +10,3 @@
 When using Python3's async-await, not awaiting on coroutines was one of the common mistakes, I was making. I
 discovered that newer version of IntelliJ added a warning for it, so that it can spotted when you are writing the
 code itself.
-
-.. image:: https://dl.dropbox.com/s/iumdzyhqmkz5qxf/Screenshot%202017-06-15%2008.06.18.png?dl=0
-   :align: center

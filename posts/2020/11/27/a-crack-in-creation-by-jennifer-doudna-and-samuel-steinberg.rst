@@ -27,11 +27,6 @@ inaccuracy, I aplogize, please point out, and I will correct it.*
 As I reader, I found reviewing biological terms helped me understand the
 material better.
 
-.. figure:: https://dl.dropbox.com/s/3cn83qir2ip3nso/Screenshot_2020-11-28-04-50.png
-   :width: 480
-
-   DNA, the language of life. Figure from *A Crack in Creation* book.
-
 Human Body is made of **cells**, in-fact trillions of cells. Each of these cells
 contain something called DNA. **DNA** is like recipe, just like a food recipe,
 but for building and maintaining living organisms.
@@ -82,11 +77,6 @@ bacteria to "remember" the viruses. If the viruses attack again, the bacteria
 produce RNA segments from the CRISPR arrays to target the viruses' DNA. The
 bacteria then use Cas9 to cut the DNA apart and kill the virus.
 
-.. figure:: https://dl.dropbox.com/s/staumxmyll7ypty/Screenshot_2020-11-27-19-41.png
-   :width: 480
-
-   CRISPR in Bacteria. Figure from *Crack in the Creation*.
-
 **CRISPR Shaping Human Genome**
 
 The CRISPR-Cas9 system works similarly in the lab. Researchers create a small
@@ -109,9 +99,6 @@ selection.
 In humans, CRISPR can be used to do a precise repair and produce a normal
 protein from a non-functional gene.
 
-.. image:: https://dl.dropbox.com/s/zhew8671tk9dnx6/Screenshot_2020-11-28-04-04.png
-   :width: 480
-
 CRISPR enables scientists to edit and *fix* single incorrect letters of DNA from
 3.2 billion letters that comprise the human genome. It can also be used to
 perform even more complicated edits to Human DNA.
@@ -126,25 +113,10 @@ CRISPR has been used to create gene edited mouse wherein the genome of the
 embroyo was edited and introduced back into womb to have an offspring with
 the desirable characteristics embedded at time of birth.
 
-.. figure:: https://dl.dropbox.com/s/l0gxu7imj7v3pqa/Screenshot_2020-11-28-03-51.png
-   :width: 480
-
-   Gene Edited Mouse. Figure from *A Crack in Creation*.
-
-
 And we have used gene editing to create animals desirable characteristics
-
-.. figure:: https://dl.dropbox.com/s/7hdtn904xxas57q/Screenshot_2020-11-28-04-01.png
-   :width: 480
-
-   Gene edited animals. Figure from *A crack in creation*.
 
 This is currently used in practice. Like Recombinetics uses gene editing for
 dehorning cattle, a safer method than physical dehorning using hot iron-rods.
-
-.. image:: https://dl.dropbox.com/s/r5op4mkkhju3s8p/Screenshot_2020-11-28-07-34.png
-   :width: 640
-   :target: https://recombinetics.com/our-technology/
 
 ----
 
@@ -159,9 +131,6 @@ that we might be using pigs as bioreactors to produce valuable drugs like
 therapeutic human proteins, which are too complex to synthesize from scratch and
 can only be produced in living cells.
 
-.. image:: https://dl.dropbox.com/s/lw2lleanrept8qf/Screenshot_2020-11-28-04-07.png
-   :width: 480
-
 Scientists have already been looking to
 other transgenic animals to produce these biopharmaceutical drugs, or
 farmaceuticals, as they’re colloquially called.
@@ -173,10 +142,6 @@ medicine.
 
 .. _Revivicor: https://www.revivicor.com/index.html
 
-.. image:: https://www.revivicor.com/images/RevivicorTechPoster-04-2010.jpg
-   :width: 720
-   :target: https://www.revivicor.com
-
 ----
 
 **Malaria Resistant Mosquitos**
@@ -185,9 +150,6 @@ The deadliest animal on earth, Mosquito can also be killed using CRISPR. The
 idea seems to create malaria resistant mosquitoes using gene editing so that
 the entire family is disabled from being a carriers of malaria.
 
-.. image:: https://dl.dropbox.com/s/qwejig01w6zcyox/Screenshot_2020-11-28-04-23.png
-   :width: 480
-
 ----
 
 **CRISPR for Therapeutics**
@@ -195,18 +157,8 @@ the entire family is disabled from being a carriers of malaria.
 CRISPR can be utilized to edit the germ cells outside the body.
 The edited germ cells can be planted inside for beneficiary aspects.
 
-.. figure:: https://dl.dropbox.com/s/8ekvzjzwupi63t7/Screenshot_2020-11-28-04-27.png
-   :width: 480
-
-   Ex-vivo CRISPR therapy. A Crack In The Creation.
-
 For targeted drug delivery, like fixing the lung or particular muscle instead
 of injecting the drug into blood stream.
-
-.. figure:: https://dl.dropbox.com/s/7zaa0afr6gdipha/Screenshot_2020-11-28-04-31.png
-   :width: 480
-
-   In-vivo CRISPR therapy. A Crack In the Creation.
 
 Adult Homo sapiens are among the last animals to be treated with CRISPR, human
 cell: have been subjected to more CRISPR gene editing than those of any other

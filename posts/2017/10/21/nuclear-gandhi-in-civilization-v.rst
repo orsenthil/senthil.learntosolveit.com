@@ -30,8 +30,3 @@ So, when Gandhi adopted democracy, his aggresiveness score became **1 - 2 = -1**
     4294967295
 
 And thus Gandhi was ready to nuke whenever there is a conflict.
-
-
-.. image:: https://i.kinja-img.com/gawker-media/image/upload/s--4uHRnRfT--/c_fit,fl_progressive,q_80,w_636/dnqxrzdmsdkud7fmsqyp.jpg
-
-    

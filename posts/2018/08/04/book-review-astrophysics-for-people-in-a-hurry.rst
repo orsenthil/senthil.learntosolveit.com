@@ -18,49 +18,21 @@
 
 My rating: 4 of 5 stars
 
-I loved this book.
-This is a very short book, to the point, and explains the universe in simple
-terms.
-What I didn't expect and was a surprise to me was the Author's humorous
-anecdotes, completely relevant to the present day reader inserted between the
-concepts in the pages.
-For e.
-g.
-It was funny to know that behind US Govt which consumes Helium for military and
-research, the next second highest consumer of "Helium" was Macy's for it's
-Macy's day parade.
-It was startling to know that life as we understand in any form, the
-single-celled organism has started in existence only the last 2% of the history
-of the universe.
-The universe is very very old, very very big.
-Often there is a question on "Is there life elsewhere in the universe?
-" - The more I read these kinds of books, the more I realize that "There is life
-elsewhere in the universe.
-Highly likely.
-It is inevitable that either Earthians discover the other life forms, and they
-discover the Earthians.
-Also, the timeline of advancement, the calamities that are possible in next
-thousand years, humankind will, of course, take the ship, explore, and start
-settling in various other parts of the universe.
-Thinking like this doesn't sound like fiction to me.
-It was a great book.
-I will start looking out for Neil De Grasse Tyson from now.
+I loved this book.  This is a very short book, to the point, and explains the
+universe in simple terms.  What I didn't expect and was a surprise to me was the
+Author's humorous anecdotes, completely relevant to the present day reader
+inserted between the concepts in the pages.  For e.  g.  It was funny to know
+that behind US Govt which consumes Helium for military and research, the next
+second highest consumer of "Helium" was Macy's for it's Macy's day parade.  It
+was startling to know that life as we understand in any form, the single-celled
+organism has started in existence only the last 2% of the history of the
+universe.  The universe is very very old, very very big.  Often there is a
+question on "Is there life elsewhere in the universe?  " - The more I read these
+kinds of books, the more I realize that "There is life elsewhere in the
+universe.  Highly likely.  It is inevitable that either Earthians discover the
+other life forms, and they discover the Earthians.  Also, the timeline of
+advancement, the calamities that are possible in next thousand years, humankind
+will, of course, take the ship, explore, and start settling in various other
+parts of the universe.  Thinking like this doesn't sound like fiction to me.  It
+was a great book.  I will start looking out for Neil De Grasse Tyson from now.
 
-
-
-
-Here are some excerpts that I noted from the book. This one is about Einstein, and the kind of impact he had in our
-understanding of the universe.
-
-.. image:: https://dl.dropbox.com/s/ua8m0eenypplx1j/astrophysics1.jpg?dl=0
-   :align: center
-   :height: 300
-   :width: 550
-
-
-And this one is about Spherical shape for any object that we may encounter in the universe.
-
-.. image:: https://dl.dropbox.com/s/0k0q7hzaokuf63j/astrophysics2.jpg?dl=0
-   :align: center
-   :height: 300
-   :width: 450

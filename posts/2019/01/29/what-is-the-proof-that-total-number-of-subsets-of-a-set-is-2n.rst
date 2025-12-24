@@ -19,9 +19,6 @@ subsets of a set is $2^n$?, URL (version: 2013-10-31): https://math.stackexchang
 Another was this table that represented the sets as binary, to denote 0 as an absence of the element and 1 as presence
 of the element.
 
-.. image:: https://dl.dropbox.com/s/0smcrv98o8igrhh/power_set.jpg
-
-
 That can help us understand that the total number of subsets of set of n is :math:`2^n`
 
 

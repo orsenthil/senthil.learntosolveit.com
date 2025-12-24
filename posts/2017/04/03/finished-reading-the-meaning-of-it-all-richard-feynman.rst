@@ -7,16 +7,14 @@
 .. description:
 .. type: text
 
+This is a short non-technical book consisting of compiled speeches of Richard
+Feynman. It does not into physics, but covers a lot of topics like religion,
+politics, society, ethical questions in science, atom bombs and scientist
+motivations. Richard feynman has lot of context to explore all these areas.
+Plus, his communication style is very pleasant.
 
-.. image:: https://dl.dropbox.com/s/w6ilwgd9niepm8c/meaning_of_it_all.png
-   :align: center
-
-This is a short non-technical book consisting of compiled speeches of Richard Feynman. It does not into physics, but
-covers a lot of topics like religion, politics, society, ethical questions in science, atom bombs and scientist
-motivations. Richard feynman has lot of context to explore all these areas. Plus, his communication style is very
-pleasant.
-
-I usually avoid reading general books like this. But I happen to pick this up, and on a day, when I was about to give
-some leeway into an astrology (it's not a science) shared by my close ones, having just reading a topic in this book
-gave me excellent points to bring my thinking back into track. Contrary to my assumption when starting to read this
-book, I found it extremely useful!
+I usually avoid reading general books like this. But I happen to pick this up,
+and on a day, when I was about to give some leeway into an astrology (it's not a
+science) shared by my close ones, having just reading a topic in this book gave
+me excellent points to bring my thinking back into track. Contrary to my
+assumption when starting to read this book, I found it extremely useful!

@@ -24,20 +24,10 @@ the Inca Empire in South American Continent in 1500s.
 
 Here is some data on this Battle. The left hand side is Spanish, and the right side is Inca Empire.
 
-.. image:: https://dl.dropbox.com/s/u2l3qvbh759cnbk/Screenshot%202018-05-04%2002.03.12.png?dl=0
-   :align: center
-   :height: 200
-   :width: 350
-
 Isn't that startling? What happened? The reader is taken through the reasons for such decisive victory.
 
 Then it steps back and goes the reason for why some developments took place at the places it took place. This
 flow-chart from the book conveys the reason in a comprehensive way.
-
-.. image:: https://dl.dropbox.com/s/jo2c7hd29t9pg58/Screenshot%202018-05-04%2002.09.32.png?dl=0
-   :align: center
-   :width: 450
-   :height: 600
 
 Then, a chapter on writing gives a whole history of human writing system. Which itself is fascinating, and the next
 chapter was titled "Necessity's Mother".
@@ -52,17 +42,10 @@ goes into the fascinating story of China and Africa.
 
 Here is one thing about China that amazed me.
 
-.. image:: https://dl.dropbox.com/s/u8uejsmqffg7pol/Screenshot%202018-05-04%2002.20.09.png?dl=0
-   :align: center
-
 Think about it, **China sent huge ships with lots of people to expeditions way before Columbus set his foot on America!**
 
 And the chapter on Africa, tells about the diversity of Africa, mentions about 1500 languages that originated in Africa.
 And shares something that is very interesting.
-
-
-.. image:: https://dl.dropbox.com/s/wpd57lbf26fxo3t/Screenshot%202018-05-04%2002.22.02.png?dl=0
-   :align: center
 
 **This just says two of modern religions of the world originated by the speakers of an African language.**
 

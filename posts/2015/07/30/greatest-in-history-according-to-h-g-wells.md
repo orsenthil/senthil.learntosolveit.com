@@ -8,7 +8,7 @@
 .. excerpt: Mr. H. G. Wells names Jesus of Nazareth, Buddha, and Aristotle as having had greater effect on world history than any other known figures.
 .. wp-status: publish
 
-This is a `newspaper article </2015/07/greatest_in_history.pdf>`_ written by {{% wikipedia article="H._G._Wells" %}} published in 1935. The scanned version is not very readable, but the content is very interesting. I thought, I will republish it here for everyone's enjoyment.
+This is a [newspaper article](https://senthil.learntosolveit.com/2015/07/greatest_in_history.pdf] written by {{% wikipedia article="H._G._Wells" %}} published in 1935. The scanned version is not very readable, but the content is very interesting. I thought, I will republish it here for everyone's enjoyment.
 
 ----
 
