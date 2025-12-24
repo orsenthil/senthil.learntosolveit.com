@@ -5,7 +5,7 @@
 .. category: Sports
 .. description: Photos from my karate graduation day when I moved from yellow to orange belt
 
-I moved to {{% wikipedia article="Karate belt ranks" text="Orange belt" %}} on 29-07-2007. My friends moved to {{% wikipedia article="Karate belt ranks" text="Yellow belt" %}} to. Sharma is the senior with {{% wikipedia article="Karate belt ranks" text="black belt" %}}.
+I moved to Orange belt on 29-07-2007. My friends moved to Yellow belt to. Sharma is the senior with black belt.
 
 We had good fun that day. Our practice as a team and improved from then on.
 
