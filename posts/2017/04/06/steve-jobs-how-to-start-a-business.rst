@@ -15,12 +15,12 @@ a individual working with his team, using his experience, build and sell a compu
 
 Given the team he had, the approach he took, it seems that the result was a successful one.
 
-::
-
-    BYTE in 1989 listed the NeXT Computer as among the "Excellence" winners of the BYTE Awards, stating that
-    it "shows what can be done when a personal computer is designed as a system, and not a collection of
-    hardware elements". Citing as "truly innovative" the optical drive, DSP, and object-oriented programming
-    environment, the magazine concluded that "the NeXT Computer is worth every penny of its $6500 market price".
+BYTE in 1989 listed the NeXT Computer as among the "Excellence" winners of the
+BYTE Awards, stating that it "shows what can be done when a personal computer is
+designed as a system, and not a collection of hardware elements". Citing as
+"truly innovative" the optical drive, DSP, and object-oriented programming
+environment, the magazine concluded that "the NeXT Computer is worth every penny
+of its $6500 market price".
 
 
 - NeXT_Computer: {{% wikipedia article="NeXT_Computer" %}}

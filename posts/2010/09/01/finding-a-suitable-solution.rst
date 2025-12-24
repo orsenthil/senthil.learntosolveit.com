@@ -237,7 +237,7 @@ even for taking tests in college now.
 	 <iframe width="560" height="315"
 	 src="https://www.youtube.com/embed/bEwO17xd4eU" frameborder="0"
 	 allow="accelerometer; autoplay; clipboard-write; encrypted-media;
-	 gyroscope; picture-in-picture" allowfullscreen></iframe>
+	 gyroscope; picture-in-picture" allowfullscreen referrerpolicy="strict-origin-when-cross-origin"></iframe>
 
 	 
 .. _Avinash Sonnad Blog: http://avinashsonnad.blogspot.com/2010/09/finding-suitable-solution.html
