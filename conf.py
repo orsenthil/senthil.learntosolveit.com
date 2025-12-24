@@ -43,7 +43,7 @@ PAGES = (
 
 NAVIGATION_LINKS = {
     DEFAULT_LANG: (
-    ),
+         ),
 }
 
 # Below this point, everything is optional
