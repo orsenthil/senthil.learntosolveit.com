@@ -51,7 +51,7 @@ _Senthil_
 ----
 
 
-Wow! Congrats! I was using urllib2 recently and felt it can be made easier. I like Java's {{% wikipedia article="Apache HttpClient" %}}.
+Wow! Congrats! I was using urllib2 recently and felt it can be made easier. I like Java's Apache HttpClient.
 
 _pramodbiligiri_
 
