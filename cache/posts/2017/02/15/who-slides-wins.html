@@ -1,0 +1,82 @@
+<p>Few years ago, I wrote this 
+        <span class="wikipedia_tooltip"><a href="https://en.wikipedia.org/wiki/15_puzzle" target="_blank">n-puzzle</a>
+            <span class="wikipedia_summary">
+            <a href="https://en.wikipedia.org/wiki/15_puzzle" target="_blank" class="wikipedia_wordmark">
+              <img src="https://upload.wikimedia.org/wikipedia/commons/b/bb/Wikipedia_wordmark.svg">
+              <span class="wikipedia_icon"></span>
+            </a>
+            The 15 puzzle (also called Gem Puzzle, Boss Puzzle, Game of Fifteen, Mystic Square and more) is a sliding puzzle. It has 15 square tiles numbered 1 to 15 in a frame that is 4 tile positions high and 4 tile positions wide, with one unoccupied position. Tiles in the same row or column of the open position can be moved by sliding them horizontally or vertically, respectively. The goal of the puzzle is to place the tiles in numerical order (from left to right, top to bottom).
+            </span>
+        </span> using 
+        <span class="wikipedia_tooltip"><a href="https://en.wikipedia.org/wiki/Pygame" target="_blank">Pygame</a>
+            <span class="wikipedia_summary">
+            <a href="https://en.wikipedia.org/wiki/Pygame" target="_blank" class="wikipedia_wordmark">
+              <img src="https://upload.wikimedia.org/wikipedia/commons/b/bb/Wikipedia_wordmark.svg">
+              <span class="wikipedia_icon"></span>
+            </a>
+            Pygame is a cross-platform set of Python modules designed for writing video games. It includes computer graphics and sound libraries designed to be used with the Python programming language.
+            </span>
+        </span> for fun.  It was inspired from the
+sliding block puzzle game that I had played as a kid, which had numerals in the front and
+a picture of 
+        <span class="wikipedia_tooltip"><a href="https://en.wikipedia.org/wiki/Taj_Mahal" target="_blank">Taj Mahal</a>
+            <span class="wikipedia_summary">
+            <a href="https://en.wikipedia.org/wiki/Taj_Mahal" target="_blank" class="wikipedia_wordmark">
+              <img src="https://upload.wikimedia.org/wikipedia/commons/b/bb/Wikipedia_wordmark.svg">
+              <span class="wikipedia_icon"></span>
+            </a>
+            The Taj Mahal ( TAHJ mə-HAHL, TAHZH -⁠; Hindustani: [taːdʒ ˈmɛɦ(ɛ)l]; lit. 'Crown of the Palace') is an ivory-white marble mausoleum on the right bank of the river Yamuna in Agra, Uttar Pradesh, India. It was commissioned in 1631 by the fifth Mughal emperor, Shah Jahan (r. 1628–1658), to house the tomb of his beloved wife, Mumtaz Mahal; it also houses the tomb of Shah Jahan himself. The tomb is the centrepiece of a 17-hectare (42-acre) complex, which includes a mosque and a guest house, and is set in formal gardens bounded on three sides by a crenellated wall.
+            </span>
+        </span> in the back. The idea was to slide and fit the photo together.</p>
+<p><a class="reference external" href="https://github.com/orsenthil/who-slides-wins">https://github.com/orsenthil/who-slides-wins</a></p>
+<p><strong>How to play</strong></p>
+<ol class="arabic simple">
+<li><p>Human plays first. Use Arrow Keys to Move and Fit the Picture.</p></li>
+<li><p>Press Enter when Done.</p></li>
+<li><p>Computer Plays and tries to beat you with less moves that you took.</p></li>
+</ol>
+<p>It uses 
+        <span class="wikipedia_tooltip"><a href="https://en.wikipedia.org/wiki/A*_search_algorithm" target="_blank">A*</a>
+            <span class="wikipedia_summary">
+            <a href="https://en.wikipedia.org/wiki/A*_search_algorithm" target="_blank" class="wikipedia_wordmark">
+              <img src="https://upload.wikimedia.org/wikipedia/commons/b/bb/Wikipedia_wordmark.svg">
+              <span class="wikipedia_icon"></span>
+            </a>
+            A* (pronounced "A-star") is a graph traversal and pathfinding algorithm that is used in many fields of computer science due to its completeness, optimality, and optimal efficiency. Given a weighted graph, a source node and a goal node, the algorithm finds the shortest path (with respect to the given weights) from source to goal.
+            </span>
+        </span> with 
+        <span class="wikipedia_tooltip"><a href="https://en.wikipedia.org/wiki/Taxicab_geometry" target="_blank">Manhattan Distances</a>
+            <span class="wikipedia_summary">
+            <a href="https://en.wikipedia.org/wiki/Taxicab_geometry" target="_blank" class="wikipedia_wordmark">
+              <img src="https://upload.wikimedia.org/wikipedia/commons/b/bb/Wikipedia_wordmark.svg">
+              <span class="wikipedia_icon"></span>
+            </a>
+            Taxicab geometry or Manhattan geometry is geometry where the familiar Euclidean distance is ignored, and the distance between two points is instead defined to be the sum of the absolute differences of their respective Cartesian coordinates, a distance function (or metric) called the taxicab distance, Manhattan distance, or city block distance. The name refers to the island of Manhattan, or generically any planned city with a rectangular grid of streets, in which a taxicab can only travel along grid directions. In taxicab geometry, the distance between any two points equals the length of their shortest grid path. This different definition of distance also leads to a different definition of the length of a curve, for which a line segment between any two points has the same length as a grid path between those points rather than its Euclidean length.
+            </span>
+        </span> to Solve the puzzle.</p>
+<p>If you want to try it on your computer.</p>
+<ol class="arabic simple">
+<li><p>Install 
+        <span class="wikipedia_tooltip"><a href="https://en.wikipedia.org/wiki/Python_(programming_language)" target="_blank">python2.7</a>
+            <span class="wikipedia_summary">
+            <a href="https://en.wikipedia.org/wiki/Python_(programming_language)" target="_blank" class="wikipedia_wordmark">
+              <img src="https://upload.wikimedia.org/wikipedia/commons/b/bb/Wikipedia_wordmark.svg">
+              <span class="wikipedia_icon"></span>
+            </a>
+            Python is a high-level, general-purpose programming language. Its design philosophy emphasizes code readability with the use of significant indentation. Python is dynamically type-checked and garbage-collected. It supports multiple programming paradigms, including structured (particularly procedural), object-oriented and functional programming.
+            </span>
+        </span></p></li>
+<li><p>Create a 
+        <span class="wikipedia_tooltip"><a href="https://en.wikipedia.org/wiki/Virtual_environment" target="_blank">virtualenv</a>
+            <span class="wikipedia_summary">
+            <a href="https://en.wikipedia.org/wiki/Virtual_environment" target="_blank" class="wikipedia_wordmark">
+              <img src="https://upload.wikimedia.org/wikipedia/commons/b/bb/Wikipedia_wordmark.svg">
+              <span class="wikipedia_icon"></span>
+            </a>
+            A virtual environment is a networked application that allows a user to interact with both the computing environment and the work of other users. Email, chat, and web-based document sharing applications are all examples of virtual environments.  Simply put, it is a networked common operating space.  Once the fidelity of the virtual environment is such that it "creates a psychological state in which the individual perceives himself or herself as existing within the virtual environment"  then the virtual environment (VE) has progressed into the realm of immersive virtual environments (IVEs).
+            </span>
+        </span>.</p></li>
+<li><p>pip install pygame</p></li>
+<li><p>clone the git repo.</p></li>
+<li><p>python run_game.py</p></li>
+</ol>

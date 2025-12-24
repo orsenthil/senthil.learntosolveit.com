@@ -1,0 +1,50 @@
+<p>During PyCon Sprints, I met 
+        <span class="wikipedia_tooltip"><a href="https://en.wikipedia.org/wiki/Bram_Cohen" target="_blank">Bram_Cohen</a>
+            <span class="wikipedia_summary">
+            <a href="https://en.wikipedia.org/wiki/Bram_Cohen" target="_blank" class="wikipedia_wordmark">
+              <img src="https://upload.wikimedia.org/wikipedia/commons/b/bb/Wikipedia_wordmark.svg">
+              <span class="wikipedia_icon"></span>
+            </a>
+            Bram Cohen is an American computer programmer, best known as the author of the peer-to-peer (P2P) BitTorrent protocol in 2001, as well as the first file sharing program to use the protocol, also known as BitTorrent. He is also the co-founder of CodeCon and organizer of the San Francisco Bay Area P2P-hackers meeting, was the co-author of Codeville and creator of the Chia cryptocurrency which implements the proof of space-time consensus algorithm.
+            </span>
+        </span> who had come
+down to talk to Guido and have a word on networking protocol world. It was
+interesting to see two experts talking. Later I invited Bram to give a tech talk
+at Twitter. Bram gladly accepted it and came to Twitter office to talk to us
+about his latest invention http://live.bittorrent.com He had been working on
+Distributed Live Streaming for few years and thought it was a hard problem to
+solve. He could dedicate himself to it and came out with live.bittorrent.com -
+Using this anyone can live stream a video. You can become a live video publisher
+too and people all around the word can see your channel in real time. This is a
+huge break through. My experience at Akamai helps me realize the kind of break
+through this can bring to real time live streaming.  </p>
+<p>Bram went with the technical aspects of the design of the live bittorrent
+technology and how to keep the delays as minimum as possible. He was talking at
+the network packets level and explaining how the packets need to be distributed
+from one node to another so that delay can be as minimum as possible and what
+are the bottlenecks that exist during the packet transfer. The innovative
+solutions that he had use to make these possible. He started by giving a pitch
+to <a href="http://cr.yp.to/djb.html">Dan Bernstein</a>'s ciphers and explained
+about the TCP handshake and udp transfers and how 
+
+        <span class="wikipedia_tooltip"><a href="https://en.wikipedia.org/wiki/Micro_Transport_Protocol" target="_blank">Micro_Transport_Protocol</a>
+            <span class="wikipedia_summary">
+            <a href="https://en.wikipedia.org/wiki/Micro_Transport_Protocol" target="_blank" class="wikipedia_wordmark">
+              <img src="https://upload.wikimedia.org/wikipedia/commons/b/bb/Wikipedia_wordmark.svg">
+              <span class="wikipedia_icon"></span>
+            </a>
+            Micro Transport Protocol (μTP, sometimes uTP) is an open User Datagram Protocol-based (UDP-based) variant of the BitTorrent peer-to-peer file-sharing protocol intended to mitigate poor latency and other congestion control problems found in conventional BitTorrent over Transmission Control Protocol (TCP), while providing reliable, ordered delivery.
+            </span>
+        </span> goes in the background during transfers
+and not affect peak real time traffic.  The details could by got only if I read
+through his spec a couple of times.</p>
+<p>One interesting thing that struck me was. One engineer asked the question, "how
+did he test his development of live bittorrent system?". Bram got excited to
+share his valuable experience in doing that. He said, few years ago he made a
+point saying "Remove all psychic powers in software development" - by this he
+meant, remove all assumptions that a software will work "magically", "assume"
+that it work under all conditions, but rather encode the scenarios and simulate
+all the possible scenarios under which you want your software to work and then
+run your software through it. To this effect, he seemed to built a small
+simulator which can help him test the system. That was a good learning and major
+take away for me from this session.</p>

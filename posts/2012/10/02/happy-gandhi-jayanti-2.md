@@ -6,9 +6,6 @@
 .. categories: 
 .. wp-status: publish
 
-<html><body><a href="http://xtoinf.files.wordpress.com/2012/10/dandimarch.jpg"><img src="http://xtoinf.files.wordpress.com/2012/10/dandimarch.jpg" alt="" title="dandimarch" width="400" height="312" class="aligncenter size-full wp-image-858"></a>
-
-
 
 The Dandi March : A simple act of making salt shakes the British Empire
 

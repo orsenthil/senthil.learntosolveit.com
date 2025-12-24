@@ -1,0 +1,258 @@
+<p>We awe at Donald Knuth. I wondered, if I can understand a subject taught by Knuth and derive satisfaction of learning
+something directly from the master. I attended his most recent lecture on &quot;comma free codes&quot;, felt that it was
+accessible and could be understood by putting some effort. This is my attempt to grasp the topic of &quot;comma free codes&quot;,
+taught by Knuth for his 21st annual christmas tree lecture on Dec 2015. We will use some definitions directly from
+Williard Eastman's paper, reference the topics in wikipedia, look at Knuth's explanation.</p>
+<p>We talk of codes in the context of information theory. A code is a system of rules to convert information—such as a
+letter, word, sound, image, or gesture—into another form or representation. A sequence of symbols, like a sequence of
+binary symbols, sequence of base-10 decimals or a sequence of English language alphabets can all be termed as &quot;code&quot;. A
+block code is a set of codes having the same length.</p>
+<p><strong>Comma Free Block Code</strong></p>
+<p>Comma free code is a code that can be easily synchronized without any external unit like comma or space,
+&quot;<strong>likethis</strong>&quot;. Comma free block code is set of same length codes having the comma free property.</p>
+<p>The four letter words in &quot;<strong>goodgame</strong>&quot; is recognizable, it easy to derive those as &quot;<strong>good</strong>&quot; and &quot;<strong>game</strong>&quot;.
+Other possible substring four letter words in that phrase &quot;<strong>oodg</strong>&quot;, &quot;<strong>odga</strong>&quot;, &quot;<strong>dgga</strong>&quot; are invalid words in
+english (or non code-words) and thus we did not have any problem separating the codewords when they were not
+separated by delimiters like space or comma. Anecdotally, Chinese and Thai languages do not use space between words.</p>
+<p>Take an alternate example, &quot;<strong>fujiverb</strong>&quot;. Can you say deterministically if the word &quot;<strong>jive</strong>&quot; is my code word? Or my
+code words consists only of &quot;<strong>fuji</strong>&quot; and &quot;<strong>verb</strong>&quot;. You cannot determine it from this message and thus, &quot;fuji&quot; and
+&quot;verb&quot; do not form valid a &quot;comma free block codes&quot;.</p>
+<p>The same applies to a periodic code word like &quot;<strong>gaga</strong>&quot;. If a message &quot;<strong>gagagaga</strong>&quot; occurs, then the middle word
+&quot;<strong>gaga</strong>&quot; will be ambiguous as it is composed of 2-letter suffix and a 2-prefix of our code word and we wont be able to
+differentiate it.</p>
+<p><strong>Mathematical definition</strong></p>
+<p>Comma free code words are defined like this.</p>
+<blockquote>
+<p>A block code, <strong>C</strong> containing words of length <strong>n</strong> is called comma free if, and only if, for any words
+<span class="math">\(w = w_1, w_2 ... w_n. \: and \: x = x_1, x_2 ... x_n\)</span> belonging to <strong>C</strong>, the <strong>n</strong> letter overlaps
+<span class="math">\(w_k ... w_nx_1 .... x_{k-1} (k = 2, ... n)\)</span> are not words in the code.</p>
+</blockquote>
+<p>This simply means that if two code words are joined together, than in that joined word, any substring from second letter
+to the last of the block code length should not be a code word.</p>
+<p><strong>How to find them?</strong></p>
+<p>Backtracking.</p>
+<p>The general idea to find comma free block codes is use a backtracking solution and for every word that we want to add to
+the list, prune through through already added words and find if the new word can be a substring of two words joined
+together from the existing list. Knuth gave a demo of finding the maximum comma free subset of the four letter words.</p>
+<p><a class="reference external" href="link://listing/listings/commafree_check.py">commafree_check.py</a>  <a class="reference external" href="link://listing_source/listings/commafree_check.py">(Source)</a></p>
+<div class="code"><pre class="code python"><a id="rest_code_7702518f60594611884c4bc6dcc782f9-1" name="rest_code_7702518f60594611884c4bc6dcc782f9-1" href="#rest_code_7702518f60594611884c4bc6dcc782f9-1"></a><span class="k">def</span><span class="w"> </span><span class="nf">check_comma_free</span><span class="p">(</span><span class="n">input_string</span><span class="p">):</span>
+<a id="rest_code_7702518f60594611884c4bc6dcc782f9-2" name="rest_code_7702518f60594611884c4bc6dcc782f9-2" href="#rest_code_7702518f60594611884c4bc6dcc782f9-2"></a>  <span class="k">if</span> <span class="n">check_periodic</span><span class="p">(</span><span class="n">input_string</span><span class="p">):</span>
+<a id="rest_code_7702518f60594611884c4bc6dcc782f9-3" name="rest_code_7702518f60594611884c4bc6dcc782f9-3" href="#rest_code_7702518f60594611884c4bc6dcc782f9-3"></a>    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;input string is periodic, it cannot be commafree.&quot;</span><span class="p">)</span>
+<a id="rest_code_7702518f60594611884c4bc6dcc782f9-4" name="rest_code_7702518f60594611884c4bc6dcc782f9-4" href="#rest_code_7702518f60594611884c4bc6dcc782f9-4"></a>    <span class="k">return</span>
+<a id="rest_code_7702518f60594611884c4bc6dcc782f9-5" name="rest_code_7702518f60594611884c4bc6dcc782f9-5" href="#rest_code_7702518f60594611884c4bc6dcc782f9-5"></a>  <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">comma_free_words</span><span class="p">)</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+<a id="rest_code_7702518f60594611884c4bc6dcc782f9-6" name="rest_code_7702518f60594611884c4bc6dcc782f9-6" href="#rest_code_7702518f60594611884c4bc6dcc782f9-6"></a>    <span class="n">comma_free_words</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">input_string</span><span class="p">)</span>
+<a id="rest_code_7702518f60594611884c4bc6dcc782f9-7" name="rest_code_7702518f60594611884c4bc6dcc782f9-7" href="#rest_code_7702518f60594611884c4bc6dcc782f9-7"></a>  <span class="k">else</span><span class="p">:</span>
+<a id="rest_code_7702518f60594611884c4bc6dcc782f9-8" name="rest_code_7702518f60594611884c4bc6dcc782f9-8" href="#rest_code_7702518f60594611884c4bc6dcc782f9-8"></a>    <span class="n">parts</span> <span class="o">=</span> <span class="n">get_parts</span><span class="p">(</span><span class="n">input_string</span><span class="p">)</span>
+<a id="rest_code_7702518f60594611884c4bc6dcc782f9-9" name="rest_code_7702518f60594611884c4bc6dcc782f9-9" href="#rest_code_7702518f60594611884c4bc6dcc782f9-9"></a>    <span class="k">for</span> <span class="n">head</span><span class="p">,</span> <span class="n">tail</span> <span class="ow">in</span> <span class="n">parts</span><span class="p">:</span>
+<a id="rest_code_7702518f60594611884c4bc6dcc782f9-10" name="rest_code_7702518f60594611884c4bc6dcc782f9-10" href="#rest_code_7702518f60594611884c4bc6dcc782f9-10"></a>      <span class="k">if</span> <span class="p">(</span><span class="n">any_starts_with</span><span class="p">(</span><span class="n">head</span><span class="p">)</span> <span class="ow">and</span> <span class="n">any_ends_with</span><span class="p">(</span><span class="n">tail</span><span class="p">))</span> <span class="ow">or</span> <span class="p">(</span><span class="n">any_starts_with</span><span class="p">(</span><span class="n">tail</span><span class="p">)</span> <span class="ow">and</span> <span class="n">any_ends_with</span><span class="p">(</span><span class="n">head</span><span class="p">)):</span>
+<a id="rest_code_7702518f60594611884c4bc6dcc782f9-11" name="rest_code_7702518f60594611884c4bc6dcc782f9-11" href="#rest_code_7702518f60594611884c4bc6dcc782f9-11"></a>        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="si">%s</span><span class="s2">|</span><span class="si">%s</span><span class="s2"> are part of the previous words.&quot;</span> <span class="o">%</span> <span class="p">(</span><span class="n">head</span><span class="p">,</span> <span class="n">tail</span><span class="p">))</span>
+<a id="rest_code_7702518f60594611884c4bc6dcc782f9-12" name="rest_code_7702518f60594611884c4bc6dcc782f9-12" href="#rest_code_7702518f60594611884c4bc6dcc782f9-12"></a>        <span class="k">return</span>
+<a id="rest_code_7702518f60594611884c4bc6dcc782f9-13" name="rest_code_7702518f60594611884c4bc6dcc782f9-13" href="#rest_code_7702518f60594611884c4bc6dcc782f9-13"></a>    <span class="n">comma_free_words</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">input_string</span><span class="p">)</span>
+</pre></div>
+<p>This logic is dependent on the order in which comma free block codes are analyzed. For finding a maximal set in a given
+alphabet size in any order a proper backtracking based solution should be devised, which considers all the cases of
+insertions.</p>
+<p><strong>How many are there?</strong></p>
+<p>Backtracking based solution requires us to intelligently prune the search space. Finding effective strategies for
+pruning the search space becomes our the next problem in finding the comma free codes. We will have to determine how
+many comma free block codes are possible for a given alphabet size and for a given length.</p>
+<p>For 4 letter words, (n = 4) of the alphabet size <strong>m</strong>, we know that there are <span class="math">\(m^4\)</span> possible words (permutation
+with repetition). But we're restricted to aperiodic words of length 4, of which there are <span class="math">\(m^4 - m^2\)</span>. Notice
+further that if word, <strong>item</strong> has been chosen, we aren't allowed to include any of its cyclic shifts <strong>temi</strong>, <em>emit*</em>,
+or <strong>mite</strong>, because they all appear within <strong>itemitem</strong>. Hence the maximum number of codewords in our commafree code
+cannot exceed <span class="math">\((m^4 - m^2)/4\)</span>.</p>
+<p>Let us consider the binary case, m = 2 and length n = 4, <strong>C(2, 4)</strong>. We can choose four-bit &quot;words&quot; like this.</p>
+<p>[0001] = {0001, 0010, 0100, 1000},</p>
+<p>[0011] = {0011, 0110, 1100, 1001},</p>
+<p>[0111] = {0111, 1100, 1101, 1011},</p>
+<p>The maximum number of code words from our formula will be <span class="math">\(2^4 - 2^2/4 \: = \: 3\)</span>.  Can we choose three
+four-bit &quot;words&quot; from the above cyclic classes? Yes and choosing the lowest in each cyclic class will simply do. But
+choosing the lowest will not work for all n and m.</p>
+<p>In the class taught by Knuth, we analyzed the choosing codes when m = 3 {0, 1, 2} and for n = 3, <strong>C(3, 3)</strong>. The words
+in the category were</p>
+<p>000  111  222     # Invalid since they are periodic</p>
+<p>001  010  100     # A set of cyclic shifts, only one can taken as a valid code word.</p>
+<p>002  020  200</p>
+<p>011  110  101</p>
+<p>012  120  201</p>
+<p>021  210  102</p>
+<p>112  121  211</p>
+<p>220  202  022</p>
+<p>221  212  122</p>
+<p>The number 3-alphabet code words of length 3 is 27 ( = <span class="math">\(3^3\)</span>). The set of valid code words in this will be
+<span class="math">\((3^3-3) / 3 = 8\)</span>.</p>
+<p>Choosing the lowest index will not work here for e.g, if we choose 021 and 220, and we send the word 220021 the word 002
+is conflicting as it is part of our code word. With any back-tracking based solution, we will have to determine the
+correct non-cyclic words to choose in each set to form our maximal set of 8 code words.</p>
+<p>The problem of finding comma free code words increases exponentially to the size of the length of the code word and on
+the code word size. For e.g, The task of finding all four-letter comma free codes is not difficult when m = 3, and only
+18 cycle classes are involved. But it already becomes challenging when m = 4, because we must then deal with <span class="math">\((4^4
+- 4^2) / 4 = 60\)</span> classes. Therefore we'll want to give it some careful thought as we try to set it up for backtracking.</p>
+<p>Willard Eastman came up with clever solution to find a code word for any odd word length n over an infinite alphabet
+size. Eastman proposed a solution wherein if we give a n letter word (n should be odd), the algorithm will output the
+correct shift required to make the n letter word a code word.</p>
+<p><strong>Eastman's Algorithm</strong></p>
+<p><strong>Construction of Comma Free Codes</strong></p>
+<p>The following elegant construction yields a comma free code of maximum size for any odd block length n, over any
+alphabet.</p>
+<blockquote>
+<p>Given a sequence of <span class="math">\(x =x_0x_1...x_{n-1}\)</span> of nonnegative integers, where x differs from each of its
+other cyclic shifts <span class="math">\(x_k...x_{n-1}x_0..x_{k-1}\)</span> for 0 &lt; k &lt; n, the procedure outputs a cyclic shift
+<span class="math">\(\sigma x\)</span> with the property that the set of all such <span class="math">\(\sigma x\)</span> is a commafree.</p>
+<p>We regard x as an infinite periodic sequence <span class="math">\(&lt;x_n&gt;\)</span> with <span class="math">\(x_k = x_{k-n}\)</span> for all <span class="math">\(k \ge n\)</span>. Each
+cyclic shift then has the form <span class="math">\(x_kx_{k+1}...x_{k+n-1}\)</span>. The simplest nontrivial example occurs when n = 3,
+where <span class="math">\(x=x_0 x_1 x_2 x_0 x_1 x_2 x_0 ...\)</span> and we don't have <span class="math">\(x_0 = x_1 = x_2\)</span>. In this case, the algorithm
+outputs <span class="math">\(x_kx_{k+1}x_{k+2}\)</span> where <span class="math">\(x_k &gt; x_{k+1} \le x_{k+2}\)</span>; and the set of all such triples clearly
+satisfies the commafree condition.</p>
+</blockquote>
+<p>The idea expressed is to choose a triplet (a, b, c) of the form.</p>
+<div class="math">
+\begin{equation*}
+a \: \gt b \: \le c
+\end{equation*}
+</div>
+<p><strong>Why does this work?</strong></p>
+<p>If we take two words, xyz and abc following this property, combining them we have,</p>
+<div class="math">
+\begin{equation*}
+x \: \gt y \: \le z \quad a \: \gt b \: \le c
+\end{equation*}
+</div>
+<ul class="simple">
+<li><p>yza cannot be a word because z cannot be &gt; than y.</p></li>
+<li><p>zab cannot be a word because a cannot be &lt; than b.</p></li>
+</ul>
+<p>There by none of the substrings will be a code word and we can satisfy the comma free property.</p>
+<p>And if we use this condition to determine the code words in our <strong>C(3,3)</strong> set, we will come up with the following
+codes which can form valid code words.</p>
+<strike>000  111  222</strike> <br>
+
+001  010  <strong>100</strong> <br>
+
+002  020  <strong>200</strong> <br>
+
+011  110  <strong>101</strong> <br>
+
+012  120  <strong>201</strong> <br>
+
+021  210  <strong>102</strong> <br>
+
+112  121  <strong>211</strong> <br>
+
+220  <strong>202</strong>  022 <br>
+
+221  <strong>212</strong>  122 <br><p>The highlighted words will form valid code words and all of these satisfy the criteria, <span class="math">\(a \: \gt b \: \le c\)</span>
+Now, if you are given a word like <strong>211201212</strong>, you know for sure that they are composed of <strong>211</strong>, <strong>201</strong> and
+<strong>212</strong> as none of other intermediaries like (112, 120, 201, 012, 121) occur in our set.</p>
+<p>Eastman's algorithm helps in finding the correct shift required to make any word a code word.</p>
+<p>For e.g,</p>
+<p>Input: 001
+Output: Shift by 2, thus producing 100</p>
+<p>Input: 221
+Output: Shift by 1, thus producing 212</p>
+<p>And the beauty is, it is not just for words of length 3, but for <strong>any odd word length n</strong>.</p>
+<blockquote>
+<p>The key idea is to think of <strong>x</strong> as partitioned into <strong>t</strong> substrings by boundary marked by <span class="math">\(b_j\)</span> where
+<span class="math">\(0 \le b_0 \lt b_1 \lt ... \lt b_{t-1} &lt; n\)</span> and <span class="math">\(b_j = b_{j-t} + n\)</span> for <span class="math">\(j \ge t\)</span>. Then substring
+<span class="math">\(y_j\)</span> is <span class="math">\(x_{b_j} x_{b_{j+1}-1}\)</span>. The number <strong>t</strong> of substrings is always odd. Initially, t = n and
+<span class="math">\(b_j = j\)</span> for all j; ultimately t = 1 and <span class="math">\(\sigma x = y0\)</span> is the desired output.</p>
+<p>Eastman's algorithm is based on comparison of adjacent substrings <span class="math">\(y_{j-1} and y_j\)</span>. If those substring have
+the same length, we use lexicographic comparison; otherwise we declare that the longer string is bigger.</p>
+</blockquote>
+<p>The number of <strong>t</strong> substring is always odd because we went with an odd string length (n).</p>
+<p>The comparison of adjacent substring form the recursive nature of the algorithm, we start with small substring of
+length 1 adjacent to each other and then we find compare higher length substring, whose markers have been found by
+the previous step. This will become clear as we look the hand demo.</p>
+<a class="reference external image-reference" href="http://www.amazon.com/gp/product/B005J52SRE">
+<img alt="http://ecx.images-amazon.com/images/I/41KZVIUGswL._SX332_BO1,204,203,200_.jpg" class="align-right" height="200" src="http://ecx.images-amazon.com/images/I/41KZVIUGswL._SX332_BO1,204,203,200_.jpg" width="160" />
+</a>
+<p><strong>Basin and Ranges</strong></p>
+<blockquote>
+<p>It's convenient to describe the algorithm using the terminology based on the topograph of Nevada. Say that i is a
+basin if the substrings satisfy <span class="math">\(y_{i-1} \gt y_i \le y_{i+1}\)</span>. There must be at least one basin; otherwise all
+the <span class="math">\(y_i\)</span> would be equal, and x would equal one of its cyclic shifts. We look at consecutive basins, i and j;
+this means that i &lt; j and that i and j are basins, and that i+1 through j - 1 are not basins. If there's only one
+basin we have <span class="math">\(j = i + t\)</span>. The indices between consecutive basins are called ranges.</p>
+</blockquote>
+<p>The basin and ranges is Knuth's terminology, taken from the book Basin and Ranges by John McPhee which describes the
+topology of Nevada. It is easier to imagine the construct we are looking for if we start to think in terms of basin and
+ranges.</p>
+<blockquote>
+<p>Since t is odd, there is an odd number of consecutive basins for which <span class="math">\(j - i\)</span> is odd. Each round of Eastman's
+algorithm retains exactly one boundary point in the range between such basins and deletes all the others. The
+retained point is the smallest <span class="math">\(k = i + 2l\)</span> such that <span class="math">\(y_k \gt y_{k+1}\)</span>. At the end of a round, we reset
+t to the number of retained boundary points, and we begin another round if t &gt; 1.</p>
+</blockquote>
+<p><strong>Word of length 19</strong></p>
+<p>Let's work through the algorithm by hand when n = 19 and x = 3141592653589793238</p>
+<p>Phase 1</p>
+<ul class="simple">
+<li><p>First markers differentiate each character.</p></li>
+<li><p>We use . to denote the cyclic repetition of the 19 letter word.</p></li>
+</ul>
+<pre class="literal-block">3 | 1 | 4 |  1 | 5 | 9 | 2 | 6 | 5 | 3 | 5 | 8 | 9 | 7 | 9 | 3 | 2 | 3 | 8 . 3 | 1 | 4 | 1 | 5</pre>
+<ul class="simple">
+<li><p>Next we go about identifying basins. We identify the basins where for any 3 numbers (a, b, c), <span class="math">\(a \: \gt b
+\le c\)</span> and put the markers below them</p></li>
+<li><p>After the cyclic repetition we see the repetition of the basin. Like the last line below 1 is same as the first
+line. It is the basin that is repeated.</p></li>
+</ul>
+<pre class="literal-block">3  1  4  1  5  9  2  6  5  3  5  8  9  7  9  3  2  3  8  3  1  4  1 5
+
+   |     |        |        |           |        |        .  |</pre>
+<ul class="simple">
+<li><p>We mark the ranges as odd length or even length ones.</p></li>
+</ul>
+<pre class="literal-block">3  1  4  1  5  9  2  6  5  3  5  8  9  7  9  3  2  3  8  3  1  4  1 5
+
+---|--e--|---o----|---o----|-----e-----|---o----|-----e--.--|--------</pre>
+<ul class="simple">
+<li><p>Next, take all the odd length basin markers, go by steps of 2, 4, 6 so on and identify the first greater than
+number and place the new basin markers before them.</p></li>
+</ul>
+<p>For e.g, in 1-5-9-2. The 2 length path is &quot;1-5-9&quot; and first higher will be 9 and we have to place the marker ahead of
+it. So, the phase 0 of eastman algorithm will output, 5, 8 and 15. denoting the indices where our basins are after the
+first phase.</p>
+<p>If you are watching the video with Knuth giving a demo, there is a mistake in the video that second basin identifier
+is placed after 5, instead of before 5 (We should go by steps of 2 and place it before the first greater than number).</p>
+<pre class="literal-block">3  1  4  1  5  | 9  2  6  |  5  3  5  8  9  7  9  | 3  2  3  8  . 3  1  4 1  5</pre>
+<p>Phase 2</p>
+<ul class="simple">
+<li><p>In the second phase, we use the basin markers of the previous phase and compare the sub strings denoted by the basin.</p></li>
+<li><p>We take the substring of length 19, but now denoted by basins. The repetition of the string in the previous steps
+helped us here.</p></li>
+</ul>
+<pre class="literal-block">9  2  6  |  5  3  5  8  9  7  9  | 3  2  3  8  3  1  4 1  5</pre>
+<ul class="simple">
+<li><p>We apply the algorithm recursively on the strings 926, 5358979 and 323831415. We find that the string 323831415 is
+greater than the rest, so we can keep the basin marker ahead of it.</p></li>
+</ul>
+<pre class="literal-block">9  2  6  5  3  5  8  9  7  9  | 3  2  3  8  3  1  4 1  5</pre>
+<p>At the end of Phase 2, the algorithm outputs index 15, as the shift required to create the code word out of 19 word
+string. And thus our code word found by the eastman's algorithm is</p>
+<pre class="literal-block">3  2  3  8  3  1  4 1  5  9  2  6  5  3  5  8  9  7  9</pre>
+<p>Knuth's gave a demo with his implementation in CWEB. He shared a thought that even though algorithm is expressed
+recursively, the iterative implementation was straight forward. For the rest of the lecture he explores the
+algorithm on a binary string of PI of n = 19 and finds the shift required. Also, gives the probability of Eastman's
+algorithm finishing in one round, that is, just the phase 1.</p>
+<p>All these are covered as exercises and answers in the pre-fascicle 5B of his volume 5 of The Art of Computer
+Programming, which can be explored in further depth.</p>
+<p><strong>Video</strong></p>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/48iJx8FVuis" frameborder="0" allowfullscreen></iframe><p><strong>References</strong></p>
+<ul class="simple">
+<li><p>Pre-Fascicle 5B, Volume 4 of The Art of Computer Programming, Introduction to Backtracking.
+<a class="reference external" href="http://www-cs-faculty.stanford.edu/~uno/taocp.html">http://www-cs-faculty.stanford.edu/~uno/taocp.html</a></p></li>
+<li><p>On the construction of comma free codes <a class="reference external" href="http://ieeexplore.ieee.org/xpl/articleDetails.jsp?reload=true&amp;arnumber=1053766">http://ieeexplore.ieee.org/xpl/articleDetails.jsp?reload=true&amp;arnumber=1053766</a></p></li>
+<li><p>COMMAFREE-EASTMAN.w <a class="reference external" href="http://www-cs-faculty.stanford.edu/~uno/programs/commafree-eastman.w">http://www-cs-faculty.stanford.edu/~uno/programs/commafree-eastman.w</a></p></li>
+</ul>
+<p><strong>Tidbits</strong></p>
+<ul class="simple">
+<li><p>Eastman had worked on Travelling Salesman problem in 1950s before Gomory had come up with integer
+programming. <a class="reference external" href="https://en.wikipedia.org/wiki/Ralph_E._Gomory">https://en.wikipedia.org/wiki/Ralph_E._Gomory</a></p></li>
+<li><p>Chinese language do not use space between words. <a class="reference external" href="https://3000hanzi.com/blog/should_chinese_add_spaces_between_words/">https://3000hanzi.com/blog/should_chinese_add_spaces_between_words/</a></p></li>
+<li><p>Thai language does not use spaces between words.
+<a class="reference external" href="https://www.quora.com/Why-doesnt-the-Thai-language-use-spaces-between-words">https://www.quora.com/Why-doesnt-the-Thai-language-use-spaces-between-words</a>
+<a class="reference external" href="http://www.thai-language.com/ref/breaking-words">http://www.thai-language.com/ref/breaking-words</a></p></li>
+<li><p>Mobius Function: <a class="reference external" href="http://mathworld.wolfram.com/MoebiusFunction.html">http://mathworld.wolfram.com/MoebiusFunction.html</a></p></li>
+<li><p>Comma Free Code: <a class="reference external" href="http://cms.math.ca/openaccess/cjm/v10/cjm1958v10.0202-0209.pdf">http://cms.math.ca/openaccess/cjm/v10/cjm1958v10.0202-0209.pdf</a></p></li>
+</ul>

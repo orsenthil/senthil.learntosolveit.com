@@ -1,0 +1,225 @@
+<h1>Syntax and Semantics</h1>
+<h2>What's with All the Parentheses?</h2>
+<ul>
+<li>Extensive use of parentheses and prefix notation.</li>
+<li>When John McCarthy first invented Lisp, he intended to implement a more 
+        <span class="wikipedia_tooltip"><a href="https://en.wikipedia.org/wiki/ALGOL" target="_blank">ALGOL</a>
+            <span class="wikipedia_summary">
+            <a href="https://en.wikipedia.org/wiki/ALGOL" target="_blank" class="wikipedia_wordmark">
+              <img src="https://upload.wikimedia.org/wikipedia/commons/b/bb/Wikipedia_wordmark.svg">
+              <span class="wikipedia_icon"></span>
+            </a>
+            ALGOL (; short for "Algorithmic Language") is a family of imperative computer programming languages originally developed in 1958. ALGOL heavily influenced many other languages and was the standard method for algorithm description used by the Association for Computing Machinery (ACM) in textbooks and academic sources for more than thirty years.
+            </span>
+        </span>-like syntax, which he called M-expressions.</li>
+<li>The project of defining M-expressions precisely and compiling them or at least translating them into S-expressions was neither finalized nor explicitly abandoned. It just receded into the indefinite future, and a new generation of programmers appeared who preferred [S-expressions] to any 
+        <span class="wikipedia_tooltip"><a href="https://en.wikipedia.org/wiki/Fortran" target="_blank">FORTRAN</a>
+            <span class="wikipedia_summary">
+            <a href="https://en.wikipedia.org/wiki/Fortran" target="_blank" class="wikipedia_wordmark">
+              <img src="https://upload.wikimedia.org/wikipedia/commons/b/bb/Wikipedia_wordmark.svg">
+              <span class="wikipedia_icon"></span>
+            </a>
+            Fortran (; formerly FORTRAN) is a third-generation, compiled, imperative programming language designed for numeric computation and scientific computing.
+            </span>
+        </span>-like or ALGOL-like notation that could be devised.</li>
+</ul>
+<h2>Breaking Open the Black Box</h2>
+<ul>
+<li>In most programming languages, the language processor--whether an interpreter or a compiler--operates as a black box.</li>
+<li>Language processor is divided into three subsystems:</li>
+<li>A lexical analyzer breaks up the stream of characters into tokens.</li>
+<li>And feeds them to a parser that builds a tree representing the expressions in the program, according to the language's grammar.</li>
+<li>
+<p>This tree--called an 
+        <span class="wikipedia_tooltip"><a href="https://en.wikipedia.org/wiki/Abstract_syntax_tree" target="_blank">Abstract syntax tree</a>
+            <span class="wikipedia_summary">
+            <a href="https://en.wikipedia.org/wiki/Abstract_syntax_tree" target="_blank" class="wikipedia_wordmark">
+              <img src="https://upload.wikimedia.org/wikipedia/commons/b/bb/Wikipedia_wordmark.svg">
+              <span class="wikipedia_icon"></span>
+            </a>
+            An abstract syntax tree (AST) is a data structure used in computer science to represent the structure of a program or code snippet. It is a tree representation of the abstract syntactic structure of text (often source code) written in a formal language. Each node of the tree denotes a construct occurring in the text. It is sometimes called just a syntax tree.
+            </span>
+        </span>--is then fed to an evaluator that either interprets it directly or compiles it into some other language such as machine code.</p>
+</li>
+<li>
+<p>Common Lisp defines two black boxes, one that translates text into Lisp objects and another that implements the semantics of the language in terms of those objects. The first box is called the reader, and the second is called the evaluator.</p>
+</li>
+<li>Each black box defines one level of syntax. The reader defines how strings of characters can be translated into Lisp objects called s-expressions.</li>
+</ul>
+<!--more Further Notes on Syntax and Semantics-->
+
+<ul>
+<li>
+<p><code>(foo 1 2)</code> is legal s-expression whereas <code>("foo" 1 2)</code> is not, because a list starting with string has no meaning.</p>
+</li>
+<li>
+<p>This split of Black Box into two has a couple of consequences:</p>
+</li>
+<li>One is that you can use s-expressions, as an externalizable data format (remember the file database example) for data other than source code, using READ to read it and PRINT to print it.</li>
+<li>
+<p>The other consequence is that since the semantics of the language are defined in terms of trees of objects rather than strings of characters, it's easier to generate code within the language than it would be if you had to generate code as text.</p>
+</li>
+<li>
+<p>Generating code completely from scratch is only marginally easier--building up lists vs. building up strings is about the same amount of work. The real win, however, is that you can generate code by manipulating existing data. (This is the basis of macros in lisp)</p>
+</li>
+</ul>
+<h2>S-expressions</h2>
+<ul>
+<li>Elements of s-expressions are lists and atoms</li>
+<li>Lists are delimited by parentheses and can contain any number of whitespace-separated elements. (Recursion here)</li>
+<li>Atoms are everything else.</li>
+<li>
+<p>Comments--which aren't, technically speaking, s-expressions--start with a semicolon, extend to the end of a line, and are treated essentially like whitespace.</p>
+</li>
+<li>
+<p>Since lists are syntactically so trivial, the only remaining syntactic rules you need to know are those governing the form of different kinds of atoms (numbers, strings and names)</p>
+</li>
+<li>
+<p>Numbers are fairly straightforward: any sequence of digits--possibly prefaced with a sign (+ or -), containing a decimal point (.) or a solidus (/), or ending with an exponent marker--is read as a number.
+  E.g: <code>123</code>, <code>3/7</code>, <code>1.0</code>, <code>1.0e0</code>, <code>1.0d0</code>, <code>1.0e-4</code>, <code>+42</code>, <code>-42</code></p>
+</li>
+<li>
+<p>All rationals are internally represented in a simplified form.</p>
+</li>
+<li>
+<p>On the other hand, <code>1.0</code>, <code>1.0d0</code>, and <code>1</code> can all denote different objects because the different floating-point representations and integers are different types.</p>
+</li>
+<li>
+<p>Strings are enclosed in double quotes. Within a string a backslash (<code>\</code>) escapes the next character, causing it to be included in the string regardless of what it is. The only two characters that must be escaped within a string are double quotes and the backslash itself.</p>
+</li>
+<li>
+<p>Names used in Lisp programs, such as FORMAT and hello-world, and <em>db</em> are represented by objects called symbols.</p>
+</li>
+<li>
+<p>Almost any character can appear in a name. Whitespace characters cannot appear, because the elements of the list are separated by whitespace.</p>
+</li>
+<li>No periods only name.</li>
+<li>
+<p>Open and close parentheses, double and single quotes, backtick, comma, colon, semicolon, backslash, and vertical bar are for syntactic purposes in lisp. If wish to include them in name, precede with backslash or two vertical bars.</p>
+</li>
+<li>
+<p>While reading names, the reader converts all unescaped characters in a name to their uppercase equivalents. That's why REPL prints the upper case name.</p>
+</li>
+<li>
+<p>Standard style, these days, is to write code in all lowercase and let the reader change names to uppercase.</p>
+</li>
+<li>
+<p>The reader interns symbols--after it has read the name and converted it to all uppercase, the reader looks in a table called a package for an existing symbol with the same name. If can't find one, create a new symbol and add it to the table or return the symbol as already in the table.</p>
+</li>
+<li>
+<p>Hyphenated names is a convention.</p>
+</li>
+<li>Global variables are given names that start and end with <code>*</code></li>
+<li>Constants are given names, starting and ending with <code>+</code>.</li>
+<li>
+<p>Few programmers, define name starting with <code>%</code> and <code>%%</code>.</p>
+</li>
+<li>
+<p>The syntax of list, number, strings and symbols represent a good amount of lisp programs.</p>
+</li>
+</ul>
+<div class="code"><pre class="code literal-block"><span class="nv">x</span><span class="w">             </span><span class="c1">; the symbol X</span>
+<span class="p">()</span><span class="w">            </span><span class="c1">; the empty list</span>
+<span class="p">(</span><span class="mi">1</span><span class="w"> </span><span class="mi">2</span><span class="w"> </span><span class="mi">3</span><span class="p">)</span><span class="w">       </span><span class="c1">; a list of three numbers</span>
+<span class="p">(</span><span class="s">&quot;foo&quot;</span><span class="w"> </span><span class="s">&quot;bar&quot;</span><span class="p">)</span><span class="w"> </span><span class="c1">; a list of two strings</span>
+<span class="p">(</span><span class="nv">x</span><span class="w"> </span><span class="nv">y</span><span class="w"> </span><span class="nv">z</span><span class="p">)</span><span class="w">       </span><span class="c1">; a list of three symbols</span>
+<span class="p">(</span><span class="nv">x</span><span class="w"> </span><span class="mi">1</span><span class="w"> </span><span class="s">&quot;foo&quot;</span><span class="p">)</span><span class="w">   </span><span class="c1">; a list of a symbol, a number, and a string</span>
+<span class="p">(</span><span class="nb">+</span><span class="w"> </span><span class="p">(</span><span class="nb">*</span><span class="w"> </span><span class="mi">2</span><span class="w"> </span><span class="mi">3</span><span class="p">)</span><span class="w"> </span><span class="mi">4</span><span class="p">)</span><span class="w"> </span><span class="c1">; a list of a symbol, a list, and a number.</span>
+</pre></div>
+
+<p>An only slightly more complex example is the following four-item list that contains two symbols, the empty list, and another list, itself containing two symbols and a string:</p>
+<div class="code"><pre class="code literal-block"><span class="p">(</span><span class="nb">defun</span><span class="w"> </span><span class="nv">hello-world</span><span class="w"> </span><span class="p">()</span>
+<span class="w">  </span><span class="p">(</span><span class="nb">format</span><span class="w"> </span><span class="no">t</span><span class="w"> </span><span class="s">&quot;hello, world&quot;</span><span class="p">))</span>
+</pre></div>
+
+<h2>S-expressions as Lisp Forms</h2>
+<ul>
+<li>Common Lisp's evaluation rule defines a second level of syntax that determines which s-expressions can be treated as Lisp forms.</li>
+<li>Any atom--any nonlist or the empty list--is a legal Lisp form as is any list that has a symbol as its first element.</li>
+<li>For purposes of discussion, you can think of the evaluator as a function that takes as an argument a syntactically well-formed Lisp form and returns a value, which we can call the value of the form.</li>
+<li>The simplest Lisp forms, atoms, can be divided into two categories: symbols and everything else.</li>
+<li>Symbol, evaluated as a form, is considered the name of a variable and evaluates to the current value of the variable.</li>
+<li>For instance, the symbol PI names a constant variable whose value is the best possible floating-point approximation to the mathematical constant pi.</li>
+<li>All other atoms--numbers and strings are the kinds you've seen so far--are self-evaluating objects.</li>
+<li>It's also possible for symbols to be self-evaluating in the sense that the variables they name can be assigned the value of the symbol itself. Two important constants that are defined this way are T and NIL, the canonical true and false values.</li>
+<li>Another class of self-evaluating symbols are the keyword symbols--symbols whose names start with <code>:</code>.</li>
+<li>To determine what kind of form a given list is, the evaluator must determine whether the symbol that starts the list is the name of a function, a macro, or a special operator.</li>
+</ul>
+<h2>Function Calls</h2>
+<ul>
+<li>The evaluation rule for function call forms is simple: evaluate the remaining elements of the list as Lisp forms and pass the resulting values to the named function.</li>
+</ul>
+<div class="code"><pre class="code literal-block"><span class="p">(</span><span class="nv">function-name</span><span class="w"> </span><span class="nv">argument*</span><span class="p">)</span>
+</pre></div>
+
+<ul>
+<li>Thus, the following expression is evaluated by first evaluating 1, then evaluating 2, and then passing the resulting values to the + function, which returns 3:</li>
+</ul>
+<div class="code"><pre class="code literal-block"><span class="p">(</span><span class="nb">+</span><span class="w"> </span><span class="mi">1</span><span class="w"> </span><span class="mi">2</span><span class="p">)</span>
+</pre></div>
+
+<h2>Special Operators</h2>
+<ul>
+<li>Because all the arguments to a function are evaluated before the function is called, there's no way to write a function that behaves like the IF operator.</li>
+<li>To solve this problem, Common Lisp defines a couple dozen so-called special operators, IF being one, that do things that functions can't do. There are 25 in all, but only a small handful are used directly in day-to-day programming.</li>
+<li>The rule for IF is pretty easy: evaluate the first expression. If it evaluates to non-NIL, then evaluate the next expression and return its value. Otherwise, return the value of evaluating the third expression or NIL if the third expression is omitted.</li>
+<li>An even simpler special operator is QUOTE, which takes a single expression as its "argument" and simply returns it, unevaluated.</li>
+<li>QUOTE is used commonly enough that a special syntax for it is built into the reader. Instead of writing the following:</li>
+</ul>
+<div class="code"><pre class="code literal-block"><span class="p">(</span><span class="k">quote</span><span class="w"> </span><span class="p">(</span><span class="nb">+</span><span class="w"> </span><span class="mi">1</span><span class="w"> </span><span class="mi">2</span><span class="p">))</span>
+</pre></div>
+
+<p>you can write this:</p>
+<div class="code"><pre class="code literal-block"><span class="o">&#39;</span><span class="p">(</span><span class="nb">+</span><span class="w"> </span><span class="mi">1</span><span class="w"> </span><span class="mi">2</span><span class="p">)</span>
+</pre></div>
+
+<p>This syntax is a small extension of the s-expression syntax understood by the reader. From the point of view of the evaluator, both those expressions will look the same: a list whose first element is the symbol QUOTE and whose second element is the list (+ 1 2).15</p>
+<h2>Macros:</h2>
+<ul>
+<li>While special operators extend the syntax of Common Lisp beyond what can be expressed with just function calls, the set of special operators is fixed by the language standard. Macros, on the other hand, give users of the language a way to extend its syntax.</li>
+<li>
+<p>The evaluation of a macro form proceeds in two phases: First, the elements of the macro form are passed, unevaluated, to the macro function. Second, the form returned by the macro function--called its expansion--is evaluated according to the normal evaluation rules.</p>
+</li>
+<li>
+<p>For instance, when you compile a whole file of source code with the function COMPILE-FILE, all the macro forms in the file are recursively expanded until the code consists of nothing but function call forms and special forms. This macroless code is then compiled into a FASL file that the LOAD function knows how to load.</p>
+</li>
+<li>
+<p>Since the evaluator doesn't evaluate the elements of the macro form before passing them to the macro function, they don't need to be well-formed Lisp forms.</p>
+</li>
+<li>
+<p>In other words, each macro defines its own local syntax. For instance, the backwards macro from Chapter 3 defines a syntax in which an expression is a legal backwards form if it's a list that's the reverse of a legal Lisp form.</p>
+</li>
+<li>
+<p>Macros (while syntactically similar to functions) provide an exciting hook into the compiler.</p>
+</li>
+</ul>
+<h2>Truth, Falsehood and Equality</h2>
+<ul>
+<li><code>T</code> for True, <code>NIL</code> for False value and everything else is True.</li>
+<li>The tricky thing about NIL is that it's the only object that's both an atom and a list: in addition to falsehood, it's also used to represent the empty list.</li>
+<li><code>nil</code>, <code>()</code>, <code>'nil</code>, <code>'()</code> evaluate to NIL.</li>
+<li><code>t</code>, <code>'t</code> evaluate to T.</li>
+<li>Common Lisp provides a number of type-specific equality predicates: <code>=</code> is used to compare numbers, <code>CHAR=</code> to compare characters, and so on.</li>
+<li><code>EQ</code> tests for "object identity"--two objects are EQ if they're identical. (Don't use as they are implementation dependent)</li>
+<li>Thus, Common Lisp defines <code>EQL</code> to behave like <code>EQ</code> except that it also is guaranteed to consider two objects of the same class representing the same numeric or character value to be equivalent.</li>
+<li><code>EQUAL</code> loosens the discrimination of <code>EQL</code> to consider lists equivalent if they have the same structure and contents, recursively, according to <code>EQUAL</code>. <code>EQUAL</code> also considers strings equivalent if they contain the same characters.</li>
+<li><code>EQUALP</code> is similar to <code>EQUAL</code> except it's even less discriminating. It considers two strings equivalent if they contain the same characters, ignoring differences in case.</li>
+</ul>
+<h2>Formatting Lisp Code</h2>
+<ul>
+<li>The indentation should reflect the structure of the code.</li>
+<li>Macro and special forms that implement control constructs are typically indented a little differently: the "body" elements are indented two spaces relative to the opening parenthesis of the form.</li>
+</ul>
+<div class="code"><pre class="code literal-block"><span class="p">(</span><span class="nb">defun</span><span class="w"> </span><span class="nv">print-list</span><span class="w"> </span><span class="p">(</span><span class="nb">list</span><span class="p">)</span>
+<span class="w">  </span><span class="p">(</span><span class="nb">dolist</span><span class="w"> </span><span class="p">(</span><span class="nv">i</span><span class="w"> </span><span class="nb">list</span><span class="p">)</span>
+<span class="w">    </span><span class="p">(</span><span class="nb">format</span><span class="w"> </span><span class="no">t</span><span class="w"> </span><span class="s">&quot;item: ~a~%&quot;</span><span class="w"> </span><span class="nv">i</span><span class="p">)))</span>
+</pre></div>
+
+<ul>
+<li>Re-indent a whole expression by positioning the cursor on the opening parenthesis and typing C-M-q.</li>
+<li>Or you can re-indent the whole body of a function from anywhere within it by typing C-c M-q.</li>
+<li>Finally, comments should be prefaced with one to four semicolons depending on the scope of the comment as follows:</li>
+<li><code>;;;;</code> four colon comments for file header.</li>
+<li><code>;;;</code> three colon for paragraph.</li>
+<li><code>;;</code> for the code following, which is indented along with code.</li>
+</ul>

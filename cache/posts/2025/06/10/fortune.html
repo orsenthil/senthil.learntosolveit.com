@@ -1,0 +1,46 @@
+<p>A minimalist browser extension that displays a new quote in the browser tab. For example, when you open a new tab, you will see quotes like this:</p>
+<hr class="docutils" />
+<p><em>&quot;And this is aviation; I give it to the world.&quot;</em>  - <em>Louis Mouillard, French Inventor/Aeronaut (1834-1897)</em></p>
+<p><em>&quot;We were on the point of abandoning our work when the book of Mouillard fell into our hands, and we continued with the results you know.&quot;</em> - <em>Wilbur Wright, American Inventor/Aviator (1867-1921)</em></p>
+<hr class="docutils" />
+<p>This extension is named after popular Unix Program 
+        <span class="wikipedia_tooltip"><a href="https://en.wikipedia.org/wiki/Fortune_(Unix)" target="_blank">Fortune_(Unix)</a>
+            <span class="wikipedia_summary">
+            <a href="https://en.wikipedia.org/wiki/Fortune_(Unix)" target="_blank" class="wikipedia_wordmark">
+              <img src="https://upload.wikimedia.org/wikipedia/commons/b/bb/Wikipedia_wordmark.svg">
+              <span class="wikipedia_icon"></span>
+            </a>
+            fortune is a program that displays a pseudorandom message from a database of quotations.
+            </span>
+        </span>, a command line utility which displays quotes in the shell. The browser with tabs is a modern shell interface of the computer. And this is the fortune program for the browser.</p>
+<section id="technical-details">
+<h1>Technical Details</h1>
+<p>I developed this with Python hosted on Google App Engine, and the client side written using Javascript as a browser addon. In the backend there is a database where I keep the quote and author in a table. There is API call that returns the quote and the author in the JSON format. To call the API visit <a class="reference external" href="http://quotes-1271.appspot.com/json">http://quotes-1271.appspot.com/json</a> . This is an unauthenticated API as it read-only GET call, and cannot change the state of the system.</p>
+<p>The client side is entirely handled by Javascript, and it displays the quote using simple 
+        <span class="wikipedia_tooltip"><a href="https://en.wikipedia.org/wiki/Document_Object_Model" target="_blank">Document_Object_Model</a>
+            <span class="wikipedia_summary">
+            <a href="https://en.wikipedia.org/wiki/Document_Object_Model" target="_blank" class="wikipedia_wordmark">
+              <img src="https://upload.wikimedia.org/wikipedia/commons/b/bb/Wikipedia_wordmark.svg">
+              <span class="wikipedia_icon"></span>
+            </a>
+            The Document Object Model (DOM) is a cross-platform and language-independent API that treats an HTML or XML document as a tree structure wherein each node is an object representing a part of the document. The DOM represents a document with a logical tree. Each branch of the tree ends in a node, and each node contains objects. DOM methods allow programmatic access to the tree; with them one can change the structure, style or content of a document. Nodes can have event handlers (also known as event listeners) attached to them. Once an event is triggered, the event handlers get executed.
+            </span>
+        </span> manipulation.</p>
+</section>
+<section id="get-the-extension-directly-from-the-webstore">
+<h1>Get the extension directly from the webstore</h1>
+<ul class="simple">
+<li><p><a class="reference external" href="https://chromewebstore.google.com/detail/fortune/kmcoofcbagjmlfbkoopfohngcnfnaakb">Google Chrome Extension</a></p></li>
+<li><p><a class="reference external" href="https://addons.mozilla.org/en-US/firefox/addon/fortune-browser-extension/">Firefox Addons</a></p></li>
+</ul>
+</section>
+<section id="screenshot">
+<h1>Screenshot</h1>
+<img alt="screenshot" src="https://i.imgur.com/qLlqW7t.png" />
+</section>
+<section id="video-demo">
+<h1>Video Demo</h1>
+<a class="reference external image-reference" href="http://www.youtube.com/watch?v=3S8b3eROxUY">
+<img alt="Demo" src="http://img.youtube.com/vi/3S8b3eROxUY/0.jpg" />
+</a>
+</section>

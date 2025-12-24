@@ -1,0 +1,35 @@
+<p>Setting up a TeamCity Server on Mac as a personal agent was very easy.</p>
+<ol class="arabic simple">
+<li><p>Run TeamCity server</p></li>
+</ol>
+<div class="code"><pre class="code bash"><a id="rest_code_f4dc98906ea7457e938d8144b73b8c2f-1" name="rest_code_f4dc98906ea7457e938d8144b73b8c2f-1" href="#rest_code_f4dc98906ea7457e938d8144b73b8c2f-1"></a><span class="ch">#!/bin/bash</span>
+<a id="rest_code_f4dc98906ea7457e938d8144b73b8c2f-2" name="rest_code_f4dc98906ea7457e938d8144b73b8c2f-2" href="#rest_code_f4dc98906ea7457e938d8144b73b8c2f-2"></a>
+<a id="rest_code_f4dc98906ea7457e938d8144b73b8c2f-3" name="rest_code_f4dc98906ea7457e938d8144b73b8c2f-3" href="#rest_code_f4dc98906ea7457e938d8144b73b8c2f-3"></a><span class="nv">PATH_TO_DATA_DIR</span><span class="o">=</span>/Users/senthil/teamcity/data
+<a id="rest_code_f4dc98906ea7457e938d8144b73b8c2f-4" name="rest_code_f4dc98906ea7457e938d8144b73b8c2f-4" href="#rest_code_f4dc98906ea7457e938d8144b73b8c2f-4"></a><span class="nv">PATH_TO_LOGS_DIR</span><span class="o">=</span>/Users/senthil/teamcity/logs
+<a id="rest_code_f4dc98906ea7457e938d8144b73b8c2f-5" name="rest_code_f4dc98906ea7457e938d8144b73b8c2f-5" href="#rest_code_f4dc98906ea7457e938d8144b73b8c2f-5"></a><span class="nv">PORT_HOST</span><span class="o">=</span><span class="m">8111</span>
+<a id="rest_code_f4dc98906ea7457e938d8144b73b8c2f-6" name="rest_code_f4dc98906ea7457e938d8144b73b8c2f-6" href="#rest_code_f4dc98906ea7457e938d8144b73b8c2f-6"></a>
+<a id="rest_code_f4dc98906ea7457e938d8144b73b8c2f-7" name="rest_code_f4dc98906ea7457e938d8144b73b8c2f-7" href="#rest_code_f4dc98906ea7457e938d8144b73b8c2f-7"></a>docker<span class="w"> </span>run<span class="w"> </span>-it<span class="w"> </span>--name<span class="w"> </span>teamcity-server-instance<span class="w">  </span><span class="se">\</span>
+<a id="rest_code_f4dc98906ea7457e938d8144b73b8c2f-8" name="rest_code_f4dc98906ea7457e938d8144b73b8c2f-8" href="#rest_code_f4dc98906ea7457e938d8144b73b8c2f-8"></a><span class="w">    </span>-v<span class="w"> </span><span class="nv">$PATH_TO_DATA_DIR</span>:/data/teamcity_server/datadir<span class="w"> </span><span class="se">\</span>
+<a id="rest_code_f4dc98906ea7457e938d8144b73b8c2f-9" name="rest_code_f4dc98906ea7457e938d8144b73b8c2f-9" href="#rest_code_f4dc98906ea7457e938d8144b73b8c2f-9"></a><span class="w">    </span>-v<span class="w"> </span><span class="nv">$PATH_TO_LOGS_DIR</span>:/opt/teamcity/logs<span class="w">  </span><span class="se">\</span>
+<a id="rest_code_f4dc98906ea7457e938d8144b73b8c2f-10" name="rest_code_f4dc98906ea7457e938d8144b73b8c2f-10" href="#rest_code_f4dc98906ea7457e938d8144b73b8c2f-10"></a><span class="w">    </span>-p<span class="w"> </span><span class="nv">$PORT_HOST</span>:8111<span class="w"> </span><span class="se">\</span>
+<a id="rest_code_f4dc98906ea7457e938d8144b73b8c2f-11" name="rest_code_f4dc98906ea7457e938d8144b73b8c2f-11" href="#rest_code_f4dc98906ea7457e938d8144b73b8c2f-11"></a><span class="w">    </span>jetbrains/teamcity-server
+</pre></div>
+<p>The teamcity server is accessible now at <a class="reference external" href="http://127.0.0.1:8111">http://127.0.0.1:8111</a></p>
+<ol class="arabic simple" start="2">
+<li><p>Setup a reverse proxy to access that locally.</p></li>
+</ol>
+<div class="code"><pre class="code bash"><a id="rest_code_cf47fc702f254fd6b11ac30eccb4b8eb-1" name="rest_code_cf47fc702f254fd6b11ac30eccb4b8eb-1" href="#rest_code_cf47fc702f254fd6b11ac30eccb4b8eb-1"></a>$<span class="w"> </span>cat<span class="w"> </span>/etc/apache2/vhosts/teamcity.local.conf
+<a id="rest_code_cf47fc702f254fd6b11ac30eccb4b8eb-2" name="rest_code_cf47fc702f254fd6b11ac30eccb4b8eb-2" href="#rest_code_cf47fc702f254fd6b11ac30eccb4b8eb-2"></a>&lt;VirtualHost<span class="w"> </span>*:80&gt;
+<a id="rest_code_cf47fc702f254fd6b11ac30eccb4b8eb-3" name="rest_code_cf47fc702f254fd6b11ac30eccb4b8eb-3" href="#rest_code_cf47fc702f254fd6b11ac30eccb4b8eb-3"></a><span class="w">    </span>ProxyPreserveHost<span class="w"> </span>On
+<a id="rest_code_cf47fc702f254fd6b11ac30eccb4b8eb-4" name="rest_code_cf47fc702f254fd6b11ac30eccb4b8eb-4" href="#rest_code_cf47fc702f254fd6b11ac30eccb4b8eb-4"></a><span class="w">    </span>ServerName<span class="w"> </span>teamcity.local
+<a id="rest_code_cf47fc702f254fd6b11ac30eccb4b8eb-5" name="rest_code_cf47fc702f254fd6b11ac30eccb4b8eb-5" href="#rest_code_cf47fc702f254fd6b11ac30eccb4b8eb-5"></a><span class="w">    </span>ProxyPass<span class="w"> </span>/<span class="w"> </span>http://127.0.0.1:8111/
+<a id="rest_code_cf47fc702f254fd6b11ac30eccb4b8eb-6" name="rest_code_cf47fc702f254fd6b11ac30eccb4b8eb-6" href="#rest_code_cf47fc702f254fd6b11ac30eccb4b8eb-6"></a><span class="w">    </span>ProxyPassReverse<span class="w"> </span>/<span class="w"> </span>http://127.0.0.1:8111/
+<a id="rest_code_cf47fc702f254fd6b11ac30eccb4b8eb-7" name="rest_code_cf47fc702f254fd6b11ac30eccb4b8eb-7" href="#rest_code_cf47fc702f254fd6b11ac30eccb4b8eb-7"></a><span class="w">    </span>LogLevel<span class="w"> </span>debug
+<a id="rest_code_cf47fc702f254fd6b11ac30eccb4b8eb-8" name="rest_code_cf47fc702f254fd6b11ac30eccb4b8eb-8" href="#rest_code_cf47fc702f254fd6b11ac30eccb4b8eb-8"></a>&lt;/VirtualHost&gt;
+</pre></div>
+<ol class="arabic simple" start="3">
+<li><p>Setup your <cite>/etc/host</cite> to point <a class="reference external" href="http://teamcity.local">http://teamcity.local</a> to 127.0.0.1:8111</p></li>
+</ol>
+<div class="code"><pre class="code bash"><a id="rest_code_7a0a9888fc1e4cc6b2d364fe408a0629-1" name="rest_code_7a0a9888fc1e4cc6b2d364fe408a0629-1" href="#rest_code_7a0a9888fc1e4cc6b2d364fe408a0629-1"></a>$<span class="w"> </span>cat<span class="w"> </span>/etc/hosts<span class="w"> </span><span class="p">|</span>grep<span class="w"> </span>teamcity
+<a id="rest_code_7a0a9888fc1e4cc6b2d364fe408a0629-2" name="rest_code_7a0a9888fc1e4cc6b2d364fe408a0629-2" href="#rest_code_7a0a9888fc1e4cc6b2d364fe408a0629-2"></a><span class="m">127</span>.0.0.1<span class="w">   </span>teamcity.local
+</pre></div>

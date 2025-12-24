@@ -1,0 +1,16 @@
+<p>With the trend in functional programming up, I noticed a new programming language called &quot;coconut&quot; that implements
+functional programing &quot;style&quot;. This is written on top of &quot;python&quot;, the coconut language scripts are compiled and
+translated to python.</p>
+<p>For e.g, this factorial coconut program, will be translated to a valid python program.</p>
+<pre class="literal-block">def factorial(n):
+    &quot;&quot;&quot;Compute n! where n is an integer &gt;= 0.&quot;&quot;&quot;
+    case n:
+        match 0:
+            return 1
+        match _ is int if n &gt; 0:
+            return n * factorial(n-1)
+    else:
+        raise TypeError(&quot;the argument to factorial must be an integer &gt;= 0&quot;)</pre>
+<p>You can notice the pattern matching style in the above program, which is not a syntax in Python. This program will then
+be converted into a valid python program.</p>
+<p>Great many details can be found in the coconut-lang website.</p>

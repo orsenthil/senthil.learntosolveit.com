@@ -1,0 +1,73 @@
+<p>I was almost about to give up on 
+        <span class="wikipedia_tooltip"><a href="https://en.wikipedia.org/wiki/Ubuntu" target="_blank">Ubuntu</a>
+            <span class="wikipedia_summary">
+            <a href="https://en.wikipedia.org/wiki/Ubuntu" target="_blank" class="wikipedia_wordmark">
+              <img src="https://upload.wikimedia.org/wikipedia/commons/b/bb/Wikipedia_wordmark.svg">
+              <span class="wikipedia_icon"></span>
+            </a>
+            Ubuntu (  uu-BUUN-too) is a Linux distribution based on Debian and composed primarily of free and open-source software. Developed by the British company Canonical and a community of contributors under a meritocratic governance model, Ubuntu is released in multiple official editions: Desktop, Server, and Core for IoT and robotic devices.
+            </span>
+        </span>, because after I installed the Fiesty, I was not able to download the packages from Repositories due to some proxy authentication issue. Tried various things for a week and when could not go any step further, I had thought let me get back to Fedora and was thinking about how new users of Linux will be feeling when they dont get support on what they need to get wishes satisfied with Linux. In my case, it was a particular distribution.</p>
+<p>After a week, I setup my box again and wanted to give a final try. Instead of going to 
+        <span class="wikipedia_tooltip"><a href="https://en.wikipedia.org/wiki/Synaptic_(software)" target="_blank">Synaptic (software)</a>
+            <span class="wikipedia_summary">
+            <a href="https://en.wikipedia.org/wiki/Synaptic_(software)" target="_blank" class="wikipedia_wordmark">
+              <img src="https://upload.wikimedia.org/wikipedia/commons/b/bb/Wikipedia_wordmark.svg">
+              <span class="wikipedia_icon"></span>
+            </a>
+            Synaptic is a GTK-based graphical user interface designed for the APT package manager used by the Debian Linux distribution and its derivatives. Synaptic is usually used on systems based on deb packages but can also be used on systems based on RPM packages. It can be used to install, remove and upgrade software packages and to add repositories.
+            </span>
+        </span> and meddling with Repository sources, I thought let me try Add/Remove application to Install software and see what happens.</p>
+<p>The basic install of ubuntu (from the CD) did not have things which a regular Linux user would desire. Well, what the heck, gvim was not there! Browsing through the software list I checked 
+        <span class="wikipedia_tooltip"><a href="https://en.wikipedia.org/wiki/Emacs" target="_blank">Emacs</a>
+            <span class="wikipedia_summary">
+            <a href="https://en.wikipedia.org/wiki/Emacs" target="_blank" class="wikipedia_wordmark">
+              <img src="https://upload.wikimedia.org/wikipedia/commons/b/bb/Wikipedia_wordmark.svg">
+              <span class="wikipedia_icon"></span>
+            </a>
+            Emacs ( ), originally named EMACS (an acronym for "Editor Macros"), is a family of text editors that are characterized by their extensibility. The manual for the most widely used variant, GNU Emacs, describes it as "the extensible, customizable, self-documenting, real-time display editor". Development of the first Emacs began in the mid-1970s, and work on GNU Emacs, directly descended from the original, is ongoing; its latest version is 30.2 , released 14 August 2025.
+            </span>
+        </span> 21 for Installation and pressed Apply. Something interesting started to happen. It started downloading automatically from http://archive.ubuntu.com/ubuntu/dists/feisty/main/</p>
+<p>I felt a kind of relief that I will be able to spend more time with ubuntu now.</p>
+<p>There is a tricky bug with Ubuntu package manager, I think. The following was my setup with package installation from repos worked.</p>
+<p>1) 
+        <span class="wikipedia_tooltip"><a href="https://en.wikipedia.org/wiki/Firefox" target="_blank">Firefox</a>
+            <span class="wikipedia_summary">
+            <a href="https://en.wikipedia.org/wiki/Firefox" target="_blank" class="wikipedia_wordmark">
+              <img src="https://upload.wikimedia.org/wikipedia/commons/b/bb/Wikipedia_wordmark.svg">
+              <span class="wikipedia_icon"></span>
+            </a>
+            Mozilla Firefox, or simply Firefox, is a free and open-source web browser developed by the Mozilla Foundation and its subsidiary, the Mozilla Corporation. It uses the Gecko rendering engine to display web pages, which implements current and anticipated web standards. Firefox is available for Windows 10 or later versions of Windows, macOS, and Linux. Its unofficial ports are available for various Unix and Unix-like operating systems, including FreeBSD, OpenBSD, NetBSD, and other operating systems, such as ReactOS. It is the default, pre-installed browser on Debian, Ubuntu, and other Linux distros. Firefox is also available for Android and iOS. However, as with all other iOS web browsers, the iOS version uses the WebKit layout engine instead of Gecko due to platform requirements. An optimized version was also available on the Amazon Fire TV as one of the two main browsers available with Amazon's Silk Browser, until April 30, 2021, when Firefox would be discontinued on that platform. Firefox is the spiritual successor of Netscape Navigator, as the Mozilla community was created by Netscape in 1998, before its acquisition by AOL. Firefox was created in 2002 under the codename "Phoenix" by members of the Mozilla community who desired a standalone browser rather than the Mozilla Application Suite bundle. During its beta phase, it proved to be popular with its testers and was praised for its speed, security, and add-ons compared to Microsoft's then-dominant Internet Explorer 6. It was released on November 9, 2004, and challenged Internet Explorer's dominance with 60 million downloads within nine months. In November 2017, Firefox began incorporating new technology under the code name "Quantum" to promote parallelism and a more intuitive user interface.
+            </span>
+        </span> configured with proxy and proxy authentication details.
+2) Gnome Network Preferences, Proxy NOT configured.
+3) Without adding any repos, archive.ubuntu.com which is kind of a default repo is only working thing.</p>
+<p>If I configure, Gnome Network Preferences with proxy details, the package manager fails with Proxy Authentication message.</p>
+<p>The following tests might help.</p>
+<p>1) Without Firefox Proxy, try with package manager.
+2) Test Gnome Network Preferences for other applications. 
+        <span class="wikipedia_tooltip"><a href="https://en.wikipedia.org/wiki/GNOME_Web" target="_blank">Epiphany (web browser)</a>
+            <span class="wikipedia_summary">
+            <a href="https://en.wikipedia.org/wiki/GNOME_Web" target="_blank" class="wikipedia_wordmark">
+              <img src="https://upload.wikimedia.org/wikipedia/commons/b/bb/Wikipedia_wordmark.svg">
+              <span class="wikipedia_icon"></span>
+            </a>
+            GNOME Web, called Epiphany until 2012 and still known by that code name, is a free and open-source web browser based on the GTK port of Apple's WebKit rendering engine, called WebKitGTK. It is developed by the GNOME project for Unix-like systems. It is the default and official web browser of GNOME, and part of the GNOME Core Applications.
+            </span>
+        </span> can be used.
+3) Try other repositories.</p>
+<p>I shall try that and figure out the exact issue.</p>
+<p>Now that I was able to configure the package manager, I got a wealth of neatly arranged package to choose from and Install. The Installation procedure was totally homogeneous. Neat, easy is what I can say of Ubuntu. Hey, you might hear those two words from many of the Ubuntu users, but you will appreciate only when you "feel" it.</p>
+<p>Even <a href="http://picasa.google.com/linux/download.html">Picassa</a> download in deb format was handled properly by gnome deb package installer. I had never used deb and always thought deb format is difficult than rpm.</p>
+<p>I had transfered my camera shot movies of Bungee jump to Ubuntu machine, first surprised to see the thumbnail of avi file and next <a href="http://orsenthil.blogspot.com/2005/10/tried-new-default-apps-with-linux.html">
+        <span class="wikipedia_tooltip"><a href="https://en.wikipedia.org/wiki/GNOME_Videos" target="_blank">Totem (media player)</a>
+            <span class="wikipedia_summary">
+            <a href="https://en.wikipedia.org/wiki/GNOME_Videos" target="_blank" class="wikipedia_wordmark">
+              <img src="https://upload.wikimedia.org/wikipedia/commons/b/bb/Wikipedia_wordmark.svg">
+              <span class="wikipedia_icon"></span>
+            </a>
+            GNOME Videos, formerly known as Totem, is a media player (audio and video) for the GNOME computer desktop environment. GNOME Videos uses the Clutter and GTK+ toolkits. It is officially included in GNOME starting from version 2.10 (released in March 2005), but de facto it was already included in most GNOME environments. Totem utilizes the GStreamer framework for playback, though until version 2.27.1, it could alternatively be configured to use the Xine libraries instead of GStreamer.
+            </span>
+        </span> player played that avi</a> file. I felt wow!. Because, its first time Totem player had worked for me (apart from the live cd demo)</p>
+<p>Then I spent looking at all the interesting programs that default, multiverse, and universe repositories could offer. There are tons of python language packages to install directly from the repos.</p>
+<p>But the sweetest of all surprises came, when I thought let me search for <a href="http://rapple.sourceforge.net/">rapple</a> and <a href="http://nanoblogger.sourceforge.net/">nanoblogger</a>. I know, there were debian maintainers for these to two projects. But it was really nice, to see a the project I have contributed to as being listed from the repository and choosing them to install it!</p>

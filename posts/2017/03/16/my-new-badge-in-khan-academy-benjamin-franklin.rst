@@ -8,7 +8,3 @@
 .. type: text
 
 I earned a {{% wikipedia article="Benjamin_Franklin" %}} badge.
-
-.. image:: https://dl.dropbox.com/s/c4huwavt9q7ttac/Screenshot%202017-03-16%2023.20.32.png?dl=0
-   :height: 300
-   :width: 650

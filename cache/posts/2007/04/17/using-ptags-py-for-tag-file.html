@@ -1,0 +1,17 @@
+<ol>
+<li>Place the <code>ptags.py</code> file in your <code>$PATH</code>.</li>
+<li>From the project directory containing your Python project, run the following command:</li>
+</ol>
+<div class="code"><pre class="code literal-block">find<span class="w"> </span>.<span class="w"> </span>-name<span class="w"> </span><span class="s2">&quot;*.py&quot;</span><span class="w"> </span>-print<span class="w"> </span><span class="p">|</span><span class="w"> </span>xargs<span class="w"> </span>ptags.py
+</pre></div>
+
+<p>I was previously using various inefficient methods to achieve this. The <code>ptags.py</code> script is similar to 
+        <span class="wikipedia_tooltip"><a href="https://en.wikipedia.org/wiki/Ctags" target="_blank">Ctags</a>
+            <span class="wikipedia_summary">
+            <a href="https://en.wikipedia.org/wiki/Ctags" target="_blank" class="wikipedia_wordmark">
+              <img src="https://upload.wikimedia.org/wikipedia/commons/b/bb/Wikipedia_wordmark.svg">
+              <span class="wikipedia_icon"></span>
+            </a>
+            ctags is a shell command that generates an index (tag) file of programmatic identifiers parsed from source code files of various programming languages to aid with code comprehension. The tags are often used by a source-code editor to lookup the definition of an identifier while the user develops the source code. Alternatively, the command supports an output format that is a human-readable cross reference.
+            </span>
+        </span> but specifically designed for Python code.</p>

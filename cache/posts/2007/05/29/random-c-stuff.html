@@ -1,0 +1,100 @@
+<div class="code"><pre class="code literal-block"><span class="cm">/**</span>
+<span class="cm"> *Without using /, % or * operator, write a function to divide a number by 3.</span>
+<span class="cm"> **/</span>
+
+<span class="cp">#include</span>
+
+
+
+<span class="kt">int</span><span class="w"> </span><span class="nf">divideby3</span><span class="p">(</span><span class="kt">int</span><span class="p">);</span>
+
+
+
+<span class="kt">int</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">argc</span><span class="p">,</span><span class="kt">char</span><span class="w"> </span><span class="o">**</span><span class="n">argv</span><span class="p">)</span>
+
+<span class="p">{</span>
+
+<span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">res</span><span class="p">;</span>
+
+<span class="w">    </span><span class="n">res</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">divideby3</span><span class="p">(</span><span class="mi">9</span><span class="p">);</span>
+
+<span class="w">    </span><span class="n">printf</span><span class="p">(</span><span class="s">&quot;%d&quot;</span><span class="p">,</span><span class="n">res</span><span class="p">);</span>
+
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+
+<span class="p">}</span>
+
+
+
+<span class="kt">int</span><span class="w"> </span><span class="nf">divideby3</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">aNumber</span><span class="p">)</span>
+
+<span class="p">{</span>
+
+<span class="w">    </span><span class="kt">div_t</span><span class="w"> </span><span class="n">d</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">div</span><span class="p">(</span><span class="n">aNumber</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span><span class="p">);</span>
+
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">d</span><span class="p">.</span><span class="n">quot</span><span class="p">;</span>
+
+<span class="p">}</span>
+</pre></div>
+
+<p>Never have explored the capablities of 
+        <span class="wikipedia_tooltip"><a href="https://en.wikipedia.org/wiki/C_standard_library" target="_blank">stdlib</a>
+            <span class="wikipedia_summary">
+            <a href="https://en.wikipedia.org/wiki/C_standard_library" target="_blank" class="wikipedia_wordmark">
+              <img src="https://upload.wikimedia.org/wikipedia/commons/b/bb/Wikipedia_wordmark.svg">
+              <span class="wikipedia_icon"></span>
+            </a>
+            The C standard library, sometimes referred to as libc, is the standard library for the C programming language, as specified in the ISO C standard. Starting from the original ANSI C standard, it was developed at the same time as the C POSIX library, which is a superset of it. Since ANSI C was adopted by the International Organization for Standardization, the C standard library is also called the ISO C library.
+            </span>
+        </span>. Infact, with C Programming
+Language out of touch for so many months, I was thinking this program will
+seriously fail, thinking kind of how come div_t datatype, d.quote
+(object.property ?) etc. 
+        <span class="wikipedia_tooltip"><a href="https://en.wikipedia.org/wiki/GNU_Compiler_Collection" target="_blank">gcc</a>
+            <span class="wikipedia_summary">
+            <a href="https://en.wikipedia.org/wiki/GNU_Compiler_Collection" target="_blank" class="wikipedia_wordmark">
+              <img src="https://upload.wikimedia.org/wikipedia/commons/b/bb/Wikipedia_wordmark.svg">
+              <span class="wikipedia_icon"></span>
+            </a>
+            The GNU Compiler Collection (GCC) (formerly GNU C Compiler) is a collection of compilers from the GNU Project that support various programming languages, hardware architectures, and operating systems. The Free Software Foundation (FSF) distributes GCC as free software under the GNU General Public License (GNU GPL). GCC is a key component of the GNU toolchain which is used for most projects related to GNU and the Linux kernel. With roughly 15 million lines of code in 2019, GCC is one of the largest free programs in existence. It has played an important role in the growth of free software, as both a tool and an example.
+            </span>
+        </span> will crib saying dont using c++. But it worked
+perfectly fine.</p>
+<hr>
+<p>umm, 
+        <span class="wikipedia_tooltip"><a href="https://en.wikipedia.org/wiki/Struct_(C_programming_language)" target="_blank">structs</a>
+            <span class="wikipedia_summary">
+            <a href="https://en.wikipedia.org/wiki/Struct_(C_programming_language)" target="_blank" class="wikipedia_wordmark">
+              <img src="https://upload.wikimedia.org/wikipedia/commons/b/bb/Wikipedia_wordmark.svg">
+              <span class="wikipedia_icon"></span>
+            </a>
+            In the C programming language, struct is the keyword used to define a composite, a.k.a. record, data type – a named set of values that occupy a block of memory. It allows for the different values to be accessed via a single identifier, often a pointer. A struct can contain other data types so is used for mixed-data-type records. For example, a bank customer struct might contain fields for the customer's name, address, telephone number, and balance.
+            </span>
+        </span> are part of standard C.</p>
+<p>div_t is a struct:</p>
+<pre>/* Returned by `div'.  */
+
+
+
+typedef struct
+
+
+
+{
+
+
+
+int quot;                   /* Quotient.  */
+
+
+
+int rem;                    /* Remainder.  */
+
+
+
+} div_t;</pre>
+
+<p><em>bluesmoon</em></p>
+<hr>
+<p>Yes , I realized about struct datatype in C and unfortunately forgot the mention that in the post. All I was thinking about is, it was so out-of-mind (due to out-of-sight) and all obj.property and obj.method was what coming up.</p>
+<p><em>Senthil</em></p>
