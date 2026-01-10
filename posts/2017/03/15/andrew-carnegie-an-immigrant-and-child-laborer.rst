@@ -37,6 +37,4 @@ raise himself up, and never forgot how it happened. (He was also one of the few
 truly rich people ever who said he was going to give it all away to benefit the
 civilization around him, and actually did it.)
 
-
-
 .. _Keep the Internet Open: http://blog.samaltman.com/keep-the-internet-open
