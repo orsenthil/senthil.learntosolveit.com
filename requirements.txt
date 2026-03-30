@@ -255,7 +255,7 @@ pydevto==0.1.5
     # via -r requirements.in
 pygal==3.1.0
     # via nikola
-pygments==2.19.2
+pygments==2.20.0
     # via
     #   ipython
     #   ipython-pygments-lexers
