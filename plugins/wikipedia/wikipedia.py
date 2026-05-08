@@ -24,6 +24,9 @@
 # OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE
 # SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
+import json
+import os
+
 from nikola.plugin_categories import ShortcodePlugin
 from nikola.utils import req_missing
 
@@ -31,6 +34,21 @@ try:
     import wikipediaapi
 except ImportError:
     wikipediaapi = None
+
+_CACHE_FILE = os.path.join(os.path.dirname(__file__), '..', '..', 'cache', 'wikipedia_cache.json')
+
+
+def _load_cache():
+    if os.path.exists(_CACHE_FILE):
+        with open(_CACHE_FILE, 'r', encoding='utf-8') as f:
+            return json.load(f)
+    return {}
+
+
+def _save_cache(cache):
+    os.makedirs(os.path.dirname(_CACHE_FILE), exist_ok=True)
+    with open(_CACHE_FILE, 'w', encoding='utf-8') as f:
+        json.dump(cache, f, ensure_ascii=False, indent=2)
 
 
 class WikipediaShortcodePlugin(ShortcodePlugin):
@@ -47,20 +65,30 @@ class WikipediaShortcodePlugin(ShortcodePlugin):
             msg = req_missing(['wikipediaapi'], 'use the wikipedia shortcode', optional=True)
             return self._error(msg)
 
-        wiki_api = wikipediaapi.Wikipedia("{0} ({1})".format(self.site.config['BLOG_AUTHOR'], self.site.config['BLOG_AUTHOR']), lang)
-        wiki_page = wiki_api.page(article)
+        cache_key = '{}:{}'.format(lang, article)
+        cache = _load_cache()
 
-        if not wiki_page.exists():
-            return self._error('Wikipedia page "{0}" not found'.format(article))
+        if cache_key in cache:
+            url = cache[cache_key]['url']
+            summary = cache[cache_key]['summary']
+        else:
+            wiki_api = wikipediaapi.Wikipedia(
+                "{0} ({1})".format(self.site.config['BLOG_AUTHOR'], self.site.config['BLOG_AUTHOR']), lang
+            )
+            wiki_page = wiki_api.page(article)
+
+            if not wiki_page.exists():
+                return self._error('Wikipedia page "{0}" not found'.format(article))
+
+            url = wiki_page.fullurl
+            summary = wiki_page.summary.split('\n')[0]
+            summary = "".join(x.strip() for x in summary.split("(listen);"))
+
+            cache[cache_key] = {'url': url, 'summary': summary}
+            _save_cache(cache)
 
         if text is None:
             text = article
-
-        url = wiki_page.fullurl
-        # we retain only the first paragraph of the summary
-        summary = wiki_page.summary.split('\n')[0]
-        # and remove the "(listen);" and surrounding whitespace
-        summary = "".join(x.strip() for x in summary.split("(listen);"))
 
         tooltip = """
         <span class="wikipedia_tooltip"><a href="{0}" target="_blank">{1}</a>
