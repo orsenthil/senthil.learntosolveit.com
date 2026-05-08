@@ -22,7 +22,7 @@ This book is about self-discovery. It is about a journey of a very relatable
 boy, sharing his story with his friends, his interests in basketball, his
 thoughts about his school, coaches, and his civics. 
 
-I learned so many things about {{% wikipedia article="Kareem Abdul-Jabbar" %}}, and how he became what he
+I learned so many things about Kareem Abdul-Jabbar, and how he became what he
 did. I learned about Muhammad Ali, which I hadn't known before, and my respect for
 him grew a lot more. I learned more about Malcolm X, and I am eager to read his autobiography now.
 
