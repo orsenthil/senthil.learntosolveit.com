@@ -1,0 +1,86 @@
+name: Issue to Post
+
+on:
+  issues:
+    types: [labeled]
+
+permissions:
+  contents: write
+
+jobs:
+  issue-to-post:
+    if: ${{ github.event.label.name == 'blog-post' }}
+    runs-on: ubuntu-latest
+    env:
+      FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
+      SENTHIL_LEARN_TO_SOLVE_IT_TOKEN: ${{ secrets.SENTHIL_LEARN_TO_SOLVE_IT_TOKEN }}
+      ISSUE_TITLE: ${{ github.event.issue.title }}
+      ISSUE_BODY: ${{ github.event.issue.body }}
+      ISSUE_CREATED_AT: ${{ github.event.issue.created_at }}
+      ISSUE_LABELS: ${{ join(github.event.issue.labels.*.name, ',') }}
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Create post from issue
+        run: |
+          python3 - <<'EOF'
+          import os
+          import re
+          from datetime import datetime, timezone
+
+          title = os.environ["ISSUE_TITLE"]
+          body = os.environ.get("ISSUE_BODY") or ""
+          created_at = os.environ["ISSUE_CREATED_AT"]
+          labels_raw = os.environ.get("ISSUE_LABELS", "")
+
+          # Parse date from ISO 8601 (e.g. 2026-05-08T15:30:00Z)
+          dt = datetime.fromisoformat(created_at.replace("Z", "+00:00"))
+          date_str = dt.strftime("%Y-%m-%d %H:%M:%S UTC+00:00")
+          date_path = dt.strftime("%Y/%m/%d")
+
+          # Generate slug
+          slug = title.lower()
+          slug = re.sub(r"[^\w\s-]", "", slug)
+          slug = re.sub(r"[\s_]+", "-", slug).strip("-")
+
+          # Tags: all labels except 'blog-post'
+          tags = ", ".join(
+              lbl.strip() for lbl in labels_raw.split(",")
+              if lbl.strip() and lbl.strip() != "blog-post"
+          )
+
+          front_matter = f"""<!--
+          .. title: {title}
+          .. slug: {slug}
+          .. date: {date_str}
+          .. tags: {tags}
+          .. category:
+          .. link:
+          .. description:
+          .. type: text
+          -->
+
+          """
+          # Dedent the front matter block
+          front_matter = "\n".join(line.lstrip() for line in front_matter.splitlines()) + "\n"
+
+          post_dir = os.path.join("posts", date_path)
+          os.makedirs(post_dir, exist_ok=True)
+          post_path = os.path.join(post_dir, f"{slug}.md")
+
+          with open(post_path, "w", encoding="utf-8") as f:
+              f.write(front_matter)
+              f.write(body)
+              f.write("\n")
+
+          print(f"Created: {post_path}")
+          EOF
+
+      - name: Commit and push
+        run: |
+          git config user.name "Senthil Kumaran"
+          git config user.email "orsenthil@gmail.com"
+          git add posts/
+          git commit -m "Add post from issue: ${{ github.event.issue.title }}"
+          git push
