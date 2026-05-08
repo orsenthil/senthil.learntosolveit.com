@@ -1,0 +1,33 @@
+name: Publish Website
+
+on:
+  workflow_dispatch:
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    env:
+      SENTHIL_LEARN_TO_SOLVE_IT_TOKEN: ${{ secrets.SENTHIL_LEARN_TO_SOLVE_IT_TOKEN }}
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install Python dependencies
+        run: pip install -r requirements.txt
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: lts/*
+
+      - name: Install Node dependencies
+        run: npm install
+
+      - name: Build site
+        run: nikola build
+
+      - name: Deploy site
+        run: cd output && npx surfer put --token "$SENTHIL_LEARN_TO_SOLVE_IT_TOKEN" --server senthil.learntosolveit.com * /

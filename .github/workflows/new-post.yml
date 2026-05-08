@@ -1,0 +1,48 @@
+name: Create New Post
+
+on:
+  workflow_dispatch:
+    inputs:
+      title:
+        description: Post title
+        required: true
+        type: string
+      tags:
+        description: Comma-separated tags (optional)
+        required: false
+        type: string
+
+permissions:
+  contents: write
+
+jobs:
+  new-post:
+    runs-on: ubuntu-latest
+    env:
+      SENTHIL_LEARN_TO_SOLVE_IT_TOKEN: ${{ secrets.SENTHIL_LEARN_TO_SOLVE_IT_TOKEN }}
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Create new post
+        run: |
+          if [ -n "${{ inputs.tags }}" ]; then
+            nikola new_post --format markdown -t "${{ inputs.title }}" --tags "${{ inputs.tags }}"
+          else
+            nikola new_post --format markdown -t "${{ inputs.title }}"
+          fi
+
+      - name: Commit and push
+        run: |
+          git config user.name "Senthil Kumaran"
+          git config user.email "orsenthil@gmail.com"
+          git add posts/
+          git commit -m "Add new post: ${{ inputs.title }}"
+          git push
