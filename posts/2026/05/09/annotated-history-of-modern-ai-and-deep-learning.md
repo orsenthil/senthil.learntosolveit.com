@@ -21,9 +21,6 @@ I enjoyed reading (listening to Audiobook) Genius Makers by Cade Metz. It was in
 
 Plus, the paper referenced above is far more approachable with this take.
 
-<details>
-<summary>Timeline and People from the Book Genius Makers by Cade Metz</summary>
-
 ## Timeline and People from the Book Genius Makers by Cade Metz
 
 ### 1960s — The Perceptron Era
@@ -168,9 +165,6 @@ Kai Yu — former head of Institute of Deep Learning, founder of Horizon Robotic
 [Frank Rosenblatt](https://en.wikipedia.org/wiki/Frank_Rosenblatt) — Cornell, the Perceptron
 [David Rumelhart](https://en.wikipedia.org/wiki/David_Rumelhart) — UCSD, backpropagation
 [Alan Turing](https://en.wikipedia.org/wiki/Alan_Turing) — pioneer of computing and machine intelligence
-
-
-</details>
 
 
 
