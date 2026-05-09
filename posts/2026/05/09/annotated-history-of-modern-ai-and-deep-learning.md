@@ -74,97 +74,97 @@ Plus, the paper referenced above is far more approachable with this take.
 
 ### At Google
 
-[Anelia Angelova](https://research.google/people/aneliaangelova/) — computer vision, robotics
-[Sergey Brin](https://en.wikipedia.org/wiki/Sergey_Brin) — Google co-founder
-[George Dahl](https://research.google/people/george-dahl/) — speech, neural networks
-[Jeff Dean](https://research.google/people/jeff/) — Google Brain co-founder
-[Alan Eustace](https://en.wikipedia.org/wiki/Alan_Eustace) — former SVP of Engineering
-[Timnit Gebru](https://en.wikipedia.org/wiki/Timnit_Gebru) — AI ethics
-[John Giannandrea](https://en.wikipedia.org/wiki/John_Giannandrea) — former head of Search and AI
-[Ian Goodfellow](https://en.wikipedia.org/wiki/Ian_Goodfellow) — inventor of GANs
-[Varun Gulshan](https://research.google/people/105170/) — diabetic retinopathy AI
-[Geoffrey Hinton](https://www.cs.toronto.edu/~hinton/) — deep learning pioneer
-[Urs Hölzle](https://research.google/people/author79/) — former SVP, Technical Infrastructure
-[Alex Krizhevsky](https://en.wikipedia.org/wiki/Alex_Krizhevsky) — co-creator of AlexNet
-[Margaret Mitchell](https://www.m-mitchell.com/) — AI ethics, Model Cards
-[Andrew Ng](https://www.andrewng.org/) — Google Brain co-founder
-[Larry Page](https://en.wikipedia.org/wiki/Larry_Page) — Google co-founder
-[Lily Peng](https://research.google.com/pubs/LilyPeng.html) — medical imaging AI
-[Sundar Pichai](https://en.wikipedia.org/wiki/Sundar_Pichai) — CEO of Alphabet
-[Sara Sabour](https://research.google/people/105557/) — capsule networks
-[Eric Schmidt](https://en.wikipedia.org/wiki/Eric_Schmidt) — former CEO/Chairman
-[Ilya Sutskever](https://en.wikipedia.org/wiki/Ilya_Sutskever) — Seq2Seq, AlexNet co-author
+* [Anelia Angelova](https://research.google/people/aneliaangelova/) — computer vision, robotics
+* [Sergey Brin](https://en.wikipedia.org/wiki/Sergey_Brin) — Google co-founder
+* [George Dahl](https://research.google/people/george-dahl/) — speech, neural networks
+* [Jeff Dean](https://research.google/people/jeff/) — Google Brain co-founder
+* [Alan Eustace](https://en.wikipedia.org/wiki/Alan_Eustace) — former SVP of Engineering
+* [Timnit Gebru](https://en.wikipedia.org/wiki/Timnit_Gebru) — AI ethics
+* [John Giannandrea](https://en.wikipedia.org/wiki/John_Giannandrea) — former head of Search and AI
+* [Ian Goodfellow](https://en.wikipedia.org/wiki/Ian_Goodfellow) — inventor of GANs
+* [Varun Gulshan](https://research.google/people/105170/) — diabetic retinopathy AI
+* [Geoffrey Hinton](https://www.cs.toronto.edu/~hinton/) — deep learning pioneer
+* [Urs Hölzle](https://research.google/people/author79/) — former SVP, Technical Infrastructure
+* [Alex Krizhevsky](https://en.wikipedia.org/wiki/Alex_Krizhevsky) — co-creator of AlexNet
+* [Margaret Mitchell](https://www.m-mitchell.com/) — AI ethics, Model Cards
+* [Andrew Ng](https://www.andrewng.org/) — Google Brain co-founder
+* [Larry Page](https://en.wikipedia.org/wiki/Larry_Page) — Google co-founder
+* [Lily Peng](https://research.google.com/pubs/LilyPeng.html) — medical imaging AI
+* [Sundar Pichai](https://en.wikipedia.org/wiki/Sundar_Pichai) — CEO of Alphabet
+* [Sara Sabour](https://research.google/people/105557/) — capsule networks
+* [Eric Schmidt](https://en.wikipedia.org/wiki/Eric_Schmidt) — former CEO/Chairman
+* [Ilya Sutskever](https://en.wikipedia.org/wiki/Ilya_Sutskever) — Seq2Seq, AlexNet co-author
 
 ###  At DeepMind
 
-[Alex Graves](https://en.wikipedia.org/wiki/Alex_Graves_(computer_scientist)) — LSTM, Neural Turing Machines
-[Demis Hassabis](https://en.wikipedia.org/wiki/Demis_Hassabis) — co-founder and CEO
-[Koray Kavukcuoglu](https://koray.kavukcuoglu.org/) — CTO
-[Shane Legg](https://en.wikipedia.org/wiki/Shane_Legg) — co-founder, Chief AGI Scientist
-[Volodymyr Mnih](https://www.cs.toronto.edu/~vmnih/) — Atari DQN
-[David Silver](https://en.wikipedia.org/wiki/David_Silver_(computer_scientist)) — AlphaGo, AlphaZero
-[Mustafa Suleyman](https://en.wikipedia.org/wiki/Mustafa_Suleyman) — co-founder
+* [Alex Graves](https://en.wikipedia.org/wiki/Alex_Graves_(computer_scientist)) — LSTM, Neural Turing Machines
+* [Demis Hassabis](https://en.wikipedia.org/wiki/Demis_Hassabis) — co-founder and CEO
+* [Koray Kavukcuoglu](https://koray.kavukcuoglu.org/) — CTO
+* [Shane Legg](https://en.wikipedia.org/wiki/Shane_Legg) — co-founder, Chief AGI Scientist
+* [Volodymyr Mnih](https://www.cs.toronto.edu/~vmnih/) — Atari DQN
+* [David Silver](https://en.wikipedia.org/wiki/David_Silver_(computer_scientist)) — AlphaGo, AlphaZero
+* [Mustafa Suleyman](https://en.wikipedia.org/wiki/Mustafa_Suleyman) — co-founder
 
 ###  At Facebook (Meta)
 
-[Lubomir Bourdev](https://lubomir.org/) — founding member of FAIR
-[Yann LeCun](http://yann.lecun.com/) — Chief AI Scientist
-[Marc'Aurelio Ranzato](https://ranzato.github.io/) — early FAIR member
-[Mike Schroepfer](https://en.wikipedia.org/wiki/Mike_Schroepfer) — former CTO
-[Mark Zuckerberg](https://en.wikipedia.org/wiki/Mark_Zuckerberg) — CEO
+* [Lubomir Bourdev](https://lubomir.org/) — founding member of FAIR
+* [Yann LeCun](http://yann.lecun.com/) — Chief AI Scientist
+* [Marc'Aurelio Ranzato](https://ranzato.github.io/) — early FAIR member
+* [Mike Schroepfer](https://en.wikipedia.org/wiki/Mike_Schroepfer) — former CTO
+* [Mark Zuckerberg](https://en.wikipedia.org/wiki/Mark_Zuckerberg) — CEO
 
 ###  At Microsoft
 
-[Chris Brockett](https://www.microsoft.com/en-us/research/people/chrisbkt/) — natural language processing
-[Li Deng](https://lidengsite.wordpress.com/) — speech recognition pioneer
-[Peter Lee](https://en.wikipedia.org/wiki/Peter_Lee_(computer_scientist)) — President, Microsoft Research
-[Satya Nadella](https://en.wikipedia.org/wiki/Satya_Nadella) — CEO
+* [Chris Brockett](https://www.microsoft.com/en-us/research/people/chrisbkt/) — natural language processing
+* [Li Deng](https://lidengsite.wordpress.com/) — speech recognition pioneer
+* [Peter Lee](https://en.wikipedia.org/wiki/Peter_Lee_(computer_scientist)) — President, Microsoft Research
+* [Satya Nadella](https://en.wikipedia.org/wiki/Satya_Nadella) — CEO
 
 ###  At OpenAI
 
-[Greg Brockman](https://en.wikipedia.org/wiki/Greg_Brockman) — co-founder
-[Elon Musk](https://en.wikipedia.org/wiki/Elon_Musk) — co-founder, later departed
-[Ilya Sutskever](https://en.wikipedia.org/wiki/Ilya_Sutskever) — co-founder, former Chief Scientist
-[Wojciech Zaremba](https://en.wikipedia.org/wiki/Wojciech_Zaremba) — co-founder
+* [Greg Brockman](https://en.wikipedia.org/wiki/Greg_Brockman) — co-founder
+* [Elon Musk](https://en.wikipedia.org/wiki/Elon_Musk) — co-founder, later departed
+* [Ilya Sutskever](https://en.wikipedia.org/wiki/Ilya_Sutskever) — co-founder, former Chief Scientist
+* [Wojciech Zaremba](https://en.wikipedia.org/wiki/Wojciech_Zaremba) — co-founder
 
 ###  At Baidu
 
-[Robin Li](https://en.wikipedia.org/wiki/Robin_Li) — founder, CEO
-[Lu Qi](https://en.wikipedia.org/wiki/Lu_Qi_(computer_scientist)) — former COO
-Kai Yu — former head of Institute of Deep Learning, founder of Horizon Robotics
+* [Robin Li](https://en.wikipedia.org/wiki/Robin_Li) — founder, CEO
+* [Lu Qi](https://en.wikipedia.org/wiki/Lu_Qi_(computer_scientist)) — former COO
+* Kai Yu — former head of Institute of Deep Learning, founder of Horizon Robotics
 
 ### At Nvidia
 
-[Clément Farabet](https://en.wikipedia.org/wiki/Clement_Farabet) — former VP of AI Infrastructure
-[Jensen Huang](https://en.wikipedia.org/wiki/Jensen_Huang) — co-founder and CEO
+* [Clément Farabet](https://en.wikipedia.org/wiki/Clement_Farabet) — former VP of AI Infrastructure
+* [Jensen Huang](https://en.wikipedia.org/wiki/Jensen_Huang) — co-founder and CEO
 
 ### At Clarifai
 
-[Matthew Zeiler](https://www.matthewzeiler.com/) — founder and CEO
-[Deborah Raji](https://en.wikipedia.org/wiki/Deborah_Raji) — interned, exposed bias in NSFW classifiers
+* [Matthew Zeiler](https://www.matthewzeiler.com/) — founder and CEO
+* [Deborah Raji](https://en.wikipedia.org/wiki/Deborah_Raji) — interned, exposed bias in NSFW classifiers
 
 ### In Academia
 
-[Yoshua Bengio](https://yoshuabengio.org/) — University of Montreal
-[Joy Buolamwini](https://www.poetofcode.com/) — MIT Media Lab, Algorithmic Justice League
-[Fei-Fei Li](https://profiles.stanford.edu/fei-fei-li) — Stanford, ImageNet creator
-[Gary Marcus](https://en.wikipedia.org/wiki/Gary_Marcus) — NYU, AI critic
-[Dean Pomerleau](https://www.ri.cmu.edu/ri-people/dean-pomerleau/) — CMU, ALVINN
-[Jürgen Schmidhuber](https://en.wikipedia.org/wiki/J%C3%BCrgen_Schmidhuber) — IDSIA, LSTM
-[Terry Sejnowski](https://en.wikipedia.org/wiki/Terry_Sejnowski) — Salk Institute, Boltzmann machine
+* [Yoshua Bengio](https://yoshuabengio.org/) — University of Montreal
+* [Joy Buolamwini](https://www.poetofcode.com/) — MIT Media Lab, Algorithmic Justice League
+* [Fei-Fei Li](https://profiles.stanford.edu/fei-fei-li) — Stanford, ImageNet creator
+* [Gary Marcus](https://en.wikipedia.org/wiki/Gary_Marcus) — NYU, AI critic
+* [Dean Pomerleau](https://www.ri.cmu.edu/ri-people/dean-pomerleau/) — CMU, ALVINN
+* [Jürgen Schmidhuber](https://en.wikipedia.org/wiki/J%C3%BCrgen_Schmidhuber) — IDSIA, LSTM
+* [Terry Sejnowski](https://en.wikipedia.org/wiki/Terry_Sejnowski) — Salk Institute, Boltzmann machine
 
 ### At the Singularity Summit
 
-[Sam Altman](https://blog.samaltman.com/) — OpenAI CEO
-[Peter Thiel](https://en.wikipedia.org/wiki/Peter_Thiel) — investor, early DeepMind backer
-[Eliezer Yudkowsky](https://en.wikipedia.org/wiki/Eliezer_Yudkowsky) — AI safety advocate
+* [Sam Altman](https://blog.samaltman.com/) — OpenAI CEO
+* [Peter Thiel](https://en.wikipedia.org/wiki/Peter_Thiel) — investor, early DeepMind backer
+* [Eliezer Yudkowsky](https://en.wikipedia.org/wiki/Eliezer_Yudkowsky) — AI safety advocate
 
 ### In the Past (Founding Era)
 
-[Marvin Minsky](https://en.wikipedia.org/wiki/Marvin_Minsky) — MIT, Perceptrons co-author
-[Frank Rosenblatt](https://en.wikipedia.org/wiki/Frank_Rosenblatt) — Cornell, the Perceptron
-[David Rumelhart](https://en.wikipedia.org/wiki/David_Rumelhart) — UCSD, backpropagation
-[Alan Turing](https://en.wikipedia.org/wiki/Alan_Turing) — pioneer of computing and machine intelligence
+* [Marvin Minsky](https://en.wikipedia.org/wiki/Marvin_Minsky) — MIT, Perceptrons co-author
+* [Frank Rosenblatt](https://en.wikipedia.org/wiki/Frank_Rosenblatt) — Cornell, the Perceptron
+* [David Rumelhart](https://en.wikipedia.org/wiki/David_Rumelhart) — UCSD, backpropagation
+* [Alan Turing](https://en.wikipedia.org/wiki/Alan_Turing) — pioneer of computing and machine intelligence
 
 
 
