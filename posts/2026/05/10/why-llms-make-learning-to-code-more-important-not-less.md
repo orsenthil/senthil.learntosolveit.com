@@ -140,6 +140,8 @@ If logic is right but style is off, mention it briefly and move on.
 Be brutally honest. Attack my assumptions and point out my weak spots.
 ```
 
+* Experience [Exercism](https://exercism.org/dashboard)
+
 <img src="https://github.com/user-attachments/assets/3f9175a8-0f08-40dc-8dcf-286643fe75ab" />
 
 
@@ -166,6 +168,9 @@ This is not "the AI does it for me." It's the opposite. By skipping the mechanic
 The latency between curiosity and understanding collapses. You stay in the editor. You don't context-switch into a chat window. The AI sees what you're doing and responds to it.
 
 <img src="https://github.com/user-attachments/assets/2925271a-0e62-4da9-953a-6d6c21e14677" />
+
+* [Practice Go Project](https://github.com/orsenthil/practicego)
+
 
 This is an effective way to learn programming: understanding the toolset, fundamentals, design, and structure of various programming languages.
 
