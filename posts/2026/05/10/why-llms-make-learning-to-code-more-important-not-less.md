@@ -25,7 +25,7 @@ So, that's the topic of my talk: why large language models make learning to code
 
 **A note on my favorite teacher**
 
-<img width="2424" height="1196" alt="Image" src="https://github.com/user-attachments/assets/3a70ef30-438d-418c-9529-fa77f5962162" />
+<img src="https://github.com/user-attachments/assets/3a70ef30-438d-418c-9529-fa77f5962162" />
 
 Before I get into the substance, I want to say something about the teacher who inspired me to take OMSCS in the first place. I had taken several of his lectures online, and there is a particular quality to his teaching that resonated with me deeply. 
 
@@ -37,7 +37,7 @@ Programming has never been about coding. Programming is about understanding and 
 
 **Feynman's blackboard**
 
-<img width="1980" height="1334" alt="Image" src="https://github.com/user-attachments/assets/f1fac986-7bc7-4495-8bc3-4c7cc14eb774" />
+<img alt="Image" src="https://github.com/user-attachments/assets/f1fac986-7bc7-4495-8bc3-4c7cc14eb774" />
 
 
 This is a famous photograph of Feynman's blackboard at the time of his death.  It's covered in string theory equations, but in the corner is a line that has stayed with me:
@@ -55,7 +55,7 @@ And the rest is string theory equations — which, as it happens, you can now po
 
 **The world feels like it's on steroids**
 
-<img width="1452" height="892" alt="Image" src="https://github.com/user-attachments/assets/c6415fa6-b2c1-465f-adfd-82171d99c692" />
+<img alt="Image" src="https://github.com/user-attachments/assets/c6415fa6-b2c1-465f-adfd-82171d99c692" />
 
 Deep neural networks and the applications built on top of them, large language models, have turned our world upside down. Every day there is more news about automating human work, especially programmers. Major labs are talking in numbers that are hard to comprehend.
 
@@ -83,9 +83,9 @@ Now I can solve ten problems where each one used to take five days and now takes
 You can do this with any of the great technical books. Algorithms by Sedgewick represents 40 years of effort by its authors. We're not going to absorb 40 years of work in coursework. But we can now absorb it in something on the order of
 years, understanding their work deeply, and that's an enormous shift.
 
-<img width="1738" height="1264" alt="Image" src="https://github.com/user-attachments/assets/3ba23e84-4333-4dd8-a78b-55e253e5c95f" />
+<img src="https://github.com/user-attachments/assets/3ba23e84-4333-4dd8-a78b-55e253e5c95f" />
 
-ref: https://joshmpollock.com/dijkstras-algorithm-article/
+ref: [https://joshmpollock.com/dijkstras-algorithm-article/](https://joshmpollock.com/dijkstras-algorithm-article/)
 
 
 And people are doing this. Someone built an interactive visual exploration of the Dijkstra shortest-path algorithm following the Sedgewick book. They understood the model, asked an LLM to help them build the simulation, and ended up with exactly what I'm describing: a one-to-one correspondence between what you read, what you build, and what you understand.
@@ -140,13 +140,13 @@ If logic is right but style is off, mention it briefly and move on.
 Be brutally honest. Attack my assumptions and point out my weak spots.
 ```
 
-<img width="2068" height="1254" alt="Image" src="https://github.com/user-attachments/assets/3f9175a8-0f08-40dc-8dcf-286643fe75ab" />
+<img src="https://github.com/user-attachments/assets/3f9175a8-0f08-40dc-8dcf-286643fe75ab" />
 
 
 
 With instructions like these, the LLM stops being an answer machine and starts behaving like a teacher. The first thing it now says to me is, "Let's start by making sure you understand the problem before writing any code." This single shift has taught me lessons I would never have arrived at on my own, about heap-allocated storage, about caller expectations of ownership, about the assumptions a test makes about the code it exercises. 
 
-<img width="1386" height="998" alt="Image" src="https://github.com/user-attachments/assets/dd12aea9-696e-4411-a86a-87d261ccf489" />
+<img src="https://github.com/user-attachments/assets/dd12aea9-696e-4411-a86a-87d261ccf489" />
 
 
 It pulls me into corners of the language I would never have looked into.
@@ -154,8 +154,8 @@ It pulls me into corners of the language I would never have looked into.
 
 <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/lgpPDJ2GeUU?si=pNmFEYz0oWlH5NAr&amp;start=4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
-https://www.youtube.com/watch?v=lgpPDJ2GeUU
 
+[https://www.youtube.com/watch?v=lgpPDJ2GeUU](https://www.youtube.com/watch?v=lgpPDJ2GeUU)
 
 **Practice, accelerated**
 
@@ -165,13 +165,14 @@ This is not "the AI does it for me." It's the opposite. By skipping the mechanic
 
 The latency between curiosity and understanding collapses. You stay in the editor. You don't context-switch into a chat window. The AI sees what you're doing and responds to it.
 
-<img width="1178" height="1100" alt="Image" src="https://github.com/user-attachments/assets/2925271a-0e62-4da9-953a-6d6c21e14677" />
+<img src="https://github.com/user-attachments/assets/2925271a-0e62-4da9-953a-6d6c21e14677" />
 
 This is an effective way to learn programming: understanding the toolset, fundamentals, design, and structure of various programming languages.
 
 <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/Hl93y8BarYE?si=wJhTlqNb2HlehKve&amp;start=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
-https://www.youtube.com/watch?v=Hl93y8BarYE
+
+[https://www.youtube.com/watch?v=Hl93y8BarYE](https://www.youtube.com/watch?v=Hl93y8BarYE)
 
 
 Let's shift a bit into Software Engineering that is more than programming.  
@@ -249,7 +250,7 @@ I work on compute infrastructure at Uber, large-scale autoscaling, that works
 extensively with distributed systems, with millions of CPU allocations and GPU
 allocations for batch, training and inference jobs.
 
-<img width="2136" height="1126" alt="Image" src="https://github.com/user-attachments/assets/a60e118a-4e7c-482a-a03b-8aa4d718f019" />
+<img src="https://github.com/user-attachments/assets/a60e118a-4e7c-482a-a03b-8aa4d718f019" />
 
 So when an alert fires and I need to understand a system, the LLM hands me back
 not just the answer but the canonical paper, the relevant section, the theorem.
@@ -299,7 +300,7 @@ Finally, I'll leave you with a line from Emerson:
 
 We have always tried this. I think, it will continue to hold true.
 
-<img width="2302" height="840" alt="Image" src="https://github.com/user-attachments/assets/90e2d825-a684-4a80-b7c2-0ff75445d33e" />
+<img src="https://github.com/user-attachments/assets/90e2d825-a684-4a80-b7c2-0ff75445d33e" />
 
 Thank you.
 
