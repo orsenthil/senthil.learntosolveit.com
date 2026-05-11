@@ -67,7 +67,7 @@ So when some people are saying programming is no longer required, while the indu
 
 Given the hype and drumbeat, honestly, when I submitted this proposal a year ago, I was worried that what the industry claims would become true. 
 
-Today I am more convinced than before:
+Today I am more convinced than before, that particular narrative is not true:
 
 LLMs have not made learning programming obsolete. They have made it more important, and in fact, they have expanded the programmer's toolset.
 
