@@ -141,6 +141,7 @@ Be brutally honest. Attack my assumptions and point out my weak spots.
 ```
 
 * Experience [Exercism](https://exercism.org/dashboard)
+* Here the [CLAUDE.md](https://github.com/orsenthil/exercism/blob/main/solutions/CLAUDE.md) or [AGENT.md](https://github.com/orsenthil/exercism/blob/main/solutions/AGENT.md) file that you can use when you try to  learn using Exercism.
 
 <img src="https://github.com/user-attachments/assets/3f9175a8-0f08-40dc-8dcf-286643fe75ab" />
 
