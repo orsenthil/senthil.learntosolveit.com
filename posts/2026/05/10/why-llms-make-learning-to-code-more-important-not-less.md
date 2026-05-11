@@ -305,7 +305,7 @@ Finally, I'll leave you with a line from Emerson:
 
 We have always tried this. I think, it will continue to hold true.
 
-<img src="https://github.com/user-attachments/assets/90e2d825-a684-4a80-b7c2-0ff75445d33e" />
+<img src="https://github.com/user-attachments/assets/9c8dd498-be56-4eb0-83fe-1701b0c8cd0e" />
 
 Thank you.
 
