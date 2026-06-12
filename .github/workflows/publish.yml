@@ -16,12 +16,6 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      - uses: actions/cache@v4
-        with:
-          path: cache/wikipedia_cache.json
-          key: wikipedia-cache-${{ github.run_id }}
-          restore-keys: wikipedia-cache
-
       - uses: actions/setup-python@v5
         with:
           python-version: "3.11"
@@ -48,6 +42,13 @@ jobs:
               exit 1
             fi
           done
+
+      - name: Commit updated Wikipedia cache
+        run: |
+          git config user.name "Senthil Kumaran"
+          git config user.email "orsenthil@gmail.com"
+          git add cache/wikipedia_cache.json
+          git diff --cached --quiet || (git commit -m "Update Wikipedia cache" && git push)
 
       - name: Deploy site
         run: cd output && npx surfer put --token "$SENTHIL_LEARN_TO_SOLVE_IT_TOKEN" --server senthil.learntosolveit.com * /

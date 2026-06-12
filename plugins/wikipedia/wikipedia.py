@@ -102,8 +102,10 @@ class WikipediaShortcodePlugin(ShortcodePlugin):
             summary = wiki_page.summary.split('\n')[0]
             summary = "".join(x.strip() for x in summary.split("(listen);"))
 
-            cache[cache_key] = {'url': url, 'summary': summary}
-            _save_cache(cache)
+            # Re-read before writing to avoid clobbering entries saved by concurrent handlers
+            fresh_cache = _load_cache()
+            fresh_cache[cache_key] = {'url': url, 'summary': summary}
+            _save_cache(fresh_cache)
 
         if text is None:
             text = article
