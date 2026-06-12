@@ -333,7 +333,7 @@ tinycss2==1.4.0
     # via bleach
 toml==0.10.2
     # via nikola
-tornado==6.5.5
+tornado==6.5.6
     # via
     #   ipykernel
     #   jupyter-client
