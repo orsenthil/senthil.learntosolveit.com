@@ -26,6 +26,7 @@
 
 import json
 import os
+import time
 
 from nikola.plugin_categories import ShortcodePlugin
 from nikola.utils import req_missing
@@ -75,7 +76,24 @@ class WikipediaShortcodePlugin(ShortcodePlugin):
             wiki_api = wikipediaapi.Wikipedia(
                 "{0} ({1})".format(self.site.config['BLOG_AUTHOR'], self.site.config['BLOG_AUTHOR']), lang
             )
-            wiki_page = wiki_api.page(article)
+
+            wiki_page = None
+            for attempt in range(4):
+                try:
+                    wiki_page = wiki_api.page(article)
+                    _ = wiki_page.exists()  # trigger the HTTP fetch
+                    break
+                except Exception as e:
+                    if attempt < 3:
+                        sleep_secs = 10 * (2 ** attempt)  # 10, 20, 40 seconds
+                        self.logger.warning(
+                            'Wikipedia fetch for "{}" failed (attempt {}), retrying in {}s: {}'.format(
+                                article, attempt + 1, sleep_secs, e
+                            )
+                        )
+                        time.sleep(sleep_secs)
+                    else:
+                        return self._error('Wikipedia fetch for "{}" failed after retries: {}'.format(article, e))
 
             if not wiki_page.exists():
                 return self._error('Wikipedia page "{0}" not found'.format(article))

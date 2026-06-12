@@ -19,7 +19,7 @@ jobs:
       - uses: actions/cache@v4
         with:
           path: cache/wikipedia_cache.json
-          key: wikipedia-cache
+          key: wikipedia-cache-${{ github.run_id }}
           restore-keys: wikipedia-cache
 
       - uses: actions/setup-python@v5
@@ -37,7 +37,17 @@ jobs:
         run: npm install
 
       - name: Build site
-        run: nikola build
+        run: |
+          for attempt in 1 2 3; do
+            nikola build && break
+            if [ $attempt -lt 3 ]; then
+              echo "Build attempt $attempt failed, retrying in 60s..."
+              sleep 60
+            else
+              echo "Build failed after 3 attempts"
+              exit 1
+            fi
+          done
 
       - name: Deploy site
         run: cd output && npx surfer put --token "$SENTHIL_LEARN_TO_SOLVE_IT_TOKEN" --server senthil.learntosolveit.com * /
