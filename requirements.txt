@@ -38,7 +38,7 @@ beautifulsoup4==4.14.3
     #   micawber
     #   nbconvert
     #   pydevto
-bleach[css]==6.3.0
+bleach[css]==6.4.0
     # via nbconvert
 blinker==1.9.0
     # via nikola
