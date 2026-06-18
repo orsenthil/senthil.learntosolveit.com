@@ -16,9 +16,7 @@ I lives here now.
 
 <img width="841" height="501" alt="Image" src="https://github.com/user-attachments/assets/eaec1ef1-b34f-45b5-bf37-2bfbe98be593" />
 
-Original Author is David Walsh and here is his post that introduces it to the world. https://davidwalsh.name/cmx-js 
+Original Author is Antonin Hildebrand and here is his repo https://github.com/darwin/cmx.js/. There is a great post by a David Walsh explaining it https://davidwalsh.name/cmx-js 
 
-Now that is up in the web, I think, a good idea will be the embed a local web model, so that it can take use description as input and covert it to a diagram.  
-
-My Kubernetes posts, and illustrations for the [Kubernetes book](https://orsenthil.gumroad.com/l/k8sbook) were created using this utility. 
+Now that is up in the web, I think, a good idea will be the embed a local web model so that it can take use description as input and covert it to a diagram. My Kubernetes posts, and illustrations for the [Kubernetes book](https://orsenthil.gumroad.com/l/k8sbook) were created using this utility. 
 
