@@ -14,7 +14,7 @@ I lives here now.
 
 [https://orsenthil.github.io/cmx.js/](https://orsenthil.github.io/cmx.js/)
 
-<img width="841" height="501" alt="Image" src="https://github.com/user-attachments/assets/eaec1ef1-b34f-45b5-bf37-2bfbe98be593" />
+<a href="https://orsenthil.github.io/cmx.js/"><img width="841" height="501" alt="Image" src="https://github.com/user-attachments/assets/eaec1ef1-b34f-45b5-bf37-2bfbe98be593" /></a>
 
 Original Author is Antonin Hildebrand and here is his repo https://github.com/darwin/cmx.js/. There is a great post by a David Walsh explaining it https://davidwalsh.name/cmx-js 
 
