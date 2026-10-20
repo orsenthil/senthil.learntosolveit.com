@@ -6,7 +6,7 @@
 #
 aiohappyeyeballs==2.6.1
     # via aiohttp
-aiohttp==3.14.3
+aiohttp==3.14.4
     # via nikola
 aiosignal==1.4.0
     # via aiohttp
@@ -386,7 +386,7 @@ websocket-client==1.9.0
     # via jupyter-server
 wikipedia-api==0.8.1
     # via -r requirements.in
-yarl==1.22.0
+yarl==1.25.1
     # via aiohttp
 zipp==3.23.0
     # via importlib-metadata
